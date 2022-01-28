@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <!-- header&footer -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- mainstyle -->
+    <link rel="stylesheet" href="css/list.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 導覽列 start -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="LOGO"></a>
+            <div class="nav_icon">
+                <a class="nav_a" href="#"><i class="fas fa-store"></i>餐廳列表</a>
+                <a class="nav_a" href="#"><i class="fas fa-shopping-cart"></i>購物車</a>
+                <a class="nav_a" href="#"><i class="fas fa-user-circle"></i>會員登入</a>
+            </div>
+            <div class="rwd_icon">
+                <a class="nav_a" href="#"><i class="fas fa-store"></i></a>
+                <a class="nav_a" href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a class="nav_a" href="#"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </nav>
+    </header>
+    <!-- 導覽列 end -->
+
+
+
+    <section id="search_list">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-11">
+                    <form action="" method="">
+                        <div class="search_div">
+                            <input class="search_keyword" id="keyword" type="text" placeholder="請輸入餐廳關鍵字">
+                            <div class="area_div">
+                                <input type="checkbox" class="area_btn" id="area_btn">
+                                <label for="area_btn" class="area_label"><i class="fas fa-map-marker-alt"></i>請選擇地區<i
+                                        class="fas fa-sort-down"></i></label>
+
+                                <div class="tab_div">
+                                    <div class="tab_css">
+                                        <!-- 北部區塊 start -->
+                                        <input id="tab1" type="radio" name="tab" checked="checked" />
+                                        <label for="tab1">北部</label>
+                                        <div class="tab_content">
+                                            <span>基隆市</span>
+                                            <span>台北市</span>
+                                            <span>新北市</span>
+                                            <span>桃園市</span>
+                                            <span>新竹市</span>
+                                            <span>新竹縣</span>
+                                        </div>
+                                        <!-- 北部區塊 end -->
+
+                                        <!-- 中部區塊 start -->
+                                        <input id="tab2" type="radio" name="tab" />
+                                        <label for="tab2">中部</label>
+                                        <div class="tab_content">
+                                            <span>苗栗縣</span>
+                                            <span>台中市</span>
+                                            <span>南投縣</span>
+                                            <span>彰化縣</span>
+                                            <span>雲林縣</span>
+                                        </div>
+                                        <!-- 中部區塊 end -->
+
+                                        <!-- 南部區塊 start -->
+                                        <input id="tab3" type="radio" name="tab" />
+                                        <label for="tab3">南部</label>
+                                        <div class="tab_content">
+                                            <span>嘉義市</span>
+                                            <span>嘉義縣</span>
+                                            <span>台南市</span>
+                                            <span>高雄市</span>
+                                            <span>屏東縣</span>
+                                        </div>
+                                        <!-- 南部區塊 end -->
+
+                                        <!-- 東部區塊 start -->
+                                        <input id="tab4" type="radio" name="tab" />
+                                        <label for="tab4">東部</label>
+                                        <div class="tab_content">
+                                            <span>宜蘭縣</span>
+                                            <span>花蓮縣</span>
+                                            <span>台東縣</span>
+                                        </div>
+                                        <!-- 東部區塊 end -->
+
+                                        <!-- 離島區塊 start -->
+                                        <input id="tab5" type="radio" name="tab" />
+                                        <label for="tab5">離島</label>
+                                        <div class="tab_content">
+                                            <span>澎湖縣</span>
+                                            <span>連江縣</span>
+                                            <span>金門縣</span>
+                                        </div>
+                                        <!-- 離島區塊 end -->
+
+                                    </div>
+                                    <div class="tab_close">
+                                        關閉
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="other_div">
+                                <input type="checkbox" class="other_btn" id="other_btn">
+                                <label for="other_btn" class="other_label"><i class="fas fa-hand-point-up"></i>進階搜尋<i
+                                        class="fas fa-sort-down"></i></label>
+
+                                <div class="chk_div">
+                                    <div class="chk_css">
+                                        <input class="chk_item" type="checkbox" name="child_seats" value="2">
+                                        <span>提供兒童座椅</span>
+                                        <input class="chk_item" type="checkbox" name="barrier_free" value="2">
+                                        <span>無障礙設施</span>
+                                        <input class="chk_item" type="checkbox" name="min_consumption" value="2">
+                                        <span>最低消費限制</span>
+                                        <input class="chk_item" type="checkbox" name="limit_meal_time" value="2">
+                                        <span>限制用餐時間</span>
+                                        <input class="chk_item" type="checkbox" name="delivery" value="2">
+                                        <span>提供外送</span>
+                                        <input class="chk_item" type="checkbox" name="service_free" value="2">
+                                        <span>收取服務費</span>
+                                        <input class="chk_item" type="checkbox" name="parking" value="2">
+                                        <span>附設停車場</span>
+                                        <input class="chk_item" type="checkbox" name="allow_pets" value="2">
+                                        <span>允許攜帶寵物</span>
+                                    </div>
+                                    <div class="chk_close">
+                                        關閉
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="dropdown">
+                                <button class="search_btn">搜尋</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mt-3">
+                            <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">餐廳列表</li>
+                        </ol>
+                    </nav>
+                    <div class="rest_div">
+                        <div class="rest_list">
+                            <div class="rest_img">
+                                <img src="img/french_food.png" alt="">
+                            </div>
+                            <div class="rest_text">
+                                <h4>餐廳類別</h4>
+                                <h3>餐廳名稱</h3>
+                                <h4>餐廳地址</h4>
+                                <h>評分</h>
+                            </div>
+                        </div>
+                        <div class="rest_list">
+                            <div class="rest_img">
+                                <img src="img/korean_food.png" alt="">
+                            </div>
+                            <div class="rest_text">
+                                <h4>餐廳類別</h4>
+                                <h3>餐廳名稱</h3>
+                                <h4>餐廳地址</h4>
+                                <h>評分</h>
+                            </div>
+                        </div>
+                        <div class="rest_list">
+                            <div class="rest_img">
+                                <img src="img/middle_east_food.png" alt="">
+                            </div>
+                            <div class="rest_text">
+                                <h4>餐廳類別</h4>
+                                <h3>餐廳名稱</h3>
+                                <h4>餐廳地址</h4>
+                                <h>評分</h>
+                            </div>
+                        </div>
+                        <div class="rest_list">
+                            <div class="rest_img">
+                                <img src="img/japanese_food.png" alt="">
+                            </div>
+                            <div class="rest_text">
+                                <h4>餐廳類別</h4>
+                                <h3>餐廳名稱</h3>
+                                <h4>餐廳地址</h4>
+                                <h>評分</h>
+                            </div>
+                        </div>
+                        <div class="rest_list">
+                            <div class="rest_img">
+                                <img src="img/american_food.png" alt="">
+                            </div>
+                            <div class="rest_text">
+                                <h4>餐廳類別</h4>
+                                <h3>餐廳名稱</h3>
+                                <h4>餐廳地址</h4>
+                                <h>評分</h>
+                            </div>
+                        </div>
+                        <div class="rest_list">
+                            <div class="rest_img">
+                                <img src="img/port_food.png" alt="">
+                            </div>
+                            <div class="rest_text">
+                                <h4>餐廳類別</h4>
+                                <h3>餐廳名稱</h3>
+                                <h4>餐廳地址</h4>
+                                <h>評分</h>
+                            </div>
+                        </div>
+                        <div class="rest_list">
+                            <div class="rest_img">
+                                <img src="img/chinese_food.png" alt="">
+                            </div>
+                            <div class="rest_text">
+                                <h4>餐廳類別</h4>
+                                <h3>餐廳名稱</h3>
+                                <h4>餐廳地址</h4>
+                                <h>評分</h>
+                            </div>
+                        </div>
+                        <div class="rest_list">
+                            <div class="rest_img">
+                                <img src="img/italian_food.png" alt="">
+                            </div>
+                            <div class="rest_text">
+                                <h4>餐廳類別</h4>
+                                <h3>餐廳名稱</h3>
+                                <h4>餐廳地址</h4>
+                                <h>評分</h>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <aside id="search_aside">
+        <h5>條件篩選</h5>
+        <ul>
+            <li class="kind_aside">
+                <input type="checkbox" id="american_food">
+                <label for="american_food">美式料理</label>
+            </li>
+            <li class="kind_aside">
+                <input type="checkbox" id="chinese_food">
+                <label for="chinese_food">中式料理</label>
+            </li>
+            <li class="kind_aside">
+                <input type="checkbox" id="french_food">
+                <label for="french_food">法式料理</label>
+            </li>
+            <li class="kind_aside">
+                <input type="checkbox" id="italian_food">
+                <label for="italian_food">義式料理</label>
+            </li>
+            <li class="kind_aside">
+                <input type="checkbox" id="japanese_food">
+                <label for="japanese_food">日式料理</label>
+            </li>
+            <li class="kind_aside">
+                <input type="checkbox" id="korean_food">
+                <label for="korean_food">韓式料理</label>
+            </li>
+            <li class="kind_aside">
+                <input type="checkbox" id="middle_east_food">
+                <label for="middle_east_food">中東料理</label>
+            </li>
+            <li class="kind_aside">
+                <input type="checkbox" id="port_food">
+                <label for="port_food">港式料理</label>
+            </li>
+        </ul>
+    </aside>
+
+
+
+
+
+    <!-- 頁尾 start -->
+    <footer>
+        <div class="footer_link">
+            <a href="#">關於我們</a>
+            <a href="#">商家入口</a>
+            <a href="#">常見問題</a>
+            <a href="#">聯絡我們</a>
+        </div>
+        <div class="footer_text">
+            <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- 頁尾 end -->
+
+
+    <script>
+        $(".tab_close").click(function () {
+            $(".tab_div").hide();
+        })
+        $(".area_btn").click(function () {
+            $(".tab_div").show();
+        })
+        $(".chk_close").click(function () {
+            $(".chk_div").hide();
+        })
+        $(".other_btn").click(function () {
+            $(".chk_div").show();
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+.search_div {
+    display: flex;
+    justify-content: start;
+}
+
+/* 搜尋關鍵字 start */
+
+.search_keyword {
+    width: 250px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+    float: left;
+}
+
+.search_keyword:hover {
+    box-shadow: 0 1px 10px 2px #999999;
+}
+
+.search_keyword:focus {
+    outline: none;
+    box-shadow: 0 1px 10px 2px #888888;
+}
+
+
+/* 搜尋關鍵字 end */
+
+
+/* 搜尋地區 start */
+
+.area_btn {
+    display: none;
+}
+
+.area_label {
+    position: relative;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    margin-bottom: 40px;
+    color: #403C3C;
+    text-align: start;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.area_label .fa-map-marker-alt {
+    color: #403C3C;
+    padding: 10px;
+}
+
+.area_label .fa-sort-down {
+    color: #403C3C;
+    margin-left: 78%;
+}
+
+
+/* .area_btn:checked+.area_label+.tab_div {
+    display: block;
+} */
+
+.area_label:hover {
+    box-shadow: 0 1px 10px 2px #999999;
+    color: black;
+}
+
+.area_btn:checked+.area_label {
+    box-shadow: 0 1px 10px 2px #888888;
+}
+
+.tab_div {
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    left: 320px;
+    z-index: 1;
+    width: 500px;
+    display: none;
+    border-radius: 0 0 5px 5px;
+    user-select: none;
+}
+
+.tab_css {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab_css input {
+    display: none;
+}
+
+.tab_css label {
+    margin: 0 5px 5px 0;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #8B1309;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.tab_content {
+    order: 1;
+    display: none;
+    width: 100%;
+    border-bottom: 3px solid #ddd;
+    line-height: 1.6;
+    font-size: .9em;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.tab_content span {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.tab_css input:checked+label,
+.tab_css label:hover {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.tab_css input:checked+label+.tab_content {
+    display: initial;
+}
+
+.tab_close {
+    padding: 10px;
+}
+
+
+/* 搜尋地區 end */
+
+
+/* 進階搜尋 start */
+
+.other_btn {
+    display: none;
+}
+
+.other_label {
+    position: relative;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #FCC106;
+    margin-bottom: 40px;
+    color: #403C3C;
+    text-align: start;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.other_label .fa-hand-point-up {
+    color: #403C3C;
+    padding: 10px;
+}
+
+.other_label .fa-sort-down {
+    color: #403C3C;
+    margin-left: 52%;
+}
+
+.chk_div {
+    background-color: #FCC106;
+    position: absolute;
+    top: 180px;
+    left: 320px;
+    z-index: 1;
+    width: 500px;
+    display: none;
+    user-select: none;
+}
+
+
+/* .other_btn:checked+.other_label+.chk_div {
+    display: block;
+} */
+
+.other_btn:checked+.other_label {
+    box-shadow: 0 1px 10px 2px #888888;
+}
+
+.other_btn:hover {
+    box-shadow: 0 1px 10px 2px #999999;
+    background-color: #FCC106;
+    color: black;
+}
+
+.other_btn:focus {
+    box-shadow: 0 1px 10px 2px #888888;
+}
+
+.chk_close {
+    padding: 10px;
+}
+
+
+/* 進階搜尋 end */
+
+
+/* 搜尋鈕 start */
+
+.search_btn {
+    background-color: #8B1309;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+    height: 40px;
+    width: 80px;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.search_btn:hover {
+    background-color: #a30f01;
+}
+
+
+/* 搜尋鈕 end */
+
+
+/* 搜尋欄 end */
+
+
+/* 餐廳列表 start */
+
+.rest_div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.rest_list{
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+
+.rest_img{
+    width: 46%;
+    margin-right: 5px;
+}
+
+.rest_list img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#search_aside {
+    background-color: #999999;
+    width: 12%;
+    height: 100vh;
+    position: fixed;
+    top: 12%;
+    left: 0;
+}
+
+#search_aside h5{
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.kind_aside{
+    list-style-type: none;
+    user-select: none;
+}

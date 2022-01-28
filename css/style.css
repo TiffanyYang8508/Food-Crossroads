@@ -1,0 +1,167 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 導覽列 start */
+
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+header .navbar {
+    height: 12%;
+    width: 100%;
+}
+
+header a img {
+    width: 100%;
+    height: 80px;
+}
+
+.nav_icon {
+    margin-top: 30px;
+    margin-left: auto;
+    font-size: 20px;
+}
+
+.rwd_icon {
+    display: none;
+}
+
+.nav_icon a {
+    margin-left: 30px;
+    position: relative;
+}
+
+.nav_icon a::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    height: 2px;
+    width: 100%;
+    transition: 0.3s all;
+}
+
+.nav_icon a:hover::before {
+    content: "";
+    background-color: #FCC106;
+}
+
+nav .nav_a {
+    margin-right: 40px;
+    color: #403C3C;
+    text-decoration: none;
+}
+
+
+/* 導覽列 end */
+
+
+
+/* 頁尾 start */
+footer {
+    background-color: #403C3C;
+    color: white;
+    margin-top: 5%;
+    position: sticky;
+}
+
+.footer_text {
+    text-align: center;
+    line-height: 50px;
+    height: 60px;
+}
+
+.footer_link {
+    /* float: right; */
+    /* text-align: right; */
+    display: flex;
+    justify-content: end;
+}
+
+.footer_link a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+/* 頁尾 end */
+
+/* RWD */
+
+/* 超大型螢幕 */
+
+@media screen and (max-width:1200px) {
+    header a img {
+        width: 90%;
+        height: 75px;
+    }
+    .nav_icon a {
+        font-size: 19px;
+        margin-right: 10px;
+    }
+
+    .footer_link {
+        justify-content: center;
+    }
+}
+
+
+/* 大型螢幕 */
+
+@media screen and (max-width:992px) {
+    header a img {
+        width: 80%;
+        height: 70px;
+    }
+    .nav_icon a {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    
+}
+
+
+/* 平板 */
+
+@media screen and (max-width:768px) {
+    header a img {
+        width: 70%;
+        height: 60px;
+    }
+    .nav_icon a {
+        /* font-size: 16px;
+        margin-right: 10px; */
+        display: none;
+    }
+    .rwd_icon {
+        display: block;
+    }
+    .footer_text {
+        line-height: 40px;
+        height: 50px;
+        font-size: 14px;
+    }
+    .footer_link {
+        font-size: 14px;
+    }
+}
+
+
+/* 手機 */
+
+@media screen and (max-width:576px) {
+    header a img {
+        width: 70%;
+        height: 50px;
+    }
+    /* .nav_icon a {
+        font-size: 14px;
+        margin-left: 0px;
+    } */
+}
