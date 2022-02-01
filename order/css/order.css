@@ -1,0 +1,11 @@
+.menu_group{
+    border: #fcc106 1px solid;
+    width: 168px;
+    height: 50px;
+    color: #4d4845;
+
+}
+
+.menu_group_bg{
+    border-radius: 60px;    
+}
