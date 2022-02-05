@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./nav_footer/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./nav_footer/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
+    <!-- mainstyle -->
+    <link rel="stylesheet" href="./nav_footer/css/style.css">
+    <!-- RWD -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!-- header start -->
+    
+    <div class="headerPage"></div>
+    
+    <!-- header end -->
+    
+    
+    <!-- nav start -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+<nav aria-label="breadcrumb">
+        <div class="button">
+            <button class="booking">我要訂位</button>
+            <button class="takeout">我要外帶</button>
+        </div>
+        <ul class="breadcrumb">
+            <li><a href="#home">首頁</a></li>
+            <li><a href="#restaurantList">餐廳列表</a></li>
+            <li class="current" aria-current="page"><a href="#restarutantName">餐廳名稱</a></li>
+        </ul>
+    </nav>
+        </div>
+    </div>
+</div>
+    
+
+    <!-- nav end -->
+
+
+    <!-- section start -->
+
+
+            
+            <!-- The slideshow/carousel -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"> <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+<div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/img/dogone.jpg" alt="" class="d-block" style="width:100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/dogtwo.jpg" alt="" class="d-block" style="width:100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/dogthree.jpg" alt="" class="d-block" style="width:100%">
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+
+
+
+
+    <!-- section end -->
+
+    
+    
+    
+
+
+
+
+
+
+
+
+    <!-- footer start -->
+    
+    <footer class="footerPage"></footer>
+    
+    <!-- footer end -->
+
+
+    <script>
+
+        $( ".headerPage" ).load( "header.html" );
+        $( ".footerPage" ).load( "footer.html" );
+
+    </script>
+
+
+
+</body>
+</html>
