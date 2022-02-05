@@ -5,8 +5,15 @@ body {
 
 /* 導覽列 start */
 
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
 header .navbar {
-    height: 10%;
+    height: 12%;
     width: 100%;
 }
 
@@ -53,11 +60,16 @@ nav .nav_a {
 
 /* 導覽列 end */
 
+
+
 /* 頁尾 start */
 footer {
     background-color: #403C3C;
     color: white;
     margin-top: 5%;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 .footer_text {
@@ -79,3 +91,77 @@ footer {
     margin-right: 20px;
 }
 /* 頁尾 end */
+
+/* RWD */
+
+/* 超大型螢幕 */
+
+@media screen and (max-width:1200px) {
+    header a img {
+        width: 90%;
+        height: 75px;
+    }
+    .nav_icon a {
+        font-size: 19px;
+        margin-right: 10px;
+    }
+
+    .footer_link {
+        justify-content: center;
+    }
+}
+
+
+/* 大型螢幕 */
+
+@media screen and (max-width:992px) {
+    header a img {
+        width: 80%;
+        height: 70px;
+    }
+    .nav_icon a {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    
+}
+
+
+/* 平板 */
+
+@media screen and (max-width:768px) {
+    header a img {
+        width: 70%;
+        height: 60px;
+    }
+    .nav_icon a {
+        /* font-size: 16px;
+        margin-right: 10px; */
+        display: none;
+    }
+    .rwd_icon {
+        display: block;
+    }
+    .footer_text {
+        line-height: 40px;
+        height: 50px;
+        font-size: 14px;
+    }
+    .footer_link {
+        font-size: 14px;
+    }
+}
+
+
+/* 手機 */
+
+@media screen and (max-width:576px) {
+    header a img {
+        width: 70%;
+        height: 50px;
+    }
+    /* .nav_icon a {
+        font-size: 14px;
+        margin-left: 0px;
+    } */
+}

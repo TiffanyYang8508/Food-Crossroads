@@ -1,0 +1,102 @@
+aside {
+    background-color: #403C3C;
+    width: 230px;
+    height: 100vh;
+    position: fixed;
+    top: 12%;
+
+}
+
+.panel-default{
+    /* border: 1px solid red; */
+    border-bottom: 1px solid white;
+    padding: 5px;
+    width: 100%;
+}
+
+.panel-title {
+    padding-top: 8px;
+}
+
+.panel-heading a {
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    width: 100%;
+}
+
+
+.panel-default:hover {
+    background-color: #8B1309;
+}
+
+.container{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+}
+
+.member_info{
+    
+    margin-top: 60px;
+}
+
+.member_contain{
+    padding-top: 20px;
+}
+
+.member_edit_btn{
+    margin-left: 200px;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-family: Noto Sans TC;
+}
+
+.title_member_edit{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Noto Sans TC;
+}
+
+.edit_info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,30%);
+}
+
+
+
+label{
+    margin-right: 20px;
+}
+
+.member_confirm_btn{
+    margin-left: 150px;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-family: Noto Sans TC;
+}
+
+th{
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
+.cancel_btn{
+    border-radius: 8px;
+}
+
+.detail_btn{
+    border-radius: 8px;
+}
+
+.comment_btn{
+    border-radius: 8px;
+}
