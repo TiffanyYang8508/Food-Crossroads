@@ -73,9 +73,9 @@
 
 
     <div class="container" >
-        <form class="edit_info was-validated" action="./member.html">
+        <form class="edit_info was-validated" >
             <div>
-                <p class="title_member_edit">會員資料修改</p>
+                <p class="title_member_edit" style="margin-left: 40px;">會員資料修改</p>
             </div>
             <div class="form-group form-inline">
               <label for="email">信箱:</label>
@@ -102,7 +102,7 @@
             <div class="form-group form-inline">
                 <label >性別:</label>
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="optradio">男
+                    <input type="radio" class="form-check-input" name="optradio" checked="checked">男
                   </label>
                   <label class="form-check-label">
                     <input type="radio" class="form-check-input" name="optradio">女
@@ -113,7 +113,7 @@
                 <input type="text" class="form-control" id="tel" value="0900-xxxxxx" name="tel"
                 style="width: 300px;" required>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg member_confirm_btn"
+            <button type="button" onclick="confirm()" class="btn btn-primary btn-lg member_confirm_btn"
             style="background-color: #8b1309; border-color: #fcc106;">確定修改
             </button>
           </form>
@@ -135,6 +135,12 @@
         </div>
     </footer>
     <!-- 頁尾 end -->
+
+    <script>
+        function confirm(){
+            window.location = "/member.html"
+        }
+    </script>
 </body>
 
 </html>
