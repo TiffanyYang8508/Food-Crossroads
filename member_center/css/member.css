@@ -100,3 +100,68 @@ td{
 .comment_btn{
     border-radius: 8px;
 }
+
+.cancel_modal_body{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 28px;
+    font-family: Noto Sans TC;
+}
+
+.modal-header{
+    
+}
+
+.modal-title{
+    font-family: Noto Sans TC;
+    font-size: 24px;
+    
+    
+}
+.detail_modal_body{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+    font-size: 18px;
+    font-family: Noto Sans TC;
+}
+
+.rank_modal_body{
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 150px;
+    font-family: Noto Sans TC;
+}
+
+.modal-footer{
+    font-family: Noto Sans TC;
+}
+
+.rank_modal_title{
+    position: absolute;
+    font-size: 28px;
+    left: -50px;
+    top: -40px;
+
+}
+.ratings {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    color: #ddd; /*背景星星顏色*/
+    overflow: hidden;
+    font-size: 40px; /*調整字體大小可放大縮小星星*/
+    text-shadow: 0px 1px 0 #999;
+    }
+.full_star {
+    width: 100%; /*調整寬度可變更星等*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: orange; /*前景星星顏色*/
+    }
+
