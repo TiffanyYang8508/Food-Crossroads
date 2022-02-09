@@ -23,6 +23,7 @@
         font-size: 18px;
         margin-right: 10px;
     }
+
 }
 
 
@@ -41,6 +42,22 @@
     .rwd_icon {
         display: block;
     }
+    div.food_list_border{
+        width: 49%;    
+    }
+    .group_button{
+        display: none;
+    }
+    div.food_list_border2{
+        margin-right: 0;
+    }
+    div.food_order_group{
+        float: right;
+    }
+    div.add_cart{
+
+    }
+
 }
 
 
@@ -51,4 +68,20 @@
         width: 60%;
         height: 50px;
     }
+    div.food_list_border{
+        width: 100%;  
+        margin-right: 0;
+    }
+
+    div.food_order_group{
+        float: right;
+    }
+
+    div.food_list_border2{
+        margin-left: 1vh;
+    }
+    .group_button{
+        display: none;
+    }
+
 }
