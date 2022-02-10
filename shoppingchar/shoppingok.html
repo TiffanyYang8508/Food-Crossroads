@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoppingok</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min_edit.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <!-- mainstyle -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- RWD -->
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <link rel="stylesheet" href="css/shoppingok.css">
+    <link rel="stylesheet" href="css/shoppingchar.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+
+<body>
+    
+    <!-- header -->
+    <div class="headerpage"></div>
+    <!-- header -->
+
+    <div class="container main">
+        <div class="location_bar">
+            <a href="#">首頁 </a>>
+            <a href="#">餐廳 </a>>
+            <a href="#">購物車 </a>
+        </div>
+        <div class="shopping ">
+            <table class="table shopping-table">
+                <thead>
+                    <tr class="" >
+                        <th colspan="2">
+                            商品
+                        </th>
+                        <th>
+                            單價
+                        </th>
+                        <th>
+                            數量
+                        </th>
+                        <th>
+                            總計
+                        </th>
+
+                    </tr>
+                </thead>
+
+                <tbody class="">
+
+                    <!-- 餐點顯示欄位 -->
+                    <tr class="shopping-row" id="shopping-row" >
+                        <td class="wrapper" id="td-1" style="width: 200px;">
+                            <img src="image/imge01.jpeg" class="img-fluid img-thumbnail" alt="">
+                        </td>
+                        <td>
+                            <span id="ordername" class="ordername">
+                                餐點名
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                $123
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                1
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                $1234
+                            </span>
+                        </td>
+
+                    </tr>
+                    <!-- end of 餐點顯示欄位 -->
+                    <tr class="shopping-row" id="shopping-row">
+                        <td class="wrapper">
+                            <img src="image/imge02.jpeg" class="img-fluid img-thumbnail" alt="">
+                        </td>
+                        <td>
+                            <span id="ordername" class="ordername">
+                                餐點名
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                $123
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                1
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                $1234
+                            </span>
+                        </td>
+
+                    </tr>
+                    <tr class="shopping-row" style="height: 140px;">
+                        <td colspan="3" style="text-align: center; vertical-align: middle;">
+                            <label for="get_time">取餐時間:
+                                <input type="datetime-local">
+                            </label>
+                        </td>
+                        <td colspan="2" style="text-align: center; vertical-align: middle;">
+                            <label for="order-tex">備註:
+                                <input type="text" id="order-text">
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="height: 100px;"></div>
+
+
+        <div class="all-squre" id="all-squre">
+            <table class="table">
+                <tbody>
+                    <tr id="sum-row">
+                        <td colspan="1">
+                            <button id="buy-back-btn"><b>回上一步</b>
+                            </button>
+                        </td>
+                        <td>
+                            <b>總金額(3個商品)$1234</b>
+                        </td>
+                        <td>
+                            <button id="buy-ok-btn"><b>下訂單</b>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        <footer class="footerpage"></footer>
+    </footer>
+
+
+
+
+    <script>
+        $(".headerpage").load("header.html");
+        $(".footerpage").load("footer.html");
+    </script>
+
+</body>
+
+</html>

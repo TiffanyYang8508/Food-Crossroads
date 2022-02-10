@@ -1,0 +1,159 @@
+body {
+  height: 100%;
+}
+
+/* 導覽列 start */
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+header .navbar {
+  height: 12%;
+  width: 100%;
+}
+
+header a img {
+  width: 100%;
+  height: 60px;
+}
+
+.nav_icon {
+  margin-top: 30px;
+  margin-left: auto;
+  font-size: 20px;
+}
+
+.rwd_icon {
+  display: none;
+}
+
+.nav_icon a {
+  margin-left: 30px;
+  position: relative;
+}
+
+.nav_icon a::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  height: 2px;
+  width: 100%;
+  transition: 0.3s all;
+}
+
+.nav_icon a:hover::before {
+  content: "";
+  background-color: #fcc106;
+}
+
+nav .nav_a {
+  margin-right: 40px;
+  color: #403c3c;
+  text-decoration: none;
+}
+
+/* 導覽列 end */
+
+/* 頁尾 start */
+footer {
+  width: 100%;
+  background-color: #403c3c;
+  color: white;
+  margin-top: 5%;
+  position: fixed;
+  bottom: 0%;
+}
+
+.footer_text {
+  background-color: #403c3c;
+  text-align: center;
+  line-height: 20px;
+  height: 25px;
+}
+
+.footer_link {
+  /* float: right; */
+  /* text-align: right; */
+  display: flex;
+  justify-content: end;
+}
+
+.footer_link a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+/* 頁尾 end */
+
+/* RWD */
+
+/* 超大型螢幕 */
+
+@media screen and (max-width: 1200px) {
+  header a img {
+    width: 100%;
+    height: 70x;
+  }
+  .nav_icon a {
+    font-size: 19px;
+    margin-right: 10px;
+  }
+
+  .footer_link {
+    justify-content: center;
+  }
+}
+
+/* 大型螢幕 */
+
+@media screen and (max-width: 992px) {
+  header a img {
+    width: 80%;
+    height: 60px;
+  }
+  .nav_icon a {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+}
+
+/* 平板 */
+
+@media screen and (max-width: 768px) {
+  header a img {
+    width: 70%;
+    height: 50px;
+  }
+  .nav_icon a {
+    font-size: 16px;
+    margin-right: 10px;
+    display: none;
+  }
+  .rwd_icon {
+    display: block;
+    font-size: 14px;
+  }
+  .footer_text {
+    line-height: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  .footer_link {
+    font-size: 14px;
+  }
+}
+
+/* 手機 */
+
+@media screen and (max-width: 576px) {
+  header a img {
+    width: 65%;
+    height: 50px;
+  }
+}

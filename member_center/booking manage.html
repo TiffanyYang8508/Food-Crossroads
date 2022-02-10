@@ -325,7 +325,7 @@
           </div>
 
 
-          <!-- 評價對話盒 -->ㄎ
+          <!-- 評價對話盒 -->
           <div class="modal fade" id="rankModal">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
@@ -342,13 +342,23 @@
                 <!-- Modal body -->
                 
                 <div class="rank_modal_body">
-                    <div class="rank_modal_title">給予星數：</div>
-                    <div class="ratings">
-                        <div class="empty_star">★★★★★</div>
-                        <div class="full_star">★★★★★</div>
+                    <div class="rank_modal_title">
+                        給予評價：
                     </div>
-                  
-                    
+                    <div class=" mb-0">
+                        <div class="rank_modal_star content">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <span class="stars">評分</span>
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <input type="text" class="rank_modal_comment" name="rank_comment" placeholder="撰寫評論">
+                    </div>
                     
                 </div>
 
@@ -383,5 +393,73 @@
       </div>
     </footer>
     <!-- 頁尾 end -->
+    <script>
+        window.onload = function(){
+            var oCont = document.getElementsByClassName("content")[0];
+            var aText = ['1分','2分','3分','4分','5分'];
+
+            Stars(oCont,aText); 
+
+            function Stars(id,Txt){
+                var index = '';
+                var aStar = id.getElementsByClassName('star');
+                var oStars = id.getElementsByClassName('stars')[0];
+
+                
+
+                function gray(){
+                    for(var v=0; v<aStar.length; v++){
+                        aStar[v].style.backgroundColor = "#ccc";
+                    }
+                }
+
+                for(let i=0 ; i<aStar.length; i++){
+                    function starColor(){
+                        if(i <=4){
+                            gray();
+                            for(let t = 0;t<=i ; t++ ){
+                                aStar[t].style.backgroundColor = 'orange';
+                            }
+                        }
+                        }
+
+                        //滑鼠移入變換顏色
+                       aStar[i].onmouseover = function(){
+                           oStars.innerHTML = Txt[i];
+                           starColor();
+                           this.onmouseout = function(){
+                               gray();
+                               oStars.innerHTML = '評分';
+                               if(index === ''){
+                                   return;
+                               }else{
+                                   for(var m =0 ; m<=index ; m++){
+                                       aStar[m].style.backgroundColor = 'orange';
+                                   }
+                                   oStars.innerHTML = Txt[index];
+                               }
+                           }
+                       } 
+
+                       //滑鼠點擊固定顏色
+                       aStar[i].onclick = function(){
+                           this.onmouseout = null;
+                           oStars.innerHTML = Txt[i]
+                           if(i<=4){
+                               for(let t=0 ; t<=i ; t++){
+                                   aStar[t].style.backgroundColor = 'orange';
+                                   index = t;
+                               }
+                           }
+                       }
+
+                    }
+
+                   
+
+                }
+            }
+        
+    </script>
   </body>
 </html>

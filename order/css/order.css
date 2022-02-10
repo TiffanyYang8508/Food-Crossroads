@@ -13,6 +13,7 @@ body{
 
 #menu_group{
     padding-top: 10px;
+    margin-left: 10vh;
 }
 
 .menu_group_list{
@@ -25,17 +26,19 @@ body{
 }
 
 .food_title{
-margin-left: 1vh;
+margin-left: 10vh;
 }
 
 
 div.food_list_border{
-    width: 40%;
+    width: 35%;
 	float: left;
-    margin: 0 0.5vh 1vh 1vh;
+    margin: 0 0.5vh 2vh 10vh;
     border: 1px black solid;
     border-radius: 10px;
-    
+}
+div.food_list_border2{
+    margin-left: 1vh;
 }
 
 .food_list_detail{
@@ -43,15 +46,14 @@ div.food_list_border{
 }
 
 div.food_order_group{
-    width: 18%;
+    width: 10%;
 	float: left;
-    margin-right: 0%;
+    margin-right: 8%;
     display: flex; 
     justify-content:center;
     position: fixed;
     top: 35%;
     left: 82%;
-    
 }
 
 .food_name{
@@ -90,4 +92,8 @@ ul.food_list_dollar li{
 
 #checkout{
     width: 100%;
+}
+
+.add_cart{
+    margin-right: 1vh;
 }

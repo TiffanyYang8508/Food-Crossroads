@@ -130,7 +130,7 @@ td{
 .rank_modal_body{
     position: relative;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     margin-left: 150px;
     font-family: Noto Sans TC;
 }
@@ -146,22 +146,38 @@ td{
     top: -40px;
 
 }
-.ratings {
-    position: relative;
-    vertical-align: middle;
-    display: inline-block;
-    color: #ddd; /*背景星星顏色*/
-    overflow: hidden;
-    font-size: 40px; /*調整字體大小可放大縮小星星*/
-    text-shadow: 0px 1px 0 #999;
-    }
-.full_star {
-    width: 100%; /*調整寬度可變更星等*/
+
+
+
+.rank_modal_comment{
     position: absolute;
-    left: 0;
-    top: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    color: orange; /*前景星星顏色*/
-    }
+    left: -35px;
+    top: 90px;  
+    border-radius: 8px;
+    height: 100px;
+}
+
+.rank_modal_star{
+    margin-top: 20px;
+    padding-top: 20px;
+  
+}
+
+.star{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.stars{
+    color: orange;
+    margin-left: 10px;
+}
+
+
+
 
