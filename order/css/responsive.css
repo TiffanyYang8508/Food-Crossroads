@@ -43,13 +43,14 @@
         display: block;
     }
     div.food_list_border{
-        width: 49%;    
+        width: 70%;    
     }
     .group_button{
         display: none;
     }
     div.food_list_border2{
         margin-right: 0;
+        margin-left: 10vh;
     }
     div.food_order_group{
         float: right;
@@ -69,16 +70,21 @@
         height: 50px;
     }
     div.food_list_border{
-        width: 100%;  
+        width: 70%;  
         margin-right: 0;
     }
+    div.food_list_border2{
+        margin-left:10vh;
+    }
+
 
     div.food_order_group{
         float: right;
+        margin-left: 3vh;
     }
 
     div.food_list_border2{
-        margin-left: 1vh;
+        margin-left: 10vh;
     }
     .group_button{
         display: none;
