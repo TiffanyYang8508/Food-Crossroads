@@ -1,3 +1,7 @@
+.container_list{
+    margin-left: 100px;
+}
+
 .search_div {
     display: flex;
     justify-content: center;
@@ -8,8 +12,8 @@
 /* 搜尋關鍵字 start */
 
 .search_keyword {
-    width: 300px;
-    height: 40px;
+    width: 350px;
+    height: 50px;
     margin-bottom: 20px;
     border-radius: 5px 0 0 5px;
     background-color: white;
@@ -38,9 +42,9 @@
 
 .area_label {
     position: relative;
-    width: 300px;
-    height: 40px;
-    line-height: 40px;
+    width: 350px;
+    height: 50px;
+    line-height: 50px;
     background-color: white;
     border: 1px solid #888888;
     margin-bottom: 40px;
@@ -57,7 +61,7 @@
 
 .area_label .fa-sort-down {
     color: #403C3C;
-    margin-left: 52%;
+    margin-left: 60%;
 }
 
 
@@ -77,8 +81,8 @@
 .tab_div {
     background-color: white;
     position: absolute;
-    top: 60px;
-    left: 320px;
+    top: 70px;
+    left: 324px;
     z-index: 1;
     width: 500px;
     display: none;
@@ -152,9 +156,9 @@
 
 .other_label {
     position: relative;
-    width: 300px;
-    height: 40px;
-    line-height: 40px;
+    width: 350px;
+    height: 50px;
+    line-height: 50px;
     background-color: #FCC106;
     border: 1px solid #888888;
     margin-bottom: 40px;
@@ -176,14 +180,14 @@
 
 .other_label .fa-sort-down {
     color: #403C3C;
-    margin-left: 58%;
+    margin-left: 64%;
 }
 
 .chk_div {
     background-color: #FCC106;
     position: absolute;
-    top: 60px;
-    left: 420px;
+    top: 70px;
+    left: 524px;
     z-index: 1;
     text-align: center;
     width: 500px;
@@ -229,7 +233,7 @@
     color: white;
     border-radius: 0 5px 5px 0;
     border: none;
-    height: 40px;
+    height: 50px;
     width: 100px;
     transition: 0.3s;
     user-select: none;
@@ -244,6 +248,19 @@
 
 
 /* 搜尋欄 end */
+
+/* 麵包屑 start */
+
+.breadcrumb-item a{
+    text-decoration: none;
+}
+
+.breadcrumb .breadcrumb-item{
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+/* 麵包屑 end */
 
 
 /* 餐廳列表 start */
@@ -281,27 +298,31 @@
 #search_aside {
     background-color: #999999;
     width: 12%;
-    height: 100vh;
+    height: 1000vh;
     position: fixed;
-    top: 6%;
+    top: 5%;
     left: 0;
 }
 
 #search_aside h5 {
     padding: 10px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 56px;
+    font-size: 28px;
 }
 
 .kind_aside {
     list-style-type: none;
     user-select: none;
+    font-size: 18px;
+    margin-left: 28px;
 }
 
 #page_list .pagination {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    margin-left: 200px;
 }
 
 
