@@ -1,0 +1,8 @@
+.order_finish {
+  width: 500px;
+  height: 160px;
+  border: solid 1.5px #707070;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+}
