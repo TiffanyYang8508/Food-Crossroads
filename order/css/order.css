@@ -1,11 +1,99 @@
+/*字體*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap&subset=chinese-traditional');
+body{
+    font-family: 'Noto Sans TC', sans-serif;;
+}
+
+/* 分類列表 */
 .menu_group{
-    border: #fcc106 1px solid;
-    width: 168px;
+    margin: 2vh 0 2vh 0;
     height: 50px;
-    color: #4d4845;
+    background-color: #403C3C;
+}
+
+#menu_group{
+    padding-top: 10px;
+    margin-left: 10vh;
+}
+
+.menu_group_list{
+    margin: 0 1vh 0 1vh;
+
+}
+/* 按鈕圓角 */
+.oval{
+    border-radius: 100px;
+}
+
+.food_title{
+margin-left: 10vh;
+}
+
+
+div.food_list_border{
+    width: 35%;
+	float: left;
+    margin: 0 0.5vh 2vh 10vh;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+div.food_list_border2{
+    margin-left: 1vh;
+}
+
+.food_list_detail{
+    align-items: flex-start
+}
+
+div.food_order_group{
+    width: 10%;
+	float: left;
+    margin-right: 8%;
+    display: flex; 
+    justify-content:center;
+    position: fixed;
+    top: 35%;
+    left: 82%;
+}
+
+.food_name{
+    font-size: 20px;
+}
+.food_detail{
+    flex-wrap: nowrap;
+    list-style-type: none; 
+    margin-left: 20%;
+}
+
+.dollar{
+    margin-right: 2%;
+    font-size: 20px;
+}
+.order_number{
+    margin-right: 2%;
+}
+
+.food_img{
+    width: 150px;
+    height: auto;
+    float: left;
+    margin: 5px 5px 5px 5px;
 
 }
 
-.menu_group_bg{
-    border-radius: 60px;    
+.food_list_dollar{
+    list-style-type: none; 
+    display: flex;
+}
+
+ul.food_list_dollar li{
+    margin-left: 5px;
+}
+
+#checkout{
+    width: 100%;
+}
+
+.add_cart{
+    margin-right: 1vh;
 }
