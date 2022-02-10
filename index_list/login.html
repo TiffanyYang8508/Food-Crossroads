@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <!-- index -->
+    <link rel="stylesheet" href="css/login.css">
+    <!-- mainstyle -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- RWD -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 導覽列 start -->
+
+    <div class="header_page"></div>
+
+    <!-- 導覽列 end -->
+
+    <section>
+        <div class="container">
+            <div class="home_login">
+                <div>
+                    <p class="title_home_login">後台管理登入</p><br>
+                </div>
+                <div class="account_home_login">
+                    <label for="email">帳&nbsp&nbsp&nbsp&nbsp&nbsp號&nbsp&nbsp&nbsp</label>
+                    <input type="email" id="email" style="border-radius: 5px; width: 200px;border-color: whitesmoke;">
+                    <br>
+                    <br>
+                    <label for="password">密&nbsp&nbsp&nbsp&nbsp&nbsp碼&nbsp&nbsp&nbsp</label>
+                    <input type="password" id="password"
+                        style="border-radius: 5px;width: 200px;border-color: whitesmoke">
+                </div>
+
+                <div class="btn_home_forgetpwd">
+                    <a href="#">忘記密碼?</a>
+                </div>
+                <div class="btn_home_rememberme">
+                    <label for="auto-login">自動登入</label>
+                    <input type="checkbox" id="auto-login">
+                </div>
+
+                <div class="btn_home_login ">
+                    <button class="btn btn-dark ">登入</button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 頁尾 start -->
+
+    <div class="footer_page"></div>
+
+    <!-- 頁尾 end -->
+
+    
+    <script type="text/javascript">
+        $(function () {
+            $(".header_page").load("header.html");
+            $(".footer_page").load("footer.html");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <!-- mainstyle -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- index -->
+    <link rel="stylesheet" href="css/member.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 導覽列 start -->
+
+    <div class="header_page"></div>
+
+    <!-- 導覽列 over -->
+
+    <aside>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default" style="background-color: #8b1309;">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseOne">會員資料</a>
+                    </h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseTwo">訂位管理</a>
+                    </h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseThree">訂餐管理</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <section id="edit_member">
+        <div class="container">
+            <form class="edit_info was-validated">
+                <div>
+                    <p class="title_member_edit" style="margin-left: 40px;">會員資料修改</p>
+                </div>
+                <div class="form-group form-inline">
+                    <label for="name">姓　　名:</label>
+                    <input type="text" class="form-control" id="name" value="李曉明" name="name" required>
+                </div>
+                <div class="form-group form-inline">
+                    <label>性　　別:</label>
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optradio" checked="checked">男
+                    </label>
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optradio">女
+                    </label>
+                </div>
+                <div class="form-group form-inline">
+                    <label for="email">信　　箱:</label>
+                    <input type="email" class="form-control" id="email" value="email@gmail.com" name="email" disabled>
+                </div>
+                <div class="form-group form-inline">
+                    <label for="pwd">密　　碼:</label>
+                    <input type="password" class="form-control" id="pwd" value="******" name="pwd" required>
+                    <div class="invalid-feedback">請輸入密碼</div>
+                </div>
+                <div class="form-group form-inline" style="margin-left: -31px;">
+                    <label for="pwd">　　確認密碼:</label>
+                    <input type="password" class="form-control" id="pwd" value="******" name="pwd" required>
+                    <div class="invalid-feedback">請輸入密碼</div>
+                </div>
+                <div class="form-group form-inline">
+                    <label for="tel">電　　話:</label>
+                    <input type="text" class="form-control" id="tel" value="0900-xxxxxx" name="tel" required>
+                </div>
+                <button type="button" onclick="confirm()" class="member_confirm_btn">
+                    返回
+                </button>
+                <button type="button" onclick="confirm()" class="member_confirm_btn">
+                    確定修改
+                </button>
+            </form>
+        </div>
+    </section>
+    <!-- 頁尾 start -->
+
+    <div class="footer_page"></div>
+
+    <!-- 頁尾 over -->
+
+    <script>
+        $(document).ready(function () {
+            $(".header_page").load("header.html");
+            $(".footer_page").load("footer.html");
+            function confirm() {
+                window.location = "/member.html"
+            }
+        });
+    </script>
+</body>
+
+</html>

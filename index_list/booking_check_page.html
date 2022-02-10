@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食字路口 Food Crossroads</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <!-- mainStyle -->
+    <link rel="stylesheet" href="css/restaurant_style.css">
+    <!-- RWD -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <!-- 導覽列 start -->
+    
+    <div class="header_page"></div>
+    
+    <!-- 導覽列 over -->
+
+
+    <div class="container">
+
+        <div class="row">
+                        
+            <!-- 麵包屑 start -->
+            <nav aria-label="breadcrumb">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#index"><span>首頁</span></a></li>
+                    <li class="breadcrumb-item"><a href="#restaurantList"><span>餐廳列表</span></a></li>
+                    <li class="breadcrumb-item"><a href="#restaurantName"><span>餐廳名稱</span></a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><span>訂位</span></li>
+                </ul>
+            </nav>
+            <!-- 麵包屑 over -->
+            
+            <!-- 進度條 start -->
+            <div class="progress_container">
+                <ul class="progress_ul">
+                    <li class="active"><span>預約</span></li>
+                    <li class="active"><span>確認</span></li>
+                    <li><span>完成</span></li>
+                </ul>
+            </div>
+            <!-- 進度條 over -->
+
+            <!-- 訂位確認 start -->
+            <div class="check_container">
+                <div class="check_person">
+                    <div class="check_form_title">訂位資料是否正確？</div>
+                    <div class="form_container_check_wrapper">
+                        <form action="#">
+                            <div class="form_container_check">
+                                <label for="check_person_name">姓　　名：</label>
+                                <label for="check_person_name">XXX</label>
+                            </div>
+                            <div class="form_container_check">
+                                <label for="check_person_cellphone">手　　機：</label>
+                                <label for="check_person_cellphone">09XX-XXX-XXX</label>
+                            </div>
+                            <div class="form_container_check">
+                                <label for="check_person_email">信　　箱：</label>
+                                <label for="check_person_email">your_email@gmail.com</label>
+                            </div>
+                            <br />
+                            <div class="form_container_check">
+                                <label for="check_person_person_number">訂位人數：</label>
+                                <label for="check_person_person_number">3人</label>
+                            </div>
+                            <div class="form_container_check">
+                                <label for="check_person_date">訂位日期：</label>
+                                <label for="check_person_date">2022/02/10(四)</label>
+                            </div>                            
+                            <div class="form_container_check">
+                                <label for="check_person_time">訂位時間：</label>
+                                <label for="check_person_time">19：00</label>
+                            </div>                            
+                            <div class="form_container_check">
+                                <label for="check_person_demands">需　　求：</label>
+                                <label for="check_person_demands">停車、嬰兒座椅</label>
+                            </div>                            
+                            <div class="form_container_check">
+                                <label for="check_person_remark">備　　註：</label>
+                                <label for="check_person_remark">XXX</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="btn_container">
+                        <input type="button" class="check_btn_back" value="回上一步" />      
+                        <input type="button" class="check_btn_confirm" value="下一步：完成訂位" />
+                    </div>
+                </div>
+            </div>
+            <!-- 訂位確認 over -->
+        </div>
+    </div>
+
+    <!-- 頁尾 start -->
+
+    <div class="footer_page"></div>  
+
+    <!-- 頁尾 over -->
+
+    <script type="text/javascript">
+        $( function() {
+            $( ".header_page" ).load( "header.html" );
+            $( ".footer_page" ).load( "footer.html" );
+        } );
+    </script>
+
+</body>
+</html>

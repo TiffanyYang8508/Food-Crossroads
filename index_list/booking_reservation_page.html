@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食字路口 Food Crossroads</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <!-- mainStyle -->
+    <link rel="stylesheet" href="css/restaurant_style.css">
+    <!-- RWD -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <!-- header start -->
+
+    <div class="header_page"></div>
+
+    <!-- header over -->
+
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- 導覽列 start -->
+            <nav aria-label="breadcrumb">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#index"><span>首頁</span></a></li>
+                    <li class="breadcrumb-item"><a href="#restaurantList"><span>餐廳列表</span></a></li>
+                    <li class="breadcrumb-item"><a href="#restaurantName"><span>餐廳名稱</span></a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><span>訂位</span></li>
+                </ul>
+            </nav>
+            <!-- 導覽列 over -->
+
+            <section id="booking_section">
+                <!-- 進度條 start -->
+                <div class="progress_container">
+                    <ul class="progress_ul">
+                        <li class="active"><span>預約</span></li>
+                        <li><span>確認</span></li>
+                        <li><span>完成</span></li>
+                    </ul>
+                </div>
+                <!-- 進度條 over -->
+
+                <!-- 訂位 start -->
+                <div class="reservation_container">
+                    <div class="reservation_info">
+                        <div class="reservation_form_title">訂位資料</div>
+                        <div class="form_container_info">
+                            <form action="#">
+                                <div class="form_container_info_left">
+                                    <label for="reservation_info_person_number">訂位人數</label>
+                                    <label for="reservation_info_date">訂位日期</label>
+                                    <label for="reservation_info_time">訂位時間</label>
+                                    <label for="reservation_info_demands">需　　求</label>
+                                    <label for="reservation_info_remark">備　　註</label>
+                                </div>
+                                <div class="form_container_info_right">
+                                    <select name="reservation_info_person_number" id="reservation_info_person_number">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                    <input type="date" id="reservation_info_date" name="reservation_info_date" required />
+                                    <input type="time" id="reservation_info_time" name="reservation_info_time" required />
+                                    <input type="text" id="reservation_info_demands" name="reservation_info_demands" />
+                                    <textarea type="text" id="reservation_info_remark" name="reservation_info_remark" style="height: 60px; width: 200px;"></textarea>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="reservation_person">
+                        <div class="reservation_form_title">訂位人</div>
+                        <div class="form_container_person">
+                            <form action="#">
+                                <div class="form_container_person_left">
+                                    <label for="reservation_person_name"><span>姓　名</span></label>
+                                    <label for="reservation_person_cellphone"><span>手　機</span></label>
+                                    <label for="reservation_person_email"><span>E-mail</span></label>
+                                </div>
+                                <div class="form_container_person_right">
+                                    <input type="text" id="reservation_person_name" name="reservation_person_name"
+                                        placeholder="請輸入您的姓名" required /><br />
+                                    <input type="tel" id="reservation_person_cellphone" name="reservation_person_cellphone"
+                                        placeholder="09XX-XXX-XXX" pattern="[0][9][0-9]{2}-[0-9]{3}-[0-9]{3}"
+                                        required /><br />
+                                    <input type="email" id="reservation_person_email" name="reservation_person_email"
+                                        placeholder="your_email@gmail.com" required /><br />
+                                </div>
+                            </form>
+                            <input type="submit" class="reservation_btn_next" value="下一步：訂位確認" />
+                        </div>
+                    </div>
+                </div>
+                <!-- 訂位 over -->
+            </section>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- footer start -->
+    <div class="footer_page"></div>
+    <!-- footer over -->
+
+
+    <script type="text/javascript">
+        $(function () {
+            $(".header_page").load("header.html");
+            $(".footer_page").load("footer.html");
+        });
+
+
+        // 訂位日期 顯示當日日期
+        var now = new Date();
+        var day = ("0" + now.getDate()).slice(-2);
+        var month = ("0" + (now.getMonth() + 1)).slice(-2);
+        var today = now.getFullYear() + "-" + (month) + "-" + (day);
+
+        $("#reservation_info_date").val(today);
+
+    </script>
+
+
+</body>
+
+</html>

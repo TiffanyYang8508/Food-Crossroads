@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoppingchar</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min_edit.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <!-- mainstyle -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- RWD -->
+    <link rel="stylesheet" href="css/shoppingchar.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+
+<body>
+    <!-- header -->
+    <div class="headerpage"></div>
+    <!-- header -->
+    <div class="container ">
+
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#index"><span>首頁</span></a></li>
+                <li class="breadcrumb-item"><a href="#restaurantList"><span>餐廳列表</span></a></li>
+                <li class="breadcrumb-item active" aria-current="page"><span>訂餐</span></a></li>
+            </ul>
+        </nav>
+        <div class="shopping">
+            <table class="table shopping-table">
+                <thead>
+                    <tr class="">
+                        <th colspan="3">
+                            商品
+                        </th>
+                        <th>
+                            單價
+                        </th>
+                        <th>
+                            數量
+                        </th>
+                        <th>
+                            總計
+                        </th>
+                        <th>
+                            刪除
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody class="">
+                    <tr style=" background-color:#403c3c;">
+                        <td colspan="7">
+                            <div style="color: white; font-size:larger;">餐廳名稱</div>
+                        </td>
+                    </tr>
+
+                    <!-- 餐點顯示欄位 -->
+                    <tr class="shopping-row" id="shopping-row">
+                        <td>
+                            <input class="shopping-checkbox checkmark" id="shopping-checkbox" type="checkbox"
+                                name="shopping-checkbox" />
+                        </td>
+                        <td class="wrapper">
+                            <img src="img/image_shoppingchar/imge01.jpeg" class="img-fluid img-thumbnail" alt="">
+                        </td>
+                        <td>
+                            <span id="ordername" class="ordername">
+                                餐點名
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                $123
+                            </span>
+                        </td>
+                        <td>
+                            <!-- 數量增減 -->
+                            <span class="qty-squre">
+                                <input id="qtyminus" type="button" value="-" class="qty-btn"
+                                    style="border-right: 1px solid #707070;">
+                                <input type="text" value="1" class="qty" name="quantity">
+                                <input id="qtyplus" type="button" value="+" class="qty-btn"
+                                    style="border-left: 1px solid #707070;">
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                $1234
+                            </span>
+                        </td>
+                        <td class="delete-shopping">
+                            <span>
+                                <!-- <button></button> -->
+                                刪除
+                            </span>
+                        </td>
+                    </tr>
+                    <!-- end of 餐點顯示欄位 -->
+                    <!-- 2 -->
+                    <tr class="shopping-row" id="shopping-row">
+                        <td>
+                            <input class="shopping-checkbox checkmark" id="shopping-checkbox" type="checkbox"
+                                name="shopping-checkbox" />
+                        </td>
+                        <td class="wrapper">
+                            <img src="img/image_shoppingchar/imge02.jpeg" class="img-fluid img-thumbnail" alt="">
+                        </td>
+                        <td>
+                            <span id="ordername" class="ordername">
+                                餐點名
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                $123
+                            </span>
+                        </td>
+                        <td>
+                            <!-- 數量增減 -->
+                            <span class="qty-squre">
+                                <input id="qtyminus" type="button" value="-" class="qty-btn"
+                                    style="border-right: 1px solid #707070;">
+                                <input type="text" value="1" class="qty" name="quantity">
+                                <input id="qtyplus" type="button" value="+" class="qty-btn"
+                                    style="border-left: 1px solid #707070;">
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                $1234
+                            </span>
+                        </td>
+                        <td class="delete-shopping">
+                            <span>
+                                <!-- <button></button> -->
+                                刪除
+                            </span>
+                        </td>
+                    </tr>
+                    <!-- 2 -->
+                    <!-- 3 -->
+                    <tr class="shopping-row" id="shopping-row">
+                        <td>
+                            <input class="shopping-checkbox checkmark" id="shopping-checkbox" type="checkbox"
+                                name="shopping-checkbox" />
+                        </td>
+                        <td class="wrapper">
+                            <img src="img/image_shoppingchar/imge03.jpeg" class="img-fluid img-thumbnail" alt="">
+                        </td>
+                        <td>
+                            <span id="ordername" class="ordername">
+                                餐點名
+                            </span>
+                        </td>
+                        <td>
+                            <srpan>
+                                $123
+                            </srpan>
+                        </td>
+                        <td>
+                            <!-- 數量增減 -->
+                            <span class="qty-squre">
+                                <input id="qtyminus" type="button" value="-" class="qty-btn"
+                                    style="border-right: 1px solid #707070;">
+                                <input type="text" value="1" class="qty" name="quantity">
+                                <input id="qtyplus" type="button" value="+" class="qty-btn"
+                                    style="border-left: 1px solid #707070;">
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                $1234
+                            </span>
+                        </td>
+                        <td class="delete-shopping">
+                            <span>
+                                <!-- <button></button> -->
+                                刪除
+                            </span>
+                        </td>
+                    </tr>
+                    <!-- 3 -->
+
+                    <tr class="shopping-row" id="shopping-row">
+                        <td>
+                            <input class="shopping-checkbox checkmark" id="shopping-checkbox" type="checkbox"
+                                name="shopping-checkbox" />
+                        </td>
+                        <td class="wrapper">
+                            <img src="img/image_shoppingchar/imge01.jpeg" class="img-fluid img-thumbnail" alt="">
+                        </td>
+                        <td>
+                            <span id="ordername" class="ordername">
+                                餐點名
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                $123
+                            </span>
+                        </td>
+                        <td>
+                            <!-- 數量增減 -->
+                            <span class="qty-squre">
+                                <input id="qtyminus" type="button" value="-" class="qty-btn"
+                                    style="border-right: 1px solid #707070;">
+                                <input type="text" value="1" class="qty" name="quantity">
+                                <input id="qtyplus" type="button" value="+" class="qty-btn"
+                                    style="border-left: 1px solid #707070;">
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                $1234
+                            </span>
+                        </td>
+                        <td class="delete-shopping">
+                            <span>
+                                刪除
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div style="height: 100px;"></div>
+        </div>
+
+
+        <div class="all-squre container-fluid" id="all-squre">
+            <table class="table">
+                <tbody>
+                    <tr id="sum-row">
+                        <td>
+                            <label class="media">
+                                <input id="shopping-checkbox" class="shopping-checkbox checkmark mt-4 "
+                                    name="shopping-allcheckbox" type="checkbox" />
+                                <span class="media-body mt-4">全選</span>
+                            </label>
+                        </td>
+                        <td>
+                            <p class="mt-4 "><b>總金額(3個商品)$1234</b></p>
+                        </td>
+                        <td>
+                            <button class="mt-4" id="buy-btn"><b>結帳</b>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer class="footerpage"></footer>
+    <!-- footer -->
+
+
+
+    <script>
+        $(".headerpage").load("header.html");
+        $(".footerpage").load("footer.html");
+
+        // $('input').change(function () {
+        //     $(`input[name='${this.id}']`).prop('checked', this.checked);
+
+        //     $(`input[id='${this.name}']`)
+        //         .prop('checked',
+        //             $(`input[name='${this.name}']`).length ==
+        //             $(`input[name='${this.name}']:checked`).length)
+        // })
+    </script>
+
+</body>
+
+</html>
