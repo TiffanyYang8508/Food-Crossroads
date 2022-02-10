@@ -325,7 +325,7 @@
           </div>
 
 
-          <!-- 評價對話盒 -->ㄎ
+          <!-- 評價對話盒 -->
           <div class="modal fade" id="rankModal">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
@@ -396,7 +396,7 @@
     <script>
         window.onload = function(){
             var oCont = document.getElementsByClassName("content")[0];
-            var aText = ['1','2','3','4','5'];
+            var aText = ['1分','2分','3分','4分','5分'];
 
             Stars(oCont,aText); 
 
@@ -432,11 +432,6 @@
                                oStars.innerHTML = '評分';
                                if(index === ''){
                                    return;
-                               }else if(index <= 1){
-                                   for(var n=0 ; n<=index; n++){
-                                       aStar[n].style.backgroundColor = '#999';
-                                   }
-                                   oStars.innerHTML = Txt[index];
                                }else{
                                    for(var m =0 ; m<=index ; m++){
                                        aStar[m].style.backgroundColor = 'orange';
