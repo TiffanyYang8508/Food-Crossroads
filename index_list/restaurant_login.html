@@ -23,23 +23,10 @@
 
 <body>
     <!-- 導覽列 start -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="LOGO"></a>
-            <div class="nav_icon">
-                <a class="nav_a" href="#"><i class="fas fa-store"></i>餐廳列表</a>
-                <a class="nav_a" href="#"><i class="fas fa-shopping-cart"></i>購物車</a>
-                <a class="nav_a" href="#"><i class="fas fa-user-circle"></i>會員登入</a>
-            </div>
-            <div class="rwd_icon">
-                <a class="nav_a" href="#"><i class="fas fa-store"></i></a>
-                <a class="nav_a" href="#"><i class="fas fa-shopping-cart"></i></a>
-                <a class="nav_a" href="#"><i class="fas fa-user-circle"></i></a>
-            </div>
-        </nav>
-    </header>
-    <!-- 導覽列 end -->
 
+    <div class="header_page"></div>
+
+    <!-- 導覽列 over -->
 
     <div class="container">
         <div class="card-head">
@@ -75,8 +62,8 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 offset-md-4 login_btn_1">
-                    <button type="submit" class="btn login_btn_2">
+                <div class="">
+                    <button class="login_btn_2">
                         登入
                     </button>
                 </div>
@@ -84,25 +71,18 @@
         </form>
     </div>
 
-
-
-
-
-
-
     <!-- 頁尾 start -->
-    <footer>
-        <div class="footer_link">
-            <a href="#">關於我們</a>
-            <a href="#">商家入口</a>
-            <a href="#">常見問題</a>
-            <a href="#">聯絡我們</a>
-        </div>
-        <div class="footer_text">
-            <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
-        </div>
-    </footer>
-    <!-- 頁尾 end -->
+
+    <div class="footer_page"></div>
+
+    <!-- 頁尾 over -->
+
+    <script>
+        $(document).ready(function () {
+            $(".header_page").load("header.html");
+            $(".footer_page").load("footer.html");
+        });
+    </script>
 </body>
 
 </html>

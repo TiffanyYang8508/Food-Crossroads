@@ -1,5 +1,5 @@
 section{
-    height: 80vh;
+    height: 87vh;
 }
 
 .container{
@@ -20,6 +20,12 @@ section{
     text-align: center;
 }
 
+.account_home_login input{
+    border-radius: 5px; 
+    width: 200px;
+    border-color: whitesmoke;
+}
+
 .btn_home_forgetpwd{
     font-size: 10px;
     margin-top: 10px;
@@ -33,12 +39,19 @@ section{
     margin-left: 150px;
 }
 
-.btn{
+.login_btn{
     width: 200px;
     height: 50px;
     margin-top: 40px;
     margin-left: 40px;
     font-size: 24px;
+    background-color: #8B1309;
+    color: #fff;
     border: whitesmoke 1px solid;
     border-radius: 10px;
+    transition: 0.3s;
+}
+
+.login_btn:hover{
+    background-color: #a30f01;
 }

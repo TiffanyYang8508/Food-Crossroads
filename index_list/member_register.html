@@ -23,35 +23,21 @@
 
 <body>
     <!-- 導覽列 start -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="LOGO"></a>
-            <div class="nav_icon">
-                <a class="nav_a" href="#"><i class="fas fa-store"></i>餐廳列表</a>
-                <a class="nav_a" href="#"><i class="fas fa-shopping-cart"></i>購物車</a>
-                <a class="nav_a" href="#"><i class="fas fa-user-circle"></i>會員登入</a>
-            </div>
-            <div class="rwd_icon">
-                <a class="nav_a" href="#"><i class="fas fa-store"></i></a>
-                <a class="nav_a" href="#"><i class="fas fa-shopping-cart"></i></a>
-                <a class="nav_a" href="#"><i class="fas fa-user-circle"></i></a>
-            </div>
-        </nav>
-    </header>
-    <!-- 導覽列 end -->
 
+    <div class="header_page"></div>
 
+    <!-- 導覽列 over -->
 
     <div class="container">
 
         <div class="row">
             <div class="col-md-12 col-sm-6">
-                <div class="register_title">
-                    <img src="./img/person.png" class="member_icon m-2">
-                    <span class="register_title_text">會員註冊</span>
-                </div>
+
                 <div class="register_form">
                     <form action="">
+                        <div class="register_title">
+                            <span class="register_title_text"><i class="fas fa-user-circle"></i>會員註冊</span>
+                        </div>
                         <div class="form-group row">
                             <label for="name" class="form_text">姓名
                             </label>
@@ -66,7 +52,7 @@
                                 <input type="text" id="email" class="form-control" name="email">
                             </div>
                         </div>
-            
+
                         <div class="form-group row">
                             <label for="password" class="form_text">密碼
                             </label>
@@ -74,7 +60,7 @@
                                 <input type="text" id="password" class="form-control" name="password">
                             </div>
                         </div>
-            
+
                         <div class="form-group row password_confirm">
                             <label for="password_confirm" class="form_text">確認密碼
                             </label>
@@ -82,7 +68,7 @@
                                 <input type="text" id="password_confirm" class="form-control" name="password_confirm">
                             </div>
                         </div>
-            
+
                         <div class="form-group row">
                             <label for="phone_number" class="form_text">手機
                             </label>
@@ -90,34 +76,28 @@
                                 <input type="text" id="phone_number" class="form-control">
                             </div>
                         </div>
-                        <div>
-                            <button type="submit" class="btn register_btn">
+                        <div class="btn_div">
+                            <button class="register_btn">
                                 註冊
-                            </button>   
-                        </div>  
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
-        
-    
     </div>
-
-
-
     <!-- 頁尾 start -->
-    <footer>
-        <div class="footer_link">
-            <a href="#">關於我們</a>
-            <a href="#">商家入口</a>
-            <a href="#">常見問題</a>
-            <a href="#">聯絡我們</a>
-        </div>
-        <div class="footer_text">
-            <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
-        </div>
-    </footer>
-    <!-- 頁尾 end -->
+
+    <div class="footer_page"></div>
+
+    <!-- 頁尾 over -->
+
+    <script>
+        $(document).ready(function () {
+            $(".header_page").load("header.html");
+            $(".footer_page").load("footer.html");
+        });
+    </script>
 </body>
 
 </html>

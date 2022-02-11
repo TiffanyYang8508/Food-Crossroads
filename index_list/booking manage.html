@@ -13,7 +13,7 @@
     <!-- mainstyle -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- index -->
-    <link rel="stylesheet" href="./css/member.css" />
+    <link rel="stylesheet" href="css/member.css" />
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -22,31 +22,12 @@
 
   <body>
     <!-- 導覽列 start -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"
-          ><img src="img/logo.png" alt="LOGO"
-        /></a>
-        <div class="nav_icon">
-          <a class="nav_a" href="#"><i class="fas fa-store"></i>餐廳列表</a>
-          <a class="nav_a" href="#"
-            ><i class="fas fa-shopping-cart"></i>購物車</a
-          >
-          <a class="nav_a" href="#"
-            ><i class="fas fa-user-circle"></i>會員登入</a
-          >
-        </div>
-        <div class="rwd_icon">
-          <a class="nav_a" href="#"><i class="fas fa-store"></i></a>
-          <a class="nav_a" href="#"><i class="fas fa-shopping-cart"></i></a>
-          <a class="nav_a" href="#"><i class="fas fa-user-circle"></i></a>
-        </div>
-      </nav>
-    </header>
-    <!-- 導覽列 end -->
+    
+    <div class="header_page"></div>
+    
+    <!-- 導覽列 over -->
 
     <aside>
-
         <div class="panel-group" id="accordion">
             <div class="panel panel-default"  >
                 <div class="panel-heading">
@@ -67,11 +48,10 @@
                 </div>
             </div>
         </div>
-
     </aside>
 
     <div class="container">
-      <table class="table">
+      <table class="table order_table">
         <thead>
           <tr>
             <th>訂位日期</th>
@@ -116,10 +96,6 @@
               </button>
             </td>
           </tr>
-
-          
-
-         
 
           <tr>
             <td>2022-01-05</td>
@@ -381,20 +357,18 @@
     </div>
 
     <!-- 頁尾 start -->
-    <footer>
-      <div class="footer_link">
-        <a href="#">關於我們</a>
-        <a href="#">商家入口</a>
-        <a href="#">常見問題</a>
-        <a href="#">聯絡我們</a>
-      </div>
-      <div class="footer_text">
-        <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
-      </div>
-    </footer>
-    <!-- 頁尾 end -->
+
+    <div class="footer_page"></div>  
+
+    <!-- 頁尾 over -->
+
     <script>
-        window.onload = function(){
+
+    $(document).ready(function() {
+          $( ".header_page" ).load( "header.html" );
+          $( ".footer_page" ).load( "footer.html" );
+
+          window.onload = function(){
             var oCont = document.getElementsByClassName("content")[0];
             var aText = ['1分','2分','3分','4分','5分'];
 
@@ -404,8 +378,6 @@
                 var index = '';
                 var aStar = id.getElementsByClassName('star');
                 var oStars = id.getElementsByClassName('stars')[0];
-
-                
 
                 function gray(){
                     for(var v=0; v<aStar.length; v++){
@@ -454,12 +426,11 @@
                        }
 
                     }
-
-                   
-
                 }
             }
-        
+      });
+      
     </script>
+
   </body>
 </html>

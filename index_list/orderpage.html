@@ -10,15 +10,11 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
     <!-- mainstyle -->
     <link rel="stylesheet" href="css/style.css">
     <!-- order page -->
     <link rel="stylesheet" href="css/order.css">
-
-    <!-- RWD -->
-    <link rel="stylesheet" href="./css/responsive.css">
-
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -42,7 +38,6 @@
             <button type="button" class="btn btn-light btn-sm oval menu_group_list">餐點分類6</button>
         </div>
     </div>
-
 
     <div id="group_1" class="d-flex flex-column">
         <div class="food_title">
@@ -213,9 +208,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 
     <div id="group_2" class="d-flex flex-column">
         <div class="food_title">
@@ -463,16 +456,10 @@
 
     <script>
         $(document).ready(function() {
-            $(".dropdown_label").click(function(e) {
-                e.preventDefault();
-                $(this).parent().find(".dropdown_div").slideToggle();
-                $(this).parent().siblings().find(".dropdown_div").slideUp();
-            });
             $( ".header_page" ).load( "header.html" );
             $( ".footer_page" ).load( "footer.html" );
         });
     </script>
-
 
 </body>
 

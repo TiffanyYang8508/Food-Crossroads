@@ -11,6 +11,10 @@
     margin-top: 20px;
 }
 
+.container{
+    height: 90vh;
+}
+
 .breadcrumb {
     margin: 0 auto 5px auto;
 }
@@ -235,7 +239,8 @@
     width: 100%;
     height: 60vh;
     border: 2px solid red;
-    
+    display: flex;
+    justify-content: center;
 }
 
 .check_person,.finish_person {    

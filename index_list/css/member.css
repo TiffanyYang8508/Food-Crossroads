@@ -1,7 +1,7 @@
-section {
-    /* position: relative;
-    bottom: 800px; */
-}
+/* section {
+    position: relative;
+    bottom: 800px;
+} */
 
 aside {
     background-color: #403C3C;
@@ -74,10 +74,10 @@ aside {
 }
 
 #edit_member .edit_info {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 30%);
+    transform: translate(-50%, 30%); */
 }
 
 label {
@@ -88,7 +88,7 @@ label {
     width: 300px;
 }
 
-.was-validated .member_confirm_btn {
+.member_confirm_btn {
     margin-left: 30px;
     border-radius: 5px;
     margin-top: 30px;
@@ -103,6 +103,23 @@ label {
 
 .was-validated .member_confirm_btn:hover {
     background-color: #a30f01;
+}
+
+.member_back_btn {
+    margin-left: 30px;
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    background-color: #403C3C;
+    transition: 0.3s;
+}
+
+.member_back_btn:hover{
+    background-color: #4b4747;
 }
 
 .container {

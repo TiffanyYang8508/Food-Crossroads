@@ -3,7 +3,7 @@ aside {
     width: 230px;
     height: 100vh;
     position: fixed;
-    top: 12%;
+    top: 9%;
 }
 
 .panel-default{
@@ -52,11 +52,14 @@ aside {
 }
 
 .container{
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    
+    height: 90vh;
+}
+
+.container .order_table {
+    position: absolute;
+    top: 120px;
+    left: 16%;
+    width: 80%;
 }
 
 .member_info{
