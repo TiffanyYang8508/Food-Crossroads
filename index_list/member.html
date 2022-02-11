@@ -27,7 +27,7 @@
     <div class="header_page"></div>
 
     <!-- 導覽列 over -->
-    
+
     <aside>
         <div class="panel-group" id="accordion">
             <div class="panel panel-default" style="background-color: #8b1309;">
@@ -59,18 +59,15 @@
                 </div>
                 <div class="form-group form-inline">
                     <label for="email">信箱:</label>
-                    <input type="email" class="form-control" id="email" value="email@gmail.com" name="email"
-                        style="width: 300px;" disabled>
+                    <input type="email" class="form-control" id="email" value="email@gmail.com" name="email" style="width: 300px;" disabled>
                 </div>
                 <div class="form-group form-inline">
                     <label for="pwd">密碼:</label>
-                    <input type="password" class="form-control" id="pwd" value="******" name="pwd" style="width: 300px;"
-                        disabled>
+                    <input type="password" class="form-control" id="pwd" value="******" name="pwd" style="width: 300px;" disabled>
                 </div>
                 <div class="form-group form-inline">
                     <label for="name">姓名:</label>
-                    <input type="text" class="form-control" id="name" value="李曉明" name="name" style="width: 300px;"
-                        disabled>
+                    <input type="text" class="form-control" id="name" value="李曉明" name="name" style="width: 300px;" disabled>
                 </div>
                 <div class="form-group form-inline">
                     <label>性別:</label>
@@ -83,11 +80,9 @@
                 </div>
                 <div class="form-group form-inline">
                     <label for="tel">電話:</label>
-                    <input type="text" class="form-control" id="tel" value="0900-xxxxxx" name="tel"
-                        style="width: 300px;" disabled>
+                    <input type="text" class="form-control" id="tel" value="0900-xxxxxx" name="tel" style="width: 300px;" disabled>
                 </div>
-                <button type="button" onclick="edit()" class="btn btn-primary btn-lg member_confirm_btn"
-                    style="background-color: #8b1309; border-color: #fcc106;">修改資料
+                <button type="button" onclick="edit()" class="btn btn-primary btn-lg member_confirm_btn" style="background-color: #8b1309; border-color: #fcc106;">修改資料
                 </button>
             </form>
         </div>
@@ -100,16 +95,15 @@
     <!-- 頁尾 over -->
 
     <script>
-
-        $(function () {
+        $(function() {
             $(".header_page").load("header.html");
             $(".footer_page").load("footer.html");
+
             function edit() {
                 window.location = "/editmember.html"
             }
 
         });
-
     </script>
 </body>
 

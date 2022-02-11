@@ -3,10 +3,14 @@ body {
     height: 100%;
 }
 
+input[type=checkbox] {
+    accent-color: #8B1309;
+}
+
 
 /* 導覽列 start */
 
-header {
+.header_page {
     width: 100%;
     position: sticky;
     top: 0;
@@ -67,8 +71,8 @@ nav .nav_a {
 footer {
     background-color: #403C3C;
     color: white;
-    /* margin-top: 5%;
-    bottom: 0; */
+    /* margin-top: 5%; */
+    bottom: 0;
     position: sticky;
 }
 

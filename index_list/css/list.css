@@ -1,4 +1,4 @@
-.container_list{
+.container_list {
     margin-left: 100px;
 }
 
@@ -249,16 +249,18 @@
 
 /* 搜尋欄 end */
 
+
 /* 麵包屑 start */
 
-.breadcrumb-item a{
+.breadcrumb-item a {
     text-decoration: none;
 }
 
-.breadcrumb .breadcrumb-item{
+.breadcrumb .breadcrumb-item {
     font-size: 18px;
     font-weight: bolder;
 }
+
 
 /* 麵包屑 end */
 

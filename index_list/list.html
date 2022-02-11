@@ -308,13 +308,12 @@
     <!-- 頁尾 over -->
 
     <script type="text/javascript">
-
     </script>
 
 
     <script>
-        $(document).ready(function () {
-            $(".dropdown_label").click(function (e) {
+        $(document).ready(function() {
+            $(".dropdown_label").click(function(e) {
                 e.preventDefault();
                 $(this).parent().find(".dropdown_div").slideToggle();
                 $(this).parent().siblings().find(".dropdown_div").slideUp();
@@ -322,7 +321,6 @@
             $(".header_page").load("header.html");
             $(".footer_page").load("footer.html");
         });
-
     </script>
 </body>
 
