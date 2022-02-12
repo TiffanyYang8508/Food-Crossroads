@@ -30,21 +30,21 @@
 
     <aside>
         <div class="panel-group" id="accordion">
-            <div class="panel panel-default" style="background-color: #8b1309;">
+            <div class="panel panel-default default">
                 <div class="panel-heading">
-                    <h4 class="panel-title"><a href="/member.html">會員資料</a>
+                    <h4 class="panel-title"><a href="#">會員資料</a>
                     </h4>
                 </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4 class="panel-title"><a href="/booking manage.html">訂位管理</a>
+                    <h4 class="panel-title"><a href="booking_manage.html">訂位管理</a>
                     </h4>
                 </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4 class="panel-title"><a href="/order manage .html">訂餐管理</a>
+                    <h4 class="panel-title"><a href="order_manage.html">訂餐管理</a>
                     </h4>
                 </div>
             </div>
@@ -82,8 +82,9 @@
                     <label for="tel">電話:</label>
                     <input type="text" class="form-control" id="tel" value="0900-xxxxxx" name="tel" style="width: 300px;" disabled>
                 </div>
-                <button type="button" onclick="edit()" class="btn btn-primary btn-lg member_confirm_btn" style="background-color: #8b1309; border-color: #fcc106;">修改資料
-                </button>
+                <div class="btn_div">
+                    <button onclick="edit()" class="member_confirm_btn">修改資料</button>
+                </div>
             </form>
         </div>
     </section>

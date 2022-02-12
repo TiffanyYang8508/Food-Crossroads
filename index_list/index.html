@@ -23,14 +23,14 @@
 
 <body>
     <!-- 導覽列 start -->
-    
+
     <div class="header_page"></div>
-    
+
     <!-- 導覽列 over -->
 
     <!-- 搜尋欄 start -->
     <section id="search_box">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <form action="" method="">
@@ -152,11 +152,136 @@
                                         關閉
                                     </div>
                                 </div>
-
                             </div>
 
                             <div class="dropdown">
                                 <button class="search_btn">搜尋</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form action="">
+                        <div class="search_mobile_div">
+                            <div class="search_mobile_inline_div">
+                                <i class="fas fa-search search_icon"></i>
+                                <label class="search_label">搜尋餐廳</label>
+                            </div>
+                        </div>
+                        <div class="mobile_div">
+                            <div class="mobile_inline_div">
+                                <div class="turn_off">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                                <input class="search_keyword" id="keyword" type="text" placeholder="請輸入餐廳關鍵字">
+                                <div class="area_div">
+                                    <label for="area_btn" onclick="open_tab('area')" class="area_label mobile_tab_label"><i class="fas fa-map-marker-alt"></i>請選擇地區<i
+                                        class="fas fa-sort-down"></i></label>
+                                </div>
+                                <div class="other_div">
+                                    <label for="other_btn" onclick="open_tab('other')" class="other_label mobile_tab_label"><i class="fas fa-hand-point-up"></i>進階搜尋<i
+                                        class="fas fa-sort-down"></i></label>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="search_btn">搜尋</button>
+                                </div>
+                            </div>
+                            <div id="area" class="mobile_tab_div">
+                                <div class="mobile_tab_css">
+                                    <!-- 北部區塊 start -->
+                                    <label class="mobile_dropdown_label">北部</label>
+                                    <div class="mobile_tab_content mobile_dropdown_div">
+                                        <span>基隆市</span>
+                                        <span>台北市</span>
+                                        <span>新北市</span>
+                                        <span>桃園市</span>
+                                        <span>新竹市</span>
+                                        <span>新竹縣</span>
+                                    </div>
+                                    <!-- 北部區塊 end -->
+                                </div>
+                                <div class="mobile_tab_css">
+                                    <!-- 中部區塊 start -->
+                                    <label class="mobile_dropdown_label">中部</label>
+                                    <div class="mobile_tab_content mobile_dropdown_div">
+                                        <span>苗栗縣</span>
+                                        <span>台中市</span>
+                                        <span>南投縣</span>
+                                        <span>彰化縣</span>
+                                        <span>雲林縣</span>
+                                    </div>
+                                    <!-- 中部區塊 end -->
+                                </div>
+                                <div class="mobile_tab_css">
+                                    <!-- 南部區塊 start -->
+                                    <label class="mobile_dropdown_label">南部</label>
+                                    <div class="mobile_tab_content mobile_dropdown_div">
+                                        <span>嘉義市</span>
+                                        <span>嘉義縣</span>
+                                        <span>台南市</span>
+                                        <span>高雄市</span>
+                                        <span>屏東縣</span>
+                                    </div>
+                                    <!-- 南部區塊 end -->
+                                </div>
+                                <div class="mobile_tab_css">
+                                    <!-- 東部區塊 start -->
+                                    <label class="mobile_dropdown_label">東部</label>
+                                    <div class="mobile_tab_content mobile_dropdown_div">
+                                        <span>宜蘭縣</span>
+                                        <span>花蓮縣</span>
+                                        <span>台東縣</span>
+                                    </div>
+                                    <!-- 東部區塊 end -->
+                                </div>
+                                <div class="mobile_tab_css">
+                                    <!-- 離島區塊 start -->
+                                    <label class="mobile_dropdown_label">離島</label>
+                                    <div class="mobile_tab_content mobile_dropdown_div">
+                                        <span>澎湖縣</span>
+                                        <span>連江縣</span>
+                                        <span>金門縣</span>
+                                    </div>
+                                    <!-- 離島區塊 end -->
+                                </div>
+                            </div>
+                            <div id="other" class="mobile_tab_div">
+                                <div class="mobile_tab_css">
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="child_seats" id="child_seats" value="2">
+                                        <label for="child_seats">提供兒童座椅</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="barrier_free" id="barrier_free" value="2">
+                                        <label for="barrier_free">無障礙設施</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="min_consumption" id="min_consumption" value="2">
+                                        <label for="min_consumption">最低消費限制</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="limit_meal_time" id="limit_meal_time" value="2">
+                                        <label for="limit_meal_time">限制用餐時間</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="delivery" id="delivery" value="2">
+                                        <label for="delivery">提供外送</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="service_free" id="service_free" value="2">
+                                        <label for="service_free">收取服務費</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="parking" id="parking" value="2">
+                                        <label for="parking">附設停車場</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="allow_pets" id="allow_pets" value="2">
+                                        <label for="allow_pets">允許攜帶寵物</label>
+                                    </div>
+
+                                </div>
+                                <div class="chk_close">
+                                    關閉
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -250,21 +375,45 @@
 
     <!-- 頁尾 start -->
 
-    <div class="footer_page"></div>  
+    <div class="footer_page"></div>
 
     <!-- 頁尾 over -->
 
 
     <script>
         $(document).ready(function() {
+
+            $(".header_page").load("header.html");
+            $(".footer_page").load("footer.html");
+
             $(".dropdown_label").click(function(e) {
                 e.preventDefault();
                 $(this).parent().find(".dropdown_div").slideToggle();
                 $(this).parent().siblings().find(".dropdown_div").slideUp();
             });
-            $( ".header_page" ).load( "header.html" );
-            $( ".footer_page" ).load( "footer.html" );
+
+            $(".mobile_dropdown_label").click(function(e) {
+                e.preventDefault();
+                $(this).parent().find(".mobile_dropdown_div").slideToggle();
+                $(this).parent().siblings().find(".mobile_dropdown_div").slideUp();
+            });
+
+            $(".search_mobile_div").click(function() {
+                $(".mobile_div").css("display", "unset");
+            });
+
+            $(".turn_off").click(function() {
+                $(".mobile_div").css("display", "none");
+            });
         });
+
+        function open_tab(tab_name) {
+            var tab_div = document.getElementsByClassName("mobile_tab_div");
+            for (var i = 0; i < tab_div.length; i++) {
+                tab_div[i].style.display = "none";
+            }
+            document.getElementById(tab_name).style.display = "block";
+        }
     </script>
 </body>
 
