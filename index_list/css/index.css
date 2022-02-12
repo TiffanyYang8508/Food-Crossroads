@@ -15,7 +15,10 @@
 }
 
 .search_div {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
 }
 
 .search_mobile_div,
@@ -28,7 +31,7 @@
 
 .search_keyword {
     width: 600px;
-    height: 40px;
+    height: 50px;
     margin-bottom: 20px;
     border-radius: 5px;
     background-color: white;
@@ -57,10 +60,9 @@
 .area_label {
     position: relative;
     width: 600px;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    line-height: 50px;
     background-color: white;
-    margin-bottom: 40px;
     color: #403C3C;
     text-align: start;
     cursor: pointer;
@@ -94,10 +96,14 @@
 
 .tab_div {
     background-color: white;
-    position: absolute;
-    top: 100px;
-    left: 270px;
-    z-index: 5;
+    text-align: center;
+    margin-top: -8px;
+    padding-top: 15px;
+    /* position: absolute; */
+    /* top: 36%;
+    left: 25.5%; */
+    /* transform: translate(-50%, -50%); */
+    z-index: 2;
     width: 600px;
     display: none;
     border-radius: 0 0 5px 5px;
@@ -167,10 +173,9 @@
 .other_label {
     position: relative;
     width: 600px;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    line-height: 50px;
     background-color: #FCC106;
-    margin-bottom: 40px;
     color: #403C3C;
     text-align: start;
     cursor: pointer;
@@ -195,12 +200,14 @@
 
 .chk_div {
     background-color: #FCC106;
-    position: absolute;
+    margin-top: -8px;
+    /* position: absolute;
     top: 180px;
-    left: 270px;
+    left: 34.4%; */
     z-index: 1;
     width: 600px;
     display: none;
+    text-align: center;
     user-select: none;
 }
 
@@ -219,7 +226,8 @@
 
 .chk_item {
     display: inline-block;
-    font-size: 16px;
+    padding: 5px 5px 5px 5px;
+    font-size: 0.9vw;
 }
 
 .chk_chk {
@@ -326,31 +334,44 @@
 
 @media screen and (max-width:1200px) {
     .search_keyword {
+        height: 40px;
         width: 500px;
     }
     .area_label {
+        height: 40px;
+        line-height: 40px;
         width: 500px;
     }
     .area_label .fa-sort-down {
         margin-left: 71%;
     }
     .tab_div {
-        position: absolute;
+        /* position: absolute;
         top: 100px;
-        left: 230px;
+        left: 330px; */
         width: 500px;
     }
     .other_label {
+        height: 40px;
+        line-height: 40px;
         width: 500px;
     }
     .other_label .fa-sort-down {
         margin-left: 74%;
     }
     .chk_div {
-        position: absolute;
+        /* position: absolute;
         top: 180px;
-        left: 230px;
+        left: 230px; */
         width: 500px;
+    }
+    .chk_item {
+        padding: 5px 2px 5px 2px;
+        font-size: 1.3vw;
+    }
+    .tab_close,
+    .chk_close {
+        font-size: 14px;
     }
     .search_btn {
         width: 300px;
@@ -380,9 +401,9 @@
         margin-left: 68%;
     }
     .tab_div {
-        position: absolute;
+        /* position: absolute;
         top: 100px;
-        left: 135px;
+        left: 135px; */
         width: 450px;
     }
     .other_label {
@@ -392,10 +413,14 @@
         margin-left: 71.5%;
     }
     .chk_div {
-        position: absolute;
+        /* position: absolute;
         top: 180px;
-        left: 135px;
+        left: 135px; */
         width: 450px;
+    }
+    .chk_item {
+        padding: 5px 2px 5px 2px;
+        font-size: 1.4vw;
     }
     .search_btn {
         width: 450px;
@@ -438,7 +463,7 @@
     }
     .search_icon {
         margin-left: 20px;
-        font-size: 30px;
+        font-size: 25px;
     }
     .search_label {
         margin-left: 20px;
@@ -473,13 +498,14 @@
         display: none;
     }
     .mobile_tab_div {
-        margin-left: 50px;
-        margin-top: 20px;
+        width: 100%;
+        margin-left: 70px;
+        margin-top: 30px;
         display: none;
     }
     .mobile_tab_css label {
         font-size: 2.6vw;
-        width: 90%;
+        width: 80%;
         border-bottom: 1.5px solid #d1d1d1;
         display: block;
     }
@@ -488,6 +514,7 @@
     }
     .mobile_tab_content span {
         display: block;
+        width: 80%;
         border-bottom: 1px solid rgb(224, 224, 224);
         font-size: 2.3vw;
         margin-bottom: 10px;
@@ -500,13 +527,16 @@
         z-index: 1000;
     }
     .other_label .fa-sort-down {
-        margin-left: 60%;
+        display: none;
     }
-    .chk_div {
-        position: absolute;
-        top: 160px;
-        left: 45px;
-        width: 450px;
+    .mobile_chk_css {
+        width: 40%;
+        float: left;
+        margin: 10px;
+    }
+    .mobile_chk_item {
+        font-size: 2.5vw;
+        margin-right: 50px;
     }
     .search_btn {
         margin-top: 0px;
@@ -532,81 +562,24 @@
     #search_box {
         height: 60vh;
     }
-    .search_keyword {
-        width: 400px;
-    }
-    .area_label {
-        width: 400px;
-        margin-bottom: 20px;
-    }
-    .area_label .fa-sort-down {
-        margin-left: 65%;
-    }
-    .tab_div {
-        position: absolute;
-        top: 100px;
-        left: 85px;
-        width: 400px;
-    }
-    .tab_content span {
-        margin-right: 25px;
-        margin-left: 30px;
-    }
     .other_label {
-        width: 400px;
-        margin-bottom: 20px;
+        width: 100%;
     }
-    .other_label .fa-sort-down {
-        margin-left: 69.1%;
+    .mobile_tab_div {
+        margin-left: 50px;
     }
-    .chk_div {
-        position: absolute;
-        top: 160px;
-        left: 85px;
-        width: 400px;
+    .mobile_chk_item {
+        margin-right: -10px;
     }
     .search_btn {
-        width: 400px;
+        width: 100%;
     }
 }
 
 
 /* 小手機 */
 
-@media screen and (max-width:480px) {
-    .search_keyword {
-        width: 350px;
-    }
-    .area_label {
-        width: 350px;
-        margin-bottom: 20px;
-    }
-    .area_label .fa-sort-down {
-        margin-left: 60%;
-    }
-    .tab_div {
-        position: absolute;
-        top: 100px;
-        left: 50px;
-        width: 350px;
-    }
-    .other_label {
-        width: 350px;
-        margin-bottom: 20px;
-    }
-    .other_label .fa-sort-down {
-        margin-left: 64.5%;
-    }
-    .chk_div {
-        position: absolute;
-        top: 160px;
-        left: 50px;
-        width: 350px;
-    }
-    .search_btn {
-        width: 350px;
-    }
-}
+@media screen and (max-width:480px) {}
 
 
 /* RWD end */

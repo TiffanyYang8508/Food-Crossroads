@@ -114,36 +114,36 @@
 
                                 <div class="chk_div dropdown_div">
                                     <div class="chk_css">
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="child_seats" id="child_seats" value="2">
+                                        <div class="mobile_chk_item">
+                                            <input class="mobile_chk_chk" type="checkbox" name="child_seats" id="child_seats" value="2">
                                             <label for="child_seats">提供兒童座椅</label>
                                         </div>
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="barrier_free" id="barrier_free" value="2">
+                                        <div class="mobile_chk_item">
+                                            <input class="mobile_chk_chk" type="checkbox" name="barrier_free" id="barrier_free" value="2">
                                             <label for="barrier_free">無障礙設施</label>
                                         </div>
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="min_consumption" id="min_consumption" value="2">
+                                        <div class="mobile_chk_item">
+                                            <input class="mobile_chk_chk" type="checkbox" name="min_consumption" id="min_consumption" value="2">
                                             <label for="min_consumption">最低消費限制</label>
                                         </div>
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="limit_meal_time" id="limit_meal_time" value="2">
+                                        <div class="mobile_chk_item">
+                                            <input class="mobile_chk_chk" type="checkbox" name="limit_meal_time" id="limit_meal_time" value="2">
                                             <label for="limit_meal_time">限制用餐時間</label>
                                         </div>
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="delivery" id="delivery" value="2">
+                                        <div class="mobile_chk_item">
+                                            <input class="mobile_chk_chk" type="checkbox" name="delivery" id="delivery" value="2">
                                             <label for="delivery">提供外送</label>
                                         </div>
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="service_free" id="service_free" value="2">
+                                        <div class="mobile_chk_item">
+                                            <input class="mobile_chk_chk" type="checkbox" name="service_free" id="service_free" value="2">
                                             <label for="service_free">收取服務費</label>
                                         </div>
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="parking" id="parking" value="2">
+                                        <div class="mobile_chk_item">
+                                            <input class="mobile_chk_chk" type="checkbox" name="parking" id="parking" value="2">
                                             <label for="parking">附設停車場</label>
                                         </div>
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="allow_pets" id="allow_pets" value="2">
+                                        <div class="mobile_chk_item">
+                                            <input class="mobile_chk_chk" type="checkbox" name="allow_pets" id="allow_pets" value="2">
                                             <label for="allow_pets">允許攜帶寵物</label>
                                         </div>
 
@@ -244,43 +244,41 @@
                                 </div>
                             </div>
                             <div id="other" class="mobile_tab_div">
-                                <div class="mobile_tab_css">
-                                    <div class="chk_item">
+                                <div class="mobile_chk_css">
+                                    <div class="mobile_chk_item">
                                         <input class="chk_chk" type="checkbox" name="child_seats" id="child_seats" value="2">
                                         <label for="child_seats">提供兒童座椅</label>
                                     </div>
-                                    <div class="chk_item">
+                                    <div class="mobile_chk_item">
                                         <input class="chk_chk" type="checkbox" name="barrier_free" id="barrier_free" value="2">
                                         <label for="barrier_free">無障礙設施</label>
                                     </div>
-                                    <div class="chk_item">
+                                    <div class="mobile_chk_item">
                                         <input class="chk_chk" type="checkbox" name="min_consumption" id="min_consumption" value="2">
                                         <label for="min_consumption">最低消費限制</label>
                                     </div>
-                                    <div class="chk_item">
+                                    <div class="mobile_chk_item">
                                         <input class="chk_chk" type="checkbox" name="limit_meal_time" id="limit_meal_time" value="2">
                                         <label for="limit_meal_time">限制用餐時間</label>
                                     </div>
-                                    <div class="chk_item">
+                                </div>
+                                <div class="mobile_chk_css">
+                                    <div class="mobile_chk_item">
                                         <input class="chk_chk" type="checkbox" name="delivery" id="delivery" value="2">
                                         <label for="delivery">提供外送</label>
                                     </div>
-                                    <div class="chk_item">
+                                    <div class="mobile_chk_item">
                                         <input class="chk_chk" type="checkbox" name="service_free" id="service_free" value="2">
                                         <label for="service_free">收取服務費</label>
                                     </div>
-                                    <div class="chk_item">
+                                    <div class="mobile_chk_item">
                                         <input class="chk_chk" type="checkbox" name="parking" id="parking" value="2">
                                         <label for="parking">附設停車場</label>
                                     </div>
-                                    <div class="chk_item">
+                                    <div class="mobile_chk_item">
                                         <input class="chk_chk" type="checkbox" name="allow_pets" id="allow_pets" value="2">
                                         <label for="allow_pets">允許攜帶寵物</label>
                                     </div>
-
-                                </div>
-                                <div class="chk_close">
-                                    關閉
                                 </div>
                             </div>
                         </div>
@@ -398,12 +396,26 @@
                 $(this).parent().siblings().find(".mobile_dropdown_div").slideUp();
             });
 
+            $(".tab_close,.chk_close").click(function() {
+                $(".dropdown_div").slideUp();
+            });
+
             $(".search_mobile_div").click(function() {
                 $(".mobile_div").css("display", "unset");
             });
 
             $(".turn_off").click(function() {
                 $(".mobile_div").css("display", "none");
+            });
+
+            $(".mobile_tab_content span").click(function() {
+                var text = $(this).text();
+                $(".area_label").html(`<i class="fas fa-map-marker-alt"></i>${text}`);
+            });
+
+            $(".tab_content span").click(function() {
+                var text = $(this).text();
+                $(".area_label").html(`<i class="fas fa-map-marker-alt"></i>${text}`);
             });
         });
 
