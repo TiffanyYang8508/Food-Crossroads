@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurant_login_index</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <!-- mainstyle -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- login.css -->
+    <link rel="stylesheet" href="css/restaurant_login_index.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 導覽列 start -->
+
+    <div class="header_page"></div>
+
+    <!-- 導覽列 over -->
+
+    <div class="container">
+        <div class="restaurant_name">
+            <h3> X X 餐廳您好 :</h3>
+        </div>
+        <div class="restaurant_management">
+            <div class="restaurant_detail">
+                <h2>訂位管理</h2>
+            </div>
+            <h3>今日訂位數: </h3>
+            <h3>明日訂位數: </h3>
+        </div>
+        <div class="div3">
+            <div class="restaurant_detail">
+                <h2>訂餐管理</h2>
+            </div>
+            <h3>待處理訂餐數: </h3>
+            <h3>已完成訂單數:   </h3>
+        </div>
+    </div>
+
+    <!-- 頁尾 start -->
+
+    <div class="footer_page"></div>
+
+    <!-- 頁尾 over -->
+
+    <script>
+        $(document).ready(function () {
+            $(".header_page").load("header.html");
+            $(".footer_page").load("footer.html");
+        });
+    </script>
+</body>
+
+</html>

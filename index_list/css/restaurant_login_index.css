@@ -5,52 +5,50 @@
     height: 81vh;
 }
 
-.card-head {
-    text-align: center;
-}
-
-.card-body{
-    text-align: center;
-}
-
-#backstage_title {
-    font-size: 36px;
-}
-
-#text_account {
-    letter-spacing: 20px;
-    margin-right: -30px;
-}
-
-.remember_psw {
+.restaurant_name {
     /* border: 1px solid red; */
-    font-size: 13px; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    padding: 0 20px 0 120px;
+    margin: -60px 0 50px -150px;
 }
 
-.remember_psw a {
-    color: black;
-    margin-right: -100px;
+.restaurant_management {
+    /* border: 1px solid blue; */
+    width: 350px;
+    float: left;
+    margin-right: 280px;
+    margin-left: 30px;
 }
 
-.login_btn_2 {
+.restaurant_detail {
+    width: 350px;
+    height: 330px;
+    background-color: #403C3C;
     color: white;
-    background-color: #8b1309;
-    font-size: 20px;
-    width: 150px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 0 10px 0;
-    transition: 0.3s;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.login_btn_2:hover{
-    background-color: #a30f01;
+.restaurant_detail h2 {
+    font-weight: 600;
+    line-height: 300px;
 }
 
+.div3 {
+    /* border: 1px solid green; */
+    width: 350px;
+    float: left;
+}
+
+.restaurant_name h3{
+    font-weight: 600;
+}
+
+.restaurant_management h3 {
+    font-weight: 600;
+}
+
+.div3 h3 {
+    font-weight: 600;
+}
 /* RWD */
 
 /* 超大型螢幕 */
