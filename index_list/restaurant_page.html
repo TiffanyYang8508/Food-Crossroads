@@ -11,27 +11,30 @@
     <!-- fontAwesome -->
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
     <!-- mainStyle -->
-    <link rel="stylesheet" href="css/restaurant_style.css">
+    <link rel="stylesheet" href="restaurant_style.css">
     <!-- RWD -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-    <!-- 導覽列 start -->
+    <!-- header start -->
     
     <div class="header_page"></div>
     
-    <!-- 導覽列 over -->
+    <!-- header over -->
+
+    
     
     <div class="container">
+
         <div class="row">
             <button id="order" type="button" class="btn btn-outline-dark btn-lg col-6"><span>我要訂餐</span></button>
             <button id="take_away" type="button" class="btn btn-outline-dark btn-lg col-6"><span>我要外帶</span></button>
             
-            <!-- 麵包屑 start -->
+            <!-- 導覽列 start -->
             <nav aria-label="breadcrumb">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#index"><span>首頁</span></a></li>
@@ -39,7 +42,8 @@
                     <li class="breadcrumb-item active" aria-current="page"><span>餐廳名稱</span></li>
                 </ul>
             </nav>
-            <!-- 麵包屑 over -->
+            <!-- 導覽列 over -->
+
 
             <!-- 輪播圖 start -->
             <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -73,7 +77,9 @@
                 
             </div>
             <!-- 輪播圖 over -->
-        </div>    
+
+        </div>  
+            
         
         <!-- 營業資訊 start -->
         <div>
@@ -87,31 +93,29 @@
         </div>
         <!-- 營業資訊 over -->
 
-        <!-- 提供服務 start -->
 
+        <!-- 提供服務 start -->
         <div class="service">
             提供服務
         </div>
-
         <!-- 提供服務 over -->
 
-        <!-- 菜單 start -->
 
+        <!-- 菜單 start -->
         <div class="menu">
             菜單
         </div>
-
         <!-- 菜單 over -->
 
-        <!-- 評論 start -->
 
+        <!-- 評論 start -->
         <div class="comment">
             <textarea name="comment" id="comment" cols="30" rows="10">評論</textarea>
         </div>
-
         <!-- 評論 over -->
 
     </div>
+
 
     <!-- 置頂鈕 start -->
     <button type="button" class="btn btn-floating btn-lg" id="btn_back_to_top">
@@ -119,17 +123,23 @@
     </button>
     <!-- 置頂鈕 over -->
 
-    <!-- 頁尾 start -->
+            
+            
 
-    <div class="footer_page"></div> 
 
-    <!-- 頁尾 over -->
+    <!-- footer start -->
+    <div class="footer_page"></div>  
+    <!-- footer over -->
+
 
     <script type="text/javascript">
         $( function() {
             $( ".header_page" ).load( "header.html" );
             $( ".footer_page" ).load( "footer.html" );
         } );
+
+        
+        
     </script>
 
 </body>

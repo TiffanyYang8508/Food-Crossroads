@@ -7,12 +7,23 @@
 /* ---------- body start ---------- */
 
 .btn {
-    width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
-.container{
-    height: 90vh;
+#order,
+#take_away
+{
+    font-size: 24px;
+    font-weight: bolder;
+    color: #fff;
+    background-color: #313030;
+    transition: 0.3s;
+}
+
+#order:hover,
+#take_away:hover
+{
+    background-color: #524d4d;
 }
 
 .breadcrumb {
@@ -55,30 +66,34 @@
     border: 1px solid grey;
 }
 
-.service, .menu, textarea {
+.service,
+.menu,
+.comment > textarea
+{
     width: 100%;
     height: 200px;
     font-size: 18px;
     font-weight: bold;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-left: 20px;
     border: 1px solid grey;
     border-radius: 3px;
     margin: 10px 0;
 }
 
-.menu {
+.service:hover,
+.menu:hover,
+.comment > textarea:hover
+{
     border: 3px solid gray;
 }
+
 
 /* ----- ↑ restaurant_page over ----- */
 
 .progress_container {
     width: 100%;
-    height: 8vh;
-    margin: 5px 0;
-    padding: 5px 0;
-    /* border: 2px solid black; */
+    margin: 0 0 5px 0 ;
 }
 
 .progress_ul li {
@@ -88,7 +103,7 @@
     position: relative;
     text-align: center;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     color: #707070;
 }
 
@@ -121,9 +136,10 @@
 }
 
 .progress_ul li.active {
-    color: #fcc106;
-    font-size: 22px;
-    font-weight: 700;
+    /* color: #fcc106; */
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 800;
 }
 
 .progress_ul li.active:before {
@@ -137,7 +153,8 @@
 
 .reservation_container {
     width: 100%;
-    height: 100%;
+    height: 60vh;
+    padding: 10px 10px;
     display: flex;
     flex-direction: row;
     border: 2px solid red;
@@ -147,68 +164,69 @@
 .reservation_person
 {
     width: 100%;
-    height: 380px;
+    height: 59vh;
     background-color: #b5b4b477;
     border-radius: 5px;
     margin: 10px;
-    border: 2px solid orangered;
+    padding: 10px;
+    border: 5px dashed hotpink;
 }
 
 .reservation_form_title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #707070;
-    margin: 10px;
+    font-size: 36px;
+    color: black;
+    margin: 10px 0;
     text-align: center;
     border: 2px solid yellowgreen;
 }
 
-.form_container_info form,
-.form_container_person form
-{
-    width: 400px;
-    height: 310px;
-    margin: 0 auto;
+.form_container_info form {
+    width: 440px;
+    height: 42vh;
+    margin: 10px auto;
+    padding: 10px auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border: 2px solid darkgreen;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    border: 4px dashed lightsalmon;
+}
+
+.form_container_info > form > div {
+    border: 2px solid black;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 5px auto;
+    padding: 5px 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.form_container_info select,
+.form_container_info input,
+.form_container_info textarea {
+    width: 300px;
+    height: 30px;
+    text-align: center;
 }
 
 .form_container_person form {
-    height: 270px;
-}
-
-.form_container_info_left,
-.form_container_info_right
-{
-    font-size: 12px;
-    font-weight: bold;
+    width: 440px;
+    height: 36vh;
+    margin: 10px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 0 10px;
-    border: 2px solid darkcyan;
-
+    /* border: 4px dashed lightseagreen; */
 }
 
-
-.form_container_person_left {
-    font-size: 12px;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    padding: 0 10px;
-    border: 2px solid darkmagenta;
-}
-
-.form_container_person_left span {
-    border: 2px solid blue;
-}
-
-.form_container_person_right {
-    padding: 0 10px;
-    border: 2px solid darkgoldenrod;
+.form_container_person > form > div {
+    /* border: 2px solid black; */
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 5px auto;
+    padding: 5px 10px;
+    text-align: center;
 }
 
 .reservation_btn_next
@@ -220,80 +238,92 @@
     font-weight: 500;
     color: #fff;
     background-color: #8b1309;
-    margin-bottom: 10px;
-    margin-left: 300px;
+    margin-left: 230px;
 }
 
-.finish_section {
-    border: 10px dashed hotpink;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin: 0 auto;
-}
-
-.check_container,
-.finish_container
-{   
-    width: 100%;
-    height: 60vh;
-    border: 2px solid red;
-    display: flex;
-    justify-content: center;
-}
-
-.check_person,.finish_person {    
-    width: 800px;
+.check_container {
+    width: 880px;
     height: 60vh;
     background-color: #b5b4b477;
-    margin-bottom: 50px ;
-    padding: 0 10px;
-    border-radius: 5px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    /* border: 8px dashed yellow; */
+    justify-content: center;
+    margin: 10px auto;
+    padding: 35px 0;
+    border-radius: 5px;
+    /* border: 2px solid red; */
 }
 
-.finish_form_show {
-    border: 2px solid orchid;
-    text-align: center;
-    font-size: 26px;
-    font-weight: bolder;
-    margin: 10px 0;
-    
+.finish_container {
+    width: 880px;
+    height: 60vh;
+    background-color: #b5b4b477;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 20px 0;
+    border-radius: 5px;
+    /* border: 2px solid red; */
 }
 
 .check_form_title,
 .finish_form_title
 {
     width: 100%;
-    font-size: 24px;
-    font-weight: bold;
-    color: #707070;
-    margin: 10px 0;
+    font-size: 36px;
+    color: black;
     text-align: center;
-    border: 2px solid yellowgreen;
+    /* border: 4px solid yellowgreen; */
 
 }
 
-.form_container_check_wrapper,
-.form_container_finish_wrapper
-{
-    border: 2px solid darkblue;
-    width: 100%;
-    height: 300px;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
+.finish_form_show {
+    /* border: 6px dashed orchid; */
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    margin: 10px auto;
 }
 
-.btn_container {
+.form_container_check_wrapper {
+    /* border: 2px solid darkblue; */
+    width: 300px;
+    height: 280px;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 20px auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 5px 0;
-    border: 2px solid black;
+    align-items: center;
+}
+
+.form_container_finish_wrapper {
+    /* border: 2px solid darkblue; */
+    width: 300px;
+    height: 280px;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_container_check {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+    margin: 10px auto;
+    /* border: 2px solid black; */
+}
+
+.btn_container_finish {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+    margin: 10px auto;
+    /* border: 2px solid black; */
 }
 
 .check_btn_back,
@@ -304,7 +334,6 @@
     width: 200px;
     height: 40px;
     border-radius: 5px;
-    border: none;
     font-size: 18px;
     font-weight: 500;
     color: #fff;
@@ -319,4 +348,101 @@
     background-color: #313030;
 }
 
+/* ----- ↑ booking_page over ----- */
+
+
+.member_login_container {
+    width: 440px;
+    height: 60vh;
+    margin: 120px auto;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid #707070;
+    border-radius: 5px;
+}
+
+.member_login_title {
+    /* border: 2px solid lightpink; */
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.form-group {
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.form-group > input {
+    /* border: 4px dotted blue; */
+    width: 300px;
+    height: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn_member_login {
+    background-color: #8b1309;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn_member_login:hover {
+    background-color: #a30f01;
+}
+
+.btn_register {
+    background-color: #313030;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn_register:hover {
+    background-color: #524d4d;
+}
+
+.form-group .span_container {
+    /* border: 1px solid black; */
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#automatically_login {
+    width: 20px;
+    height: 20px;
+}
+
+/* ----- ↑ member_login_page over ----- */
+
+
 /* ---------- body over ---------- */
+
+
+
+
+
+
+/* ---------- footer_page start ---------- */
+
+.footer_page {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ---------- footer_page over ---------- */
