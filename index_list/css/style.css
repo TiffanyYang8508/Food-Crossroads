@@ -1,6 +1,6 @@
-body {
-    width: 100%;
+html,body {
     height: 100%;
+    width: 100%;
 }
 
 input[type=checkbox] {
@@ -73,10 +73,11 @@ nav .nav_a {
 /* 頁尾 start */
 
 footer {
+    z-index: 6;
     background-color: #403C3C;
     color: white;
-    /* margin-top: 5%; */
     bottom: 0;
+    left: 0;
     position: sticky;
 }
 
@@ -176,3 +177,17 @@ footer {
         margin-left: 0px;
     } */
 }
+
+
+/* 小手機 */
+
+@media screen and (max-width:480px) {
+    .rwd_icon{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+/* RWD end */

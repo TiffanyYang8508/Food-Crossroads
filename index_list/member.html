@@ -30,13 +30,13 @@
 
     <aside class="aside_menu">
         <div class="panel-group" id="accordion">
-            <div class="panel panel-default default">
+            <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title"><a href="#">會員資料</a>
                     </h4>
                 </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-default default">
                 <div class="panel-heading">
                     <h4 class="panel-title"><a href="booking_manage.html">訂位管理</a>
                     </h4>
@@ -78,11 +78,11 @@
         </label>
     </div>
 
-    <section>
-        <div class="container-fluid">
+    <section id="member_section">
+        <div class="container-fluid member_div">
             <div class="row">
                 <div class="col-md-12">
-                    <form class="edit_info">
+                    <form class="member_edit_info">
                         <div>
                             <p class="title_member_edit">會員資料</p>
                         </div>
@@ -100,7 +100,7 @@
                             <input type="text" class="form-control" id="name" value="李曉明" name="name" disabled>
                         </div>
                         <div class="form-group form-inline form_radio">
-                            <label>性　別:</label>
+                            <label class="form_label">性　別:</label>
                             <label class="form-check-label">
                                 <input type="radio" class="form-check-input" name="optradio" checked="checked"
                                     disabled>男
@@ -110,7 +110,7 @@
                             </label>
                         </div>
                         <div class="form-group form-inline">
-                            <label for="tel">電　話:</label>
+                            <label for="tel">手　機:</label>
                             <input type="text" class="form-control" id="tel" value="0900-xxxxxx" name="tel" disabled>
                         </div>
                         <div class="btn_div">

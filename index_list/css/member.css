@@ -1,15 +1,14 @@
-/* section {
-    position: relative;
-    bottom: 800px;
-} */
+/* 側邊攔 start */
+#aside_menu_chk{
+    opacity: 0;
+    z-index: -1;
+}
 
 .aside_menu {
     background-color: #403C3C;
     width: 230px;
-    height: 94vh;
-    /* position: sticky;
-    top: 12%;
-    left: 0; */
+    height: 100%;
+    position: fixed;
     float: left;
 }
 
@@ -44,6 +43,8 @@
     background-color: #8B1309;
 }
 
+/* 側邊欄 end */
+
 .member_info {
     margin-top: 60px;
 }
@@ -61,29 +62,37 @@
 .title_member_edit {
     font-size: 35px;
     font-weight: bold;
-    margin-left: 35px;
+    text-align: center;
+}
+
+#member_section{
+    margin-top: 100px;
+    width: 80%;
+    height: 100%;
+    margin-left: 20%;
+}
+
+.member_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .edit_info {
     /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 30%); */
+    transform: translate(-50%, 50%); */
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
-    height: 74vh;
 }
 
 .edit_info input[type=text],
 .edit_info input[type=email],
 .edit_info input[type=password]{
     width: 300px;
-}
-
-.form_radio{
-    margin-right: 195px;
 }
 
 #edit_member .edit_info {
@@ -139,32 +148,89 @@ label {
     background-color: #4b4747;
 }
 
-.container {
-    height: 90vh;
+.container-fluid {
+    width: 100%;
 }
 
-.container .order_table {
-    position: absolute;
-    top: 120px;
-    left: 16%;
+/* booking_manage start */
+
+#booking_manage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 80%;
+    height: 100%;
+    margin-left: 20%;
+}
+
+#mobile_booking_manage,#mobile_order_manage{
+    display: none;
 }
 
 .table th,
 td {
     text-align: center;
-    width: 200px;
+    width: 10%;
 }
 
 .cancel_btn,
 .detail_btn,
 .comment_btn {
     border-radius: 8px;
+    border: none;
+    padding: 5px 8px;
+    transition: 0.3s;
+}
+
+.btn_td{
+    width: 20%;
+}
+
+.cancel_btn{
+    background-color: #dadada;
+    margin-right: 5%;
+}
+
+.cancel_btn:hover{
+    background-color: #dfdede;
+}
+
+.detail_btn{
+    background-color: #403C3C;
+    color: #fff;
+}
+
+.detail_btn{
+    background-color: #524d4d;
 }
 
 .comment_btn {
     margin-left: -80px;
+    background-color: #8b1309;
+    color: #fff;
 }
+
+.comment_btn:hover{
+    background-color: #a30f01;
+}
+
+/* .mobile_td{
+    display: none;
+} */
+
+/* order_manage start */
+
+#order_manage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin-left: 20%;
+}
+
+
+
 
 .cancel_modal_body {
     margin-top: 50px;
@@ -206,6 +272,32 @@ td {
     height: 100px;
 }
 
+.modal_ok_btn{
+    font-size: 18px;
+    background-color: #8b1309;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+}
+
+.modal_ok_btn:hover{
+    background-color: #a30f01;
+}
+
+.modal_back_btn{
+    font-size: 18px;
+    background-color: #403C3C;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+}
+
+.modal_back_btn:hover{
+    background-color: #524d4d;
+}
+
 .rank_modal_star {
     margin-top: 20px;
     padding-top: 20px;
@@ -232,27 +324,9 @@ td {
 /* 超大型螢幕 */
 
 @media screen and (max-width:1200px) {
-
-}
-
-
-/* 大型螢幕 */
-
-@media screen and (max-width:992px) {
-
-}
-
-
-/* 平板 */
-
-@media screen and (max-width:768px) {
     .aside_menu{
         display: none;
     }
-    /* #aside_menu_chk{
-        opacity: 0;
-        z-index: -1;
-    } */
     #aside_menu_chk:checked + .mobile_aside_menu{
         transform: translateX(0);
     }
@@ -263,10 +337,13 @@ td {
         display: unset;
         background-color: #403C3C;
         width: 230px;
-        height: 94vh;
+        height: 100vh;
+        position: absolute;
         float: left;
-        position: relative;
+        left: 0; 
+        position: fixed;
         transform: translateX(-99%);
+        z-index: 2;
         transition: 0.6s;
     }
     .mobile_aside_menu label{
@@ -278,19 +355,131 @@ td {
         left: 100%;
         transition: 0.6s;
     }
+    #booking_manage,#order_manage {
+        width: 100%;
+        margin-left: 0%;
+    }
+    #member_section{
+        margin-left: 10%;
+    }
+}
+
+
+/* 大型螢幕 */
+
+@media screen and (max-width:992px) {
+    .mobile_td {
+        height: 90px;
+        line-height:60px;
+    }
+    .cancel_btn{
+        margin-right: 16%;
+    }
+    .detail_btn{
+        margin-right: 15%;
+    }
+    .comment_btn{
+        margin-top: 15px;
+    }
+    .order_td{
+        width: 15%;
+    }
+    .order_td .detail_btn{
+        margin-top: 15px;
+    }
+}
+
+
+/* 平板 */
+
+@media screen and (max-width:768px) {
+    #booking_manage,#order_manage{
+        display: none;
+    }
+    #mobile_booking_manage,#mobile_order_manage{
+        all: unset;
+    }
+    .mobile_order_inline_div{
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        height: 20%;
+        width: 100%;
+        position: relative;
+    }
+    .mobile_btn_div{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 100%;
+    }
+    #mobile_booking_manage .cancel_btn,.detail_btn,.comment_btn{
+        margin: 5px;
+        height: 33%;
+    }
+    #mobile_order_manage .detail_btn,.comment_btn{
+        margin: 5px;
+        height: 30%;
+    }
+    #mobile_order_manage .mobile_btn_div{
+        margin-top: 5%;
+    }
 }
 
 
 /* 手機 */
 
 @media screen and (max-width:576px) {
-
+    .table th,
+    td {
+        width: 15%;
+    }
 }
 
 
 /* 小手機 */
 
-@media screen and (max-width:480px) {}
+@media screen and (max-width:480px) {
+    .table th,td {
+        width: 3%;
+    }
+    .btn_td{
+        width: 5%;
+    }
+    .mobile_td {
+        height: 35px;
+        line-height:35px;
+    }
+    .mobile_order_inline_div{
+        margin-bottom: 20px;
+        height: 20%;
+        width: 100%;
+        position: static;
+    }
+    .mobile_btn_div{
+        position: static;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 20%;
+    }
+    .cancel_btn,.detail_btn,.comment_btn{
+        width: 33%;
+    }
+    .form_radio .form_label{
+        width: 100%;
+        display: block;
+    }
+    .form_radio .form-check-label{
+        width: 20%;
+        margin-left: 10%;
+    }
+}
 
 
 /* RWD end */
