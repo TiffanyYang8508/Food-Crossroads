@@ -1,8 +1,11 @@
 section{
-    height: 80vh;
+    height: 70vh;
+    width: 100%;
 }
 
 .login_div{
+    width: 100%;
+    height: 100%;
     margin-top: 10%;
     display: flex;
     justify-content: center;
@@ -81,6 +84,20 @@ section{
     background-color: #524d4d;
 }
 
+.member_success{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.member_success_div{
+    text-align: center;
+    width: 20%;
+    border: 1px solid #403C3C;
+    padding: 6% 1%;
+}
+
 /* RWD start */
 
 
@@ -118,6 +135,7 @@ section{
         width: 100%;
         margin-top: 5%;
     }
+
 }
 
 
