@@ -52,7 +52,6 @@
     color: #403C3C;
     text-align: start;
     cursor: pointer;
-    user-select: none;
 }
 
 .area_label .fa-map-marker-alt {
@@ -91,7 +90,6 @@
     padding-top: 10px;
     border: 1px solid #888888;
     border-radius: 0 0 5px 5px;
-    user-select: none;
 }
 
 .tab_css {
@@ -166,7 +164,6 @@
     color: #403C3C;
     text-align: start;
     cursor: pointer;
-    user-select: none;
 }
 
 .other_label:hover {
@@ -195,7 +192,6 @@
     border: 1px solid #888888;
     border-radius: 0 0 5px 5px;
     display: none;
-    user-select: none;
 }
 
 
@@ -237,7 +233,6 @@
     height: 50px;
     width: 100px;
     transition: 0.3s;
-    user-select: none;
 }
 
 .search_btn:hover {
@@ -283,7 +278,6 @@
     margin-bottom: 15px;
     display: flex;
     align-items: center;
-    user-select: none;
 }
 
 .rest_img {
@@ -296,6 +290,28 @@
     height: 150px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.rest_text{
+    width: 70%;
+}
+
+.rest_inline_div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rest_list .rest_text a{
+    background-color: #8B1309;
+    color: #fff;
+    border-radius: 5px;
+    padding: 1px 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.rest_text a:hover{
+    background-color: #a30f01;
 }
 
 /* #search_aside {
@@ -316,7 +332,6 @@
 
 .kind_aside {
     list-style-type: none;
-    user-select: none;
     font-size: 18px;
     margin-left: 28px;
 } */
@@ -488,6 +503,7 @@
     }
     .search_keyword {
         width: 100%;
+        border-radius: 5px;
     }
     .area_label {
         width: 100%;
@@ -553,11 +569,7 @@
     #search_box {
         height: 60vh;
     }
-    .search_keyword {
-        /* width: 400px; */
-    }
     .area_label {
-        /* width: 400px; */
         margin-bottom: 20px;
     }
     .area_label .fa-sort-down {
@@ -574,7 +586,7 @@
         margin-left: 30px;
     }
     .other_label {
-        /* width: 400px; */
+        width: 100%;
         margin-bottom: 20px;
     }
     .other_label .fa-sort-down {
@@ -587,7 +599,7 @@
         width: 400px;
     }
     .search_btn {
-        /* width: 400px; */
+        width: 100%;
     }
 }
 
@@ -595,11 +607,7 @@
 /* 小手機 */
 
 @media screen and (max-width:480px) {
-    .search_keyword {
-        /* width: 350px; */
-    }
     .area_label {
-        /* width: 350px; */
         margin-bottom: 20px;
     }
     .area_label .fa-sort-down {
@@ -612,7 +620,6 @@
         width: 350px;
     }
     .other_label {
-        /* width: 350px; */
         margin-bottom: 20px;
     }
     .other_label .fa-sort-down {
@@ -623,9 +630,6 @@
         top: 160px;
         left: 50px;
         width: 350px;
-    }
-    .search_btn {
-        /* width: 350px; */
     }
 }
 

@@ -2,7 +2,6 @@
     /* border: 1px solid black; */
     margin-top: 10px;
     padding: 50px;
-    height: 86vh;
 } 
 
 .register_title {
@@ -57,6 +56,11 @@
     background-color: #a30f01;
 }
 
+.footer_page {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
 /* RWD */
 

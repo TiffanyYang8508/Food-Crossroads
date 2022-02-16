@@ -67,7 +67,6 @@
     text-align: start;
     cursor: pointer;
     border-radius: 5px;
-    user-select: none;
 }
 
 .area_label .fa-map-marker-alt {
@@ -99,15 +98,10 @@
     text-align: center;
     margin-top: -8px;
     padding-top: 15px;
-    /* position: absolute; */
-    /* top: 36%;
-    left: 25.5%; */
-    /* transform: translate(-50%, -50%); */
     z-index: 2;
     width: 600px;
     display: none;
     border-radius: 0 0 5px 5px;
-    user-select: none;
 }
 
 .tab_css {
@@ -180,7 +174,6 @@
     text-align: start;
     cursor: pointer;
     border-radius: 5px;
-    user-select: none;
 }
 
 .other_label:hover {
@@ -206,9 +199,9 @@
     left: 34.4%; */
     z-index: 1;
     width: 600px;
+    border-radius: 0 0 5px 5px;
     display: none;
     text-align: center;
-    user-select: none;
 }
 
 
@@ -253,7 +246,6 @@
     height: 40px;
     width: 350px;
     transition: 0.3s;
-    user-select: none;
 }
 
 .search_btn:hover {
@@ -269,7 +261,6 @@
 .kind_div {
     margin-left: 10%;
     margin-right: 10%;
-    user-select: none;
 }
 
 .kind_div h3 {
@@ -279,7 +270,7 @@
 
 .water_fall {
     width: 100%;
-    column-count: 2;
+    column-count: 3;
 }
 
 .kind_span {
@@ -296,16 +287,19 @@
 }
 
 .index_img {
+    width: 90%;
     position: relative;
     overflow: hidden;
     border-radius: 5px;
 }
 
 .index_img img {
-    max-width: 100%;
+    width: 100%;
+    height: 300px;
     border-radius: 5px;
     transform: scale(1, 1);
     transition: all 1s ease-out;
+    object-fit: cover
 }
 
 .index_img img:hover {
