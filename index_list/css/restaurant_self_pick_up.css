@@ -52,11 +52,7 @@ aside {
 }
 
 .container{
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    
+    height: 83vh;    
 }
 
 .member_info{
