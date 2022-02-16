@@ -3,7 +3,7 @@ aside {
     width: 230px;
     height: 100vh;
     position: fixed;
-    top: 12%;
+    top: 9%;
 }
 
 .panel-default{
@@ -52,7 +52,14 @@ aside {
 }
 
 .container{
-    height: 83vh;    
+    height: 83vh;
+}
+
+.container .order_table {
+    position: absolute;
+    top: 120px;
+    left: 16%;
+    width: 80%;
 }
 
 .member_info{
@@ -85,6 +92,8 @@ aside {
     transform: translate(-50%,30%);
 }
 
+
+
 label{
     margin-right: 20px;
 }
@@ -98,16 +107,18 @@ label{
 
 th{
     text-align: center;
-    position: relative;
-    left: 25px;
-    letter-spacing: 5px;
 }
 
 td{
     text-align: center;
 }
 
-.detail_btn {
+.cancel_btn{
+    border-radius: 8px;
+}
+
+.detail_btn{
+    border: 1px solid gray;
     border-radius: 8px;
 }
 

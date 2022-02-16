@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>restaurant_self_pick_up</title>
+  <title>restaurant_history_list</title>
 
   <!-- bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -14,7 +14,7 @@
   <!-- mainstyle -->
   <link rel="stylesheet" href="css/style.css">
   <!-- index -->
-  <link rel="stylesheet" href="css/restaurant_self_pick_up.css">
+  <link rel="stylesheet" href="css/restaurant_history_list.css">
 
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -104,9 +104,9 @@
     <table class="table order_table">
       <thead>
         <tr>
-          <th>已完成</th>
           <th>取餐編號</th>
           <th>取餐日期</th>
+          <th>取餐時間</th>
           <th>訂餐姓名</th>
           <th>訂餐金額</th>
           <th>手機</th>
@@ -114,59 +114,64 @@
       </thead>
       <tbody>
         <tr>
-          <td>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" style="width: 20px; height: 20px; margin-left: 15px;">
-              </label>
-            </div>
-          </td>
           <td>00001</td>
+          <td>3/10</td>
           <td>16:30</td>
           <td>郭美美</td>
           <td>260</td>
           <td>09001993412</td>
           <td>
             <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal"
-              style="margin-left: 35px">
+              style="margin-left: 80px">
               訂餐明細
-            </button>
-          </td>
-          <td>
-            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal"
-              style="margin-left: -50px">
-              取消
             </button>
           </td>
         </tr>
 
         <tr>
-          <td>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" style="width: 20px; height: 20px; margin-left: 15px;" checked>
-              </label>
-            </div>
-          </td>
           <td>00001</td>
+          <td>3/10</td>
           <td>16:30</td>
           <td>郭美美</td>
           <td>260</td>
           <td>09001993412</td>
           <td>
             <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal"
-              style="margin-left: 35px">
+              style="margin-left: 80px">
               訂餐明細
-            </button>
-          </td>
-          <td>
-            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal"
-              style="margin-left: -50px">
-              取消
             </button>
           </td>
         </tr>
 
+        <tr>
+          <td>00001</td>
+          <td>3/10</td>
+          <td>16:30</td>
+          <td>郭美美</td>
+          <td>260</td>
+          <td>09001993412</td>
+          <td>
+            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal"
+              style="margin-left: 80px">
+              訂餐明細
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>00001</td>
+          <td>3/10</td>
+          <td>16:30</td>
+          <td>郭美美</td>
+          <td>260</td>
+          <td>09001993412</td>
+          <td>
+            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal"
+              style="margin-left: 80px">
+              訂餐明細
+            </button>
+          </td>
+        </tr>
         <!-- 訂餐明細對話盒 -->
         <div class="modal fade" id="detailModal">
           <div class="modal-dialog modal-dialog-centered">
