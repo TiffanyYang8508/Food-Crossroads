@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>restaurant_self_pick_up</title>
 
+
   <!-- bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- fontawesome -->
@@ -16,89 +17,90 @@
   <!-- index -->
   <link rel="stylesheet" href="css/restaurant_self_pick_up.css">
 
+
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <!-- 導覽列 start -->
-    
-    <div class="header_page"></div>
-    
-    <!-- 導覽列 over -->
+  <!-- 導覽列 start -->
 
-    <aside>
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">預位管理</a>
-            </h4>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse in">
-            <div class="little_title">
-              <a data-parent="#accordion" href="#collapseOne">今日訂位</a>
-            </div>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse in">
-            <div class="little_title">
-              <a data-parent="#accordion" href="#collapseOne">歷史訂位紀錄</a>
-            </div>
+  <div class="header_page"></div>
+
+  <!-- 導覽列 over -->
+
+  <aside>
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">預位管理</a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+          <div class="little_title">
+            <a data-parent="#accordion" href="#collapseOne">今日訂位</a>
           </div>
         </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">訂位管理</a>
-            </h4>
-          </div>
-          <div id="collapseTwo" class="panel-collapse collapse in">
-            <div class="little_title">
-              <a data-parent="#accordion" href="#collapseOne">今日自取訂餐</a>
-            </div>
-          </div>
-          <div id="collapseTwo" class="panel-collapse collapse in">
-            <div class="little_title">
-              <a data-parent="#accordion" href="#collapseOne">歷史訂餐紀錄</a>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">搜尋</a>
-            </h4>
-          </div>
-          <div id="collapseThree" class="panel-collapse collapse in">
-  
-            <form class="sreach_form">
-              <div class="form-group row form_textbox">
-                <label for="booker" class="col-4 col-form-label"></label>
-                <div class="col-10">
-                  <input id="booker" name="booker" placeholder="訂位人" type="text" class="form-control">
-                </div>
-              </div>
-              <div class="form-group row form_textbox">
-                <label for=" booking_number" class="col-4 col-form-label"></label>
-                <div class="col-10">
-                  <input id=" booking_number" name=" booking_number" placeholder="訂位編號" type="text" class="form-control">
-                </div>
-              </div>
-              <div class="form-group row form_textbox">
-                <label for=" booking_date" class="col-4 col-form-label"></label>
-                <div class="col-10">
-                  <input id=" booking_date" name=" booking_date" placeholder="訂位日期" type="text" class="form-control">
-                </div>
-              </div>
-              <div class="form-group row form_textbox">
-                <label for="booker_phone" class="col-4 col-form-label"></label>
-                <div class="col-10">
-                  <input id="booker_phone" name="booker_phone" placeholder="手機" type="text" class="form-control">
-                </div>
-              </div>
-            </form>
+        <div id="collapseOne" class="panel-collapse collapse in">
+          <div class="little_title">
+            <a data-parent="#accordion" href="#collapseOne">歷史訂位紀錄</a>
           </div>
         </div>
       </div>
-    </aside>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">訂位管理</a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse in">
+          <div class="little_title">
+            <a data-parent="#accordion" href="#collapseOne">今日自取訂餐</a>
+          </div>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse in">
+          <div class="little_title">
+            <a data-parent="#accordion" href="#collapseOne">歷史訂餐紀錄</a>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">搜尋</a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse in">
+
+          <form class="sreach_form">
+            <div class="form-group row form_textbox">
+              <label for="booker" class="col-4 col-form-label"></label>
+              <div class="col-10">
+                <input id="booker" name="booker" placeholder="訂位人" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row form_textbox">
+              <label for=" booking_number" class="col-4 col-form-label"></label>
+              <div class="col-10">
+                <input id=" booking_number" name=" booking_number" placeholder="訂位編號" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row form_textbox">
+              <label for=" booking_date" class="col-4 col-form-label"></label>
+              <div class="col-10">
+                <input id=" booking_date" name=" booking_date" placeholder="訂位日期" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row form_textbox">
+              <label for="booker_phone" class="col-4 col-form-label"></label>
+              <div class="col-10">
+                <input id="booker_phone" name="booker_phone" placeholder="手機" type="text" class="form-control">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </aside>
 
   <div class="container">
     <table class="table order_table">
@@ -205,17 +207,17 @@
   </div>
 
 
-    <!-- 頁尾 start -->
+  <!-- 頁尾 start -->
 
-    <div class="footer_page"></div>
+  <div class="footer_page"></div>
 
-    <!-- 頁尾 over -->
+  <!-- 頁尾 over -->
 
-    <script>
-      $(document).ready(function() {
-          $(".header_page").load("header.html");
-          $(".footer_page").load("footer.html");
-      });
+  <script>
+    $(document).ready(function () {
+      $(".header_page").load("header.html");
+      $(".footer_page").load("footer.html");
+    });
   </script>
 </body>
 
