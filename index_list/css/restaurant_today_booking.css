@@ -113,7 +113,7 @@ td{
     text-align: center;
 }
 
-.detail_btn {
+tbody .detail_btn {
     border-radius: 8px;
 }
 
@@ -228,9 +228,12 @@ td{
         text-align: center;
     }
     
-    .detail_btn {
+    tbody .detail_btn {
         border-radius: 8px;
-        
+    }
+
+    tbody .cancel_btn {
+        margin-right: 100px;
     }
     
     .comment_btn{
