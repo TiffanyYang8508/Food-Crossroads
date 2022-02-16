@@ -14,7 +14,7 @@
     <!-- mainstyle -->
     <link rel="stylesheet" href="css/style.css">
     <!-- order page -->
-    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/orderpage.css">
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -28,7 +28,7 @@
 
     <!-- 導覽列 over -->
 
-    <div class="menu_group">
+    <div class="menu_group ">
         <div id="menu_group">
             <button type="button" class="oval menu_group_list">餐點分類1</button>
             <button type="button" class="oval menu_group_list">餐點分類2</button>
@@ -43,13 +43,12 @@
         <div class="food_title">
             <h3>餐點分類1</h3>
         </div>
-
         <div id=cate1>
             <div class="food_list_border">
                 <div class="food_list_detail">
                     <img src="./img/餐點1.jpg" class="food_img">
                     <p class="food_name">商品名稱</p>
-                    <!-- 金額數量購物車 -->
+                    <!-- 金額-->
                     <div class="d-flex flex-row">
                         <p class="dollar align-self-center">230元</p>
                             <!--數量-->
@@ -58,74 +57,111 @@
                                 0
                                 <button class="btn_count">+</button>
                             </div>                        
-                        <div class="add_cart">
-                            <button type="button" class="btn btn-dark btn-sm oval">加入購物車</button>
-                        </div>
                     </div>
-                     <!--版面縮小數量-->
-                    <div class="order_number_sm">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary" type="button"
-                                    id="button-addon1">-</button>
-                            </div>
-                            <input type="text" class="form-control" placeholder=""
-                                aria-label="Example text with button addon" aria-describedby="button-addon1"
-                                style="width: 5vh;">
-                            <div class="input-group-append" id="button-addon4">
-                                <button class="btn btn-outline-secondary" type="button">+</button>
-                            </div>
-                        </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart">加入購物車</button>
                     </div>
-                    <div class="add_cart_sm">
-                        <button type="button" class="btn btn-dark btn-sm btn-block">加入購物車</button>
-                    </div>    
-                </div>
             </div>
-
+            </div>
             <div class="food_list_border food_list_border2">
                 <img src="./img/餐點2.jpg" class="food_img">
                 <p class="food_name">商品名稱</p>
-                <!-- 金額數量購物車 -->
-                <div class="d-flex flex-row">
-                    <p class="dollar align-self-center">230元</p>
-                    <div class="order_number">
-                        <!--數量-->
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary" type="button" id="button-addon1">-</button>
-                            </div>
-                            <input type="text" class="form-control" placeholder=""
-                                aria-label="Example text with button addon" aria-describedby="button-addon1"
-                                style="width: 5vh;">
-                            <div class="input-group-append" id="button-addon4">
-                                <button class="btn btn-outline-secondary" type="button">+</button>
-                            </div>
-                        </div>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p class="dollar align-self-center">230元</p>
+                            <!--數量-->
+                            <div class="count">
+                                <button class="btn_count count_decrease">-</button>
+                                0
+                                <button class="btn_count">+</button>
+                            </div>                        
                     </div>
-                    <div class="add_cart">
-                        <button type="button" class="btn btn-dark btn-sm oval">加入購物車</button>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart">加入購物車</button>
                     </div>
-                </div>
-                <!--版面縮小數量-->
-                <div class="order_number_sm">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <button class="btn btn-outline-secondary" type="button"
-                                id="button-addon1">-</button>
-                        </div>
-                        <input type="text" class="form-control" placeholder=""
-                            aria-label="Example text with button addon" aria-describedby="button-addon1"
-                            style="width: 5vh;">
-                        <div class="input-group-append" id="button-addon4">
-                            <button class="btn btn-outline-secondary" type="button">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="add_cart_sm">
-                    <button type="button" class="btn btn-dark btn-sm btn-block">加入購物車</button>
-                </div>
             </div>
+
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <img src="./img/餐點1.jpg" class="food_img">
+                    <p class="food_name">商品名稱</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p class="dollar align-self-center">230元</p>
+                            <!--數量-->
+                            <div class="count">
+                                <button class="btn_count count_decrease">-</button>
+                                0
+                                <button class="btn_count">+</button>
+                            </div>                        
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart">加入購物車</button>
+                    </div>
+            </div>
+            </div>
+            <div class="food_list_border food_list_border2">
+                <img src="./img/餐點2.jpg" class="food_img">
+                <p class="food_name">商品名稱</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p class="dollar align-self-center">230元</p>
+                            <!--數量-->
+                            <div class="count">
+                                <button class="btn_count count_decrease">-</button>
+                                0
+                                <button class="btn_count">+</button>
+                            </div>                        
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart">加入購物車</button>
+                    </div>
+            </div>
+
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <img src="./img/餐點1.jpg" class="food_img">
+                    <p class="food_name">商品名稱</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p class="dollar align-self-center">230元</p>
+                            <!--數量-->
+                            <div class="count">
+                                <button class="btn_count count_decrease">-</button>
+                                0
+                                <button class="btn_count">+</button>
+                            </div>                        
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart">加入購物車</button>
+                    </div>
+            </div>
+            </div>
+            <div class="food_list_border food_list_border2">
+                <img src="./img/餐點2.jpg" class="food_img">
+                <p class="food_name">商品名稱</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p class="dollar align-self-center">230元</p>
+                            <!--數量-->
+                            <div class="count">
+                                <button class="btn_count count_decrease">-</button>
+                                0
+                                <button class="btn_count">+</button>
+                            </div>                        
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart">加入購物車</button>
+                    </div>
+            </div>
+
+        </div>
 
         </div>
     </div>
@@ -135,114 +171,137 @@
             <h3>餐點分類2</h3>
         </div>
         <div id="cate2">
-
             <div class="food_list_border">
                 <div class="food_list_detail">
                     <img src="./img/餐點1.jpg" class="food_img">
                     <p class="food_name">商品名稱</p>
-                    <!-- 金額數量購物車 -->
+                    <!-- 金額-->
                     <div class="d-flex flex-row">
                         <p class="dollar align-self-center">230元</p>
-                        <div class="order_number">
                             <!--數量-->
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary" type="button"
-                                        id="button-addon1">-</button>
-                                </div>
-                                <input type="text" class="form-control" placeholder=""
-                                    aria-label="Example text with button addon" aria-describedby="button-addon1"
-                                    style="width: 5vh;">
-                                <div class="input-group-append" id="button-addon4">
-                                    <button class="btn btn-outline-secondary" type="button">+</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="add_cart">
-                            <button type="button" class="btn btn-dark btn-sm oval">加入購物車</button>
-                        </div>
+                            <div class="count">
+                                <button class="btn_count count_decrease">-</button>
+                                0
+                                <button class="btn_count">+</button>
+                            </div>                        
                     </div>
-                <!--版面縮小數量-->
-                <div class="order_number_sm">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <button class="btn btn-outline-secondary" type="button"
-                                id="button-addon1">-</button>
-                        </div>
-                        <input type="text" class="form-control" placeholder=""
-                            aria-label="Example text with button addon" aria-describedby="button-addon1"
-                            style="width: 5vh;">
-                        <div class="input-group-append" id="button-addon4">
-                            <button class="btn btn-outline-secondary" type="button">+</button>
-                        </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart">加入購物車</button>
                     </div>
-                </div>
-
-                    <div class="add_cart_sm">
-                        <button type="button" class="btn btn-dark btn-sm btn-block">加入購物車</button>
-                    </div>
-    
                 </div>
             </div>
 
             <div class="food_list_border food_list_border2">
                 <img src="./img/餐點2.jpg" class="food_img">
                 <p class="food_name">商品名稱</p>
-                <!-- 金額數量購物車 -->
-                <div class="d-flex flex-row">
-                    <p class="dollar align-self-center">230元</p>
-                    <div class="order_number">
-                        <!--數量-->
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary" type="button" id="button-addon1">-</button>
-                            </div>
-                            <input type="text" class="form-control" placeholder=""
-                                aria-label="Example text with button addon" aria-describedby="button-addon1"
-                                style="width: 5vh;">
-                            <div class="input-group-append" id="button-addon4">
-                                <button class="btn btn-outline-secondary" type="button">+</button>
-                            </div>
-                        </div>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p class="dollar align-self-center">230元</p>
+                            <!--數量-->
+                            <div class="count">
+                                <button class="btn_count count_decrease">-</button>
+                                0
+                                <button class="btn_count">+</button>
+                            </div>                        
                     </div>
-                    <div class="add_cart">
-                        <button type="button" class="btn btn-dark btn-sm oval">加入購物車</button>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart">加入購物車</button>
                     </div>
-                </div>
-                <!--版面縮小數量-->
-                <div class="order_number_sm">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <button class="btn btn-outline-secondary" type="button"
-                                id="button-addon1">-</button>
-                        </div>
-                        <input type="text" class="form-control" placeholder=""
-                            aria-label="Example text with button addon" aria-describedby="button-addon1"
-                            style="width: 5vh;">
-                        <div class="input-group-append" id="button-addon4">
-                            <button class="btn btn-outline-secondary" type="button">+</button>
-                        </div>
-                    </div>
-                </div>
+            </div>
 
-                <div class="add_cart_sm">
-                    <button type="button" class="btn btn-dark btn-sm btn-block">加入購物車</button>
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <img src="./img/餐點1.jpg" class="food_img">
+                    <p class="food_name">商品名稱</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p class="dollar align-self-center">230元</p>
+                            <!--數量-->
+                            <div class="count">
+                                <button class="btn_count count_decrease">-</button>
+                                0
+                                <button class="btn_count">+</button>
+                            </div>                        
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart">加入購物車</button>
+                    </div>
                 </div>
+            </div>
 
+            <div class="food_list_border food_list_border2">
+                <img src="./img/餐點2.jpg" class="food_img">
+                <p class="food_name">商品名稱</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p class="dollar align-self-center">230元</p>
+                            <!--數量-->
+                            <div class="count">
+                                <button class="btn_count count_decrease">-</button>
+                                0
+                                <button class="btn_count">+</button>
+                            </div>                        
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart">加入購物車</button>
+                    </div>
+            </div>
+
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <img src="./img/餐點1.jpg" class="food_img">
+                    <p class="food_name">商品名稱</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p class="dollar align-self-center">230元</p>
+                            <!--數量-->
+                            <div class="count">
+                                <button class="btn_count count_decrease">-</button>
+                                0
+                                <button class="btn_count">+</button>
+                            </div>                        
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food_list_border food_list_border2">
+                <img src="./img/餐點2.jpg" class="food_img">
+                <p class="food_name">商品名稱</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p class="dollar align-self-center">230元</p>
+                            <!--數量-->
+                            <div class="count">
+                                <button class="btn_count count_decrease">-</button>
+                                0
+                                <button class="btn_count">+</button>
+                            </div>                        
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart">加入購物車</button>
+                    </div>
             </div>
 
         </div>
-
     </div>
 
-
+    <!-- 揪團結帳 -->
     <div class="food_order_group d-flex flex-column">
         <div class="d-flex justify-content-center">
-            <a href="#"><img src="./img/people_plus@3x.png" style="width: 25px; height: 20px; margin-right: 5px;"></a>
-            <button type="button" class="btn btn-dark btn-sm border border-danger oval group_button">開啟揪團</button>
+            <!-- <a href="#"><img src="./img/people_plus@3x.png" style="width: 25px; height: 20px; margin-right: 5px;"></a> -->
+            <button class="group_button oval">開啟揪團</button>
         </div>
         <div class="d-flex justify-content-center">
-            <button id="checkout" type="button" class="btn btn-danger btn-lg" style="margin-top: 1vh;">去結帳</button>
+            <button id="checkout">去結帳</button>
         </div>
     </div>
     </div>
