@@ -1,0 +1,102 @@
+thead th:nth-child(1),
+tbody td:nth-child(1) {
+  width: 1em;
+}
+
+thead th:nth-child(2),
+tbody td:nth-child(2) {
+  width: 3em;
+}
+
+thead th:nth-child(3),
+tbody td:nth-child(3) {
+  width: 4em;
+}
+
+thead th:nth-child(4),
+tbody td:nth-child(4),
+thead th:nth-child(5),
+tbody td:nth-child(5) {
+  width: 1em;
+}
+
+.order_member_table {
+  background-color: 1px solid black;
+}
+
+.btn_view {
+  color: white;
+  background-color: #403c3c;
+  border-radius: 50px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 2em;
+  width: 8em;
+  /* font-size: large; */
+  /* font-weight: 600; */
+}
+
+.share_member_table tbody tr:nth-child(1),
+.share_member_table tbody tr:nth-child(2) {
+  text-align: left;
+}
+
+.share_member_table tbody tr:nth-child(2) p {
+  position: relative;
+}
+
+.share_member_table tbody tr:nth-child(2) p::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  height: 2px;
+  width: 100%;
+  transition: 0.3s all;
+}
+
+.share_member_table tbody tr:nth-child(2) p:hover::before {
+  content: "";
+  background-color: lightslategrey;
+}
+
+#order_share {
+  position: fixed;
+  top: 30%;
+  margin-right: 5%;
+}
+
+.share_member_table {
+  position: fixed;
+  top: 40%;
+  margin-right: 5%;
+}
+
+.show_member {
+  border: white solid 1px;
+  background-color: rgb(243, 238, 238);
+  position: fixed;
+  top: 55%;
+  right: 0%;
+  text-align: center;
+  width: 8em;
+  margin-right: 13%;
+  z-index: 1;
+}
+
+.show_member_detail {
+  padding-left: 0px;
+}
+
+.show_member_detail > li {
+  border-bottom: #585555c5 0.5px solid;
+}
+
+#checkout {
+  width: 8em;
+  height: 1.9em;
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  align-self: center;
+}

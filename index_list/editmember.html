@@ -32,22 +32,19 @@
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion"
-                        href="member.html">會員資料</a>
+                    <h4 class="panel-title"><a href="member.html">會員資料</a>
                     </h4>
                 </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion"
-                        href="booking_manage.html">訂位管理</a>
+                    <h4 class="panel-title"><a href="booking_manage.html">訂位管理</a>
                     </h4>
                 </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion"
-                        href="order_manage.html">訂餐管理</a>
+                    <h4 class="panel-title"><a href="order_manage.html">訂餐管理</a>
                     </h4>
                 </div>
             </div>
@@ -82,46 +79,46 @@
     </div>
 
     <section id="edit_member">
-        <div class="container-fluid">
+        <div class="container-fluid member_div">
             <div class="row">
                 <div class="col-md-12">
-                    <form class="edit_info was-validated">
+                    <form>
                         <div>
-                            <p class="title_member_edit" style="margin-left: 40px;">會員資料修改</p>
+                            <p class="title_member_edit">會員資料修改</p>
                         </div>
                         <div class="form-group form-inline">
-                            <label for="name">姓　　名:</label>
-                            <input type="text" class="form-control" id="name" value="李曉明" name="name" required>
+                            <label for="name" class="edit_label">姓　　名:</label>
+                            <input type="text" class="form-control edit_text" id="name" value="李曉明" name="name" required>
                         </div>
                         <div class="form-group form-inline">
-                            <label>性　　別:</label>
+                            <label class="edit_form_label edit_label">性　　別:</label>
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optradio" checked="checked">男
+                                <input type="radio" class="edit-check-input" name="optradio" checked="checked">男
                             </label>
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optradio">女
+                                <input type="radio" class="edit-check-input" name="optradio">女
                             </label>
                         </div>
                         <div class="form-group form-inline">
-                            <label for="email">信　　箱:</label>
+                            <label for="email" class="edit_label">信　　箱:</label>
                             <input type="email" class="form-control" id="email" value="email@gmail.com" name="email"
                                 disabled>
                         </div>
                         <div class="form-group form-inline">
-                            <label for="pwd">密　　碼:</label>
-                            <input type="password" class="form-control" id="pwd" value="******" name="pwd" required>
-                            <div class="invalid-feedback">請輸入密碼</div>
-                        </div>
-                        <div class="form-group form-inline" style="margin-left: -31px;">
-                            <label for="pwd">　　確認密碼:</label>
+                            <label for="pwd" class="edit_label">密　　碼:</label>
                             <input type="password" class="form-control" id="pwd" value="******" name="pwd" required>
                             <div class="invalid-feedback">請輸入密碼</div>
                         </div>
                         <div class="form-group form-inline">
-                            <label for="tel">電　　話:</label>
+                            <label for="pwd" class="edit_label">確認密碼:</label>
+                            <input type="password" class="form-control edit_chk-paswrd" id="pwd" value="******" name="pwd" required>
+                            <div class="invalid-feedback">請輸入密碼</div>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label for="tel" class="edit_label">電　　話:</label>
                             <input type="text" class="form-control" id="tel" value="0900-xxxxxx" name="tel" required>
                         </div>
-                        <div>
+                        <div class="edit_btn_div">
                             <button type="button" onclick="confirm()" class="member_back_btn">
                                 返回
                             </button>
