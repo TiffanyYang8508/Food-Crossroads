@@ -29,35 +29,37 @@
     <!-- 導覽列 end -->
 
     <section>
-        <div class="container">
-            <div class="home_login">
-                <div>
-                    <p class="title_home_login">後台管理登入</p><br>
+        <div class="container-fluid login_div">
+            <div class="row">
+                <div class="col-12">
+                    <form action="">
+                        <div>
+                            <p class="title_home_login">後台管理登入</p><br>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label for="email">帳　號:</label>
+                            <input type="email" class="form-control" id="email" placeholder="email@gmail.com"
+                                name="email">
+                        </div>
+                        <div class="form-group form-inline">
+                            <label for="password">密　碼:</label>
+                            <input type="password" class="form-control" id="pwd" value="******" name="pwd">
+                        </div>
+                        <div class="member_login_div">
+                            <a href="#">忘記密碼?</a>
+                            <div>
+                                <label for="auto-login">自動登入</label>
+                                <input type="checkbox" id="auto-login">
+                            </div>
+                        </div>
+                        <div class="btn_home_login">
+                            <button class="login_btn">登入</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="account_home_login">
-                    <label for="email">帳&nbsp&nbsp&nbsp&nbsp&nbsp號&nbsp&nbsp&nbsp</label>
-                    <input type="email" id="email">
-                    <br>
-                    <br>
-                    <label for="password">密&nbsp&nbsp&nbsp&nbsp&nbsp碼&nbsp&nbsp&nbsp</label>
-                    <input type="password" id="password">
-                </div>
-
-                <div class="btn_home_forgetpwd">
-                    <a href="#">忘記密碼?</a>
-                </div>
-                <div class="btn_home_rememberme">
-                    <label for="auto-login">自動登入</label>
-                    <input type="checkbox" id="auto-login">
-                </div>
-
-                <div class="btn_home_login ">
-                    <button class="login_btn">登入</button>
-                </div>
-
             </div>
         </div>
-
+        </div>
     </section>
 
     <!-- 頁尾 start -->
@@ -66,7 +68,7 @@
 
     <!-- 頁尾 end -->
 
-    
+
     <script type="text/javascript">
         $(function () {
             $(".header_page").load("header.html");
