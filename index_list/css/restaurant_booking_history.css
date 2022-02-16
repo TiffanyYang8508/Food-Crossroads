@@ -17,7 +17,7 @@ aside {
     padding-top: 8px;
 }
 
-.panel-heading a {
+.panel-heading .panel-title a {
     font-weight: 600;
     color: white;
     text-decoration: none;
@@ -36,7 +36,7 @@ aside {
     background-color: #8B1309;
 }
 
-.little_title a {
+.panel .little_title a {
     text-decoration: none;
     color: white;
     font-weight: 600;
