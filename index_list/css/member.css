@@ -69,7 +69,7 @@
 #member_section{
     margin-top: 100px;
     width: 80%;
-    height: 100%;
+    /* height: 100%; */
     margin-left: 20%;
 }
 
@@ -147,7 +147,7 @@ label {
 
 .default_container {
     width: 100%;
-    height: 85vh;
+    /* height: 85vh; */
 }
 
 .table_container{
@@ -315,6 +315,12 @@ td {
 .stars {
     color: orange;
     margin-left: 10px;
+}
+
+.footer_page {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 /* RWD start */

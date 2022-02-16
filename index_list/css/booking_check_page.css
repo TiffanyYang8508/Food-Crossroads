@@ -59,12 +59,22 @@
     font-size: 18px;
     font-weight: 500;
     color: #fff;
+    border: none;
     background-color: #8b1309;
     margin: 0 10px;
+    transition: 0.3s;
 }
 
-.check_btn_back {
-    background-color: #313030;
+.check_btn_confirm:hover{
+    background-color: #a30f01;
+}
+
+.check_btn_back{
+    background-color: #403C3C;
+}
+
+.check_btn_back:hover{
+    background-color: #524d4d;
 }
 
 /* ---------- body over ---------- */
@@ -79,3 +89,43 @@
 }
 
 /* ---------- footer_page over ---------- */
+
+/* RWD start */
+
+
+/* 超大型螢幕 */
+
+@media screen and (max-width:1200px) {
+
+}
+
+
+/* 大型螢幕 */
+
+@media screen and (max-width:992px) {
+    
+}
+
+
+/* 平板 */
+
+@media screen and (max-width:768px) {
+
+}
+
+
+/* 手機 */
+
+@media screen and (max-width:576px) {
+
+}
+
+
+/* 小手機 */
+
+@media screen and (max-width:480px) {
+
+}
+
+
+/* RWD end */
