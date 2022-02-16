@@ -221,13 +221,12 @@
 }
 
 .chk_css {
-    padding: 10px;
+    padding: 20px 25px 10px 25px;
 }
 
 .chk_item {
-    display: inline-block;
-    padding: 5px 5px 5px 5px;
-    font-size: 0.9vw;
+    display: inline;
+    padding: 5px 10px;
 }
 
 .chk_chk {
@@ -280,7 +279,7 @@
 
 .water_fall {
     width: 100%;
-    column-count: 3;
+    column-count: 2;
 }
 
 .kind_span {
@@ -365,8 +364,14 @@
         left: 230px; */
         width: 500px;
     }
+    .chk_css{
+        padding: 10px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .chk_item {
-        padding: 5px 2px 5px 2px;
+        padding: 5px 10px 5px 10px;
         font-size: 1.3vw;
     }
     .tab_close,
@@ -418,9 +423,11 @@
         left: 135px; */
         width: 450px;
     }
+    .chk_css{
+        padding: 5px 5px 0px 5px;
+    }
     .chk_item {
-        padding: 5px 2px 5px 2px;
-        font-size: 1.4vw;
+        padding: 5px;
     }
     .search_btn {
         width: 450px;
@@ -471,6 +478,7 @@
         line-height: 40px;
     }
     .mobile_div {
+        font-size: 3vw;
         position: fixed;
         top: 0;
         left: 0;
