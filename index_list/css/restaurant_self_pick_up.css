@@ -98,6 +98,9 @@ label{
 
 th{
     text-align: center;
+    position: relative;
+    left: 25px;
+    letter-spacing: 5px;
 }
 
 td{
