@@ -52,7 +52,14 @@ aside {
 }
 
 .container{
-    height: 83vh;    
+    height: 83vh;  
+}
+
+.container .order_table {
+    position: absolute;
+    top: 100px;
+    left: 16%;
+    width: 80%;
 }
 
 .member_info{

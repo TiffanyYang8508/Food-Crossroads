@@ -3,7 +3,7 @@ aside {
     width: 230px;
     height: 85vh;
     position: fixed;
-    top: 9%;
+    top: 12%;
 }
 
 .panel-default{
@@ -57,7 +57,7 @@ aside {
 
 .container .order_table {
     position: absolute;
-    top: 120px;
+    top: 100px;
     left: 16%;
     width: 80%;
 }
@@ -107,6 +107,9 @@ label{
 
 th{
     text-align: center;
+    position: relative;
+    left: 30px;
+    letter-spacing: 5px;
 }
 
 td{
