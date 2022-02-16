@@ -1,9 +1,9 @@
 aside {
     background-color: #403C3C;
     width: 230px;
-    height: 100vh;
+    height: 85vh;
     position: fixed;
-    top: 9%;
+    top: 12%;
 }
 
 .panel-default{
@@ -17,7 +17,7 @@ aside {
     padding-top: 8px;
 }
 
-.panel-heading a {
+.panel-heading .panel-title a {
     font-weight: 600;
     color: white;
     text-decoration: none;
@@ -36,7 +36,7 @@ aside {
     background-color: #8B1309;
 }
 
-.little_title a {
+.panel .little_title a {
     text-decoration: none;
     color: white;
     font-weight: 600;
@@ -57,7 +57,7 @@ aside {
 
 .container .order_table {
     position: absolute;
-    top: 120px;
+    top: 100px;
     left: 16%;
     width: 80%;
 }
@@ -107,6 +107,9 @@ label{
 
 th{
     text-align: center;
+    position: relative;
+    left: 30px;
+    letter-spacing: 5px;
 }
 
 td{

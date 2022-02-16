@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>restaurant_history_list</title>
+  <title>今日取餐</title>
 
   <!-- bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -14,7 +14,7 @@
   <!-- mainstyle -->
   <link rel="stylesheet" href="css/style.css">
   <!-- index -->
-  <link rel="stylesheet" href="css/restaurant_history_list.css">
+  <link rel="stylesheet" href="css/restaurant_today_booking.css ">
 
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -37,12 +37,12 @@
           </div>
           <div id="collapseOne" class="panel-collapse collapse in">
             <div class="little_title">
-              <a data-parent="#accordion" href="#collapseOne">今日訂位</a>
+              <a data-parent="#accordion" href="./restaurant_today_booking.html">今日訂位</a>
             </div>
           </div>
           <div id="collapseOne" class="panel-collapse collapse in">
             <div class="little_title">
-              <a data-parent="#accordion" href="#collapseOne">歷史訂位紀錄</a>
+              <a data-parent="#accordion" href="./restaurant_booking_history.html">歷史訂位紀錄</a>
             </div>
           </div>
         </div>
@@ -53,12 +53,12 @@
           </div>
           <div id="collapseTwo" class="panel-collapse collapse in">
             <div class="little_title">
-              <a data-parent="#accordion" href="#collapseOne">今日自取訂餐</a>
+              <a data-parent="#accordion" href="./restaurant_self_pick_up.html">今日自取訂餐</a>
             </div>
           </div>
           <div id="collapseTwo" class="panel-collapse collapse in">
             <div class="little_title">
-              <a data-parent="#accordion" href="#collapseOne">歷史訂餐紀錄</a>
+              <a data-parent="#accordion" href="./restaurant_history_list.html">歷史訂餐紀錄</a>
             </div>
           </div>
         </div>
@@ -104,74 +104,124 @@
     <table class="table order_table">
       <thead>
         <tr>
-          <th>取餐編號</th>
-          <th>取餐日期</th>
-          <th>取餐時間</th>
-          <th>訂餐姓名</th>
-          <th>訂餐金額</th>
+          <th>已帶位</th>
+          <th>訂位編號</th>
+          <th>訂位日期</th>
+          <th>訂位時間</th>
+          <th>訂位人數</th>
+          <th>訂位人</th>
           <th>手機</th>
         </tr>
       </thead>
       <tbody>
         <tr>
+          <td>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" style="width: 15px; height: 15px; margin-left: 15px;">
+              </label>
+            </div>
+          </td>
           <td>00001</td>
-          <td>3/10</td>
-          <td>16:30</td>
-          <td>郭美美</td>
-          <td>260</td>
+          <td>2022-01-08</td>
+          <td>17:00</td>
+          <td>3</td>
+          <td>李曉明</td>
           <td>09001993412</td>
           <td>
-            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal"
-              style="margin-left: 80px">
-              訂餐明細
+            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
+              詳細內容
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-sm detail_btn" data-toggle="modal" data-target="#detailModal"
+              style="margin-right: 50px; border: 1px solid #403C3C;">
+              取消
             </button>
           </td>
         </tr>
 
         <tr>
+          <td>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" style="width: 15px; height: 15px; margin-left: 15px;">
+              </label>
+            </div>
+          </td>
           <td>00001</td>
-          <td>3/10</td>
-          <td>16:30</td>
-          <td>郭美美</td>
-          <td>260</td>
+          <td>2022-01-08</td>
+          <td>17:00</td>
+          <td>3</td>
+          <td>李曉明</td>
           <td>09001993412</td>
           <td>
-            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal"
-              style="margin-left: 80px">
-              訂餐明細
+            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
+              詳細內容
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-sm detail_btn" data-toggle="modal" data-target="#detailModal"
+              style="margin-right: 50px ;border: 1px solid #403C3C;">
+              取消
             </button>
           </td>
         </tr>
 
         <tr>
+          <td>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" style="width: 15px; height: 15px; margin-left: 15px;" checked>
+              </label>
+            </div>
+          </td>
           <td>00001</td>
-          <td>3/10</td>
-          <td>16:30</td>
-          <td>郭美美</td>
-          <td>260</td>
+          <td>2022-01-08</td>
+          <td>17:00</td>
+          <td>3</td>
+          <td>李曉明</td>
           <td>09001993412</td>
           <td>
-            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal"
-              style="margin-left: 80px">
-              訂餐明細
+            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
+              詳細內容
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-sm detail_btn" data-toggle="modal" data-target="#detailModal"
+              style="margin-right: 50px; border: 1px solid #403C3C;">
+              取消
             </button>
           </td>
         </tr>
 
         <tr>
+          <td>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" style="width: 15px; height: 15px; margin-left: 15px;" checked>
+              </label>
+            </div>
+          </td>
           <td>00001</td>
-          <td>3/10</td>
-          <td>16:30</td>
-          <td>郭美美</td>
-          <td>260</td>
+          <td>2022-01-08</td>
+          <td>17:00</td>
+          <td>3</td>
+          <td>李曉明</td>
           <td>09001993412</td>
           <td>
-            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal"
-              style="margin-left: 80px">
-              訂餐明細
+            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
+              詳細內容
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-sm detail_btn cancel" data-toggle="modal" data-target="#detailModal"
+              style="margin-right: 50px; border: 1px solid #403C3C;">
+              取消
             </button>
           </td>
         </tr>
+
         <!-- 訂餐明細對話盒 -->
         <div class="modal fade" id="detailModal">
           <div class="modal-dialog modal-dialog-centered">
