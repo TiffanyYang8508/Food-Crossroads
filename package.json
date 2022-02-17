@@ -1,0 +1,29 @@
+{
+  "name": "Food-Crossroads",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TiffanyYang8508/Food-Crossroads.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TiffanyYang8508/Food-Crossroads/issues"
+  },
+  "homepage": "https://github.com/TiffanyYang8508/Food-Crossroads#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "session": "^0.1.0"
+  }
+}
