@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- RWD -->
     <link rel="stylesheet" href="css/shoppingok.css">
-    <link rel="stylesheet" href="css/shoppingchar.css">
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -35,7 +34,8 @@
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html"><span>首頁</span></a></li>
                         <li class="breadcrumb-item"><a href="list.html"><span>餐廳列表</span></a></li>
-                        <li class="breadcrumb-item active" aria-current="page"><span>訂餐</span></a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><span>訂餐</span></a>
+                        </li>
                     </ul>
                 </nav>
 
@@ -62,8 +62,7 @@
                             <!-- 餐點顯示欄位 -->
                             <tr class="shopping-row" id="shopping-row">
                                 <td class="wrapper" id="td-1" style="width: 200px;">
-                                    <img src="img/image_shoppingchar/imge01.jpeg" class="img-fluid img-thumbnail"
-                                        alt="">
+                                    <img src="img/image_shoppingchar/imge01.jpeg" class="img-fluid img-thumbnail" alt="">
                                 </td>
                                 <td>
                                     <span id="ordername" class="ordername">
@@ -89,8 +88,7 @@
                             <!-- end of 餐點顯示欄位 -->
                             <tr class="shopping-row" id="shopping-row">
                                 <td class="wrapper">
-                                    <img src="img/image_shoppingchar/imge02.jpeg" class="img-fluid img-thumbnail"
-                                        alt="">
+                                    <img src="img/image_shoppingchar/imge02.jpeg" class="img-fluid img-thumbnail" alt="">
                                 </td>
                                 <td>
                                     <span id="ordername" class="ordername">
@@ -128,28 +126,79 @@
                         </tbody>
                     </table>
                 </div>
-                <div style="height: 100px;"></div>
+
+                <div id="mobile_shopping">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mobile_shopping_div">
+                                    <div class="mobile_shopping_inline_div">
+                                        <div class="mobile_shopping_img">
+                                            <img src="img/image_shoppingchar/imge01.jpeg" class="img-fluid img-thumbnail" alt="">
+                                        </div>
+                                        <div class="mobile_shopping_text">
+                                            <span class="mobile_span">餐點名</span>
+                                            <div class="mobile_div">
+                                                <span>$123</span>
+                                                <span>x1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mobile_div">
+                                        <span>總額:</span>
+                                        <span>$1234</span>
+                                    </div>
+                                </div>
+                                <div class="mobile_shopping_div">
+                                    <div class="mobile_shopping_inline_div">
+                                        <div class="mobile_shopping_img">
+                                            <img src="img/image_shoppingchar/imge02.jpeg" class="img-fluid img-thumbnail" alt="">
+                                        </div>
+                                        <div class="mobile_shopping_text">
+                                            <span class="mobile_span">餐點名</span>
+                                            <div class="mobile_div">
+                                                <span>$123</span>
+                                                <span>x1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mobile_div">
+                                        <span>總額:</span>
+                                        <span>$1234</span>
+                                    </div>
+                                </div>
+                                <div class="mobile_shopping_div">
+                                    <div class="mobile_shopping_inline_div">
+                                        <div class="mobile_shopping_img">
+                                            <img src="img/image_shoppingchar/imge03.jpeg" class="img-fluid img-thumbnail" alt="">
+                                        </div>
+                                        <div class="mobile_shopping_text">
+                                            <span class="mobile_span">餐點名</span>
+                                            <div class="mobile_div">
+                                                <span>$123</span>
+                                                <span>x1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mobile_div">
+                                        <span>總額(3個商品):</span>
+                                        <span>$1234</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="all-squre" id="all-squre">
-                    <table class="table">
-                        <tbody>
-                            <tr id="sum-row">
-                                <td colspan="1">
-                                    <button id="buy-back-btn">回上一步</button>
-                                </td>
-                                <td>
-                                    <b>總金額(3個商品)$1234</b>
-                                </td>
-                                <td>
-                                    <button id="buy-ok-btn">下訂單</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <button id="buy-back-btn">回上一步</button>
+                    <p>
+                        <b>總金額(3個商品)$1234</b>
+                    </p>
+                    <button id="buy-ok-btn">下訂單</button>
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- footer -->
