@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const bcrypt = require("bcrypt");
 const session = require("express-session");
 const path = require("path");
@@ -104,4 +105,4 @@ app.post('/register', async (req, res) => {
     }
 })
 
-app.listen(3000);
+app.listen(8000);
