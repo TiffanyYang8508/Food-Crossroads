@@ -4,8 +4,8 @@ import $ from "jquery";
 class Index extends Component {
     state = {}
 
-    componentDidMount = () => {
-       
+    componentDidMount() {
+
     }
 
     render() {
