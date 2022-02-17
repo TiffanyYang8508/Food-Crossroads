@@ -4,6 +4,10 @@ html,body {
     user-select: none;
 }
 
+ul,li{
+    list-style-type: none;
+}
+
 input[type=checkbox] {
     accent-color: #8B1309;
 }
