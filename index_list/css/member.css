@@ -169,6 +169,10 @@ label {
     display: none;
 }
 
+#booking_manage .table th{
+    border-bottom: 1px solid #403c3c;
+}
+
 .table th,
 td {
     text-align: center;

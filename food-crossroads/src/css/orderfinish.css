@@ -1,0 +1,40 @@
+body {
+  font-size: 16px;
+}
+
+.order_finish {
+  width: 300px;
+  height: 160px;
+  border: solid 1.5px #707070;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.order_finish p {
+  padding-top:20%;
+}
+
+.buy_back_btn {
+  width: 120px;
+  height: 30px;
+  background-color: #403c3c;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+ #back_to_home {
+ margin-top: 10px;
+ margin-left: 55px;
+}
+
+#check_order{
+  margin-top: 10px ;
+} 
+
+.order_finish_div{
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+}
