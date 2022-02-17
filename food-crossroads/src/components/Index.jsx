@@ -1,17 +1,30 @@
 import React, { Component } from 'react';
-import $ from "jquery";
+import "../fontawesome-free-5.15.4-web/css/all.css";
+import "../css/style.css";
+import "../css/index.css";
 
 class Index extends Component {
     state = {}
 
-    componentDidMount() {
-
-    }
 
     render() {
         return (
             <React.Fragment>
-                <div className="header_page"></div>
+                <header>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="index.html"><img src={require('../img/logo.png')} alt="LOGO" /></a>
+                        <div class="nav_icon">
+                            <a class="nav_a" href="list.html"><i class="fas fa-store"></i>餐廳列表</a>
+                            <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i>購物車</a>
+                            <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i>會員登入</a>
+                        </div>
+                        <div class="rwd_icon">
+                            <a class="nav_a" href="list.html"><i class="fas fa-store"></i></a>
+                            <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i></a>
+                            <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i></a>
+                        </div>
+                    </nav>
+                </header>
                 <section id="search_box">
                     <div className="container-fluid">
                         <div className="row">
@@ -351,7 +364,17 @@ class Index extends Component {
                     </div>
                 </section>
 
-                <div className="footer_page"></div>
+                <footer>
+                    <div class="footer_link">
+                        <a href="#">關於我們</a>
+                        <a href="#">商家入口</a>
+                        <a href="#">常見問題</a>
+                        <a href="#">聯絡我們</a>
+                    </div>
+                    <div class="footer_text">
+                        <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
+                    </div>
+                </footer>
             </React.Fragment>
         );
     }
