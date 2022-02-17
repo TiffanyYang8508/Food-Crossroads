@@ -10,3 +10,54 @@
     font-weight: bolder;
     font-size: 20px;
 }
+
+
+/* RWD start */
+
+
+/* 超大型螢幕 */
+
+@media screen and (max-width:1200px) {
+    .breadcrumb-item span {
+        font-size: 22px;
+    }
+}
+
+
+/* 大型螢幕 */
+
+@media screen and (max-width:992px) {
+    .breadcrumb-item span {
+        font-size: 20px;
+    }
+}
+
+
+/* 平板 */
+
+@media screen and (max-width:768px) {
+    .breadcrumb-item span {
+        font-size: 18px;
+    }
+}
+
+
+/* 手機 */
+
+@media screen and (max-width:576px) {
+    .breadcrumb-item span {
+        font-size: 16px;
+    }
+}
+
+
+/* 小手機 */
+
+@media screen and (max-width:480px) {
+    .breadcrumb-item span {
+        font-size: 14px;
+    }
+}
+
+
+/* RWD end */
