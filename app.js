@@ -1,12 +1,13 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const bcrypt = require("bcrypt");
 const session = require("express-session");
 const path = require("path");
 
 const bodyParser = require('body-parser');
-const e = require("express");   
-app.use( express.static("public") );
+const e = require("express");
+app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'static')));
@@ -88,14 +89,20 @@ app.post('/register', async (req, res) => {
                 result["err"] = "已有重複的Email。";
                 res.json(result);
             } else {
-                // 將資料寫入資料庫
-                const hashedPassword = await bcrypt.hash(req.body.password, 10);
-                connection.query(
-                    'INSERT INTO `member`(`user_name`, `user_email`, `user_pwd`, `user_tel`) VALUES (?, ?, ?, ?)',
-                    [req.body.name, req.body.email, hashedPassword, req.body.tel]
-                );
-                // res.send('register success');
-                res.redirect('./login')
+                if (req.body.password !== req.body.password_confirm) {
+                    result["status"] = "註冊失敗。";
+                    result["err"] = "密碼不相同";
+                    res.json(result);
+                } else {
+                    // 將資料寫入資料庫
+                    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+                    connection.query(
+                        'INSERT INTO `member`(`user_name`, `user_email`, `user_pwd`, `user_tel`) VALUES (?, ?, ?, ?)',
+                        [req.body.name, req.body.email, hashedPassword, req.body.tel]
+                    );
+                    // res.send('register success');
+                    res.redirect('./login')
+                }
             }
         })
 
@@ -104,4 +111,4 @@ app.post('/register', async (req, res) => {
     }
 })
 
-app.listen(3000);
+app.listen(8000);

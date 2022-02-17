@@ -5,6 +5,7 @@
     height: 75px;
     width: 100%;
     background-color: #403C3C;
+    position: sticky;
 }
 
 #menu_group{
@@ -25,6 +26,11 @@
     transition: 0.3s;
 }
 .menu_group_list:hover{
+    background-color: #8B1309;
+    color: white;
+}
+
+.menu_group_list:active{
     background-color: #8B1309;
     color: white;
 }
@@ -55,16 +61,17 @@ div.food_list_border{
 div.food_list_border2{
     margin-left: 0vw;
 }
-
+.food_dollar_qty{
+    padding-top: 1.5rem;
+}
 .food_name{
-    font-size: 16pt;
+    font-size: 1.2rem;
 }
 .food_detail{
     flex-wrap: nowrap;
     list-style-type: none; 
     margin-left: 20%;
 }
-
 .dollar{
     margin-right: 5%;
     font-size: 12pt;
@@ -79,7 +86,7 @@ div.food_list_border2{
 
 /* 加入購物車按鈕 */
 .btn_add_cart{
-    font-size: 10pt;
+    font-size: 12pt;
     border-radius: 0 0 9px 9px;
     width: 100%;
     background-color: #403C3C;
@@ -95,7 +102,6 @@ div.food_list_border2{
 
 /* 商品數量 */
 .btn_count{
-    margin: 2% 1vw 0 1vw ;
     width: 30px;
     height: 30px;
     background-color: white;
@@ -107,7 +113,10 @@ div.food_list_border2{
     background-color: #8B1309;
     color: white;
 }
-
+#qty_number{
+    width: 4vw;
+    text-align:center
+}
 
 .food_list_detail{
     align-items: flex-start
@@ -157,7 +166,6 @@ div.food_list_border2{
     font-weight: bold;
     border-radius: 10px;
     transition: 0.3s;
-
 }
 
 #checkout:hover{
@@ -262,7 +270,7 @@ tbody td:nth-child(5) {
   border-bottom: #585555c5 0.5px solid;
 }
 
-#checkout {
+/* #checkout {
   width: 100px;
   height: 50px;
   position: fixed;
@@ -270,29 +278,16 @@ tbody td:nth-child(5) {
   right: 6%;
   align-self: center;
   font-size: 12pt;
-}
+} */
 
 
 /*已開啟揪團 end*/
 
 
 
-/* 大平板 */
-@media screen and (max-width:995px) {
-    .menu_group_list{
-        width: 13vw;
-    }    
-
-    .order_number{
-        display: none;
-    }
-
-}
-
-
 /* 平板 */
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1000px) {
         .menu_group_list{
             width: 15vw;
             font-size: 11pt;
@@ -307,7 +302,9 @@ tbody td:nth-child(5) {
         margin-right: 0;
     }
     .group_button{
+        font-size: 1.5vw;
     }
+
     div.food_list_border2{
         margin-right: 0;
         margin-left: 10vw;
