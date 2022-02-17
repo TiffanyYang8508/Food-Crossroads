@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Axios from "axios";
 import "../fontawesome-free-5.15.4-web/css/all.min.css";
 import "../css/style.css";
 import "../css/member_register.css"
