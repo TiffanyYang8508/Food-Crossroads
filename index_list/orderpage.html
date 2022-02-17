@@ -54,7 +54,7 @@
                             <!--數量-->
                             <div class="count">
                                 <button class="btn_count count_decrease">-</button>
-                                0
+                                <input type="text" id="qty_number" min="1" value="1">
                                 <button class="btn_count">+</button>
                             </div>                        
                     </div>
@@ -73,7 +73,7 @@
                             <!--數量-->
                             <div class="count">
                                 <button class="btn_count count_decrease">-</button>
-                                0
+                                <input type="text" id="qty_number" min="1" value="1">
                                 <button class="btn_count">+</button>
                             </div>                        
                     </div>
@@ -93,7 +93,7 @@
                             <!--數量-->
                             <div class="count">
                                 <button class="btn_count count_decrease">-</button>
-                                0
+                                <input type="text" id="qty_number" min="1" value="1">
                                 <button class="btn_count">+</button>
                             </div>                        
                     </div>
@@ -112,7 +112,7 @@
                             <!--數量-->
                             <div class="count">
                                 <button class="btn_count count_decrease">-</button>
-                                0
+                                <input type="text" id="qty_number" min="1" value="1">
                                 <button class="btn_count">+</button>
                             </div>                        
                     </div>
@@ -132,7 +132,7 @@
                             <!--數量-->
                             <div class="count">
                                 <button class="btn_count count_decrease">-</button>
-                                0
+                                <input type="text" id="qty_number" min="1" value="1">
                                 <button class="btn_count">+</button>
                             </div>                        
                     </div>
@@ -151,7 +151,7 @@
                             <!--數量-->
                             <div class="count">
                                 <button class="btn_count count_decrease">-</button>
-                                0
+                                <input type="text" id="qty_number" min="1" value="1">
                                 <button class="btn_count">+</button>
                             </div>                        
                     </div>
@@ -181,7 +181,7 @@
                             <!--數量-->
                             <div class="count">
                                 <button class="btn_count count_decrease">-</button>
-                                0
+                                <input type="text" id="qty_number" min="1" value="1">
                                 <button class="btn_count">+</button>
                             </div>                        
                     </div>
@@ -201,7 +201,7 @@
                             <!--數量-->
                             <div class="count">
                                 <button class="btn_count count_decrease">-</button>
-                                0
+                                <input type="text" id="qty_number" min="1" value="1">
                                 <button class="btn_count">+</button>
                             </div>                        
                     </div>
@@ -221,7 +221,7 @@
                             <!--數量-->
                             <div class="count">
                                 <button class="btn_count count_decrease">-</button>
-                                0
+                                <input type="text" id="qty_number" min="1" value="1">
                                 <button class="btn_count">+</button>
                             </div>                        
                     </div>
@@ -241,7 +241,7 @@
                             <!--數量-->
                             <div class="count">
                                 <button class="btn_count count_decrease">-</button>
-                                0
+                                <input type="text" id="qty_number" min="1" value="1">
                                 <button class="btn_count">+</button>
                             </div>                        
                     </div>
@@ -261,7 +261,7 @@
                             <!--數量-->
                             <div class="count">
                                 <button class="btn_count count_decrease">-</button>
-                                0
+                                <input type="text" id="qty_number" min="1" value="1">
                                 <button class="btn_count">+</button>
                             </div>                        
                     </div>
@@ -281,7 +281,7 @@
                             <!--數量-->
                             <div class="count">
                                 <button class="btn_count count_decrease">-</button>
-                                0
+                                <input type="text" id="qty_number" min="1" value="1">
                                 <button class="btn_count">+</button>
                             </div>                        
                     </div>
@@ -297,13 +297,22 @@
     <!-- 揪團結帳 -->
     <div class="food_order_group d-flex flex-column">
         <div class="d-flex justify-content-center">
-            <!-- <a href="#"><img src="./img/people_plus@3x.png" style="width: 25px; height: 20px; margin-right: 5px;"></a> -->
-            <button class="group_button oval">開啟揪團</button>
+            <a href="#"><img src="./img/people_plus@3x.png" style="width: 25px; height: 20px; margin-right: 5px;"></a>
+            <button class="group_button oval" data-toggle="modal" data-target="#myModal">揪團</button>
         </div>
         <div class="d-flex justify-content-center">
             <button id="checkout">去結帳</button>
         </div>
     </div>
+    
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            </div>
+
+        </div>
+
     </div>
 
     <!-- 頁尾 start -->
