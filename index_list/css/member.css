@@ -437,6 +437,9 @@ td {
     #mobile_order_manage .mobile_btn_div{
         margin-top: 5%;
     }
+    #mobile_booking_manage .mobile_order_inline_div:last-child{
+        margin-bottom: 100px;
+    }
 }
 
 
