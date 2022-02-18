@@ -4,6 +4,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 import Index from "./components/Index";
 import Member_register from './components/member_register';
+import Restaurant_self_pick_up from './components/restaurant_self_pick_up';
 
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
                 <Switch>
                     <Route path="/" component={Index} exact/>
                     <Route path="/register" component={Member_register} exact/>
+                    <Route path="/self_pick" component={Restaurant_self_pick_up} exact/>
                 </Switch>
             </BrowserRouter>
         );
