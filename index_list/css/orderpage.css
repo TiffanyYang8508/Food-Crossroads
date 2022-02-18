@@ -62,10 +62,11 @@ div.food_list_border2{
     margin-left: 0vw;
 }
 .food_dollar_qty{
-    padding-top: 1.5rem;
+    padding-top: 2rem;
 }
 .food_name{
     font-size: 1.2rem;
+    margin-bottom: 1.8vw;
 }
 .food_detail{
     flex-wrap: nowrap;
@@ -186,7 +187,7 @@ div.food_list_border2{
     /* box-shadow: inset -3px -3px 5px 0 black;      */
     position: fixed;     
     bottom: 50px;     
-    left: 40%;     
+    left: 35%;     
     transition: 0.1s;    
     margin-top: 20px;     
     margin-left: 50%; 
@@ -338,6 +339,10 @@ tbody td:nth-child(5) {
     .order_number{
         display: block;
     }
+    .btn_add_cart{
+        font-size: 16pt;
+    }
+
 
 }
 
@@ -365,10 +370,11 @@ tbody td:nth-child(5) {
     div.food_list_border2{
         margin-left: 10vw;
     }
-    .group_button{
-
-    }
     .dollar{
         font-size: 14pt;
     }
+    .btn_add_cart{
+        font-size: 16pt;
+    }
+    
 }
