@@ -6,7 +6,6 @@ const session = require("express-session");
 const path = require("path");
 
 const bodyParser = require('body-parser');
-const e = require("express");
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -16,6 +15,19 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+
+var xhr = new XMLHttpRequest()
+xhr.open("POST", "http://localhost:3000")
+xhr.addEventListener('readystatechange', function (e) {
+    if (e.target.readyState === 4 && e.target.status === 200) {
+        //....
+
+    } else if (e.target.readyState === 4) {
+        //....
+    }
+});
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.send();
 
 const mysql = require("mysql");
 const { throws } = require("assert");
@@ -34,14 +46,12 @@ connection.connect((error) => {
     console.log("connection success");
 })
 
-app.set('view-engine', 'ejs');
-
 app.get('/', (req, res) => {
-    res.render('index.ejs');
+
 })
 
 app.get('/login', (req, res) => {
-    res.render('login.ejs');
+
 })
 
 app.post('/login', (req, res) => {
@@ -69,7 +79,7 @@ app.post('/login', (req, res) => {
 })
 
 app.get('/register', (req, res) => {
-    res.render('register.ejs')
+
 })
 app.post('/register', async (req, res) => {
     try {
