@@ -66,17 +66,21 @@
     text-align: center;
 }
 
-#member_section{
-    margin-top: 100px;
-    width: 80%;
-    /* height: 100%; */
-    margin-left: 20%;
+#member_section,#edit_member{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    width: 100%;
 }
 
 .member_div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #ccc;
+    border-radius: 5px;
+    padding: 20px 0;
+    width: 40%;
 }
 
 .edit_info {
@@ -109,7 +113,9 @@ label {
 }
 
 .btn_div {
-    margin-left: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .member_confirm_btn {
@@ -145,11 +151,6 @@ label {
     background-color: #4b4747;
 }
 
-.default_container {
-    width: 100%;
-    /* height: 85vh; */
-}
-
 .table_container{
     width: 100%;
 }
@@ -162,7 +163,7 @@ label {
     align-items: center;
     width: 80%;
     height: 100%;
-    margin-left: 20%;
+    margin-left: 18%;
 }
 
 #mobile_booking_manage,#mobile_order_manage{
@@ -232,7 +233,7 @@ td {
     align-items: center;
     width: 80%;
     height: 100%;
-    margin-left: 20%;
+    margin-left: 18%;
 }
 
 .cancel_modal_body {
@@ -367,9 +368,6 @@ td {
     #booking_manage,#order_manage {
         width: 100%;
         margin-left: 0%;
-    }
-    #member_section{
-        margin-left: 10%;
     }
 }
 
