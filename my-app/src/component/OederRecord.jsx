@@ -20,8 +20,8 @@ class OrderRecord extends Component {
   async componentDidMount() {
     var result = await Axios.get("http://localhost:8000/ordermanagement/list");
     //console.log(result);
-    this.state.List = result.data[0];
-    console.log(result.data[2]);
+    this.state.List = result.data;
+    console.log(result.data);
     this.setState({});
   }
 

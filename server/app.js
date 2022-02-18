@@ -25,7 +25,7 @@ conn.connect(function (err) {
 
 app.get("/ordermanagement/list", function (req, res) {
   var sql =
-    "SELECT * FROM order_record INNER JOIN restaurant on restaurant.id = order_record.restaurant_id;SELECT * FROM order_record INNER JOIN menu on menu.id = order_record.menu_id ; SELECT * FROM order_record INNER JOIN orders on orders.id = order_record.orders_id";
+    "SELECT selfpick_date,order_date,restaurant_name,total_amount,orders_id FROM orders JOIN order_record ON orders.id = order_record.id JOIN restaurant ON order_record.restaurant_id = restaurant.id";
   conn.query(sql, [], function (err, rows) {
     res.send(JSON.stringify(rows));
   });
