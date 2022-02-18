@@ -52,37 +52,13 @@ table th {
     width: 24px;
 }
 
-.shopping table tr td:nth-child(1) {
-    width: 50px;
-}
-
-.shopping table tr td:nth-child(2) {
-    width: 250px;
-}
-
-.shopping table tr td:nth-child(3) {
-    width: 140px;
-    text-align: start;
-}
-
-.shopping table tr td:nth-child(4),
-.shopping table tr td:nth-child(5),
-.shopping table tr td:nth-child(6) {
-    width: 220px;
-}
-
-.shopping table tr td:nth-child(7) {
-    min-width: 50px;
-}
-
 td span {
     display: inline-block;
     text-align: center;
 }
 
 .wrapper img {
-    position: relative;
-    display: inline;
+    /* display: inline; */
     margin-left: 0;
     overflow: hidden;
     width: 140px;
