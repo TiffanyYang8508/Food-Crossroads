@@ -248,15 +248,11 @@
 
 /* 麵包屑 start */
 
-.breadcrumb-item a {
-    text-decoration: none;
-}
-
-.breadcrumb .breadcrumb-item {
+.breadcrumb .breadcrumb-item a,.active{
     font-size: 18px;
     font-weight: bolder;
+    text-decoration: none;
 }
-
 
 /* 麵包屑 end */
 
