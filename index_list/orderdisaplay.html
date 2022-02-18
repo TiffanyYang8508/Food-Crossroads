@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>orderdisplay</title>
+   <!-- bootstrap -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- fontawesome -->
+   <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+   <!-- mainstyle -->
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/orderdisplay.css">
+   <!-- RWD -->
+   <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+
+   <!-- header -->
+   <div class="header_page"></div>
+   <!-- header -->
+
+   <div class="container">
+      <div class="row">
+         <div class="col-12">
+            <nav aria-label="breadcrumb">
+               <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html"><span>首頁</span></a></li>
+                  <li class="breadcrumb-item"><a href="list.html"><span>餐廳列表</span></a></li>
+                  <li class="breadcrumb-item active" aria-current="page"><span>訂餐</span></a></li>
+               </ul>
+            </nav>
+            <div class="table-responsive-md container" style="font-size: 16px; text-align: center;">
+
+               <table style="width: 70%;" class="table" id="table_order">
+                  <thead>
+                     <tr>
+                        <th>名稱</th>
+                        <th>餐點名稱</th>
+                        <th class="text-nowrap">餐點備註</th>
+                        <th>數量</th>
+                        <th>金額</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td scope="row">團長</td>
+                        <td>餐點名稱<br>餐點名稱</td>
+                        <td>小辣<br>不要蔥、不要蒜</td>
+                        <td>1<br>1</td>
+                        <td>50<br>50</td>
+                     </tr>
+                     <tr>
+                        <td scope="row">團員</td>
+                        <td>餐點名稱</td>
+                        <td>小辣</td>
+                        <td>1</td>
+                        <td>50</td>
+                     </tr>
+                     <tr>
+                        <td scope="row">團員</td>
+                        <td>餐點名稱</td>
+                        <td>小辣</td>
+                        <td>1</td>
+                        <td>50</td>
+                     </tr>
+                     <tr>
+                        <td scope="row">團員</td>
+                        <td>餐點名稱</td>
+                        <td>小辣</td>
+                        <td>1</td>
+                        <td>50</td>
+                     </tr>
+
+                     <tr style="font-size: 18px;">
+                        <td scope="row" colspan="4" style="text-align: right;"><b>總金額</b></td>
+                        <td>
+                           NT$ 250
+                        </td>
+                     </tr>
+
+                  </tbody>
+
+               </table>
+
+
+               <div class="share_member row align-items-start justify-content-end">
+                  <div class="d-flex" id="order_share">
+                     <a href="#"><img src="./img/people_plus@3x.png"
+                           style="width: 25px; height: 20px; margin-right: 5px;"></a>
+                     <button type="button" class="btn_view" style="font-size: 18px;" title="copied">揪團分享連結</button>
+                  </div>
+
+                  <table class="table share_member_table"
+                     style="font-size: 18px; width:50px; line-height: 1em; border: 1px solid #403c3c ; border-radius: 10%;">
+                     <tbody>
+                        <tr>
+                           <td><b>團長:</b></td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <label class="dropbtn" for=""><b>
+                                    <p>已點餐團員(3):
+                                 </b> &nbsp
+                                 <i class="fas fa-sort-down fa-xs" id="order_member"></i></p></label>
+                           </td>
+                        </tr>
+
+                        <div class="show_member">
+                           <ul class="show_member_detail">
+                              <li>團員一</li>
+                              <li>團員二</li>
+                              <li>團員三</li>
+                           </ul>
+                        </div>
+                        <tr>
+                           <td>總金額：＊＊＊
+                              <br><br>
+                              <button type="button" class="btn_view">檢視已點清單</button>
+                           </td>
+                        </tr>
+                     </tbody>
+                     <div class="order_checkbtn">
+                        <button id="checkout" type="button" class="btn btn-danger btn-lg">去結帳</button>
+                     </div>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- footer -->
+   <footer>
+      <footer class="footer_page"></footer>
+   </footer>
+   <!-- footer -->
+
+   <script>
+      $(document).ready(function () {
+         $(".header_page").load("header.html");
+         $(".footer_page").load("footer.html");
+
+         $(".show_member").hide();
+         $(".dropbtn").click(function () {
+            $(".show_member").slideToggle('slow');
+         });
+      });
+   </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>shoppingok</title>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min_edit.css" />
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css" />
+  <!-- mainstyle -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/orderfinish.css" />
+  <!-- RWD -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <div class="headerpage"></div>
+  <!-- header -->
+
+  <div class="container">
+    <div class="order_finish_div">
+      <div class="order_finish">
+        <p style="font-size: x-large"><i class="fas fa-check"></i> 完成訂單</p>
+      </div>
+
+      <button class="buy_back_btn" id="check_order">查看訂單</button>
+      <button class="buy_back_btn" id="back_to_home">回首頁</button>
+    </div>
+  </div>
+
+  <footer>
+    <footer class="footerpage"></footer>
+  </footer>
+
+  <script>
+    $(".headerpage").load("header.html");
+    $(".footerpage").load("footer.html");
+  </script>
+</body>
+
+</html>

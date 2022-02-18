@@ -5,6 +5,7 @@
     height: 75px;
     width: 100%;
     background-color: #403C3C;
+    position: sticky;
 }
 
 #menu_group{
@@ -25,6 +26,11 @@
     transition: 0.3s;
 }
 .menu_group_list:hover{
+    background-color: #8B1309;
+    color: white;
+}
+
+.menu_group_list:active{
     background-color: #8B1309;
     color: white;
 }
@@ -55,16 +61,18 @@ div.food_list_border{
 div.food_list_border2{
     margin-left: 0vw;
 }
-
+.food_dollar_qty{
+    padding-top: 2rem;
+}
 .food_name{
-    font-size: 16pt;
+    font-size: 1.2rem;
+    margin-bottom: 1.8vw;
 }
 .food_detail{
     flex-wrap: nowrap;
     list-style-type: none; 
     margin-left: 20%;
 }
-
 .dollar{
     margin-right: 5%;
     font-size: 12pt;
@@ -79,7 +87,7 @@ div.food_list_border2{
 
 /* 加入購物車按鈕 */
 .btn_add_cart{
-    font-size: 10pt;
+    font-size: 12pt;
     border-radius: 0 0 9px 9px;
     width: 100%;
     background-color: #403C3C;
@@ -95,7 +103,6 @@ div.food_list_border2{
 
 /* 商品數量 */
 .btn_count{
-    margin: 2% 1vw 0 1vw ;
     width: 30px;
     height: 30px;
     background-color: white;
@@ -107,7 +114,10 @@ div.food_list_border2{
     background-color: #8B1309;
     color: white;
 }
-
+#qty_number{
+    width: 4vw;
+    text-align:center
+}
 
 .food_list_detail{
     align-items: flex-start
@@ -157,7 +167,6 @@ div.food_list_border2{
     font-weight: bold;
     border-radius: 10px;
     transition: 0.3s;
-
 }
 
 #checkout:hover{
@@ -166,26 +175,142 @@ div.food_list_border2{
     
 }
 
+/* 置頂紐 */
+#btn_back_to_top {     
+    width: 60px;     
+    height: 60px;     
+    border: none;     
+    border-radius: 50%;     
+    color: #fff;     
+    font-size: 1.75rem;     
+    background-color: #403C3C;     
+    /* box-shadow: inset -3px -3px 5px 0 black;      */
+    position: fixed;     
+    bottom: 50px;     
+    left: 35%;     
+    transition: 0.1s;    
+    margin-top: 20px;     
+    margin-left: 50%; 
+    }  
 
-
-
-
-/* 大平板 */
-@media screen and (max-width:995px) {
-    .menu_group_list{
-        width: 13vw;
-    }    
-
-    .order_number{
-        display: none;
-    }
-
+#btn_back_to_top:hover {     
+    background-color: grey;     
+    /* box-shadow: inset -3px -3px 5px 0 rgb(66, 66, 66);  */
 }
+
+/*已開啟揪團 start*/
+thead th:nth-child(1),
+tbody td:nth-child(1) {
+  width: 1em;
+}
+
+thead th:nth-child(2),
+tbody td:nth-child(2) {
+  width: 3em;
+}
+
+thead th:nth-child(3),
+tbody td:nth-child(3) {
+  width: 4em;
+}
+
+thead th:nth-child(4),
+tbody td:nth-child(4),
+thead th:nth-child(5),
+tbody td:nth-child(5) {
+  width: 1em;
+}
+
+.order_member_table {
+  background-color: 1px solid black;
+}
+
+.btn_view {
+  color: white;
+  background-color: #403c3c;
+  border-radius: 50px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 2em;
+  width: 8em;
+  /* font-size: large; */
+  /* font-weight: 600; */
+}
+
+.share_member_table tbody tr:nth-child(1),
+.share_member_table tbody tr:nth-child(2) {
+  text-align: left;
+}
+
+.share_member_table tbody tr:nth-child(2) p {
+  position: relative;
+}
+
+.share_member_table tbody tr:nth-child(2) p::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  height: 2px;
+  width: 100%;
+  transition: 0.3s all;
+}
+
+.share_member_table tbody tr:nth-child(2) p:hover::before {
+  content: "";
+  background-color: lightslategrey;
+}
+
+#order_share {
+  position: fixed;
+  top: 30%;
+  margin-right: 5%;
+}
+
+.share_member_table {
+  position: fixed;
+  top: 40%;
+  margin-right: 5%;
+}
+
+.show_member {
+  border: white solid 1px;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  right: 0%;
+  text-align: center;
+  width: 8em;
+  margin-right: 5.5%;
+  z-index: 1;
+}
+
+.show_member_detail {
+  padding-left: 0px;
+}
+
+.show_member_detail > li {
+  border-bottom: #585555c5 0.5px solid;
+}
+
+/* #checkout {
+  width: 100px;
+  height: 50px;
+  position: fixed;
+  bottom: 28%;
+  right: 6%;
+  align-self: center;
+  font-size: 12pt;
+} */
+
+
+/*已開啟揪團 end*/
+
 
 
 /* 平板 */
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1000px) {
         .menu_group_list{
             width: 15vw;
             font-size: 11pt;
@@ -200,7 +325,9 @@ div.food_list_border2{
         margin-right: 0;
     }
     .group_button{
+        font-size: 1.5vw;
     }
+
     div.food_list_border2{
         margin-right: 0;
         margin-left: 10vw;
@@ -212,6 +339,10 @@ div.food_list_border2{
     .order_number{
         display: block;
     }
+    .btn_add_cart{
+        font-size: 16pt;
+    }
+
 
 }
 
@@ -239,10 +370,11 @@ div.food_list_border2{
     div.food_list_border2{
         margin-left: 10vw;
     }
-    .group_button{
-
-    }
     .dollar{
         font-size: 14pt;
     }
+    .btn_add_cart{
+        font-size: 16pt;
+    }
+    
 }

@@ -1,0 +1,518 @@
+/* 側邊攔 start */
+#aside_menu_chk{
+    opacity: 0;
+    z-index: -1;
+}
+
+.aside_menu {
+    background-color: #403C3C;
+    width: 230px;
+    height: 100%;
+    position: fixed;
+    float: left;
+    z-index: 4;
+}
+
+.mobile_aside_menu{
+    display: none;
+}
+
+.default {
+    background-color: #8b1309;
+}
+
+.panel-default {
+    /* border: 1px solid red; */
+    border-bottom: 1px solid white;
+    padding: 5px;
+    width: 100%;
+}
+
+.panel-title {
+    padding-top: 8px;
+}
+
+.panel .panel-heading a {
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.panel-default:hover {
+    background-color: #8B1309;
+}
+
+/* 側邊欄 end */
+
+.member_info {
+    margin-top: 60px;
+}
+
+.member_contain {
+    padding-top: 20px;
+}
+
+.member_edit_btn {
+    margin-left: 200px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.title_member_edit {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#member_section{
+    margin-top: 100px;
+    width: 80%;
+    /* height: 100%; */
+    margin-left: 20%;
+}
+
+.member_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit_info {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.edit_info input[type=text],
+.edit_info input[type=email],
+.edit_info input[type=password]{
+    width: 300px;
+}
+
+label {
+    margin-right: 20px;
+}
+
+#edit_member .form-control {
+    width: 300px;
+}
+
+#edit_member .edit_chk-paswrd{
+    width: 285px;
+}
+
+.btn_div {
+    margin-left: 50px;
+}
+
+.member_confirm_btn {
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    background-color: #8b1309;
+    transition: 0.3s;
+}
+
+.member_confirm_btn:hover {
+    background-color: #a30f01;
+}
+
+.member_back_btn {
+    margin-left: 30px;
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    background-color: #403C3C;
+    transition: 0.3s;
+}
+
+.member_back_btn:hover {
+    background-color: #4b4747;
+}
+
+.default_container {
+    width: 100%;
+    /* height: 85vh; */
+}
+
+.table_container{
+    width: 100%;
+}
+
+/* booking_manage start */
+
+#booking_manage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin-left: 20%;
+}
+
+#mobile_booking_manage,#mobile_order_manage{
+    display: none;
+}
+
+.table th,
+td {
+    text-align: center;
+    width: 10%;
+}
+
+.cancel_btn,
+.detail_btn,
+.comment_btn {
+    border-radius: 8px;
+    border: none;
+    padding: 5px 8px;
+    transition: 0.3s;
+}
+
+.btn_td{
+    width: 20%;
+}
+
+.cancel_btn{
+    background-color: #dadada;
+    margin-right: 5%;
+}
+
+.cancel_btn:hover{
+    background-color: #dfdede;
+}
+
+.detail_btn{
+    background-color: #403C3C;
+    color: #fff;
+}
+
+.detail_btn:hover{
+    background-color: #524d4d;
+}
+
+.comment_btn {
+    margin-left: -80px;
+    background-color: #8b1309;
+    color: #fff;
+}
+
+.comment_btn:hover{
+    background-color: #a30f01;
+}
+
+/* .mobile_td{
+    display: none;
+} */
+
+/* order_manage start */
+
+#order_manage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin-left: 20%;
+}
+
+.cancel_modal_body {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.modal-title {
+    font-size: 24px;
+}
+
+.detail_modal_body {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+    font-size: 18px;
+}
+
+.rank_modal_body {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    margin-left: 150px;
+}
+
+.rank_modal_title {
+    position: absolute;
+    font-size: 28px;
+    left: -50px;
+    top: -40px;
+}
+
+.rank_modal_comment {
+    position: absolute;
+    left: -35px;
+    top: 90px;
+    border-radius: 8px;
+    height: 100px;
+}
+
+.modal_ok_btn{
+    font-size: 18px;
+    background-color: #8b1309;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+}
+
+.modal_ok_btn:hover{
+    background-color: #a30f01;
+}
+
+.modal_back_btn{
+    font-size: 18px;
+    background-color: #403C3C;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+}
+
+.modal_back_btn:hover{
+    background-color: #524d4d;
+}
+
+.rank_modal_star {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.stars {
+    color: orange;
+    margin-left: 10px;
+}
+
+.footer_page {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* RWD start */
+
+
+/* 超大型螢幕 */
+
+@media screen and (max-width:1200px) {
+    .aside_menu{
+        display: none;
+    }
+    #aside_menu_chk:checked + .mobile_aside_menu{
+        transform: translateX(0);
+    }
+    #aside_menu_chk:checked + .mobile_aside_menu .fa-angle-right{
+        transform: scaleX(-1);
+    }
+    .mobile_aside_menu {
+        display: unset;
+        background-color: #403C3C;
+        width: 230px;
+        height: 100vh;
+        position: absolute;
+        float: left;
+        left: 0; 
+        position: fixed;
+        transform: translateX(-99%);
+        z-index: 2;
+        transition: 0.6s;
+    }
+    .mobile_aside_menu label{
+        position: absolute;
+        background-color: #ccc;
+        border-radius: 0 5px 5px 0;
+        padding: 20px 10px;
+        top: 50%;
+        left: 100%;
+        transition: 0.6s;
+    }
+    #booking_manage,#order_manage {
+        width: 100%;
+        margin-left: 0%;
+    }
+    #member_section{
+        margin-left: 10%;
+    }
+}
+
+
+/* 大型螢幕 */
+
+@media screen and (max-width:992px) {
+    .mobile_td {
+        height: 90px;
+        line-height:60px;
+    }
+    .cancel_btn{
+        margin-right: 16%;
+    }
+    .detail_btn{
+        margin-right: 15%;
+    }
+    .comment_btn{
+        margin-top: 15px;
+    }
+    .order_td{
+        width: 15%;
+    }
+    .order_td .detail_btn{
+        margin-top: 15px;
+    }
+}
+
+
+/* 平板 */
+
+@media screen and (max-width:768px) {
+    #booking_manage,#order_manage{
+        display: none;
+    }
+    #mobile_booking_manage,#mobile_order_manage{
+        all: unset;
+    }
+    .mobile_order_inline_div{
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        height: 20%;
+        width: 100%;
+        position: relative;
+    }
+    .mobile_btn_div{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 100%;
+    }
+    #mobile_booking_manage .cancel_btn,.detail_btn,.comment_btn{
+        margin: 5px;
+        height: 33%;
+    }
+    #mobile_order_manage .detail_btn,.comment_btn{
+        margin: 5px;
+        height: 30%;
+    }
+    #mobile_order_manage .mobile_btn_div{
+        margin-top: 5%;
+    }
+}
+
+
+/* 手機 */
+
+@media screen and (max-width:576px) {
+    .table th,
+    td {
+        width: 15%;
+    }
+    .edit_form_label{
+        margin-right: 7%;
+    }
+}
+
+
+/* 小手機 */
+
+@media screen and (max-width:480px) {
+    .default_container {
+        height: auto;
+    }
+    .table th,td {
+        width: 3%;
+    }
+    .btn_td{
+        width: 5%;
+    }
+    .mobile_td {
+        height: 35px;
+        line-height:35px;
+    }
+    .mobile_order_inline_div{
+        margin-bottom: 20px;
+        height: 20%;
+        width: 100%;
+        position: static;
+    }
+    .mobile_btn_div{
+        position: static;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 20%;
+    }
+    .cancel_btn,.detail_btn,.comment_btn{
+        width: 33%;
+    }
+    .form_radio .member_form_label{
+        width: 100%;
+        display: block;
+    }
+    .form_radio .form-check-label{
+        width: 20%;
+        margin-left: 10%;
+    }
+    #edit_member{
+        margin-left: 20%;
+    }
+    #edit_member .edit_chk-paswrd{
+        width: 300px;
+    }
+    .edit_label{
+        width: 80%;
+    }
+    .edit_text{
+        width: 80%;
+    }
+    .edit_btn_div{
+        margin-bottom: 10%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-right: 15%;
+    }
+    .member_back_btn{
+        margin-right: 11%;
+    }
+}
+
+
+/* RWD end */

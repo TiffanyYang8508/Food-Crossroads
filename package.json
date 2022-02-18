@@ -1,8 +1,15 @@
 {
+<<<<<<< HEAD
   "name": "food-crossroads",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+=======
+  "name": "Food-Crossroads",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+>>>>>>> 55bc134959d10213940cfed45a1bc14844740209
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,8 +25,19 @@
   },
   "homepage": "https://github.com/TiffanyYang8508/Food-Crossroads#readme",
   "dependencies": {
+<<<<<<< HEAD
     "ejs": "^3.1.6",
     "express": "^4.17.2",
     "mysql": "^2.18.1"
+=======
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "session": "^0.1.0"
+>>>>>>> 55bc134959d10213940cfed45a1bc14844740209
   }
 }
