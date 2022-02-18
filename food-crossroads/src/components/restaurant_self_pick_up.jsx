@@ -8,6 +8,24 @@ class Restaurant_self_pick_up extends Component {
     render() {
         return (
             <React.Fragment>
+
+                <header>
+                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                        <a className="navbar-brand" href="index.html"><img src={require('../img/logo.png')} alt="LOGO" /></a>
+                        <div className="nav_icon">
+                            <a className="nav_a" href="list.html"><i className="fas fa-store"></i>餐廳列表</a>
+                            <a className="nav_a" href="shoppingchar.html"><i className="fas fa-shopping-cart"></i>購物車</a>
+                            <a className="nav_a" href="member_login.html"><i className="fas fa-user-circle"></i>會員登入</a>
+                        </div>
+                        <div className="rwd_icon">
+                            <a className="nav_a" href="list.html"><i className="fas fa-store"></i></a>
+                            <a className="nav_a" href="shoppingchar.html"><i className="fas fa-shopping-cart"></i></a>
+                            <a className="nav_a" href="member_login.html"><i className="fas fa-user-circle"></i></a>
+                        </div>
+                    </nav>
+                </header>
+
+
                 <aside>
                     <div class="panel-group" id="accordion">
                         <div class="panel panel-default">
@@ -97,7 +115,7 @@ class Restaurant_self_pick_up extends Component {
                                 <td>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" style={{width: "20px", height: "20px", marginLeft: "15px"}} />
+                                            <input type="checkbox" style={{ width: "20px", height: "20px", marginLeft: "15px" }} />
                                         </label>
                                     </div>
                                 </td>
@@ -108,13 +126,13 @@ class Restaurant_self_pick_up extends Component {
                                 <td>09001993412</td>
                                 <td>
                                     <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal"
-                                        style={{marginleft: "35px"}}>
+                                        style={{ marginleft: "35px" }}>
                                         訂餐明細
                                     </button>
                                 </td>
                                 <td>
                                     <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal"
-                                        style={{marginleft: "-50px"}}>
+                                        style={{ marginleft: "-50px" }}>
                                         取消
                                     </button>
                                 </td>
@@ -124,7 +142,7 @@ class Restaurant_self_pick_up extends Component {
                                 <td>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" style={{width: "20px", height: "20px", marginLeft: "15px"}} checked />
+                                            <input type="checkbox" style={{ width: "20px", height: "20px", marginLeft: "15px" }} checked />
                                         </label>
                                     </div>
                                 </td>
@@ -135,29 +153,29 @@ class Restaurant_self_pick_up extends Component {
                                 <td>09001993412</td>
                                 <td>
                                     <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal"
-                                        style={{marginleft: "35px"}}>
+                                        style={{ marginleft: "35px" }}>
                                         訂餐明細
                                     </button>
                                 </td>
                                 <td>
                                     <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal"
-                                        style={{marginleft: "-50px"}}>
+                                        style={{ marginleft: "-50px" }}>
                                         取消
                                     </button>
                                 </td>
                             </tr>
 
-                            
+
                             <div class="modal fade" id="detailModal">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
-                                        
+
                                         <div class="modal-header">
                                             <h4 class="modal-title">訂單明細</h4>
                                             <button type="button" class="close" data-dismiss="modal"></button>
                                         </div>
 
-                                        
+
                                         <div class="detail_modal_body">
                                             姓名：李曉明 <br />
                                             手機：0900-xxxxxx<br />
@@ -170,7 +188,7 @@ class Restaurant_self_pick_up extends Component {
                                             備註：需要兒童座椅
                                         </div>
 
-                                       
+
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">
                                                 返回
@@ -183,6 +201,19 @@ class Restaurant_self_pick_up extends Component {
                         </tbody>
                     </table>
                 </div>
+
+
+                <footer>
+                    <div className="footer_link">
+                        <a href="#">關於我們</a>
+                        <a href="#">商家入口</a>
+                        <a href="#">常見問題</a>
+                        <a href="#">聯絡我們</a>
+                    </div>
+                    <div className="footer_text">
+                        <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
+                    </div>
+                </footer>
             </React.Fragment>
         );
     }
