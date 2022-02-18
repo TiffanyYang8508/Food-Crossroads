@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var express = require("express");
 var app = express();
 app.use(express.urlencoded());
@@ -23,7 +23,7 @@ app.get("/", function (req, res) {
   console.log(JSON.stringify);
 });
 app.listen(3000);
-=======
+
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -148,4 +148,4 @@ app.post('/register', async (req, res) => {
 })
 
 app.listen(8000);
->>>>>>> 55bc134959d10213940cfed45a1bc14844740209
+
