@@ -1,30 +1,33 @@
 import React, { Component } from 'react';
-import "../fontawesome-free-5.15.4-web/css/all.css";
-import "../css/style.css";
+import Header from './header';
+import Footer from './footer';
+
 import "../css/index.css";
 
 class Index extends Component {
     state = {}
 
 
+    area_btn_click = () => {
+        var dropdown = document.getElementsByClassName("area_label");
+        for(var i = 0; i < dropdown.length; i++){
+            dropdown[i].addEventListener("click",function(){
+                var dropdown_div = this.parentNode.children[2];
+                if(dropdown_div.style.maxHeight){
+                    dropdown_div.style.maxHeight = null;
+                }else{
+                    dropdown_div.style.maxHeight = dropdown_div.scrollHeight + "px";
+                }
+                console.log(dropdown_div);
+            });
+        }
+        
+    }
+
     render() {
         return (
             <React.Fragment>
-                <header>
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <a class="navbar-brand" href="index.html"><img src={require('../img/logo.png')} alt="LOGO" /></a>
-                        <div class="nav_icon">
-                            <a class="nav_a" href="list.html"><i class="fas fa-store"></i>餐廳列表</a>
-                            <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i>購物車</a>
-                            <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i>會員登入</a>
-                        </div>
-                        <div class="rwd_icon">
-                            <a class="nav_a" href="list.html"><i class="fas fa-store"></i></a>
-                            <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i></a>
-                            <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i></a>
-                        </div>
-                    </nav>
-                </header>
+                <Header />
                 <section id="search_box">
                     <div className="container-fluid">
                         <div className="row">
@@ -34,7 +37,7 @@ class Index extends Component {
                                         <input className="search_keyword" id="keyword" type="text" placeholder="請輸入餐廳關鍵字" />
                                         <div className="area_div">
                                             <input type="checkbox" className="area_btn" id="area_btn" />
-                                            <label htmlFor="area_btn" className="area_label dropdown_label"><i className="fas fa-map-marker-alt"></i>請選擇地區<i
+                                            <label onClick={this.area_btn_click} htmlFor="area_btn" className="area_label dropdown_label"><i className="fas fa-map-marker-alt"></i>請選擇地區<i
                                                 className="fas fa-sort-down"></i></label>
 
                                             <div className="tab_div dropdown_div">
@@ -364,17 +367,7 @@ class Index extends Component {
                     </div>
                 </section>
 
-                <footer>
-                    <div class="footer_link">
-                        <a href="#">關於我們</a>
-                        <a href="#">商家入口</a>
-                        <a href="#">常見問題</a>
-                        <a href="#">聯絡我們</a>
-                    </div>
-                    <div class="footer_text">
-                        <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
-                    </div>
-                </footer>
+                <Footer />
             </React.Fragment>
         );
     }

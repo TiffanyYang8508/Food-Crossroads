@@ -32,6 +32,7 @@
 .search_keyword {
     width: 600px;
     height: 50px;
+    margin-right: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
     background-color: white;
@@ -399,9 +400,6 @@
         margin-left: 68%;
     }
     .tab_div {
-        /* position: absolute;
-        top: 100px;
-        left: 135px; */
         width: 450px;
     }
     .other_label {
@@ -411,9 +409,6 @@
         margin-left: 71.5%;
     }
     .chk_div {
-        /* position: absolute;
-        top: 180px;
-        left: 135px; */
         width: 450px;
     }
     .chk_css{
@@ -423,6 +418,7 @@
         padding: 5px;
     }
     .search_btn {
+        margin-right: 20px;
         width: 450px;
     }
     .kind_span {
