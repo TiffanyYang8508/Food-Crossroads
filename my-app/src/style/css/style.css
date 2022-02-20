@@ -1,14 +1,24 @@
-html,body {
+html,
+body {
     height: 100%;
     width: 100%;
     user-select: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+button {
+    border: none;
 }
 
 input[type=checkbox] {
     accent-color: #8B1309;
 }
 
-input[type=radio]{
+input[type=radio] {
     accent-color: #8B1309;
 }
 
@@ -183,7 +193,7 @@ footer {
 /* 小手機 */
 
 @media screen and (max-width:480px) {
-    .rwd_icon{
+    .rwd_icon {
         width: 50%;
         display: flex;
         flex-direction: row;
