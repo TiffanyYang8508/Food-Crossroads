@@ -9,6 +9,12 @@
 
 /* ---------- body start ---------- */
 
+.breadcrumb .breadcrumb-item a,.active{
+    font-size: 18px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
 .reservation_container {
     margin: 10px auto;
     padding: 10px;
@@ -97,7 +103,7 @@
     text-align: center;
 }
 
-.reservation_btn_next {
+input[type="submit"] {
     width: 200px;
     height: 40px;
     margin-left: 200px;
@@ -110,7 +116,7 @@
     transition: 0.3s;
 }
 
-.reservation_btn_next:hover {
+input[type="submit"]:hover {
     background-color: #a30f01;
 }
 
@@ -172,7 +178,7 @@
         font-size: 1.35rem;
         padding: 10px 0;
     }
-    .reservation_btn_next {
+    input[type="submit"] {
         width: 220px;
         height: 40px;
         margin-left: 240px;
@@ -224,7 +230,7 @@
         font-size: 1.2rem;
         padding: 10px 0;
     }
-    .reservation_btn_next {
+    input[type="submit"] {
         width: 220px;
         height: 40px;
         margin-left: 220px;
@@ -276,7 +282,7 @@
         padding: 20px;
         margin: 5px 0;
     }
-    .reservation_btn_next {
+    input[type="submit"] {
         width: 180px;
         height: 35px;
         margin: 30px auto;
@@ -325,7 +331,7 @@
         padding: 10px;
         margin: 5px 0;
     }
-    .reservation_btn_next {
+    input[type="submit"] {
         width: 160px;
         height: 30px;
         margin: 30px auto;
