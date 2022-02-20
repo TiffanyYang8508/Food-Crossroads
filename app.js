@@ -42,19 +42,6 @@ app.use(session({
     saveUninitialized: true
 }));
 
-var xhr = new XMLHttpRequest()
-xhr.open("POST", "http://localhost:3000")
-xhr.addEventListener('readystatechange', function (e) {
-    if (e.target.readyState === 4 && e.target.status === 200) {
-        //....
-
-    } else if (e.target.readyState === 4) {
-        //....
-    }
-});
-xhr.setRequestHeader("Content-Type", "application/json");
-xhr.send();
-
 const mysql = require("mysql");
 const { throws } = require("assert");
 const connection = mysql.createConnection({
@@ -67,13 +54,25 @@ const connection = mysql.createConnection({
 connection.connect((error) => {
     if (error) {
         console.log(JSON.stringify(error));
-        return
+        return;
     }
     console.log("connection success");
 })
 
-app.get('/', (req, res) => {
+// 設定 CORS
+const corsOptions = {
+    origin: "*",
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+};
 
+app.use(cors(corsOptions));
+app.get('/', (req, res) => {
+    conn.query("select * from member", [],
+        function (err, rows) {
+            res.send(JSON.stringify(rows));
+        }
+    )
 })
 
 app.get('/login', (req, res) => {
@@ -104,47 +103,13 @@ app.post('/login', (req, res) => {
     });
 })
 
-app.get('/register', (req, res) => {
-
-})
-app.post('/register', async (req, res) => {
-    try {
-        let result = {};
-        // 尋找是否有重複的email
-        connection.query('SELECT user_email FROM member WHERE user_email = ?', req.body.email, async function (err, rows) {
-            // 若資料庫部分出現問題，則回傳給client端「伺服器錯誤，請稍後再試！」的結果。
-            if (err) {
-                console.log(err);
-                result["status"] = "註冊失敗。";
-                result["err"] = "伺服器錯誤，請稍後在試！";
-                res.json(result);
-            }
-            // 如果有重複的email
-            if (rows.length >= 1) {
-                result["status"] = "註冊失敗。";
-                result["err"] = "已有重複的Email。";
-                res.json(result);
-            } else {
-                if (req.body.password !== req.body.password_confirm) {
-                    result["status"] = "註冊失敗。";
-                    result["err"] = "密碼不相同";
-                    res.json(result);
-                } else {
-                    // 將資料寫入資料庫
-                    const hashedPassword = await bcrypt.hash(req.body.password, 10);
-                    connection.query(
-                        'INSERT INTO `member`(`user_name`, `user_email`, `user_pwd`, `user_tel`) VALUES (?, ?, ?, ?)',
-                        [req.body.name, req.body.email, hashedPassword, req.body.tel]
-                    );
-                    // res.send('register success');
-                    res.redirect('./login')
-                }
-            }
-        })
-
-    } catch {
-        res.send('register fail')
+app.post('/register', (req, res) => {
+    conn.query("insert into member (user_name, user_email, user_pwd, user_tel) values (?, ?, ?, ?)", 
+    [req.body.name, req.body.email, req.body.password, req.body.tel],
+    function (err, rows) {
+        res.send( JSON.stringify( req.body ));
     }
+)
 })
 
 app.listen(8000);

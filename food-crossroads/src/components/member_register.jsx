@@ -10,8 +10,7 @@ class Member_register extends Component {
         member: {
             user_name: "陳冠維",
             user_email: "test@test.gmail.com",
-            user_psw: "****",
-            user_psw_confirm: "****",
+            user_pwd: "1234",
             user_tel: "0912345678"
         }
     }
@@ -47,8 +46,9 @@ class Member_register extends Component {
     }
 
     okButtonClick = async () => {
-        await Axios.post("http://localhost:8000/register", this.state.member);
-        console.log("OK");
+        console.log("OK1");
+        await new Axios.port("http://localhost:8000/register", this.state.member);
+        console.log("OK2");
     }
 
     render() {
@@ -100,7 +100,7 @@ class Member_register extends Component {
                                         <label htmlFor="password" className="form_text">密碼</label>
                                         <div className="input_box">
                                             <input type="password" id="password" className="form-control" name="password" 
-                                            value={this.state.member.user_psw} 
+                                            value={this.state.member.user_pwd} 
                                             onChange={this.pswChange} />
                                         </div>
                                     </div>
@@ -115,9 +115,9 @@ class Member_register extends Component {
                                     </div>
 
                                     <div className="form-group row">
-                                        <label htmlFor="phone_number" className="form_text">手機</label>
+                                        <label htmlFor="tel" className="form_text">手機</label>
                                         <div className="input_box">
-                                            <input type="text" id="phone_number" className="form-control" 
+                                            <input type="text" id="tel" className="form-control" name="tel"
                                             value={this.state.member.user_tel} 
                                             onChange={this.telChange} />
                                         </div>
