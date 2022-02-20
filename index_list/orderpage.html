@@ -23,14 +23,13 @@
 
 <body>
     <!-- 導覽列 start -->
-
     <div class="header_page"></div>
 
     <!-- 導覽列 over -->
 
-    <div class="menu_group">
+    <div class="menu_group sticky-top">
         <div id="menu_group">
-            <button type="button" class="oval menu_group_list">開胃菜</button>
+            <button type="button" class="oval menu_group_list" onclick="btn_menugroup">開胃菜</button>
             <button type="button" class="oval menu_group_list">沙拉</button>
             <button type="button" class="oval menu_group_list">湯</button>
             <button type="button" class="oval menu_group_list">甜點</button>
@@ -347,7 +346,7 @@
     </div>
 
     <!-- 置頂鈕 start -->         
-    <button type="button" class="btn btn-floating btn-lg" id="btn_back_to_top">         
+    <button type="button" class="btn btn-floating btn-lg" id="btn_back_to_top" onclick="topfunction()" title="Go to top">         
     <i class="fas fa-arrow-up"></i>         
     </button>         
     <!-- 置頂鈕 over -->
@@ -365,10 +364,14 @@
         });
 
         // 置頂按鈕:點選後回到頂端
+        function topfunction() {
+            document.documentElement.scrollTop = 0;
+        }
 
+        // 商品分類列表定住
+        // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_sticky
 
         // 商品分類列表:點選後跳到該分類
-
 
         // 餐點分類列溢出滑動效果
         // https://iamsteve.me/blog/horizontal-scrolling-responsive-menu

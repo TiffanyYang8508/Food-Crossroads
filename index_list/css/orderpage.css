@@ -188,9 +188,10 @@ div.food_list_border2{
     position: fixed;     
     bottom: 50px;     
     left: 35%;     
-    transition: 0.1s;    
+    transition: 0.2s;    
     margin-top: 20px;     
     margin-left: 50%; 
+    
     }  
 
 #btn_back_to_top:hover {     

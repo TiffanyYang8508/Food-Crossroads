@@ -23,7 +23,6 @@
 }
 
 .member_login_title {
-    /* border: 2px solid lightpink; */
     font-size: 28px;
     width: 100%;
     text-align: center;
@@ -36,11 +35,9 @@
 }
 
 .form-group > input {
-    /* border: 4px dotted blue; */
     width: 300px;
     height: 40px;
     justify-content: center;
-    text-align: center;
 }
 
 .btn_member_login {

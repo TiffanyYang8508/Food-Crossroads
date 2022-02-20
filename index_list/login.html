@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- fontawesome -->
-    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css" />
     <!-- index -->
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/login.css" />
     <!-- mainstyle -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- 導覽列 start -->
 
     <div class="header_page"></div>
@@ -29,37 +28,48 @@
     <!-- 導覽列 end -->
 
     <section id="login_section">
-        <div class="container-fluid default_container login_div">
-            <div class="row">
-                <div class="col-12">
-                    <form action="">
-                        <div>
-                            <p class="title_home_login">後台管理登入</p><br>
-                        </div>
-                        <div class="form-group form-inline">
-                            <label for="email">帳　號:</label>
-                            <input type="email" class="form-control" id="email" placeholder="email@gmail.com"
-                                name="email">
-                        </div>
-                        <div class="form-group form-inline">
-                            <label for="password">密　碼:</label>
-                            <input type="password" class="form-control" id="pwd" value="******" name="pwd">
-                        </div>
-                        <div class="member_login_div">
-                            <a href="#">忘記密碼?</a>
-                            <div>
-                                <label for="auto-login">自動登入</label>
-                                <input type="checkbox" id="auto-login">
-                            </div>
-                        </div>
-                        <div class="btn_home_login">
-                            <button class="login_btn">登入</button>
-                        </div>
-                    </form>
+      <div class="container-fluid default_container login_div">
+        <div class="row">
+          <div class="col-12">
+            <form action="">
+              <div>
+                <p class="title_home_login">後台管理登入</p>
+                <br />
+              </div>
+              <div class="form-group form-inline">
+                <label for="email">帳　號:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="email@gmail.com"
+                  name="email"
+                />
+              </div>
+              <div class="form-group form-inline">
+                <label for="password">密　碼:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pwd"
+                  value="******"
+                  name="pwd"
+                />
+              </div>
+              <div class="member_login_div">
+                <a href="#">忘記密碼?</a>
+                <div>
+                  <label for="auto-login">自動登入</label>
+                  <input type="checkbox" id="auto-login" />
                 </div>
-            </div>
+              </div>
+              <div class="btn_home_login">
+                <button class="login_btn">登入</button>
+              </div>
+            </form>
+          </div>
         </div>
-        </div>
+      </div>
     </section>
 
     <!-- 頁尾 start -->
@@ -68,13 +78,11 @@
 
     <!-- 頁尾 end -->
 
-
     <script type="text/javascript">
-        $(function () {
-            $(".header_page").load("header.html");
-            $(".footer_page").load("footer.html");
-        });
+      $(function () {
+        $(".header_page").load("header.html");
+        $(".footer_page").load("footer.html");
+      });
     </script>
-</body>
-
+  </body>
 </html>
