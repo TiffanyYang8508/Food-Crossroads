@@ -1,6 +1,8 @@
-var express = require("express");
-var cors = require("cors");
-var app = express();
+const express = require("express");
+const cors = require("cors");
+const bcrypt = require("bcrypt");
+const app = express();
+const { registerValidation } = require("./validation");
 app.listen(8000);
 app.use(express.static("public"));
 app.use(express.json());
@@ -53,6 +55,33 @@ app.put("/member/list/:id", async (req, res) => {
     "UPDATE member set user_name=? , user_tel=?  where id =?",
     [req.body.user_name, req.body.user_tel, req.body.id],
     function (err, rows) {
+      res.send(JSON.stringify(req.body));
+    }
+  );
+});
+
+app.post("/register", async (req, res) => {
+  //判斷格式是否有誤
+  let { error } = registerValidation(req.body);
+  if (error) {
+    if (error.details[0].context.key === "email") {
+      return res.send(error);
+    } else if (error.details[0].context.key === "password") {
+      return res.send(error);
+    }
+  }
+
+  const hashedPassword = await bcrypt.hash(req.body.user_pwd, 10);
+  let result = await conn.query(
+    "INSERT INTO member (user_name,user_email,user_pwd,user_tel) VALUES (?,?,?,?)",
+    [
+      req.body.user_name,
+      req.body.user_email,
+      hashedPassword,
+      req.body.user_tel,
+    ],
+    (err, rows) => {
+      console.log(rows);
       res.send(JSON.stringify(req.body));
     }
   );

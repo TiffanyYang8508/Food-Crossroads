@@ -9,10 +9,8 @@ import Restaurant_booking_history from "./components/restaurant_booking_history"
 import MemberLogin from "./components/member_login";
 import Ordermanagement from "./components/member_orderRecord";
 import BookingManagement from "./components/member_bookingRecord";
-import Member from "./components/member_memberinfo";
+import Member from "./components/member_member_info";
 import EditMember from "./components/member_editmember";
-
-
 
 class App extends Component {
   state = {};
