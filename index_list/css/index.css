@@ -1,5 +1,7 @@
 /* 首頁 start */
-
+body{
+    font-size: 20px;
+}
 
 /* 搜尋欄 start */
 
@@ -18,7 +20,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* text-align: center; */
 }
 
 .search_mobile_div,
@@ -31,7 +32,7 @@
 
 .search_keyword {
     width: 600px;
-    height: 50px;
+    height: 60px;
     margin-bottom: 20px;
     border-radius: 5px;
     background-color: white;
@@ -60,8 +61,8 @@
 .area_label {
     position: relative;
     width: 600px;
-    height: 50px;
-    line-height: 50px;
+    height: 60px;
+    line-height: 60px;
     background-color: white;
     color: #403C3C;
     text-align: start;
@@ -76,7 +77,7 @@
 
 .area_label .fa-sort-down {
     color: #403C3C;
-    margin-left: 75.4%;
+    margin-left: 70.4%;
 }
 
 
@@ -129,13 +130,12 @@
     display: none;
     width: 100%;
     line-height: 1.6;
-    font-size: 16px;
+    font-size: 18px;
     padding: 15px;
     border: 1px solid rgb(226, 225, 225);
 }
 
 .tab_content span {
-    font-size: 16px;
     margin-left: 10px;
     cursor: pointer;
 }
@@ -167,8 +167,8 @@
 .other_label {
     position: relative;
     width: 600px;
-    height: 50px;
-    line-height: 50px;
+    height: 60px;
+    line-height: 60px;
     background-color: #FCC106;
     color: #403C3C;
     text-align: start;
@@ -188,15 +188,12 @@
 
 .other_label .fa-sort-down {
     color: #403C3C;
-    margin-left: 78%;
+    margin-left: 73.8%;
 }
 
 .chk_div {
     background-color: #FCC106;
     margin-top: -8px;
-    /* position: absolute;
-    top: 180px;
-    left: 34.4%; */
     z-index: 1;
     width: 600px;
     border-radius: 0 0 5px 5px;
@@ -214,12 +211,12 @@
 }
 
 .chk_css {
-    padding: 20px 25px 10px 25px;
+    padding: 20px 10px 10px 10px;
 }
 
 .chk_item {
     display: inline;
-    padding: 5px 10px;
+    padding: 5px 0;
 }
 
 .chk_chk {
@@ -243,7 +240,7 @@
     border-radius: 5px;
     border: none;
     margin-top: 20px;
-    height: 40px;
+    height: 50px;
     width: 350px;
     transition: 0.3s;
 }
@@ -266,7 +263,7 @@
 .kind_div h3 {
     padding: 50px;
     font-size: 42px;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -278,7 +275,7 @@
 .kind_span {
     display: flex;
     margin-right: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 15%;
 }
 
 .index_img {
@@ -308,9 +305,28 @@
     justify-content: center;
     align-items: center;
     background-color: unset;
-    font-size: 55px;
+    font-size: 48px;
     z-index: 1;
     color: white;
+}
+
+/* 置頂紐 */
+.ontop_btn {     
+    width: 60px;     
+    height: 60px;     
+    border: none;     
+    border-radius: 50%;     
+    color: #fff;     
+    font-size: 1.75rem;     
+    background-color: #403C3C;     
+    position: fixed;     
+    bottom: 10%;     
+    right: 5%;     
+    transition: 0.3s;      
+    }  
+
+.ontop_btn:hover {     
+    background-color: grey;     
 }
 
 
@@ -323,6 +339,9 @@
 /* 超大型螢幕 */
 
 @media screen and (max-width:1200px) {
+    body{
+        font-size: 16px;
+    }
     .search_keyword {
         height: 40px;
         width: 500px;
@@ -370,13 +389,17 @@
         font-size: 14px;
     }
     .search_btn {
+        height: 40px;
         width: 300px;
     }
+    .kind_span {
+        margin-bottom: 25%;
+    }
+    .index_img img {
+        height: 200px;
+    }
     .kind_span span {
-        position: absolute;
-        left: 18%;
-        top: 35%;
-        font-size: 55px;
+        font-size: 36px;
     }
 }
 
@@ -424,15 +447,13 @@
         width: 450px;
     }
     .kind_span {
-        width: 100%;
-        height: 40%;
-        margin-bottom: 5%;
+        margin-bottom: 25%;
+    }
+    .index_img img {
+        height: 180px;
     }
     .kind_span span {
-        position: absolute;
-        left: 22.5%;
-        top: 40%;
-        font-size: 72px;
+        font-size: 24px;
     }
 }
 
@@ -541,16 +562,17 @@
         margin-top: 0px;
         width: 49%;
     }
+    .water_fall {
+        column-count: 2;
+    }
     .kind_span {
-        width: 100%;
-        height: 45%;
-        margin-bottom: 5%;
+        margin-bottom: 10%;
+    }
+    .index_img img {
+        height: 250px;
     }
     .kind_span span {
-        position: absolute;
-        left: 22.5%;
-        top: 40%;
-        font-size: 54px;
+        font-size: 36px;
     }
 }
 
@@ -573,12 +595,39 @@
     .search_btn {
         width: 100%;
     }
+    .index_img img {
+        height: 200px;
+    }
+    .kind_span span {
+        font-size: 24px;
+    }
+    .ontop_btn {     
+        width: 40px;     
+        height: 40px;       
+        bottom: 10%;     
+        right: 5%;     
+        transition: 0.3s;      
+    }  
 }
 
 
 /* 小手機 */
 
-@media screen and (max-width:480px) {}
+@media screen and (max-width:480px) {
+    .kind_div h3 {
+        font-size: 24px;
+    }
+    .index_img img {
+        height: 150px;
+    }
+    .kind_span span {
+        font-size: 24px;
+    }
+    .ontop_btn {     
+        bottom: 10%;     
+        right: 3%;     
+    }  
+}
 
 
 /* RWD end */
