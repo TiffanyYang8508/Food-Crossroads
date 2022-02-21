@@ -372,7 +372,7 @@
     <!-- 快速搜尋塊 end -->
 
     <!-- 置頂鈕 start -->         
-    <button type="button" class="btn btn-floating btn-lg" id="btn_back_to_top" onclick="topfunction()" title="Go to top">         
+    <button type="button" class="ontop_btn" onclick="topfunction()">         
         <i class="fas fa-arrow-up"></i>         
         </button>         
     <!-- 置頂鈕 over -->
@@ -431,6 +431,18 @@
             }
             document.getElementById(tab_name).style.display = "block";
         }
+
+        // 置頂按鈕:點選後回到頂端
+        function topfunction() {
+            $("html,body").animate({scrollTop:0},300);
+        }
+        $(window).scroll(function(){
+            if($(this).scrollTop()>300){
+                $(".ontop_btn").fadeIn(100);
+            }else{
+                $(".ontop_btn").stop().fadeOut(100);
+            }
+        });
     </script>
 </body>
 

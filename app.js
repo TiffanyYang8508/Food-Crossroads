@@ -50,20 +50,16 @@ app.get('/', (req, res) => {
     )
 })
 
-app.get('/login', (req, res) => {
-    res.send("hello")
-})
-
 app.post('/login', (req, res) => {
-    const query = "SELECT user_pwd from member where user_email=?";
-    const params = req.body.email
+    const query = "SELECT user_pwd from member where user_email= ?";
+    const params = req.body.user_email;
     connection.query(query, params, async (err, rows) => {
         if (err) throw err;
         var output = {}
         if (rows.length != 0) {
             // console.log(rows[0]['user_pwd']);
             var password_hash = rows[0]['user_pwd'];
-            const verified = bcrypt.compareSync(req.body.password, password_hash);
+            const verified = bcrypt.compareSync(req.body.user_pwd, password_hash);
             if (verified) {
                 output["status"] = "1";
                 output["message"] = "正確帳號密碼"
@@ -74,7 +70,7 @@ app.post('/login', (req, res) => {
         } else {
             output["message"] = "輸入錯誤信箱及密碼";
         }
-        res.json(output)
+        res.json(output);
     });
 })
 

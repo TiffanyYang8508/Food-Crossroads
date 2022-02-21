@@ -4,6 +4,7 @@ import Header from "./header";
 import Footer from "./footer";
 import "../css/style.css";
 import "../css/member_register.css";
+import res from "express/lib/response";
 
 class Member_register extends Component {
   state = {
