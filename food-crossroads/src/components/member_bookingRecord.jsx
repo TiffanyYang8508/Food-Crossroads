@@ -9,7 +9,7 @@ class BookingRecord extends Component {
       {
         booking_date: "2022-01-08",
         restaurant_name: "水相餐廳",
-        booking_id: 1,
+        user_name: "李曉明",
         booking_time: "2022-01-08",
         booking_peoplenumber: 3,
       },
@@ -123,9 +123,9 @@ class BookingRecord extends Component {
                 <table className="table">
                   <thead>
                     <tr>
-                      <th>訂位日期</th>
+                      <th>訂位人</th>
                       <th>訂位餐廳</th>
-                      <th>訂位編號</th>
+                      <th>訂位日期</th>
                       <th>訂位時間</th>
                       <th>訂位人數</th>
                       <th></th>
@@ -135,9 +135,9 @@ class BookingRecord extends Component {
                   <tbody>
                     {this.state.List.map((item, index) => (
                       <tr>
-                        <td className="mobile_td">{item.booking_date}</td>
+                        <td className="mobile_td">{item.user_name}</td>
                         <td className="mobile_td">{item.restaurant_name}</td>
-                        <td className="mobile_td">{item.booking_id}</td>
+                        <td className="mobile_td">{item.booking_date}</td>
                         <td className="mobile_td">{item.booking_time}</td>
                         <td className="mobile_td">
                           {item.booking_peoplenumber}

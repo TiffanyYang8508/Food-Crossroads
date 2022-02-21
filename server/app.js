@@ -6,7 +6,6 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-const Bluebird = require("bluebird");
 
 var mysql = require("mysql");
 const { json } = require("express/lib/response");
@@ -25,7 +24,7 @@ conn.connect(function (err) {
 
 app.get("/ordermanagement/list", function (req, res) {
   var sql =
-    "SELECT selfpick_date,order_date,restaurant_name,total_amount,orders_id FROM orders JOIN order_record ON orders.id = order_record.id JOIN restaurant ON order_record.restaurant_id = restaurant.id";
+    "SELECT selfpick_date, order_date, restaurant_name, total_amount, food_name FROM orders JOIN order_record ON orders.id = order_record.id JOIN restaurant ON order_record.restaurant_id = restaurant.id JOIN menu ON order_record.menu_id = menu.id";
   conn.query(sql, [], function (err, rows) {
     res.send(JSON.stringify(rows));
   });
@@ -33,7 +32,7 @@ app.get("/ordermanagement/list", function (req, res) {
 
 app.get("/bookingmanagement/list", function (req, res) {
   var sql =
-    "SELECT booking_date,booking_time,booking_id,booking_peoplenumber,restaurant_name FROM booking JOIN booking_record ON booking.id = booking_record.id JOIN restaurant ON booking_record.restaurant_id = restaurant.id";
+    "SELECT booking_date, booking_time, user_name, booking_peoplenumber, restaurant_name FROM booking JOIN booking_record ON booking.id = booking_record.id JOIN restaurant ON booking_record.restaurant_id = restaurant.id JOIN member ON booking_record.user_id = member.id";
   conn.query(sql, [], function (err, rows) {
     res.send(JSON.stringify(rows));
   });

@@ -9,7 +9,7 @@ class OrderRecord extends Component {
       {
         selfpick_date: "2022-01-08",
         restaurant_name: "水相餐廳",
-        order_id: 1,
+        food_name: " 鴨胸",
         order_date: "2022-01-08",
         total_amount: "123",
       },
@@ -124,7 +124,7 @@ class OrderRecord extends Component {
                     <tr>
                       <th>取餐日期</th>
                       <th>訂餐餐廳</th>
-                      <th>訂餐編號</th>
+                      <th>訂餐菜名</th>
                       <th>訂餐時間</th>
                       <th>訂餐金額</th>
                     </tr>
@@ -134,7 +134,7 @@ class OrderRecord extends Component {
                       <tr key={index}>
                         <td className="mobile_td">{item.selfpick_date}</td>
                         <td className="mobile_td">{item.restaurant_name}</td>
-                        <td className="mobile_td">{item.orders_id}</td>
+                        <td className="mobile_td">{item.food_name}</td>
                         <td className="mobile_td">{item.order_date}</td>
                         <td className="mobile_td">{item.total_amount}</td>
                         <td className="order_td">
