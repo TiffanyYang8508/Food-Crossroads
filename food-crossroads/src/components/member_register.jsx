@@ -3,6 +3,7 @@ import Axios from "axios";
 import "../fontawesome-free-5.15.4-web/css/all.min.css";
 import "../css/style.css";
 import "../css/member_register.css"
+import res from 'express/lib/response';
 
 
 class Member_register extends Component {
@@ -49,7 +50,7 @@ class Member_register extends Component {
     okButtonClick = async () => {
         console.log("OK");
         await new Axios.post("http://localhost:8000/register", this.state.member)
-            .then((res) => { console.table(res.data) })
+            .then((res) => { console.table(res.data); })
             .catch((error) => { console.error(error) });
     }
 
