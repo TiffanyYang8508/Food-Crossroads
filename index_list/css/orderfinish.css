@@ -24,6 +24,10 @@ body {
   font-size: 16px;
 }
 
+.buy_back_btn:hover{
+  background-color: #4b4747;
+}
+
  #back_to_home {
  margin-top: 10px;
  margin-left: 55px;
@@ -36,5 +40,20 @@ body {
 .order_finish_div{
   width: 300px;
   height: 200px;
-  margin: 0 auto;
+  margin: 10% auto;
+}
+
+.footer_page {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (max-width:576px) {
+
+  .footer_page {
+      position: static;
+      margin-top: 20px;
+  }
 }

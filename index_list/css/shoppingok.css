@@ -152,7 +152,7 @@ td span {
         width: 0;
     }
     #shopping-row img {
-        display: none;
+        display: initial;
     }
     #ordername,
     #shopping-row .ordername {
@@ -160,18 +160,7 @@ td span {
         position: relative;
         right: 20px;
     }
-    /* .all-squre tr td:nth-child(1){
-      width: 200px;
-      text-align: start;
-  } */
-    /* .all-squre tr td:nth-child(2){
-      width:50px;
-      text-align: end;
-  }
-  .all-squre tr td:nth-child(3){
-      width:20px;
-      text-align: end;
-  } */
+ 
     .footer_page {
         position: static;
         margin-top: 20px;
