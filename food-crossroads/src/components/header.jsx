@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "../fontawesome-free-5.15.4-web/css/all.css";
+import "../css/style.css";
 import logo from "../img/logo.png";
 
 

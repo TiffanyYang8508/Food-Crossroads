@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import $ from "jquery";
 import Header from './header';
 import Footer from './footer';
-import "../css/style.css";
+
 import "../css/index.css";
 
 class Index extends Component {
     state = {
-
+        
     }
 
     componentDidMount() {
@@ -15,48 +15,6 @@ class Index extends Component {
             e.preventDefault();
             $(this).parent().find(".dropdown_div").slideToggle();
             $(this).parent().siblings().find(".dropdown_div").slideUp();
-        });
-
-        $(".mobile_dropdown_label").click(function (e) {
-            e.preventDefault();
-            $(this).parent().find(".mobile_dropdown_div").slideToggle();
-            $(this).parent().siblings().find(".mobile_dropdown_div").slideUp();
-        });
-
-        $(".tab_close,.chk_close").click(function () {
-            $(".dropdown_div").slideUp();
-        });
-
-        $(".search_mobile_div").click(function () {
-            $(".mobile_div").css("display", "unset");
-        });
-
-        $(".turn_off").click(function () {
-            $(".mobile_div").css("display", "none");
-        });
-
-        $(".mobile_tab_content span").click(function () {
-            var text = $(this).text();
-            $(".area_label").html(`<i class="fas fa-map-marker-alt"></i>${text}`);
-        });
-
-        $(".tab_content span").click(function () {
-            var text = $(this).text();
-            $(".area_label").html(`<i class="fas fa-map-marker-alt"></i>${text}`);
-        });
-
-
-        // 置頂按鈕:點選後回到頂端
-        $(".ontop_btn").click(function(){
-            $("html,body").animate({ scrollTop: 0 }, 300);
-        });
-
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 300) {
-                $(".ontop_btn").fadeIn(100);
-            } else {
-                $(".ontop_btn").stop().fadeOut(100);
-            }
         });
     }
 
@@ -202,11 +160,19 @@ class Index extends Component {
                                             </div>
                                             <input className="search_keyword" id="keyword" type="text" placeholder="請輸入餐廳關鍵字" />
                                             <div className="area_div">
-                                                <label htmlFor="area_btn" className="area_label mobile_tab_label"><i className="fas fa-map-marker-alt"></i>請選擇地區<i
+                                                <label htmlFor="area_btn" onClick={
+                                                    () => {
+                                                        console.log("OK");
+                                                    }
+                                                } className="area_label mobile_tab_label"><i className="fas fa-map-marker-alt"></i>請選擇地區<i
                                                     className="fas fa-sort-down"></i></label>
                                             </div>
                                             <div className="other_div">
-                                                <label htmlFor="other_btn" className="other_label mobile_tab_label"><i className="fas fa-hand-point-up"></i>進階搜尋<i
+                                                <label htmlFor="other_btn" onClick={
+                                                    () => {
+                                                        console.log("OK2")
+                                                    }
+                                                } className="other_label mobile_tab_label"><i className="fas fa-hand-point-up"></i>進階搜尋<i
                                                     className="fas fa-sort-down"></i></label>
                                             </div>
                                             <div className="dropdown">
@@ -396,12 +362,7 @@ class Index extends Component {
                         </div>
                     </div>
                 </section>
-
-                <button type="button" className="ontop_btn" onClick={this.topfunction}>
-                    <i className="fas fa-arrow-up"></i>
-                </button>
-
-                <footer className="footer_page">
+                <footer>
                     <Footer />
                 </footer>
             </React.Fragment>

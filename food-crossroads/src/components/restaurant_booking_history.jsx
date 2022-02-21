@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+// import "../fontawesome-free-5.15.4-web/css/all.css";
+// import "../css/style.css";
 import "../css/restaurant_booking_history.css";
 
 class Restaurant_booking_history extends Component {

@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import Axios from "axios";
-import Header from "./header";
-import Footer from "./footer";
 import "../css/member.css";
 import "../css/style.css";
 
@@ -29,9 +27,37 @@ class OrderRecord extends Component {
   render() {
     return (
       <React.Fragment>
-        <header className="header_page">
-          <Header />
-        </header>
+        <div class="header_page">
+          <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="index.html">
+                <img src={require("../img/logo.png")} alt="LOGO" />
+              </a>
+              <div class="nav_icon">
+                <a class="nav_a" href="list.html">
+                  <i class="fas fa-store"></i>餐廳列表
+                </a>
+                <a class="nav_a" href="shoppingchar.html">
+                  <i class="fas fa-shopping-cart"></i>購物車
+                </a>
+                <a class="nav_a" href="member_login.html">
+                  <i class="fas fa-user-circle"></i>會員登入
+                </a>
+              </div>
+              <div class="rwd_icon">
+                <a class="nav_a" href="list.html">
+                  <i class="fas fa-store"></i>
+                </a>
+                <a class="nav_a" href="shoppingchar.html">
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a class="nav_a" href="member_login.html">
+                  <i class="fas fa-user-circle"></i>
+                </a>
+              </div>
+            </nav>
+          </header>
+        </div>
 
         <aside class="aside_menu">
           <div class="panel-group" id="accordion">
@@ -169,9 +195,19 @@ class OrderRecord extends Component {
           </div>
         </div>
 
-        <footer>
-          <Footer />
-        </footer>
+        <div class="footer_page">
+          <footer>
+            <div class="footer_link">
+              <a href="#">關於我們</a>
+              <a href="#">商家入口</a>
+              <a href="#">常見問題</a>
+              <a href="#">聯絡我們</a>
+            </div>
+            <div class="footer_text">
+              <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
+            </div>
+          </footer>
+        </div>
       </React.Fragment>
     );
   }
