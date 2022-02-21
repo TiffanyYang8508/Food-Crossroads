@@ -41,6 +41,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
 app.get('/', (req, res) => {
     conn.query("select * from member", [],
         function (err, rows) {
@@ -76,14 +77,16 @@ app.post('/login', (req, res) => {
         res.json(output)
     });
 })
-
+app.get('/register', (req, res) => {
+    res.send("OK");
+})
 app.post('/register', (req, res) => {
-    conn.query("insert into member (user_name, user_email, user_pwd, user_tel) values (?, ?, ?, ?)", 
-    [req.body.name, req.body.email, req.body.password, req.body.tel],
-    function (err, rows) {
-        res.send( JSON.stringify( req.body ));
-    }
-)
+    connection.query("INSERT INTO member (user_name, user_email, user_pwd, user_tel) VALUES (?,?,?,?)",
+        [req.body.name, req.body.email, req.body.password, req.body.tel],
+        function (err, rows) {
+            res.send(JSON.stringify(req.body));
+        }
+    )
 })
 
 app.listen(8000);
