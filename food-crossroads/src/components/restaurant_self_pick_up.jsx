@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-// import "../fontawesome-free-5.15.4-web/css/all.css";
+import Header from './header';
+import Footer from './footer';
 import "../css/restaurant_self_pick_up.css";
 
 class Restaurant_self_pick_up extends Component {
@@ -7,24 +8,9 @@ class Restaurant_self_pick_up extends Component {
     render() {
         return (
             <React.Fragment>
-
-                <header>
-                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                        <a className="navbar-brand" href="index.html"><img src={require('../img/logo.png')} alt="LOGO" /></a>
-                        <div className="nav_icon">
-                            <a className="nav_a" href="list.html"><i className="fas fa-store"></i>餐廳列表</a>
-                            <a className="nav_a" href="shoppingchar.html"><i className="fas fa-shopping-cart"></i>購物車</a>
-                            <a className="nav_a" href="member_login.html"><i className="fas fa-user-circle"></i>會員登入</a>
-                        </div>
-                        <div className="rwd_icon">
-                            <a className="nav_a" href="list.html"><i className="fas fa-store"></i></a>
-                            <a className="nav_a" href="shoppingchar.html"><i className="fas fa-shopping-cart"></i></a>
-                            <a className="nav_a" href="member_login.html"><i className="fas fa-user-circle"></i></a>
-                        </div>
-                    </nav>
+                <header className="header_page">
+                    <Header />
                 </header>
-
-
                 <aside>
                     <div class="panel-group" id="accordion">
                         <div class="panel panel-default">
@@ -187,7 +173,6 @@ class Restaurant_self_pick_up extends Component {
                                             備註：需要兒童座椅
                                         </div>
 
-
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">
                                                 返回
@@ -200,18 +185,8 @@ class Restaurant_self_pick_up extends Component {
                         </tbody>
                     </table>
                 </div>
-
-
-                <footer>
-                    <div className="footer_link">
-                        <a href="#">關於我們</a>
-                        <a href="#">商家入口</a>
-                        <a href="#">常見問題</a>
-                        <a href="#">聯絡我們</a>
-                    </div>
-                    <div className="footer_text">
-                        <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
-                    </div>
+                <footer className="footer_page">
+                    <Footer />
                 </footer>
             </React.Fragment>
         );

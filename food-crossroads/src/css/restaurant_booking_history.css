@@ -7,7 +7,6 @@ aside {
 }
 
 .panel-default{
-    /* border: 1px solid red; */
     border-bottom: 1px solid white;
     padding: 5px;
     width: 100%;
@@ -26,7 +25,6 @@ aside {
 }
 
 .little_title {
-    /* border: 1px solid red; */
     margin-left: -5px;
     margin-right: -6px;
     padding: 5px 0 5px 15px;
@@ -43,7 +41,6 @@ aside {
 }
 
 .sreach_form {
-    /* border: 1px solid red; */
     padding: 0 10px 5px 10px;
 }
 
@@ -82,7 +79,6 @@ aside {
     font-size: 35px;
     font-weight: bold;
     text-align: center;
-    font-family: Noto Sans TC;
 }
 
 .edit_info{
@@ -94,7 +90,7 @@ aside {
 
 
 
-label{
+.aside_menu label,.mobile_aside_menu label{
     margin-right: 20px;
 }
 
@@ -102,7 +98,6 @@ label{
     margin-left: 150px;
     border-radius: 5px;
     margin-top: 30px;
-    font-family: Noto Sans TC;
 }
 
 th{

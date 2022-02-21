@@ -77,13 +77,16 @@ nav .nav_a {
 
 /* 頁尾 start */
 
-footer {
+.footer_page {
     z-index: 6;
     background-color: #403C3C;
     color: white;
-    bottom: 0;
+    /* bottom: 0;
     left: 0;
-    position: sticky;
+    position: sticky; */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer_text {
