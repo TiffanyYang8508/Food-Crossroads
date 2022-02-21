@@ -31,6 +31,14 @@ app.get("/ordermanagement/list", function (req, res) {
   });
 });
 
+app.get("/bookingmanagement/list", function (req, res) {
+  var sql =
+    "SELECT booking_date,booking_time,booking_id,booking_peoplenumber,restaurant_name FROM booking JOIN booking_record ON booking.id = booking_record.id JOIN restaurant ON booking_record.restaurant_id = restaurant.id";
+  conn.query(sql, [], function (err, rows) {
+    res.send(JSON.stringify(rows));
+  });
+});
+
 app.get("/member/list/:id", function (req, res) {
   conn.query(
     "SELECT * FROM member WHERE id = ? ",
