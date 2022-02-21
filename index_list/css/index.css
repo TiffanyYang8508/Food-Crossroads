@@ -276,6 +276,7 @@
 }
 
 .kind_span {
+    display: flex;
     margin-right: 5%;
     margin-bottom: 5%;
 }
@@ -283,7 +284,6 @@
 .index_img {
     width: 100%;
     position: relative;
-    overflow: hidden;
     border-radius: 5px;
 }
 
@@ -291,13 +291,7 @@
     width: 100%;
     height: 300px;
     border-radius: 5px;
-    transform: scale(1, 1);
-    transition: all 1s ease-out;
     object-fit: cover
-}
-
-.index_img img:hover {
-    transform: scale(1.2, 1.2);
 }
 
 .kind_span span:hover {
@@ -306,8 +300,14 @@
 
 .kind_span span {
     position: absolute;
-    left: 20%;
-    top: 40%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: unset;
     font-size: 55px;
     z-index: 1;
     color: white;

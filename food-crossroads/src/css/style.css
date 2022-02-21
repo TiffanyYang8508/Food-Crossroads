@@ -93,8 +93,6 @@ footer {
 }
 
 .footer_link {
-    /* float: right; */
-    /* text-align: right; */
     display: flex;
     justify-content: end;
 }

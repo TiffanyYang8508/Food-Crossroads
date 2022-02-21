@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 
 import Index from "./components/Index";
 import Member_register from './components/member_register';
