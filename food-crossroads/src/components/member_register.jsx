@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import Axios from "axios";
-import "../fontawesome-free-5.15.4-web/css/all.min.css";
-import "../css/style.css";
-import "../css/member_register.css"
+// import "../fontawesome-free-5.15.4-web/css/all.min.css";
+// import "../css/style.css";
+import "../css/member_register.css";
 
 
 class Member_register extends Component {
     state = {
         member: {
-            user_name: "陳冠維",
-            user_email: "test@test.gmail.com",
-            user_pwd: "1234",
-            user_tel: "0912345678"
+            
         }
     }
 
@@ -27,15 +24,15 @@ class Member_register extends Component {
         this.setState(newState);
     }
 
-    pswChange = (e) => {
+    pwdChange = (e) => {
         var newState = { ...this.state };
-        newState.member.user_psw = e.target.value;
+        newState.member.user_pwd = e.target.value;
         this.setState(newState);
     }
 
-    pswConfrimChange = (e) => {
+    pwdConfrimChange = (e) => {
         var newState = { ...this.state };
-        newState.member.user_psw_confirm = e.target.value;
+        newState.member.user_pwd_confirm = e.target.value;
         this.setState(newState);
     }
 
@@ -47,7 +44,9 @@ class Member_register extends Component {
 
     okButtonClick = async () => {
         console.log("OK1");
-        await new Axios.port("http://localhost:8000/register", this.state.member);
+        await new Axios.post("http://localhost:8000/register", this.state.member)
+            .then((res) => { console.table(res.data) })
+            .catch((error) => { console.error(error) });
         console.log("OK2");
     }
 
@@ -82,35 +81,35 @@ class Member_register extends Component {
                                     <div className="form-group row">
                                         <label htmlFor="name" className="form_text">姓名</label>
                                         <div className="input_box">
-                                            <input type="text" id="name" className="form-control" 
-                                            value={this.state.member.user_name}
-                                            onChange={this.nameChange} />
+                                            <input type="text" id="name" className="form-control" name="name"
+                                                value={this.state.member.user_name}
+                                                onChange={this.nameChange} />
                                         </div>
                                     </div>
                                     <div className="form-group row">
                                         <label htmlFor="email" className="form_text">信箱</label>
                                         <div className="input_box">
                                             <input type="text" id="email" className="form-control" name="email"
-                                            value={this.state.member.user_email} 
-                                            onChange={this.emailChange} />
+                                                value={this.state.member.user_email}
+                                                onChange={this.emailChange} />
                                         </div>
                                     </div>
 
                                     <div className="form-group row">
                                         <label htmlFor="password" className="form_text">密碼</label>
                                         <div className="input_box">
-                                            <input type="password" id="password" className="form-control" name="password" 
-                                            value={this.state.member.user_pwd} 
-                                            onChange={this.pswChange} />
+                                            <input type="password" id="password" className="form-control" name="password"
+                                                value={this.state.member.user_pwd}
+                                                onChange={this.pwdChange} />
                                         </div>
                                     </div>
 
                                     <div className="form-group row password_confirm">
                                         <label htmlFor="password_confirm" className="form_text">確認密碼</label>
                                         <div className="input_box">
-                                            <input type="password" id="password_confirm" className="form-control" name="password_confirm" 
-                                            value={this.state.member.user_psw_confirm} 
-                                            onChange={this.pswConfrimChange} />
+                                            <input type="password" id="password_confirm" className="form-control" name="password_confirm"
+                                                value={this.state.member.user_psw_confirm}
+                                                onChange={this.pswConfrimChange} />
                                         </div>
                                     </div>
 
@@ -118,8 +117,8 @@ class Member_register extends Component {
                                         <label htmlFor="tel" className="form_text">手機</label>
                                         <div className="input_box">
                                             <input type="text" id="tel" className="form-control" name="tel"
-                                            value={this.state.member.user_tel} 
-                                            onChange={this.telChange} />
+                                                value={this.state.member.user_tel}
+                                                onChange={this.telChange} />
                                         </div>
                                     </div>
                                     <div className="btn_div">

@@ -1,33 +1,29 @@
 import React, { Component } from 'react';
+import $ from "jquery";
 import Header from './header';
 import Footer from './footer';
 
 import "../css/index.css";
 
 class Index extends Component {
-    state = {}
-
-
-    area_btn_click = () => {
-        var dropdown = document.getElementsByClassName("area_label");
-        for(var i = 0; i < dropdown.length; i++){
-            dropdown[i].addEventListener("click",function(){
-                var dropdown_div = this.parentNode.children[2];
-                if(dropdown_div.style.maxHeight){
-                    dropdown_div.style.maxHeight = null;
-                }else{
-                    dropdown_div.style.maxHeight = dropdown_div.scrollHeight + "px";
-                }
-                console.log(dropdown_div);
-            });
-        }
+    state = {
         
+    }
+
+    componentDidMount() {
+        $(".dropdown_label").click(function (e) {
+            e.preventDefault();
+            $(this).parent().find(".dropdown_div").slideToggle();
+            $(this).parent().siblings().find(".dropdown_div").slideUp();
+        });
     }
 
     render() {
         return (
             <React.Fragment>
-                <Header />
+                <header className="header_page">
+                    <Header />
+                </header>
                 <section id="search_box">
                     <div className="container-fluid">
                         <div className="row">
@@ -288,7 +284,7 @@ class Index extends Component {
                 </section>
 
                 <section id="kind_page">
-                    <div className="container">
+                    <div className="container-fluid">
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="kind_div">
@@ -366,8 +362,9 @@ class Index extends Component {
                         </div>
                     </div>
                 </section>
-
-                <Footer />
+                <footer>
+                    <Footer />
+                </footer>
             </React.Fragment>
         );
     }

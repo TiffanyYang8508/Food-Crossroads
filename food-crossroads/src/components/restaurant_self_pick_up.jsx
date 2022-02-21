@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import "../fontawesome-free-5.15.4-web/css/all.css";
-import "../css/style.css";
-import "../css/restaurant_self_pick_up.css"
+// import "../fontawesome-free-5.15.4-web/css/all.css";
+import "../css/restaurant_self_pick_up.css";
 
 class Restaurant_self_pick_up extends Component {
     state = {}
