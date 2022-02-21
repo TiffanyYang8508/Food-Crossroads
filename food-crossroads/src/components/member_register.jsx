@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import Axios from "axios";
-// import "../fontawesome-free-5.15.4-web/css/all.min.css";
-// import "../css/style.css";
-import "../css/member_register.css";
+import "../fontawesome-free-5.15.4-web/css/all.min.css";
+import "../css/style.css";
+import "../css/member_register.css"
 
 
 class Member_register extends Component {
     state = {
         member: {
-            
+            user_name: "陳冠維",
+            user_email: "test@test.gmail.com",
+            user_pwd: "***",
+            user_pwd_confirm: "****",
+            user_tel: "0912345678"
         }
     }
 
@@ -43,11 +47,10 @@ class Member_register extends Component {
     }
 
     okButtonClick = async () => {
-        console.log("OK1");
+        console.log("OK");
         await new Axios.post("http://localhost:8000/register", this.state.member)
             .then((res) => { console.table(res.data) })
             .catch((error) => { console.error(error) });
-        console.log("OK2");
     }
 
     render() {
@@ -108,8 +111,8 @@ class Member_register extends Component {
                                         <label htmlFor="password_confirm" className="form_text">確認密碼</label>
                                         <div className="input_box">
                                             <input type="password" id="password_confirm" className="form-control" name="password_confirm"
-                                                value={this.state.member.user_psw_confirm}
-                                                onChange={this.pswConfrimChange} />
+                                                value={this.state.member.user_pwd_confirm}
+                                                onChange={this.pwdConfrimChange} />
                                         </div>
                                     </div>
 
