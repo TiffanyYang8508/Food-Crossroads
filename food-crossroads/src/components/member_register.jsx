@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import Header from './header';
+import Footer from './footer';
 import Axios from "axios";
+import $ from "jquery";
 import "../fontawesome-free-5.15.4-web/css/all.min.css";
 import "../css/style.css";
 import "../css/member_register.css"
@@ -8,11 +11,11 @@ import "../css/member_register.css"
 class Member_register extends Component {
     state = {
         member: {
-            user_name: "陳冠維",
-            user_email: "test@test.gmail.com",
-            user_pwd: "***",
-            user_pwd_confirm: "****",
-            user_tel: "0912345678"
+            user_name: "",
+            user_email: "",
+            user_pwd: "",
+            user_pwd_confirm: "",
+            user_tel: ""
         }
     }
 
@@ -49,7 +52,12 @@ class Member_register extends Component {
     okButtonClick = async () => {
         console.log("OK");
         await new Axios.post("http://localhost:8000/register", this.state.member)
-            .then((res) => { console.table(res.data) })
+            .then((res) => {
+                if(res.data.status == "0") {
+                    $("#reportMessage").text(res.data.err);
+                }
+                console.table(res.data);
+            })
             .catch((error) => { console.error(error) });
     }
 
@@ -57,20 +65,8 @@ class Member_register extends Component {
         return (
             <React.Fragment>
 
-                <header>
-                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                        <a className="navbar-brand" href="index.html"><img src={require('../img/logo.png')} alt="LOGO" /></a>
-                        <div className="nav_icon">
-                            <a className="nav_a" href="list.html"><i className="fas fa-store"></i>餐廳列表</a>
-                            <a className="nav_a" href="shoppingchar.html"><i className="fas fa-shopping-cart"></i>購物車</a>
-                            <a className="nav_a" href="member_login.html"><i className="fas fa-user-circle"></i>會員登入</a>
-                        </div>
-                        <div className="rwd_icon">
-                            <a className="nav_a" href="list.html"><i className="fas fa-store"></i></a>
-                            <a className="nav_a" href="shoppingchar.html"><i className="fas fa-shopping-cart"></i></a>
-                            <a className="nav_a" href="member_login.html"><i className="fas fa-user-circle"></i></a>
-                        </div>
-                    </nav>
+                <header className="header_page">
+                    <Header />
                 </header>
 
                 <div className="container">
@@ -128,21 +124,14 @@ class Member_register extends Component {
                                         <button type="button" onClick={this.okButtonClick} className="register_btn">註冊</button>
                                     </div>
                                 </form>
+                                <div className="reportSpan" id='reportMessage'></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <footer>
-                    <div className="footer_link">
-                        <a href="#">關於我們</a>
-                        <a href="#">商家入口</a>
-                        <a href="#">常見問題</a>
-                        <a href="#">聯絡我們</a>
-                    </div>
-                    <div className="footer_text">
-                        <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
-                    </div>
+                <footer className="footer_page">
+                    <Footer />
                 </footer>
 
             </React.Fragment>

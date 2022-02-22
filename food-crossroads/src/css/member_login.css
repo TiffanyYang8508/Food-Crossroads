@@ -19,6 +19,7 @@
     align-items: center;
     border: 2px solid #707070;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .member_login_title {

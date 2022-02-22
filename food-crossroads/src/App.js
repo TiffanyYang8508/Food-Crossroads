@@ -12,7 +12,7 @@ import Ordermanagement from "./components/member_orderRecord";
 import BookingManagement from "./components/member_bookingRecord";
 import Member from "./components/member_memberinfo";
 import EditMember from "./components/member_editmember";
-
+import Restaurant_login from "./components/restaurant_login";
 
 
 class App extends Component {

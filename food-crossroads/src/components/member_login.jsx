@@ -12,15 +12,6 @@ class Member_login extends Component {
     state = {
         member: { user_email: "", user_pwd: "" }
     }
-
-    componentDidMount() {
-        $(".dropdown_label").click(function (e) {
-            e.preventDefault();
-            $(this).parent().find(".dropdown_div").slideToggle();
-            $(this).parent().siblings().find(".dropdown_div").slideUp();
-        });
-    }
-
     loginClick = async () => {
         console.log("OK");
         await new Axios.post("http://localhost:8000/login", this.state.member)
