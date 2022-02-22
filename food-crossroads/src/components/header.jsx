@@ -10,21 +10,21 @@ class Header extends Component {
     state = {}
     render() {
         return (
-                    <header>
-                        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                            <a className="navbar-brand" href="index.html"><img src={logo} alt="LOGO" /></a>
-                            <div className="nav_icon">
-                                <a className="nav_a" href="list.html"><i className="fas fa-store"></i>餐廳列表</a>
-                                <a className="nav_a" href="shoppingchar.html"><i className="fas fa-shopping-cart"></i>購物車</a>
-                                <a className="nav_a" href="member_login.html"><i className="fas fa-user-circle"></i>會員登入</a>
-                            </div>
-                            <div className="rwd_icon">
-                                <a className="nav_a" href="list.html"><i className="fas fa-store"></i></a>
-                                <a className="nav_a" href="shoppingchar.html"><i className="fas fa-shopping-cart"></i></a>
-                                <a className="nav_a" href="member_login.html"><i className="fas fa-user-circle"></i></a>
-                            </div>
-                        </nav>
-                    </header>
+            <header>
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                    <a className="navbar-brand" href="/"><img src={logo} alt="LOGO" /></a>
+                    <div className="nav_icon">
+                        <a className="nav_a" href="/restaurant/list"><i className="fas fa-store"></i>餐廳列表</a>
+                        <a className="nav_a" href="shoppingchar.html"><i className="fas fa-shopping-cart"></i>購物車</a>
+                        <a className="nav_a" href="member_login.html"><i className="fas fa-user-circle"></i>會員登入</a>
+                    </div>
+                    <div className="rwd_icon">
+                        <a className="nav_a" href="/restaurant/list"><i className="fas fa-store"></i></a>
+                        <a className="nav_a" href="shoppingchar.html"><i className="fas fa-shopping-cart"></i></a>
+                        <a className="nav_a" href="member_login.html"><i className="fas fa-user-circle"></i></a>
+                    </div>
+                </nav>
+            </header>
         );
     }
 }
