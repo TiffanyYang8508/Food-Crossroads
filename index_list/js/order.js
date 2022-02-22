@@ -7,17 +7,19 @@ function qty() {
             var num = Number(this.previousElementSibling.value);
             num++;
             this.previousElementSibling.value = num;
-            var price = this.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.innerHTML;
-            this.nextElementSibling.firstElementChild.innerHTML = price * num;
+            // var price = this.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.innerHTML;
+            // this.nextElementSibling.firstElementChild.innerHTML = price * num;
         }
     }
     for (var i = 0; i < sub.length; i++) {
         sub[i].onclick = function () {
             var num = Number(this.nextElementSibling.value);
-            num--;
+            if(num>1){
+                num--;
+            }
             this.nextElementSibling.value = num;
-            var price = this.previousElementSibling.firstElementChild.innerHTML;
-            this.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.innerHTML = price * num;
+            // var price = this.previousElementSibling.firstElementChild.innerHTML;
+            // this.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.innerHTML = price * num;
         }
     }
 
