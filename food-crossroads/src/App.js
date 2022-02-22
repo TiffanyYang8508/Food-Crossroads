@@ -12,7 +12,7 @@ import Ordermanagement from "./components/member_orderRecord";
 import BookingManagement from "./components/member_bookingRecord";
 import Member from "./components/member_memberinfo";
 import EditMember from "./components/member_editmember";
-
+import Restaurant_login from "./components/restaurant_login";
 
 
 class App extends Component {
@@ -25,7 +25,8 @@ class App extends Component {
           <Route path="/register"          component={Member_register}            exact />
           <Route path="/self/pick"         component={Restaurant_self_pick_up}    exact />
           <Route path="/booking_history"   component={Restaurant_booking_history} exact />
-          <Route path="/member/login"      component={Member_login} />
+          <Route path="/member/login"      component={Member_login}               exact />
+          <Route path="/restaurant/login"  component={Restaurant_login}           exact />
           <Route path="/ordermanagement"   component={Ordermanagement} />
           <Route path="/bookingmanagement" component={BookingManagement} />
           <Route path="/member/:id"        component={Member} />
