@@ -82,18 +82,18 @@ app.post('/register', (req, res) => {
             // 若資料庫部分出現問題，則回傳給client端「伺服器錯誤，請稍後再試！」的結果。
             if (err) {
                 console.log(err);
-                result["status"] = "註冊失敗。";
+                result["status"] = "0";
                 result["err"] = "伺服器錯誤，請稍後在試！";
                 res.json(result);
             }
             // 如果有重複的email
             if (rows.length >= 1) {
-                result["status"] = "註冊失敗。";
-                result["err"] = "已有重複的Email。";
+                result["status"] = "0";
+                result["err"] = "已有重複的Email";
                 res.json(result);
             } else {
                 if (req.body.user_pwd !== req.body.user_pwd_confirm) {
-                    result["status"] = "註冊失敗。";
+                    result["status"] = "0";
                     result["err"] = "密碼不相同";
                     res.json(result);
                 } else {
