@@ -23,6 +23,7 @@ class App extends Component {
         <Switch>
           <Route path="/" component={Index} exact />
           <Route path="/restaurant/list" component={Restaurant_list} exact />
+          <Route path="/restaurant/list/:category" component={Restaurant_list} exact />
           <Route path="/register" component={Member_register} exact />
           <Route path="/self_pick" component={Restaurant_self_pick_up} exact />
           <Route
