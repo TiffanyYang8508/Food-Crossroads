@@ -7,7 +7,6 @@ aside {
 }
 
 .panel-default{
-    /* border: 1px solid red; */
     border-bottom: 1px solid white;
     padding: 5px;
     width: 100%;
@@ -43,7 +42,6 @@ aside {
 }
 
 .sreach_form {
-    /* border: 1px solid red; */
     padding: 0 10px 5px 10px;
 }
 
@@ -63,7 +61,6 @@ aside {
 }
 
 .member_info{
-    
     margin-top: 60px;
 }
 
@@ -75,14 +72,12 @@ aside {
     margin-left: 200px;
     border-radius: 5px;
     margin-top: 30px;
-    font-family: Noto Sans TC;
 }
 
 .title_member_edit{
     font-size: 35px;
     font-weight: bold;
     text-align: center;
-    font-family: Noto Sans TC;
 }
 
 .edit_info{
@@ -92,7 +87,7 @@ aside {
     transform: translate(-50%,30%);
 }
 
-label{
+aside label{
     margin-right: 20px;
 }
 
@@ -100,7 +95,6 @@ label{
     margin-left: 150px;
     border-radius: 5px;
     margin-top: 30px;
-    font-family: Noto Sans TC;
 }
 
 th{
