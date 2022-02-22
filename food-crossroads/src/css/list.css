@@ -1,7 +1,6 @@
 .search_div {
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     margin-top: 20px;
 }
 
@@ -12,7 +11,7 @@
 
 /* 搜尋關鍵字 start */
 
-.search_keyword {
+#search_list .search_keyword {
     width: 350px;
     height: 50px;
     margin-bottom: 20px;
@@ -22,11 +21,11 @@
     float: left;
 }
 
-.search_keyword:hover {
+#search_list .search_keyword:hover {
     box-shadow: 0 1px 10px 2px #999999;
 }
 
-.search_keyword:focus {
+#search_list .search_keyword:focus {
     outline: none;
     box-shadow: 0 1px 10px 2px #888888;
 }
@@ -37,11 +36,11 @@
 
 /* 搜尋地區 start */
 
-.area_btn {
+#search_list .area_btn {
     display: none;
 }
 
-.area_label {
+#search_list .area_label {
     position: relative;
     width: 350px;
     height: 50px;
@@ -54,12 +53,12 @@
     cursor: pointer;
 }
 
-.area_label .fa-map-marker-alt {
+#search_list .area_label .fa-map-marker-alt {
     color: #403C3C;
     padding: 10px;
 }
 
-.area_label .fa-sort-down {
+#search_list .area_label .fa-sort-down {
     color: #403C3C;
     margin-left: 60%;
 }
@@ -69,16 +68,16 @@
     display: block;
 } */
 
-.area_label:hover {
+#search_list .area_label:hover {
     box-shadow: 0 1px 10px 2px #999999;
     color: black;
 }
 
-.area_btn:checked+.area_label {
+#search_list .area_btn:checked+.area_label {
     box-shadow: 0 1px 10px 2px #888888;
 }
 
-.tab_div {
+#search_list .tab_div {
     background-color: white;
     position: absolute;
     top: 70px;
@@ -92,17 +91,17 @@
     border-radius: 0 0 5px 5px;
 }
 
-.tab_css {
+#search_list .tab_css {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.tab_css input {
+#search_list .tab_css input {
     display: none;
 }
 
-.tab_css label {
+#search_list .tab_css label {
     margin: 0 5px 5px 0;
     padding: 10px 16px;
     cursor: pointer;
@@ -112,7 +111,7 @@
     opacity: 0.5;
 }
 
-.tab_content {
+#search_list .tab_content {
     order: 1;
     display: none;
     width: 100%;
@@ -123,23 +122,23 @@
     border-top: 1px solid #ddd;
 }
 
-.tab_content span {
+#search_list .tab_content span {
     font-size: 16px;
     margin-left: 10px;
     cursor: pointer;
 }
 
-.tab_css input:checked+label,
-.tab_css label:hover {
+#search_list .tab_css input:checked+label,
+#search_list .tab_css label:hover {
     opacity: 1;
     font-weight: bold;
 }
 
-.tab_css input:checked+label+.tab_content {
+#search_list .tab_css input:checked+label+.tab_content {
     display: initial;
 }
 
-.tab_close {
+#search_list .tab_close {
     padding: 10px;
 }
 
@@ -149,11 +148,11 @@
 
 /* 進階搜尋 start */
 
-.other_btn {
+#search_list .other_btn {
     display: none;
 }
 
-.other_label {
+#search_list .other_label {
     position: relative;
     width: 350px;
     height: 50px;
@@ -166,22 +165,22 @@
     cursor: pointer;
 }
 
-.other_label:hover {
+#search_list .other_label:hover {
     box-shadow: 0 1px 10px 2px #999999;
     color: black;
 }
 
-.other_label .fa-hand-point-up {
+#search_list .other_label .fa-hand-point-up {
     color: #403C3C;
     padding: 10px;
 }
 
-.other_label .fa-sort-down {
+#search_list .other_label .fa-sort-down {
     color: #403C3C;
     margin-left: 64%;
 }
 
-.chk_div {
+#search_list .chk_div {
     background-color: #FCC106;
     position: absolute;
     top: 70px;
@@ -199,23 +198,23 @@
     display: block;
 } */
 
-.chk_css {
+#search_list .chk_css {
     padding: 20px 20px 0 20px;
     border-bottom: 1px solid #888888;
 }
 
-.chk_item {
+#search_list .chk_item {
     display: inline-block;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-.chk_chk {
+#search_list .chk_chk {
     width: 24px;
     height: 24px;
 }
 
-.chk_close {
+#search_list .chk_close {
     padding: 10px;
 }
 
@@ -225,7 +224,7 @@
 
 /* 搜尋鈕 start */
 
-.search_btn {
+#search_list .search_btn {
     background-color: #8B1309;
     color: white;
     border-radius: 0 5px 5px 0;
@@ -235,7 +234,7 @@
     transition: 0.3s;
 }
 
-.search_btn:hover {
+#search_list .search_btn:hover {
     background-color: #a30f01;
 }
 
@@ -267,7 +266,8 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    margin-right: 1%;
+    margin-bottom: 5%;
 }
 
 .rest_list {
@@ -278,6 +278,8 @@
     margin-bottom: 15px;
     display: flex;
     align-items: center;
+    margin: 0 1%;
+    margin-bottom: 2%;
 }
 
 .rest_img {
@@ -301,44 +303,10 @@
     justify-content: space-between;
 }
 
-.rest_list .rest_text a{
-    background-color: #8B1309;
-    color: #fff;
-    border-radius: 5px;
-    padding: 1px 6px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.rest_text a:hover{
-    background-color: #a30f01;
-}
-
-/* #search_aside {
-    background-color: #999999;
-    width: 12%;
-    height: 100%;
-    position: fixed;
-    top: 5%;
-    left: 0;
-}
-
-#search_aside h5 {
-    padding: 10px;
-    text-align: center;
-    margin-top: 56px;
-    font-size: 28px;
-}
-
-.kind_aside {
-    font-size: 18px;
-    margin-left: 28px;
-} */
-
 #page_list .pagination {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-bottom: 5%;
 }
 
 
@@ -348,53 +316,47 @@
 /* 超大型螢幕 */
 
 @media screen and (max-width:1200px) {
-    .search_keyword {
-        width: 250px;
+    #search_list .search_keyword {
+        width: 280px;
     }
-    .area_label {
-        width: 250px;
+    #search_list .area_label {
+        width: 280px;
     }
-    .area_label .fa-sort-down {
-        margin-left: 43%;
+    #search_list .area_label .fa-sort-down {
+        margin-left: 48%;
     }
-    .tab_div {
+    #search_list .tab_div {
         position: absolute;
         top: 7.4%;
         left: 27.5%;
         width: 44%;
     }
-    .other_label {
-        width: 250px;
+    #search_list .other_label {
+        width: 280px;
     }
-    .other_label .fa-sort-down {
-        margin-left: 50%;
+    #search_list .other_label .fa-sort-down {
+        margin-left: 56%;
     }
-    .chk_div {
+    #search_list .chk_div {
         position: absolute;
         top: 7.4%;
         left: 35.8%;
         width: 44%;
     }
-    .chk_css {
+    #search_list .chk_css {
         padding: 20px 15px 0 15px;
     }
-    .chk_css label{
+    #search_list .chk_css label{
         margin-right: 13px;
     }
-    .chk_item {
+    #search_list .chk_item {
         display: inline-block;
         font-size: 2vw;
         margin-left: 6px;
         margin-bottom: 15px;
     }
-    .search_btn {
+    #search_list .search_btn {
         width: 100px;
-    }
-    .kind_span span {
-        position: absolute;
-        left: 18%;
-        top: 35%;
-        font-size: 55px;
     }
 }
 
@@ -402,40 +364,37 @@
 /* 大型螢幕 */
 
 @media screen and (max-width:992px) {
-    #search_box {
-        height: 60vh;
-    }
-    .search_keyword {
+    #search_list .search_keyword {
         width: 200px;
     }
-    .area_label {
+    #search_list .area_label {
         width: 200px;
     }
-    .area_label .fa-sort-down {
+    #search_list .area_label .fa-sort-down {
         margin-left: 30%;
     }
-    .tab_div {
+    #search_list .tab_div {
         position: absolute;
         top: 4%;
         left: 28.4%;
         width: 56%;
     }
-    .other_label {
+    #search_list .other_label {
         width: 200px;
     }
-    .other_label .fa-sort-down {
+    #search_list .other_label .fa-sort-down {
         margin-left: 40%;
     }
-    .chk_div {
+    #search_list .chk_div {
         position: absolute;
         top: 4%;
         left: 28.2%;
         width: 56%;
     }
-    .chk_css {
+    #search_list .chk_css {
         padding: 15px 0 0 5px;
     }
-    .search_btn {
+    #search_list .search_btn {
         width: 100px;
     }
     .rest_div {
@@ -452,19 +411,16 @@
 /* 平板 */
 
 @media screen and (max-width:768px) {
-    #search_box {
-        height: 70vh;
-    }
-    .search_div {
+    #search_list .search_div {
         display: none;
     }
-    .search_mobile_div {
+    #search_list .search_mobile_div {
         all: unset;
         display: flex;
         justify-content: center;
         width: 100%;
     }
-    .search_mobile_inline_div {
+    #search_list .search_mobile_inline_div {
         background-color: #fff;
         width: 75%;
         height: 40px;
@@ -473,16 +429,16 @@
         border-radius: 5px;
         cursor: pointer;
     }
-    .search_icon {
+    #search_list .search_icon {
         margin-left: 20px;
         font-size: 25px;
     }
-    .search_label {
+    #search_list .search_label {
         margin-left: 20px;
         font-size: 20px;
         line-height: 40px;
     }
-    .mobile_div {
+    #search_list .mobile_div {
         font-size: 3vw;
         position: fixed;
         top: 0;
@@ -492,49 +448,49 @@
         z-index: 999;
         background-color: #fff;
     }
-    .turn_off {
+    #search_list .turn_off {
         background-color: rgb(236, 236, 236);
         font-size: 4vw;
     }
-    .mobile_inline_div {
+    #search_list .mobile_inline_div {
         padding: 20px 50px 50px 50px;
         background-color: rgb(236, 236, 236);
     }
-    .search_keyword {
+    #search_list .search_keyword {
         width: 100%;
         border-radius: 5px;
     }
-    .area_label {
+    #search_list .area_label {
         width: 100%;
         border-radius: 5px;
         margin-bottom: 20px;
     }
-    .area_label .fa-sort-down {
+    #search_list .area_label .fa-sort-down {
         display: none;
     }
-    .mobile_tab_div {
+    #search_list .mobile_tab_div {
         width: 100%;
         margin-left: 10%;
         margin-top: 30px;
         display: none;
     }
-    .mobile_tab_css label {
+    #search_list .mobile_tab_css label {
         font-size: 2.6vw;
         width: 80%;
         border-bottom: 1.5px solid #d1d1d1;
         display: block;
     }
-    .mobile_tab_content {
+    #search_list .mobile_tab_content {
         display: none;
     }
-    .mobile_tab_content span {
+    #search_list .mobile_tab_content span {
         display: block;
         width: 80%;
         border-bottom: 1px solid rgb(224, 224, 224);
         font-size: 2.3vw;
         margin-bottom: 10px;
     }
-    .other_label {
+    #search_list .other_label {
         width: 49%;
         border-radius: 5px;
         margin-right: 2%;
@@ -542,19 +498,19 @@
         float: left;
         z-index: 1000;
     }
-    .other_label .fa-sort-down {
+    #search_list .other_label .fa-sort-down {
         display: none;
     }
-    .mobile_chk_css {
+    #search_list .mobile_chk_css {
         width: 40%;
         float: left;
         margin: 10px;
     }
-    .mobile_chk_item {
+    #search_list .mobile_chk_item {
         font-size: 2.5vw;
         margin-right: 50px;
     }
-    .search_btn {
+    #search_list .search_btn {
         margin-top: 0px;
         border-radius: 5px;
         width: 49%;
@@ -565,39 +521,36 @@
 /* 手機 */
 
 @media screen and (max-width:576px) {
-    #search_box {
-        height: 60vh;
-    }
-    .area_label {
+    #search_list .area_label {
         margin-bottom: 20px;
     }
-    .area_label .fa-sort-down {
+    #search_list .area_label .fa-sort-down {
         margin-left: 65%;
     }
-    .tab_div {
+    #search_list .tab_div {
         position: absolute;
         top: 100px;
         left: 85px;
         width: 400px;
     }
-    .tab_content span {
+    #search_list .tab_content span {
         margin-right: 25px;
         margin-left: 30px;
     }
-    .other_label {
+    #search_list .other_label {
         width: 100%;
         margin-bottom: 20px;
     }
-    .other_label .fa-sort-down {
+    #search_list .other_label .fa-sort-down {
         margin-left: 69.1%;
     }
-    .chk_div {
+    #search_list .chk_div {
         position: absolute;
         top: 160px;
         left: 85px;
         width: 400px;
     }
-    .search_btn {
+    #search_list .search_btn {
         width: 100%;
     }
 }
@@ -606,25 +559,25 @@
 /* 小手機 */
 
 @media screen and (max-width:480px) {
-    .area_label {
+    #search_list .area_label {
         margin-bottom: 20px;
     }
-    .area_label .fa-sort-down {
+    #search_list .area_label .fa-sort-down {
         margin-left: 60%;
     }
-    .tab_div {
+    #search_list .tab_div {
         position: absolute;
         top: 100px;
         left: 50px;
         width: 350px;
     }
-    .other_label {
+    #search_list .other_label {
         margin-bottom: 20px;
     }
-    .other_label .fa-sort-down {
+    #search_list .other_label .fa-sort-down {
         margin-left: 64.5%;
     }
-    .chk_div {
+    #search_list .chk_div {
         position: absolute;
         top: 160px;
         left: 50px;
