@@ -74,11 +74,11 @@ class Member_login extends Component {
                                             onClick={this.loginClick} />
                                     </div>
                                     <div className="form-group row">
-                                        <div className="span_container">
+                                        <div className="span_container forgot">
                                             <div><a href="#forgot_password">忘記密碼?</a></div>
                                             <div>
                                                 <input type="checkbox" name="automatically_login" id="automatically_login" />
-                                                <span>自動登入</span>
+                                                <span>記住密碼</span>
                                             </div>
                                         </div>
                                     </div>
@@ -88,8 +88,12 @@ class Member_login extends Component {
                                 </form>
                             </div>
                         </div>
+                        <div className="reportSpan1" id='reportEmail'>信箱錯誤</div>
+                        <div className="reportSpan2" id='reportPwd'>密碼錯誤</div>
                     </div>
                 </div>
+
+                
 
                 <footer className="footer_page">
                     <Footer />
