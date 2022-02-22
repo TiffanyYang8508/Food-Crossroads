@@ -124,11 +124,13 @@ app.post('/restaurant/login', (req, res) => {
     connection.query(query, params, async (err, rows) => {
         if (err) throw err;
         var output = {}
-        const result = Object.values(JSON.parse(JSON.stringify(rows)));
-        if(req.body.restaurant_pwd == result[0].restaurant_pwd) {
-            output["message"] = "正確帳號密碼"
-        }else{
-            output["message"] = "錯誤帳號密碼"
+        const result = await JSON.parse(JSON.stringify(rows));
+        if (req.body.restaurant_pwd == result[0].restaurant_pwd) {
+            output["status"] = "0";
+            output["message"] = "正確帳號密碼";
+        } else {
+            output["status"] = "1";
+            output["message"] = "錯誤帳號密碼";
         }
         res.json(output)
     });

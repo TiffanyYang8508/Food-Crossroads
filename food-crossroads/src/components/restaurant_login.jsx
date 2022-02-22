@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from "jquery";
 import Axios from "axios";
 import Header from './header';
 import Footer from './footer';
@@ -9,7 +10,7 @@ import "../css/restaurant_login.css"
 
 class Restaurant_login extends Component {
     state = {
-        restaurant: { unified_compilation: "test", restaurant_pwd: "***" }
+        restaurant: { unified_compilation: "", restaurant_pwd: "" }
     }
 
     inputAccount = (e) => {
@@ -25,10 +26,11 @@ class Restaurant_login extends Component {
     }
 
     loginClick = async () => {
-        console.log("Ok1");
         await new Axios.post("http://localhost:8000/restaurant/login", this.state.restaurant)
             .then((res) => {
-                console.log(res.data);
+                if (res.data.status === "1") {
+                    $("#reportMessage").text(res.data.message);
+                }
             })
             .catch((error) => { console.error(error) });
     }
@@ -52,13 +54,13 @@ class Restaurant_login extends Component {
                                     <form action="" method="">
                                         <div className="form-group row">
                                             <label htmlFor="account" className="form_account"></label>
-                                            <input type="text" id="account" name="account" className="form_account" placeholder="請輸入您的帳號"
+                                            <input type="text" id="account" name="account" className="form_account" placeholder="請輸入您的帳號" required
                                                 value={this.state.restaurant.unified_compilation}
                                                 onChange={this.inputAccount} />
                                         </div>
                                         <div className="form-group row">
                                             <label htmlFor="password" className="form_secret"></label>
-                                            <input type="password" id="password" name="password" className="form_secret" placeholder="請輸入您的密碼"
+                                            <input type="password" id="password" name="password" className="form_secret" placeholder="請輸入您的密碼" required
                                                 value={this.state.restaurant.restaurant_pwd}
                                                 onChange={this.inputPwd} />
                                         </div>
@@ -75,7 +77,9 @@ class Restaurant_login extends Component {
                                             </div>
                                         </div>
                                     </form>
+
                                 </div>
+                                <div className="reportSpan" id='reportMessage'> </div>
                             </div>
                         </div>
                     </div>
