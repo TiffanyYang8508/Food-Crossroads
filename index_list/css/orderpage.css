@@ -90,6 +90,11 @@ div.food_list_border2{
     margin-right: 5%;
     font-size: 12pt;
 }
+#qty_number{
+    height: 35px;
+    margin: 0 5px;
+}
+
 
 .food_img{
     width: 150px;
