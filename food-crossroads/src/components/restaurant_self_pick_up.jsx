@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import $ from "jquery";
 import Header from './header';
 import Footer from './footer';
 import "../css/restaurant_self_pick_up.css";
 
 class Restaurant_self_pick_up extends Component {
     state = {}
+
+    componentDidMount() {
+        
+    }
+
     render() {
         return (
             <React.Fragment>
