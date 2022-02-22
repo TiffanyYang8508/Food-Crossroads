@@ -133,8 +133,12 @@
     border: 1px solid rgb(226, 225, 225);
 }
 
+#search_box .tab_content li{
+    display: inline-block;
+}
+
 #search_box .tab_content span {
-    margin-left: 10px;
+    margin: 0 5px;
     cursor: pointer;
 }
 
