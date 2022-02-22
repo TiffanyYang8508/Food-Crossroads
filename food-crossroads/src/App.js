@@ -20,19 +20,15 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/" component={Index} exact />
-          <Route path="/register" component={Member_register} exact />
-          <Route path="/self_pick" component={Restaurant_self_pick_up} exact />
-          <Route
-            path="/booking_history"
-            component={Restaurant_booking_history}
-            exact
-          />
-          <Route path="/login" component={MemberLogin} />
-          <Route path="/ordermanagement" component={Ordermanagement} />
+          <Route path="/"                  component={Index}                      exact />
+          <Route path="/register"          component={Member_register}            exact />
+          <Route path="/self_pick"         component={Restaurant_self_pick_up}    exact />
+          <Route path="/booking_history"   component={Restaurant_booking_history} exact />
+          <Route path="/login"             component={MemberLogin} />
+          <Route path="/ordermanagement"   component={Ordermanagement} />
           <Route path="/bookingmanagement" component={BookingManagement} />
-          <Route path="/member/:id" component={Member} />
-          <Route path="/editmember/:id" component={EditMember} />
+          <Route path="/member/:id"        component={Member} />
+          <Route path="/editmember/:id"    component={EditMember} />
         </Switch>
       </BrowserRouter>
     );
