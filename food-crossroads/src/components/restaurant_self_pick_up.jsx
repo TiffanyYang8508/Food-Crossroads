@@ -8,7 +8,7 @@ class Restaurant_self_pick_up extends Component {
     state = {}
 
     componentDidMount() {
-        
+
     }
 
     render() {
@@ -17,7 +17,12 @@ class Restaurant_self_pick_up extends Component {
                 <header className="header_page">
                     <Header />
                 </header>
+
                 <aside>
+                    <div class="search">
+                        <label for="search-box">搜尋</label>
+                        <input type="text" name="search-box" placeholder="訂單編號" />
+                    </div>
                     <div class="panel-group" id="accordion">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -49,41 +54,6 @@ class Restaurant_self_pick_up extends Component {
                                 <div class="little_title">
                                     <a data-parent="#accordion" href="restaurant_history_list.html">歷史訂餐紀錄</a>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">搜尋</a>
-                                </h4>
-                            </div>
-                            <div id="collapseThree" class="panel-collapse collapse in">
-
-                                <form class="sreach_form">
-                                    <div class="form-group row form_textbox">
-                                        <label for="booker" class="col-4 col-form-label"></label>
-                                        <div class="col-10">
-                                            <input id="booker" name="booker" placeholder="訂位人" type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row form_textbox">
-                                        <label for=" booking_number" class="col-4 col-form-label"></label>
-                                        <div class="col-10">
-                                            <input id=" booking_number" name=" booking_number" placeholder="訂位編號" type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row form_textbox">
-                                        <label for=" booking_date" class="col-4 col-form-label"></label>
-                                        <div class="col-10">
-                                            <input id=" booking_date" name=" booking_date" placeholder="訂位日期" type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row form_textbox">
-                                        <label for="booker_phone" class="col-4 col-form-label"></label>
-                                        <div class="col-10">
-                                            <input id="booker_phone" name="booker_phone" placeholder="手機" type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     </div>

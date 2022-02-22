@@ -6,6 +6,24 @@ aside {
     top: 12%;
 }
 
+
+.search {
+    padding: 10px 0px 5px 5px;
+    border-bottom: 1px solid white;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.search input {
+    height: 4vh;
+    width: 160px;
+    position: absolute;
+    right: 13px;
+    top: 13px;
+    font-size: 14px;
+}
+
 .panel-default{
     border-bottom: 1px solid white;
     padding: 5px;
