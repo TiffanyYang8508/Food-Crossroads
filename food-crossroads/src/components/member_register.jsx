@@ -11,11 +11,11 @@ import "../css/member_register.css"
 class Member_register extends Component {
     state = {
         member: {
-            user_name: "陳冠維",
-            user_email: "test@test.gmail.com",
-            user_pwd: "***",
-            user_pwd_confirm: "****",
-            user_tel: "0912345678"
+            user_name: "",
+            user_email: "",
+            user_pwd: "",
+            user_pwd_confirm: "",
+            user_tel: ""
         }
     }
 
