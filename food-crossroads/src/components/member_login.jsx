@@ -24,9 +24,13 @@ class Member_login extends Component {
     loginClick = async () => {
         console.log("OK");
         await new Axios.post("http://localhost:8000/login", this.state.member)
-            .then((res) => { console.table(res.data) })
+            .then((res) => {
+                if (res.data.status !== "1") {
+                    $("#reportMessage").text(res.data.message);
+                }
+            })
             .catch((error) => { console.error(error) });
-        console.log("OK2");
+        
     }
 
     inputEmail = (e) => {
@@ -88,12 +92,11 @@ class Member_login extends Component {
                                 </form>
                             </div>
                         </div>
-                        <div className="reportSpan1" id='reportEmail'>信箱錯誤</div>
-                        <div className="reportSpan2" id='reportPwd'>密碼錯誤</div>
+                        <div className="reportSpan" id='reportMessage'></div>
                     </div>
                 </div>
 
-                
+
 
                 <footer className="footer_page">
                     <Footer />

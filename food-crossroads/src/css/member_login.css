@@ -103,20 +103,16 @@
     height: 20px;
 }
 
-.reportSpan1 {
-    background-color: palegoldenrod;
-    position: relative;
-    top: 230px;
-    right: 285px;
+.reportSpan {
+    /* background-color: palegoldenrod; */
+    position: absolute;
+    top: 320px;
+    right: 453px;
     height: 5vh;
-}
-
-.reportSpan2 {
-    background-color: palegreen;
-    position: relative;
-    top: 300px;
-    right: 350px;
-    height: 5vh;
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    /* status */
 }
 
 /* ---------- body over ---------- */
