@@ -43,7 +43,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.get('/', (req, res) => {
-    
+
 })
 
 app.get('/login', (req, res) => {
@@ -120,9 +120,17 @@ app.get('/restaurant/login', (req, res) => {
 
 app.post('/restaurant/login', (req, res) => {
     const query = "SELECT restaurant_pwd from restaurant_account where unified_compilation = ?";
-    const params = req.body.account;
+    const params = req.body.unified_compilation;
     connection.query(query, params, async (err, rows) => {
-        console.log(rows);
+        if (err) throw err;
+        var output = {}
+        const result = Object.values(JSON.parse(JSON.stringify(rows)));
+        if(req.body.restaurant_pwd == result[0].restaurant_pwd) {
+            output["message"] = "正確帳號密碼"
+        }else{
+            output["message"] = "錯誤帳號密碼"
+        }
+        res.json(output)
     });
 })
 
