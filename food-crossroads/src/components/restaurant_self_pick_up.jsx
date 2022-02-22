@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import $ from "jquery";
 import Header from './header';
 import Footer from './footer';
 import "../css/restaurant_self_pick_up.css";
