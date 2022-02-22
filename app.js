@@ -120,9 +120,9 @@ app.get('/restaurant/login', (req, res) => {
 
 app.post('/restaurant/login', (req, res) => {
     const query = "SELECT restaurant_pwd from restaurant_account where unified_compilation = ?";
-    const params = req.body.unified_compilation;
+    const params = req.body.account;
     connection.query(query, params, async (err, rows) => {
-        
+        console.log(rows);
     });
 })
 
