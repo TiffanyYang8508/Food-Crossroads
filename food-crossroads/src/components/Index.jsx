@@ -81,7 +81,7 @@ class Index extends Component {
                                             <div className="tab_div dropdown_div">
                                                 <div className="tab_css">
 
-                                                    <input id="tab1" type="radio" name="tab" checked="checked" />
+                                                    <input id="tab1" type="radio" name="tab"/>
                                                     <label htmlFor="tab1">北部</label>
                                                     <div className="tab_content">
                                                         <span>基隆市</span>
@@ -327,7 +327,7 @@ class Index extends Component {
                                     </div>
                                     <div className="water_fall">
                                         <div className="kind_span">
-                                            <a href="/search?keyword=美式料理" title="美式料理">
+                                            <a href="/restaurant/:category" title="美式料理">
                                                 <div className="index_img">
                                                     <img src={require('../img/american_food.png')} alt="美式料理" />
                                                     <span>美式料理</span>

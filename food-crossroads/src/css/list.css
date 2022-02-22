@@ -73,9 +73,9 @@
     color: black;
 }
 
-#search_list .area_btn:checked+.area_label {
+/* #search_list .area_btn:checked+.area_label {
     box-shadow: 0 1px 10px 2px #888888;
-}
+} */
 
 #search_list .tab_div {
     background-color: white;

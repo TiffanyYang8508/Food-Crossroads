@@ -144,7 +144,7 @@
     font-weight: bold;
 }
 
-#search_box .tab_css input:checked+#search_box label+#search_box .tab_content {
+#search_box .tab_css input:checked+label+.tab_content {
     display: initial;
 }
 

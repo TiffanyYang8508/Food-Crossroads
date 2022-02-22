@@ -21,12 +21,27 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
+<<<<<<< HEAD
+          <Route path="/" component={Index} exact />
+          <Route path="/restaurant/list" component={Restaurant_list} exact />
+          <Route path="/restaurant/list/:category" component={Restaurant_list} exact />
+          <Route path="/register" component={Member_register} exact />
+          <Route path="/self_pick" component={Restaurant_self_pick_up} exact />
+          <Route
+            path="/booking_history"
+            component={Restaurant_booking_history}
+            exact
+          />
+          <Route path="/login" component={MemberLogin} />
+          <Route path="/ordermanagement" component={Ordermanagement} />
+=======
           <Route path="/"                  component={Index}                      exact />
           <Route path="/register"          component={Member_register}            exact />
           <Route path="/self_pick"         component={Restaurant_self_pick_up}    exact />
           <Route path="/booking_history"   component={Restaurant_booking_history} exact />
           <Route path="/member/login"      component={Member_login} />
           <Route path="/ordermanagement"   component={Ordermanagement} />
+>>>>>>> 34a3b7215a5db3434619bfdf1a5d3d5c2724d20e
           <Route path="/bookingmanagement" component={BookingManagement} />
           <Route path="/member/:id"        component={Member} />
           <Route path="/editmember/:id"    component={EditMember} />

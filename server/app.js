@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 var mysql = require("mysql");
-const { json } = require("express/lib/response");
+const { json, send } = require("express/lib/response");
 var conn = mysql.createConnection({
   user: "root",
   password: "root",
@@ -84,5 +84,14 @@ app.post("/register", async (req, res) => {
       console.log(rows);
       res.send(JSON.stringify(req.body));
     }
+  );
+});
+
+app.get("/restaurant",function(req,res){
+  conn.query("SELECT * FROM restaurant INNER JOIN restaurant_category ON restaurant.restaurant_category_id = restaurant_category.id",
+  [],
+  function(err,rows){
+    res.send(JSON.stringify(rows));
+  }
   );
 });
