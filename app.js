@@ -114,4 +114,16 @@ app.post('/register', (req, res) => {
     }
 })
 
+app.get('/restaurant/login', (req, res) => {
+    res.send("hello");
+})
+
+app.post('/restaurant/login', (req, res) => {
+    const query = "SELECT restaurant_pwd from restaurant_account where unified_compilation = ?";
+    const params = req.body.unified_compilation;
+    connection.query(query, params, async (err, rows) => {
+        
+    });
+})
+
 app.listen(8000);

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Axios from "axios";
 import Header from './header';
 import Footer from './footer';
 import "../fontawesome-free-5.15.4-web/css/all.min.css";
@@ -8,23 +9,28 @@ import "../css/restaurant_login.css"
 
 class Restaurant_login extends Component {
     state = {
-        restaurant: { unified_compilcation: "test", restaurant_pwd: "***" }
+        restaurant: { unified_compilation: "test", restaurant_pwd: "***" }
     }
 
     inputAccount = (e) => {
-        var newState = {...this.state};
-        newState.restaurant.unified_compilcation = e.target.value;
+        var newState = { ...this.state };
+        newState.restaurant.unified_compilation = e.target.value;
         this.setState(newState);
     }
 
     inputPwd = (e) => {
-        var newState = {...this.state};
+        var newState = { ...this.state };
         newState.restaurant.restaurant_pwd = e.target.value;
         this.setState(newState);
     }
 
-    loginClick = (e) => {
-        console.log("loginclick")
+    loginClick = async () => {
+        console.log("Ok1");
+        await new Axios.post("http://localhost:8000/restaurant/login", this.state.restaurant)
+            .then((res) => {
+                console.log(res.data);
+            })
+            .catch((error) => { console.error(error) });
     }
 
     render() {
@@ -47,7 +53,7 @@ class Restaurant_login extends Component {
                                         <div className="form-group row">
                                             <label htmlFor="account" className="form_account"></label>
                                             <input type="text" id="account" name="account" className="form_account" placeholder="請輸入您的帳號"
-                                                value={this.state.restaurant.unified_compilcation}
+                                                value={this.state.restaurant.unified_compilation}
                                                 onChange={this.inputAccount} />
                                         </div>
                                         <div className="form-group row">
