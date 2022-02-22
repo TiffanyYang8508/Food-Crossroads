@@ -4,10 +4,19 @@ import Header from './header';
 import Footer from './footer';
 import "../css/style.css";
 import "../css/index.css";
+import Axios from "axios";
 
 class Index extends Component {
     state = {
 
+    }
+
+    async componentDidMount() {
+        var url = `http://localhost:8000/restaurant/${this.props.match.params.category}`;
+        var result = await Axios.get(url);
+        this.state.Restaurant = result.data;
+        console.log(result.data);
+        this.setState({});
     }
 
     componentDidMount() {
@@ -327,7 +336,7 @@ class Index extends Component {
                                     </div>
                                     <div className="water_fall">
                                         <div className="kind_span">
-                                            <a href="/restaurant/:category" title="美式料理">
+                                            <a href="/restaurant/list/美式餐廳" title="美式料理">
                                                 <div className="index_img">
                                                     <img src={require('../img/american_food.png')} alt="美式料理" />
                                                     <span>美式料理</span>
@@ -335,7 +344,7 @@ class Index extends Component {
                                             </a>
                                         </div>
                                         <li className="kind_span">
-                                            <a href="/search?keyword=中式料理" title="中式料理">
+                                            <a href="/restaurant/list/中式料理" title="中式料理">
                                                 <div className="index_img">
                                                     <img src={require('../img/chinese_food.png')} alt="中式料理" />
                                                     <span>中式料理</span>
@@ -343,7 +352,7 @@ class Index extends Component {
                                             </a>
                                         </li>
                                         <li className="kind_span">
-                                            <a href="/search?keyword=法式料理" title="法式料理">
+                                            <a href="/restaurant/list/法式料理" title="法式料理">
                                                 <div className="index_img">
                                                     <img src={require('../img/french_food.png')} alt="法式料理" />
                                                     <span>法式料理</span>
@@ -351,7 +360,7 @@ class Index extends Component {
                                             </a>
                                         </li>
                                         <li className="kind_span">
-                                            <a href="/search?keyword=義式料理" title="義式料理">
+                                            <a href="/restaurant/list/義式料理" title="義式料理">
                                                 <div className="index_img">
                                                     <img src={require('../img/italian_food.png')} alt="義式料理" />
                                                     <span>義式料理</span>
@@ -359,7 +368,7 @@ class Index extends Component {
                                             </a>
                                         </li>
                                         <li className="kind_span">
-                                            <a href="/search?keyword=日式料理" title="日式料理">
+                                            <a href="/restaurant/list/日式料理" title="日式料理">
                                                 <div className="index_img">
                                                     <img src={require('../img/japanese_food.png')} alt="日式料理" />
                                                     <span>日式料理</span>
@@ -367,7 +376,7 @@ class Index extends Component {
                                             </a>
                                         </li>
                                         <li className="kind_span">
-                                            <a href="/search?keyword=韓式料理" title="韓式料理">
+                                            <a href="/restaurant/list/韓式料理" title="韓式料理">
                                                 <div className="index_img">
                                                     <img src={require('../img/korean_food.png')} alt="韓式料理" />
                                                     <span>韓式料理</span>
@@ -375,7 +384,7 @@ class Index extends Component {
                                             </a>
                                         </li>
                                         <li className="kind_span">
-                                            <a href="/search?keyword=中東料理" title="中東料理">
+                                            <a href="/restaurant/list/中東料理" title="中東料理">
                                                 <div className="index_img">
                                                     <img src={require('../img/middle_east_food.png')} alt="中東料理" />
                                                     <span>中東料理</span>
@@ -383,7 +392,7 @@ class Index extends Component {
                                             </a>
                                         </li>
                                         <li className="kind_span">
-                                            <a href="/search?keyword=港式料理" title="港式料理">
+                                            <a href="/restaurant/list/港式料理" title="港式料理">
                                                 <div className="index_img">
                                                     <img src={require('../img/port_food.png')} alt="港式料理" />
                                                     <span>港式料理</span>

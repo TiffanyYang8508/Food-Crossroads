@@ -17,10 +17,14 @@ class Restaurant_list extends Component {
     }
 
     async componentDidMount() {
-        var url = `http://localhost:8000/restaurant`;
+        if (this.props.match.params.category === undefined) {
+            var url = `http://localhost:8000/restaurant/list`;
+        } else {
+            var url = `http://localhost:8000/restaurant/list/${this.props.match.params.category}`;
+        }
         var result = await Axios.get(url);
         this.state.Restaurant = result.data;
-        console.log(result.data);
+        console.log(this.props.match.params.category);
         this.setState({});
     }
 
@@ -277,7 +281,7 @@ class Restaurant_list extends Component {
                                 </nav>
                                 <div className="rest_div">
                                     {
-                                        this.state.Restaurant.map((value, key) => 
+                                        this.state.Restaurant.map((value, key) =>
                                             <div className="rest_list" key={key}>
                                                 <div className="rest_img">
                                                     <img src="img/french_food.png" alt="" />

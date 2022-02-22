@@ -87,9 +87,18 @@ app.post("/register", async (req, res) => {
   );
 });
 
-app.get("/restaurant",function(req,res){
+app.get("/restaurant/list",function(req,res){
   conn.query("SELECT * FROM restaurant INNER JOIN restaurant_category ON restaurant.restaurant_category_id = restaurant_category.id",
   [],
+  function(err,rows){
+    res.send(JSON.stringify(rows));
+  }
+  );
+});
+
+app.get("/restaurant/list/:category",function(req,res){
+  conn.query("SELECT * FROM restaurant INNER JOIN restaurant_category ON restaurant.restaurant_category_id = restaurant_category.id WHERE restaurant_category = ?",
+  [req.params.category],
   function(err,rows){
     res.send(JSON.stringify(rows));
   }
