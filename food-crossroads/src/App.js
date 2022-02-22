@@ -5,9 +5,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Index from "./components/Index";
 import Restaurant_list from "./components/restaurant_list";
 import Member_register from "./components/member_register";
+import Member_login from "./components/member_login";
 import Restaurant_self_pick_up from "./components/restaurant_self_pick_up";
 import Restaurant_booking_history from "./components/restaurant_booking_history";
-import MemberLogin from "./components/member_login";
 import Ordermanagement from "./components/member_orderRecord";
 import BookingManagement from "./components/member_bookingRecord";
 import Member from "./components/member_memberinfo";
@@ -21,6 +21,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
+<<<<<<< HEAD
           <Route path="/" component={Index} exact />
           <Route path="/restaurant/list" component={Restaurant_list} exact />
           <Route path="/restaurant/list/:category" component={Restaurant_list} exact />
@@ -33,9 +34,17 @@ class App extends Component {
           />
           <Route path="/login" component={MemberLogin} />
           <Route path="/ordermanagement" component={Ordermanagement} />
+=======
+          <Route path="/"                  component={Index}                      exact />
+          <Route path="/register"          component={Member_register}            exact />
+          <Route path="/self_pick"         component={Restaurant_self_pick_up}    exact />
+          <Route path="/booking_history"   component={Restaurant_booking_history} exact />
+          <Route path="/member/login"      component={Member_login} />
+          <Route path="/ordermanagement"   component={Ordermanagement} />
+>>>>>>> 34a3b7215a5db3434619bfdf1a5d3d5c2724d20e
           <Route path="/bookingmanagement" component={BookingManagement} />
-          <Route path="/member/:id" component={Member} />
-          <Route path="/editmember/:id" component={EditMember} />
+          <Route path="/member/:id"        component={Member} />
+          <Route path="/editmember/:id"    component={EditMember} />
         </Switch>
       </BrowserRouter>
     );
