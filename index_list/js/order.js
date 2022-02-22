@@ -60,6 +60,9 @@ function btn_group3() {
     window.location.hash = "#group_3";
 }
 
+function btn_orderdisaplay(){
+    window.location.href = 'orderdisaplay.html';
+}
 
 
 

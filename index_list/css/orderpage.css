@@ -1,4 +1,8 @@
 
+.breaddiv{
+    margin-left: 2vw;
+}
+
 /* 分類列表 */
 .scroll {
     white-space: nowrap;
@@ -264,7 +268,7 @@ tbody td:nth-child(1) {
 
 thead th:nth-child(2),
 tbody td:nth-child(2) {
-  width: 3em;
+  width: 4em;
 }
 
 thead th:nth-child(3),
@@ -276,7 +280,7 @@ thead th:nth-child(4),
 tbody td:nth-child(4),
 thead th:nth-child(5),
 tbody td:nth-child(5) {
-  width: 1em;
+  width: 0.5em;
 }
 
 .order_member_table {
@@ -287,13 +291,8 @@ tbody td:nth-child(5) {
   color: white;
   background-color: #403c3c;
   border-radius: 50px;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
   height: 2em;
   width: 8em;
-  /* font-size: large; */
-  /* font-weight: 600; */
 }
 
 .share_member_table tbody tr:nth-child(1),
@@ -301,68 +300,135 @@ tbody td:nth-child(5) {
   text-align: left;
 }
 
-.share_member_table tbody tr:nth-child(2) p {
+.dropbtn p {
   position: relative;
 }
 
-.share_member_table tbody tr:nth-child(2) p::before {
+.dropbtn p::before {
   content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: -10px;
   height: 2px;
   width: 100%;
   transition: 0.3s all;
 }
 
-.share_member_table tbody tr:nth-child(2) p:hover::before {
+.dropbtn p:hover::before {
   content: "";
   background-color: lightslategrey;
 }
 
+.share_member{
+    width: 10%;
+	float: left;
+    margin-right: 8%;
+    position: fixed;
+    display: flex; 
+    justify-content:center;
+    top: 31%;
+    left: 85%;
+    transition: 0.3s;
+}
+
+
 #order_share {
-  position: fixed;
-  top: 30%;
-  margin-right: 5%;
+  position: relative;
+  bottom:10%;
+  display:flex;
 }
 
 .share_member_table {
-  position: fixed;
-  top: 40%;
-  margin-right: 5%;
+  position:relative;
 }
 
 .show_member {
   border: white solid 1px;
-  background-color: white;
-  position: fixed;
-  top: 50%;
-  right: 0%;
+  background-color: rgb(243, 238, 238);
+  position: absolute;
   text-align: center;
   width: 8em;
-  margin-right: 5.5%;
+  margin-right: 0%;
   z-index: 1;
+}
+
+#dropbtn div{
+  position: relative;
+  display: block;
 }
 
 .show_member_detail {
   padding-left: 0px;
 }
 
+
 .show_member_detail > li {
   border-bottom: #585555c5 0.5px solid;
+  font-size: 16px;
+  line-height: 1.5em;
+  align-items:baseline;
 }
 
-/* #checkout {
-  width: 100px;
-  height: 50px;
+#checkout {
+  width: 8em;
+  height: 2em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.rwd_icon_plus{
+  border-radius:50%;
+  border: solid 1.5px #585555c5;
+  height: 40px;
+  width: 40px;
   position: fixed;
-  bottom: 28%;
-  right: 6%;
-  align-self: center;
-  font-size: 12pt;
-} */
+  right: 0%;
+  z-index: 2;
+  background-color: white;
+  display: none;
+}
+.close_btn{
+  display: none;
+}
+
+.footer_page {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
 
 
-/*已開啟揪團 end*/
+
+@media screen and (max-width:768px) {
+  #table_order{
+    width: 100%;
+  }
+  .share_member{
+    visibility: hidden;
+  }
+ /* .rwd_icon_plus{
+    display: initial;
+  } */
+  
+  .rwd_share_member_table{
+    visibility: visible;
+    position: fixed;
+    top:160px;
+    right: 0;
+    z-index: 1;
+    background-color: antiquewhite;
+    border-radius: 0;
+    display: none;
+  }
+  #order_share  img{
+    display:none;
+  }
+  .close_btn{
+    display: inline;
+    float: right;
+  }
+  }
+  /*已開啟揪團 end*/
 
 
 
