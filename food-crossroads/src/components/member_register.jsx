@@ -63,7 +63,7 @@ class Member_register extends Component {
 
     render() {
         return (
-            <React.Fragment>
+            <>
 
                 <header className="header_page">
                     <Header />
@@ -134,7 +134,7 @@ class Member_register extends Component {
                     <Footer />
                 </footer>
 
-            </React.Fragment>
+            </>
         );
     }
 }

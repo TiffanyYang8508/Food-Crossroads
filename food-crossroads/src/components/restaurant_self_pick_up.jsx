@@ -12,7 +12,7 @@ class Restaurant_self_pick_up extends Component {
 
     render() {
         return (
-            <React.Fragment>
+            <>
                 <header className="header_page">
                     <Header />
                 </header>
@@ -163,7 +163,7 @@ class Restaurant_self_pick_up extends Component {
                 <footer className="footer_page">
                     <Footer />
                 </footer>
-            </React.Fragment>
+            </>
         );
     }
 }
