@@ -85,50 +85,29 @@
           <div class="col-md-12">
             <form>
               <div>
-                <p class="title_member_edit">會員資料修改</p>
+                <p class="title_member_edit">會員密碼修改</p>
               </div>
-              <div class="form-group form-inline">
-                <label for="name" class="edit_label">姓　　名:</label>
-                <input
-                  type="text"
-                  class="form-control edit_text"
-                  id="name"
-                  value="李曉明"
-                  name="name"
-                  required
-                />
-              </div>
-              <div class="form-group form-inline">
-                <label for="email" class="edit_label">信　　箱:</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  value="email@gmail.com"
-                  name="email"
-                  disabled
-                />
-              </div>
+
               <div class="form-group form-inline">
                 <label for="pwd" class="edit_label">密　　碼:</label>
                 <input
                   type="password"
                   class="form-control"
                   id="pwd"
-                  value="******"
+                  value=""
                   name="pwd"
-                  disabled
+                  required
                 />
                 <div class="invalid-feedback">請輸入密碼</div>
               </div>
               <div class="form-group form-inline">
-                <label for="tel" class="edit_label">電　　話:</label>
+                <label for="confirmpwd" class="edit_label">確認密碼:</label>
                 <input
-                  type="text"
+                  type="password"
                   class="form-control"
-                  id="tel"
-                  value="0900-xxxxxx"
-                  name="tel"
+                  id="confirmpwd"
+                  value=""
+                  name="confirmpwd"
                   required
                 />
               </div>
