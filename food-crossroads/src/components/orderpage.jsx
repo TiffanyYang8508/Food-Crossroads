@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-
+import Axios from "axios";
 import "../fontawesome-free-5.15.4-web/css/all.min.css";
 import Header from './header';
 import Footer from './footer';
 import "../css/orderpage.css";
-import Axios from "axios";
 
 
 class Orderpage extends Component {

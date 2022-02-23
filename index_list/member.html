@@ -28,26 +28,28 @@
     <!-- 導覽列 over -->
 
     <aside class="aside_menu">
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><a href="#">會員資料</a></h4>
-          </div>
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="#">會員資料</a>
+                    </h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="booking_manage.html">訂位管理</a>
+                    </h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="order_manage.html">訂餐管理</a>
+                    </h4>
+                </div>
+            </div>
         </div>
-        <div class="panel panel-default default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a href="booking_manage.html">訂位管理</a>
-            </h4>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a href="order_manage.html">訂餐管理</a>
-            </h4>
-          </div>
-        </div>
+        
       </div>
     </aside>
 
@@ -80,68 +82,42 @@
     </div>
 
     <section id="member_section">
-      <div class="container-fluid member_div">
-        <div class="row">
-          <div class="col-md-12">
-            <form>
-              <div>
-                <p class="title_member_edit">會員資料</p>
-              </div>
-              <div class="form-group form-inline">
-                <label for="email">信　箱:</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  value="email@gmail.com"
-                  name="email"
-                  disabled
-                />
-              </div>
-              <div class="form-group form-inline">
-                <label for="pwd">密　碼:</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="pwd"
-                  value="******"
-                  name="pwd"
-                  disabled
-                />
-              </div>
-              <div class="form-group form-inline">
-                <label for="name">姓　名:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  value="李曉明"
-                  name="name"
-                  disabled
-                />
-              </div>
-              <div class="form-group form-inline">
-                <label for="tel">手　機:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="tel"
-                  value="0900-xxxxxx"
-                  name="tel"
-                  disabled
-                />
-              </div>
-              <div class="btn_div">
-                <button
+
+        <div class="container-fluid member_div">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="member_form">
+                        <div>
+                            <p class="title_member_edit">會員資料</p>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label for="email">信　箱:</label>
+                            <input type="email" class="form-control" id="email" value="email@gmail.com" name="email"
+                                disabled>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label for="pwd">密　碼:</label>
+                            <input type="password" class="form-control" id="pwd" value="******" name="pwd" disabled>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label for="name">姓　名:</label>
+                            <input type="text" class="form-control" id="name" value="李曉明" name="name" disabled>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label for="tel">手　機:</label>
+                            <input type="text" class="form-control" id="tel" value="0900-xxxxxx" name="tel" disabled>
+                        </div>
+                        <div class="btn_div">
+                            <button
                   type="button"
                   onclick="edit()"
                   class="member_confirm_btn"
-                >
-                  修改資料
-                </button>
-              </div>
-            </form>
-          </div>
+                >修改資料
+                        </div>
+                    </form>
+                </div>
+            </div>
+
         </div>
       </div>
     </section>
