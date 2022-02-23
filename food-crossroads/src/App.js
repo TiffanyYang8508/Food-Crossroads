@@ -13,6 +13,7 @@ import BookingManagement from "./components/member_bookingRecord";
 import Member from "./components/member_memberinfo";
 import EditMember from "./components/member_editmember";
 import Restaurant_login from "./components/restaurant_login";
+import Orderpage from "./components/orderpage";
 
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
           <Route path="/bookingmanagement"          component={BookingManagement} />
           <Route path="/member/:id"                 component={Member} />
           <Route path="/editmember/:id"             component={EditMember} />
+          <Route path="/order/:id"                  component={Orderpage} />
         </Switch>
       </BrowserRouter>
     );
