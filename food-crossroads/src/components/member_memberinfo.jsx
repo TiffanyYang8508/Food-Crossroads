@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Header from './header';
-import Footer from './footer';
+import Header from "./header";
+import Footer from "./footer";
 import "../css/member.css";
 
 import Axios from "axios";
@@ -112,9 +112,12 @@ class Member extends Component {
                     />
                   </div>
                   <div class="btn_div">
-                    <button onclick="edit()" class="member_confirm_btn">
+                    <a
+                      href={`/editmember/1`}
+                      className="btn member_confirm_btn"
+                    >
                       修改資料
-                    </button>
+                    </a>
                   </div>
                 </form>
               </div>

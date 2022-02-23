@@ -62,14 +62,14 @@ app.put("/member/list/:id", async (req, res) => {
 
 app.post("/register", async (req, res) => {
   //判斷格式是否有誤
-  let { error } = registerValidation(req.body);
-  if (error) {
-    if (error.details[0].context.key === "email") {
-      return res.send(error);
-    } else if (error.details[0].context.key === "password") {
-      return res.send(error);
-    }
-  }
+  // let { error } = registerValidation(req.body);
+  // if (error) {
+  //   if (error.details[0].context.key === "email") {
+  //     return res.send(error);
+  //   } else if (error.details[0].context.key === "password") {
+  //     return res.send(error);
+  //   }
+  // }
 
   const hashedPassword = await bcrypt.hash(req.body.user_pwd, 10);
   let result = await conn.query(
@@ -87,21 +87,23 @@ app.post("/register", async (req, res) => {
   );
 });
 
-app.get("/restaurant/list",function(req,res){
-  conn.query("SELECT * FROM restaurant INNER JOIN restaurant_category ON restaurant.restaurant_category_id = restaurant_category.id",
-  [],
-  function(err,rows){
-    res.send(JSON.stringify(rows));
-  }
+app.get("/restaurant/list", function (req, res) {
+  conn.query(
+    "SELECT * FROM restaurant INNER JOIN restaurant_category ON restaurant.restaurant_category_id = restaurant_category.id",
+    [],
+    function (err, rows) {
+      res.send(JSON.stringify(rows));
+    }
   );
 });
 
-app.get("/restaurant/list/:category",function(req,res){
-  conn.query("SELECT * FROM restaurant INNER JOIN restaurant_category ON restaurant.restaurant_category_id = restaurant_category.id WHERE restaurant_category = ?",
-  [req.params.category],
-  function(err,rows){
-    res.send(JSON.stringify(rows));
-  }
+app.get("/restaurant/list/:category", function (req, res) {
+  conn.query(
+    "SELECT * FROM restaurant INNER JOIN restaurant_category ON restaurant.restaurant_category_id = restaurant_category.id WHERE restaurant_category = ?",
+    [req.params.category],
+    function (err, rows) {
+      res.send(JSON.stringify(rows));
+    }
   );
 });
 
@@ -116,7 +118,7 @@ app.get("/service",function(req,res){
   );
 });
 
-app.get("/orderpage/:id",function(req,res){
+app.get("/orderpage/:id", function (req, res) {
   conn.query(
     "SELECT * FROM menu WHERE restaurand_id = ? ",
     [req.params.restaurant_id],

@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 
+
 import "../fontawesome-free-5.15.4-web/css/all.min.css";
 import "../css/style.css";
 import Header from './header';
 import Footer from './footer';
-import "../css/shoppingchar.css"
+import "../css/shoppingchar.css";
+import Axios from "axios";
 
 
 class Shoppingchar extends Component {
-    state = {}
+    state = {
+        shoppingcharItem: { food_name: "仲夏野莓冰淇淋蘇打", food_amount: "150" }
+    }
+
+
     render() {
         return (
             <React.Fragment>
@@ -55,7 +61,7 @@ class Shoppingchar extends Component {
                                                         alt="" />
                                                 </td>
                                                 <td>
-                                                    <span id="ordername" className="ordername">餐點名</span>
+                                                    <span id="ordername" className="ordername">{this.state.shoppingcharItem.food_name}</span>
                                                 </td>
                                                 <td>
                                                     <span>$123</span>
@@ -75,6 +81,7 @@ class Shoppingchar extends Component {
                                                     <span>刪除</span>
                                                 </td>
                                             </tr>
+
                                         </tbody>
                                     </table>
                                 </div>

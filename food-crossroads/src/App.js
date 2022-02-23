@@ -14,6 +14,9 @@ import BookingManagement from "./components/member_bookingRecord";
 import Member from "./components/member_memberinfo";
 import EditMember from "./components/member_editmember";
 import Restaurant_login from "./components/restaurant_login";
+import Shoppingchar from './components/shoppingchar';
+import Shoppingok from './components/shoppingok';
+import Orderdisplay from './components/orderdisplay';
 import Orderpage from "./components/orderpage";
 
 class App extends Component {
@@ -23,6 +26,7 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route path="/" component={Index} exact />
+
           <Route
             path="/restaurant/list/:category?"
             component={Restaurant_list}
@@ -42,6 +46,9 @@ class App extends Component {
           <Route path="/bookingmanagement" component={BookingManagement} />
           <Route path="/member/:id" component={Member} />
           <Route path="/editmember/:id" component={EditMember} />
+          <Route path="/shoppingchar/:id" component={Shoppingchar} exact />
+          <Route path="/shoppingok" component={Shoppingok} exact />
+          <Route path="/orderdisplay" component={Orderdisplay} exact />
           <Route path="/orderpage/" component={Orderpage} />
         </Switch>
       </BrowserRouter>

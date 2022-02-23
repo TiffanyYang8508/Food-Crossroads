@@ -1,9 +1,10 @@
-#restaurant_login_index{
+#restaurant_login_index{    
     width: 100%;
+    padding-bottom: 100px;
 }
 .restaurant_div{
     width: 100%;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 .restaurant_name {
     margin: 20px 0;
@@ -12,6 +13,11 @@
 .restaurant_management {
     display: flex;
     justify-content: space-around;
+}
+
+.restaurant_name span {
+    font-weight: bold;
+    color: red;
 }
 
 .restaurant_detail {

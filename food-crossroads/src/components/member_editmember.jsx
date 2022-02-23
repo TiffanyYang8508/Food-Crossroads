@@ -41,7 +41,7 @@ class EditMember extends Component {
       "http://localhost:8000/member/list/1",
       this.state.Member
     );
-    //window.location = "/login";
+    window.location = "/member/1";
   };
 
   render() {

@@ -117,7 +117,7 @@ class Member_register extends Component {
     console.log("OK");
     await new Axios.post("http://localhost:8000/register", this.state.member)
       .then((res) => {
-        if (res.data.status == "0") {
+        if (res.data.status === "") {
           $("#reportMessage").text(res.data.err);
         }
         console.table(res.data);
