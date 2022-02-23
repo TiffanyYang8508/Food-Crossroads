@@ -282,42 +282,22 @@ class Restaurant_list extends Component {
                                 <div className="rest_div">
                                     {
                                         this.state.Restaurant.map((value, key) =>
-                                            <div className="rest_list" key={key}>
-                                                <div className="rest_img">
-                                                {/* require("../img/restaurant_list_img/7分so.jpg") */}
-                                                    <img src={`/img/restaurant_list_img/${value.restaurant_img}`} alt={value.restaurant_img} />
-                                                </div>
-                                                <div className="rest_text">
-                                                    <p>{value.restaurant_category}</p>
-                                                    <h5>{value.restaurant_name}</h5>
-                                                    <h5>{value.restaurant_address}</h5>
-                                                    <div className="rest_inline_div">
+                                            <a href="" className="rest_list_a">
+                                                <div className="rest_list" key={key}>
+                                                    <div className="rest_img">
+                                                        <img src={`/img/restaurant_list_img/${value.restaurant_img}`} alt={value.restaurant_img} />
+                                                    </div>
+                                                    <div className="rest_text">
+                                                        <span>{value.restaurant_category}</span>
+                                                        <h4>{value.restaurant_name}</h4>
+                                                        <h5>{value.restaurant_address}</h5>
                                                         <span>評分</span>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                         )
                                     }
                                 </div>
-                                <nav id="page_list" aria-label="Page navigation example">
-                                    <ul className="pagination">
-                                        <li className="page-item">
-                                            <a className="page-link" href="#" aria-label="Previous">
-                                                <span aria-hidden="true">&laquo;</span>
-                                                <span className="sr-only">Previous</span>
-                                            </a>
-                                        </li>
-                                        <li className="page-item"><a className="page-link" href="#">1</a></li>
-                                        {/* <li className="page-item"><a className="page-link" href="#">2</a></li>
-                                            <li className="page-item"><a className="page-link" href="#">3</a></li> */}
-                                        <li className="page-item">
-                                            <a className="page-link" href="#" aria-label="Next">
-                                                <span aria-hidden="true">&raquo;</span>
-                                                <span className="sr-only">Next</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
                             </div>
                         </div>
                     </div>
