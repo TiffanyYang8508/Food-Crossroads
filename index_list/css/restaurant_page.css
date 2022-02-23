@@ -230,20 +230,10 @@ div.flex1 {
     height: 200px;
     font-size: 18px;
     font-weight: bold;
+    padding: 0 10px;
     /* border: 1px solid grey; */
     border-radius: 3px;
-    margin: 20px auto;
     /* margin-bottom: 10px; */
-}
-
-.shop_container,
-.shop_container:hover
-{
-    height: 100%;
-    margin-top: 10px;
-}
-.shop_container {
-    padding: 0 10px;
 }
 
 .shop_wrapper {
@@ -317,15 +307,12 @@ div.flex1 {
     background-color: grey;     
 }
 
+.space{
+    width: 100%;
+    height: 50px;
+}
+
+
 /* ---------- body over ---------- */
 
 
-/* ---------- footer_page start ---------- */
-
-.footer_page {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* ---------- footer_page over ---------- */

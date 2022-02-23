@@ -28,6 +28,11 @@ class Index extends Component {
     }
 
     componentDidMount() {
+        $(".tab_content li").click(function(){
+            console.log($(this).data('value'));
+        });
+
+
         // 收闔選單
         $(".dropdown_label").click(function (e) {
             e.preventDefault();
@@ -105,19 +110,19 @@ class Index extends Component {
                                                         <li data-value="基隆市">
                                                             <span>基隆市</span>
                                                         </li>
-                                                        <li value="台北市">
+                                                        <li data-value="台北市">
                                                             <span>台北市</span>
                                                         </li>
-                                                        <li value="新北市">
+                                                        <li data-value="新北市">
                                                             <span>新北市</span>
                                                         </li>
-                                                        <li value="桃園市">
+                                                        <li data-value="桃園市">
                                                             <span>桃園市</span>
                                                         </li>
-                                                        <li value="新竹市">
+                                                        <li data-value="新竹市">
                                                             <span>新竹市</span>
                                                         </li>
-                                                        <li value="新竹縣">
+                                                        <li data-value="新竹縣">
                                                             <span>新竹縣</span>
                                                         </li>
                                                     </ul>
@@ -125,19 +130,19 @@ class Index extends Component {
                                                     <input id="tab2" type="radio" name="tab" />
                                                     <label htmlFor="tab2">中部</label>
                                                     <ul className="tab_content">
-                                                        <li value="苗栗縣">
+                                                        <li data-value="苗栗縣">
                                                             <span>苗栗縣</span>
                                                         </li>
-                                                        <li value="台中市">
+                                                        <li data-value="台中市">
                                                             <span>台中市</span>
                                                         </li>
-                                                        <li value="南投縣">
+                                                        <li data-value="南投縣">
                                                             <span>南投縣</span>
                                                         </li>
-                                                        <li value="彰化縣">
+                                                        <li data-value="彰化縣">
                                                             <span>彰化縣</span>
                                                         </li>
-                                                        <li value="雲林縣">
+                                                        <li data-value="雲林縣">
                                                             <span>雲林縣</span>
                                                         </li>
                                                     </ul>
@@ -145,19 +150,19 @@ class Index extends Component {
                                                     <input id="tab3" type="radio" name="tab" />
                                                     <label htmlFor="tab3">南部</label>
                                                     <ul className="tab_content">
-                                                        <li value="嘉義市">
+                                                        <li data-value="嘉義市">
                                                             <span>嘉義市</span>
                                                         </li>
-                                                        <li value="嘉義縣">
+                                                        <li data-value="嘉義縣">
                                                             <span>嘉義縣</span>
                                                         </li>
-                                                        <li value="台南市">
+                                                        <li data-value="台南市">
                                                             <span>台南市</span>
                                                         </li>
-                                                        <li value="高雄市">
+                                                        <li data-value="高雄市">
                                                             <span>高雄市</span>
                                                         </li>
-                                                        <li value="屏東縣">
+                                                        <li data-value="屏東縣">
                                                             <span>屏東縣</span>
                                                         </li>
                                                     </ul>
@@ -165,13 +170,13 @@ class Index extends Component {
                                                     <input id="tab4" type="radio" name="tab" />
                                                     <label htmlFor="tab4">東部</label>
                                                     <ul className="tab_content">
-                                                        <li value="宜蘭縣">
+                                                        <li data-value="宜蘭縣">
                                                             <span>宜蘭縣</span>
                                                         </li>
-                                                        <li value="花蓮縣">
+                                                        <li data-value="花蓮縣">
                                                             <span>花蓮縣</span>
                                                         </li>
-                                                        <li value="台東縣">
+                                                        <li data-value="台東縣">
                                                             <span>台東縣</span>
                                                         </li>
                                                     </ul>
@@ -179,13 +184,13 @@ class Index extends Component {
                                                     <input id="tab5" type="radio" name="tab" />
                                                     <label htmlFor="tab5">離島</label>
                                                     <ul className="tab_content">
-                                                        <li value="澎湖縣">
+                                                        <li data-value="澎湖縣">
                                                             <span>澎湖縣</span>
                                                         </li>
-                                                        <li value="連江縣">
+                                                        <li data-value="連江縣">
                                                             <span>連江縣</span>
                                                         </li>
-                                                        <li value="金門縣">
+                                                        <li data-value="金門縣">
                                                             <span>金門縣</span>
                                                         </li>
                                                     </ul>

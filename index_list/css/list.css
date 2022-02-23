@@ -258,6 +258,9 @@
 
 /* 餐廳列表 start */
 
+.rest_text .fa-star{
+    color: #FCC106;
+}
 
 .rest_div {
     width: 100%;
