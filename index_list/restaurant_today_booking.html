@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>今日取餐</title>
+  <title>今日訂位</title>
 
   <!-- bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -22,83 +22,57 @@
 </head>
 
 <body>
-    <!-- 導覽列 start -->
-    
-    <div class="header_page"></div>
-    
-    <!-- 導覽列 over -->
+  <!-- 導覽列 start -->
 
-    <aside>
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">預位管理</a>
-            </h4>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse in">
-            <div class="little_title">
-              <a data-parent="#accordion" href="restaurant_today_booking.html">今日訂位</a>
-            </div>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse in">
-            <div class="little_title">
-              <a data-parent="#accordion" href="restaurant_booking_history.html">歷史訂位紀錄</a>
-            </div>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="LOGO"></a>
+      <div class="rwd_icon">
+        <a class="nav_a" href="list.html"><i class="fas fa-store"></i></a>
+        <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i></a>
+        <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 導覽列 over -->
+
+  <aside>
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+          <div class="little_title">
+            <a data-parent="#accordion" href="restaurant_today_booking.html">今日訂位</a>
           </div>
         </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">訂位管理</a>
-            </h4>
-          </div>
-          <div id="collapseTwo" class="panel-collapse collapse in">
-            <div class="little_title">
-              <a data-parent="#accordion" href="restaurant_self_pick_up.html">今日自取訂餐</a>
-            </div>
-          </div>
-          <div id="collapseTwo" class="panel-collapse collapse in">
-            <div class="little_title">
-              <a data-parent="#accordion" href="restaurant_history_list.html">歷史訂餐紀錄</a>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">搜尋</a>
-            </h4>
-          </div>
-          <div id="collapseThree" class="panel-collapse collapse in">
-  
-            <form class="sreach_form">
-              <div class="form-group row form_textbox">
-                <label for="booker" class="col-4 col-form-label"></label>
-                <div class="col-10">
-                  <input id="booker" name="booker" placeholder="訂位人" type="text" class="form-control">
-                </div>
-              </div>
-              <div class="form-group row form_textbox">
-                <label for=" booking_number" class="col-4 col-form-label"></label>
-                <div class="col-10">
-                  <input id=" booking_number" name=" booking_number" placeholder="訂位編號" type="text" class="form-control">
-                </div>
-              </div>
-              <div class="form-group row form_textbox">
-                <label for=" booking_date" class="col-4 col-form-label"></label>
-                <div class="col-10">
-                  <input id=" booking_date" name=" booking_date" placeholder="訂位日期" type="text" class="form-control">
-                </div>
-              </div>
-              <div class="form-group row form_textbox">
-                <label for="booker_phone" class="col-4 col-form-label"></label>
-                <div class="col-10">
-                  <input id="booker_phone" name="booker_phone" placeholder="手機" type="text" class="form-control">
-                </div>
-              </div>
-            </form>
+        <div id="collapseOne" class="panel-collapse collapse in">
+          <div class="little_title">
+            <a data-parent="#accordion" href="restaurant_booking_history.html">歷史訂位紀錄</a>
           </div>
         </div>
       </div>
-    </aside>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">訂餐管理</a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse in">
+          <div class="little_title">
+            <a data-parent="#accordion" href="restaurant_self_pick_up.html">今日自取訂餐</a>
+          </div>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse in">
+          <div class="little_title">
+            <a data-parent="#accordion" href="restaurant_history_list.html">歷史訂餐紀錄</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
 
   <div class="container">
     <table class="table order_table">
@@ -114,7 +88,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="test">
           <td>
             <div class="checkbox">
               <label>
@@ -122,19 +96,19 @@
               </label>
             </div>
           </td>
-          <td>00001</td>
-          <td>2022-01-08</td>
-          <td>17:00</td>
-          <td>3</td>
-          <td>李曉明</td>
-          <td>09001993412</td>
+          <td>00127</td>
+          <td>2022-02-24</td>
+          <td>20:00</td>
+          <td>2</td>
+          <td>張哲偉</td>
+          <td>0972607451</td>
           <td>
             <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
               詳細內容
             </button>
           </td>
           <td>
-            <button class="btn btn-sm detail_btn cancel_btn" data-toggle="modal" data-target="#detailModal"
+            <button class="btn btn-sm detail_btn cancel_btn" data-toggle="modal" data-target="#detailModal2"
               style="border: 1px solid #403C3C;">
               取消
             </button>
@@ -149,19 +123,19 @@
               </label>
             </div>
           </td>
-          <td>00001</td>
-          <td>2022-01-08</td>
+          <td>00126</td>
+          <td>2022-02-24</td>
           <td>17:00</td>
-          <td>3</td>
-          <td>李曉明</td>
-          <td>09001993412</td>
+          <td>4</td>
+          <td>張瑜庭</td>
+          <td>0902135699</td>
           <td>
             <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
               詳細內容
             </button>
           </td>
           <td>
-            <button class="btn btn-sm detail_btn cancel_btn" data-toggle="modal" data-target="#detailModal"
+            <button class="btn btn-sm detail_btn cancel_btn" data-toggle="modal" data-target="#detailModal2"
               style="border: 1px solid #403C3C;">
               取消
             </button>
@@ -176,19 +150,19 @@
               </label>
             </div>
           </td>
-          <td>00001</td>
-          <td>2022-01-08</td>
-          <td>17:00</td>
+          <td>00125</td>
+          <td>2022-02-23</td>
+          <td>18:30</td>
           <td>3</td>
           <td>李曉明</td>
-          <td>09001993412</td>
+          <td>0918557110</td>
           <td>
             <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
               詳細內容
             </button>
           </td>
           <td>
-            <button class="btn btn-sm detail_btn cancel_btn" data-toggle="modal" data-target="#detailModal"
+            <button class="btn btn-sm detail_btn cancel_btn" data-toggle="modal" data-target="#detailModal2"
               style="border: 1px solid #403C3C;">
               取消
             </button>
@@ -203,20 +177,20 @@
               </label>
             </div>
           </td>
-          <td>00001</td>
-          <td>2022-01-08</td>
-          <td>17:00</td>
+          <td>00124</td>
+          <td>2022-02-23</td>
+          <td>17:15</td>
           <td>3</td>
-          <td>李曉明</td>
-          <td>09001993412</td>
+          <td>陳誠慶</td>
+          <td>0972110202</td>
           <td>
             <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
               詳細內容
             </button>
           </td>
           <td>
-            <button class="btn btn-sm detail_btn cancel_btn" data-toggle="modal" data-target="#detailModal"
-              style="border: 1px solid #403C3C;">
+            <button class="btn btn-sm detail_btn cancel_btn" data-toggle="modal" data-target="#detailModal2"
+              style="border: 1px solid #403C3C;" >
               取消
             </button>
           </td>
@@ -228,20 +202,19 @@
             <div class="modal-content">
               <!-- Modal Header -->
               <div class="modal-header">
-                <h4 class="modal-title">訂單明細</h4>
+                <h3 class="modal-title">訂單明細</h3>
                 <button type="button" class="close" data-dismiss="modal"></button>
               </div>
 
               <!-- Modal body -->
               <div class="detail_modal_body">
-                姓名：李曉明 <br />
-                手機：0900-xxxxxx<br />
-                電子郵件：email@gmail.com <br />
-                <br />
-                訂位編號：00001 <br />
-                訂位人數：3人 <br />
-                訂位日期：2022/02/02 <br />
-                取位時間：17:30 <br />
+                姓名：張哲偉 <br />
+                手機：0972607451<br />
+                電子郵件：jason8745@gmail.com <br />
+                訂位編號：00127 <br />
+                訂位人數：2人 <br />
+                訂位日期：2022/02/24 <br />
+                取位時間：20:00 <br />
                 備註：需要兒童座椅
               </div>
 
@@ -255,22 +228,60 @@
           </div>
         </div>
 
+        <div class="modal fade" id="detailModal2">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h3 class="modal-title">確定取消訂單嗎?</h3>
+                <button type="button" class="close" data-dismiss="modal"></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="detail_modal_body">
+                姓名：張哲偉 <br />
+                手機：0972607451<br />
+                電子郵件：jason8745@gmail.com <br />
+                訂位編號：00127 <br />
+                訂位人數：2人 <br />
+                訂位日期：2022/02/24 <br />
+                取位時間：20:00 <br />
+                備註：需要兒童座椅
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-lg btn-danger" data-dismiss="modal" onclick="myFunction()">
+                  確認取消 
+                </button>
+                <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">
+                  返回
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </tbody>
     </table>
   </div>
 
 
-    <!-- 頁尾 start -->
+  <!-- 頁尾 start -->
 
-    <div class="footer_page"></div>
+  <div class="footer_page"></div>
 
-    <!-- 頁尾 over -->
+  <!-- 頁尾 over -->
 
-    <script>
-      $(document).ready(function() {
-          $(".header_page").load("header.html");
-          $(".footer_page").load("footer.html");
-      });
+  <script>
+    $(document).ready(function () {
+      $(".header_page").load("header.html");
+      $(".footer_page").load("footer.html");
+    });
+
+    function myFunction() {
+      $("#test").addClass("test");
+    }
   </script>
 </body>
 

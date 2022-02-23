@@ -32,6 +32,18 @@
     margin-bottom: 10px;
 }
 
+.restaurant_detail a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.restaurant_detail a:hover {
+    font-size: 35px;
+    transition: 0.3s;
+    color: rgb(204, 201, 201);
+}
+
 .restaurant_name h3{
     font-weight: 600;
 }

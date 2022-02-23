@@ -1,3 +1,6 @@
+.test {
+    display: none;
+}
 aside {
     background-color: #403C3C;
     width: 230px;
@@ -162,6 +165,15 @@ tbody .detail_btn {
     top: -40px;
 
 }
+.modal-title {
+    font-weight: bold;
+}
+.detail_modal_body {
+   font-size: 20px;
+   letter-spacing: 2px;
+   position: relative;
+   right: 40px;
+}
 
 /* RWD */
 
@@ -253,6 +265,7 @@ tbody .detail_btn {
         font-size: 24px; 
     }
     .detail_modal_body{
+    
         margin-top: 50px;
         margin-bottom: 50px;
         margin-left: 150px;

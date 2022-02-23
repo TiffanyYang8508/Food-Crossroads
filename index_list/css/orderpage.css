@@ -20,7 +20,6 @@
     height: 75px;
     width: 100%;
     background-color: #403C3C;
-    position: sticky;
 }
 
 #menu_group{
@@ -60,6 +59,7 @@
 /* 分類標題 */
 .food_title{
 margin-left: 10vw;
+margin-top: 50px;
 }
 
 #group_1{
@@ -234,6 +234,10 @@ div.food_list_border2{
     color: #fff;
     width: 100%;
     height: 40px;
+}
+
+.foot{
+    height: 50px;
 }
 
 /* 置頂紐 */
