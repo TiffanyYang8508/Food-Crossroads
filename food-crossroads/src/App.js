@@ -42,7 +42,7 @@ class App extends Component {
           <Route path="/bookingmanagement" component={BookingManagement} />
           <Route path="/member/:id" component={Member} />
           <Route path="/editmember/:id" component={EditMember} />
-          <Route path="/orderpage/:id" component={Orderpage} exact />
+          <Route path="/orderpage/" component={Orderpage} />
         </Switch>
       </BrowserRouter>
     );
