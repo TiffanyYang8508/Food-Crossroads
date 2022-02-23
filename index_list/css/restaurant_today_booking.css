@@ -6,7 +6,7 @@ aside {
     width: 230px;
     height: 85vh;
     position: fixed;
-    top: 12%;
+    top: 10%;
 }
 
 .panel-default{
@@ -58,9 +58,26 @@ aside {
     height: 83vh;    
 }
 
+.search-bar {
+    position: relative;
+    left: 35px;
+}
+.search-bar button {
+    height: 30px;
+    font-weight: 600;
+}
+
+.search-bar button:hover {
+    background-color: rgb(165, 164, 164);
+}
+
+.search-bar input {
+    width: 1000px;
+}
+
 .container .order_table {
     position: absolute;
-    top: 100px;
+    top: 120px;
     left: 16%;
     width: 80%;
 }
@@ -105,6 +122,11 @@ label{
     font-family: Noto Sans TC;
 }
 
+thead {
+    position: relative;
+    right: 20px;
+}
+
 th{
     text-align: center;
     position: relative;
@@ -118,6 +140,10 @@ td{
 
 tbody .detail_btn {
     border-radius: 8px;
+}
+
+.detail_btn:hover {
+    background-color: gray;
 }
 
 .comment_btn{
