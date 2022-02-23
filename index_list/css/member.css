@@ -69,7 +69,7 @@
 #member_section,#edit_member{
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 2%;
     width: 100%;
 }
 
@@ -112,6 +112,10 @@ label {
     width: 285px;
 }
 
+.member_form {
+    font-weight: bold;
+}
+
 .btn_div {
     width: 100%;
     display: flex;
@@ -131,7 +135,7 @@ label {
 }
 
 .member_confirm_btn:hover {
-    background-color: #a30f01;
+    background-color: #f04535;
 }
 
 .member_back_btn {

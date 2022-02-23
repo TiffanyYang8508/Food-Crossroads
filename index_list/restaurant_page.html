@@ -107,7 +107,7 @@
                     </div>
                     <div>
                         <i class="far fa-comment-alt"></i>
-                        <span id="shop_comment_no">12</span>
+                        <span id="shop_comment_no">2</span>
                     </div>
                 </div>               
                 <hr />
@@ -275,7 +275,7 @@
 
 
     <!-- 置頂鈕 start -->
-    <button type="button" class="btn btn-floating btn-lg" id="btn_back_to_top">
+    <button type="button" class="ontop_btn" onclick="topfunction()">
         <i class="fas fa-arrow-up"></i>
     </button>
     <!-- 置頂鈕 over -->
@@ -294,6 +294,21 @@
             $( ".header_page" ).load( "header.html" );
             $( ".footer_page" ).load( "footer.html" );
         } );
+
+
+
+
+        // 置頂按鈕:點選後回到頂端
+        function topfunction() {
+            $("html,body").animate({scrollTop:0},300);
+        }
+        $(window).scroll(function(){
+            if($(this).scrollTop()>300){
+                $(".ontop_btn").fadeIn(100);
+            }else{
+                $(".ontop_btn").stop().fadeOut(100);
+            }
+        });
 
         
         

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>揪團訂餐</title>
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -19,6 +19,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/order.js"></script>
+
 </head>
 
 <body>
@@ -342,47 +344,39 @@
 
 
     <!-- 揪團結帳 -->
-    <div class="share_member row align-items-start justify-content-end">
-        <div class="d-flex" id="order_share">
-            <a href="#"><img src="./img/people_plus@3x.png" style="width: 25px; height: 20px; margin-right: 5px;"></a>
-            <button type="button" class="btn_view" style="font-size: 18px;" title="copied">揪團分享連結</button>
-        </div>
+    <div class="share_member col-md-3 rwd_share_member" id="ordermember_Sidebar">
 
-        <table class="table share_member_table"
-            style="font-size: 18px; width:50px; line-height: 1em; border: 1px solid #403c3c ; border-radius: 10%;">
-            <tbody>
-                <tr>
-                    <td><b>團長:</b></td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="dropbtn" for=""><b>
-                                <p>已點餐團員(3):
-                            </b> &nbsp
-                            <i class="fas fa-sort-down fa-xs" id="order_member"></i></p></label>
-                    </td>
-                </tr>
+        <table class="table share_member_table rwd_share_member_table"
+           style="font-size: 18px; width:50px; line-height: 1em; border: 1px solid #403c3c ; border-radius: 10%;">
+           <tbody>
+              <tr class="close_btn">
+                 <td style="color:#585555c5;">
+                    <i class="fas fa-times-circle fa-lg d-flex float-right"></i>
+                 </td>
+              </tr>
+              <tr>
+                 <td>
+                    <div class="" id="order_share">
+                       <a href="#"><img src="./img/people_plus@3x.png"
+                             style="width: 25px; height: 20px; margin-right: 5px;"></a>
+                       <button type="button" class="btn_view" style="font-size: 18px;"
+                          title="copied" onclick="btn_orderdisaplay()">揪團分享連結</button>
+                    </div>
+                 </td>
+              </tr>
 
-                <div class="show_member">
-                    <ul style="list-style-type:none;" class="show_member_detail">
-                        <li>團員一</li>
-                        <li>團員二</li>
-                        <li>團員三</li>
-                    </ul>
-                </div>
-                <tr>
-                    <td>總金額：＊＊＊
-                        <br><br>
-                        <button type="button" class="btn_view">檢視已點清單</button>
-                    </td>
-                </tr>
-            </tbody>
-            <div class="order_checkbtn">
-                <button id="checkout" type="button" class="btn btn-danger btn-lg">去結帳</button>
-            </div>
+              <tr>
+                 <td><b>團長:</b></td>
+              </tr>
+              <tr>
+                 <td>總金額：＊＊＊
+                    <br><br>
+                    <button type="button" class="btn_view">檢視已點清單</button>
+                 </td>
+              </tr>
+           </tbody>
         </table>
-
-    </div>
+     </div>
 
     <!-- 置頂鈕 start -->
     <button type="button" id="btn_back_to_top" onclick="topfunction()" title="Go to top">
@@ -398,32 +392,10 @@
     <!-- 頁尾 over -->
 
     <script>
-        $(document).ready(function () {
-            $(".header_page").load("header.html");
-            $(".footer_page").load("footer.html");
-        });
-
         $(".show_member").hide();
         $(".dropbtn").click(function () {
             $(".show_member").slideToggle('slow');
         });
-
-        // 置頂按鈕:點選後回到頂端
-        function topfunction() {
-            document.documentElement.scrollTop = 0;
-        }
-
-        // 跳頁面
-        function btncheckout() {
-            window.location.href = 'shoppingchar.html';
-        }
-
-        function btn_grouporder() {
-            window.location.href = 'orderpage_group_order_on.html';
-        }
-
-
-
     </script>
 
 </body>

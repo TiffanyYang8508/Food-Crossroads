@@ -38,7 +38,7 @@ class Member_login extends Component {
 
     render() {
         return (
-            <React.Fragment>
+            <>
 
                 <header className="header_page">
                     <Header />
@@ -92,7 +92,7 @@ class Member_login extends Component {
                 <footer className="footer_page">
                     <Footer />
                 </footer>
-            </React.Fragment>
+            </>
         );
     }
 }

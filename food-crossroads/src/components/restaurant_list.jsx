@@ -24,7 +24,7 @@ class Restaurant_list extends Component {
         }
         var result = await Axios.get(url);
         this.state.Restaurant = result.data;
-        console.log(this.props.match.params.category);
+        console.log(result.data);
         this.setState({});
     }
 
@@ -284,7 +284,8 @@ class Restaurant_list extends Component {
                                         this.state.Restaurant.map((value, key) =>
                                             <div className="rest_list" key={key}>
                                                 <div className="rest_img">
-                                                    <img src="img/french_food.png" alt="" />
+                                                {/* require("../img/restaurant_list_img/7分so.jpg") */}
+                                                    <img src={`/img/restaurant_list_img/${value.restaurant_img}`} alt={value.restaurant_img} />
                                                 </div>
                                                 <div className="rest_text">
                                                     <p>{value.restaurant_category}</p>
