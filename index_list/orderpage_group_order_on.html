@@ -24,38 +24,37 @@
 </head>
 
 <body>
+
     <!-- 導覽列 start -->
-
-    <div class="header_page"></div>
-
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="LOGO"></a>
+            <div class="nav_icon">
+                <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i>會員登入</a>
+            </div>
+            <div class="rwd_icon">
+                <a class="nav_a" href="list.html"><i class="fas fa-store"></i></a>
+                <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i></a>
+                <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </nav>
+    </header>
     <!-- 導覽列 over -->
 
     <div class="scroll menu_group sticky-top">
         <div class="container-fluid" id="menu_group">
-            <button type="button" class="oval menu_group_list" onclick="btn_menugroup">開胃菜</button>
-            <button type="button" class="oval menu_group_list">沙拉</button>
-            <button type="button" class="oval menu_group_list">湯</button>
-            <button type="button" class="oval menu_group_list">甜點</button>
+            <button type="button" class="oval menu_group_list" onclick="javascript:btn_group1();">開胃菜</button>
+            <button type="button" class="oval menu_group_list" onclick="jabascript:btn_group2();">沙拉</button>
+            <button type="button" class="oval menu_group_list" onclick="javascript:btn_group3();">湯</button>
             <button type="button" class="oval menu_group_list">義式燉飯</button>
             <button type="button" class="oval menu_group_list">義大利麵</button>
             <button type="button" class="oval menu_group_list">主廚排餐</button>
-            <button type="button" class="oval menu_group_list">精選排餐</button>
-            <button type="button" class="oval menu_group_list" onclick="btn_menugroup">開胃菜</button>
-            <button type="button" class="oval menu_group_list">沙拉</button>
-            <button type="button" class="oval menu_group_list">湯</button>
-            <button type="button" class="oval menu_group_list">甜點</button>
-            <button type="button" class="oval menu_group_list">義式燉飯</button>
-            <button type="button" class="oval menu_group_list">義大利麵</button>
-            <button type="button" class="oval menu_group_list">主廚排餐</button>
-            <button type="button" class="oval menu_group_list">精選排餐</button>
-            <button type="button" class="oval menu_group_list" onclick="btn_menugroup">開胃菜</button>
-            <button type="button" class="oval menu_group_list">沙拉</button>
-            <button type="button" class="oval menu_group_list">湯</button>
-            <button type="button" class="oval menu_group_list">甜點</button>
-            <button type="button" class="oval menu_group_list">義式燉飯</button>
-            <button type="button" class="oval menu_group_list">義大利麵</button>
-            <button type="button" class="oval menu_group_list">主廚排餐</button>
-            <button type="button" class="oval menu_group_list">精選排餐</button>
+            <button type="button" class="oval menu_group_list">甜品</button>
+            <button type="button" class="oval menu_group_list">茶品</button>
+            <button type="button" class="oval menu_group_list">咖啡</button>
+            <button type="button" class="oval menu_group_list">果汁</button>
+            <button type="button" class="oval menu_group_list">酒品</button>
+            <button type="button" class="oval menu_group_list">水</button>
         </div>
     </div>
 
@@ -63,320 +62,356 @@
         <div class="food_title">
             <h3>開胃菜</h3>
         </div>
-        <div id=cate1>
+        <div id="cate1">
             <div class="food_list_border">
                 <div class="food_list_detail">
                     <div>
-                        <img src="./img/aqua/aqua_img.jpg" class="food_img">
+                        <img src="./img/aqua/aqua_img.jpg" class="food_img" />
                     </div>
                     <div class="food_dollar_qty">
                         <p class="food_name">西西里海鹽柴魚脆薯</p>
                         <!-- 金額-->
                         <div class="d-flex flex-row">
-                            <p class="dollar align-self-center">188元</p>
-                            <!--數量-->
-                            <div class="count">
-                                <button class="btn_count count_decrease">-</button>
-                                <input type="text" id="qty_number" min="1" value="1">
-                                <button class="btn_count">+</button>
-                            </div>
+                            <p><span class="dollar align-self-center">188</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" onclick="qty()" />
                         </div>
                     </div>
-
                     <!-- 加入購物車 -->
                     <div>
-                        <button class="btn_add_cart">加入購物車</button>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
                     </div>
                 </div>
             </div>
             <div class="food_list_border food_list_border2">
-                <img src="./img/aqua/aqua_img.jpg" class="food_img">
+                <img src="./img/aqua/aqua_img.jpg" class="food_img" />
                 <div class="food_dollar_qty">
                     <p class="food_name">日本海炸牡蠣</p>
                     <!-- 金額-->
                     <div class="d-flex flex-row">
-                        <p class="dollar align-self-center">188元</p>
-                        <!--數量-->
-                        <div class="count">
-                            <button class="btn_count count_decrease">-</button>
-                            <input type="text" id="qty_number" min="1" value="1">
-                            <button class="btn_count">+</button>
-                        </div>
+                        <p><span class="dollar align-self-center">288</span>元</p>
+                        <input type="button" value="-" class="btn_count count_decrease sub" />
+                        <input type="text" id="qty_number" value="1" />
+                        <input type="button" value="+" class="btn_count add" />
                     </div>
                 </div>
                 <!-- 加入購物車 -->
                 <div>
-                    <button class="btn_add_cart">加入購物車</button>
+                    <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
                 </div>
             </div>
 
             <div class="food_list_border">
                 <div class="food_list_detail">
-                    <img src="./img/aqua/aqua_img.jpg" class="food_img">
+                    <img src="./img/aqua/aqua_img.jpg" class="food_img" />
                     <div class="food_dollar_qty">
                         <p class="food_name">南義炸起司條</p>
                         <!-- 金額-->
                         <div class="d-flex flex-row">
-                            <p class="dollar align-self-center">288元</p>
-                            <!--數量-->
-                            <div class="count">
-                                <button class="btn_count count_decrease">-</button>
-                                <input type="text" id="qty_number" min="1" value="1">
-                                <button class="btn_count">+</button>
-                            </div>
+                            <p><span class="dollar align-self-center">188</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" />
                         </div>
                     </div>
                     <!-- 加入購物車 -->
                     <div>
-                        <button class="btn_add_cart">加入購物車</button>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
                     </div>
                 </div>
             </div>
             <div class="food_list_border food_list_border2">
-                <img src="./img/aqua/aqua_img.jpg" class="food_img">
+                <img src="./img/aqua/aqua_img.jpg" class="food_img" />
                 <div class="food_dollar_qty">
                     <p class="food_name">墨西哥酸辣雞翅</p>
                     <!-- 金額-->
                     <div class="d-flex flex-row">
-                        <p class="dollar align-self-center">288元</p>
-                        <!--數量-->
-                        <div class="count">
-                            <button class="btn_count count_decrease">-</button>
-                            <input type="text" id="qty_number" min="1" value="1">
-                            <button class="btn_count">+</button>
-                        </div>
+                        <p><span class="dollar align-self-center">288</span>元</p>
+                        <input type="button" value="-" class="btn_count count_decrease sub" />
+                        <input type="text" id="qty_number" value="1" />
+                        <input type="button" value="+" class="btn_count add" />
                     </div>
                 </div>
                 <!-- 加入購物車 -->
                 <div>
-                    <button class="btn_add_cart">加入購物車</button>
+                    <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
                 </div>
             </div>
 
             <div class="food_list_border">
                 <div class="food_list_detail">
-                    <img src="./img/aqua/aqua_img.jpg" class="food_img">
+                    <img src="./img/aqua/aqua_img.jpg" class="food_img" />
                     <div class="food_dollar_qty">
                         <p class="food_name">地中海白酒烘煮鮮蛤</p>
                         <!-- 金額-->
                         <div class="d-flex flex-row">
-                            <p class="dollar align-self-center">288元</p>
-                            <!--數量-->
-                            <div class="count">
-                                <button class="btn_count count_decrease">-</button>
-                                <input type="text" id="qty_number" min="1" value="1">
-                                <button class="btn_count">+</button>
-                            </div>
+                            <p><span class="dollar align-self-center">288</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" />
                         </div>
                     </div>
                     <!-- 加入購物車 -->
                     <div>
-                        <button class="btn_add_cart">加入購物車</button>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
                     </div>
                 </div>
             </div>
             <div class="food_list_border food_list_border2">
-                <img src="./img/aqua/aqua_img.jpg" class="food_img">
+                <img src="./img/aqua/aqua_img.jpg" class="food_img" />
                 <div class="food_dollar_qty">
-                    <p class="food_name">商品名稱</p>
+                    <p class="food_name">鸚嘴豆番茄燉牛肚</p>
                     <!-- 金額-->
                     <div class="d-flex flex-row">
-                        <p class="dollar align-self-center">230元</p>
-                        <!--數量-->
-                        <div class="count">
-                            <button class="btn_count count_decrease">-</button>
-                            <input type="text" id="qty_number" min="1" value="1">
-                            <button class="btn_count">+</button>
-                        </div>
+                        <p><span class="dollar align-self-center">288</span>元</p>
+                        <input type="button" value="-" class="btn_count count_decrease sub" />
+                        <input type="text" id="qty_number" value="1" />
+                        <input type="button" value="+" class="btn_count add" />
                     </div>
                 </div>
                 <!-- 加入購物車 -->
                 <div>
-                    <button class="btn_add_cart">加入購物車</button>
+                    <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                </div>
+            </div>
+
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                    <div class="food_dollar_qty">
+                        <p class="food_name">澳洲頂級橄欖油清炒野菇</p>
+                        <!-- 金額-->
+                        <div class="d-flex flex-row">
+                            <p><span class="dollar align-self-center">288</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" />
+                        </div>
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <div class="food_list_border food_list_border2">
+                <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                <div class="food_dollar_qty">
+                    <p class="food_name">義式清炒櫛瓜鮮蝦</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p><span class="dollar align-self-center">288</span>元</p>
+                        <input type="button" value="-" class="btn_count count_decrease sub" />
+                        <input type="text" id="qty_number" value="1" />
+                        <input type="button" value="+" class="btn_count add" />
+                    </div>
+                </div>
+                <!-- 加入購物車 -->
+                <div>
+                    <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
                 </div>
             </div>
 
         </div>
 
-    </div>
     </div>
 
     <div id="group_2" class="d-flex flex-column">
         <div class="food_title">
-            <h3>餐點分類2</h3>
+            <h3>沙拉</h3>
         </div>
         <div id="cate2">
             <div class="food_list_border">
                 <div class="food_list_detail">
-                    <img src="./img/aqua/aqua_img.jpg" class="food_img">
+                    <img src="./img/aqua/aqua_img.jpg" class="food_img" />
                     <div class="food_dollar_qty">
-                        <p class="food_name">商品名稱</p>
+                        <p class="food_name">番茄羅勒起司搭頂級陳年油醋</p>
                         <!-- 金額-->
                         <div class="d-flex flex-row">
-                            <p class="dollar align-self-center">230元</p>
-                            <!--數量-->
-                            <div class="count">
-                                <button class="btn_count count_decrease">-</button>
-                                <input type="text" id="qty_number" min="1" value="1">
-                                <button class="btn_count">+</button>
-                            </div>
+                            <p><span class="dollar align-self-center">188</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" onclick="qty()" />
                         </div>
                     </div>
                     <!-- 加入購物車 -->
                     <div>
-                        <button class="btn_add_cart">加入購物車</button>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
                     </div>
                 </div>
             </div>
 
             <div class="food_list_border food_list_border2">
-                <img src="./img/aqua/aqua_img.jpg" class="food_img">
+                <img src="./img/aqua/aqua_img.jpg" class="food_img" />
                 <div class="food_dollar_qty">
-                    <p class="food_name">商品名稱</p>
+                    <p class="food_name">田園香橙鮮蝦蘿蔓鮮蔬</p>
                     <!-- 金額-->
                     <div class="d-flex flex-row">
-                        <p class="dollar align-self-center">230元</p>
-                        <!--數量-->
-                        <div class="count">
-                            <button class="btn_count count_decrease">-</button>
-                            <input type="text" id="qty_number" min="1" value="1">
-                            <button class="btn_count">+</button>
-                        </div>
+                        <p><span class="dollar align-self-center">188</span>元</p>
+                        <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                        <input type="text" id="qty_number" value="1" />
+                        <input type="button" value="+" class="btn_count add" onclick="qty()" />
                     </div>
                 </div>
                 <!-- 加入購物車 -->
                 <div>
-                    <button class="btn_add_cart">加入購物車</button>
+                    <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
                 </div>
             </div>
 
             <div class="food_list_border">
                 <div class="food_list_detail">
-                    <img src="./img/aqua/aqua_img.jpg" class="food_img">
+                    <img src="./img/aqua/aqua_img.jpg" class="food_img" />
                     <div class="food_dollar_qty">
-                        <p class="food_name">商品名稱</p>
+                        <p class="food_name">北歐蜂蜜柚香煙燻鮭魚羽衣甘藍</p>
                         <!-- 金額-->
                         <div class="d-flex flex-row">
-                            <p class="dollar align-self-center">230元</p>
-                            <!--數量-->
-                            <div class="count">
-                                <button class="btn_count count_decrease">-</button>
-                                <input type="text" id="qty_number" min="1" value="1">
-                                <button class="btn_count">+</button>
-                            </div>
+                            <p><span class="dollar align-self-center">188</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" onclick="qty()" />
                         </div>
                     </div>
                     <!-- 加入購物車 -->
                     <div>
-                        <button class="btn_add_cart">加入購物車</button>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
                     </div>
                 </div>
             </div>
 
             <div class="food_list_border food_list_border2">
-                <img src="./img/aqua/aqua_img.jpg" class="food_img">
+                <img src="./img/aqua/aqua_img.jpg" class="food_img" />
                 <div class="food_dollar_qty">
-                    <p class="food_name">商品名稱</p>
+                    <p class="food_name">瀨戶柚香胡麻堅果牛排羽衣甘藍</p>
                     <!-- 金額-->
                     <div class="d-flex flex-row">
-                        <p class="dollar align-self-center">230元</p>
-                        <!--數量-->
-                        <div class="count">
-                            <button class="btn_count count_decrease">-</button>
-                            <input type="text" id="qty_number" min="1" value="1">
-                            <button class="btn_count">+</button>
-                        </div>
+                        <p><span class="dollar align-self-center">188</span>元</p>
+                        <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                        <input type="text" id="qty_number" value="1" />
+                        <input type="button" value="+" class="btn_count add" onclick="qty()" />
                     </div>
                 </div>
                 <!-- 加入購物車 -->
                 <div>
-                    <button class="btn_add_cart">加入購物車</button>
-                </div>
-            </div>
-
-            <div class="food_list_border">
-                <div class="food_list_detail">
-                    <img src="./img/aqua/aqua_img.jpg" class="food_img">
-                    <div class="food_dollar_qty">
-                        <p class="food_name">商品名稱</p>
-                        <!-- 金額-->
-                        <div class="d-flex flex-row">
-                            <p class="dollar align-self-center">230元</p>
-                            <!--數量-->
-                            <div class="count">
-                                <button class="btn_count count_decrease">-</button>
-                                <input type="text" id="qty_number" min="1" value="1">
-                                <button class="btn_count">+</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 加入購物車 -->
-                    <div>
-                        <button class="btn_add_cart">加入購物車</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="food_list_border food_list_border2">
-                <img src="./img/aqua/aqua_img.jpg" class="food_img">
-                <div class="food_dollar_qty">
-                    <p class="food_name">商品名稱</p>
-                    <!-- 金額-->
-                    <div class="d-flex flex-row">
-                        <p class="dollar align-self-center">230元</p>
-                        <!--數量-->
-                        <div class="count">
-                            <button class="btn_count count_decrease">-</button>
-                            <input type="text" id="qty_number" min="1" value="1">
-                            <button class="btn_count">+</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- 加入購物車 -->
-                <div>
-                    <button class="btn_add_cart">加入購物車</button>
+                    <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
                 </div>
             </div>
 
         </div>
     </div>
 
+    <div id="group_3" class="d-flex flex-column">
+        <div class="food_title">
+            <h3>湯</h3>
+        </div>
+        <div id="cate3">
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <div>
+                        <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                    </div>
+                    <div class="food_dollar_qty">
+                        <p class="food_name">水相主廚私房湯品</p>
+                        <!-- 金額-->
+                        <div class="d-flex flex-row">
+                            <p><span class="dollar align-self-center">188</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" onclick="qty()" />
+                        </div>
+                    </div>
 
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <div class="food_list_border food_list_border2">
+                <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                <div class="food_dollar_qty">
+                    <p class="food_name">法式金黃南瓜堅果濃湯</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p><span class="dollar align-self-center">188</span>元</p>
+                        <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                        <input type="text" id="qty_number" value="1" />
+                        <input type="button" value="+" class="btn_count add" onclick="qty()" />
+                    </div>
+                </div>
+                <!-- 加入購物車 -->
+                <div>
+                    <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                </div>
+            </div>
 
-    <!-- 揪團結帳 -->
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                    <div class="food_dollar_qty">
+                        <p class="food_name">馬賽蝦汁海鮮清湯</p>
+                        <!-- 金額-->
+                        <div class="d-flex flex-row">
+                            <p><span class="dollar align-self-center">188</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" onclick="qty()" />
+                        </div>
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="food_order_group d-flex flex-column">
+        <div class="d-flex justify-content-center">
+            <button class="group_button oval" data-toggle="modal" data-target="#order_group_modal">購物車</button>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button id="checkout" onclick="btncheckout()">送出點餐</button>
+        </div>
+    </div> -->
+
+    <!-- 揪團功能 -->
     <div class="share_member col-md-3 rwd_share_member" id="ordermember_Sidebar">
 
         <table class="table share_member_table rwd_share_member_table"
-           style="font-size: 18px; width:50px; line-height: 1em; border: 1px solid #403c3c ; border-radius: 10%;">
-           <tbody>
-              <tr class="close_btn">
-                 <td style="color:#585555c5;">
-                    <i class="fas fa-times-circle fa-lg d-flex float-right"></i>
-                 </td>
-              </tr>
-              <tr>
-                 <td>
-                    <div class="" id="order_share">
-                       <a href="#"><img src="./img/people_plus@3x.png"
-                             style="width: 25px; height: 20px; margin-right: 5px;"></a>
-                       <button type="button" class="btn_view" style="font-size: 18px;"
-                          title="copied" onclick="btn_orderdisaplay()">揪團分享連結</button>
-                    </div>
-                 </td>
-              </tr>
+            style="font-size: 18px; width:50px; line-height: 1em; border: 1px solid #403c3c ; border-radius: 10%;">
+            <tbody>
+                <tr class="close_btn">
+                    <td style="color:#585555c5;">
+                        <i class="fas fa-times-circle fa-lg d-flex float-right"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="" id="order_share">
+                            <a href="#"><img src="./img/people_plus@3x.png"
+                                    style="width: 25px; height: 20px; margin-right: 5px;"></a>
+                            <button type="button" class="btn_view" style="font-size: 18px;" title="copied"
+                                onclick="btn_orderdisaplay()">揪團中！</button>
+                        </div>
+                    </td>
+                </tr>
 
-              <tr>
-                 <td><b>團長:</b></td>
-              </tr>
-              <tr>
-                 <td>總金額：＊＊＊
-                    <br><br>
-                    <button type="button" class="btn_view">檢視已點清單</button>
-                 </td>
-              </tr>
-           </tbody>
+                <tr>
+                    <td><b>團長:李曉明</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="btn_charview" onclick="btn_groupchar()">我的購物車</button>
+                    </td>
+                </tr>
+            </tbody>
         </table>
-     </div>
+        <div>
+        </div>
+    </div>
 
     <!-- 置頂鈕 start -->
     <button type="button" id="btn_back_to_top" onclick="topfunction()" title="Go to top">
@@ -387,15 +422,26 @@
 
     <!-- 頁尾 start -->
 
-    <div class="footer_page"></div>
+    <!-- <div class="footer_page"></div> -->
 
     <!-- 頁尾 over -->
 
     <script>
+        $(document).ready(function () {
+            $(".header_page").load("header.html");
+            $(".footer_page").load("footer.html");
+        });
+
+
         $(".show_member").hide();
         $(".dropbtn").click(function () {
             $(".show_member").slideToggle('slow');
         });
+
+        function btn_groupchar() {
+            window.location.href = 'group_shoppingchar.html';
+
+        }
     </script>
 
 </body>

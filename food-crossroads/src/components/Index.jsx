@@ -411,7 +411,7 @@ class Index extends Component {
                                             </a>
                                         </li>
                                         <li className="kind_span">
-                                            <a href="/restaurant/list/美式餐廳" title="美式料理">
+                                            <a href="/restaurant/list/美式料理" title="美式料理">
                                                 <div className="index_img">
                                                     <img src={require('../img/index_img/american_food.png')} alt="美式料理" />
                                                     <span>美式料理</span>

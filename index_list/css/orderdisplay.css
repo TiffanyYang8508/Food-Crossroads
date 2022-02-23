@@ -99,10 +99,17 @@ tbody td:nth-child(5) {
 }
 
 #checkout {
-  width: 8em;
-  height: 2em;
-  text-align: center;
-  font-weight: 600;
+  width: 200px;
+  height: 50px;
+  margin-top: 10px;
+  background-color: #8B1309;
+  border: 0;
+  color: white;
+  font-size: 16pt;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.3s;
+
 }
 
 .rwd_icon_plus{

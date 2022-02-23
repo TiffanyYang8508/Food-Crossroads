@@ -32,8 +32,8 @@
         <p style="font-size: x-large"><i class="fas fa-check"></i> 完成訂單</p>
       </div>
 
-      <button class="buy_back_btn" id="check_order">查看訂單</button>
-      <button class="buy_back_btn" id="back_to_home">回首頁</button>
+      <button class="buy_back_btn" id="check_order" onclick="check_order()">查看訂單</button>
+      <button class="buy_back_btn" id="back_to_home" onclick="back_index()">回首頁</button>
     </div>
   </div>
 
@@ -44,6 +44,13 @@
   <script>
     $(".headerpage").load("header.html");
     $(".footerpage").load("footer.html");
+
+    function check_order() {
+      window.location = "order_manage.html";
+    }
+    function back_index() {
+      window.location = "index.html";
+    }
   </script>
 </body>
 

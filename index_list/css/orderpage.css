@@ -295,6 +295,15 @@ tbody td:nth-child(5) {
   width: 8em;
 }
 
+.btn_charview{
+    color: white;
+    background-color: #8B1309;
+    border-radius: 10px;
+    height: 4em;
+    width: 8em;
+    margin-left: 20px;
+}
+
 .share_member_table tbody tr:nth-child(1),
 .share_member_table tbody tr:nth-child(2) {
   text-align: left;
@@ -368,13 +377,6 @@ tbody td:nth-child(5) {
   align-items:baseline;
 }
 
-#checkout {
-  width: 8em;
-  height: 2em;
-  text-align: center;
-  font-weight: 600;
-}
-
 .rwd_icon_plus{
   border-radius:50%;
   border: solid 1.5px #585555c5;
@@ -391,11 +393,11 @@ tbody td:nth-child(5) {
 }
 
 .footer_page {
-  position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
 }
+
 
 
 
