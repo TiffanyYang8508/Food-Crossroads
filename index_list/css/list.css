@@ -258,26 +258,39 @@
 
 /* 餐廳列表 start */
 
+
 .rest_div {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    margin-right: 1%;
+    margin-bottom: 5%;
+}
+
+.rest_div .rest_list_a{
+    width: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 1%;
+    color: black;
+    text-decoration: none;
 }
 
 .rest_list {
-    width: 48%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #999999;
     border-radius: 5px;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
+    margin: 0 1%;
+    margin-bottom: 2%;
 }
 
 .rest_img {
     width: 40%;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .rest_list img {
@@ -291,49 +304,17 @@
     width: 70%;
 }
 
+.rest_text h4{
+    font-weight: 600;
+}
+
+.rest_text h5{
+    font-size: 16px;
+}
+
 .rest_inline_div{
     display: flex;
     justify-content: space-between;
-}
-
-.rest_list .rest_text a{
-    background-color: #8B1309;
-    color: #fff;
-    border-radius: 5px;
-    padding: 1px 6px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.rest_text a:hover{
-    background-color: #a30f01;
-}
-
-/* #search_aside {
-    background-color: #999999;
-    width: 12%;
-    height: 100%;
-    position: fixed;
-    top: 5%;
-    left: 0;
-}
-
-#search_aside h5 {
-    padding: 10px;
-    text-align: center;
-    margin-top: 56px;
-    font-size: 28px;
-}
-
-.kind_aside {
-    font-size: 18px;
-    margin-left: 28px;
-} */
-
-#page_list .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
 }
 
 

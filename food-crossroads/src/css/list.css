@@ -270,8 +270,17 @@
     margin-bottom: 5%;
 }
 
-.rest_list {
+#search_list .rest_div .rest_list_a{
     width: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 1%;
+    color: black;
+    text-decoration: none;
+}
+
+.rest_list {
+    width: 100%;
     padding: 10px;
     border: 1px solid #999999;
     border-radius: 5px;
@@ -284,7 +293,7 @@
 
 .rest_img {
     width: 40%;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .rest_list img {
@@ -298,15 +307,17 @@
     width: 70%;
 }
 
+.rest_text h4{
+    font-weight: 600;
+}
+
+.rest_text h5{
+    font-size: 16px;
+}
+
 .rest_inline_div{
     display: flex;
     justify-content: space-between;
-}
-
-#page_list .pagination {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5%;
 }
 
 
