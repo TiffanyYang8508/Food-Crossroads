@@ -115,3 +115,13 @@ app.get("/service/?service=提供兒童座椅",function(req,res){
   }
   );
 });
+
+app.get("/orderpage/:id",function(req,res){
+  conn.query(
+    "SELECT * FROM menu WHERE restaurand_id = ? ",
+    [req.params.restaurant_id],
+    function (err, rows) {
+      res.send(JSON.stringify(rows[0]));
+    }
+  );
+});
