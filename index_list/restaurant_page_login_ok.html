@@ -29,7 +29,7 @@
             <div class="nav_icon">
                 <a class="nav_a" href="list.html"><i class="fas fa-store"></i>餐廳列表</a>
                 <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i>購物車</a>
-                <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i>會員登入</a>
+                <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i>李曉明</a>
             </div>
             <div class="rwd_icon">
                 <a class="nav_a" href="list.html"><i class="fas fa-store"></i></a>
@@ -46,22 +46,7 @@
                     <button id="order" class="reservation_btn" data-bs-toggle="modal" onclick="reservation_btnClick()">我要訂位</button>
                     <button id="take_away" class="order_btn" onclick="order_btnClick()">我要訂餐</button>
                 </div>
-                <!-- 非會員 對話框 start -->
-                <div id="to_register_member" class="modal">
-                    <div class="modal_content">
-                        <div class="container_alert">
-                            <div onclick="to_register_member()" class="button display_top_right">&times;</div>
-                            <br />
-                            <br />
-                            <h2>您目前狀態為 非會員！</h2>
-                            <p>請前往會員中心登入／註冊，謝謝！</p>
-                            <br />
-                            <button class="to_member_login" onclick="member_login()">登入</button>
-                            <button class="to_member_register" onclick="member_register()">註冊</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- 非會員 對話框 over -->
+                
                 <!-- 導覽列 start -->
                 <nav aria-label="breadcrumb">
                     <ul class="breadcrumb">
@@ -354,25 +339,14 @@
                 $(".ontop_btn").stop().fadeOut(100);
             }
         });
+        
 
         function reservation_btnClick() {
-            document.getElementById('to_register_member').style.display='block';
+            location.href = "/index_list/booking_reservation_page.html";
         }
 
         function order_btnClick() {
-            document.getElementById('to_register_member').style.display='block';
-        }
-
-        function to_register_member() {
-            document.getElementById('to_register_member').style.display='none';
-        }
-
-        function member_register() {
-            location.href = "/index_list/member_register.html";
-        }
-
-        function member_login() {
-            location.href = "/index_list/member_login.html";
+            location.href = "/index_list/orderpage.html";
         }
 
         function cuisine_name_btnClick() {

@@ -16,41 +16,38 @@
     margin: 10px;
 }
 
-.btn_container > button > a {
-    text-decoration: none;
-    color: #fcc106;
-}
-
-.order_btn,
-.take_away_btn
+.reservation_btn,
+.order_btn
 {
     width: 100%;
     height: 60px;
     font-size: 32px;
-    font-weight: 900;
-    background-color: #8b1038;
+    background-color: #8b1309;
+    color: #fff;
     border: none;
+    text-decoration: none;
     transition: 0.3s;
 }
 
-.order_btn {
+.reservation_btn {
     border-radius: 10px 0 0 10px;
 }
 
-.take_away_btn {
+.order_btn {
     border-radius: 0 10px 10px 0;
 }
 
-.order_btn:hover,
-.take_away_btn:hover
+.reservation_btn:hover,
+.order_btn:hover
 {
-    background-color: #b6194d;
+    background-color: #a30f01;
     font-size: 38px;
+    font-weight: 900;
 }
 
-.breadcrumb .breadcrumb-item a,.active{
+.breadcrumb .breadcrumb-item a, .active{
     font-size: 18px;
-    font-weight: bolder;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -93,28 +90,32 @@
     flex: 4;
 }
 
-.top_flex > input {
+.shop_menu {
     width: 72px;
     height: 36px;
-    background-color: #8b1038;
-    color: #fcc106;
+    background-color: #8b1309;
+    color: #fff;
     border: none;
-    box-shadow: 3px 3px 3px 0 #403C3C;
     border-radius: 5px;
     margin-right: 5px;
     text-align: center;
     font-size: large;
-    font-weight:900;
+    font-weight: 900;
 }
 
-.top_flex > input:hover {
-    background-color: #b6194d;
+.shop_menu:hover {
+    background-color: #a30f01;
     font-size: larger;
-    box-shadow: inset 3px 3px 6px 0 #403C3C;
+}
+
+.top_flex .flex1 span {
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .shop_item {
-    width: 72px;
+    width: 80px;
+    font-size: 20px;
 }
 
 div.flex1 {
@@ -147,13 +148,26 @@ div.flex1 {
 
 .shop_title {
     margin: 10px 0;
-    font-weight: 600;
+    font-weight: 800;
     position: relative;
     flex: 1;
     font-size: 1.4rem;
 }
 
-.shop_title span {
+.shop_title .cuisine_name {
+    border: none;
+    border-radius: 15px;
+    width: 120px;
+    height: 50px;
+    font-size: 24px;
+    background-color: #fff;
+}
+
+.shop_title .cuisine_name:hover {
+    font-size: 26px;
+}
+
+.shop_title > span {
     margin-left: 10px;
 }
 
@@ -177,7 +191,7 @@ div.flex1 {
 
 .fa-star {
     content: "\e906";
-    font-weight: 900;
+    font-weight: 300;
 }
 
 .fa-comment-alt .fa-heart .fa-map-marked-alt .fa-bars .fa-plus-circle {
@@ -192,9 +206,8 @@ div.flex1 {
 
 .fa-plus-circle {
     font-size: 1.8em;
-    color: #8b1038;
+    color: #8b1309;
 }
-
 
 .service_box {
     position: relative;
@@ -204,42 +217,39 @@ div.flex1 {
 .service_box .service_div div {
     /* border: 1px solid red; */
     width: 170px;
-    height: 50px;
+    height: 60px;
     float: left;
-    margin: 10px;
-    text-align: justify;
+    margin: 20px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .service_div div i {
     width: 45px;
     height: 45px;
-    font-size: 24px;
-    line-height: 3;
 }
+
 
 .show_comment_modal {
     text-decoration: none;
     cursor: pointer;
 }
 
-
-
-.shop_container
-{
+.shop_container {
     width: 100%;
     height: 200px;
     font-size: 18px;
     font-weight: bold;
     padding: 0 10px;
-    /* border: 1px solid grey; */
     border-radius: 3px;
-    /* margin-bottom: 10px; */
+    /* border: 1px solid grey; */
 }
 
 .shop_wrapper {
     /* background-color: pink; */
     margin: 10px 0;
-    /* padding: 10px 20px; */
+    padding: 10px 20px;
 }
 
 .shop_wrapper > div {
@@ -289,7 +299,8 @@ div.flex1 {
 }
 
 /* 置頂紐 */
-.ontop_btn {     
+.ontop_btn {
+    display: none;    
     width: 60px;     
     height: 60px;     
     border: none;     
@@ -315,4 +326,88 @@ div.flex1 {
 
 /* ---------- body over ---------- */
 
+.modal {
+    z-index: 3;
+    display: none;
+    padding-top: 200px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal_content {
+    border-radius: 5px;
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 10px;
+    outline: 0;
+    width: 600px;
+    height: 300px;
+}
+
+.modal_content .container_alert {
+    height: 100%;
+    text-align: center;
+}
+
+.display_top_right {
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    font-size: 40px;
+    /* border: 1px solid red; */
+}
+
+.to_member_login, .to_member_register {
+    width: 120px;
+    height: 40px;
+    background-color: #8b1309;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    margin: 0 10px;
+}
+
+.to_member_login:hover,
+.to_member_register:hover
+{
+    background-color: #a30f01;
+    font-size: 24px;
+}
+
+.modal_menu {
+    z-index: 3;
+    display: none;
+    padding-top: 40px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal_content_menu {
+    border-radius: 5px;
+    margin: auto;
+    /* background-color: #fff; */
+    position: relative;
+    padding: 10px;
+    outline: 0;
+    width: 800px;
+    height: 600px;
+}
+
+.modal_content_menu .container_menu img {
+    width: 100%;
+}
 
