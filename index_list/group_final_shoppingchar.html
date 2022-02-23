@@ -85,7 +85,7 @@
                                     <span>刪除</span>
                                 </td>
                             </tr>
-                            <!-- <tr class="shopping-row" id="shopping-row">
+                            <tr class="shopping-row" id="shopping-row">
                                 <td>
                                     <input class="shopping-checkbox checkmark" id="shopping-checkbox" type="checkbox" name="shopping-checkbox" />
                                 </td>
@@ -111,9 +111,9 @@
                                 <td class="delete-shopping">
                                     <span>刪除</span>
                                 </td>
-                            </tr> -->
+                            </tr>
 
-                            <!-- <tr class="shopping-row" id="shopping-row">
+                            <tr class="shopping-row" id="shopping-row">
                                 <td>
                                     <input class="shopping-checkbox checkmark" id="shopping-checkbox" type="checkbox" name="shopping-checkbox" />
                                 </td>
@@ -169,7 +169,7 @@
                                 <td class="delete-shopping">
                                     <span>刪除</span>
                                 </td>
-                            </tr> -->
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -287,7 +287,7 @@
                     <p>
                         <b>總金額(3個商品)$1234</b>
                     </p>
-                    <a href="shoppingok.html">
+                    <a href="group_final_shoppingok.html">
                         <button class="buy-btn">
                             <b>結帳</b>
                         </button>
@@ -306,42 +306,19 @@
         $(".header_page").load("header.html");
         $(".footer_page").load("footer.html");
 
-
-        function qty() {
-            var aAdd = document.querySelectorAll(".add");
-            var sub = document.querySelectorAll(".sub");
-            for (var i = 0; i < aAdd.length; i++) {
-                aAdd[i].onclick = function () {
-                    var num = Number(this.previousElementSibling.value);
-                    num++;
-                    this.previousElementSibling.value = num;
-                    // var price = this.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.innerHTML;
-                    // this.nextElementSibling.firstElementChild.innerHTML = price * num;
-                }
-            }
-            for (var i = 0; i < sub.length; i++) {
-                sub[i].onclick = function () {
-                    var num = Number(this.nextElementSibling.value);
-                    if (num > 1) {
-                        num--;
-                    }
-                    this.nextElementSibling.value = num;
-                    // var price = this.previousElementSibling.firstElementChild.innerHTML;
-                    // this.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.innerHTML = price * num;
-                }
-            }
-
+        //跳頁面
+        function btn_shoppingok() {
+            window.location.href = 'group_final_shoppingok.html';
         }
+        
+        // $('input').change(function () {
+        //     $(`input[name='${this.id}']`).prop('checked', this.checked);
 
-
-
-        $('input').change(function () {
-            $(`input[name='${this.id}']`).prop('checked', this.checked);
-            $(`input[id='${this.name}']`)
-                .prop('checked',
-                    $(`input[name='${this.name}']`).length ==
-                    $(`input[name='${this.name}']:checked`).length)
-        })
+        //     $(`input[id='${this.name}']`)
+        //         .prop('checked',
+        //             $(`input[name='${this.name}']`).length ==
+        //             $(`input[name='${this.name}']:checked`).length)
+        // })
     </script>
 
 </body>

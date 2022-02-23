@@ -20,7 +20,6 @@
     height: 75px;
     width: 100%;
     background-color: #403C3C;
-    position: sticky;
 }
 
 #menu_group{
@@ -60,6 +59,7 @@
 /* 分類標題 */
 .food_title{
 margin-left: 10vw;
+margin-top: 50px;
 }
 
 #group_1{
@@ -236,6 +236,10 @@ div.food_list_border2{
     height: 40px;
 }
 
+.foot{
+    height: 50px;
+}
+
 /* 置頂紐 */
 #btn_back_to_top {     
     width: 60px;     
@@ -260,6 +264,22 @@ div.food_list_border2{
     /* box-shadow: inset -3px -3px 5px 0 rgb(66, 66, 66);  */
 }
 
+
+.ordershare{
+    float: right;
+    top: 10%;
+}
+.order_share{
+    margin-bottom: 30px;
+}
+
+.leader{
+    margin: auto;
+    font-weight: bold;
+    font-size: 16pt;
+    margin-bottom: 30px;
+    margin-top: -100px;
+}
 /*已開啟揪團 start*/
 thead th:nth-child(1),
 tbody td:nth-child(1) {
@@ -302,6 +322,7 @@ tbody td:nth-child(5) {
     height: 4em;
     width: 8em;
     margin-left: 20px;
+    margin-top: 30px;
 }
 
 .share_member_table tbody tr:nth-child(1),

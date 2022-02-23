@@ -1,37 +1,23 @@
-/* 側邊攔 start */
-#aside_menu_chk{
-    opacity: 0;
-    z-index: -1;
-}
-
-.aside_menu {
-    background-color: #403C3C;
-    width: 230px;
-    height: 100%;
-    position: fixed;
-    float: left;
-    z-index: 4;
-}
-
-.mobile_aside_menu{
+.test {
     display: none;
 }
-
-.default {
-    background-color: #8b1309;
+aside {
+    background-color: #403C3C;
+    width: 230px;
+    height: 85vh;
+    position: fixed;
+    top: 10%;
 }
 
-.panel-default {
+.panel-default{
+    /* border: 1px solid red; */
     border-bottom: 1px solid white;
+    padding: 5px;
     width: 100%;
 }
 
-.panel-heading:hover{
-    background-color: #8B1309;
-}
-
 .panel-title {
-    padding: 15px;
+    padding-top: 8px;
 }
 
 .panel-heading .panel-title a {
@@ -43,115 +29,294 @@
 }
 
 .little_title {
-    padding: 5px 0 5px 10px;
-    transition: 0.3s;
+    /* border: 1px solid red; */
+    margin-left: -5px;
+    margin-right: -6px;
+    padding: 5px 0 5px 15px;
 }
 
 .little_title:hover {
     background-color: #8B1309;
 }
 
-.panel .little_title a {
+.panel .little_title a  {
     text-decoration: none;
     color: white;
+    font-weight: 600;
 }
 
 .sreach_form {
-    margin-left: 40px;
+    /* border: 1px solid red; */
+    padding: 0 10px 5px 10px;
 }
 
-/* 側邊欄 end */
-
-#mobile_booking_history{
-    display: none;
+.form_textbox {
+    margin-bottom: -6px;
 }
 
-#booking_history{
+.container{
+    height: 83vh;    
+}
+
+.search-bar {
+    position: relative;
+    left: 35px;
+}
+.search-bar button {
+    height: 30px;
+    font-weight: 600;
+}
+
+.search-bar button:hover {
+    background-color: rgb(165, 164, 164);
+}
+
+.search-bar input {
+    width: 1000px;
+}
+
+.container .order_table {
+    position: absolute;
+    top: 120px;
+    left: 16%;
     width: 80%;
-    margin-left: 18%;
 }
 
-table th ,td{
+.member_info{
+    margin-top: 60px;
+}
+
+.member_contain{
+    padding-top: 20px;
+}
+
+.member_edit_btn{
+    margin-left: 200px;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-family: Noto Sans TC;
+}
+
+.title_member_edit{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Noto Sans TC;
+}
+
+.edit_info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,30%);
+}
+
+label{
+    margin-right: 20px;
+}
+
+.member_confirm_btn{
+    margin-left: 150px;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-family: Noto Sans TC;
+}
+
+thead {
+    position: relative;
+    right: 20px;
+}
+
+th{
+    text-align: center;
+    position: relative;
+    left: 20px;
+    letter-spacing: 5px;
+}
+
+td{
     text-align: center;
 }
 
-.detail_btn {
-    border: 1px solid #403C3C;
-    border-radius: 5px;
-    height: 35px;
+tbody .detail_btn {
+    border-radius: 8px;
 }
 
-.modal-title {
+.detail_btn:hover {
+    background-color: gray;
+}
+
+.comment_btn{
+    border-radius: 8px;
+}
+
+.cancel_modal_body{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 28px;
+    font-family: Noto Sans TC;
+}
+
+.modal-title{
+    font-family: Noto Sans TC;
     font-size: 24px;
+    
+    
 }
-
-.detail_modal_body {
+.detail_modal_body{
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 150px;
     font-size: 18px;
+    font-family: Noto Sans TC;
 }
 
-.rank_modal_body {
+.rank_modal_body{
     position: relative;
     margin-top: 100px;
     margin-bottom: 100px;
     margin-left: 150px;
+    font-family: Noto Sans TC;
 }
 
-.rank_modal_title {
+.modal-footer{
+    font-family: Noto Sans TC;
+}
+
+.rank_modal_title{
     position: absolute;
     font-size: 28px;
     left: -50px;
     top: -40px;
+
+}
+.modal-title {
+    font-weight: bold;
+}
+.detail_modal_body {
+   font-size: 20px;
+   letter-spacing: 2px;
+   position: relative;
+   right: 40px;
 }
 
-.footer_page {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* RWD start */
+/* RWD */
 
 
 /* 超大型螢幕 */
-
 @media screen and (max-width:1200px) {
-    .aside_menu{
-        display: none;
-    }
-    #aside_menu_chk:checked + .mobile_aside_menu{
-        transform: translateX(0);
-    }
-    #aside_menu_chk:checked + .mobile_aside_menu .fa-angle-right{
-        transform: scaleX(-1);
-    }
-    .mobile_aside_menu {
-        display: unset;
-        background-color: #403C3C;
-        width: 230px;
-        height: 100vh;
-        position: absolute;
-        float: left;
-        left: 0; 
-        position: fixed;
-        transform: translateX(-99%);
-        z-index: 2;
-        transition: 0.6s;
-    }
-    .mobile_aside_menu label{
-        position: absolute;
-        background-color: #ccc;
-        border-radius: 0 5px 5px 0;
-        padding: 20px 10px;
-        top: 50%;
-        left: 100%;
-        transition: 0.6s;
-    }
-    #booking_history{
+    header a img {
         width: 100%;
-        margin-left: 0%;
+        height: 50px;
+    }
+    .nav_icon a {
+        font-size: 19px;
+        margin-right: 10px;
+    }
+    .footer_link {
+        justify-content: center;
+    }
+    aside {
+        background-color: #403C3C;
+        width: 150px;
+        height: 82vh;
+        position: fixed;
+        top: 12%;
+    }
+
+    .panel-title {
+        font-size: 20px;
+        padding-top: 8px;
+    }
+
+    .panel .little_title a  {
+        text-decoration: none;
+        color: white;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .container{
+        height: 80vh;    
+    }
+
+    .sreach_form {
+    /* border: 1px solid red; */
+    padding: 0 0px 0px 10px;
+    }
+
+    .sreach_form .form_textbox {
+        margin-bottom: 0px;
+    }
+
+    .container .order_table {
+       margin-top: -15px;
+    }
+
+    th{
+        font-size: 10px;
+        text-align: center;
+        position: relative;
+        left: 10px;
+        letter-spacing: 0px;
+    }
+    
+    td{
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    tbody .detail_btn {
+        border-radius: 8px;
+    }
+
+    tbody .cancel_btn {
+        margin-right: 100px;
+    }
+    
+    .comment_btn{
+        border-radius: 8px;
+    }
+    
+    .cancel_modal_body{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 28px;
+        font-family: Noto Sans TC;
+    }
+    
+    .modal-title{
+        font-family: Noto Sans TC;
+        font-size: 24px; 
+    }
+    .detail_modal_body{
+    
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 150px;
+        font-size: 18px;
+        font-family: Noto Sans TC;
+    }
+    
+    .rank_modal_body{
+        position: relative;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-left: 150px;
+        font-family: Noto Sans TC;
+    }
+    
+    .modal-footer{
+        font-family: Noto Sans TC;
+    }
+    
+    .rank_modal_title{
+        position: absolute;
+        font-size: 28px;
+        left: -50px;
+        top: -40px;
+    
     }
 }
 
@@ -159,6 +324,14 @@ table th ,td{
 /* 大型螢幕 */
 
 @media screen and (max-width:992px) {
+    header a img {
+        width: 100%;
+        height: 50px;
+    }
+    .nav_icon a {
+        font-size: 18px;
+        margin-right: 10px;
+    }
 
 }
 
@@ -166,32 +339,25 @@ table th ,td{
 /* 平板 */
 
 @media screen and (max-width:768px) {
-    #booking_history{
+    header a img {
+        width: 100%;
+        height: 50px;
+    }
+    .nav_icon a {
+        /* font-size: 16px;
+        margin-right: 10px; */
         display: none;
     }
-    #mobile_booking_history{
-        all: unset;
+    .rwd_icon {
+        display: block;
     }
-    .mobile_inline_booking_history{
-        border: 1px solid #ccc;
-        padding: 20px 0 0 0;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-        margin-bottom: 20px;
+    .footer_text {
+        line-height: 40px;
+        height: 50px;
+        font-size: 14px;
     }
-    .mobile_div{
-        display: flex;
-        justify-content: space-around;
-    }
-    .mobile_inline_div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    #mobile_booking_history .mobile_inline_booking_history:last-child{
-        margin-bottom: 100px;
+    .footer_link {
+        font-size: 14px;
     }
 }
 
@@ -199,15 +365,23 @@ table th ,td{
 /* 手機 */
 
 @media screen and (max-width:576px) {
-
+    header a img {
+        width: 100%;
+        height: 50px;
+    }
+    /* .nav_icon a {
+        font-size: 14px;
+        margin-left: 0px;
+    } */
 }
 
 
 /* 小手機 */
 
 @media screen and (max-width:480px) {
-
+    .rwd_icon{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+    }
 }
-
-
-/* RWD end */
