@@ -10,8 +10,6 @@ body {
   border-radius: 5px;
   text-align: center;
   align-items: center;
-  margin: 0 auto;
-  position: relative;
 }
 
 
@@ -38,7 +36,6 @@ body {
  position: relative;
  left: 300px;
  top: 10px;
-
 }
 
 #check_order{
@@ -49,7 +46,9 @@ body {
 .order_finish_div{
   width: 300px;
   height: 200px;
-  margin: 10% auto;
+  margin: 5% auto;
+  position: relative;
+  right: 9%;
 }
 
 .footer_page {
@@ -89,6 +88,5 @@ body {
   }
   #back_to_home {
     margin-top: 10px;
-    margin-left: 55px;
    }
 }
