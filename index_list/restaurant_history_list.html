@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>歷史訂單紀錄</title>
+  <title>歷史訂餐紀錄</title>
 
   <!-- bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -14,7 +14,7 @@
   <!-- mainstyle -->
   <link rel="stylesheet" href="css/style.css">
   <!-- index -->
-  <link rel="stylesheet" href="css/restaurant_history_list.css">
+  <link rel="stylesheet" href="css/restaurant_booking_history.css ">
 
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -24,23 +24,32 @@
 <body>
   <!-- 導覽列 start -->
 
-  <div class="header_page"></div>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="LOGO"></a>
+      <div class="rwd_icon">
+        <a class="nav_a" href="list.html"><i class="fas fa-store"></i></a>
+        <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i></a>
+        <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i></a>
+      </div>
+    </nav>
+  </header>
 
   <!-- 導覽列 over -->
 
-  <aside class="aside_menu">
+  <aside>
     <div class="panel-group" id="accordion">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
           </h4>
         </div>
-        <div id="collapseOne" class="panel-collapse collapse">
+        <div id="collapseOne" class="panel-collapse collapse in">
           <div class="little_title">
             <a data-parent="#accordion" href="restaurant_today_booking.html">今日訂位</a>
           </div>
         </div>
-        <div id="collapseOne" class="panel-collapse collapse">
+        <div id="collapseOne" class="panel-collapse collapse in">
           <div class="little_title">
             <a data-parent="#accordion" href="restaurant_booking_history.html">歷史訂位紀錄</a>
           </div>
@@ -51,317 +60,159 @@
           <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">訂餐管理</a>
           </h4>
         </div>
-        <div id="collapseTwo" class="panel-collapse collapse">
+        <div id="collapseTwo" class="panel-collapse collapse in">
           <div class="little_title">
             <a data-parent="#accordion" href="restaurant_self_pick_up.html">今日自取訂餐</a>
           </div>
         </div>
-        <div id="collapseTwo" class="panel-collapse collapse default">
+        <div id="collapseTwo" class="panel-collapse collapse in">
           <div class="little_title">
             <a data-parent="#accordion" href="restaurant_history_list.html">歷史訂餐紀錄</a>
           </div>
         </div>
       </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">搜尋</a>
-          </h4>
-        </div>
-        <div id="collapseThree" class="panel-collapse collapse">
-
-          <form class="sreach_form">
-            <div class="form-group row form_textbox">
-              <label for="booker" class="col-form-label"></label>
-              <div class="col-10">
-                <input id="booker" name="booker" placeholder="訂位人" type="text" class="form-control">
-              </div>
-            </div>
-            <div class="form-group row form_textbox">
-              <label for=" booking_number" class="col-form-label"></label>
-              <div class="col-10">
-                <input id=" booking_number" name=" booking_number" placeholder="訂位編號" type="text" class="form-control">
-              </div>
-            </div>
-            <div class="form-group row form_textbox">
-              <label for=" booking_date" class="col-form-label"></label>
-              <div class="col-10">
-                <input id=" booking_date" name=" booking_date" placeholder="訂位日期" type="text" class="form-control">
-              </div>
-            </div>
-            <div class="form-group row form_textbox">
-              <label for="booker_phone" class="col-form-label"></label>
-              <div class="col-10">
-                <input id="booker_phone" name="booker_phone" placeholder="手機" type="text" class="form-control">
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
     </div>
   </aside>
 
-  <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk">
-  <aside class="mobile_aside_menu">
-    <div class="panel-group" id="accordion">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
-          </h4>
-        </div>
-        <div id="collapseOne" class="panel-collapse collapse">
-          <div class="little_title">
-            <a data-parent="#accordion" href="restaurant_today_booking.html">今日訂位</a>
-          </div>
-        </div>
-        <div id="collapseOne" class="panel-collapse collapse">
-          <div class="little_title">
-            <a data-parent="#accordion" href="restaurant_booking_history.html">歷史訂位紀錄</a>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">訂餐管理</a>
-          </h4>
-        </div>
-        <div id="collapseTwo" class="panel-collapse collapse">
-          <div class="little_title">
-            <a data-parent="#accordion" href="restaurant_self_pick_up.html">今日自取訂餐</a>
-          </div>
-        </div>
-        <div id="collapseTwo" class="panel-collapse collapse default">
-          <div class="little_title">
-            <a data-parent="#accordion" href="restaurant_history_list.html">歷史訂餐紀錄</a>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">搜尋</a>
-          </h4>
-        </div>
-        <div id="collapseThree" class="panel-collapse collapse in">
-
-          <form class="sreach_form">
-            <div class="form-group row form_textbox">
-              <label for="booker" class="col-form-label"></label>
-              <div class="col-10">
-                <input id="booker" name="booker" placeholder="訂位人" type="text" class="form-control">
-              </div>
-            </div>
-            <div class="form-group row form_textbox">
-              <label for=" booking_number" class="col-form-label"></label>
-              <div class="col-10">
-                <input id=" booking_number" name=" booking_number" placeholder="訂位編號" type="text" class="form-control">
-              </div>
-            </div>
-            <div class="form-group row form_textbox">
-              <label for=" booking_date" class="col-form-label"></label>
-              <div class="col-10">
-                <input id=" booking_date" name=" booking_date" placeholder="訂位日期" type="text" class="form-control">
-              </div>
-            </div>
-            <div class="form-group row form_textbox">
-              <label for="booker_phone" class="col-form-label"></label>
-              <div class="col-10">
-                <input id="booker_phone" name="booker_phone" placeholder="手機" type="text" class="form-control">
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <label for="aside_menu_chk">
-        <i class="fas fa-angle-right"></i>
-      </label>
+  <div class="container">
+    <div class="search-bar">
+      <button>搜尋</button><input type="text" placeholder="訂單編號">
     </div>
-  </aside>
+    <table class="table order_table">
+      <thead>
+        <tr>
+          <th>取餐編號</th>
+          <th>取餐日期</th>
+          <th>取餐時間</th>
+          <th>訂餐姓名</th>
+          <th>訂餐金額</th>
+          <th>手機</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="test">
+          <td>00123</td>
+          <td>2022-02-22</td>
+          <td>19:30</td>
+          <td>陳映瑜</td>
+          <td>350</td>
+          <td>0988512203</td>
+          <td>
+            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
+              詳細內容
+            </button>
+          </td>
+        </tr>
 
-  <div id="history_list">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <table class="table order_table">
-            <thead>
-              <tr>
-                <th>取餐編號</th>
-                <th>取餐日期</th>
-                <th>取餐時間</th>
-                <th>訂餐姓名</th>
-                <th>訂餐金額</th>
-                <th>手機</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>00001</td>
-                <td>3/10</td>
-                <td>16:30</td>
-                <td>郭美美</td>
-                <td>260</td>
-                <td>09001993412</td>
-                <td>
-                  <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                    訂餐明細
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>00001</td>
-                <td>3/10</td>
-                <td>16:30</td>
-                <td>郭美美</td>
-                <td>260</td>
-                <td>09001993412</td>
-                <td>
-                  <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                    訂餐明細
-                  </button>
-                </td>
-              </tr>
+        <tr>
+          <td>00122</td>
+          <td>2022-02-22</td>
+          <td>17:00</td>
+          <td>王力宏</td>
+          <td>490</td>
+          <td>0902135699</td>
+          <td>
+            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
+              詳細內容
+            </button>
+          </td>
+        </tr>
 
-              <tr>
-                <td>00001</td>
-                <td>3/10</td>
-                <td>16:30</td>
-                <td>郭美美</td>
-                <td>260</td>
-                <td>09001993412</td>
-                <td>
-                  <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                    訂餐明細
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>00001</td>
-                <td>3/10</td>
-                <td>16:30</td>
-                <td>郭美美</td>
-                <td>260</td>
-                <td>09001993412</td>
-                <td>
-                  <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                    訂餐明細
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
+        <tr>
+          <td>00121</td>
+          <td>2022-02-21</td>
+          <td>18:30</td>
+          <td>劉雨晴</td>
+          <td>980</td>
+          <td>0918557110</td>
+          <td>
+            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
+              詳細內容
+            </button>
+          </td>
+        </tr>
 
-  <div id="mobile_history_list">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="mobile_inline_history_list">
-                    <div class="mobile_div">
-                        <div class="mobile_inline_div">
-                            <p>取餐編號:00001</p>
-                            <p>取餐日期:2022-03-10</p>
-                            <p>取餐時間:16:30</p>
-                        </div>
-                        <div class="mobile_inline_div">
-                            <p>訂餐姓名:郭美美</p>
-                            <p>訂餐金額:260</p>
-                            <p>手機:09001993412</p>
-                        </div>
-                    </div>
-                    <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                        訂餐明細
-                    </button>
-                </div>
-                <div class="mobile_inline_history_list">
-                  <div class="mobile_div">
-                      <div class="mobile_inline_div">
-                          <p>取餐編號:00001</p>
-                          <p>取餐日期:2022-03-10</p>
-                          <p>取餐時間:16:30</p>
-                      </div>
-                      <div class="mobile_inline_div">
-                          <p>訂餐姓名:郭美美</p>
-                          <p>訂餐金額:260</p>
-                          <p>手機:09001993412</p>
-                      </div>
-                  </div>
-                  <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                      訂餐明細
-                  </button>
+        <tr>
+          <td>00120</td>
+          <td>2022-02-21</td>
+          <td>17:15</td>
+          <td>張宇</td>
+          <td>500</td>
+          <td>0972110202</td>
+          <td>
+            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
+              詳細內容
+            </button>
+          </td>
+        </tr>
+
+        <!-- 訂餐明細對話盒 -->
+        <div class="modal fade" id="detailModal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h3 class="modal-title">訂單明細</h3>
+                <button type="button" class="close" data-dismiss="modal"></button>
               </div>
-              <div class="mobile_inline_history_list">
-                <div class="mobile_div">
-                    <div class="mobile_inline_div">
-                        <p>取餐編號:00001</p>
-                        <p>取餐日期:2022-03-10</p>
-                        <p>取餐時間:16:30</p>
-                    </div>
-                    <div class="mobile_inline_div">
-                        <p>訂餐姓名:郭美美</p>
-                        <p>訂餐金額:260</p>
-                        <p>手機:09001993412</p>
-                    </div>
-                </div>
-                <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                    訂餐明細
+
+              <!-- Modal body -->
+              <div class="detail_modal_body">
+                姓名：陳映瑜 <br />
+                手機：0972607451<br />
+                電子郵件：jason8745@gmail.com <br />
+                取餐編號：00123 <br />
+                取餐日期：2022/02/22 <br />
+                取位時間：19:30 <br />
+                備註：需要兒童座椅
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">
+                  返回
                 </button>
-            </div>
-            <div class="mobile_inline_history_list">
-              <div class="mobile_div">
-                  <div class="mobile_inline_div">
-                      <p>取餐編號:00001</p>
-                      <p>取餐日期:2022-03-10</p>
-                      <p>取餐時間:16:30</p>
-                  </div>
-                  <div class="mobile_inline_div">
-                      <p>訂餐姓名:郭美美</p>
-                      <p>訂餐金額:260</p>
-                      <p>手機:09001993412</p>
-                  </div>
               </div>
-              <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                  訂餐明細
-              </button>
-          </div>
             </div>
-        </div>
-    </div>
-</div>
-
-
-  <!-- 訂餐明細對話盒 -->
-  <div class="modal fade" id="detailModal">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">訂單明細</h4>
-          <button type="button" class="close" data-dismiss="modal"></button>
+          </div>
         </div>
 
-        <!-- Modal body -->
-        <div class="detail_modal_body">
-          姓名：李曉明 <br />
-          手機：0900-xxxxxx<br />
-          電子郵件：email@gmail.com <br />
-          <br />
-          訂位編號：00001 <br />
-          訂位人數：3人 <br />
-          訂位日期：2022/02/02 <br />
-          取位時間：17:30 <br />
-          備註：需要兒童座椅
+        <div class="modal fade" id="detailModal2">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h3 class="modal-title">確定取消訂單嗎?</h3>
+                <button type="button" class="close" data-dismiss="modal"></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="detail_modal_body">
+                姓名：張哲偉 <br />
+                手機：0972607451<br />
+                電子郵件：jason8745@gmail.com <br />
+                訂位編號：00127 <br />
+                訂位人數：2人 <br />
+                訂位日期：2022/02/24 <br />
+                取位時間：20:00 <br />
+                備註：需要兒童座椅
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-lg btn-danger" data-dismiss="modal" onclick="myFunction()">
+                  確認取消 
+                </button>
+                <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">
+                  返回
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">
-            返回
-          </button>
-        </div>
-      </div>
-    </div>
+      </tbody>
+    </table>
   </div>
 
 
@@ -376,6 +227,10 @@
       $(".header_page").load("header.html");
       $(".footer_page").load("footer.html");
     });
+
+    function myFunction() {
+      $("#test").addClass("test");
+    }
   </script>
 </body>
 
