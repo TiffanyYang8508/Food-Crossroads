@@ -110,9 +110,14 @@
                         <div class="btn_div">
                             <button
                   type="button"
-                  onclick="edit()"
-                  class="member_confirm_btn"
-                >修改資料
+                  onclick="editpwd()"
+                  class="member_editpwd_btn"
+                >修改密碼</button>
+                <button
+                type="button"
+                onclick="editinfo()"
+                class="member_editinfo_btn"
+              >修改資料</button>
                         </div>
                     </form>
                 </div>
@@ -134,8 +139,11 @@
         $(".footer_page").load("footer.html");
       });
 
-      function edit() {
+      function editinfo() {
         window.location = "./editmember.html";
+      }
+      function editpwd(){
+          window.location = "./editpwd.html"
       }
     </script>
   </body>

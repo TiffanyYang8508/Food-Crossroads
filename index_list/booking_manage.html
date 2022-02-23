@@ -92,9 +92,9 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr id="cancel">
                   <td class="mobile_td">李曉明</td>
-                  <td class="mobile_td">2022-01-08</td>
+                  <td class="mobile_td">2022-03-18</td>
                   <td class="mobile_td">aqua水相餐廳</td>
                   <td class="mobile_td">17:00</td>
                   <td class="mobile_td">3</td>
@@ -127,15 +127,16 @@
 
                 <tr>
                   <td class="mobile_td">李曉明</td>
-                  <td class="mobile_td">2022-01-05</td>
+                  <td class="mobile_td">2022-02-22</td>
                   <td class="mobile_td">aqua水相餐廳</td>
-                  <td class="mobile_td">17:00</td>
+                  <td class="mobile_td">19:00</td>
                   <td class="mobile_td">2</td>
                   <td class="btn_td">
                     <button
                       class="cancel_btn"
                       data-toggle="modal"
                       data-target="#cancel_order_Modal"
+                      
                     >
                       取消訂位
                     </button>
@@ -155,7 +156,7 @@
                   <td class="mobile_td">李曉明</td>
                   <td class="mobile_td">2022-01-03</td>
                   <td class="mobile_td">aqua水相餐廳</td>
-                  <td class="mobile_td">17:00</td>
+                  <td class="mobile_td">18:00</td>
                   <td class="mobile_td">4</td>
                   <td class="btn_td">
                     <button
@@ -183,64 +184,15 @@
                     </button>
                   </td>
                 </tr>
-                <tr>
-                  <td class="mobile_td">李曉明</td>
-                  <td class="mobile_td">2022-01-02</td>
-                  <td class="mobile_td">aqua水相餐廳</td>
-                  <td class="mobile_td">17:00</td>
-                  <td class="mobile_td">1</td>
-                  <td class="btn_td">
-                    <button
-                      class="cancel_btn"
-                      data-toggle="modal"
-                      data-target="#cancel_order_Modal"
-                    >
-                      取消訂位
-                    </button>
-                    <button
-                      class="detail_btn"
-                      data-toggle="modal"
-                      data-target="#detailModal"
-                    >
-                      詳細內容
-                    </button>
-                  </td>
-                  <td>
-                    <button class="comment_btn">評價</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="mobile_td">李曉明</td>
-                  <td class="mobile_td">2022-01-01</td>
-                  <td class="mobile_td">aqua水相餐廳</td>
-                  <td class="mobile_td">17:00</td>
-                  <td class="mobile_td">3</td>
-                  <td class="btn_td">
-                    <button
-                      class="cancel_btn"
-                      data-toggle="modal"
-                      data-target="#cancel_order_Modal"
-                    >
-                      取消訂位
-                    </button>
-                    <button
-                      class="detail_btn"
-                      data-toggle="modal"
-                      data-target="#detailModal"
-                    >
-                      詳細內容
-                    </button>
-                  </td>
-                  <td>
-                    <button class="comment_btn">評價</button>
-                  </td>
-                </tr>
+               
+              
               </tbody>
             </table>
           </div>
         </div>
       </div>
     </div>
+
     <div id="mobile_booking_manage">
       <div class="container-fluid">
         <div class="row">
@@ -324,57 +276,8 @@
                   <button class="comment_btn">評價</button>
                 </div>
               </div>
-              <div class="mobile_order_inline_div">
-                <div class="mobile_text_div">
-                  <p>訂位人:李曉明</p>
-                  <p>訂位日期:2022-01-08</p>
-                  <p>訂位餐廳:aqua水相餐廳</p>
-                  <p>訂位時間:17:00</p>
-                  <p>訂位人數:1</p>
-                </div>
-                <div class="mobile_btn_div">
-                  <button
-                    class="cancel_btn"
-                    data-toggle="modal"
-                    data-target="#cancel_order_Modal"
-                  >
-                    取消訂位
-                  </button>
-                  <button
-                    class="detail_btn"
-                    data-toggle="modal"
-                    data-target="#detailModal"
-                  >
-                    詳細內容
-                  </button>
-                  <button class="comment_btn">評價</button>
-                </div>
-              </div>
-              <div class="mobile_order_inline_div">
-                <div class="mobile_text_div">
-                  <p>訂位人:李曉明</p>
-                  <p>訂位日期:2022-01-08</p>
-                  <p>訂位餐廳:aqua水相餐廳</p>
-                  <p>訂位時間:17:00</p>
-                  <p>訂位人數:3</p>
-                </div>
-                <div class="mobile_btn_div">
-                  <button
-                    class="cancel_btn"
-                    data-toggle="modal"
-                    data-target="#cancel_order_Modal"
-                  >
-                    取消訂位
-                  </button>
-                  <button
-                    class="detail_btn"
-                    data-toggle="modal"
-                    data-target="#detailModal"
-                  >
-                    詳細內容
-                  </button>
-                  <button class="comment_btn">評價</button>
-                </div>
+             
+              
               </div>
             </div>
           </div>
@@ -396,7 +299,12 @@
 
           <!-- Modal footer -->
           <div class="modal-footer">
-            <button type="button" class="modal_ok_btn" data-dismiss="modal">
+            <button
+              type="button"
+              onclick="cancelbtn()"
+              class="modal_ok_btn"
+              data-dismiss="modal"
+            >
               確定
             </button>
             <button type="button" class="modal_back_btn" data-dismiss="modal">
@@ -420,13 +328,13 @@
           <!-- Modal body -->
           <div class="detail_modal_body">
             姓名：李曉明 <br />
-            手機：0900-xxxxxx <br />
-            電子郵件：email@gmail.com <br />
+            手機：0987654321 <br />
+            電子郵件：askf@gmail.com <br />
             <br />
-            訂位編號：00001 <br />
+            訂位編號：00005 <br />
             訂位人數：3人 <br />
-            訂位日期：2022/02/02 <br />
-            取位時間：17:30 <br />
+            訂位日期：2022/03/18 <br />
+            取位時間：17:00 <br />
             備註：需要兒童座椅
           </div>
 
@@ -476,7 +384,18 @@
 
           <!-- Modal footer -->
           <div class="modal-footer">
-            <button type="button" class="modal_back_btn" data-dismiss="modal">
+            <button
+              type="button"
+              class="btn btn-success btn-lg"
+              data-dismiss="modal"
+            >
+              確定
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger btn-lg"
+              data-dismiss="modal"
+            >
               返回
             </button>
           </div>
@@ -554,6 +473,10 @@
           }
         };
       });
+
+      function cancelbtn() {
+        $("#cancel").addClass("test");
+      }
     </script>
   </body>
 </html>
