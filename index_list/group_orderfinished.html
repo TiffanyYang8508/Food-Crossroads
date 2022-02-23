@@ -22,9 +22,21 @@
 </head>
 
 <body>
-  <!-- header -->
-  <div class="headerpage"></div>
-  <!-- header -->
+    <!-- 導覽列 start -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="LOGO"></a>
+          <div class="nav_icon">
+              <a class="nav_a" href="member.html"><i class="fas fa-user-circle"></i>李曉明</a>
+          </div>
+          <div class="rwd_icon">
+              <a class="nav_a" href="list.html"><i class="fas fa-store"></i></a>
+              <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i></a>
+              <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i></a>
+          </div>
+      </nav>
+  </header>
+  <!-- 導覽列 over -->
 
   <div class="container">
     <div class="order_finish_div">
@@ -33,10 +45,14 @@
       </div>
     </div>
     <div class="buy_back_div">
-      <button class="buy_back_btn" id="check_order" onclick="check_order()">查看訂單</button>
+      <button class="buy_back_btn" id="check_order" onclick="check_order()">查看所有團員已點清單</button>
       <button class="buy_back_btn" id="back_to_home" onclick="back_index()">回首頁</button>
     </div>
   </div>
+
+
+
+
 
   <footer>
     <footer class="footerpage footer_page"></footer>
@@ -47,7 +63,7 @@
     $(".footerpage").load("footer.html");
 
     function check_order() {
-      window.location = "order_manage.html";
+      window.location = "orderdisaplay.html";
     }
     function back_index() {
       window.location = "index.html";
