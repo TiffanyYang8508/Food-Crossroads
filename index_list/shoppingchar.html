@@ -87,7 +87,7 @@
                                     <span>刪除</span>
                                 </td>
                             </tr>
-                            <tr class="shopping-row" id="shopping-row">
+                            <!-- <tr class="shopping-row" id="shopping-row">
                                 <td>
                                     <input class="shopping-checkbox checkmark" id="shopping-checkbox" type="checkbox"
                                         name="shopping-checkbox" />
@@ -115,9 +115,9 @@
                                 <td class="delete-shopping">
                                     <span>刪除</span>
                                 </td>
-                            </tr>
+                            </tr> -->
 
-                            <tr class="shopping-row" id="shopping-row">
+                            <!-- <tr class="shopping-row" id="shopping-row">
                                 <td>
                                     <input class="shopping-checkbox checkmark" id="shopping-checkbox" type="checkbox"
                                         name="shopping-checkbox" />
@@ -177,7 +177,7 @@
                                 <td class="delete-shopping">
                                     <span>刪除</span>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
@@ -321,14 +321,42 @@
         $(".header_page").load("header.html");
         $(".footer_page").load("footer.html");
 
-        // $('input').change(function () {
-        //     $(`input[name='${this.id}']`).prop('checked', this.checked);
 
-        //     $(`input[id='${this.name}']`)
-        //         .prop('checked',
-        //             $(`input[name='${this.name}']`).length ==
-        //             $(`input[name='${this.name}']:checked`).length)
-        // })
+        function qty() {
+            var aAdd = document.querySelectorAll(".add");
+            var sub = document.querySelectorAll(".sub");
+            for (var i = 0; i < aAdd.length; i++) {
+                aAdd[i].onclick = function () {
+                    var num = Number(this.previousElementSibling.value);
+                    num++;
+                    this.previousElementSibling.value = num;
+                    // var price = this.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.innerHTML;
+                    // this.nextElementSibling.firstElementChild.innerHTML = price * num;
+                }
+            }
+            for (var i = 0; i < sub.length; i++) {
+                sub[i].onclick = function () {
+                    var num = Number(this.nextElementSibling.value);
+                    if (num > 1) {
+                        num--;
+                    }
+                    this.nextElementSibling.value = num;
+                    // var price = this.previousElementSibling.firstElementChild.innerHTML;
+                    // this.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.innerHTML = price * num;
+                }
+            }
+
+        }
+
+
+
+        $('input').change(function () {
+            $(`input[name='${this.id}']`).prop('checked', this.checked);
+            $(`input[id='${this.name}']`)
+                .prop('checked',
+                    $(`input[name='${this.name}']`).length ==
+                    $(`input[name='${this.name}']:checked`).length)
+        })
     </script>
 
 </body>
