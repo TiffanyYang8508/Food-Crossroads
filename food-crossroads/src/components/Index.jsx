@@ -385,19 +385,19 @@ class Index extends Component {
                                     <div>
                                         <h3>今天要吃什麼</h3>
                                     </div>
-                                    <div className="water_fall">
-                                        <div className="kind_span">
-                                            <a href="/restaurant/list/美式餐廳" title="美式料理">
+                                    <ul className="water_fall">
+                                        <li className="kind_span">
+                                            <a href="/restaurant/list/義式料理" title="義式料理">
                                                 <div className="index_img">
-                                                    <img src={require('../img/american_food.png')} alt="美式料理" />
-                                                    <span>美式料理</span>
+                                                    <img src={require('../img/index_img/italian_food.png')} alt="義式料理" />
+                                                    <span>義式料理</span>
                                                 </div>
                                             </a>
-                                        </div>
+                                        </li>
                                         <li className="kind_span">
                                             <a href="/restaurant/list/中式料理" title="中式料理">
                                                 <div className="index_img">
-                                                    <img src={require('../img/chinese_food.png')} alt="中式料理" />
+                                                    <img src={require('../img/index_img/chinese_food.png')} alt="中式料理" />
                                                     <span>中式料理</span>
                                                 </div>
                                             </a>
@@ -405,23 +405,23 @@ class Index extends Component {
                                         <li className="kind_span">
                                             <a href="/restaurant/list/法式料理" title="法式料理">
                                                 <div className="index_img">
-                                                    <img src={require('../img/french_food.png')} alt="法式料理" />
+                                                    <img src={require('../img/index_img/french_food.png')} alt="法式料理" />
                                                     <span>法式料理</span>
                                                 </div>
                                             </a>
                                         </li>
                                         <li className="kind_span">
-                                            <a href="/restaurant/list/義式料理" title="義式料理">
+                                            <a href="/restaurant/list/美式餐廳" title="美式料理">
                                                 <div className="index_img">
-                                                    <img src={require('../img/italian_food.png')} alt="義式料理" />
-                                                    <span>義式料理</span>
+                                                    <img src={require('../img/index_img/american_food.png')} alt="美式料理" />
+                                                    <span>美式料理</span>
                                                 </div>
                                             </a>
                                         </li>
                                         <li className="kind_span">
                                             <a href="/restaurant/list/日式料理" title="日式料理">
                                                 <div className="index_img">
-                                                    <img src={require('../img/japanese_food.png')} alt="日式料理" />
+                                                    <img src={require('../img/index_img/japanese_food.png')} alt="日式料理" />
                                                     <span>日式料理</span>
                                                 </div>
                                             </a>
@@ -429,7 +429,7 @@ class Index extends Component {
                                         <li className="kind_span">
                                             <a href="/restaurant/list/韓式料理" title="韓式料理">
                                                 <div className="index_img">
-                                                    <img src={require('../img/korean_food.png')} alt="韓式料理" />
+                                                    <img src={require('../img/index_img/korean_food.png')} alt="韓式料理" />
                                                     <span>韓式料理</span>
                                                 </div>
                                             </a>
@@ -437,7 +437,7 @@ class Index extends Component {
                                         <li className="kind_span">
                                             <a href="/restaurant/list/中東料理" title="中東料理">
                                                 <div className="index_img">
-                                                    <img src={require('../img/middle_east_food.png')} alt="中東料理" />
+                                                    <img src={require('../img/index_img/middle_east_food.png')} alt="中東料理" />
                                                     <span>中東料理</span>
                                                 </div>
                                             </a>
@@ -445,12 +445,12 @@ class Index extends Component {
                                         <li className="kind_span">
                                             <a href="/restaurant/list/港式料理" title="港式料理">
                                                 <div className="index_img">
-                                                    <img src={require('../img/port_food.png')} alt="港式料理" />
+                                                    <img src={require('../img/index_img/port_food.png')} alt="港式料理" />
                                                     <span>港式料理</span>
                                                 </div>
                                             </a>
                                         </li>
-                                    </div>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
