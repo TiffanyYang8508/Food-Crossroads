@@ -76,7 +76,7 @@
 
   <div class="container">
     <div class="search-bar">
-      <button>搜尋</button><input type="text" placeholder="訂單編號">
+      <button onclick="search()">搜尋</button><input type="text" placeholder="訂單編號">
     </div>
     <table class="table order_table">
       <thead>
@@ -118,7 +118,7 @@
           </td>
         </tr>
 
-        <tr>
+        <tr id="search">
           <td>
             <div class="checkbox">
               <label>
@@ -284,6 +284,10 @@
 
     function myFunction() {
       $("#test").addClass("test");
+    }
+
+    function search() {
+      $("#search").addClass("search");
     }
   </script>
 </body>

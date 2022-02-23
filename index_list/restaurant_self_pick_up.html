@@ -14,7 +14,7 @@
   <!-- mainstyle -->
   <link rel="stylesheet" href="css/style.css">
   <!-- index -->
-  <link rel="stylesheet" href="css/restaurant_today_booking.css ">
+  <link rel="stylesheet" href="css/restaurant_self_pick_up.css ">
 
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -81,11 +81,11 @@
     <table class="table order_table">
       <thead>
         <tr>
-          <th>已完成</th>
+          <th>狀態</th>
           <th>取餐編號</th>
           <th>取餐日期</th>
+          <th>取餐時間</th>
           <th>取餐姓名</th>
-          <th>取餐金額</th>
           <th>手機</th>
         </tr>
       </thead>
@@ -100,17 +100,23 @@
           </td>
           <td>00215</td>
           <td>2022-02-24</td>
-          <td>19:00</td>
-          <td>張凱程</td>
-          <td>0912554774</td>
+          <td>12:00</td>
+          <td>李曉明</td>
+          <td>0972607451</td>
           <td>
             <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
               詳細內容
             </button>
           </td>
           <td>
+            <button class="btn btn-sm btn-danger group_btn" data-toggle="modal" data-target="#detailModal3"
+              style="position: relative; right: 55px;">
+              揪
+            </button>
+          </td>
+          <td>
             <button class="btn btn-sm detail_btn cancel_btn" data-toggle="modal" data-target="#detailModal2"
-              style="border: 1px solid #403C3C;">
+              style="border: 1px solid #403C3C; position: relative; right: 100px;">
               取消
             </button>
           </td>
@@ -124,7 +130,71 @@
               </label>
             </div>
           </td>
-          <td>00216</td>
+          <td>00215</td>
+          <td>2022-02-24</td>
+          <td>12:00</td>
+          <td>郭美美</td>
+          <td>0928755511</td>
+          <td>
+            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
+              詳細內容
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-sm btn-danger group_btn" data-toggle="modal" data-target="#detailModal3"
+              style="position: relative; right: 55px;">
+              揪
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-sm detail_btn cancel_btn" data-toggle="modal" data-target="#detailModal2"
+              style="border: 1px solid #403C3C; position: relative; right: 100px;">
+              取消
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" style="width: 15px; height: 15px; margin-left: 15px;">
+              </label>
+            </div>
+          </td>
+          <td>00215</td>
+          <td>2022-02-24</td>
+          <td>12:00</td>
+          <td>陳家欣</td>
+          <td>0936621354</td>
+          <td>
+            <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
+              詳細內容
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-sm btn-danger group_btn" data-toggle="modal" data-target="#detailModal3"
+              style="position: relative; right: 55px;">
+              揪
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-sm detail_btn cancel_btn" data-toggle="modal" data-target="#detailModal2"
+              style="border: 1px solid #403C3C; position: relative; right: 100px;">
+              取消
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" style="width: 15px; height: 15px; margin-left: 15px;">
+              </label>
+            </div>
+          </td>
+          <td>00214</td>
           <td>2022-02-24</td>
           <td>20:00</td>
           <td>張慧庭</td>
@@ -150,10 +220,10 @@
               </label>
             </div>
           </td>
-          <td>00217</td>
+          <td>00213</td>
           <td>2022-02-23</td>
           <td>18:30</td>
-          <td>李曉明</td>
+          <td>李玉芳</td>
           <td>0918557110</td>
           <td>
             <button class="btn btn-sm btn-dark detail_btn" data-toggle="modal" data-target="#detailModal">
@@ -176,7 +246,7 @@
               </label>
             </div>
           </td>
-          <td>00218</td>
+          <td>00212</td>
           <td>2022-02-23</td>
           <td>17:15</td>
           <td>陳誠慶</td>
@@ -188,7 +258,7 @@
           </td>
           <td>
             <button class="btn btn-sm detail_btn cancel_btn" data-toggle="modal" data-target="#detailModal2"
-              style="border: 1px solid #403C3C;" >
+              style="border: 1px solid #403C3C;">
               取消
             </button>
           </td>
@@ -202,7 +272,7 @@
               </label>
             </div>
           </td>
-          <td>00219</td>
+          <td>00211</td>
           <td>2022-02-23</td>
           <td>16:30</td>
           <td>劉宇慶</td>
@@ -214,7 +284,7 @@
           </td>
           <td>
             <button class="btn btn-sm detail_btn cancel_btn" data-toggle="modal" data-target="#detailModal2"
-              style="border: 1px solid #403C3C;" >
+              style="border: 1px solid #403C3C;">
               取消
             </button>
           </td>
@@ -232,14 +302,16 @@
 
               <!-- Modal body -->
               <div class="detail_modal_body">
-                姓名：張哲偉 <br />
+                姓名：李曉明<br />
                 手機：0972607451<br />
-                電子郵件：jason8745@gmail.com <br />
                 訂位編號：00127 <br />
-                訂位人數：2人 <br />
-                訂位日期：2022/02/24 <br />
-                取位時間：20:00 <br />
-                備註：需要兒童座椅
+                取餐日期：2022/02/24 <br />
+                取位時間：12:00 <br />
+                餐點名稱：<br />
+                西西里海鹽柴魚脆薯 *1<br />
+                蕃茄羅勒起司搭頂級陳年油醋*2 <br />
+                總金額：564元 <br />
+                備註：需要餐具
               </div>
 
               <!-- Modal footer -->
@@ -252,6 +324,7 @@
           </div>
         </div>
 
+        <!-- 確認取消訂單對話盒 -->
         <div class="modal fade" id="detailModal2">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -276,8 +349,43 @@
               <!-- Modal footer -->
               <div class="modal-footer">
                 <button type="button" class="btn btn-lg btn-danger" data-dismiss="modal" onclick="myFunction()">
-                  確認取消 
+                  確認取消
                 </button>
+                <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">
+                  返回
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 揪團訂餐對話盒 -->
+        <div class="modal fade" id="detailModal3">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h3 class="modal-title">揪團訂單</h3>
+                <button type="button" class="close" data-dismiss="modal"></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="detail_modal_body">
+                名稱：李曉明 <br />
+                西西里海鹽柴魚脆薯 *1 <br />
+                蕃茄羅勒起司搭頂級陳年油醋*2 <br />
+                <hr>
+                名稱：郭美美 <br />
+                西西里海鹽柴魚脆薯 *1 (加辣)<br />
+                南義炸起司條 *1 <br />
+                <hr>
+                名稱：陳家欣 <br />
+                田園香橙鮮蝦蘿蔓鮮蔬 *1 <br />
+                水相主廚私房湯品 *1 (不要加蔥)<br />
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
                 <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">
                   返回
                 </button>

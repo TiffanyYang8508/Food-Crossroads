@@ -146,6 +146,14 @@ tbody .detail_btn {
     background-color: gray;
 }
 
+.group_btn {
+    border-radius: 10px;
+}
+
+.group_btn:hover {
+    background-color: rgb(250, 83, 111);
+}
+
 .comment_btn{
     border-radius: 8px;
 }
