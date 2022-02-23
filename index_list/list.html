@@ -23,10 +23,22 @@
 
 <body>
     <!-- 導覽列 start -->
-
-    <div class="header_page"></div>
-
-    <!-- 導覽列 over -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="LOGO"></a>
+            <div class="nav_icon">
+                <a class="nav_a" href="list.html"><i class="fas fa-store"></i>餐廳列表</a>
+                <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i>購物車</a>
+                <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i>會員登入</a>
+            </div>
+            <div class="rwd_icon">
+                <a class="nav_a" href="list.html"><i class="fas fa-store"></i></a>
+                <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i></a>
+                <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </nav>
+    </header>
+    <!-- 導覽列 end -->
 
     <section id="search_list">
         <div class="container">
@@ -113,17 +125,23 @@
 
                                 <div class="chk_div dropdown_div">
                                     <div class="chk_css">
-                                        <input class="chk_item" type="checkbox" id="child_seats" name="child_seats" value="2">
+                                        <input class="chk_item" type="checkbox" id="child_seats" name="child_seats"
+                                            value="2">
                                         <label for="child_seats">提供兒童座椅</label>
-                                        <input class="chk_item" type="checkbox" id="barrier_free" name="barrier_free" value="2">
+                                        <input class="chk_item" type="checkbox" id="barrier_free" name="barrier_free"
+                                            value="2">
                                         <label for="barrier_free">無障礙設施</label>
-                                        <input class="chk_item" type="checkbox" id="min_consumption" name="min_consumption" value="2">
+                                        <input class="chk_item" type="checkbox" id="min_consumption"
+                                            name="min_consumption" value="2">
                                         <label for="min_consumption">最低消費限制</label>
-                                        <input class="chk_item" type="checkbox" id="limit_meal_time" name="limit_meal_time" value="2">
+                                        <input class="chk_item" type="checkbox" id="limit_meal_time"
+                                            name="limit_meal_time" value="2">
                                         <label for="limit_meal_time">限制用餐時間</label>
-                                        <input class="chk_item" type="checkbox" id="service_free" name="service_free" value="2">
+                                        <input class="chk_item" type="checkbox" id="service_free" name="service_free"
+                                            value="2">
                                         <label for="service_free">收取服務費</label>
-                                        <input class="chk_item" type="checkbox" id="allow_pets" name="allow_pets" value="2">
+                                        <input class="chk_item" type="checkbox" id="allow_pets" name="allow_pets"
+                                            value="2">
                                         <label for="allow_pets">允許攜帶寵物</label>
                                         <input class="chk_item" type="checkbox" id="delivery" name="delivery" value="2">
                                         <label for="delivery">提供外送</label>
@@ -156,12 +174,14 @@
                                 </div>
                                 <input class="search_keyword" id="keyword" type="text" placeholder="請輸入餐廳關鍵字">
                                 <div class="area_div">
-                                    <label for="area_btn" onclick="open_tab('area')" class="area_label mobile_tab_label"><i class="fas fa-map-marker-alt"></i>請選擇地區<i
-                                        class="fas fa-sort-down"></i></label>
+                                    <label for="area_btn" onclick="open_tab('area')"
+                                        class="area_label mobile_tab_label"><i class="fas fa-map-marker-alt"></i>請選擇地區<i
+                                            class="fas fa-sort-down"></i></label>
                                 </div>
                                 <div class="other_div">
-                                    <label for="other_btn" onclick="open_tab('other')" class="other_label mobile_tab_label"><i class="fas fa-hand-point-up"></i>進階搜尋<i
-                                        class="fas fa-sort-down"></i></label>
+                                    <label for="other_btn" onclick="open_tab('other')"
+                                        class="other_label mobile_tab_label"><i class="fas fa-hand-point-up"></i>進階搜尋<i
+                                            class="fas fa-sort-down"></i></label>
                                 </div>
                                 <div class="dropdown">
                                     <button class="search_btn">搜尋</button>
@@ -229,37 +249,45 @@
                             <div id="other" class="mobile_tab_div">
                                 <div class="mobile_chk_css">
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="child_seats" id="child_seats" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="child_seats"
+                                            id="child_seats" value="2">
                                         <label for="child_seats">提供兒童座椅</label>
                                     </div>
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="barrier_free" id="barrier_free" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="barrier_free"
+                                            id="barrier_free" value="2">
                                         <label for="barrier_free">無障礙設施</label>
                                     </div>
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="min_consumption" id="min_consumption" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="min_consumption"
+                                            id="min_consumption" value="2">
                                         <label for="min_consumption">最低消費限制</label>
                                     </div>
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="limit_meal_time" id="limit_meal_time" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="limit_meal_time"
+                                            id="limit_meal_time" value="2">
                                         <label for="limit_meal_time">限制用餐時間</label>
                                     </div>
                                 </div>
                                 <div class="mobile_chk_css">
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="delivery" id="delivery" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="delivery" id="delivery"
+                                            value="2">
                                         <label for="delivery">提供外送</label>
                                     </div>
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="service_free" id="service_free" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="service_free"
+                                            id="service_free" value="2">
                                         <label for="service_free">收取服務費</label>
                                     </div>
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="parking" id="parking" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="parking" id="parking"
+                                            value="2">
                                         <label for="parking">附設停車場</label>
                                     </div>
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="allow_pets" id="allow_pets" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="allow_pets" id="allow_pets"
+                                            value="2">
                                         <label for="allow_pets">允許攜帶寵物</label>
                                     </div>
                                 </div>
@@ -274,110 +302,175 @@
                         </ol>
                     </nav>
                     <div class="rest_div">
-                        <div class="rest_list">
-                            <div class="rest_img">
-                                <img src="img/french_food.png" alt="">
-                            </div>
-                            <div class="rest_text">
-                                <h4>餐廳類別</h4>
-                                <h3>餐廳名稱</h3>
-                                <h4>餐廳地址</h4>
-                                <div class="rest_inline_div">
-                                    <span>評分</span>
+                        <a href="" class="rest_list_a">
+                            <div class="rest_list">
+                                <div class="rest_img">
+                                    <img src="img/restaurant_list_img/7分so.jpg" alt="">
+                                </div>
+                                <div class="rest_text">
+                                    <span>美式料理</span>
+                                    <h4>7分so</h4>
+                                    <h5>台中市崇德路一段518號</h5>
+                                    <span><i class="fa fa-star"></i> 4.8</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="rest_list">
-                            <div class="rest_img">
-                                <img src="img/korean_food.png" alt="">
-                            </div>
-                            <div class="rest_text">
-                                <h4>餐廳類別</h4>
-                                <h3>餐廳名稱</h3>
-                                <h4>餐廳地址</h4>
-                                <div class="rest_inline_div">
-                                    <span>評分</span>
+                        </a>
+                        <a href="" class="rest_list_a">
+                            <div class="rest_list">
+                                <div class="rest_img">
+                                    <img src="img/restaurant_list_img/開丼.jpg" alt="">
+                                </div>
+                                <div class="rest_text">
+                                    <span>日式料理</span>
+                                    <h3>開丼</h3>
+                                    <h4>台中市西屯區台灣大道三段301號12F</h4>
+                                    <span><i class="fa fa-star"></i> 4.0</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="rest_list">
-                            <div class="rest_img">
-                                <img src="img/middle_east_food.png" alt="">
-                            </div>
-                            <div class="rest_text">
-                                <h4>餐廳類別</h4>
-                                <h3>餐廳名稱</h3>
-                                <h4>餐廳地址</h4>
-                                <div class="rest_inline_div">
-                                    <span>評分</span>
+                        </a>
+                        <a href="restaurant_page.html" class="rest_list_a">
+                            <div class="rest_list">
+                                <div class="rest_img">
+                                    <img src="img/restaurant_list_img/aqua水相餐廳.jpg" alt="">
+                                </div>
+                                <div class="rest_text">
+                                    <span>義式料理</span>
+                                    <h4>aqua水相餐廳</h4>
+                                    <h5>台中市北屯區經貿三路二段100號</h5>
+                                    <span><i class="fa fa-star"></i> 4.9</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="rest_list">
-                            <div class="rest_img">
-                                <img src="img/japanese_food.png" alt="">
-                            </div>
-                            <div class="rest_text">
-                                <h4>餐廳類別</h4>
-                                <h3>餐廳名稱</h3>
-                                <h4>餐廳地址</h4>
-                                <div class="rest_inline_div">
-                                    <span>評分</span>
+                        </a>
+                        <a href="" class="rest_list_a">
+                            <div class="rest_list">
+                                <div class="rest_img">
+                                    <img src="img/restaurant_list_img/布列塔尼歐法鄉村雅廚.jpg" alt="">
+                                </div>
+                                <div class="rest_text">
+                                    <span>法式料理</span>
+                                    <h4>布列塔尼歐法鄉村雅廚</h4>
+                                    <h5>台中市西區中興街225號</h5>
+                                    <span><i class="fa fa-star"></i> 4.3</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="rest_list">
-                            <div class="rest_img">
-                                <img src="img/american_food.png" alt="">
-                            </div>
-                            <div class="rest_text">
-                                <h4>餐廳類別</h4>
-                                <h3>餐廳名稱</h3>
-                                <h4>餐廳地址</h4>
-                                <div class="rest_inline_div">
-                                    <span>評分</span>
+                        </a>
+                        <a href="" class="rest_list_a">
+                            <div class="rest_list">
+                                <div class="rest_img">
+                                    <img src="img/restaurant_list_img/印度先生.jpg" alt="">
+                                </div>
+                                <div class="rest_text">
+                                    <span>中東料理</span>
+                                    <h4>印度先生</h4>
+                                    <h5>台中市西屯區精誠路6號</h5>
+                                    <span><i class="fa fa-star"></i> 3.9</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="rest_list">
-                            <div class="rest_img">
-                                <img src="img/port_food.png" alt="">
-                            </div>
-                            <div class="rest_text">
-                                <h4>餐廳類別</h4>
-                                <h3>餐廳名稱</h3>
-                                <h4>餐廳地址</h4>
-                                <div class="rest_inline_div">
-                                    <span>評分</span>
+                        </a>
+                        <a href="" class="rest_list_a">
+                            <div class="rest_list">
+                                <div class="rest_img">
+                                    <img src="img/restaurant_list_img/森森燒肉.jpg" alt="">
+                                </div>
+                                <div class="rest_text">
+                                    <span>日式料理</span>
+                                    <h4>森森燒肉</h4>
+                                    <h5>台中市南屯區公益路二段211號</h5>
+                                    <span><i class="fa fa-star"></i> 4.6</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="rest_list">
-                            <div class="rest_img">
-                                <img src="img/chinese_food.png" alt="">
-                            </div>
-                            <div class="rest_text">
-                                <h4>餐廳類別</h4>
-                                <h3>餐廳名稱</h3>
-                                <h4>餐廳地址</h4>
-                                <div class="rest_inline_div">
-                                    <span>評分</span>
+                        </a>
+                        <a href="" class="rest_list_a">
+                            <div class="rest_list">
+                                <div class="rest_img">
+                                    <img src="img/restaurant_list_img/韓雞bar.jpg" alt="">
+                                </div>
+                                <div class="rest_text">
+                                    <span>韓式料理</span>
+                                    <h4>韓雞bar</h4>
+                                    <h5>台中市南區國光路216-12號</h5>
+                                    <span><i class="fa fa-star"></i> 4.6</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="rest_list">
-                            <div class="rest_img">
-                                <img src="img/italian_food.png" alt="">
-                            </div>
-                            <div class="rest_text">
-                                <h4>餐廳類別</h4>
-                                <h3>餐廳名稱</h3>
-                                <h4>餐廳地址</h4>
-                                <div class="rest_inline_div">
-                                    <span>評分</span>
+                        </a>
+                        <a href="" class="rest_list_a">
+                            <div class="rest_list">
+                                <div class="rest_img">
+                                    <img src="img/restaurant_list_img/一鷺串燒居酒屋.jpg" alt="">
+                                </div>
+                                <div class="rest_text">
+                                    <span>日式料理</span>
+                                    <h4>一鷺串燒居酒屋</h4>
+                                    <h5>台中市西區中興街120號</h5>
+                                    <span><i class="fa fa-star"></i> 4.5</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+                        <a href="" class="rest_list_a">
+                            <div class="rest_list">
+                                <div class="rest_img">
+                                    <img src="img/restaurant_list_img/品心港式飲茶.jpg" alt="">
+                                </div>
+                                <div class="rest_text">
+                                    <span>港式料理</span>
+                                    <h4>品心港式飲茶</h4>
+                                    <h5>台中市南屯區公益路二段138號</h5>
+                                    <span><i class="fa fa-star"></i> 4.3</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="rest_list_a">
+                            <div class="rest_list">
+                                <div class="rest_img">
+                                    <img src="img/restaurant_list_img/藏壽司.jpg" alt="">
+                                </div>
+                                <div class="rest_text">
+                                    <span>日式料理</span>
+                                    <h4>藏壽司</h4>
+                                    <h5>台中市北屯區中清路二段777號</h5>
+                                    <span><i class="fa fa-star"></i> 4</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="rest_list_a">
+                            <div class="rest_list">
+                                <div class="rest_img">
+                                    <img src="img/restaurant_list_img/耕讀園.jpg" alt="">
+                                </div>
+                                <div class="rest_text">
+                                    <span>中式料理</span>
+                                    <h4>耕讀園</h4>
+                                    <h5>台中市西屯區市政路109號</h5>
+                                    <span><i class="fa fa-star"></i> 4.1</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="rest_list_a">
+                            <div class="rest_list">
+                                <div class="rest_img">
+                                    <img src="img/restaurant_list_img/串燒殿.jpg" alt="">
+                                </div>
+                                <div class="rest_text">
+                                    <span>日式料理</span>
+                                    <h4>串燒殿</h4>
+                                    <h5>台北市萬華區武昌街二段10號2樓</h5>
+                                    <span><i class="fa fa-star"></i> 4.2</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="rest_list_a">
+                            <div class="rest_list">
+                                <div class="rest_img">
+                                    <img src="img/restaurant_list_img/OGGI歐奇窯烤披薩.jpg" alt="">
+                                </div>
+                                <div class="rest_text">
+                                    <span>義式料理</span>
+                                    <h4>OGGI歐奇窯烤披薩</h4>
+                                    <h5>台北市士林區德行西路19號</h5>
+                                    <span><i class="fa fa-star"></i> 4.3</span>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -411,38 +504,38 @@
     <!-- 頁尾 over -->
 
     <script>
-        $(document).ready(function() {
-            $(".dropdown_label").click(function(e) {
+        $(document).ready(function () {
+            $(".dropdown_label").click(function (e) {
                 e.preventDefault();
                 $(this).parent().find(".dropdown_div").slideToggle();
                 $(this).parent().siblings().find(".dropdown_div").slideUp();
             });
-            $(".tab_content span").click(function() {
+            $(".tab_content span").click(function () {
                 var text = $(this).text();
                 $(".area_label").html(`<i class="fas fa-map-marker-alt"></i>${text}`);
             });
-            $(".tab_close,.chk_close").click(function() {
+            $(".tab_close,.chk_close").click(function () {
                 $(".dropdown_div").slideUp();
             });
-            $(".search_mobile_div").click(function() {
+            $(".search_mobile_div").click(function () {
                 $(".mobile_div").css("display", "unset");
             });
-            $(".turn_off").click(function() {
+            $(".turn_off").click(function () {
                 $(".mobile_div").css("display", "none");
             });
-            $(".mobile_tab_content span").click(function() {
+            $(".mobile_tab_content span").click(function () {
                 var text = $(this).text();
                 $(".area_label").html(`<i class="fas fa-map-marker-alt"></i>${text}`);
             });
-            $(".mobile_dropdown_label").click(function(e) {
+            $(".mobile_dropdown_label").click(function (e) {
                 e.preventDefault();
                 $(this).parent().find(".mobile_dropdown_div").slideToggle();
                 $(this).parent().siblings().find(".mobile_dropdown_div").slideUp();
             });
-            $(".header_page").load("header.html");
+
             $(".footer_page").load("footer.html");
         });
-        
+
         function open_tab(tab_name) {
             var tab_div = document.getElementsByClassName("mobile_tab_div");
             for (var i = 0; i < tab_div.length; i++) {
@@ -450,7 +543,7 @@
             }
             document.getElementById(tab_name).style.display = "block";
         }
-         
+
     </script>
 </body>
 

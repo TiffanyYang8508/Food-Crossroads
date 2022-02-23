@@ -23,10 +23,22 @@
 
 <body>
     <!-- 導覽列 start -->
-
-    <div class="header_page"></div>
-
-    <!-- 導覽列 over -->
+<header style="position: sticky; top: 0; left: 0; z-index: 99;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="LOGO"></a>
+        <div class="nav_icon">
+            <a class="nav_a" href="list.html"><i class="fas fa-store"></i>餐廳列表</a>
+            <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i>購物車</a>
+            <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i>會員登入</a>
+        </div>
+        <div class="rwd_icon">
+            <a class="nav_a" href="list.html"><i class="fas fa-store"></i></a>
+            <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i></a>
+            <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i></a>
+        </div>
+    </nav>
+</header>
+<!-- 導覽列 end -->
 
     <!-- 搜尋欄 start -->
     <section id="search_box">
@@ -388,8 +400,6 @@
 
     <script>
         $(document).ready(function() {
-
-            $(".header_page").load("header.html");
             $(".footer_page").load("footer.html");
 
             $(".dropdown_label").click(function(e) {
