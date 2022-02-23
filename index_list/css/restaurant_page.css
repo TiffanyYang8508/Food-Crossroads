@@ -298,6 +298,25 @@ div.flex1 {
     /* width: 100%; */
 }
 
+/* 置頂紐 */
+.ontop_btn {     
+    width: 60px;     
+    height: 60px;     
+    border: none;     
+    border-radius: 50%;     
+    color: #fff;     
+    font-size: 1.75rem;     
+    background-color: #403C3C;     
+    position: fixed;     
+    bottom: 10%;     
+    right: 5%;     
+    transition: 0.3s;      
+    }  
+
+.ontop_btn:hover {     
+    background-color: grey;     
+}
+
 /* ---------- body over ---------- */
 
 
