@@ -13,6 +13,9 @@ import BookingManagement from "./components/member_bookingRecord";
 import Member from "./components/member_memberinfo";
 import EditMember from "./components/member_editmember";
 import Restaurant_login from "./components/restaurant_login";
+import Shoppingchar from './components/shoppingchar';
+import Shoppingok from './components/shoppingok';
+import Orderdisplay from './components/orderdisplay';
 
 
 class App extends Component {
@@ -21,17 +24,20 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/"                           component={Index}                       exact/>
-          <Route path="/restaurant/list/:category?" component={Restaurant_list}             exact />
-          <Route path="/register"                   component={Member_register}             exact />
-          <Route path="/self/pick"                  component={Restaurant_self_pick_up}     exact />
-          <Route path="/booking_history"            component={Restaurant_booking_history}  exact />
-          <Route path="/member/login"               component={Member_login} />
-          <Route path="/restaurant/login"           component={Restaurant_login}            exact />
-          <Route path="/ordermanagement"            component={Ordermanagement} />
-          <Route path="/bookingmanagement"          component={BookingManagement} />
-          <Route path="/member/:id"                 component={Member} />
-          <Route path="/editmember/:id"             component={EditMember} />
+          <Route path="/" component={Index} exact />
+          <Route path="/restaurant/list/:category?" component={Restaurant_list} exact />
+          <Route path="/register" component={Member_register} exact />
+          <Route path="/self/pick" component={Restaurant_self_pick_up} exact />
+          <Route path="/booking_history" component={Restaurant_booking_history} exact />
+          <Route path="/member/login" component={Member_login} />
+          <Route path="/restaurant/login" component={Restaurant_login} exact />
+          <Route path="/ordermanagement" component={Ordermanagement} />
+          <Route path="/bookingmanagement" component={BookingManagement} />
+          <Route path="/member/:id" component={Member} />
+          <Route path="/editmember/:id" component={EditMember} />
+          <Route path="/shoppingchar/:id" component={Shoppingchar} exact />
+          <Route path="/shoppingok" component={Shoppingok} exact />
+          <Route path="/orderdisplay" component={Orderdisplay} exact />
         </Switch>
       </BrowserRouter>
     );
