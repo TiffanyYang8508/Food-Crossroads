@@ -53,7 +53,7 @@ class Member_register extends Component {
     var messageUsername = "";
 
     if (!user_name) {
-      messageUsername = "[必填欄位!!]";
+      messageUsername = "必填欄位!";
     }
     this.setState({
       user_name: user_name,
@@ -66,7 +66,7 @@ class Member_register extends Component {
     var messageEmail = "";
 
     if (!user_email) {
-      messageEmail = "[必填欄位!!]";
+      messageEmail = "必填欄位!";
     }
     this.setState({
       user_email: user_email,
@@ -79,7 +79,7 @@ class Member_register extends Component {
     var messagePwd = "";
 
     if (!user_pwd) {
-      messagePwd = "[必填欄位!!]";
+      messagePwd = "必填欄位!";
     }
     this.setState({
       user_pwd: user_pwd,
@@ -92,7 +92,7 @@ class Member_register extends Component {
     var messageConfirm = "";
 
     if (!user_pwd_confirm) {
-      messageConfirm = "[必填欄位!!]";
+      messageConfirm = "必填欄位!";
     }
     this.setState({
       user_pwd_confirm: user_pwd_confirm,
@@ -105,7 +105,7 @@ class Member_register extends Component {
     var messageTel = "";
 
     if (!user_tel) {
-      messageTel = "[必填欄位!!]";
+      messageTel = "必填欄位!";
     }
     this.setState({
       user_tel: user_tel,
@@ -114,17 +114,18 @@ class Member_register extends Component {
   };
 
   okButtonClick = async () => {
-    console.log("OK");
     await new Axios.post("http://localhost:8000/register", this.state.member)
       .then((res) => {
-        if (res.data.status === "") {
+        if (res.data.status === "0") {
           $("#reportMessage").text(res.data.err);
+        }else {
+          window.location = "/register";
         }
-        console.table(res.data);
       })
       .catch((error) => {
         console.error(error);
       });
+    
   };
 
   render() {

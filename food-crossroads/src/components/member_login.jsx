@@ -36,6 +36,10 @@ class Member_login extends Component {
         this.setState(newState);
     }
 
+    registerNow = () => {
+        window.location = "/register";
+    }
+
     render() {
         return (
             <>
@@ -78,7 +82,7 @@ class Member_login extends Component {
                                         </div>
                                     </div>
                                     <div className="form-group row">
-                                        <input type="submit" className="btn_register" value="立即註冊" />
+                                        <input type="button" className="btn_register" value="立即註冊" onClick={this.registerNow}/>
                                     </div>
                                 </form>
                             </div>
