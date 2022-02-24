@@ -3,6 +3,8 @@ import Header from './header';
 import Footer from './footer';
 import $ from "jquery";
 import "../css/restaurant_page.css";
+import "../css/bootstrap.min.css";
+
 
 class Restaurant_page extends Component {
     state = {  }
@@ -341,7 +343,7 @@ class Restaurant_page extends Component {
                     <i className="fas fa-arrow-up"></i>
                 </button>
 
-                <div class="footer_page">
+                <div className="footer_page">
                     <Footer />
                 </div>
 

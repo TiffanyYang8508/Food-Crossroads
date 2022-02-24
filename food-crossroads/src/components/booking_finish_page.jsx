@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './header';
 import Footer from './footer';
 import "../css/booking_finish_page.css";
+import "../css/bootstrap.min.css";
 
 class Booking_finish_page extends Component {
     state = {  } 
@@ -78,10 +79,7 @@ class Booking_finish_page extends Component {
                                         <input type="submit" className="finish_btn_booking_manage" value="訂位管理" />      
                                     </a>
                                     <a href="/index_list/restaurant_page_login_ok.html">
-                                        <input type="submit" className="finish_btn_to_restaurant_page" value="我要訂餐" />      
-                                    </a>
-                                    <a href="/index_list/index.html">
-                                        <input type="submit" className="finish_btn_back_to_index" value="回首頁" />
+                                        <input type="submit" className="finish_btn_to_restaurant_page" value="回到餐聽" />      
                                     </a>
                                 </div>
                             </div>
