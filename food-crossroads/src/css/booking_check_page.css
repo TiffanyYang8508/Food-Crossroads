@@ -9,9 +9,15 @@
 
 /* ---------- body start ---------- */
 
+
+.breadcrumb .breadcrumb-item a,.active{
+    font-size: 18px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
 .check_container {
     width: 880px;
-    height: 60vh;
     background-color: #b5b4b477;
     display: flex;
     justify-content: center;

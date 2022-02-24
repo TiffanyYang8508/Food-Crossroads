@@ -28,7 +28,7 @@ class Index extends Component {
     }
 
     componentDidMount() {
-        $(".tab_content li").click(function(){
+        $(".tab_content li").click(function () {
             console.log($(this).data('value'));
         });
 
@@ -247,10 +247,11 @@ class Index extends Component {
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <div className="dropdown">
-                                            <button className="search_btn" onClick={this.send}>搜尋</button>
-                                        </div>
+                                        {/* <a href={`/search/${keyword}/${area}/${other}`}> */}
+                                            <div className="dropdown">
+                                                <button className="search_btn" onClick={this.send}>搜尋</button>
+                                            </div>
+                                        {/* </a> */}
                                     </div>
                                 </form>
                                 <form action="">
