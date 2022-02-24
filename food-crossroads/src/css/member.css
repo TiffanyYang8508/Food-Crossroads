@@ -178,7 +178,7 @@ td {
 .cancel_btn,
 .detail_btn,
 .comment_btn {
-    border-radius: 8px;
+    border-radius: 5px;
     border: none;
     padding: 5px 8px;
     transition: 0.3s;
