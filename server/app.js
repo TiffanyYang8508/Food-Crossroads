@@ -98,42 +98,44 @@ app.post("/register", async (req, res) => {
           req.body.user_pwd_confirm === "" ||
           req.body.user_tel === ""
         ) {
-          result["status"] = "0";
+          result["status"] = "2";
           result["err"] = "請輸入完整資訊";
           res.json(result);
         } else {
-          //如果信箱格是不正確
-          if (error.details[0].context.key === "email") {
-            result["status"] = "0";
-            result["err"] = "請輸入正確格式信箱";
+          // //如果信箱格是不正確
+          // if (error.details[0].context.key === "email") {
+          //   result["status"] = "0";
+          //   result["err"] = "請輸入正確格式信箱";
+          //   res.json(result);
+          // } else {
+          // 如果有重複的email
+          if (rows.length >= 1) {
+            result["status"] = "3";
+            result["err"] = "已有重複的Email";
             res.json(result);
           } else {
-            // 如果有重複的email
-            if (rows.length >= 1) {
-              result["status"] = "0";
-              result["err"] = "已有重複的Email";
+            //如果密碼與確認密碼不相同
+            if (req.body.user_pwd !== req.body.user_pwd_confirm) {
+              result["status"] = "4";
+              result["err"] = "密碼不相同";
               res.json(result);
             } else {
-              //如果密碼與確認密碼不相同
-              if (req.body.user_pwd !== req.body.user_pwd_confirm) {
-                result["status"] = "0";
-                result["err"] = "密碼不相同";
-                res.json(result);
-              } else {
-                // 將資料寫入資料庫
-                const hashedPassword = await bcrypt.hash(req.body.user_pwd, 10);
-                conn.query(
-                  "INSERT INTO `member`(`user_name`, `user_email`, `user_pwd`, `user_tel`) VALUES (?, ?, ?, ?)",
-                  [
-                    req.body.user_name,
-                    req.body.user_email,
-                    hashedPassword,
-                    req.body.user_tel,
-                  ]
-                );
-                // res.send('register success');
-                res.redirect("./login");
-              }
+              // 將資料寫入資料庫
+              const hashedPassword = await bcrypt.hash(req.body.user_pwd, 10);
+              conn.query(
+                "INSERT INTO `member`(`user_name`, `user_email`, `user_pwd`, `user_tel`) VALUES (?, ?, ?, ?)",
+                [
+                  req.body.user_name,
+                  req.body.user_email,
+                  hashedPassword,
+                  req.body.user_tel,
+                ]
+              );
+              result["status"] = "1";
+              result["err"] = "註冊成功";
+              res.json(result);
+              // res.send('register success');
+              res.redirect("./login");
             }
           }
         }
@@ -162,6 +164,7 @@ app.post("/login", (req, res) => {
         output["message"] = "錯誤密碼";
       }
     } else {
+      output["status"] = "2";
       output["message"] = "輸入錯誤信箱及密碼";
     }
     res.json(output);
