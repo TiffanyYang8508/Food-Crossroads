@@ -10,7 +10,7 @@ class Booking_reservation_page extends Component {
     state = {  }
     
     componentDidMount() {
-
+        
        
     }
     render() { 
@@ -41,7 +41,7 @@ class Booking_reservation_page extends Component {
                         <div className="reservation_container">
                             <div className="reservation_info">
                                 <div className="reservation_form_title">訂位資料</div>
-                                <div className="form_container_info col-md-6">
+                                <div className="form_container_info col-md-4">
                                     <form action="#">
                                         <div className="form-group row">
                                             <label htmlFor="reservation_info_person_number">訂位人數：</label>
@@ -102,22 +102,13 @@ class Booking_reservation_page extends Component {
                                 <div className="form_container_person col-md-6">
                                     <form action="#">
                                         <div className="form-group row">
-                                            <label htmlFor="reservation_person_name"><span>姓　　名：</span></label>
-                                            <input type="text" id="reservation_person_name" name="reservation_person_name"
-                                                value="李曉明" placeholder="請輸入您的姓名" required />
+                                            <label htmlFor="reservation_person_name"><span>姓　　名：</span><span>李曉明</span></label>
                                         </div>
                                         <div className="form-group row">
-                                            <label htmlFor="reservation_person_cellphone"><span>手機號碼：</span></label>
-                                            <input type="tel" id="reservation_person_cellphone" name="reservation_person_cellphone"
-                                                value="0987654321"
-                                                placeholder="09XXXXXXXX" pattern="[0][9][0-9]{2}-[0-9]{3}-[0-9]{3}"
-                                                required />
+                                            <label htmlFor="reservation_person_cellphone"><span>手機號碼：</span><span>0987654321</span></label>
                                         </div>
                                         <div className="form-group row">
-                                            <label htmlFor="reservation_person_email"><span>信　　箱：</span></label>
-                                            <input type="email" id="reservation_person_email" name="reservation_person_email"
-                                                value="askf@gmail.com"
-                                                placeholder="your_email@gmail.com" required />
+                                            <label htmlFor="reservation_person_email"><span>信　　箱：</span><span>askf@gmail.com</span></label>
                                         </div>
                                         <input type="submit" className="reservation_input_next" value="下一步：訂位確認" />
                                     </form>
