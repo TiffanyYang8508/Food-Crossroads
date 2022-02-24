@@ -23,156 +23,161 @@
 
 <body>
     <!-- 導覽列 start -->
-<header style="position: sticky; top: 0; left: 0; z-index: 99;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="LOGO"></a>
-        <div class="nav_icon">
-            <a class="nav_a" href="list.html"><i class="fas fa-store"></i>餐廳列表</a>
-            <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i>購物車</a>
-            <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i>會員登入</a>
-        </div>
-        <div class="rwd_icon">
-            <a class="nav_a" href="list.html"><i class="fas fa-store"></i></a>
-            <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i></a>
-            <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i></a>
-        </div>
-    </nav>
-</header>
-<!-- 導覽列 end -->
+    <header style="position: sticky; top: 0; left: 0; z-index: 99;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="LOGO"></a>
+            <div class="nav_icon">
+                <a class="nav_a" href="list.html"><i class="fas fa-store"></i>餐廳列表</a>
+                <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i>購物車</a>
+                <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i>會員登入</a>
+            </div>
+            <div class="rwd_icon">
+                <a class="nav_a" href="list.html"><i class="fas fa-store"></i></a>
+                <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i></a>
+                <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </nav>
+    </header>
+    <!-- 導覽列 end -->
 
     <!-- 搜尋欄 start -->
     <section id="search_box">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <form action="" method="">
-                        <div class="search_div">
-                            <input class="search_keyword" id="keyword" type="text" placeholder="請輸入餐廳關鍵字">
-                            <div class="area_div">
-                                <input type="checkbox" class="area_btn" id="area_btn">
-                                <label for="area_btn" class="area_label dropdown_label"><i class="fas fa-map-marker-alt"></i>請選擇地區<i
-                                        class="fas fa-sort-down"></i></label>
+                    <div class="search_div">
+                        <input class="search_keyword" id="keyword" type="text" placeholder="請輸入餐廳關鍵字">
+                        <div class="area_div">
+                            <input type="checkbox" class="area_btn" id="area_btn">
+                            <label for="area_btn" class="area_label dropdown_label"><i
+                                    class="fas fa-map-marker-alt"></i>請選擇地區<i class="fas fa-sort-down"></i></label>
 
-                                <div class="tab_div dropdown_div">
-                                    <div class="tab_css">
-                                        <!-- 北部區塊 start -->
-                                        <input id="tab1" type="radio" name="tab" checked="checked" />
-                                        <label for="tab1">北部</label>
-                                        <div class="tab_content">
-                                            <span>基隆市</span>
-                                            <span>台北市</span>
-                                            <span>新北市</span>
-                                            <span>桃園市</span>
-                                            <span>新竹市</span>
-                                            <span>新竹縣</span>
-                                        </div>
-                                        <!-- 北部區塊 end -->
-
-                                        <!-- 中部區塊 start -->
-                                        <input id="tab2" type="radio" name="tab" />
-                                        <label for="tab2">中部</label>
-                                        <div class="tab_content">
-                                            <span>苗栗縣</span>
-                                            <span>台中市</span>
-                                            <span>南投縣</span>
-                                            <span>彰化縣</span>
-                                            <span>雲林縣</span>
-                                        </div>
-                                        <!-- 中部區塊 end -->
-
-                                        <!-- 南部區塊 start -->
-                                        <input id="tab3" type="radio" name="tab" />
-                                        <label for="tab3">南部</label>
-                                        <div class="tab_content">
-                                            <span>嘉義市</span>
-                                            <span>嘉義縣</span>
-                                            <span>台南市</span>
-                                            <span>高雄市</span>
-                                            <span>屏東縣</span>
-                                        </div>
-                                        <!-- 南部區塊 end -->
-
-                                        <!-- 東部區塊 start -->
-                                        <input id="tab4" type="radio" name="tab" />
-                                        <label for="tab4">東部</label>
-                                        <div class="tab_content">
-                                            <span>宜蘭縣</span>
-                                            <span>花蓮縣</span>
-                                            <span>台東縣</span>
-                                        </div>
-                                        <!-- 東部區塊 end -->
-
-                                        <!-- 離島區塊 start -->
-                                        <input id="tab5" type="radio" name="tab" />
-                                        <label for="tab5">離島</label>
-                                        <div class="tab_content">
-                                            <span>澎湖縣</span>
-                                            <span>連江縣</span>
-                                            <span>金門縣</span>
-                                        </div>
-                                        <!-- 離島區塊 end -->
-
+                            <div class="tab_div dropdown_div">
+                                <div class="tab_css">
+                                    <!-- 北部區塊 start -->
+                                    <input id="tab1" type="radio" name="tab" checked="checked" />
+                                    <label for="tab1">北部</label>
+                                    <div class="tab_content">
+                                        <span>基隆市</span>
+                                        <span>台北市</span>
+                                        <span>新北市</span>
+                                        <span>桃園市</span>
+                                        <span>新竹市</span>
+                                        <span>新竹縣</span>
                                     </div>
-                                    <div class="tab_close">
-                                        關閉
+                                    <!-- 北部區塊 end -->
+
+                                    <!-- 中部區塊 start -->
+                                    <input id="tab2" type="radio" name="tab" />
+                                    <label for="tab2">中部</label>
+                                    <div class="tab_content">
+                                        <span>苗栗縣</span>
+                                        <span>台中市</span>
+                                        <span>南投縣</span>
+                                        <span>彰化縣</span>
+                                        <span>雲林縣</span>
                                     </div>
+                                    <!-- 中部區塊 end -->
+
+                                    <!-- 南部區塊 start -->
+                                    <input id="tab3" type="radio" name="tab" />
+                                    <label for="tab3">南部</label>
+                                    <div class="tab_content">
+                                        <span>嘉義市</span>
+                                        <span>嘉義縣</span>
+                                        <span>台南市</span>
+                                        <span>高雄市</span>
+                                        <span>屏東縣</span>
+                                    </div>
+                                    <!-- 南部區塊 end -->
+
+                                    <!-- 東部區塊 start -->
+                                    <input id="tab4" type="radio" name="tab" />
+                                    <label for="tab4">東部</label>
+                                    <div class="tab_content">
+                                        <span>宜蘭縣</span>
+                                        <span>花蓮縣</span>
+                                        <span>台東縣</span>
+                                    </div>
+                                    <!-- 東部區塊 end -->
+
+                                    <!-- 離島區塊 start -->
+                                    <input id="tab5" type="radio" name="tab" />
+                                    <label for="tab5">離島</label>
+                                    <div class="tab_content">
+                                        <span>澎湖縣</span>
+                                        <span>連江縣</span>
+                                        <span>金門縣</span>
+                                    </div>
+                                    <!-- 離島區塊 end -->
+
                                 </div>
-                            </div>
-
-                            <div class="other_div">
-                                <input type="checkbox" class="other_btn" id="other_btn">
-                                <label for="other_btn" class="other_label dropdown_label"><i class="fas fa-hand-point-up"></i>進階搜尋<i
-                                        class="fas fa-sort-down"></i></label>
-
-                                <div class="chk_div dropdown_div">
-                                    <div class="chk_css">
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="child_seats" id="child_seats" value="2">
-                                            <label for="child_seats">提供兒童座椅</label>
-                                        </div>
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="barrier_free" id="barrier_free" value="2">
-                                            <label for="barrier_free">無障礙設施</label>
-                                        </div>
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="min_consumption" id="min_consumption" value="2">
-                                            <label for="min_consumption">最低消費限制</label>
-                                        </div>
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="limit_meal_time" id="limit_meal_time" value="2">
-                                            <label for="limit_meal_time">限制用餐時間</label>
-                                        </div>
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="delivery" id="delivery" value="2">
-                                            <label for="delivery">提供外送</label>
-                                        </div>
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="service_free" id="service_free" value="2">
-                                            <label for="service_free">收取服務費</label>
-                                        </div>
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="parking" id="parking" value="2">
-                                            <label for="parking">附設停車場</label>
-                                        </div>
-                                        <div class="chk_item">
-                                            <input class="chk_chk" type="checkbox" name="allow_pets" id="allow_pets" value="2">
-                                            <label for="allow_pets">允許攜帶寵物</label>
-                                        </div>
-
-                                    </div>
-                                    <div class="chk_close">
-                                        關閉
-                                    </div>
+                                <div class="tab_close">
+                                    關閉
                                 </div>
-                            </div>
-
-                            <div class="dropdown">
-                                <a href="">
-                                    <button class="search_btn">搜尋</button>
-                                </a>
                             </div>
                         </div>
-                    </form>
+
+                        <div class="other_div">
+                            <input type="checkbox" class="other_btn" id="other_btn">
+                            <label for="other_btn" class="other_label dropdown_label"><i
+                                    class="fas fa-hand-point-up"></i>進階搜尋<i class="fas fa-sort-down"></i></label>
+
+                            <div class="chk_div dropdown_div">
+                                <div class="chk_css">
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="child_seats" id="child_seats"
+                                            value="2">
+                                        <label for="child_seats">提供兒童座椅</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="barrier_free" id="barrier_free"
+                                            value="2">
+                                        <label for="barrier_free">無障礙設施</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="min_consumption"
+                                            id="min_consumption" value="2">
+                                        <label for="min_consumption">最低消費限制</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="limit_meal_time"
+                                            id="limit_meal_time" value="2">
+                                        <label for="limit_meal_time">限制用餐時間</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="delivery" id="delivery" value="2">
+                                        <label for="delivery">提供外送</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="service_free" id="service_free"
+                                            value="2">
+                                        <label for="service_free">收取服務費</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="parking" id="parking" value="2">
+                                        <label for="parking">附設停車場</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="allow_pets" id="allow_pets"
+                                            value="2">
+                                        <label for="allow_pets">允許攜帶寵物</label>
+                                    </div>
+
+                                </div>
+                                <div class="chk_close">
+                                    關閉
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="list_demo_search.html">
+                                <button class="search_btn">搜尋</button>
+                            </a>
+                        </div>
+                    </div>
+
                     <form action="">
                         <div class="search_mobile_div">
                             <div class="search_mobile_inline_div">
@@ -187,12 +192,14 @@
                                 </div>
                                 <input class="search_keyword" id="keyword" type="text" placeholder="請輸入餐廳關鍵字">
                                 <div class="area_div">
-                                    <label for="area_btn" onclick="open_tab('area')" class="area_label mobile_tab_label"><i class="fas fa-map-marker-alt"></i>請選擇地區<i
-                                        class="fas fa-sort-down"></i></label>
+                                    <label for="area_btn" onclick="open_tab('area')"
+                                        class="area_label mobile_tab_label"><i class="fas fa-map-marker-alt"></i>請選擇地區<i
+                                            class="fas fa-sort-down"></i></label>
                                 </div>
                                 <div class="other_div">
-                                    <label for="other_btn" onclick="open_tab('other')" class="other_label mobile_tab_label"><i class="fas fa-hand-point-up"></i>進階搜尋<i
-                                        class="fas fa-sort-down"></i></label>
+                                    <label for="other_btn" onclick="open_tab('other')"
+                                        class="other_label mobile_tab_label"><i class="fas fa-hand-point-up"></i>進階搜尋<i
+                                            class="fas fa-sort-down"></i></label>
                                 </div>
                                 <div class="dropdown">
                                     <button class="search_btn">搜尋</button>
@@ -260,37 +267,45 @@
                             <div id="other" class="mobile_tab_div">
                                 <div class="mobile_chk_css">
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="child_seats" id="child_seats" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="child_seats"
+                                            id="child_seats" value="2">
                                         <label for="child_seats">提供兒童座椅</label>
                                     </div>
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="barrier_free" id="barrier_free" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="barrier_free"
+                                            id="barrier_free" value="2">
                                         <label for="barrier_free">無障礙設施</label>
                                     </div>
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="min_consumption" id="min_consumption" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="min_consumption"
+                                            id="min_consumption" value="2">
                                         <label for="min_consumption">最低消費限制</label>
                                     </div>
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="limit_meal_time" id="limit_meal_time" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="limit_meal_time"
+                                            id="limit_meal_time" value="2">
                                         <label for="limit_meal_time">限制用餐時間</label>
                                     </div>
                                 </div>
                                 <div class="mobile_chk_css">
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="delivery" id="delivery" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="delivery" id="delivery"
+                                            value="2">
                                         <label for="delivery">提供外送</label>
                                     </div>
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="service_free" id="service_free" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="service_free"
+                                            id="service_free" value="2">
                                         <label for="service_free">收取服務費</label>
                                     </div>
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="parking" id="parking" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="parking" id="parking"
+                                            value="2">
                                         <label for="parking">附設停車場</label>
                                     </div>
                                     <div class="mobile_chk_item">
-                                        <input class="mobile_chk_chk" type="checkbox" name="allow_pets" id="allow_pets" value="2">
+                                        <input class="mobile_chk_chk" type="checkbox" name="allow_pets" id="allow_pets"
+                                            value="2">
                                         <label for="allow_pets">允許攜帶寵物</label>
                                     </div>
                                 </div>
@@ -385,10 +400,10 @@
     </section>
     <!-- 快速搜尋塊 end -->
 
-    <!-- 置頂鈕 start -->         
-    <button type="button" class="ontop_btn" onclick="topfunction()">         
-        <i class="fas fa-arrow-up"></i>         
-        </button>         
+    <!-- 置頂鈕 start -->
+    <button type="button" class="ontop_btn" onclick="topfunction()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <!-- 置頂鈕 over -->
 
     <!-- 頁尾 start -->
@@ -399,43 +414,44 @@
 
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $(".footer_page").load("footer.html");
 
-            $(".dropdown_label").click(function(e) {
+            $(".dropdown_label").click(function (e) {
                 e.preventDefault();
                 $(this).parent().find(".dropdown_div").slideToggle();
                 $(this).parent().siblings().find(".dropdown_div").slideUp();
             });
 
-            $(".mobile_dropdown_label").click(function(e) {
+            $(".mobile_dropdown_label").click(function (e) {
                 e.preventDefault();
                 $(this).parent().find(".mobile_dropdown_div").slideToggle();
                 $(this).parent().siblings().find(".mobile_dropdown_div").slideUp();
             });
 
-            $(".tab_close,.chk_close").click(function() {
+            $(".tab_close,.chk_close").click(function () {
                 $(".dropdown_div").slideUp();
             });
 
-            $(".search_mobile_div").click(function() {
+            $(".search_mobile_div").click(function () {
                 $(".mobile_div").css("display", "unset");
             });
 
-            $(".turn_off").click(function() {
+            $(".turn_off").click(function () {
                 $(".mobile_div").css("display", "none");
             });
 
-            $(".mobile_tab_content span").click(function() {
+            $(".mobile_tab_content span").click(function () {
                 var text = $(this).text();
                 $(".area_label").html(`<i class="fas fa-map-marker-alt"></i>${text}`);
             });
 
-            $(".tab_content span").click(function() {
+            $(".tab_content span").click(function () {
                 var text = $(this).text();
                 $(".area_label").html(`<i class="fas fa-map-marker-alt"></i>${text}`);
             });
         });
+
         function open_tab(tab_name) {
             var tab_div = document.getElementsByClassName("mobile_tab_div");
             for (var i = 0; i < tab_div.length; i++) {
@@ -446,12 +462,14 @@
 
         // 置頂按鈕:點選後回到頂端
         function topfunction() {
-            $("html,body").animate({scrollTop:0},300);
+            $("html,body").animate({
+                scrollTop: 0
+            }, 300);
         }
-        $(window).scroll(function(){
-            if($(this).scrollTop()>300){
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
                 $(".ontop_btn").fadeIn(100);
-            }else{
+            } else {
                 $(".ontop_btn").stop().fadeOut(100);
             }
         });

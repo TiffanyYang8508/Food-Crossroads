@@ -41,7 +41,7 @@
             <thead>
                <tr>
                   <th>名稱</th>
-                  <th>餐點名稱</th>
+                  <th class="foodname">餐點名稱</th>
                   <th class="text-nowrap">餐點備註</th>
                   <th>數量</th>
                   <th>金額</th>
@@ -49,48 +49,51 @@
             </thead>
             <tbody>
                <tr>
-                  <td scope="row">團長</td>
-                  <td>餐點名稱<br>餐點名稱</td>
-                  <td>小辣<br>不要蔥、不要蒜</td>
-                  <td>1<br>1</td>
-                  <td>50<br>50</td>
+                  <td scope="row">李曉明</td>
+                  <td class="foodname">西西里海鹽柴魚脆薯<br />蕃茄羅勒起司搭頂級陳年油醋</td>
+                  <td><br /></td>
+                  <td>1<br />2</td>
+                  <td>188<br>376</td>
                </tr>
                <tr>
-                  <td scope="row">團員</td>
-                  <td>餐點名稱</td>
-                  <td>小辣</td>
-                  <td>1</td>
-                  <td>50</td>
+                  <td scope="row">郭美美</td>
+                  <td class="foodname">西西里海鹽柴魚脆薯<br>南義炸起司條</td>
+                  <td>加辣<br /></td>
+                  <td>1<br />1</td>
+                  <td>188<br />288</td>
                </tr>
                <tr>
-                  <td scope="row">團員</td>
-                  <td>餐點名稱</td>
-                  <td>小辣</td>
-                  <td>1</td>
-                  <td>50</td>
-               </tr>
-               <tr>
-                  <td scope="row">團員</td>
-                  <td>餐點名稱</td>
-                  <td>小辣</td>
-                  <td>1</td>
-                  <td>50</td>
+                  <td scope="row">陳家欣</td>
+                  <td class="foodname">田園香橙鮮蝦鮮蔬<br>水相主廚私房湯品</td>
+                  <td><br />不要加蔥</td>
+                  <td>1<br />1</td>
+                  <td>318<br />288</td>
                </tr>
 
                <tr style="font-size: 18px;">
                   <td scope="row" colspan="4" style="text-align: right;"><b>總金額</b></td>
                   <td>
-                     NT$ 250
+                     NT$ 1,646
                   </td>
                </tr>
             </tbody>
          </table>
          <br><br>
 
-         <div class="share_member col-md-3 rwd_share_member" id="ordermember_Sidebar">
+         <div class="d-flex flex-column ordershare">
+            <p class="leader">團長：<span>李曉明</span></p>
+            <div class="" id="order_share">
+               <a href="#"><img src="./img/people_plus@3x.png"
+                     style="width: 25px; height: 20px; margin-right: 5px;"></a>
+               <button type="button" class="btn_view" style="font-size: 18px;" title="copied" data-toggle="modal"
+                  data-target="#ordershare_modal">揪團連結分享</button>
+            </div>
+         </div>
 
+
+         <!-- <div class="share_member col-md-3 rwd_share_member" id="ordermember_Sidebar">
             <table class="table share_member_table rwd_share_member_table"
-               style="font-size: 18px; width:50px; line-height: 1em; border: 1px solid #403c3c ; border-radius: 10%;">
+               style="font-size: 18px; width:50px; border: 1px solid #403c3c;">
                <tbody>
                   <tr class="close_btn">
                      <td style="color:#585555c5;">
@@ -107,24 +110,41 @@
                         </div>
                      </td>
                   </tr>
-
                   <tr>
                      <td><b>團長:李曉明</b></td>
                   </tr>
-                  <tr>
-                     <td>
-                        <button type="button" class="btn_view">檢視已點清單</button>
-                     </td>
-                  </tr>
                </tbody>
             </table>
-         </div>
+         </div> -->
          <div class="container order_checkbtn rwd_order_checkbtn d-flex flex-row-reverse">
-            <button id="checkout" type="button">去結帳</button>
+            <button id="checkout" type="button" onclick="btn_groupfinalchar()">去結帳</button>
          </div>
       </div>
    </div>
 
+   <!-- 揪團連結分享 -->
+   <div class="modal fade" id="ordershare_modal" tabindex="-1" role="dialog" aria-labelledby="ordershare_modal_title"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h3 class="modal-title" id="ordershare_modal_title">揪團連結分享</h3><br>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                     aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body d-flex flex-column">
+               <div id="copy_link">
+                  <a href="orderpage_group_sorder_on.html"><input id="copyinput"
+                        value="http://localhost:3000/group_order_on/1" /></a>
+               </div>
+               <button type="button" class="btn btn-danger btn_copy" onclick='copyinput()'>複製連結</button>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+            </div>
+         </div>
+      </div>
+   </div>
 
 
    <footer>
@@ -153,6 +173,10 @@
          $(".rwd_icon_plus").show();
       })
 
+      //跳頁面
+      function btn_groupfinalchar() {
+         window.location.href = 'group_final_shoppingchar.html';
+      }
 
 
    </script>
