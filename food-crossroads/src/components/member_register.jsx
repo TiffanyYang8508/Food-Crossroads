@@ -118,14 +118,14 @@ class Member_register extends Component {
       .then((res) => {
         if (res.data.status === "0") {
           $("#reportMessage").text(res.data.err);
-        }else {
+          alert(res.data.err);
+        } else {
           window.location = "/register";
         }
       })
       .catch((error) => {
         console.error(error);
       });
-    
   };
 
   render() {
