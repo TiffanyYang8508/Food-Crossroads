@@ -116,14 +116,16 @@ class Member_register extends Component {
   okButtonClick = async () => {
     await new Axios.post("http://localhost:8000/register", this.state.member)
       .then((res) => {
-        if (res.data.status === "") {
+        if (res.data.status === "0") {
           $("#reportMessage").text(res.data.err);
+        }else {
+          window.location = "/register";
         }
-        console.table(res.data);
       })
       .catch((error) => {
         console.error(error);
       });
+    
   };
 
   render() {
