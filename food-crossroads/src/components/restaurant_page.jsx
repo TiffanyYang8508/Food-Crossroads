@@ -38,37 +38,26 @@ class Restaurant_page extends Component {
             document.getElementById('to_register_member').style.display='none';
         })
 
-        // $(".to_member_register").on("click", function() {
-        //     location.href = "./components/member_register.jsx";
-        // })
+        $(".to_member_register").on("click", function() {
+             window.location = "/member/register";
+        })
 
-        // $(".to_member_login").on("click", function() {
-        //     location.href = "./components/member_login.jsx";
-        // })
+        $(".to_member_login").on("click", function() {
+            window.location = "/member/login";
+        })
 
-        // $(".cuisine_name").on("click", function() {
-        //     location.href = "";
-        // })
+        $(".cuisine_name").on("click", function() {
+            window.location = "/restaurant/list";
+        })
 
         $(".shop_menu").on("click", function() {
             document.getElementById('menu').style.display='block';
         })
 
-        $(".display_top_right, .menu").on("click", function() {
+        $(".modal_menu").on("click", function() {
             document.getElementById('menu').style.display='none';
         })
 
-        // document.onclick = open;
-
-        // function open(){
-        //     e = window.event
-        //     var target = e.target.id
-        //     if (target == "menu_btn" || target == "menu_content") {
-        //         menu_btnClick();
-        //     } else {
-        //         menu_none();
-        //     }
-        // }
     }
 
     render() { 
@@ -83,8 +72,8 @@ class Restaurant_page extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="btn_container">
-                                <button id="reservation" className="reservation_btn" data-bs-toggle="modal" onClick={this.reservation_btnClick}>我要訂位</button>
-                                <button id="order" className="order_btn" onClick={this.order_btnClick}>我要訂餐</button>
+                                <button id="reservation" className="reservation_btn" data-bs-toggle="modal">我要訂位</button>
+                                <button id="order" className="order_btn" >我要訂餐</button>
                             </div>
                             <div id="to_register_member" className="modal">
                                 <div className="modal_content">
@@ -95,16 +84,16 @@ class Restaurant_page extends Component {
                                         <h2>您目前狀態為 非會員！</h2>
                                         <p>請前往會員中心登入／註冊，謝謝！</p>
                                         <br />
-                                        <button className="to_member_login" onClick={this.member_login}>登入</button>
-                                        <button className="to_member_register" onClick={this.member_register}>註冊</button>
+                                        <button className="to_member_login">登入</button>
+                                        <button className="to_member_register">註冊</button>
                                     </div>
                                 </div>
                             </div>
 
                             <nav aria-label="breadcrumb">
                                 <ul className="breadcrumb">
-                                    <li className="breadcrumb-item"><a href="index.html">首頁</a></li>
-                                    <li className="breadcrumb-item"><a href="list.html">餐廳列表</a></li>
+                                    <li className="breadcrumb-item"><a href="/">首頁</a></li>
+                                    <li className="breadcrumb-item"><a href="/restaurant/list">餐廳列表</a></li>
                                     <li className="breadcrumb-item active" aria-current="page">aqua 水相餐廳</li>
                                 </ul>
                             </nav>
@@ -146,16 +135,16 @@ class Restaurant_page extends Component {
 
                             <div className="shop_wrapper" id="information">
                                 <h2 className="shop_title flex1">
-                                    <button className="cuisine_name" onClick={this.cuisine_name_btnClick}>義式料理</button>
+                                    <button className="cuisine_name">義式料理</button>
                                 </h2>
                                 <div className="top_flex">
                                     <h4 className="shop_title flex4">Aqua Tea 水相餐廳</h4>
-                                    <button className="shop_menu" onClick={this.menu_btnClick} id="menu_btn">菜單</button>
+                                    <button className="shop_menu" id="menu_btn">菜單</button>
                                 </div>
                                 <div id="menu" className="modal_menu">
                                     <div className="modal_content_menu">
                                         <div className="container_menu" id="menu_content">
-                                            <div onClick={this.menu_none} className="button display_top_right">&times;</div>
+                                            <div className="button display_top_right">&times;</div>
                                             <br />
                                             <br />
                                             <img src={require("../img/aqua/menu1.jpg")} alt="aqua菜單" />
@@ -339,7 +328,7 @@ class Restaurant_page extends Component {
                     </div>
                 </section>
 
-                <button type="button" className="ontop_btn" onClick={this.topfunction}>
+                <button type="button" className="ontop_btn">
                     <i className="fas fa-arrow-up"></i>
                 </button>
 
