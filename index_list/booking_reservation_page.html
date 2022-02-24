@@ -39,9 +39,9 @@
             <!-- 導覽列 start -->
             <nav aria-label="breadcrumb">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#index"><span>首頁</span></a></li>
-                    <li class="breadcrumb-item"><a href="#restaurantList"><span>餐廳列表</span></a></li>
-                    <li class="breadcrumb-item"><a href="#restaurantName"><span>餐廳名稱</span></a></li>
+                    <li class="breadcrumb-item"><a href="index.html"><span>首頁</span></a></li>
+                    <li class="breadcrumb-item"><a href="list.html"><span>餐廳列表</span></a></li>
+                    <li class="breadcrumb-item"><a href="restaurant_page_login_ok.html"><span>aqua 水相餐廳</span></a></li>
                     <li class="breadcrumb-item active" aria-current="page"><span>訂位</span></li>
                 </ul>
             </nav>
@@ -86,13 +86,33 @@
                                 <label for="reservation_info_time">訂位時間：</label>
                                 <input type="time" id="reservation_info_time" name="reservation_info_time" required />
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group column">
                                 <label for="reservation_info_demands">需　　求：</label>
-                                <input type="text" id="reservation_info_demands" name="reservation_info_demands" />
+                                <div class="chk_css">
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="barrier_free" id="barrier_free" value="2">
+                                        <label for="barrier_free">無障礙設施</label>
+                                        <input class="chk_chk" type="checkbox" name="child_seats" id="child_seats" value="2">
+                                        <label for="child_seats">嬰兒座椅</label>
+                                        <input class="chk_chk" type="checkbox" name="min_consumption" id="min_consumption" value="2">
+                                        <label for="min_consumption">最低消費</label>
+                                    </div>
+                                    <div class="chk_item">
+                                        <input class="chk_chk" type="checkbox" name="delivery" id="delivery" value="2">
+                                        <label for="delivery">外送</label>
+                                        <input class="chk_chk" type="checkbox" name="service_free" id="service_free" value="2">
+                                        <label for="service_free">服務費</label>
+                                        <input class="chk_chk" type="checkbox" name="parking" id="parking" value="2">
+                                        <label for="parking">停車</label>
+                                        <input class="chk_chk" type="checkbox" name="allow_pets" id="allow_pets" value="2">
+                                        <label for="allow_pets">攜帶寵物</label>
+                                    </div>
+
+                                </div>
                             </div>
                             <div class="form-group row">
                                 <label for="reservation_info_remark">備　　註：</label>
-                                <textarea type="text" id="reservation_info_remark" name="reservation_info_remark"></textarea>
+                                <input type="text" id="reservation_info_remark" name="reservation_info_remark" />
                             </div>
                         </form>
                     </div>
@@ -104,17 +124,19 @@
                             <div class="form-group row">
                                 <label for="reservation_person_name"><span>姓　　名：</span></label>
                                 <input type="text" id="reservation_person_name" name="reservation_person_name"
-                                       placeholder="請輸入您的姓名" required />
+                                       value="李曉明" placeholder="請輸入您的姓名" required />
                             </div>
                             <div class="form-group row">
                                 <label for="reservation_person_cellphone"><span>手機號碼：</span></label>
                                 <input type="tel" id="reservation_person_cellphone" name="reservation_person_cellphone"
-                                       placeholder="09XX-XXX-XXX" pattern="[0][9][0-9]{2}-[0-9]{3}-[0-9]{3}"
+                                       value="0987654321"
+                                       placeholder="09XXXXXXXX" pattern="[0][9][0-9]{2}-[0-9]{3}-[0-9]{3}"
                                        required />
                             </div>
                             <div class="form-group row">
                                 <label for="reservation_person_email"><span>信　　箱：</span></label>
                                 <input type="email" id="reservation_person_email" name="reservation_person_email"
+                                       value="askf@gmail.com"
                                        placeholder="your_email@gmail.com" required />
                             </div>
                             <input type="submit" class="reservation_input_next" value="下一步：訂位確認"

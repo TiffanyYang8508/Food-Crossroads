@@ -368,7 +368,47 @@
         </div>
     </div>
 
-    <!-- 加入購物車之餐點備註 -->
+    <div class="food_order_group d-flex flex-column">
+        <p class="leader">團長：<span>李曉明</span></p>
+        <div class="d-flex justify-content-center">
+            <div id="order_share">
+                <a href="#"><img src="./img/people_plus@3x.png"
+                        style="width: 25px; height: 20px; margin-right: 5px;"></a>
+                <button type="button" class="btn_view" style="font-size: 18px;" title="copied" data-toggle="modal"
+                    data-target="#ordershare_modal">揪團連結分享</button>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn_charview" onclick="btn_groupchar()">送出訂單</button>
+        </div>
+    </div>
+
+
+    <!-- 揪團連結分享modal -->
+    <div class="modal fade" id="ordershare_modal" tabindex="-1" role="dialog" aria-labelledby="ordershare_modal_title"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="ordershare_modal_title">揪團連結分享</h3><br>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body d-flex flex-column">
+                    <div id="copy_link">
+                        <a href="orderpage_group_sorder_on.html"><input id="copyinput"
+                                value="http://localhost:3000/group_order_on/1" /></a>
+                    </div>
+                    <button type="button" class="btn_copy" onclick='copyinput()'>複製連結</button>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加入購物車之餐點備註modal -->
     <div class="modal fade" id="char_remark_modal" tabindex="-1" role="dialog" aria-labelledby="char_remark_modal_title"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -389,8 +429,8 @@
             </div>
         </div>
     </div>
-    <!-- 揪團功能 -->
-    <div class="share_member rwd_share_member" id="ordermember_Sidebar">
+
+    <!-- <div class="share_member rwd_share_member" id="ordermember_Sidebar">
 
         <table class="table share_member_table rwd_share_member_table"
             style="font-size: 18px; width:50px; line-height: 1em; border: 1px solid #403c3c ; border-radius: 10%;">
@@ -406,7 +446,7 @@
                             <a href="#"><img src="./img/people_plus@3x.png"
                                     style="width: 25px; height: 20px; margin-right: 5px;"></a>
                             <button type="button" class="btn_view" style="font-size: 18px;" title="copied"
-                                onclick="btn_orderdisaplay()">揪團中！</button>
+                                onclick="btn_orderdisaplay()">揪團連結分享</button>
                         </div>
                     </td>
                 </tr>
@@ -423,7 +463,7 @@
         </table>
         <div>
         </div>
-    </div>
+    </div> -->
 
     <!-- 置頂鈕 start -->
     <button type="button" id="btn_back_to_top" onclick="topfunction()" title="Go to top">
@@ -452,7 +492,6 @@
 
         function btn_groupchar() {
             window.location.href = 'group_shoppingchar.html';
-
         }
 
         // 數量加減
