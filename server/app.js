@@ -202,7 +202,7 @@ app.get("/service", function (req, res) {
 
 app.get("/orderpage/:id", function (req, res) {
   conn.query(
-    "SELECT * FROM menu WHERE restaurand_id = ? ",
+    "SELECT * FROM menu INNER JOIN restaurant ON menu.restaurant.id = restaurant.id WHERE restaurant.id =?",
     [req.params.restaurant_id],
     function (err, rows) {
       res.send(JSON.stringify(rows[0]));
