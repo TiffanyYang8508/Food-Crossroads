@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Header from './header';
 import Footer from './footer';
-import "../css/style.css"
 import "../css/booking_finish_page.css";
-import "../css/bootstrap.min.css";
 
 class Booking_finish_page extends Component {
     state = {  } 

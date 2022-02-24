@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
+import Header from './header';
 import Footer from './footer';
 import $ from "jquery";
-import "../css/style.css";
 import "../css/restaurant_page.css";
-import "../css/bootstrap.min.css";
 
 class Restaurant_page extends Component {
     state = {  }
@@ -74,21 +73,9 @@ class Restaurant_page extends Component {
         return (
             <React.Fragment>
 
-                <header>
-                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                        <a className="navbar-brand" href="index.html"><img src={require('../img/logo.png')} alt="Logo" /></a>
-                        <div className="nav_icon">
-                            <a className="nav_a" href="list.html"><i className="fas fa-store"></i>餐廳列表</a>
-                            <a className="nav_a" href="shoppingchar.html"><i className="fas fa-shopping-cart"></i>購物車</a>
-                            <a className="nav_a" href="member_login.html"><i className="fas fa-user-circle"></i>會員登入</a>
-                        </div>
-                        <div className="rwd_icon">
-                            <a className="nav_a" href="list.html"><i className="fas fa-store"></i></a>
-                            <a className="nav_a" href="shoppingchar.html"><i className="fas fa-shopping-cart"></i></a>
-                            <a className="nav_a" href="member_login.html"><i className="fas fa-user-circle"></i></a>
-                        </div>
-                    </nav>
-                </header>
+                <div className="header_page">
+                    <Header />
+                </div>
 
                 <section id="restaurant_page">
                     <div className="container">

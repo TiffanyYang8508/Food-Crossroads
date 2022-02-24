@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import Header from "./header";
 import Footer from "./footer";
-import "../css/style.css";
 import "../css/booking_check_page.css";
 import "../css/progress.css";
-import "../css/bootstrap.min.css";
 
 class Booking_check_page extends Component {
     state = {  } 

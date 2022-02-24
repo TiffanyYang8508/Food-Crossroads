@@ -18,6 +18,10 @@ import Shoppingchar from './components/shoppingchar';
 import Shoppingok from './components/shoppingok';
 import Orderdisplay from './components/orderdisplay';
 import Orderpage from "./components/orderpage";
+import Restaurant_page from "./components/restaurant_page";
+import Booking_reservation_page from "./components/booking_reservation_page";
+import Booking_check_page from "./components/booking_check_page";
+import Booking_finish_page from "./components/booking_finish_page";
 
 class App extends Component {
   state = {};
@@ -50,6 +54,10 @@ class App extends Component {
           <Route path="/shoppingok" component={Shoppingok} exact />
           <Route path="/orderdisplay" component={Orderdisplay} exact />
           <Route path="/orderpage/" component={Orderpage} />
+          <Route path="/restaurant/page" component={Restaurant_page} exact />
+          <Route path="/booking/reservation/page" component={Booking_reservation_page} exact />
+          <Route path="/booking/check/page" component={Booking_check_page} exact />
+          <Route path="/booking/finish/page" component={Booking_finish_page} exact />
         </Switch>
       </BrowserRouter>
     );

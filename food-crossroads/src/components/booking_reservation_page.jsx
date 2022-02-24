@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import Header from "./header";
 import Footer from "./footer";
 import $ from "jquery";
-import "../css/style.css";
 import "../css/booking_reservation_page.css";
-import "../css/bootstrap.min.css";
 
 class Booking_reservation_page extends Component {
     state = {  }
