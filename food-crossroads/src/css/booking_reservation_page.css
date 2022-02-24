@@ -9,72 +9,82 @@
 
 /* ---------- body start ---------- */
 
+.breadcrumb .breadcrumb-item a,.active{
+    font-size: 18px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
 .reservation_container {
-    width: 100%;
-    height: 60vh;
-    padding: 1.25rem;
+    margin: 10px auto;
+    padding: 10px;
     display: flex;
     flex-direction: row;
-    border: 2px solid red;
+    /* border: 1px solid red */
 }
 
 .reservation_info,
 .reservation_person
-{
-    width: 100%;
-    height: 59vh;
+{   
+    height: 200;
     background-color: #b5b4b477;
     border-radius: 5px;
-    margin: 0.75rem;
-    padding: 0.5rem;
-    border: 5px dashed hotpink;
+    margin: 0 10px;
+    /* border: 2px solid pink; */
 }
 
 .reservation_form_title {
-    font-size: 36px;
+    font-size: 1.65rem;
+    font-weight: 600;
+    font-family: sans-serif;
     color: black;
-    margin: 10px 0;
+    margin: 10px;
     text-align: center;
-    border: 2px solid yellowgreen;
+    /* border: 2px solid yellowgreen; */
 }
 
 .form_container_info form {
-    width: 440px;
-    height: 42vh;
-    margin: 10px auto;
-    padding: 10px auto;
+    width: 400px;
+    height: 325px;
+    margin: 0 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-content: center;
-    border: 4px dashed lightsalmon;
+    /* background-color: lightyellow; */
 }
 
 .form_container_info > form > div {
-    border: 2px solid black;
-    font-size: 1.25rem;
+    /* border: 2px solid black; */
+    font-size: 1.2rem;
     font-weight: 500;
-    margin: 5px auto;
-    padding: 5px 10px;
     text-align: center;
-    align-items: center;
+    justify-content: center;
 }
 
 .form_container_info select,
 .form_container_info input,
-.form_container_info textarea {
-    width: 300px;
+.form_container_person input
+{
+    width: 280px;
     height: 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: sans-serif;
     text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+#reservation_info_demands {
+    text-align: left;
 }
 
 .form_container_person form {
-    width: 440px;
-    height: 36vh;
-    margin: 10px auto;
+    width: 400px;
+    margin: 0 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     /* border: 4px dashed lightseagreen; */
 }
 
@@ -82,21 +92,27 @@
     /* border: 2px solid black; */
     font-size: 1.25rem;
     font-weight: 500;
-    margin: 5px auto;
-    padding: 5px 10px;
+    /* margin: 5px; */
+    /* padding: 5px; */
+    justify-content: center;
     text-align: center;
 }
 
-.reservation_btn_next
-{
+input[type="submit"] {
     width: 200px;
     height: 40px;
-    border-radius: 5px;
+    margin-left: 200px;
+    margin-top: 90px;
     font-size: 18px;
-    font-weight: 500;
+    background-color: #8B1309;
     color: #fff;
-    background-color: #8b1309;
-    margin-left: 230px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #a30f01;
 }
 
 /* ---------- body over ---------- */
@@ -111,3 +127,226 @@
 }
 
 /* ---------- footer_page over ---------- */
+
+
+/* RWD start */
+
+
+/* 大型螢幕 */
+
+@media screen and (max-width:992px) {
+    .reservation_container {
+        flex-wrap: wrap;
+    }
+    .reservation_info,
+    .reservation_person {
+        margin: 5px auto;
+    }
+    .reservation_form_title {
+        font-size: 1.75rem;
+        margin: 20px 0;
+    }
+    .form_container_info form {
+        width: 500px;
+        margin: 30px 80px;
+    }
+    .form_container_info > form > div {
+        font-size: 1.35rem;
+    }
+    .form_container_info select,
+    .form_container_info input,
+    .form_container_person input
+    {
+        width: 400px;
+        height: 35px;
+        font-size: 1.25rem;
+    }
+    .form_container_person form {
+        width: 500px;
+        margin: 30px 80px;
+    }
+    .form_container_person > form > div {
+        font-size: 1.35rem;
+        padding: 10px 0;
+    }
+    input[type="submit"] {
+        width: 220px;
+        height: 40px;
+        margin-left: 240px;
+        margin-top: 40px;
+        font-size: 1.35rem;
+    }
+
+    .footer_page {
+        position: relative;
+    }
+}
+
+
+/* 平板 */
+
+@media screen and (max-width:768px) {
+   .reservation_info,
+    .reservation_person {
+        margin: 10px auto;
+        padding: 10px 0;
+    }
+    .reservation_form_title {
+        font-size: 1.55rem;
+    }
+    .form_container_info form {
+        width: 480px;
+        margin: 20px 40px;
+    }
+    .form_container_info > form > div {
+        font-size: 1.2rem;
+    }
+    .form_container_info select,
+    .form_container_info input,
+    .form_container_person input
+    {
+        width: 350px;
+        height: 30px;
+        font-size: 1.2rem;
+    }
+    .form_container_person form {
+        width: 480px;
+        margin: 20px 40px;
+    }
+    .form_container_person > form > div {
+        font-size: 1.2rem;
+        padding: 10px 0;
+    }
+    input[type="submit"] {
+        width: 220px;
+        height: 40px;
+        margin-left: 220px;
+        margin-top: 30px;
+        font-size: 1.2rem;
+    }
+
+    .footer_page {
+        position: relative;
+    }
+    
+}
+
+
+/* 手機 */
+
+@media screen and (max-width:576px) {    
+    .reservation_form_title {
+        font-size: 1.45rem;
+    }
+    .form_container_info form {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .form_container_info > form > div {
+        font-size: 1.1rem;
+        width: 100%;
+        padding: 0 20px;
+        margin: 5px 0;
+    }
+    .form_container_info select,
+    .form_container_info input,
+    .form_container_person input
+    {
+        font-size: 1.1rem;
+        width: 360px;
+    }
+    .form_container_person form {
+        width: 100%;
+        margin: 15px auto;
+    }
+    .form_container_person > form > div {
+        font-size: 1.1rem;
+        width: 100%;
+        padding: 20px;
+        margin: 5px 0;
+    }
+    input[type="submit"] {
+        width: 180px;
+        height: 35px;
+        margin: 30px auto;
+        font-size: 15px;
+    }
+
+}
+
+
+/* 小手機 */
+
+@media screen and (max-width:480px) {
+    .reservation_form_title {
+        font-size: 1.25rem;
+    }
+    .form_container_info form {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .form_container_info > form > div {
+        font-size: 1rem;
+        width: 100%;
+        padding: 0 5px;
+        margin: 5px 0;
+    }
+    .form_container_info select,
+    .form_container_info input,
+    .form_container_person input
+    {
+        font-size: 1rem;
+        width: 240px;
+        
+    }
+    .form_container_person form {
+        width: 100%;
+        margin: 10px auto;
+
+    }
+    .form_container_person > form > div {
+        font-size: 1rem;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+    }
+    input[type="submit"] {
+        width: 160px;
+        height: 30px;
+        margin: 30px auto;
+        font-size: 14px;
+    }
+}
+
+
+/* RWD end */
+
+.chk_css {
+    width: 400px;
+}
+
+.chk_item {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.chk_item label{
+    font-size: 16px;
+}
+
+.form_container_info input[type="checkbox"] {
+    width: 45px;
+    height: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    padding: 0 12px;
+}
+
+.column label {
+    text-align: left;
+}
