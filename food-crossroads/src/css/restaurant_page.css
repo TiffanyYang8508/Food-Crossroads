@@ -107,15 +107,6 @@ a.carousel-control-next .visually-hidden
     display: none;
 }
 
-
-
-
-/* .carousel-indicator > .active {
-    background-color: red;
-} */
-
-
-
 .top_flex {
     display: flex;
     justify-content: flex-start;
