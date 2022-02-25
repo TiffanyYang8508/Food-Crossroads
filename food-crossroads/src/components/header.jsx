@@ -21,7 +21,7 @@ class Header extends Component {
                     <div className="rwd_icon">
                         <a className="nav_a" href="/restaurant/list"><i className="fas fa-store"></i></a>
                         <a className="nav_a" href="shoppingchar.html"><i className="fas fa-shopping-cart"></i></a>
-                        <a className="nav_a" href="member_login.html"><i className="fas fa-user-circle"></i></a>
+                        <a className="nav_a" href="/member/login"><i className="fas fa-user-circle"></i></a>
                     </div>
                 </nav>
             </header>
