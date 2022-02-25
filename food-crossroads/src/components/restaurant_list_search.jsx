@@ -4,7 +4,7 @@ import Footer from './footer';
 import "../css/list.css";
 import Axios from "axios";
 
-class Restaurant_list extends Component {
+class Restaurant_list_search extends Component {
     state = {
         Restaurant: [
             {
@@ -16,14 +16,26 @@ class Restaurant_list extends Component {
     }
 
     async componentDidMount() {
-        if (this.props.match.params.category === undefined) {
-            var url = `http://localhost:8000/restaurant/list`;
-        } else {
-            var url = `http://localhost:8000/restaurant/list/${this.props.match.params.category}`;
+        if(this.props.match.params.area.length === 3 && this.props.match.params.service !== undefined && this.props.match.params.keyword === undefined){
+            var url = `http://localhost:8000/search/${this.props.match.params.area}/${this.props.match.params.service}`;
         }
+        else if(this.props.match.params.area.length === 3 && this.props.match.params.keyword === undefined && this.props.match.params.service === undefined){
+            var url = `http://localhost:8000/search/area/${this.props.match.params.area}`;
+         }   
+                       else if(this.props.match.params.service !== undefined && this.props.match.params.area === undefined){
+            var url = `http://localhost:8000/search/service/${this.props.match.params.service}`;
+         } 
+         else if(this.props.match.params.area === undefined && this.props.match.params.service === undefined){
+            var url = `http://localhost:8000/search/keyword/${this.props.match.params.keyword}`;
+
+        }
+
+        // var url = `http://localhost:8000/search/keyword/${this.props.match.params.keyword}`;
+        console.log(this.props.match.params.keyword !== undefined && this.props.match.params.area === undefined && this.props.match.params.service === undefined)
+        console.log(url);
         var result = await Axios.get(url);
         this.state.Restaurant = result.data;
-        console.log(result.data);
+        console.log(result.data);            
         this.setState({});
     }
 
@@ -287,7 +299,6 @@ class Restaurant_list extends Component {
                                                         <img src={`/img/restaurant_list_img/${value.restaurant_img}`} alt={value.restaurant_img} />
                                                     </div>
                                                     <div className="rest_text">
-                                                        <span>{value.restaurant_category}</span>
                                                         <h4>{value.restaurant_name}</h4>
                                                         <h5>{value.restaurant_address}</h5>
                                                         <span>評分</span>
@@ -311,4 +322,4 @@ class Restaurant_list extends Component {
     }
 }
 
-export default Restaurant_list;
+export default Restaurant_list_search;
