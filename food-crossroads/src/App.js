@@ -13,10 +13,11 @@ import Ordermanagement from "./components/member_orderRecord";
 import BookingManagement from "./components/member_bookingRecord";
 import Member from "./components/member_memberinfo";
 import EditMember from "./components/member_editmember";
+import EditMemberpwd from "./components/member_editpwd";
 import Restaurant_login from "./components/restaurant_login";
-import Shoppingchar from './components/shoppingchar';
-import Shoppingok from './components/shoppingok';
-import Orderdisplay from './components/orderdisplay';
+import Shoppingchar from "./components/shoppingchar";
+import Shoppingok from "./components/shoppingok";
+import Orderdisplay from "./components/orderdisplay";
 import Orderpage from "./components/orderpage";
 import Restaurant_page from "./components/restaurant_page";
 import Booking_reservation_page from "./components/booking_reservation_page";
@@ -50,14 +51,27 @@ class App extends Component {
           <Route path="/bookingmanagement" component={BookingManagement} />
           <Route path="/member/:id" component={Member} />
           <Route path="/editmember/:id" component={EditMember} />
+          <Route path="/editmemberpwd/:id" component={EditMemberpwd} />
           <Route path="/shoppingchar/:id" component={Shoppingchar} exact />
           <Route path="/shoppingok" component={Shoppingok} exact />
           <Route path="/orderdisplay" component={Orderdisplay} exact />
           <Route path="/orderpage/" component={Orderpage} />
           <Route path="/restaurant/page" component={Restaurant_page} exact />
-          <Route path="/booking/reservation/page" component={Booking_reservation_page} exact />
-          <Route path="/booking/check/page" component={Booking_check_page} exact />
-          <Route path="/booking/finish/page" component={Booking_finish_page} exact />
+          <Route
+            path="/booking/reservation/page"
+            component={Booking_reservation_page}
+            exact
+          />
+          <Route
+            path="/booking/check/page"
+            component={Booking_check_page}
+            exact
+          />
+          <Route
+            path="/booking/finish/page"
+            component={Booking_finish_page}
+            exact
+          />
         </Switch>
       </BrowserRouter>
     );

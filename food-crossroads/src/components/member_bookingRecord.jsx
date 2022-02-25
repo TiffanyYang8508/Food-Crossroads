@@ -39,21 +39,21 @@ class BookingRecord extends Component {
             <div className="panel panel-default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a href="#">會員資料</a>
+                  <a href={`/member/1`}>會員資料</a>
                 </h4>
               </div>
             </div>
             <div className="panel panel-default default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a href="booking_manage.html">訂位管理</a>
+                  <a href="#">訂位管理</a>
                 </h4>
               </div>
             </div>
             <div className="panel panel-default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a href="order_manage.html">訂餐管理</a>
+                  <a href={`/ordermanagement/`}>訂餐管理</a>
                 </h4>
               </div>
             </div>

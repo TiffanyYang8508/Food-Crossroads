@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./header";
 import Footer from "./footer";
 import "../css/member.css";
+import "../css/style.css";
 
 import Axios from "axios";
 
@@ -44,14 +45,14 @@ class Member extends Component {
             <div class="panel panel-default ">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a href="booking_manage.html">訂位管理</a>
+                  <a href={`/bookingmanagement/`}>訂位管理</a>
                 </h4>
               </div>
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a href="order_manage.html">訂餐管理</a>
+                  <a href={`/ordermanagement/`}>訂餐管理</a>
                 </h4>
               </div>
             </div>
@@ -66,56 +67,58 @@ class Member extends Component {
                   <div>
                     <p class="title_member_edit">會員資料</p>
                   </div>
-                  <div class="form-group form-inline">
-                    <label for="email">信　箱:</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      value={this.state.Member.user_email}
-                      name="email"
-                      disabled
-                    />
-                  </div>
-                  <div class="form-group form-inline">
-                    <label for="pwd">密　碼:</label>
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="pwd"
-                      value={this.state.Member.user_pwd}
-                      name="pwd"
-                      disabled
-                    />
-                  </div>
-                  <div class="form-group form-inline">
-                    <label for="name">姓　名:</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      value={this.state.Member.user_name}
-                      name="name"
-                      disabled
-                    />
+                  <div class="editmember_info">
+                    <div class="form-group form-inline">
+                      <label for="email">信　箱:</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        value={this.state.Member.user_email}
+                        name="email"
+                        disabled
+                      />
+                    </div>
+                    <div class="form-group form-inline">
+                      <label for="pwd">密　碼:</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="pwd"
+                        value={this.state.Member.user_pwd}
+                        name="pwd"
+                        disabled
+                      />
+                    </div>
+                    <div class="form-group form-inline">
+                      <label for="name">姓　名:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        value={this.state.Member.user_name}
+                        name="name"
+                        disabled
+                      />
+                    </div>
+                    <div class="form-group form-inline">
+                      <label for="tel">手　機:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="tel"
+                        value={this.state.Member.user_tel}
+                        name="tel"
+                        disabled
+                      />
+                    </div>
                   </div>
 
-                  <div class="form-group form-inline">
-                    <label for="tel">手　機:</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="tel"
-                      value={this.state.Member.user_tel}
-                      name="tel"
-                      disabled
-                    />
-                  </div>
                   <div class="btn_div">
-                    <a
-                      href={`/editmember/1`}
-                      className="btn member_confirm_btn"
-                    >
+                    <a href={`/editmemberpwd/1`} class="member_editpwd_btn">
+                      修改密碼
+                    </a>
+                    <a href={`/editmember/1`} class="member_editinfo_btn">
                       修改資料
                     </a>
                   </div>

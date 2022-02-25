@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
 const app = express();
-const { registerValidation } = require("./validation");
 app.listen(8000);
 app.use(express.static("public"));
 app.use(express.json());
@@ -77,7 +76,7 @@ app.post("/register", async (req, res) => {
 
   try {
     let result = {};
-    let error = registerValidation(req.body);
+
     // 尋找是否有重複的email
     conn.query(
       "SELECT user_email FROM member WHERE user_email = ?",
@@ -146,6 +145,38 @@ app.post("/register", async (req, res) => {
   }
 });
 
+app.put("/editpwd", async (req, res) => {
+  try {
+    let result = {};
+    const sql = "SELECT user_pwd FROM member where user_pwd=?";
+    const params = req.body.user_pwd;
+    conn.query(sql, params, async (err, rows) => {
+      if (rows.length != 1) {
+        result["status"] = "0";
+        result["err"] = "與原有密碼不相同";
+        res.json(result);
+      } else {
+        if (req.body.user_npwd !== req.body.user_npwd_confirm) {
+          result["status"] = "1";
+          result["err"] = "密碼不相同";
+          res.json(result);
+        } else {
+          const hashedPassword = await bcrypt.hash(req.body.user_pwd, 10);
+          conn.query("UPDATE member SET user_pwd = ? WHERE user_email = ?", [
+            hashedPassword,
+            req.body.user_email,
+          ]);
+          result["status"] = "2";
+          result["err"] = "更換成功";
+          res.json(result);
+        }
+      }
+    });
+  } catch {
+    res.send("change fail");
+  }
+});
+
 app.post("/login", (req, res) => {
   const query = "SELECT user_pwd from member where user_email=?";
   const params = req.body.user_email;
@@ -204,7 +235,8 @@ app.get("/service/:keyword?/:area?/:other?", function (req, res) {
   // 關鍵字搜尋
   // SELECT restaurant_name,restaurant_address,service_category FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id WHERE restaurant_name LIKE '${req.params.keyword}%'
 
-  conn.query(`SELECT restaurant_name,restaurant_address,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id WHERE service_category LIKE '${req.params.other}%' GROUP BY restaurant_name,restaurant_address`,
+  conn.query(
+    `SELECT restaurant_name,restaurant_address,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id WHERE service_category LIKE '${req.params.other}%' GROUP BY restaurant_name,restaurant_address`,
     [req.params.other],
     function (err, rows) {
       res.send(JSON.stringify(rows));
@@ -240,7 +272,6 @@ app.get("/service/:keyword?/:area?/:other?", function (req, res) {
   //   }
   // );
   // }
-
 });
 
 app.get("/orderpage/:id", function (req, res) {
