@@ -38,21 +38,21 @@ class OrderRecord extends Component {
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a href="#">會員資料</a>
+                  <a href={`/member/1`}>會員資料</a>
                 </h4>
               </div>
             </div>
             <div class="panel panel-default default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a href="booking_manage.html">訂位管理</a>
+                  <a href={`/bookingmanagement/`}>訂位管理</a>
                 </h4>
               </div>
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a href="order_manage.html">訂餐管理</a>
+                  <a href="#">訂餐管理</a>
                 </h4>
               </div>
             </div>
