@@ -200,17 +200,18 @@ div.food_list_border2{
 
 /* modal */
 .btn_cancel{
-    background-color: rgb(203, 200, 200);
-    color: #fff;
+    background-color: white;
+    border: 2px solid #403C3C;
+    color: #403C3C;
     font-size: 16px;
     border-radius: 10px;
     width: 80px;
     height: 40px;
 }
 
-.btn_cancel:hover, .btn_yes:hover{
-    background-color: #FCC106;
-    color: #403C3C;
+.btn_cancel:hover {
+    background-color: #403C3C;
+    color: white;
 }
 
 .btn_yes{
@@ -222,6 +223,9 @@ div.food_list_border2{
     height: 40px;
 }
 
+.btn_yes:hover{
+    background-color: #a30f01;
+}
 
 #copyinput{
     width: 100%;

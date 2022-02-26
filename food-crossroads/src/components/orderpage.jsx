@@ -9,6 +9,8 @@ import "../css/orderpage.css";
 import Order_picture from "../img/aqua/aqua_img.jpg";
 
 class Orderpage extends Component {
+
+
     state = {
 
         Order: [{
@@ -29,7 +31,18 @@ class Orderpage extends Component {
         this.setState({
             Order: result.data
         })
+    }
 
+    btn_group1 = () => {
+        $("html").animate({ scrollTop: 50 }, 300);
+    }
+
+    btn_group2 = () => {
+        $("html").animate({ scrollTop: 1050 }, 300);
+    }
+
+    btn_group3 = () => {
+        $("html").animate({ scrollTop: 1250 }, 300);
 
     }
 
@@ -39,18 +52,18 @@ class Orderpage extends Component {
                 <Header />
                 <div className="scroll menu_group sticky-top">
                     <div className="container-fluid" id="menu_group">
-                        <button type="button" className="oval menu_group_list" onclick="javascript:btn_group1();">開胃菜</button>
-                        <button type="button" className="oval menu_group_list" onclick="jabascript:btn_group2();">沙拉</button>
-                        <button type="button" className="oval menu_group_list" onclick="javascript:btn_group3();">湯</button>
-                        <button type="button" className="oval menu_group_list">義式燉飯</button>
-                        <button type="button" className="oval menu_group_list">義大利麵</button>
-                        <button type="button" className="oval menu_group_list">主廚排餐</button>
-                        <button type="button" className="oval menu_group_list">甜品</button>
-                        <button type="button" className="oval menu_group_list">茶品</button>
-                        <button type="button" className="oval menu_group_list">咖啡</button>
-                        <button type="button" className="oval menu_group_list">果汁</button>
-                        <button type="button" className="oval menu_group_list">酒品</button>
-                        <button type="button" className="oval menu_group_list">水</button>
+                        <button type="button" className="oval menu_group_list" onClick={this.btn_group1}>開胃菜</button>
+                        <button type="button" className="oval menu_group_list" onClick={this.btn_group2}>沙拉</button>
+                        <button type="button" className="oval menu_group_list" onClick={this.btn_group3}>湯</button>
+                        <button type="button" className="oval menu_group_list" >義式燉飯</button>
+                        <button type="button" className="oval menu_group_list" >義大利麵</button>
+                        <button type="button" className="oval menu_group_list" >主廚排餐</button>
+                        <button type="button" className="oval menu_group_list" >甜品</button>
+                        <button type="button" className="oval menu_group_list" >茶品</button>
+                        <button type="button" className="oval menu_group_list" >咖啡</button>
+                        <button type="button" className="oval menu_group_list" >果汁</button>
+                        <button type="button" className="oval menu_group_list" >酒品</button>
+                        <button type="button" className="oval menu_group_list" >水</button>
                     </div>
                 </div>
 
@@ -61,6 +74,7 @@ class Orderpage extends Component {
                         <li className="breadcrumb-item active" aria-current="page"><span>我要訂餐</span></li>
                     </ul>
                 </nav>
+
 
                 <div id='order_page'>
                     <div id="group_1" className="d-flex flex-column">
@@ -140,6 +154,7 @@ class Orderpage extends Component {
                                 </div>
                             </div>
                         </div>
+
                         {/* 商品分類3 */}
                         <div id="group_3" className="d-flex flex-column">
                             <div className="food_title">
@@ -190,11 +205,13 @@ class Orderpage extends Component {
                             <div className="d-flex justify-content-center">
                                 <a href="#"><img src="./img/people_plus@3x.png" style={{ 'width': '25px', 'height': '20px', 'margin-right': ' 5px' }} /></a>
                                 <button className="group_button oval" data-toggle="modal" data-target="#order_group_modal">揪團</button>
+
                             </div>
                             <div className="d-flex justify-content-center">
                                 <button id="checkout" onclick="btncheckout()">去結帳</button>
                             </div>
                         </div>
+
 
                         <div className="modal fade" id="order_group_modal" tabindex="-1" role="dialog" aria-labelledby="order_group_modal_title"
                             aria-hidden="true">
@@ -223,7 +240,6 @@ class Orderpage extends Component {
 
                     </div>
                 </div>
-
                 <Footer />
 
             </React.Fragment>

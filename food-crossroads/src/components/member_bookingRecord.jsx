@@ -7,6 +7,7 @@ import "../css/style.css";
 
 class BookingRecord extends Component {
   state = {
+    id: this.props.match.params.id,
     List: [
       {
         booking_date: "2022-01-08",
@@ -14,14 +15,17 @@ class BookingRecord extends Component {
         user_name: "李曉明",
         booking_time: "2022-01-08",
         booking_peoplenumber: 3,
+        booking_id: 1,
       },
     ],
   };
 
   async componentDidMount() {
-    var result = await Axios.get(
-      "http://localhost:8000/bookingmanagement/list"
-    );
+    console.log(this.props.match.params.id);
+    var url =
+      "http://localhost:8000/bookingmanagement/list/" +
+      this.props.match.params.id;
+    var result = await Axios.get(url);
     this.state.List = result.data;
     console.log(result.data);
     this.setState({});
@@ -39,21 +43,21 @@ class BookingRecord extends Component {
             <div className="panel panel-default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a href="#">會員資料</a>
+                  <a href={`/member/1`}>會員資料</a>
                 </h4>
               </div>
             </div>
             <div className="panel panel-default default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a href="booking_manage.html">訂位管理</a>
+                  <a href="#">訂位管理</a>
                 </h4>
               </div>
             </div>
             <div className="panel panel-default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a href="order_manage.html">訂餐管理</a>
+                  <a href={`/ordermanagement/1`}>訂餐管理</a>
                 </h4>
               </div>
             </div>
@@ -117,20 +121,10 @@ class BookingRecord extends Component {
                           {item.booking_peoplenumber}
                         </td>
                         <td className="btn_td">
-                          <button
-                            className="cancel_btn"
-                            data-toggle="modal"
-                            data-target="#cancel_order_Modal"
-                          >
-                            取消訂位
-                          </button>
-                          <button
-                            className="detail_btn"
-                            data-toggle="modal"
-                            data-target="#detailModal"
-                          >
-                            詳細內容
-                          </button>
+                          <a href={`/cancelbooking/${item.booking_id}`}>
+                            <button className="cancel_btn">取消訂位</button>
+                          </a>
+                          <button className="detail_btn">詳細內容</button>
                         </td>
                         <td>
                           <button className="comment_btn">評價</button>
@@ -139,40 +133,6 @@ class BookingRecord extends Component {
                     ))}
                   </tbody>
                 </table>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="modal fade" id="cancel_order_Modal">
-          <div className="modal-dialog modal-dialog-centered">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h4 className="modal-title">取消訂位</h4>
-                <button
-                  type="button"
-                  className="close"
-                  data-dismiss="modal"
-                ></button>
-              </div>
-
-              <div className="cancel_modal_body">確定取消此次訂位嗎?</div>
-
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="modal_ok_btn"
-                  data-dismiss="modal"
-                >
-                  確定
-                </button>
-                <button
-                  type="button"
-                  className="modal_back_btn"
-                  data-dismiss="modal"
-                >
-                  返回
-                </button>
               </div>
             </div>
           </div>

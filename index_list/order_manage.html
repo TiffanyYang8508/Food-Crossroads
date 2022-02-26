@@ -109,7 +109,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="mobile_td">2022-03-18</td>
+                                <td class="mobile_td">2022-02-24</td>
                                 <td class="mobile_td">aqua水相餐廳</td>
                                 <td class="mobile_td">西西里海鹽柴魚脆薯<br>蕃茄羅勒起司搭頂級陳年油醋</td>
                                 <td class="mobile_td">12:00</td>
@@ -124,6 +124,15 @@
                                     data-target="#rankModal"
                                   >
                                     評價
+                                  </button>
+                                </td>
+                                <td>
+                                  <button
+                                    class="together_btn"
+                                    data-toggle="modal"
+                                    data-target="#detailModal3"
+                                  >
+                                    揪團
                                   </button>
                                 </td>
                             </tr>
@@ -306,8 +315,8 @@
           <!-- Modal body -->
           <div class="detail_modal_body">
             姓名：李曉明 <br />
-            手機：0900-xxxxxx <br />
-            電子郵件：email@gmail.com <br />
+            手機：0987654321<br />
+            電子郵件：askf@gmail.com<br />
             <br />
             訂餐餐點：香西西里海鹽柴魚脆薯*1 <br/>蕃茄羅勒起司搭頂級陳年油醋*2 <br/>
             訂餐餐廳：aqua水相餐廳 <br />
@@ -380,6 +389,41 @@
               >
                 返回
               </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 揪團訂餐對話盒 -->
+        <div class="modal fade" id="detailModal3">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h3 class="modal-title">揪團訂單</h3>
+                <button type="button" class="close" data-dismiss="modal"></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="detail_modal_body">
+                名稱：李曉明 <br />
+                西西里海鹽柴魚脆薯 *1 <br />
+                蕃茄羅勒起司搭頂級陳年油醋*2 <br />
+                <hr>
+                名稱：郭美美 <br />
+                西西里海鹽柴魚脆薯 *1 (加辣)<br />
+                南義炸起司條 *1 <br />
+                <hr>
+                名稱：陳家欣 <br />
+                田園香橙鮮蝦蘿蔓鮮蔬 *1 <br />
+                水相主廚私房湯品 *1 (不要加蔥)<br />
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">
+                  返回
+                </button>
               </div>
             </div>
           </div>
