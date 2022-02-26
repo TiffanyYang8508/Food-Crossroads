@@ -4,6 +4,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 import Index from "./components/Index";
 import Restaurant_list from "./components/restaurant_list";
+import Restaurant_list_search from "./components/restaurant_list_search";
 import Member_register from "./components/member_register";
 import Member_register_success from "./components/member_register_success";
 import Member_login from "./components/member_login";
@@ -32,10 +33,29 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route path="/" component={Index} exact />
-
           <Route
             path="/restaurant/list/:category?"
             component={Restaurant_list}
+            exact
+          />
+          <Route
+            path="/restaurant/list/keyword/:keyword"
+            component={Restaurant_list_search}
+            exact
+          />
+          <Route
+            path="/restaurant/list/area/:area"
+            component={Restaurant_list_search}
+            exact
+          />
+          <Route
+            path="/restaurant/list/service/:service"
+            component={Restaurant_list_search}
+            exact
+          />
+          <Route
+            path="/restaurant/list/search/:area/:service"
+            component={Restaurant_list_search}
             exact
           />
           <Route path="/register" component={Member_register} exact />
@@ -48,8 +68,8 @@ class App extends Component {
           />
           <Route path="/member/login" component={Member_login} />
           <Route path="/restaurant/login" component={Restaurant_login} exact />
-          <Route path="/ordermanagement/:id" component={Ordermanagement} />
-          <Route path="/bookingmanagement/:id" component={BookingManagement} />
+          <Route path="/ordermanagement" component={Ordermanagement} />
+          <Route path="/bookingmanagement" component={BookingManagement} />
           <Route path="/member/:id" component={Member} />
           <Route path="/editmember/:id" component={EditMember} />
           <Route path="/editmemberpwd/:id" component={EditMemberpwd} />
@@ -74,6 +94,7 @@ class App extends Component {
             component={Booking_finish_page}
             exact
           />
+          >>>>>>> afa11d68981ed33fa853da8241f1ba7c91b12b2e
         </Switch>
       </BrowserRouter>
     );

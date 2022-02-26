@@ -4,6 +4,7 @@ import Footer from './footer';
 import $ from "jquery";
 import "../css/restaurant_page.css";
 import "../css/bootstrap.min.css";
+import Carousel from 'react-bootstrap/Carousel';
 
 
 class Restaurant_page extends Component {
@@ -27,43 +28,47 @@ class Restaurant_page extends Component {
         });
 
         $(".reservation_btn").on("click", function() {
-            document.getElementById('to_register_member').style.display='block';
+            $('#to_register_member').css("display", 'block');
         })
 
         $(".order_btn").on("click", function() {
-            document.getElementById('to_register_member').style.display='block';
+            $('#to_register_member').css("display", 'block');
         })
 
         $(".display_top_right").on("click", function() {
-            document.getElementById('to_register_member').style.display='none';
+            $('#to_register_member').css("display", 'none');
         })
 
         $(".to_member_register").on("click", function() {
-             window.location = "/register";
+            $(window.location).prop("href", "/register");
         })
 
         $(".to_member_login").on("click", function() {
-            window.location = "/member/login";
+            $(window.location).prop("href", "/member/login");
         })
 
         $(".cuisine_name").on("click", function() {
-            window.location = "/restaurant/list";
+            $(window.location).prop("href", "/restaurant/list");
         })
 
         $(".shop_menu").on("click", function() {
-            document.getElementById('menu').style.display='block';
+            $('#menu').css("display", 'block');
         })
 
         $(".modal_menu").on("click", function() {
-            document.getElementById('menu').style.display='none';
+            $('#menu').css("display", 'none');
         })
 
         $(".add_comment").on("click", function() {
-            document.getElementById('comment_dialog').style.display='block';
+            $('.modal-comment').css('display','block');
         })
 
-        $(".display_top_right_comment").on("click", function() {
-            document.getElementById('comment_dialog').style.display='none';
+        $(".close").on("click", function() {
+            $('.modal-comment').css("display", 'none');
+        })
+
+        $('.btn_close').on("click", function() {
+            $('.modal-comment').css("display", "none");
         })
 
     }
@@ -95,39 +100,26 @@ class Restaurant_page extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <nav aria-label="breadcrumb">
-                                <ul className="breadcrumb">
-                                    <li className="breadcrumb-item"><a href="/">首頁</a></li>
-                                    <li className="breadcrumb-item"><a href="/restaurant/list">餐廳列表</a></li>
-                                    <li className="breadcrumb-item active" aria-current="page">aqua 水相餐廳</li>
-                                </ul>
-                            </nav>
-                            <div id="carousel" className="carousel slide" data-ride="carousel">
-                                <ol className="carousel-indicators">
-                                    <li data-target="#carousel" data-slide-to="0" className="active"></li>
-                                    <li data-target="#carousel" data-slide-to="1"></li>
-                                    <li data-target="#carousel" data-slide-to="2"></li>
-                                </ol>
-                                <div className="carousel-inner">
-                                    <div className="carousel-item active">
-                                        <img src={require("../img/aqua/aqua_1.jpg")} className="d-block w-60" alt="aqua_1" />
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img src={require("../img/aqua/aqua_2.jpg")} className="d-block w-60" alt="aqua_2" />
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img src={require("../img/aqua/aqua_3.jpg")} className="d-block w-60" alt="aqua_3" />
-                                    </div>
-                                </div>
-                                <a className="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span className="sr-only">Previous</span>
-                                </a>
-                                <a className="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span className="sr-only">Next</span>
-                                </a>
+                            <div>
+                                <nav aria-label="breadcrumb">
+                                    <ul className="breadcrumb">
+                                        <li className="breadcrumb-item"><a href="/">首頁</a></li>
+                                        <li className="breadcrumb-item"><a href="/restaurant/list">餐廳列表</a></li>
+                                        <li className="breadcrumb-item active" aria-current="page">aqua 水相餐廳</li>
+                                    </ul>
+                                </nav>
                             </div>
+                            <Carousel>
+                                <Carousel.Item>
+                                    <img className="d-block w-60" src="../img/aqua/aqua_1.jpg" alt="aqua_1" />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img className="d-block w-60" src="../img/aqua/aqua_2.jpg" alt="aqua_2" />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img className="d-block w-60" src="../img/aqua/aqua_3.jpg" alt="aqua_3" />
+                                </Carousel.Item>
+                            </Carousel>
                         </div>
                         <div className="shop_container">
                             <div className="shop_wrapper" id="information">
@@ -244,25 +236,32 @@ class Restaurant_page extends Component {
                                         <i className="fas fa-plus-circle">新增評論</i>
                                     </button>
                                 </div>
-                                <div id="comment_dialog" className="modal_comment">
-                                    <div className="modal_content_comment">
-                                        <div className="container_comment" id="comment_content">
-                                            <div className="button display_top_right display_top_right_comment ">&times;</div>
-                                            <h1>對這間餐廳的評價如何？</h1>
-                                            <div className="write_div">
-                                                <div className="write_comment"><h4>給予評價：</h4></div>
-                                                <div className="comment_stars">
+                                <div className="modal modal-comment" tabIndex="-1">
+                                    <div className="modal-dialog">
+                                        <div className="modal-content">
+                                            <div className="modal-header">
+                                                <h5 className="modal-title"><b>您對這間餐廳的評價如何？</b></h5>
+                                            </div>
+                                            <div className="modal-body">
+                                                <p>給予評分：</p>
+                                                <div className="comment_rate_wrapper">
                                                     <i className="far fa-star"></i>
                                                     <i className="far fa-star"></i>
                                                     <i className="far fa-star"></i>
                                                     <i className="far fa-star"></i>
                                                     <i className="far fa-star"></i>
                                                 </div>
-                                                <br />
-                                                <input type="text" className='comment_input' placeholder='撰寫評論'/>
+                                                <p></p>
+                                                <div>
+                                                    <p>撰寫評論：</p>
+                                                    <textarea name="comment" id="" cols="30" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                            <div className="modal-footer">
+                                                <button type="button" className="btn_close" data-dismiss="modal">關閉</button>
+                                                <button type="button" className="btn_add">新增評論</button>
                                             </div>
                                         </div>
-                                        <button className="add_comment_btn">新增</button>
                                     </div>
                                 </div>
                                 <div className="comment_box">

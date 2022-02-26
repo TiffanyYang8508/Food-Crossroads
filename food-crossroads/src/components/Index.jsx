@@ -20,17 +20,57 @@ class Index extends Component {
     }
 
     async componentDidMount() {
-        var url = `http://localhost:8000/service/${this.props.match.params.service}`;
+        var url = `http://localhost:8000/search/${this.props.match.params.keyword}`;
         var result = await Axios.get(url);
         this.state.Restaurant = result.data;
         console.log(result.data);
         this.setState({});
     }
+    // $(".tab_content li").click(function () {
+    //     $(this).data('value');
+    // });
+    search = () => {
+        let search_a = document.getElementById("search_a");
+        let keyword = document.getElementById("keyword").value;
+        let area = document.getElementById("area_label").innerText;
+        let chk = document.getElementsByClassName("chk_chk");
+        let chk_chk = [];
+        for (let i = 0; i < chk.length; i++) {
+            if (chk[i].checked === true) {
+                chk_chk.push(chk[i].defaultValue);
+            }
+        }
+
+        // console.log(typeof keyword);
+        console.log(chk_chk);
+        if(area.length === 3 && chk_chk.length>0){
+            search_a.setAttribute("herf",`/restaurant/list/search/${area}/${chk_chk}`);
+            var result = search_a.getAttribute("herf");
+            window.location.href = result;
+        }
+        else if(area.length === 3){
+            search_a.setAttribute("herf",`/restaurant/list/area/${area}`);
+            var result = search_a.getAttribute("herf");
+            window.location.href = result;
+        }else if(keyword.length !== 0){
+            search_a.setAttribute("herf",`/restaurant/list/keyword/${keyword}`);
+            var result = search_a.getAttribute("herf");
+            window.location.href = result;
+        }else 
+        if (chk_chk) {
+            search_a.setAttribute("herf", `/restaurant/list/service/${chk_chk[0]}`);
+            var result = search_a.getAttribute("herf");
+            window.location.href = result;
+        }
+
+
+    }
 
     componentDidMount() {
-        $(".tab_content li").click(function () {
-            console.log($(this).data('value'));
-        });
+
+
+
+
 
 
         // 收闔選單
@@ -93,167 +133,167 @@ class Index extends Component {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-md-12">
-                                <form action="" method="">
-                                    <div className="search_div">
-                                        <input className="search_keyword" id="keyword" type="text" placeholder="請輸入餐廳關鍵字" />
-                                        <div className="area_div">
-                                            <input type="checkbox" className="area_btn" id="area_btn" />
-                                            <label onClick={this.area_btn_click} htmlFor="area_btn" className="area_label dropdown_label"><i className="fas fa-map-marker-alt"></i>請選擇地區<i
-                                                className="fas fa-sort-down"></i></label>
+                                {/* <form action="/search" method="GET"> */}
+                                <div className="search_div">
+                                    <input className="search_keyword" id="keyword" name="keyword" type="text" placeholder="請輸入餐廳關鍵字" />
+                                    <div className="area_div">
+                                        <input type="checkbox" className="area_btn" id="area_btn" />
+                                        <label onClick={this.area_btn_click} htmlFor="area_btn" id="area_label" className="area_label dropdown_label"><i className="fas fa-map-marker-alt"></i>請選擇地區<i
+                                            className="fas fa-sort-down"></i></label>
 
-                                            <div className="tab_div dropdown_div">
-                                                <div className="tab_css">
+                                        <div className="tab_div dropdown_div">
+                                            <div className="tab_css">
 
-                                                    <input id="tab1" type="radio" name="tab" />
-                                                    <label htmlFor="tab1">北部</label>
-                                                    <ul className="tab_content">
-                                                        <li data-value="基隆市">
-                                                            <span>基隆市</span>
-                                                        </li>
-                                                        <li data-value="台北市">
-                                                            <span>台北市</span>
-                                                        </li>
-                                                        <li data-value="新北市">
-                                                            <span>新北市</span>
-                                                        </li>
-                                                        <li data-value="桃園市">
-                                                            <span>桃園市</span>
-                                                        </li>
-                                                        <li data-value="新竹市">
-                                                            <span>新竹市</span>
-                                                        </li>
-                                                        <li data-value="新竹縣">
-                                                            <span>新竹縣</span>
-                                                        </li>
-                                                    </ul>
+                                                <input id="tab1" type="radio" name="tab" />
+                                                <label htmlFor="tab1">北部</label>
+                                                <ul className="tab_content">
+                                                    <li data-value="基隆市">
+                                                        <span>基隆市</span>
+                                                    </li>
+                                                    <li data-value="台北市">
+                                                        <span>台北市</span>
+                                                    </li>
+                                                    <li data-value="新北市">
+                                                        <span>新北市</span>
+                                                    </li>
+                                                    <li data-value="桃園市">
+                                                        <span>桃園市</span>
+                                                    </li>
+                                                    <li data-value="新竹市">
+                                                        <span>新竹市</span>
+                                                    </li>
+                                                    <li data-value="新竹縣">
+                                                        <span>新竹縣</span>
+                                                    </li>
+                                                </ul>
 
-                                                    <input id="tab2" type="radio" name="tab" />
-                                                    <label htmlFor="tab2">中部</label>
-                                                    <ul className="tab_content">
-                                                        <li data-value="苗栗縣">
-                                                            <span>苗栗縣</span>
-                                                        </li>
-                                                        <li data-value="台中市">
-                                                            <span>台中市</span>
-                                                        </li>
-                                                        <li data-value="南投縣">
-                                                            <span>南投縣</span>
-                                                        </li>
-                                                        <li data-value="彰化縣">
-                                                            <span>彰化縣</span>
-                                                        </li>
-                                                        <li data-value="雲林縣">
-                                                            <span>雲林縣</span>
-                                                        </li>
-                                                    </ul>
+                                                <input id="tab2" type="radio" name="tab" />
+                                                <label htmlFor="tab2">中部</label>
+                                                <ul className="tab_content">
+                                                    <li data-value="苗栗縣">
+                                                        <span>苗栗縣</span>
+                                                    </li>
+                                                    <li data-value="台中市">
+                                                        <span>台中市</span>
+                                                    </li>
+                                                    <li data-value="南投縣">
+                                                        <span>南投縣</span>
+                                                    </li>
+                                                    <li data-value="彰化縣">
+                                                        <span>彰化縣</span>
+                                                    </li>
+                                                    <li data-value="雲林縣">
+                                                        <span>雲林縣</span>
+                                                    </li>
+                                                </ul>
 
-                                                    <input id="tab3" type="radio" name="tab" />
-                                                    <label htmlFor="tab3">南部</label>
-                                                    <ul className="tab_content">
-                                                        <li data-value="嘉義市">
-                                                            <span>嘉義市</span>
-                                                        </li>
-                                                        <li data-value="嘉義縣">
-                                                            <span>嘉義縣</span>
-                                                        </li>
-                                                        <li data-value="台南市">
-                                                            <span>台南市</span>
-                                                        </li>
-                                                        <li data-value="高雄市">
-                                                            <span>高雄市</span>
-                                                        </li>
-                                                        <li data-value="屏東縣">
-                                                            <span>屏東縣</span>
-                                                        </li>
-                                                    </ul>
+                                                <input id="tab3" type="radio" name="tab" />
+                                                <label htmlFor="tab3">南部</label>
+                                                <ul className="tab_content">
+                                                    <li data-value="嘉義市">
+                                                        <span>嘉義市</span>
+                                                    </li>
+                                                    <li data-value="嘉義縣">
+                                                        <span>嘉義縣</span>
+                                                    </li>
+                                                    <li data-value="台南市">
+                                                        <span>台南市</span>
+                                                    </li>
+                                                    <li data-value="高雄市">
+                                                        <span>高雄市</span>
+                                                    </li>
+                                                    <li data-value="屏東縣">
+                                                        <span>屏東縣</span>
+                                                    </li>
+                                                </ul>
 
-                                                    <input id="tab4" type="radio" name="tab" />
-                                                    <label htmlFor="tab4">東部</label>
-                                                    <ul className="tab_content">
-                                                        <li data-value="宜蘭縣">
-                                                            <span>宜蘭縣</span>
-                                                        </li>
-                                                        <li data-value="花蓮縣">
-                                                            <span>花蓮縣</span>
-                                                        </li>
-                                                        <li data-value="台東縣">
-                                                            <span>台東縣</span>
-                                                        </li>
-                                                    </ul>
+                                                <input id="tab4" type="radio" name="tab" />
+                                                <label htmlFor="tab4">東部</label>
+                                                <ul className="tab_content">
+                                                    <li data-value="宜蘭縣">
+                                                        <span>宜蘭縣</span>
+                                                    </li>
+                                                    <li data-value="花蓮縣">
+                                                        <span>花蓮縣</span>
+                                                    </li>
+                                                    <li data-value="台東縣">
+                                                        <span>台東縣</span>
+                                                    </li>
+                                                </ul>
 
-                                                    <input id="tab5" type="radio" name="tab" />
-                                                    <label htmlFor="tab5">離島</label>
-                                                    <ul className="tab_content">
-                                                        <li data-value="澎湖縣">
-                                                            <span>澎湖縣</span>
-                                                        </li>
-                                                        <li data-value="連江縣">
-                                                            <span>連江縣</span>
-                                                        </li>
-                                                        <li data-value="金門縣">
-                                                            <span>金門縣</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div className="tab_close">
-                                                    關閉
-                                                </div>
+                                                <input id="tab5" type="radio" name="tab" />
+                                                <label htmlFor="tab5">離島</label>
+                                                <ul className="tab_content">
+                                                    <li data-value="澎湖縣">
+                                                        <span>澎湖縣</span>
+                                                    </li>
+                                                    <li data-value="連江縣">
+                                                        <span>連江縣</span>
+                                                    </li>
+                                                    <li data-value="金門縣">
+                                                        <span>金門縣</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="tab_close">
+                                                關閉
                                             </div>
                                         </div>
-
-                                        <div className="other_div">
-                                            <input type="checkbox" className="other_btn" id="other_btn" />
-                                            <label htmlFor="other_btn" className="other_label dropdown_label"><i className="fas fa-hand-point-up"></i>進階搜尋<i
-                                                className="fas fa-sort-down"></i></label>
-
-                                            <div className="chk_div dropdown_div">
-                                                <div className="chk_css">
-                                                    <div className="chk_item">
-                                                        <input className="chk_chk" type="checkbox" name="service" id="child_seats" value="提供兒童座椅" />
-                                                        <label htmlFor="child_seats">提供兒童座椅</label>
-                                                    </div>
-                                                    <div className="chk_item">
-                                                        <input className="chk_chk" type="checkbox" name="service" id="barrier_free" value="無障礙設施" />
-                                                        <label htmlFor="barrier_free">無障礙設施</label>
-                                                    </div>
-                                                    <div className="chk_item">
-                                                        <input className="chk_chk" type="checkbox" name="service" id="min_consumption" value="最低消費限制" />
-                                                        <label htmlFor="min_consumption">最低消費限制</label>
-                                                    </div>
-                                                    <div className="chk_item">
-                                                        <input className="chk_chk" type="checkbox" name="service" id="limit_meal_time" value="限制用餐時間" />
-                                                        <label htmlFor="limit_meal_time">限制用餐時間</label>
-                                                    </div>
-                                                    <div className="chk_item">
-                                                        <input className="chk_chk" type="checkbox" name="service" id="delivery" value="提供外送" />
-                                                        <label htmlFor="delivery">提供外送</label>
-                                                    </div>
-                                                    <div className="chk_item">
-                                                        <input className="chk_chk" type="checkbox" name="service" id="service_free" value="收取服務費" />
-                                                        <label htmlFor="service_free">收取服務費</label>
-                                                    </div>
-                                                    <div className="chk_item">
-                                                        <input className="chk_chk" type="checkbox" name="service" id="parking" value="附設停車場" />
-                                                        <label htmlFor="parking">附設停車場</label>
-                                                    </div>
-                                                    <div className="chk_item">
-                                                        <input className="chk_chk" type="checkbox" name="service" id="allow_pets" value="允許攜帶寵物" />
-                                                        <label htmlFor="allow_pets">允許攜帶寵物</label>
-                                                    </div>
-
-                                                </div>
-                                                <div className="chk_close">
-                                                    關閉
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* <a href={`/search/${keyword}/${area}/${other}`}> */}
-                                            <div className="dropdown">
-                                                <button className="search_btn" onClick={this.send}>搜尋</button>
-                                            </div>
-                                        {/* </a> */}
                                     </div>
-                                </form>
+
+                                    <div className="other_div">
+                                        <input type="checkbox" className="other_btn" id="other_btn" />
+                                        <label htmlFor="other_btn" className="other_label dropdown_label"><i className="fas fa-hand-point-up"></i>進階搜尋<i
+                                            className="fas fa-sort-down"></i></label>
+
+                                        <div className="chk_div dropdown_div">
+                                            <div className="chk_css">
+                                                <div className="chk_item">
+                                                    <input className="chk_chk" type="checkbox" name="service" id="child_seats" value="提供兒童座椅" />
+                                                    <label htmlFor="child_seats">提供兒童座椅</label>
+                                                </div>
+                                                <div className="chk_item">
+                                                    <input className="chk_chk" type="checkbox" name="service" id="barrier_free" value="無障礙設施" />
+                                                    <label htmlFor="barrier_free">無障礙設施</label>
+                                                </div>
+                                                <div className="chk_item">
+                                                    <input className="chk_chk" type="checkbox" name="service" id="min_consumption" value="最低消費限制" />
+                                                    <label htmlFor="min_consumption">最低消費限制</label>
+                                                </div>
+                                                <div className="chk_item">
+                                                    <input className="chk_chk" type="checkbox" name="service" id="limit_meal_time" value="限制用餐時間" />
+                                                    <label htmlFor="limit_meal_time">限制用餐時間</label>
+                                                </div>
+                                                <div className="chk_item">
+                                                    <input className="chk_chk" type="checkbox" name="service" id="delivery" value="提供外送" />
+                                                    <label htmlFor="delivery">提供外送</label>
+                                                </div>
+                                                <div className="chk_item">
+                                                    <input className="chk_chk" type="checkbox" name="service" id="service_free" value="收取服務費" />
+                                                    <label htmlFor="service_free">收取服務費</label>
+                                                </div>
+                                                <div className="chk_item">
+                                                    <input className="chk_chk" type="checkbox" name="service" id="parking" value="附設停車場" />
+                                                    <label htmlFor="parking">附設停車場</label>
+                                                </div>
+                                                <div className="chk_item">
+                                                    <input className="chk_chk" type="checkbox" name="service" id="allow_pets" value="允許攜帶寵物" />
+                                                    <label htmlFor="allow_pets">允許攜帶寵物</label>
+                                                </div>
+
+                                            </div>
+                                            <div className="chk_close">
+                                                關閉
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" onClick={this.search} id="search_a">
+                                        <div className="dropdown">
+                                            <button className="search_btn">搜尋</button>
+                                        </div>
+                                    </a>
+                                </div>
+                                {/* </form> */}
                                 <form action="">
                                     <div className="search_mobile_div">
                                         <div className="search_mobile_inline_div">
