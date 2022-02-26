@@ -107,23 +107,25 @@ app.get("/restaurant/list/:category", function (req, res) {
   );
 });
 
-app.get("/service",function(req,res){
+app.get("/service", function (req, res) {
   // SELECT r.restaurant_name,r.restaurant_address,GROUP_CONCAT(s.service_category SEPARATOR ',') FROM restaurant AS r INNER JOIN restaurant_service AS rs ON r.restaurant.id = rs.restaurant_service.restaurant_id INNER JOIN service AS s ON rs.restaurant_service.service_id = s.service.id GROUP BY r.restaurant_name
   // SELECT restaurant_name,restaurant_address,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id GROUP BY restaurant_name,restaurant_address
   conn.query("SELECT restaurant_name,restaurant_address,service_category FROM restaurant AS r INNER JOIN restaurant_service AS rs ON r.id = rs.restaurant_id INNER JOIN service AS s ON rs.service_id = s.id",
-  [],
-  function(err,rows){
-    res.send(JSON.stringify(rows))
-  }
+    [],
+    function (err, rows) {
+      res.send(JSON.stringify(rows))
+    }
   );
 });
 
 app.get("/orderpage/:id", function (req, res) {
   conn.query(
-    "SELECT * FROM menu WHERE restaurand_id = ? ",
-    [req.params.restaurant_id],
+    "SELECT * FROM menu WHERE restaurant_id = ? ",
+    [req.params.id],
     function (err, rows) {
-      res.send(JSON.stringify(rows[0]));
+      res.send(JSON.stringify(rows));
     }
   );
 });
+
+

@@ -2,6 +2,11 @@
 
 
 /* 購物車欄位 start */
+.breadcrumb .breadcrumb-item a,.active{
+  font-size: 18px;
+  font-weight: bolder;
+  text-decoration: none;
+}
 
 #shoppingchar .table {
   border: 1px solid #999999;

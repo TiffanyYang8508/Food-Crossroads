@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
+
 import Index from "./components/Index";
 import Restaurant_list from "./components/restaurant_list";
 import Member_register from "./components/member_register";
@@ -46,10 +47,10 @@ class App extends Component {
           <Route path="/bookingmanagement" component={BookingManagement} />
           <Route path="/member/:id" component={Member} />
           <Route path="/editmember/:id" component={EditMember} />
-          <Route path="/shoppingchar/:id" component={Shoppingchar} exact />
+          <Route path="/shoppingchar" component={Shoppingchar} exact />
           <Route path="/shoppingok" component={Shoppingok} exact />
           <Route path="/orderdisplay" component={Orderdisplay} exact />
-          <Route path="/orderpage/" component={Orderpage} />
+          <Route path="/orderpage" component={Orderpage} exact />
         </Switch>
       </BrowserRouter>
     );

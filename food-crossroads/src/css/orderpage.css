@@ -58,7 +58,7 @@
 }
 
 /* 分類標題 */
-.food_title{
+#order_page .food_title{
 margin-left: 10vw;
 }
 
@@ -67,7 +67,7 @@ margin-left: 10vw;
 }
 
 /* 商品框*/
-div.food_list_border{
+#order_page div.food_list_border{
     width: 35%;
 	float: left;
     margin: 0 0.5vw 1vw 10vw;
@@ -75,32 +75,30 @@ div.food_list_border{
     border-radius: 10px;
 }
 /* 右側商品框*/
-div.food_list_border2{
-    margin-left: 0vw;
-}
-.food_dollar_qty{
+#order_page .food_dollar_qty{
     padding-top: 2rem;
 }
-.food_name{
+#order_page .food_name{
     font-size: 1.2rem;
     margin-bottom: 1.8vw;
+    height: 2em;
 }
-.food_detail{
+#order_page .food_detail{
     flex-wrap: nowrap;
     list-style-type: none; 
     margin-left: 20%;
 }
-.dollar{
+#order_page .dollar{
     margin-right: 5%;
     font-size: 12pt;
 }
-#qty_number{
+#order_page #qty_number{
     height: 35px;
     margin: 0 5px;
 }
 
 
-.food_img{
+#order_page .food_img{
     width: 150px;
     height: auto;
     float: left;
@@ -108,7 +106,7 @@ div.food_list_border2{
 }
 
 /* 加入購物車按鈕 */
-.btn_add_cart{
+#order_page .btn_add_cart{
     font-size: 14pt;
     border-radius: 0 0 9px 9px;
     width: 100%;
@@ -118,13 +116,13 @@ div.food_list_border2{
     transition: 0.3s;
 }
 
-.btn_add_cart:hover{
+#order_page .btn_add_cart:hover{
     background-color: brown;
 }
 
 
 /* 商品數量 */
-.btn_count{
+#order_page .btn_count{
     width: 30px;
     height: 30px;
     background-color: white;
@@ -132,23 +130,23 @@ div.food_list_border2{
     border-radius: 100%;
     transition: 0.3s;
 }
-.btn_count:hover{
+#order_page .btn_count:hover{
     background-color: #8B1309;
     color: white;
 }
-#qty_number{
+#order_page #qty_number{
     width: 4vw;
     text-align:center
 }
 
-.food_list_detail{
+/* #order_page .food_list_detail{
     align-items: flex-start
-}
+} */
 
 
 
 /* 揪團與結帳 */
-.food_order_group{
+#order_page .food_order_group{
     width: 10%;
 	float: left;
     margin-right: 8%;
@@ -160,7 +158,7 @@ div.food_list_border2{
     transition: 0.3s;
 }
 
-.group_button{
+#order_page .group_button{
     background-color: #403C3C;
     color: white;
     height: 40px;
@@ -169,7 +167,7 @@ div.food_list_border2{
     border: 0;
 }
 
-.group_button:hover{
+#order_page .group_button:hover{
     background-color: #FCC106;
     color: black;
 
@@ -178,7 +176,7 @@ div.food_list_border2{
 
 
 /* 結帳 */
-#checkout{
+#order_page #checkout{
     width: 100vw;
     height: 50px;
     margin-top: 10px;
@@ -191,7 +189,7 @@ div.food_list_border2{
     transition: 0.3s;
 }
 
-#checkout:hover{
+#order_page #checkout:hover{
     background-color: #FCC106;
     color: black;
     
@@ -199,7 +197,7 @@ div.food_list_border2{
 
 
 /* modal */
-.btn_cancel{
+#order_page .btn_cancel{
     background-color: rgb(203, 200, 200);
     color: #fff;
     font-size: 16px;
@@ -208,12 +206,12 @@ div.food_list_border2{
     height: 40px;
 }
 
-.btn_cancel:hover, .btn_yes:hover{
+#order_page .btn_cancel:hover, .btn_yes:hover{
     background-color: #FCC106;
     color: #403C3C;
 }
 
-.btn_yes{
+#order_page .btn_yes{
     background-color: #8B1309;
     color: #fff;
     font-size: 16px;
@@ -223,12 +221,12 @@ div.food_list_border2{
 }
 
 
-#copyinput{
+#order_page #copyinput{
     width: 100%;
     margin-bottom: 10px;
 }
 
-.btn_copy{
+#order_page .btn_copy{
     font-size: 16px;
     background-color: #8B1309;
     color: #fff;
@@ -237,7 +235,7 @@ div.food_list_border2{
 }
 
 /* 置頂紐 */
-#btn_back_to_top {     
+#order_page #btn_back_to_top {     
     width: 60px;     
     height: 60px;     
     border: none;     
@@ -255,39 +253,39 @@ div.food_list_border2{
     
     }  
 
-#btn_back_to_top:hover {     
+#order_page #btn_back_to_top:hover {     
     background-color: grey;     
     /* box-shadow: inset -3px -3px 5px 0 rgb(66, 66, 66);  */
 }
 
 /*已開啟揪團 start*/
-thead th:nth-child(1),
-tbody td:nth-child(1) {
+#order_page thead th:nth-child(1),
+#order_page tbody td:nth-child(1) {
   width: 1em;
 }
 
-thead th:nth-child(2),
-tbody td:nth-child(2) {
+#order_page thead th:nth-child(2),
+#order_page tbody td:nth-child(2) {
   width: 4em;
 }
 
-thead th:nth-child(3),
-tbody td:nth-child(3) {
+#order_pagethead th:nth-child(3),
+#order_page tbody td:nth-child(3) {
   width: 4em;
 }
 
-thead th:nth-child(4),
-tbody td:nth-child(4),
-thead th:nth-child(5),
-tbody td:nth-child(5) {
+#order_page thead th:nth-child(4),
+#order_page tbody td:nth-child(4),
+#order_page thead th:nth-child(5),
+#order_page tbody td:nth-child(5) {
   width: 0.5em;
 }
 
-.order_member_table {
+#order_page .order_member_table {
   background-color: 1px solid black;
 }
 
-.btn_view {
+#order_page .btn_view {
   color: white;
   background-color: #403c3c;
   border-radius: 50px;
@@ -295,16 +293,16 @@ tbody td:nth-child(5) {
   width: 8em;
 }
 
-.share_member_table tbody tr:nth-child(1),
-.share_member_table tbody tr:nth-child(2) {
+#order_page .share_member_table tbody tr:nth-child(1),
+#order_page .share_member_table tbody tr:nth-child(2) {
   text-align: left;
 }
 
-.dropbtn p {
+#order_page .dropbtn p {
   position: relative;
 }
 
-.dropbtn p::before {
+#order_page .dropbtn p::before {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -313,69 +311,28 @@ tbody td:nth-child(5) {
   transition: 0.3s all;
 }
 
-.dropbtn p:hover::before {
+#order_page .dropbtn p:hover::before {
   content: "";
   background-color: lightslategrey;
 }
 
-.share_member{
-    width: 10%;
-	float: left;
-    margin-right: 8%;
-    position: fixed;
-    display: flex; 
-    justify-content:center;
-    top: 31%;
-    left: 85%;
-    transition: 0.3s;
-}
 
-
-#order_share {
+#order_page #order_share {
   position: relative;
   bottom:10%;
   display:flex;
 }
 
-.share_member_table {
-  position:relative;
-}
-
-.show_member {
-  border: white solid 1px;
-  background-color: rgb(243, 238, 238);
-  position: absolute;
-  text-align: center;
-  width: 8em;
-  margin-right: 0%;
-  z-index: 1;
-}
-
-#dropbtn div{
-  position: relative;
-  display: block;
-}
-
-.show_member_detail {
-  padding-left: 0px;
-}
 
 
-.show_member_detail > li {
-  border-bottom: #585555c5 0.5px solid;
-  font-size: 16px;
-  line-height: 1.5em;
-  align-items:baseline;
-}
-
-#checkout {
+#order_page #checkout {
   width: 8em;
   height: 2em;
   text-align: center;
   font-weight: 600;
 }
 
-.rwd_icon_plus{
+#order_page .rwd_icon_plus{
   border-radius:50%;
   border: solid 1.5px #585555c5;
   height: 40px;
@@ -390,27 +347,27 @@ tbody td:nth-child(5) {
   display: none;
 }
 
-.footer_page {
+/* .footer_page {
   position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
-}
+} */
 
 
 
 @media screen and (max-width:768px) {
-  #table_order{
+    #order_page #table_order{
     width: 100%;
   }
-  .share_member{
+#order_page .share_member{
     visibility: hidden;
   }
  /* .rwd_icon_plus{
     display: initial;
   } */
   
-  .rwd_share_member_table{
+  #order_page .rwd_share_member_table{
     visibility: visible;
     position: fixed;
     top:160px;
@@ -420,10 +377,10 @@ tbody td:nth-child(5) {
     border-radius: 0;
     display: none;
   }
-  #order_share  img{
+  #order_page #order_share  img{
     display:none;
   }
-  .close_btn{
+  #order_page .close_btn{
     display: inline;
     float: right;
   }
@@ -435,35 +392,36 @@ tbody td:nth-child(5) {
 /* 平板 */
 
 @media screen and (max-width:1000px) {
-        .menu_group_list{
+    #order_page .menu_group_list{
             width: 15vw;
             font-size: 14pt;
         }
     
-    .menu_group{
+        #order_page .menu_group{
         overflow: hidden;
     }
 
-    div.food_list_border{
-        width: 70%;  
+    #order_page .food_list_border{
+        width: 10%;  
         margin-right: 0;
+        float: left;
     }
-    .group_button{
+    #order_page .group_button{
         font-size: 1.5vw;
     }
 
-    div.food_list_border2{
+    /* #order_page div.food_list_border2{
         margin-right: 0;
         margin-left: 10vw;
-    }
-    div.food_order_group{
+    } */
+    #order_page div.food_order_group{
         float: right;
     }
 
-    .order_number{
+    #order_page .order_number{
         display: block;
     }
-    .btn_add_cart{
+    #order_page .btn_add_cart{
         font-size: 16pt;
     }
 
@@ -474,30 +432,30 @@ tbody td:nth-child(5) {
 /* 手機 */
 
 @media screen and (max-width:576px) {
-    .menu_group_list{
+    #order_page .menu_group_list{
         width: 20vw;
         font-size: 12pt;
     }
 
-    div.food_list_border{
+    #order_page div.food_list_border{
         width: 70%;  
         margin-right: 0;
     }
-    div.food_list_border2{
+    #order_page div.food_list_border2{
         margin-left:10vh;
     }
-    div.food_order_group{
+    #order_page div.food_order_group{
         float: right;
         margin-left: 3vh;
     }
 
-    div.food_list_border2{
+    #order_page div.food_list_border2{
         margin-left: 10vw;
     }
-    .dollar{
+    #order_page .dollar{
         font-size: 14pt;
     }
-    .btn_add_cart{
+    #order_page .btn_add_cart{
         font-size: 16pt;
     }
     
