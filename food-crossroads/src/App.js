@@ -94,7 +94,6 @@ class App extends Component {
             component={Booking_finish_page}
             exact
           />
-          >>>>>>> afa11d68981ed33fa853da8241f1ba7c91b12b2e
         </Switch>
       </BrowserRouter>
     );
