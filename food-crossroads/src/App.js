@@ -14,6 +14,7 @@ import BookingManagement from "./components/member_bookingRecord";
 import Member from "./components/member_memberinfo";
 import EditMember from "./components/member_editmember";
 import EditMemberpwd from "./components/member_editpwd";
+import CancelBooking from "./components/member_cancelbooking";
 import Restaurant_login from "./components/restaurant_login";
 import Shoppingchar from "./components/shoppingchar";
 import Shoppingok from "./components/shoppingok";
@@ -47,11 +48,12 @@ class App extends Component {
           />
           <Route path="/member/login" component={Member_login} />
           <Route path="/restaurant/login" component={Restaurant_login} exact />
-          <Route path="/ordermanagement" component={Ordermanagement} />
-          <Route path="/bookingmanagement" component={BookingManagement} />
+          <Route path="/ordermanagement/:id" component={Ordermanagement} />
+          <Route path="/bookingmanagement/:id" component={BookingManagement} />
           <Route path="/member/:id" component={Member} />
           <Route path="/editmember/:id" component={EditMember} />
           <Route path="/editmemberpwd/:id" component={EditMemberpwd} />
+          <Route path="/cancelbooking/:id" component={CancelBooking} />
           <Route path="/shoppingchar/:id" component={Shoppingchar} exact />
           <Route path="/shoppingok" component={Shoppingok} exact />
           <Route path="/orderdisplay" component={Orderdisplay} exact />

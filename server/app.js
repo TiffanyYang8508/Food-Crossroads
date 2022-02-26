@@ -10,6 +10,7 @@ app.use(cors());
 
 const mysql = require("mysql");
 const { json, send } = require("express/lib/response");
+const { func } = require("joi");
 const conn = mysql.createConnection({
   user: "root",
   password: "root",
@@ -27,18 +28,18 @@ conn.connect(function (error) {
   console.log("connection success");
 });
 
-app.get("/ordermanagement/list", function (req, res) {
+app.get("/ordermanagement/list/:id", function (req, res) {
   var sql =
-    "SELECT selfpick_date, order_date, restaurant_name, total_amount, food_name FROM orders JOIN order_record ON orders.id = order_record.id JOIN restaurant ON order_record.restaurant_id = restaurant.id JOIN menu ON order_record.menu_id = menu.id";
-  conn.query(sql, [], function (err, rows) {
+    "SELECT member.id,selfpick_date, order_date, restaurant_name, total_amount, food_name FROM orders JOIN order_record ON orders.id = order_record.orders_id JOIN restaurant ON order_record.restaurant_id = restaurant.id JOIN menu ON order_record.menu_id = menu.id JOIN member ON member.id = order_record.user_id WHERE member.id =?";
+  conn.query(sql, [req.params.id], function (err, rows) {
     res.send(JSON.stringify(rows));
   });
 });
 
-app.get("/bookingmanagement/list", function (req, res) {
+app.get("/bookingmanagement/list/:id", function (req, res) {
   var sql =
-    "SELECT booking_date, booking_time, user_name, booking_peoplenumber, restaurant_name FROM booking JOIN booking_record ON booking.id = booking_record.id JOIN restaurant ON booking_record.restaurant_id = restaurant.id JOIN member ON booking_record.user_id = member.id";
-  conn.query(sql, [], function (err, rows) {
+    "SELECT member.id, booking_id , booking_date, booking_time, user_name, booking_peoplenumber, restaurant_name FROM booking JOIN booking_record ON booking.id = booking_record.booking_id JOIN restaurant ON booking_record.restaurant_id = restaurant.id JOIN member ON booking_record.user_id = member.id WHERE member.id=?";
+  conn.query(sql, [req.params.id], function (err, rows) {
     res.send(JSON.stringify(rows));
   });
 });
@@ -199,6 +200,23 @@ app.post("/login", (req, res) => {
       output["message"] = "輸入錯誤信箱及密碼";
     }
     res.json(output);
+  });
+});
+
+app.get("/detail/record/:id", function (req, res) {
+  conn.query(
+    "SELECT booking_id,user_name , user_tel, user_email,booking_peoplenumber,booking_date,booking_time,booking_service FROM member JOIN booking ON member.id = booking.user_id JOIN booking_record ON booking.id = booking_record.booking_id WHERE booking_id =?",
+    [req.params.id],
+    function (err, rows) {
+      res.send(JSON.stringify(rows[0]));
+    }
+  );
+});
+
+app.delete("/cancelbooking/:id", function (req, res) {
+  var sql = `DELETE FROM booking_record WHERE booking_id =?`;
+  conn.query(sql, [req.params.id], function (err, rows) {
+    res.send(JSON.stringify(rows));
   });
 });
 

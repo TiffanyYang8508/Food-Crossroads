@@ -19,7 +19,10 @@ class OrderRecord extends Component {
   };
 
   async componentDidMount() {
-    var result = await Axios.get("http://localhost:8000/ordermanagement/list");
+    console.log(this.props.match.params.id);
+    var result = await Axios.get(
+      `http://localhost:8000/ordermanagement/list/${this.props.match.params.id}`
+    );
     //console.log(result);
     this.state.List = result.data;
     console.log(result.data);
@@ -45,7 +48,7 @@ class OrderRecord extends Component {
             <div class="panel panel-default default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a href={`/bookingmanagement/`}>訂位管理</a>
+                  <a href={`/bookingmanagement/1`}>訂位管理</a>
                 </h4>
               </div>
             </div>
@@ -105,7 +108,7 @@ class OrderRecord extends Component {
                   </thead>
                   <tbody>
                     {this.state.List.map((item, index) => (
-                      <tr key={index}>
+                      <tr>
                         <td className="mobile_td">{item.selfpick_date}</td>
                         <td className="mobile_td">{item.restaurant_name}</td>
                         <td className="mobile_td">{item.food_name}</td>

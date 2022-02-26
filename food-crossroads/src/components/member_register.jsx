@@ -122,6 +122,7 @@ class Member_register extends Component {
             break;
           case "1":
             alert(res.data.err);
+            window.location("/member/login");
             break;
           case "2":
             alert(res.data.err);
