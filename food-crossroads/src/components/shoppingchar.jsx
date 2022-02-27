@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "../css/bootstrap.min.css";
 
 
 import "../fontawesome-free-5.15.4-web/css/all.min.css";
@@ -11,8 +12,20 @@ import Axios from "axios";
 
 class Shoppingchar extends Component {
     state = {
-        shoppingcharItem: { food_name: "仲夏野莓冰淇淋蘇打", food_amount: "150" }
+        shoppingcharItem: { food_name: "", food_amount: "" }
     }
+
+    // loginClick = async () => {
+    //     console.log("OK");
+    //     await new Axios.get("http://localhost:8000/shoppingchar/:id", this.state.member)
+    //         .then((res) => {
+    //             if (res.data.status !== "1") {
+    //                 $("#reportMessage").text(res.data.message);
+    //             }
+    //         })
+    //         .catch((error) => { console.error(error) });
+
+    // }
 
 
     render() {
@@ -26,7 +39,7 @@ class Shoppingchar extends Component {
                                 <nav aria-label="breadcrumb">
                                     <ul className="breadcrumb">
                                         <li className="breadcrumb-item"><a href="index.html"><span>首頁</span></a></li>
-                                        <li className="breadcrumb-item"><a href="list.html"><span>餐廳列表</span></a></li>
+                                        <li className="breadcrumb-item"><a href=""><span>餐廳列表</span></a></li>
                                         <li className="breadcrumb-item active" aria-current="page"><span>訂餐</span></li>
                                     </ul>
                                 </nav>
