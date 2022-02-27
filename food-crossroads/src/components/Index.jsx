@@ -26,9 +26,7 @@ class Index extends Component {
         console.log(result.data);
         this.setState({});
     }
-    // $(".tab_content li").click(function () {
-    //     $(this).data('value');
-    // });
+    
     search = () => {
         let search_a = document.getElementById("search_a");
         let keyword = document.getElementById("keyword").value;
@@ -41,37 +39,27 @@ class Index extends Component {
             }
         }
 
-        // console.log(typeof keyword);
-        console.log(chk_chk);
-        if(area.length === 3 && chk_chk.length>0){
-            search_a.setAttribute("herf",`/restaurant/list/search/${area}/${chk_chk}`);
+        if (area.length === 3 && chk_chk.length > 0) {
+            search_a.setAttribute("herf", `/restaurant/list/search/${area}/${chk_chk}`);
             var result = search_a.getAttribute("herf");
             window.location.href = result;
         }
-        else if(area.length === 3){
-            search_a.setAttribute("herf",`/restaurant/list/area/${area}`);
+        else if (area.length === 3) {
+            search_a.setAttribute("herf", `/restaurant/list/area/${area}`);
             var result = search_a.getAttribute("herf");
             window.location.href = result;
-        }else if(keyword.length !== 0){
-            search_a.setAttribute("herf",`/restaurant/list/keyword/${keyword}`);
+        } else if (keyword.length !== 0) {
+            search_a.setAttribute("herf", `/restaurant/list/keyword/${keyword}`);
             var result = search_a.getAttribute("herf");
             window.location.href = result;
-        }else 
-        if (chk_chk) {
+        } else if (chk_chk) {
             search_a.setAttribute("herf", `/restaurant/list/service/${chk_chk[0]}`);
             var result = search_a.getAttribute("herf");
             window.location.href = result;
         }
-
-
     }
 
     componentDidMount() {
-
-
-
-
-
 
         // 收闔選單
         $(".dropdown_label").click(function (e) {
@@ -133,7 +121,6 @@ class Index extends Component {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-md-12">
-                                {/* <form action="/search" method="GET"> */}
                                 <div className="search_div">
                                     <input className="search_keyword" id="keyword" name="keyword" type="text" placeholder="請輸入餐廳關鍵字" />
                                     <div className="area_div">
@@ -249,8 +236,8 @@ class Index extends Component {
                                         <div className="chk_div dropdown_div">
                                             <div className="chk_css">
                                                 <div className="chk_item">
-                                                    <input className="chk_chk" type="checkbox" name="service" id="child_seats" value="提供兒童座椅" />
-                                                    <label htmlFor="child_seats">提供兒童座椅</label>
+                                                    <input className="chk_chk" type="checkbox" name="service" id="child_seats" value="提供嬰兒座椅" />
+                                                    <label htmlFor="child_seats">提供嬰兒座椅</label>
                                                 </div>
                                                 <div className="chk_item">
                                                     <input className="chk_chk" type="checkbox" name="service" id="barrier_free" value="無障礙設施" />
@@ -293,7 +280,6 @@ class Index extends Component {
                                         </div>
                                     </a>
                                 </div>
-                                {/* </form> */}
                                 <form action="">
                                     <div className="search_mobile_div">
                                         <div className="search_mobile_inline_div">
@@ -382,7 +368,7 @@ class Index extends Component {
                                             <div className="mobile_chk_css">
                                                 <div className="mobile_chk_item">
                                                     <input className="mobile_chk_chk" type="checkbox" name="child_seats" id="child_seats" value="2" />
-                                                    <label htmlFor="child_seats">提供兒童座椅</label>
+                                                    <label htmlFor="child_seats">提供嬰兒座椅</label>
                                                 </div>
                                                 <div className="mobile_chk_item">
                                                     <input className="mobile_chk_chk" type="checkbox" name="barrier_free" id="barrier_free" value="2" />
