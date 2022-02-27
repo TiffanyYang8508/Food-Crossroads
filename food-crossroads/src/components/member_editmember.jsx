@@ -56,21 +56,25 @@ class EditMember extends Component {
             <div className="panel panel-default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a href="member.html">會員資料</a>
+                  <a href={`/member/${this.props.match.params.id}`}>會員資料</a>
                 </h4>
               </div>
             </div>
             <div className="panel panel-default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a href="booking_manage.html">訂位管理</a>
+                  <a href={`/bookingmanagement/${this.props.match.params.id}`}>
+                    訂位管理
+                  </a>
                 </h4>
               </div>
             </div>
             <div className="panel panel-default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a href="order_manage.html">訂餐管理</a>
+                  <a href={`/ordermanagement/${this.props.match.params.id}`}>
+                    訂餐管理
+                  </a>
                 </h4>
               </div>
             </div>

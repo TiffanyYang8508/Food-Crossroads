@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import Axios from "axios";
 import Header from "./header";
 import Footer from "./footer";
+import $ from "jquery";
 import "../css/member.css";
 import "../css/style.css";
 
-class OrderRecord extends Component {
+class BookingRecord extends Component {
   state = {
+    id: this.props.match.params.id,
     List: [
       {
         selfpick_date: "2022-01-08",
@@ -27,6 +29,14 @@ class OrderRecord extends Component {
     this.state.List = result.data;
     console.log(result.data);
     this.setState({});
+
+    $(".detail_btn").on("click", function () {
+      $(".modal-detail").css("display", "block");
+    });
+
+    $(".btn_close").on("click", function () {
+      $(".modal-detail").css("display", "none");
+    });
   }
 
   render() {
@@ -41,18 +51,20 @@ class OrderRecord extends Component {
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a href={`/member/1`}>會員資料</a>
+                  <a href={`/member/${this.props.match.params.id}`}>會員資料</a>
+                </h4>
+              </div>
+            </div>
+            <div class="panel panel-default ">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a href={`/bookingmanagement/${this.props.match.params.id}`}>
+                    訂位管理
+                  </a>
                 </h4>
               </div>
             </div>
             <div class="panel panel-default default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a href={`/bookingmanagement/1`}>訂位管理</a>
-                </h4>
-              </div>
-            </div>
-            <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
                   <a href="#">訂餐管理</a>
@@ -92,8 +104,8 @@ class OrderRecord extends Component {
           </label>
         </div>
 
-        <div id="order_manage">
-          <div className="container-fluid">
+        <div id="booking_manage">
+          <div className="container-fluid table_container">
             <div className="row">
               <div className="col-md-12">
                 <table className="table">
@@ -104,6 +116,8 @@ class OrderRecord extends Component {
                       <th>訂餐菜名</th>
                       <th>訂餐時間</th>
                       <th>訂餐金額</th>
+                      <th></th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -115,58 +129,47 @@ class OrderRecord extends Component {
                         <td className="mobile_td">{item.order_date}</td>
                         <td className="mobile_td">{item.total_amount}</td>
                         <td className="order_td">
-                          <button
-                            className="detail_btn"
-                            data-toggle="modal"
-                            data-target="#detailModal"
-                          >
-                            詳細訂單
-                          </button>
+                          <button className="detail_btn">詳細訂單</button>
                         </td>
+                        <div class="modal modal-detail" tabIndex="-1">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h4 class="modal-title">詳細內容</h4>
+                              </div>
+
+                              <div class="detail_modal">
+                                姓名：{item.user_name} <br />
+                                手機：{item.user_tel}
+                                <br />
+                                電子郵件：{item.user_email} <br />
+                                <br />
+                                訂餐餐點：{item.food_name} <br />
+                                訂餐餐廳：{item.restaurant_name} <br />
+                                取餐時間：{item.selfpick_date} <br />
+                                訂餐金額：{item.total_amount}
+                                <br />
+                              </div>
+
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn_close"
+                                  data-dismiss="modal"
+                                >
+                                  返回
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         <td>
-                          <button className="comment_btn">評價</button>
+                          <button className="order_comment_btn">評價</button>
                         </td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal fade" id="detailModal">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title">詳細內容</h4>
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                ></button>
-              </div>
-
-              <div class="detail_modal_body">
-                姓名：李曉明 <br />
-                手機：0900-xxxxxx <br />
-                電子郵件：email@gmail.com <br />
-                <br />
-                訂餐編號：00001 <br />
-                訂餐餐廳：餐廳名稱 <br />
-                取餐時間：17:30 <br />
-                訂餐金額：300 <br />
-                備註：不要加茄子
-              </div>
-
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-lg btn-secondary"
-                  data-dismiss="modal"
-                >
-                  返回
-                </button>
               </div>
             </div>
           </div>
@@ -180,4 +183,4 @@ class OrderRecord extends Component {
   }
 }
 
-export default OrderRecord;
+export default BookingRecord;

@@ -68,8 +68,8 @@ class App extends Component {
           />
           <Route path="/member/login" component={Member_login} />
           <Route path="/restaurant/login" component={Restaurant_login} exact />
-          <Route path="/ordermanagement" component={Ordermanagement} />
-          <Route path="/bookingmanagement" component={BookingManagement} />
+          <Route path="/ordermanagement/:id" component={Ordermanagement} />
+          <Route path="/bookingmanagement/:id" component={BookingManagement} />
           <Route path="/member/:id" component={Member} />
           <Route path="/editmember/:id" component={EditMember} />
           <Route path="/editmemberpwd/:id" component={EditMemberpwd} />

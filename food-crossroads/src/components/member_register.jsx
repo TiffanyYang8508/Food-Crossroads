@@ -122,7 +122,7 @@ class Member_register extends Component {
             break;
           case "1":
             alert(res.data.err);
-            window.location("/member/login");
+            window.location = "/register/success";
             break;
           case "2":
             alert(res.data.err);
@@ -142,12 +142,12 @@ class Member_register extends Component {
 
   render() {
     return (
-      <>
+      <React.Fragment>
         <header className="header_page">
           <Header />
         </header>
 
-        <div className="container">
+        <div id="MemberRegister" className="container">
           <div className="row">
             <div className="col-md-12 col-sm-6">
               <div className="register_form">
@@ -264,7 +264,7 @@ class Member_register extends Component {
         <footer className="footer_page">
           <Footer />
         </footer>
-      </>
+      </React.Fragment>
     );
   }
 }

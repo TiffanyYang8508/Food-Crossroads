@@ -210,9 +210,10 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 90%;
   height: 100%;
-  margin-left: 18%;
+  margin-left: 12%;
+  /* border: 1px solid black; */
 }
 
 #mobile_booking_manage,
@@ -224,15 +225,33 @@ label {
   border-bottom: 1px solid #403c3c;
 }
 
-.table th,
-td {
-  text-align: center;
+#booking_manage .table th {
   width: 10%;
+}
+
+#booking_manage td {
+  text-align: center;
+}
+
+#booking_manage .detail_modal_body {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+  font-size: 20px;
+}
+
+#booking_manage .detail_modal {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 80px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .cancel_btn,
 .detail_btn,
 .comment_btn,
+.order_comment_btn,
 .together_btn {
   border-radius: 8px;
   border: none;
@@ -263,7 +282,7 @@ td {
 }
 
 .comment_btn {
-  margin-left: -120px;
+  margin-left: -360px;
   background-color: #8b1309;
   color: #fff;
 }
@@ -288,27 +307,36 @@ td {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 100%;
   height: 100%;
   margin-left: 18%;
 }
 
-.cancel_modal_body {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-align: center;
-  font-size: 28px;
-}
-
-.modal-title {
+#order_manage .modal-title {
   font-size: 24px;
 }
 
-.detail_modal_body {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 100px;
-  font-size: 18px;
+#order_manage .table th {
+  border-bottom: 1px solid #403c3c;
+}
+
+#order_manage .table th {
+  width: 10%;
+}
+
+#order_manage td {
+  text-align: center;
+}
+
+.order_comment_btn {
+  margin-left: -360px;
+  background-color: #8b1309;
+  color: #fff;
+  margin-left: -290px;
+}
+
+.order_comment_btn:hover {
+  background-color: #a30f01;
 }
 
 .rank_modal_body {
@@ -346,7 +374,7 @@ td {
   background-color: #a30f01;
 }
 
-.modal_back_btn {
+.btn_close {
   font-size: 18px;
   background-color: #403c3c;
   color: #fff;
@@ -355,7 +383,7 @@ td {
   padding: 10px 20px;
 }
 
-.modal_back_btn:hover {
+.btn_close:hover {
   background-color: #524d4d;
 }
 

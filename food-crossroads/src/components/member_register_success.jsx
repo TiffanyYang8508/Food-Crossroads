@@ -14,6 +14,13 @@ import "../css/login.css";
 
 class Member_register_success extends Component {
   state = {};
+
+  componentDidMount() {
+    setTimeout(() => {
+      window.location = "/member/login";
+    }, 1500);
+  }
+
   render() {
     return (
       <React.Fragment>

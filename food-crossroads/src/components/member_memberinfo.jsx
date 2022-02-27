@@ -45,14 +45,18 @@ class Member extends Component {
             <div class="panel panel-default ">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a href={`/bookingmanagement/`}>訂位管理</a>
+                  <a href={`/bookingmanagement/${this.props.match.params.id}`}>
+                    訂位管理
+                  </a>
                 </h4>
               </div>
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a href={`/ordermanagement/`}>訂餐管理</a>
+                  <a href={`/ordermanagement/${this.props.match.params.id}`}>
+                    訂餐管理
+                  </a>
                 </h4>
               </div>
             </div>

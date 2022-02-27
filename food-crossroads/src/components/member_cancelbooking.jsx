@@ -31,7 +31,7 @@ class CancelBooking extends Component {
       this.state.member
     );
     console.log(result);
-    //window.location = `/bookingmanagement${this.props.match.params.id}`;
+    window.location = `/bookingmanagement/${this.props.match.params.id}`;
   };
 
   render() {
@@ -99,7 +99,7 @@ class CancelBooking extends Component {
               </form>
             </div>
             <div className="btn_container_cancel">
-              <a href="">
+              <a href={`/bookingmanagement/${this.props.match.params.id}`}>
                 <input
                   type="button"
                   className="cancel_btn_manage"
