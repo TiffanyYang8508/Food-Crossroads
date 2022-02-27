@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Header from "./header";
 import Footer from "./footer";
 import Axios from "axios";
-// import "../css/style.css";
 import "../css/member_cancelbooking.css";
 
 class CancelBooking extends Component {

@@ -4,7 +4,6 @@ import Header from "./header";
 import Footer from "./footer";
 import $ from "jquery";
 import "../css/member.css";
-import "../css/style.css";
 
 class BookingRecord extends Component {
   state = {

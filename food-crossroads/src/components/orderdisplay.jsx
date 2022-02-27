@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-
-import "../fontawesome-free-5.15.4-web/css/all.min.css";
-import "../css/style.css";
 import Header from './header';
 import Footer from './footer';
 import "../css/orderdisplay.css";

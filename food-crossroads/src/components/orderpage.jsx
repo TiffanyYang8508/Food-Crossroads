@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { useState } from "react";
 import Axios from "axios";
 import $ from "jquery";
-import "../fontawesome-free-5.15.4-web/css/all.min.css";
 import Header from './header';
 import Footer from './footer';
 import "../css/orderpage.css";

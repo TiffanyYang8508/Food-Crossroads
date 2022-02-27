@@ -3,8 +3,6 @@ import Header from "./header";
 import Footer from "./footer";
 import Axios from "axios";
 import $ from "jquery";
-import "../fontawesome-free-5.15.4-web/css/all.min.css";
-import "../css/style.css";
 import "../css/member_register.css";
 
 class Member_register extends Component {

@@ -72,6 +72,10 @@ th {
   text-align: center;
 }
 
+.edit_label{
+  margin-right: 20px;
+}
+
 #member_section,
 #edit_member {
   display: flex;
@@ -107,10 +111,6 @@ th {
 .edit_info input[type="email"],
 .edit_info input[type="password"] {
   width: 300px;
-}
-
-label {
-  margin-right: 20px;
 }
 
 #edit_member .form-control {

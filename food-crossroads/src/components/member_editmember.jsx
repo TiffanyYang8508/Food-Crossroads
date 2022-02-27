@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../css/member.css";
-import "../css/style.css";
 import Header from "./header";
 import Footer from "./footer";
 import Axios from "axios";
@@ -106,7 +105,7 @@ class EditMember extends Component {
               </div>
             </div>
           </div>
-          <label for="aside_menu_chk">
+          <label for="aside_menu_chk" className="aside_menu_chk">
             <i className="fas fa-angle-right"></i>
           </label>
         </div>

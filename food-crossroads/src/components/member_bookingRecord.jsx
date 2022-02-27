@@ -4,7 +4,6 @@ import Header from "./header";
 import Footer from "./footer";
 import $ from "jquery";
 import "../css/member.css";
-import "../css/style.css";
 
 class BookingRecord extends Component {
   state = {
@@ -103,7 +102,7 @@ class BookingRecord extends Component {
               </div>
             </div>
           </div>
-          <label for="aside_menu_chk">
+          <label for="aside_menu_chk" className="aside_menu_chk">
             <i className="fas fa-angle-right"></i>
           </label>
         </div>

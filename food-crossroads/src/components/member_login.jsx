@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
-import $ from "jquery";
 import Header from "./header";
 import Footer from "./footer";
-import "../fontawesome-free-5.15.4-web/css/all.min.css";
-import "../css/style.css";
 import "../css/member_login.css";
 
 class Member_login extends Component {

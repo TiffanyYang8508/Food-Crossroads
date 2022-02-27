@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import $ from "jquery";
 import Header from './header';
 import Footer from './footer';
+import "../css/bootstrap.min.css"
 import "../css/style.css";
 import "../css/index.css";
 import Axios from "axios";

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Header from "./header";
 import Footer from "./footer";
-import "../css/style.css";
 import "../css/login.css";
 
 // function auto_redirect() {

@@ -3,7 +3,6 @@ import Header from "./header";
 import Footer from "./footer";
 import $ from "jquery";
 import "../css/restaurant_page.css";
-import "../css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
 
 class Restaurant_page extends Component {

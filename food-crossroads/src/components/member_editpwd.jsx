@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Header from "./header";
 import Footer from "./footer";
 import "../css/member.css";
-import "../css/style.css";
 import Axios from "axios";
 
 class EditMemberpwd extends Component {
