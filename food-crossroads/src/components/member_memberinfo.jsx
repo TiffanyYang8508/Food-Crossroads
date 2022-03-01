@@ -72,7 +72,9 @@ class Member extends Component {
                   </div>
                   <div class="editmember_info">
                     <div class="form-group form-inline">
-                      <label for="email">信　箱:</label>
+                      <label htmlFor="email" className="form_text">
+                        信　箱:
+                      </label>
                       <input
                         type="email"
                         class="form-control"
@@ -83,7 +85,9 @@ class Member extends Component {
                       />
                     </div>
                     <div class="form-group form-inline">
-                      <label for="pwd">密　碼:</label>
+                      <label htmlFor="pwd" className="form_text">
+                        密　碼:
+                      </label>
                       <input
                         type="password"
                         class="form-control "
@@ -94,7 +98,9 @@ class Member extends Component {
                       />
                     </div>
                     <div class="form-group form-inline">
-                      <label for="name">姓　名:</label>
+                      <label htmlFor="name" className="form_text">
+                        姓　名:
+                      </label>
                       <input
                         type="text"
                         class="form-control"
@@ -105,7 +111,9 @@ class Member extends Component {
                       />
                     </div>
                     <div class="form-group form-inline">
-                      <label for="tel">手　機:</label>
+                      <label htmlFor="tel" className="form_text">
+                        手　機:
+                      </label>
                       <input
                         type="text"
                         class="form-control"
