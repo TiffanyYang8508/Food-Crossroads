@@ -10,7 +10,7 @@ class Header extends Component {
     state = {}
     render() {
         return (
-            <header>
+            <header id="header_page">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <a className="navbar-brand" href="/"><img src={logo} alt="LOGO" /></a>
                     <div className="nav_icon">

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import Header from "./header";
+import logo from "../img/logo.png";
 import Footer from "./footer";
 import "../css/member.css";
-import "../css/style.css";
 
 import Axios from "axios";
 
@@ -29,8 +28,34 @@ class Member extends Component {
   render() {
     return (
       <React.Fragment>
-        <header className="header_page">
-          <Header />
+        <header id="header_page">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <a className="navbar-brand" href="/">
+              <img src={logo} alt="LOGO" />
+            </a>
+            <div className="nav_icon">
+              <a className="nav_a" href="/restaurant/list">
+                <i className="fas fa-store"></i>餐廳列表
+              </a>
+              <a className="nav_a" href="/orderpage">
+                <i className="fas fa-shopping-cart"></i>購物車
+              </a>
+              <a className="nav_a" href="/member/1">
+                <i className="fas fa-user-circle"></i>李曉明
+              </a>
+            </div>
+            <div className="rwd_icon">
+              <a className="nav_a" href="/restaurant/list">
+                <i className="fas fa-store"></i>
+              </a>
+              <a className="nav_a" href="/orderpage">
+                <i className="fas fa-shopping-cart"></i>
+              </a>
+              <a className="nav_a" href="/member/login">
+                <i className="fas fa-user-circle"></i>
+              </a>
+            </div>
+          </nav>
         </header>
 
         <aside class="aside_menu">
@@ -45,14 +70,18 @@ class Member extends Component {
             <div class="panel panel-default ">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a href={`/bookingmanagement/`}>訂位管理</a>
+                  <a href={`/bookingmanagement/${this.props.match.params.id}`}>
+                    訂位管理
+                  </a>
                 </h4>
               </div>
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a href={`/ordermanagement/`}>訂餐管理</a>
+                  <a href={`/ordermanagement/${this.props.match.params.id}`}>
+                    訂餐管理
+                  </a>
                 </h4>
               </div>
             </div>
@@ -65,11 +94,13 @@ class Member extends Component {
               <div class="col-md-12">
                 <form>
                   <div>
-                    <p class="title_member_edit">會員資料</p>
+                    <p class="title_member">會員資料</p>
                   </div>
                   <div class="editmember_info">
                     <div class="form-group form-inline">
-                      <label for="email">信　箱:</label>
+                      <label htmlFor="email" className="form_text">
+                        信　箱:
+                      </label>
                       <input
                         type="email"
                         class="form-control"
@@ -80,10 +111,12 @@ class Member extends Component {
                       />
                     </div>
                     <div class="form-group form-inline">
-                      <label for="pwd">密　碼:</label>
+                      <label htmlFor="pwd" className="form_text">
+                        密　碼:
+                      </label>
                       <input
                         type="password"
-                        class="form-control"
+                        class="form-control "
                         id="pwd"
                         value={this.state.Member.user_pwd}
                         name="pwd"
@@ -91,7 +124,9 @@ class Member extends Component {
                       />
                     </div>
                     <div class="form-group form-inline">
-                      <label for="name">姓　名:</label>
+                      <label htmlFor="name" className="form_text">
+                        姓　名:
+                      </label>
                       <input
                         type="text"
                         class="form-control"
@@ -102,7 +137,9 @@ class Member extends Component {
                       />
                     </div>
                     <div class="form-group form-inline">
-                      <label for="tel">手　機:</label>
+                      <label htmlFor="tel" className="form_text">
+                        手　機:
+                      </label>
                       <input
                         type="text"
                         class="form-control"

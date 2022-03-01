@@ -120,15 +120,6 @@ tbody td:nth-child(5) {
   display: none;
 }
 
-.footer_page {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-}
-
-
-
 @media screen and (max-width:768px) {
   #table_order{
     width: 100%;
@@ -167,10 +158,6 @@ tbody td:nth-child(5) {
 
   @media screen and (max-width:576px) {
 
-    .footer_page {
-        position: static;
-        margin-top: 20px;
-    }
   }
 
 

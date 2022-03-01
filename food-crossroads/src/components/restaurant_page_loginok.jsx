@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "./header";
+import logo from "../img/logo.png";
 import Footer from "./footer";
 import $ from "jquery";
 import "../css/restaurant_page.css";
@@ -7,7 +7,7 @@ import Carousel from "react-bootstrap/Carousel";
 import StarIconNo from "../img/star.png";
 import StarIconFill from "../img/star-fill.png";
 
-class Restaurant_page extends Component {
+class Restaurant_page_member extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -42,14 +42,17 @@ class Restaurant_page extends Component {
 
   changeMarkingScore(index) {
     let item = {
-      'module': this.props.data,
-      'score': index,
+      module: this.props.data,
+      score: index,
     };
     this.props.changeMarkingScore(item);
   }
 
   getStar() {
-    let num = this.state.hoverIndex === 0 ? this.state.clickIndex : this.state.hoverIndex;
+    let num =
+      this.state.hoverIndex === 0
+        ? this.state.clickIndex
+        : this.state.hoverIndex;
     let starContainer = [];
     const arr = [1, 2, 3, 4, 5];
     arr.map((ele, index) => {
@@ -66,7 +69,7 @@ class Restaurant_page extends Component {
     });
     return starContainer;
   }
-  
+
   componentDidMount() {
     // 置頂按鈕:點選後回到頂端
 
@@ -83,23 +86,12 @@ class Restaurant_page extends Component {
     });
 
     $(".reservation_btn").on("click", function () {
-      $("#to_register_member").css("display", "block");
+      $(window.location).prop("href", "/booking/reservation/page");
     });
 
     $(".order_btn").on("click", function () {
-      $("#to_register_member").css("display", "block");
-    });
+      $(window.location).prop("href", "/orderpage");
 
-    $(".display_top_right").on("click", function () {
-      $("#to_register_member").css("display", "none");
-    });
-
-    $(".to_member_register").on("click", function () {
-      $(window.location).prop("href", "/register");
-    });
-
-    $(".to_member_login").on("click", function () {
-      $(window.location).prop("href", "/member/login");
     });
 
     $(".cuisine_name").on("click", function () {
@@ -122,20 +114,45 @@ class Restaurant_page extends Component {
       $(".modal-comment").css("display", "none");
     });
 
-    $(".btn_add").on("click", function() {
+    $(".btn_add").on("click", function () {
       $(".comment_item:nth-child(1)").css("display", "block");
       $(".modal-comment").css("display", "none");
-    })
-
+    });
   }
 
   render() {
     let starItems = this.getStar();
     return (
       <React.Fragment>
-        <div className="header_page">
-          <Header />
-        </div>
+        <header id="header_page">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <a className="navbar-brand" href="/">
+              <img src={logo} alt="LOGO" />
+            </a>
+            <div className="nav_icon">
+              <a className="nav_a" href="/restaurant/list">
+                <i className="fas fa-store"></i>餐廳列表
+              </a>
+              <a className="nav_a" href="/orderpage">
+                <i className="fas fa-shopping-cart"></i>購物車
+              </a>
+              <a className="nav_a" href="/member/1">
+                <i className="fas fa-user-circle"></i>李曉明
+              </a>
+            </div>
+            <div className="rwd_icon">
+              <a className="nav_a" href="/restaurant/list">
+                <i className="fas fa-store"></i>
+              </a>
+              <a className="nav_a" href="/orderpage">
+                <i className="fas fa-shopping-cart"></i>
+              </a>
+              <a className="nav_a" href="/member/login">
+                <i className="fas fa-user-circle"></i>
+              </a>
+            </div>
+          </nav>
+        </header>
         <section id="restaurant_page">
           <div className="container">
             <div className="row">
@@ -154,11 +171,7 @@ class Restaurant_page extends Component {
               <div id="to_register_member" className="modal">
                 <div className="modal_content">
                   <div className="container_alert">
-                    <div
-                      className="button display_top_right"
-                    >
-                      &times;
-                    </div>
+                    <div className="button display_top_right">&times;</div>
                     <br />
                     <br />
                     <h2>您目前狀態為 非會員！</h2>
@@ -188,21 +201,21 @@ class Restaurant_page extends Component {
                 <Carousel.Item>
                   <img
                     className="d-block w-60"
-                    src="../img/aqua/aqua_1.jpg"
+                    src={require("../img/aqua/aqua_1.jpg")}
                     alt="aqua_1"
                   />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block w-60"
-                    src="../img/aqua/aqua_2.jpg"
+                    src={require("../img/aqua/aqua_2.jpg")}
                     alt="aqua_2"
                   />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block w-60"
-                    src="../img/aqua/aqua_3.jpg"
+                    src={require("../img/aqua/aqua_3.jpg")}
                     alt="aqua_3"
                   />
                 </Carousel.Item>
@@ -248,10 +261,22 @@ class Restaurant_page extends Component {
                 </div>
                 <div className="top_flex">
                   <div className="shop_rate_wrapper">
-                    <img src={require("../img/star-fill.png")} alt="star-fill" />
-                    <img src={require("../img/star-fill.png")} alt="star-fill" />
-                    <img src={require("../img/star-fill.png")} alt="star-fill" />
-                    <img src={require("../img/star-fill.png")} alt="star-fill" />
+                    <img
+                      src={require("../img/star-fill.png")}
+                      alt="star-fill"
+                    />
+                    <img
+                      src={require("../img/star-fill.png")}
+                      alt="star-fill"
+                    />
+                    <img
+                      src={require("../img/star-fill.png")}
+                      alt="star-fill"
+                    />
+                    <img
+                      src={require("../img/star-fill.png")}
+                      alt="star-fill"
+                    />
                     <img src={require("../img/star.png")} alt="star" />
                   </div>
                   <div>
@@ -340,9 +365,7 @@ class Restaurant_page extends Component {
               </div>
               <div className="shop_wrapper" id="comment">
                 <div className="top_flex">
-                  <h4 className="shop_title flex1">
-                    評論
-                  </h4>
+                  <h4 className="shop_title flex1">評論</h4>
                   <button className="add_comment">
                     <i className="fas fa-plus-circle">新增評論</i>
                   </button>
@@ -357,7 +380,8 @@ class Restaurant_page extends Component {
                       </div>
                       <div className="modal-body">
                         <div>
-                          <p>給予評分：
+                          <p>
+                            給予評分：
                             <span></span>
                           </p>
                         </div>
@@ -410,11 +434,26 @@ class Restaurant_page extends Component {
                           </div>
                           <div className="top_flex">
                             <div className="shop_rate_wrapper flex1">
-                              <img src={require("../img/star-fill.png")} alt="star-fill" />
-                              <img src={require("../img/star-fill.png")} alt="star-fill" />
-                              <img src={require("../img/star-fill.png")} alt="star-fill" />
-                              <img src={require("../img/star.png")} alt="star" />
-                              <img src={require("../img/star.png")} alt="star" />
+                              <img
+                                src={require("../img/star-fill.png")}
+                                alt="star-fill"
+                              />
+                              <img
+                                src={require("../img/star-fill.png")}
+                                alt="star-fill"
+                              />
+                              <img
+                                src={require("../img/star-fill.png")}
+                                alt="star-fill"
+                              />
+                              <img
+                                src={require("../img/star.png")}
+                                alt="star"
+                              />
+                              <img
+                                src={require("../img/star.png")}
+                                alt="star"
+                              />
                             </div>
                           </div>
                         </div>
@@ -425,9 +464,7 @@ class Restaurant_page extends Component {
                     </div>
                     <div className="comment_right">
                       <ul className="comment_right_pic">
-                        <li className="pic_item">
-                          
-                        </li>
+                        <li className="pic_item"></li>
                       </ul>
                     </div>
                   </div>
@@ -450,11 +487,26 @@ class Restaurant_page extends Component {
                           </div>
                           <div className="top_flex">
                             <div className="shop_rate_wrapper flex1">
-                              <img src={require("../img/star-fill.png")} alt="star-fill" />
-                              <img src={require("../img/star-fill.png")} alt="star-fill" />
-                              <img src={require("../img/star-fill.png")} alt="star-fill" />
-                              <img src={require("../img/star-fill.png")} alt="star-fill" />
-                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img
+                                src={require("../img/star-fill.png")}
+                                alt="star-fill"
+                              />
+                              <img
+                                src={require("../img/star-fill.png")}
+                                alt="star-fill"
+                              />
+                              <img
+                                src={require("../img/star-fill.png")}
+                                alt="star-fill"
+                              />
+                              <img
+                                src={require("../img/star-fill.png")}
+                                alt="star-fill"
+                              />
+                              <img
+                                src={require("../img/star-fill.png")}
+                                alt="star-fill"
+                              />
                             </div>
                           </div>
                         </div>
@@ -499,4 +551,4 @@ class Restaurant_page extends Component {
   }
 }
 
-export default Restaurant_page;
+export default Restaurant_page_member;

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Header from "./header";
 import Footer from "./footer";
 import Axios from "axios";
-// import "../css/style.css";
 import "../css/member_cancelbooking.css";
 
 class CancelBooking extends Component {
@@ -31,7 +30,7 @@ class CancelBooking extends Component {
       this.state.member
     );
     console.log(result);
-    //window.location = `/bookingmanagement${this.props.match.params.id}`;
+    window.location = `/bookingmanagement/${this.props.match.params.id}`;
   };
 
   render() {
@@ -99,7 +98,7 @@ class CancelBooking extends Component {
               </form>
             </div>
             <div className="btn_container_cancel">
-              <a href="">
+              <a href={`/bookingmanagement/${this.props.match.params.id}`}>
                 <input
                   type="button"
                   className="cancel_btn_manage"

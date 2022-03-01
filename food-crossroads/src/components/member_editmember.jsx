@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "../css/member.css";
-import "../css/style.css";
-import Header from "./header";
+import logo from "../img/logo.png";
 import Footer from "./footer";
 import Axios from "axios";
 
@@ -43,12 +42,41 @@ class EditMember extends Component {
     );
     window.location = "/member/1";
   };
+  backbtnClick = async () => {
+    window.location = "/member/1";
+  };
 
   render() {
     return (
       <React.Fragment>
-        <header className="header_page">
-          <Header />
+        <header id="header_page">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <a className="navbar-brand" href="/">
+              <img src={logo} alt="LOGO" />
+            </a>
+            <div className="nav_icon">
+              <a className="nav_a" href="/restaurant/list">
+                <i className="fas fa-store"></i>餐廳列表
+              </a>
+              <a className="nav_a" href="/orderpage">
+                <i className="fas fa-shopping-cart"></i>購物車
+              </a>
+              <a className="nav_a" href="/member/1">
+                <i className="fas fa-user-circle"></i>李曉明
+              </a>
+            </div>
+            <div className="rwd_icon">
+              <a className="nav_a" href="/restaurant/list">
+                <i className="fas fa-store"></i>
+              </a>
+              <a className="nav_a" href="/orderpage">
+                <i className="fas fa-shopping-cart"></i>
+              </a>
+              <a className="nav_a" href="/member/login">
+                <i className="fas fa-user-circle"></i>
+              </a>
+            </div>
+          </nav>
         </header>
 
         <aside className="aside_menu">
@@ -56,21 +84,25 @@ class EditMember extends Component {
             <div className="panel panel-default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a href="member.html">會員資料</a>
+                  <a href={`/member/${this.props.match.params.id}`}>會員資料</a>
                 </h4>
               </div>
             </div>
             <div className="panel panel-default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a href="booking_manage.html">訂位管理</a>
+                  <a href={`/bookingmanagement/${this.props.match.params.id}`}>
+                    訂位管理
+                  </a>
                 </h4>
               </div>
             </div>
             <div className="panel panel-default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a href="order_manage.html">訂餐管理</a>
+                  <a href={`/ordermanagement/${this.props.match.params.id}`}>
+                    訂餐管理
+                  </a>
                 </h4>
               </div>
             </div>
@@ -102,7 +134,7 @@ class EditMember extends Component {
               </div>
             </div>
           </div>
-          <label for="aside_menu_chk">
+          <label for="aside_menu_chk" className="aside_menu_chk">
             <i className="fas fa-angle-right"></i>
           </label>
         </div>
@@ -173,7 +205,7 @@ class EditMember extends Component {
                   <div className="edit_btn_div">
                     <button
                       type="button"
-                      onclick="confirm()"
+                      onClick={this.backbtnClick}
                       className="member_back_btn"
                     >
                       返回
