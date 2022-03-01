@@ -332,3 +332,14 @@ app.post("/restaurant/login", (req, res) => {
     res.json(output);
   });
 });
+
+
+app.get("/restaurant/booking/today", (req, res) => {
+  conn.query(
+    `SELECT member.id, booking_date, booking_time, booking_peoplenumber, user_id, user_name, user_tel, booking.id FROM booking JOIN member ON booking.user_id = member.id WHERE member.id=1 ORDER BY booking.id DESC`,
+    [req.params.area, req.params.service],
+    function (err, rows) {
+      res.send(JSON.stringify(rows));
+    }
+  );
+})
