@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import { useState } from "react";
+
 import Axios from "axios";
 import $ from "jquery";
-import "../fontawesome-free-5.15.4-web/css/all.min.css";
 import Header from './header';
 import Footer from './footer';
 import "../css/orderpage.css";
 import Order_picture from "../img/aqua/aqua_img.jpg";
+
+
+
 
 class Orderpage extends Component {
 
@@ -33,18 +35,19 @@ class Orderpage extends Component {
         })
     }
 
-    btn_group1 = () => {
-        $("html").animate({ scrollTop: 50 }, 300);
-    }
 
-    btn_group2 = () => {
-        $("html").animate({ scrollTop: 1050 }, 300);
-    }
+    // btn_group1 = () => {
+    //     $("html").animate({ scrollTop: 50 }, 300);
+    // }
 
-    btn_group3 = () => {
-        $("html").animate({ scrollTop: 1250 }, 300);
+    // btn_group2 = () => {
+    //     $("html").animate({ scrollTop: 1050 }, 300);
+    // }
 
-    }
+    // btn_group3 = () => {
+    //     $("html").animate({ scrollTop: 1250 }, 300);
+
+    // }
 
     render() {
         return (
@@ -88,9 +91,7 @@ class Orderpage extends Component {
                             <div className="row" >
 
                                 {this.state.Order.map((item, index) =>
-                                    // {item.food_category_id = 1 ? (
                                     <div key={index} className="food_list_detail food_list_border col-sm-8 col-lg-4">
-
                                         <div>
                                             <img src={Order_picture} className="food_img" />
                                         </div>
@@ -208,7 +209,7 @@ class Orderpage extends Component {
 
                             </div>
                             <div className="d-flex justify-content-center">
-                                <button id="checkout" onclick="btncheckout()">去結帳</button>
+                                <button id="checkout"><a href='./shoppingchar'>去結帳</a></button>
                             </div>
                         </div>
 

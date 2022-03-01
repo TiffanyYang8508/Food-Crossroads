@@ -21,11 +21,13 @@ import Restaurant_login from "./components/restaurant_login";
 import Shoppingchar from "./components/shoppingchar";
 import Shoppingok from "./components/shoppingok";
 import Orderdisplay from "./components/orderdisplay";
-import Orderpage from "./components/orderpage";
 import Restaurant_page from "./components/restaurant_page";
 import Booking_reservation_page from "./components/booking_reservation_page";
 import Booking_check_page from "./components/booking_check_page";
 import Booking_finish_page from "./components/booking_finish_page";
+import Orderpage from "./components/orderpage";
+import Orderpage_group from "./components/orderpage_group";
+
 
 class App extends Component {
   state = {};
@@ -78,6 +80,7 @@ class App extends Component {
           <Route path="/shoppingok" component={Shoppingok} exact />
           <Route path="/orderdisplay" component={Orderdisplay} exact />
           <Route path="/orderpage" component={Orderpage} exact />
+          <Route path="/orderpagegroup" component={Orderpage_group} exact />
 
           <Route path="/editmemberpwd/:id" component={EditMemberpwd} />
           <Route path="/cancelbooking/:id" component={CancelBooking} />
