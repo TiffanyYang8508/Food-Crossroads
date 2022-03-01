@@ -412,7 +412,7 @@ class Restaurant_list extends Component {
                                 <div className="rest_div">
                                     {
                                         this.state.Restaurant.map((value, key) =>
-                                            <a href="/restaurant/page" className="rest_list_a" key={key}>
+                                            <a href="" className="rest_list_a" key={key}>
                                                 <div className="rest_list">
                                                     <div className="rest_img">
                                                         <img src={`/img/restaurant_list_img/${value.restaurant_img}`} alt={value.restaurant_img} />
