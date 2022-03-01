@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import { useState } from "react";
+
 import Axios from "axios";
 import $ from "jquery";
 import Header from './header';
 import Footer from './footer';
 import "../css/orderpage.css";
 import Order_picture from "../img/aqua/aqua_img.jpg";
+
+
+
 
 class Orderpage extends Component {
 
@@ -22,28 +25,25 @@ class Orderpage extends Component {
 
 
     async componentDidMount() {
-        var result = await Axios.get(`http://localhost:8000/orderpage/3`);
-        // console.log(this.props.match.params.id)
+        var url = `http://localhost:8000/orderpage/${this.props.match.params.food_category}`;
+        var result = await Axios.get(url);
         this.state.Order = result.data;
-        // console.log(typeof result.data);
-        // console.log(typeof result);
-        this.setState({
-            Order: result.data
-        })
+        this.setState({});
     }
 
-    btn_group1 = () => {
-        $("html").animate({ scrollTop: 50 }, 300);
-    }
 
-    btn_group2 = () => {
-        $("html").animate({ scrollTop: 1050 }, 300);
-    }
+    // btn_group1 = () => {
+    //     $("html").animate({ scrollTop: 50 }, 300);
+    // }
 
-    btn_group3 = () => {
-        $("html").animate({ scrollTop: 1250 }, 300);
+    // btn_group2 = () => {
+    //     $("html").animate({ scrollTop: 1050 }, 300);
+    // }
 
-    }
+    // btn_group3 = () => {
+    //     $("html").animate({ scrollTop: 1250 }, 300);
+
+    // }
 
     render() {
         return (
@@ -51,18 +51,21 @@ class Orderpage extends Component {
                 <Header />
                 <div className="scroll menu_group sticky-top">
                     <div className="container-fluid" id="menu_group">
-                        <button type="button" className="oval menu_group_list" onClick={this.btn_group1}>開胃菜</button>
-                        <button type="button" className="oval menu_group_list" onClick={this.btn_group2}>沙拉</button>
-                        <button type="button" className="oval menu_group_list" onClick={this.btn_group3}>湯</button>
-                        <button type="button" className="oval menu_group_list" >義式燉飯</button>
-                        <button type="button" className="oval menu_group_list" >義大利麵</button>
-                        <button type="button" className="oval menu_group_list" >主廚排餐</button>
-                        <button type="button" className="oval menu_group_list" >甜品</button>
-                        <button type="button" className="oval menu_group_list" >茶品</button>
-                        <button type="button" className="oval menu_group_list" >咖啡</button>
-                        <button type="button" className="oval menu_group_list" >果汁</button>
-                        <button type="button" className="oval menu_group_list" >酒品</button>
-                        <button type="button" className="oval menu_group_list" >水</button>
+                        <a href="/orderpage/開胃菜">
+                             <button className="oval menu_group_list" onClick={this.btn_group1}>開胃菜</button>
+                        </a>
+                       
+                        <button className="oval menu_group_list" onClick={this.btn_group2}>沙拉</button>
+                        <button className="oval menu_group_list" onClick={this.btn_group3}>湯</button>
+                        <button className="oval menu_group_list" >義式燉飯</button>
+                        <button className="oval menu_group_list" >義大利麵</button>
+                        <button className="oval menu_group_list" >主廚排餐</button>
+                        <button className="oval menu_group_list" >甜品</button>
+                        <button className="oval menu_group_list" >茶品</button>
+                        <button className="oval menu_group_list" >咖啡</button>
+                        <button className="oval menu_group_list" >果汁</button>
+                        <button className="oval menu_group_list" >酒品</button>
+                        <button className="oval menu_group_list" >水</button>
                     </div>
                 </div>
 
@@ -76,10 +79,11 @@ class Orderpage extends Component {
 
 
                 <div id='order_page'>
+
                     <div id="group_1" className="d-flex flex-column">
 
                         <div className="food_title">
-                            <h3>開胃菜</h3>
+                            <h3>{this.props.match.params.food_category}</h3>
                         </div>
 
                         <div id="cate1">
@@ -87,9 +91,11 @@ class Orderpage extends Component {
                             <div className="row" >
 
                                 {this.state.Order.map((item, index) =>
-                                    // {item.food_category_id = 1 ? (
+<<<<<<< HEAD
+=======
+                                
+>>>>>>> 962b757c5f53f3a925e75ff538ad488ef7d1adc1
                                     <div key={index} className="food_list_detail food_list_border col-sm-8 col-lg-4">
-
                                         <div>
                                             <img src={Order_picture} className="food_img" />
                                         </div>
@@ -107,13 +113,13 @@ class Orderpage extends Component {
                                             <button className="btn_add_cart">加入購物車</button>
                                         </div>
                                     </div>
+
                                 )}
                             </div>
                         </div>
 
 
-                        {/* 商品分類2 */}
-                        <div id="group_2" className="d-flex flex-column">
+                        {/* <div id="group_2" className="d-flex flex-column">
                             <div className="food_title">
                                 <h3>沙拉</h3>
                             </div>
@@ -152,10 +158,9 @@ class Orderpage extends Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
-                        {/* 商品分類3 */}
-                        <div id="group_3" className="d-flex flex-column">
+                        {/* <div id="group_3" className="d-flex flex-column">
                             <div className="food_title">
                                 <h3>湯</h3>
                             </div>
@@ -197,7 +202,7 @@ class Orderpage extends Component {
                                 </div>
                             </div>
 
-                        </div>
+                        </div> */}
 
                         {/* 揪團結帳 */}
                         <div className="food_order_group d-flex flex-column">
@@ -207,7 +212,7 @@ class Orderpage extends Component {
 
                             </div>
                             <div className="d-flex justify-content-center">
-                                <button id="checkout" onclick="btncheckout()">去結帳</button>
+                                <button id="checkout"><a href='./shoppingchar'>去結帳</a></button>
                             </div>
                         </div>
 

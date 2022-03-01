@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from "./header";
 import Footer from "./footer";
+import logo from "../img/logo.png";
 import $ from "jquery";
 import "../css/booking_reservation_page.css";
 import "../css/bootstrap.min.css";
@@ -19,9 +19,35 @@ class Booking_reservation_page extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="header_page">
-                    <Header />
-                </div>
+                <header id="header_page">
+                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                        <a className="navbar-brand" href="/">
+                        <img src={logo} alt="LOGO" />
+                        </a>
+                        <div className="nav_icon">
+                        <a className="nav_a" href="/restaurant/list">
+                            <i className="fas fa-store"></i>餐廳列表
+                        </a>
+                        <a className="nav_a" href="/orderpage">
+                            <i className="fas fa-shopping-cart"></i>購物車
+                        </a>
+                        <a className="nav_a" href="/member/1">
+                            <i className="fas fa-user-circle"></i>李曉明
+                        </a>
+                        </div>
+                        <div className="rwd_icon">
+                        <a className="nav_a" href="/restaurant/list">
+                            <i className="fas fa-store"></i>
+                        </a>
+                        <a className="nav_a" href="/orderpage">
+                            <i className="fas fa-shopping-cart"></i>
+                        </a>
+                        <a className="nav_a" href="/member/:id">
+                            <i className="fas fa-user-circle"></i>
+                        </a>
+                        </div>
+                    </nav>
+                </header>
                 <section id="booking_reservation_page">
                     <div className="container">
                         <div className="row">
@@ -71,27 +97,9 @@ class Booking_reservation_page extends Component {
                                             <div className="form-group column demands">
                                                 <label htmlFor="reservation_info_demands">需　　求：</label>
                                                 <div className="chk_css">
-                                                    <span className="chk_item">
-                                                        <input className="chk_chk" type="checkbox" name="barrier_free" id="barrier_free" value="2" />
-                                                        <label htmlFor="barrier_free">無障礙設施</label>
-                                                    </span>
                                                     <span className='chk_item'>
                                                         <input className="chk_chk" type="checkbox" name="child_seats" id="child_seats" value="2" />
                                                         <label htmlFor="child_seats">嬰兒座椅</label>
-                                                    </span>
-                                                    <span className='chk_item'>
-                                                        <input className="chk_chk" type="checkbox" name="min_consumption" id="min_consumption" value="2" />
-                                                        <label htmlFor="min_consumption">最低消費</label>
-                                                    </span>
-                                                </div>
-                                                <div className='chk_css'>
-                                                    <span className="chk_item">
-                                                        <input className="chk_chk" type="checkbox" name="delivery" id="delivery" value="2" />
-                                                        <label htmlFor="delivery">外送</label>
-                                                    </span>
-                                                    <span className="chk_item">
-                                                        <input className="chk_chk" type="checkbox" name="service_free" id="service_free" value="2" />
-                                                        <label htmlFor="service_free">服務費</label>
                                                     </span>
                                                     <span className="chk_item">
                                                         <input className="chk_chk" type="checkbox" name="parking" id="parking" value="2" />
@@ -121,7 +129,7 @@ class Booking_reservation_page extends Component {
                                                 <label htmlFor="reservation_person_cellphone"><span>手機號碼：</span><span>0987654321</span></label>
                                             </div>
                                             <div className="form-group row">
-                                                <label htmlFor="reservation_person_email"><span>信　　箱：</span><span>askf@gmail.com</span></label>
+                                                <label htmlFor="reservation_person_email"><span>信　　箱：</span><span>1234@gmail.com</span></label>
                                             </div>
                                             <input type="button" className="reservation_input_next" value="下一步：訂位確認" />
                                         </form>

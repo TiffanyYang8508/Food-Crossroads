@@ -86,23 +86,12 @@ class Restaurant_page_member extends Component {
     });
 
     $(".reservation_btn").on("click", function () {
-      $("#to_register_member").css("display", "block");
+      $(window.location).prop("href", "/booking/reservation/page");
     });
 
     $(".order_btn").on("click", function () {
-      $("#to_register_member").css("display", "block");
-    });
+      $(window.location).prop("href", "/orderpage");
 
-    $(".display_top_right").on("click", function () {
-      $("#to_register_member").css("display", "none");
-    });
-
-    $(".to_member_register").on("click", function () {
-      $(window.location).prop("href", "/register");
-    });
-
-    $(".to_member_login").on("click", function () {
-      $(window.location).prop("href", "/member/login");
     });
 
     $(".cuisine_name").on("click", function () {

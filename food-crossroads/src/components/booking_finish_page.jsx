@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from './header';
 import Footer from './footer';
+import logo from "../img/logo.png";
 import "../css/booking_finish_page.css";
 import "../css/bootstrap.min.css";
 
@@ -9,9 +9,35 @@ class Booking_finish_page extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="header_page">
-                    <Header />
-                </div>
+                <header id="header_page">
+                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                        <a className="navbar-brand" href="/">
+                        <img src={logo} alt="LOGO" />
+                        </a>
+                        <div className="nav_icon">
+                        <a className="nav_a" href="/restaurant/list">
+                            <i className="fas fa-store"></i>餐廳列表
+                        </a>
+                        <a className="nav_a" href="/orderpage">
+                            <i className="fas fa-shopping-cart"></i>購物車
+                        </a>
+                        <a className="nav_a" href="/member/1">
+                            <i className="fas fa-user-circle"></i>李曉明
+                        </a>
+                        </div>
+                        <div className="rwd_icon">
+                        <a className="nav_a" href="/restaurant/list">
+                            <i className="fas fa-store"></i>
+                        </a>
+                        <a className="nav_a" href="/orderpage">
+                            <i className="fas fa-shopping-cart"></i>
+                        </a>
+                        <a className="nav_a" href="/member/:id">
+                            <i className="fas fa-user-circle"></i>
+                        </a>
+                        </div>
+                    </nav>
+                </header>
                 <section id="booking_finish_page">
                     <div className="container">
                         <div className="row">
@@ -47,7 +73,7 @@ class Booking_finish_page extends Component {
                                                 </div>
                                                 <div className="form_container_finish">
                                                     <label htmlFor="finish_person_email">姓　　名：</label>
-                                                    <label htmlFor="finish_person_email">askf@gmail.com</label>
+                                                    <label htmlFor="finish_person_email">1234@gmail.com</label>
                                                 </div>
                                             </div>
                                             <div className="form_container_finish_wrapper_right">
@@ -57,11 +83,11 @@ class Booking_finish_page extends Component {
                                                 </div>
                                                 <div className="form_container_finish">
                                                     <label htmlFor="finish_person_date">訂位日期：</label>
-                                                    <label htmlFor="finish_person_date">2022/03/18</label>
+                                                    <label htmlFor="finish_person_date">2022/03/07</label>
                                                 </div>
                                                 <div className="form_container_finish">
                                                     <label htmlFor="finish_person_time">訂位時間：</label>
-                                                    <label htmlFor="finish_person_time">17：00</label>
+                                                    <label htmlFor="finish_person_time">12：00</label>
                                                 </div>
                                                 <div className="form_container_finish">
                                                     <label htmlFor="finish_person_demands">需　　求：</label>
@@ -78,7 +104,7 @@ class Booking_finish_page extends Component {
                                         <a href="/bookingmanagement/:id">
                                             <input type="button" className="finish_btn_booking_manage" value="訂位管理" />
                                         </a>
-                                        <a href="/restaurant/page">
+                                        <a href="/restaurant/page/member">
                                             <input type="button" className="finish_btn_to_restaurant_page" value="回到餐聽" />
                                         </a>
                                     </div>

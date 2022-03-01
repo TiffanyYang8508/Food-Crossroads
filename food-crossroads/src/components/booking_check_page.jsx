@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Header from "./header";
+import logo from "../img/logo.png";
 import Footer from "./footer";
-import $ from "jquery";
 import "../css/booking_check_page.css";
 import "../css/progress.css";
 import "../css/bootstrap.min.css";
@@ -10,22 +9,38 @@ import "../css/bootstrap.min.css";
 class Booking_check_page extends Component {
     state = {}
 
-    // componentDidMount() {
-    //     $(".check_btn_back").on("click", function() {
-    //         $(window.location).prop("href", "/booking/reservation/page");
-    //     })
-    //     $(".check_btn_confirm").on("click", function() {
-    //         $(window.location).prop("href", "/booking/finish/page");
-    //     })
-    // }
-
     render() {
         return (
             <React.Fragment>
-
-                <div className="header_page">
-                    <Header />
-                </div>
+                <header id="header_page">
+                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                        <a className="navbar-brand" href="/">
+                        <img src={logo} alt="LOGO" />
+                        </a>
+                        <div className="nav_icon">
+                        <a className="nav_a" href="/restaurant/list">
+                            <i className="fas fa-store"></i>餐廳列表
+                        </a>
+                        <a className="nav_a" href="/orderpage">
+                            <i className="fas fa-shopping-cart"></i>購物車
+                        </a>
+                        <a className="nav_a" href="/member/1">
+                            <i className="fas fa-user-circle"></i>李曉明
+                        </a>
+                        </div>
+                        <div className="rwd_icon">
+                        <a className="nav_a" href="/restaurant/list">
+                            <i className="fas fa-store"></i>
+                        </a>
+                        <a className="nav_a" href="/orderpage">
+                            <i className="fas fa-shopping-cart"></i>
+                        </a>
+                        <a className="nav_a" href="/member/:id">
+                            <i className="fas fa-user-circle"></i>
+                        </a>
+                        </div>
+                    </nav>
+                </header>
                 <section id="booking_check_page">
                     <div className="container">
                         <div className="row">
@@ -60,7 +75,7 @@ class Booking_check_page extends Component {
                                                 </div>
                                                 <div className="form_container_check">
                                                     <label htmlFor="check_person_email">姓　　名：</label>
-                                                    <label htmlFor="check_person_email">askf@gmail.com</label>
+                                                    <label htmlFor="check_person_email">1234@gmail.com</label>
                                                 </div>
                                                 <div className="form_container_check">
                                                     <label htmlFor="check_person_person_number">訂位人數：</label>
@@ -68,11 +83,11 @@ class Booking_check_page extends Component {
                                                 </div>
                                                 <div className="form_container_check">
                                                     <label htmlFor="check_person_date">訂位日期：</label>
-                                                    <label htmlFor="check_person_date">2022/03/18</label>
+                                                    <label htmlFor="check_person_date">2022/03/07</label>
                                                 </div>
                                                 <div className="form_container_check">
                                                     <label htmlFor="check_person_time">訂位時間：</label>
-                                                    <label htmlFor="check_person_time">17：00</label>
+                                                    <label htmlFor="check_person_time">12：00</label>
                                                 </div>
                                                 <div className="form_container_check">
                                                     <label htmlFor="check_person_demands">需　　求：</label>

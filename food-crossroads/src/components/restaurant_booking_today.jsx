@@ -3,8 +3,7 @@ import Axios from "axios";
 import logo from "../img/logo.png";
 import $ from "jquery";
 import "../css/restaurant_booking_today.css"
-import "../fontawesome-free-5.15.4-web/css/all.css";
-import "../css/style.css";
+import Collapse from "react-bootstrap/Collapse";
 
 class Restaurant_booking_today extends Component {
     state = {
@@ -16,7 +15,8 @@ class Restaurant_booking_today extends Component {
                 user_name: "陳冠維",
                 user_tel: "0972607230"
             }
-        ]
+        ],
+        open: true
     }
 
     async componentDidMount() {
@@ -43,18 +43,18 @@ class Restaurant_booking_today extends Component {
                 <aside id="restaurant_today_booking_aside">
                     <div className="panel-group" id="accordion">
                         <div className="panel panel-default">
-                            <div className="panel-heading">
+                            <Collapse className="panel-heading" in={this.state.open}>
                                 <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
                                 </h4>
-                            </div>
-                            <div id="collapseOne" className="panel-collapse collapse default">
+                            </Collapse>
+                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open} >
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="restaurant_today_booking.html">今日訂位</a>
+                                    <a data-parent="#accordion" href="">今日訂位</a>
                                 </div>
-                            </div>
+                            </Collapse>
                             <div id="collapseOne" className="panel-collapse collapse">
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="restaurant_booking_history.html">歷史訂位紀錄</a>
+                                    <a data-parent="#accordion" href="">歷史訂位紀錄</a>
                                 </div>
                             </div>
                         </div>
@@ -75,6 +75,7 @@ class Restaurant_booking_today extends Component {
                             </div>
                         </div>
                     </div>
+
                 </aside>
 
                 <section id="restaurant_today_booking">
@@ -163,6 +164,32 @@ class Restaurant_booking_today extends Component {
                                         </div>
                                     </tr>
                                 ))}
+                                <tr>
+                                    <td>
+                                        <div className="checkbox">
+                                            <label>
+                                                <input type="checkbox" />
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>00127</td>
+                                    <td>2022/01/18</td>
+                                    <td>16:30</td>
+                                    <td>5</td>
+                                    <td>陳冠維</td>
+                                    <td>0979201120</td>
+                                    <td>
+                                        <button className="detail_btn" data-toggle="modal" data-target="#detailModal">
+                                            詳細內容
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button className="cancel_btn" data-toggle="modal" data-target="#detailModal2">
+                                            取消
+                                        </button>
+                                    </td>
+                                </tr>
+
                             </tbody>
                         </table>
                     </div>
