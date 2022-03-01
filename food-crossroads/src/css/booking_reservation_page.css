@@ -9,10 +9,15 @@
 
 /* ---------- body start ---------- */
 
-#booking_reservation_page .breadcrumb .breadcrumb-item a,#booking_reservation_page .active{
+#booking_reservation_page .breadcrumb,
+#booking_reservation_page .active{
     font-size: 18px;
     font-weight: bolder;
     text-decoration: none;
+}
+
+#booking_reservation_page .breadcrumb {
+    margin-top: 10px;
 }
 
 #booking_reservation_page .reservation_container {
@@ -26,7 +31,7 @@
 #booking_reservation_page .reservation_info,
 #booking_reservation_page .reservation_person
 {   
-    height: 460px;
+    height: 500px;
     background-color: #b5b4b477;
     border-radius: 5px;
     margin: 0 10px;
@@ -45,11 +50,10 @@
 
 #booking_reservation_page .form_container_info form {
     width: 400px;
-    height: 325px;
+    height: 400px;
     margin: 0 30px;
     display: flex;
     flex-direction: column;
-    align-content: center;
     /* background-color: lightyellow; */
 }
 
@@ -78,6 +82,7 @@
 
 #booking_reservation_page .form_container_person form {
     width: 400px;
+    height: 400px;
     margin: 0 30px;
     display: flex;
     flex-direction: column;
@@ -93,10 +98,10 @@
     justify-content: space-between;
 }
 
-#booking_reservation_page input[type="submit"] {
+#booking_reservation_page input[type="button"] {
     width: 200px;
     height: 40px;
-    margin-left: 680px;
+    margin-left: 180px;
     margin-top: 50px;
     font-size: 18px;
     background-color: #8B1309;
@@ -106,28 +111,28 @@
     transition: 0.3s;
 }
 
-#booking_reservation_page input[type="submit"]:hover {
+#booking_reservation_page input[type="button"]:hover {
     background-color: #a30f01;
     font-size: 20px;
 }
 
 #booking_reservation_page .chk_css {
-    width: 400px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 #booking_reservation_page .chk_item {
-    width: 400px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    width: 100%;
+    margin: 8px;
 }
+
 
 #booking_reservation_page .chk_item label{
     font-size: 16px;
 }
 
 #booking_reservation_page .form_container_info input[type="checkbox"] {
-    width: 45px;
+    width: 20px;
     height: 20px;
 }
 
@@ -146,16 +151,26 @@
 
 /* RWD start */
 
+/* 超大型螢幕 */
+@media screen and (max-width: 1200px) {
+    #booking_reservation_page {
+        margin-top: 20px;
+    }
+}
+
 
 /* 大型螢幕 */
 
 @media screen and (max-width:992px) {
     #booking_reservation_page .reservation_container {
         flex-wrap: wrap;
+        width: 100%;
     }
     #booking_reservation_page .reservation_info,
     #booking_reservation_page .reservation_person {
         margin: 5px auto;
+        
+        /* height: 100%; */
     }
     #booking_reservation_page .reservation_form_title {
         font-size: 1.75rem;
@@ -184,7 +199,7 @@
         font-size: 1.35rem;
         padding: 10px 0;
     }
-    #booking_reservation_page input[type="submit"] {
+    #booking_reservation_page input[type="button"] {
         width: 220px;
         height: 40px;
         margin-left: 240px;
@@ -192,12 +207,21 @@
         font-size: 1.35rem;
     }
 
+
 }
 
 
 /* 平板 */
 
 @media screen and (max-width:768px) {
+    #booking_reservation_page .container {
+        margin-top: 10px;
+        /* margin-bottom: 100px; */
+        height: 100%;
+    }
+    #booking_reservation_page .breadcrumb {
+        margin-top: 0;
+    }
     #booking_reservation_page .reservation_info,
     #booking_reservation_page .reservation_person {
         margin: 10px auto;
@@ -209,6 +233,7 @@
     #booking_reservation_page .form_container_info form {
         width: 480px;
         margin: 20px 40px;
+        justify-content: space-between;
     }
     #booking_reservation_page .form_container_info > form > div {
         font-size: 1.2rem;
@@ -229,7 +254,7 @@
         font-size: 1.2rem;
         padding: 10px 0;
     }
-    #booking_reservation_page input[type="submit"] {
+    #booking_reservation_page input[type="button"] {
         width: 220px;
         height: 40px;
         margin-left: 220px;
@@ -272,7 +297,7 @@
         padding: 20px;
         margin: 5px 0;
     }
-    #booking_reservation_page input[type="submit"] {
+    #booking_reservation_page input[type="button"] {
         width: 180px;
         height: 35px;
         margin: 30px auto;
@@ -317,7 +342,7 @@
         padding: 10px;
         margin: 5px 0;
     }
-    #booking_reservation_page input[type="submit"] {
+    #booking_reservation_page input[type="button"] {
         width: 160px;
         height: 30px;
         margin: 30px auto;

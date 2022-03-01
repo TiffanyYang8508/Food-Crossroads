@@ -10,11 +10,6 @@ li {
   list-style-type: none;
 }
 
-/* a{
- text-decoration: none !important;
- color: #403c3c !important;
-} */
-
 button {
   border: none;
 }
@@ -29,7 +24,7 @@ input[type="radio"] {
 
 /* 導覽列 start */
 
-#header_page {
+.header_page {
   width: 100%;
   position: sticky;
   top: 0;
@@ -37,14 +32,42 @@ input[type="radio"] {
   z-index: 999;
 }
 
-#header_page .navbar {
+header .navbar {
   height: 12%;
   width: 100%;
 }
 
-#header_page a img {
+header a img {
   width: 100%;
   height: 60px;
+}
+
+.nav_icon {
+  margin-left: auto;
+  font-size: 20px;
+}
+
+.rwd_icon {
+  display: none;
+}
+
+.nav_icon a {
+  margin-left: 30px;
+  position: relative;
+}
+
+.nav_icon a::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  height: 2px;
+  width: 100%;
+  transition: 0.3s all;
+}
+
+.nav_icon a:hover::before {
+  content: "";
+  background-color: #fcc106;
 }
 
 nav .nav_a {
@@ -57,7 +80,7 @@ nav .nav_a {
 
 /* 頁尾 start */
 
-footer {
+.footer_page {
   z-index: 6;
   background-color: #403c3c;
   color: white;

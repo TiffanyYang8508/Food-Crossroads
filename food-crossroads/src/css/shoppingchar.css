@@ -167,13 +167,6 @@
   /* padding: 100% 10px; */
 }
 
-.footer_page {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-}
-
 
 /* RWD */
 
@@ -245,10 +238,7 @@
   .all-squre .shopping-checkbox {
       margin-left: -10px;
   }
-  .footer_page {
-      position: static;
-      margin-top: 20px;
-  }
+
 }
 
 

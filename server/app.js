@@ -240,33 +240,16 @@ app.get("/restaurant/list/:category", function (req, res) {
   );
 });
 
-app.get("/service", function (req, res) {
-  // SELECT r.restaurant_name,r.restaurant_address,GROUP_CONCAT(s.service_category SEPARATOR ',') FROM restaurant AS r INNER JOIN restaurant_service AS rs ON r.restaurant.id = rs.restaurant_service.restaurant_id INNER JOIN service AS s ON rs.restaurant_service.service_id = s.service.id GROUP BY r.restaurant_name
-  // SELECT restaurant_name,restaurant_address,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id GROUP BY restaurant_name,restaurant_address
-  conn.query(
-    "SELECT restaurant_name,restaurant_address,service_category FROM restaurant AS r INNER JOIN restaurant_service AS rs ON r.id = rs.restaurant_id INNER JOIN service AS s ON rs.service_id = s.id",
-    [],
-    function (err, rows) {
-      res.send(JSON.stringify(rows));
-    }
-  );
-});
-
 app.get("/search/keyword/:keyword", function (req, res) {
-  // SELECT restaurant_name,restaurant_address,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id GROUP BY restaurant_name,restaurant_address
-
-  // SELECT restaurant_name,restaurant_address,service_category FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id
-
   // 進階搜尋
-  // SELECT restaurant_name,restaurant_address,service_category FROM restaurant AS r INNER JOIN restaurant_service AS rs ON r.id = rs.restaurant_id INNER JOIN service AS s ON rs.service_id = s.id WHERE service_category LIKE '${req.params.other}%'
   // SELECT restaurant_name,restaurant_address,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id WHERE service_category LIKE '${req.params.other}%' GROUP BY restaurant_name,restaurant_address
   // 地區搜尋
   // SELECT restaurant_name,restaurant_address,service_category FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id WHERE restaurant_address LIKE '${req.params.area}%'
   // 關鍵字搜尋
   // SELECT restaurant_name,restaurant_address,service_category FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id WHERE restaurant_name LIKE '${req.params.keyword}%'
-
+  // SELECT restaurant_name,restaurant_category,restaurant_address,restaurant_category,restaurant_img,restaurant_score,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id INNER JOIN restaurant_category AS rc ON rc.id = r.restaurant_category_id WHERE restaurant_name LIKE '${req.params.keyword}%' GROUP BY restaurant_name,restaurant_address,restaurant_category,restaurant_img,restaurant_score
   conn.query(
-    `SELECT restaurant_name,restaurant_address,restaurant_img,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id WHERE restaurant_name LIKE '${req.params.keyword}%' GROUP BY restaurant_name,restaurant_address,restaurant_img`,
+    `SELECT restaurant_name,restaurant_category,restaurant_address,restaurant_category,restaurant_img,restaurant_score,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id INNER JOIN restaurant_category AS rc ON rc.id = r.restaurant_category_id WHERE restaurant_name LIKE '${req.params.keyword}%' GROUP BY restaurant_name,restaurant_category,restaurant_address,restaurant_img,restaurant_score`,
     [req.params.keyword],
     function (err, rows) {
       res.send(JSON.stringify(rows));
@@ -276,7 +259,7 @@ app.get("/search/keyword/:keyword", function (req, res) {
 
 app.get("/search/area/:area", function (req, res) {
   conn.query(
-    `SELECT restaurant_name,restaurant_address,restaurant_img,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id WHERE restaurant_address LIKE '${req.params.area}%' GROUP BY restaurant_name,restaurant_address,restaurant_img`,
+    `SELECT restaurant_name,restaurant_category,restaurant_address,restaurant_img,restaurant_score,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id INNER JOIN restaurant_category AS rc ON rc.id = r.restaurant_category_id WHERE restaurant_address LIKE '${req.params.area}%' GROUP BY restaurant_name,restaurant_category,restaurant_address,restaurant_img,restaurant_score`,
     [req.params.area],
     function (err, rows) {
       res.send(JSON.stringify(rows));
@@ -286,7 +269,7 @@ app.get("/search/area/:area", function (req, res) {
 
 app.get("/search/service/:service", function (req, res) {
   conn.query(
-    `SELECT restaurant_name,restaurant_address,restaurant_img,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id WHERE service_category LIKE '${req.params.service}%' GROUP BY restaurant_name,restaurant_address,restaurant_img`,
+    `SELECT restaurant_name,restaurant_category,restaurant_address,restaurant_img,restaurant_score,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id INNER JOIN restaurant_category AS rc ON rc.id = r.restaurant_category_id WHERE service_category LIKE '${req.params.service}%' GROUP BY restaurant_name,restaurant_category,restaurant_address,restaurant_img,restaurant_score`,
     [req.params.service],
     function (err, rows) {
       res.send(JSON.stringify(rows));
@@ -296,7 +279,7 @@ app.get("/search/service/:service", function (req, res) {
 
 app.get("/search/:area/:service", function (req, res) {
   conn.query(
-    `SELECT restaurant_name,restaurant_address,restaurant_img,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id WHERE restaurant_address LIKE '${req.params.area}%' AND service_category LIKE '${req.params.service}%' GROUP BY restaurant_name,restaurant_address,restaurant_img`,
+    `SELECT restaurant_name,restaurant_category,restaurant_address,restaurant_img,restaurant_score,GROUP_CONCAT(service_category) AS 'service' FROM restaurant_service AS rs INNER JOIN service AS s ON rs.service_id = s.id INNER JOIN restaurant AS r ON r.id = rs.restaurant_id INNER JOIN restaurant_category AS rc ON rc.id = r.restaurant_category_id WHERE restaurant_address LIKE '${req.params.area}%' AND service_category LIKE '${req.params.service}%' GROUP BY restaurant_name,restaurant_category,restaurant_address,restaurant_img,restaurant_score`,
     [req.params.area, req.params.service],
     function (err, rows) {
       res.send(JSON.stringify(rows));

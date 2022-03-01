@@ -27,7 +27,7 @@ class Index extends Component {
         console.log(result.data);
         this.setState({});
     }
-    
+
     search = () => {
         let search_a = document.getElementById("search_a");
         let keyword = document.getElementById("keyword").value;
@@ -58,6 +58,14 @@ class Index extends Component {
             var result = search_a.getAttribute("herf");
             window.location.href = result;
         }
+    }
+
+    open_tab = (tab_name) => {
+        let tab_div = document.getElementsByClassName("mobile_tab_div");
+        for (let i = 0; i < tab_div.length; i++) {
+            tab_div[i].style.display = "none";
+        }
+        document.getElementById(tab_name).style.display = "block";
     }
 
     componentDidMount() {
@@ -111,6 +119,11 @@ class Index extends Component {
             }
         });
     }
+
+
+
+
+
 
     render() {
         return (
@@ -281,7 +294,7 @@ class Index extends Component {
                                         </div>
                                     </a>
                                 </div>
-                                <form action="">
+                                <div className="mobile_search_div">
                                     <div className="search_mobile_div">
                                         <div className="search_mobile_inline_div">
                                             <i className="fas fa-search search_icon"></i>
@@ -295,16 +308,18 @@ class Index extends Component {
                                             </div>
                                             <input className="search_keyword" id="keyword" type="text" placeholder="請輸入餐廳關鍵字" />
                                             <div className="area_div">
-                                                <label htmlFor="area_btn" className="area_label mobile_tab_label"><i className="fas fa-map-marker-alt"></i>請選擇地區<i
+                                                <label htmlFor="area_btn" onClick={() => this.open_tab("area")} className="area_label mobile_tab_label"><i className="fas fa-map-marker-alt"></i>請選擇地區<i
                                                     className="fas fa-sort-down"></i></label>
                                             </div>
                                             <div className="other_div">
-                                                <label htmlFor="other_btn" className="other_label mobile_tab_label"><i className="fas fa-hand-point-up"></i>進階搜尋<i
+                                                <label htmlFor="other_btn" onClick={() => this.open_tab("other")} className="other_label mobile_tab_label"><i className="fas fa-hand-point-up"></i>進階搜尋<i
                                                     className="fas fa-sort-down"></i></label>
                                             </div>
-                                            <div className="dropdown">
-                                                <button className="search_btn">搜尋</button>
-                                            </div>
+                                            <a href="#" onClick={this.search} id="search_a">
+                                                <div className="dropdown">
+                                                    <button className="search_btn">搜尋</button>
+                                                </div>
+                                            </a>
                                         </div>
                                         <div id="area" className="mobile_tab_div">
                                             <div className="mobile_tab_css">
@@ -368,43 +383,43 @@ class Index extends Component {
                                         <div id="other" className="mobile_tab_div">
                                             <div className="mobile_chk_css">
                                                 <div className="mobile_chk_item">
-                                                    <input className="mobile_chk_chk" type="checkbox" name="child_seats" id="child_seats" value="2" />
+                                                    <input className="mobile_chk_chk chk_chk" type="checkbox" name="child_seats" id="child_seats" value="提供嬰兒座椅" />
                                                     <label htmlFor="child_seats">提供嬰兒座椅</label>
                                                 </div>
                                                 <div className="mobile_chk_item">
-                                                    <input className="mobile_chk_chk" type="checkbox" name="barrier_free" id="barrier_free" value="2" />
+                                                    <input className="mobile_chk_chk chk_chk" type="checkbox" name="barrier_free" id="barrier_free" value="無障礙設施" />
                                                     <label htmlFor="barrier_free">無障礙設施</label>
                                                 </div>
                                                 <div className="mobile_chk_item">
-                                                    <input className="mobile_chk_chk" type="checkbox" name="min_consumption" id="min_consumption" value="2" />
+                                                    <input className="mobile_chk_chk chk_chk" type="checkbox" name="min_consumption" id="min_consumption" value="最低消費限制" />
                                                     <label htmlFor="min_consumption">最低消費限制</label>
                                                 </div>
                                                 <div className="mobile_chk_item">
-                                                    <input className="mobile_chk_chk" type="checkbox" name="limit_meal_time" id="limit_meal_time" value="2" />
+                                                    <input className="mobile_chk_chk chk_chk" type="checkbox" name="limit_meal_time" id="limit_meal_time" value="限制用餐時間" />
                                                     <label htmlFor="limit_meal_time">限制用餐時間</label>
                                                 </div>
                                             </div>
                                             <div className="mobile_chk_css">
                                                 <div className="mobile_chk_item">
-                                                    <input className="mobile_chk_chk" type="checkbox" name="delivery" id="delivery" value="2" />
+                                                    <input className="mobile_chk_chk chk_chk" type="checkbox" name="delivery" id="delivery" value="提供外送" />
                                                     <label htmlFor="delivery">提供外送</label>
                                                 </div>
                                                 <div className="mobile_chk_item">
-                                                    <input className="mobile_chk_chk" type="checkbox" name="service_free" id="service_free" value="2" />
+                                                    <input className="mobile_chk_chk chk_chk" type="checkbox" name="service_free" id="service_free" value="收取服務費" />
                                                     <label htmlFor="service_free">收取服務費</label>
                                                 </div>
                                                 <div className="mobile_chk_item">
-                                                    <input className="mobile_chk_chk" type="checkbox" name="parking" id="parking" value="2" />
+                                                    <input className="mobile_chk_chk chk_chk" type="checkbox" name="parking" id="parking" value="附設停車場" />
                                                     <label htmlFor="parking">附設停車場</label>
                                                 </div>
                                                 <div className="mobile_chk_item">
-                                                    <input className="mobile_chk_chk" type="checkbox" name="allow_pets" id="allow_pets" value="2" />
+                                                    <input className="mobile_chk_chk chk_chk" type="checkbox" name="allow_pets" id="allow_pets" value="允許攜帶寵物" />
                                                     <label htmlFor="allow_pets">允許攜帶寵物</label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -493,6 +508,8 @@ class Index extends Component {
                 <button type="button" className="ontop_btn" onClick={this.topfunction}>
                     <i className="fas fa-arrow-up"></i>
                 </button>
+
+                <div className="blank"></div>
 
                 <footer className="footer_page">
                     <Footer />

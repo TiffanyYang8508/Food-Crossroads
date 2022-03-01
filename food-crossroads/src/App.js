@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-
 import Index from "./components/Index";
 import Restaurant_list from "./components/restaurant_list";
 import Restaurant_list_search from "./components/restaurant_list_search";
 import Member_register from "./components/member_register";
 import Member_register_success from "./components/member_register_success";
 import Member_login from "./components/member_login";
+import Member_login_success from "./components/member_login_success";
 import Restaurant_self_pick_up from "./components/restaurant_self_pick_up";
 import Restaurant_booking_history from "./components/restaurant_booking_history";
 import Ordermanagement from "./components/member_orderRecord";
@@ -63,7 +63,34 @@ class App extends Component {
           />
           <Route path="/register" component={Member_register} exact />
           <Route path="/register/success" component={Member_register_success} />
-          <Route path="/member/login" component={Member_login} />
+
+          <Route
+            path="/restaurant/booking/history"
+            component={Restaurant_booking_history}
+            exact
+          />
+          <Route
+            path="/restaurant/booking/today"
+            component={Restaurant_booking_today}
+            exact
+          />
+          <Route
+            path="/restaurant/self/pick"
+            component={Restaurant_self_pick_up}
+            exact
+          />
+          <Route
+            path="/restaurant/self/pick/history"
+            component={Restaurant_self_pick_up_history}
+            exact
+          />
+          <Route path="/member/login" component={Member_login} exact />
+          <Route
+            path="/member/login/success"
+            component={Member_login_success}
+            exact
+          />
+
           <Route path="/restaurant/login" component={Restaurant_login} exact />
           <Route path="/ordermanagement/:id" component={Ordermanagement} />
           <Route path="/bookingmanagement/:id" component={BookingManagement} />
@@ -91,26 +118,6 @@ class App extends Component {
           <Route
             path="/booking/finish/page"
             component={Booking_finish_page}
-            exact
-          />
-          <Route
-            path="/restaurant/booking/history"
-            component={Restaurant_booking_history}
-            exact
-          />
-          <Route
-            path="/restaurant/booking/today"
-            component={Restaurant_booking_today}
-            exact
-          />
-          <Route
-            path="/restaurant/self/pick"
-            component={Restaurant_self_pick_up}
-            exact
-          />
-          <Route
-            path="/restaurant/self/pick/history"
-            component={Restaurant_self_pick_up_history}
             exact
           />
         </Switch>
