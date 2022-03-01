@@ -97,6 +97,11 @@ class App extends Component {
             component={Booking_finish_page}
             exact
           />
+          <Route
+            path="/restaurant/booking/history"
+            component={Restaurant_booking_history}
+            exact
+          />
 
         </Switch>
       </BrowserRouter>
