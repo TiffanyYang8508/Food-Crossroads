@@ -68,7 +68,7 @@ class Member extends Component {
               <div class="col-md-12">
                 <form>
                   <div>
-                    <p class="title_member_edit">會員資料</p>
+                    <p class="title_member">會員資料</p>
                   </div>
                   <div class="editmember_info">
                     <div class="form-group form-inline">
@@ -86,7 +86,7 @@ class Member extends Component {
                       <label for="pwd">密　碼:</label>
                       <input
                         type="password"
-                        class="form-control"
+                        class="form-control "
                         id="pwd"
                         value={this.state.Member.user_pwd}
                         name="pwd"

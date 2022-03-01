@@ -108,7 +108,7 @@ class BookingRecord extends Component {
             <div className="row">
               <div className="col-md-12">
                 <table className="table">
-                  <thead>
+                  <thead className="table_title ">
                     <tr>
                       <th>取餐日期</th>
                       <th>訂餐餐廳</th>
@@ -122,7 +122,7 @@ class BookingRecord extends Component {
                   <tbody>
                     {this.state.List.map((item, index) => (
                       <tr>
-                        <td className="mobile_td">{item.selfpick_date}</td>
+                        <td className="mobile_td">2022/03/18 </td>
                         <td className="mobile_td">{item.restaurant_name}</td>
                         <td className="mobile_td">{item.food_name}</td>
                         <td className="mobile_td">{item.order_date}</td>
@@ -167,6 +167,31 @@ class BookingRecord extends Component {
                         </td>
                       </tr>
                     ))}
+                    <tr id="cancel">
+                      <td class="mobile_td">2022/02/24</td>
+                      <td class="mobile_td">aqua水相餐廳</td>
+                      <td class="mobile_td">厚切美國頂級PRIME翼板牛排</td>
+                      <td class="mobile_td">18:00:00</td>
+                      <td class="mobile_td">1198</td>
+                      <td class="btn_td">
+                        <button
+                          class="detail_btn"
+                          data-toggle="modal"
+                          data-target="#detailModal"
+                        >
+                          詳細內容
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          class="order_comment_btn"
+                          data-toggle="modal"
+                          data-target="#rankModal"
+                        >
+                          評價
+                        </button>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>

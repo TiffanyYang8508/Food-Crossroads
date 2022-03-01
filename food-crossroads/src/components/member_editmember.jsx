@@ -42,6 +42,9 @@ class EditMember extends Component {
     );
     window.location = "/member/1";
   };
+  backbtnClick = async () => {
+    window.location = "/member/1";
+  };
 
   render() {
     return (
@@ -176,7 +179,7 @@ class EditMember extends Component {
                   <div className="edit_btn_div">
                     <button
                       type="button"
-                      onclick="confirm()"
+                      onClick={this.backbtnClick}
                       className="member_back_btn"
                     >
                       返回
