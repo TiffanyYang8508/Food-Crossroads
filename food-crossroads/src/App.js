@@ -26,6 +26,7 @@ import Restaurant_page from "./components/restaurant_page";
 import Booking_reservation_page from "./components/booking_reservation_page";
 import Booking_check_page from "./components/booking_check_page";
 import Booking_finish_page from "./components/booking_finish_page";
+import Restaurant_booking_today from "./components/restaurant_booking_today";
 
 class App extends Component {
   state = {};
@@ -102,7 +103,11 @@ class App extends Component {
             component={Restaurant_booking_history}
             exact
           />
-
+          <Route
+            path="/restaurant/booking/today"
+            component={Restaurant_booking_today}
+            exact
+          />
         </Switch>
       </BrowserRouter>
     );
