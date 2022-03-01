@@ -23,6 +23,7 @@ import Shoppingok from "./components/shoppingok";
 import Orderdisplay from "./components/orderdisplay";
 import Orderpage from "./components/orderpage";
 import Restaurant_page from "./components/restaurant_page";
+import Restaurant_page_member from "./components/restaurant_page_loginok";
 import Booking_reservation_page from "./components/booking_reservation_page";
 import Booking_check_page from "./components/booking_check_page";
 import Booking_finish_page from "./components/booking_finish_page";
@@ -105,6 +106,11 @@ class App extends Component {
           <Route path="/editmemberpwd/:id" component={EditMemberpwd} />
           <Route path="/cancelbooking/:id" component={CancelBooking} />
           <Route path="/restaurant/page" component={Restaurant_page} exact />
+          <Route
+            path="/restaurant/page/member"
+            component={Restaurant_page_member}
+            exact
+          />
           <Route
             path="/booking/reservation/page"
             component={Booking_reservation_page}
