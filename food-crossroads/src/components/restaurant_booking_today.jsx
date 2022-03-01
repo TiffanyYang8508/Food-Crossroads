@@ -163,6 +163,32 @@ class Restaurant_booking_today extends Component {
                                         </div>
                                     </tr>
                                 ))}
+                                <tr>
+                                    <td>
+                                        <div className="checkbox">
+                                            <label>
+                                                <input type="checkbox" />
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>00127</td>
+                                    <td>2022/01/18</td>
+                                    <td>16:30</td>
+                                    <td>5</td>
+                                    <td>陳冠維</td>
+                                    <td>0979201120</td>
+                                    <td>
+                                        <button className="detail_btn" data-toggle="modal" data-target="#detailModal">
+                                            詳細內容
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button className="cancel_btn" data-toggle="modal" data-target="#detailModal2">
+                                            取消
+                                        </button>
+                                    </td>
+                                </tr>
+
                             </tbody>
                         </table>
                     </div>

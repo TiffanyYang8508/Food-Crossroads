@@ -28,6 +28,8 @@ import Booking_check_page from "./components/booking_check_page";
 import Booking_finish_page from "./components/booking_finish_page";
 import Restaurant_booking_today from "./components/restaurant_booking_today";
 import Restaurant_self_pick_up_history from "./components/restaurant_self_pick_up_history";
+import Orderfinished from "./components/orderfinished";
+import Group_orderfinished from "./components/group_orderfinished";
 
 class App extends Component {
   state = {};
@@ -118,6 +120,16 @@ class App extends Component {
           <Route
             path="/booking/finish/page"
             component={Booking_finish_page}
+            exact
+          />
+          <Route
+            path="/orderfinished"
+            component={Orderfinished}
+            exact
+          />
+          <Route
+            path="/group/orderfinished"
+            component={Group_orderfinished}
             exact
           />
         </Switch>
