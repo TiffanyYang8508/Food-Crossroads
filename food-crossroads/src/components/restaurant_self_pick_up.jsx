@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Header from "./header";
-import Footer from './footer';
+import logo from "../img/logo.png";
 import "../css/restaurant_self_pick_up.css";
+import "../css/style.css";
 
 class Restaurant_self_pick_up extends Component {
     state = {}
@@ -13,9 +13,11 @@ class Restaurant_self_pick_up extends Component {
     render() {
         return (
             <>
-                <div className="header_page">
-                    <Header />
-                </div>
+                <header id="header_page">
+                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                        <a className="navbar-brand" href="/"><img src={logo} alt="LOGO" /></a>
+                    </nav>
+                </header>
 
                 <aside id="restaurant_self_pick_up_aside">
                     <div class="panel-group" id="accordion">
@@ -353,8 +355,16 @@ class Restaurant_self_pick_up extends Component {
                         </table>
                     </div>
                 </section>
-                <footer className="footer_page">
-                    <Footer />
+                <footer>
+                    <div className="footer_link">
+                        <a href="#">關於我們</a>
+                        <a href="#">商家入口</a>
+                        <a href="#">常見問題</a>
+                        <a href="#">聯絡我們</a>
+                    </div>
+                    <div className="footer_text">
+                        <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
+                    </div>
                 </footer>
             </>
         );

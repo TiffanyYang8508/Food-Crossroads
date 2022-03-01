@@ -61,9 +61,9 @@ class App extends Component {
           />
           <Route path="/register" component={Member_register} exact />
           <Route path="/register/success" component={Member_register_success} />
-          <Route path="/self/pick" component={Restaurant_self_pick_up} exact />
+          <Route path="/restaurant/self/pick" component={Restaurant_self_pick_up} exact />
           <Route
-            path="/booking_history"
+            path="/restaurant/booking/history"
             component={Restaurant_booking_history}
             exact
           />

@@ -29,7 +29,7 @@ input[type="radio"] {
 
 /* 導覽列 start */
 
-.header_page {
+#header_page {
   width: 100%;
   position: sticky;
   top: 0;
@@ -37,43 +37,14 @@ input[type="radio"] {
   z-index: 999;
 }
 
-.header_page .navbar {
+#header_page .navbar {
   height: 12%;
   width: 100%;
 }
 
-.header_page a img {
+#header_page a img {
   width: 100%;
   height: 60px;
-}
-
-.nav_icon {
-  margin-left: auto;
-  font-size: 20px;
-}
-
-.rwd_icon {
-  display: none;
-}
-
-.nav_icon a {
-  text-decoration: none;
-  margin-left: 30px;
-  position: relative;
-}
-
-.nav_icon a::before {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  height: 2px;
-  width: 100%;
-  transition: 0.3s all;
-}
-
-.nav_icon a:hover::before {
-  content: "";
-  background-color: #fcc106;
 }
 
 nav .nav_a {
@@ -86,7 +57,7 @@ nav .nav_a {
 
 /* 頁尾 start */
 
-.footer_page {
+footer {
   z-index: 6;
   background-color: #403c3c;
   color: white;
