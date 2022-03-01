@@ -22,14 +22,14 @@ class Orderpage extends Component {
 
 
     async componentDidMount() {
-        var result = await Axios.get(`http://localhost:8000/orderpage/3`);
-        // console.log(this.props.match.params.id)
+        if(this.props.match.params.food_category === undefined){
+            var url=`http://localhost:8000/orderpage`;
+        }else{
+            var url = `http://localhost:8000/orderpage/${this.props.match.params.food_category}`;
+        }
+        var result = await Axios.get(url);
         this.state.Order = result.data;
-        // console.log(typeof result.data);
-        // console.log(typeof result);
-        this.setState({
-            Order: result.data
-        })
+        this.setState({});
     }
 
     btn_group1 = () => {
@@ -51,18 +51,18 @@ class Orderpage extends Component {
                 <Header />
                 <div className="scroll menu_group sticky-top">
                     <div className="container-fluid" id="menu_group">
-                        <button type="button" className="oval menu_group_list" onClick={this.btn_group1}>開胃菜</button>
-                        <button type="button" className="oval menu_group_list" onClick={this.btn_group2}>沙拉</button>
-                        <button type="button" className="oval menu_group_list" onClick={this.btn_group3}>湯</button>
-                        <button type="button" className="oval menu_group_list" >義式燉飯</button>
-                        <button type="button" className="oval menu_group_list" >義大利麵</button>
-                        <button type="button" className="oval menu_group_list" >主廚排餐</button>
-                        <button type="button" className="oval menu_group_list" >甜品</button>
-                        <button type="button" className="oval menu_group_list" >茶品</button>
-                        <button type="button" className="oval menu_group_list" >咖啡</button>
-                        <button type="button" className="oval menu_group_list" >果汁</button>
-                        <button type="button" className="oval menu_group_list" >酒品</button>
-                        <button type="button" className="oval menu_group_list" >水</button>
+                        <a href='http://localhost:3000/orderpage/開胃菜' className="oval menu_group_list" onClick={this.btn_group1}>開胃菜</a>
+                        <a href='http://localhost:3000/orderpage/沙拉' className="oval menu_group_list" onClick={this.btn_group2}>沙拉</a>
+                        <a href='http://localhost:3000/orderpage/湯' type="button" className="oval menu_group_list" onClick={this.btn_group3}>湯</a>
+                        <a href='http://localhost:3000/orderpage/義式燉飯' type="button" className="oval menu_group_list" >義式燉飯</a>
+                        <a href='http://localhost:3000/orderpage/義大利麵' type="button" className="oval menu_group_list" >義大利麵</a>
+                        <a href='http://localhost:3000/orderpage/主廚排餐' type="button" className="oval menu_group_list" >主廚排餐</a>
+                        <a href='http://localhost:3000/orderpage/甜品' type="button" className="oval menu_group_list" >甜品</a>
+                        <a href='http://localhost:3000/orderpage/茶品' type="button" className="oval menu_group_list" >茶品</a>
+                        <a href='http://localhost:3000/orderpage/咖啡' type="button" className="oval menu_group_list" >咖啡</a>
+                        <a href='http://localhost:3000/orderpage/果汁' type="button" className="oval menu_group_list" >果汁</a>
+                        <a href='http://localhost:3000/orderpage/酒品' type="button" className="oval menu_group_list" >酒品</a>
+                        <a href='http://localhost:3000/orderpage/水' type="button" className="oval menu_group_list" >水</a>
                     </div>
                 </div>
 
@@ -76,10 +76,11 @@ class Orderpage extends Component {
 
 
                 <div id='order_page'>
+                    
                     <div id="group_1" className="d-flex flex-column">
 
                         <div className="food_title">
-                            <h3>開胃菜</h3>
+                            <h3>{this.props.match.params.food_category}</h3>
                         </div>
 
                         <div id="cate1">
@@ -87,7 +88,6 @@ class Orderpage extends Component {
                             <div className="row" >
 
                                 {this.state.Order.map((item, index) =>
-                                    // {item.food_category_id = 1 ? (
                                     <div key={index} className="food_list_detail food_list_border col-sm-8 col-lg-4">
 
                                         <div>
@@ -112,8 +112,7 @@ class Orderpage extends Component {
                         </div>
 
 
-                        {/* 商品分類2 */}
-                        <div id="group_2" className="d-flex flex-column">
+                        {/* <div id="group_2" className="d-flex flex-column">
                             <div className="food_title">
                                 <h3>沙拉</h3>
                             </div>
@@ -152,10 +151,9 @@ class Orderpage extends Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
-                        {/* 商品分類3 */}
-                        <div id="group_3" className="d-flex flex-column">
+                        {/* <div id="group_3" className="d-flex flex-column">
                             <div className="food_title">
                                 <h3>湯</h3>
                             </div>
@@ -197,7 +195,7 @@ class Orderpage extends Component {
                                 </div>
                             </div>
 
-                        </div>
+                        </div> */}
 
                         {/* 揪團結帳 */}
                         <div className="food_order_group d-flex flex-column">

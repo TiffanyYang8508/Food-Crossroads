@@ -100,7 +100,7 @@ class App extends Component {
           <Route path="/shoppingchar" component={Shoppingchar} exact />
           <Route path="/shoppingok" component={Shoppingok} exact />
           <Route path="/orderdisplay" component={Orderdisplay} exact />
-          <Route path="/orderpage" component={Orderpage} exact />
+          <Route path="/orderpage/:food_category?" component={Orderpage} exact />
 
           <Route path="/editmemberpwd/:id" component={EditMemberpwd} />
           <Route path="/cancelbooking/:id" component={CancelBooking} />
