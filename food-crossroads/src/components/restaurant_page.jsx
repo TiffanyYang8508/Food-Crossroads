@@ -4,10 +4,69 @@ import Footer from "./footer";
 import $ from "jquery";
 import "../css/restaurant_page.css";
 import Carousel from "react-bootstrap/Carousel";
+import StarIconNo from "../img/star.png";
+import StarIconFill from "../img/star-fill.png";
 
 class Restaurant_page extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      clickIndex: 0,
+      hoverIndex: 0,
+    };
+    this.getStar = this.getStar.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.handleOnMouseEnter = this.handleOnMouseEnter.bind(this);
+    this.handleOnMouseOut = this.handleOnMouseOut.bind(this);
+    this.changeMarkingScore = this.changeMarkingScore.bind(this);
+  }
 
+  handleClick(index) {
+    this.setState({
+      clickIndex: index,
+    });
+    this.changeMarkingScore(index);
+  }
+
+  handleOnMouseEnter(index) {
+    this.setState({
+      hoverIndex: index,
+    });
+  }
+
+  handleOnMouseOut() {
+    this.setState({
+      hoverIndex: 0,
+    });
+  }
+
+  changeMarkingScore(index) {
+    let item = {
+      'module': this.props.data,
+      'score': index,
+    };
+    this.props.changeMarkingScore(item);
+  }
+
+  getStar() {
+    let num = this.state.hoverIndex === 0 ? this.state.clickIndex : this.state.hoverIndex;
+    let starContainer = [];
+    const arr = [1, 2, 3, 4, 5];
+    arr.map((ele, index) => {
+      starContainer.push(
+        <span
+          className="starIcon"
+          onClick={this.handleClick.bind(this, ele)}
+          onMouseEnter={this.handleOnMouseEnter.bind(this, ele)}
+          onMouseOut={this.handleOnMouseOut.bind(this, ele)}
+        >
+          {ele > num ? <img src={StarIconNo} /> : <img src={StarIconFill} />}
+        </span>
+      );
+    });
+    return starContainer;
+  }
+  
   componentDidMount() {
     // 置頂按鈕:點選後回到頂端
 
@@ -62,9 +121,16 @@ class Restaurant_page extends Component {
     $(".btn_close").on("click", function () {
       $(".modal-comment").css("display", "none");
     });
+
+    $(".btn_add").on("click", function() {
+      $(".comment_item:nth-child(1)").css("display", "block");
+      $(".modal-comment").css("display", "none");
+    })
+
   }
 
   render() {
+    let starItems = this.getStar();
     return (
       <React.Fragment>
         <div className="header_page">
@@ -89,7 +155,6 @@ class Restaurant_page extends Component {
                 <div className="modal_content">
                   <div className="container_alert">
                     <div
-                      onClick={this.to_register_member}
                       className="button display_top_right"
                     >
                       &times;
@@ -183,15 +248,15 @@ class Restaurant_page extends Component {
                 </div>
                 <div className="top_flex">
                   <div className="shop_rate_wrapper">
-                    <i className="far fa-star"></i>
-                    <i className="far fa-star"></i>
-                    <i className="far fa-star"></i>
-                    <i className="far fa-star"></i>
-                    <i className="far fa-star"></i>
+                    <img src={require("../img/star-fill.png")} alt="star-fill" />
+                    <img src={require("../img/star-fill.png")} alt="star-fill" />
+                    <img src={require("../img/star-fill.png")} alt="star-fill" />
+                    <img src={require("../img/star-fill.png")} alt="star-fill" />
+                    <img src={require("../img/star.png")} alt="star" />
                   </div>
                   <div>
-                    <i className="far fa-comment-alt"></i>
-                    <span id="shop_comment_no">2</span>
+                    <i className="far fa-comment-alt"></i>&nbsp;
+                    <span id="shop_comment_no"></span>
                   </div>
                 </div>
                 <hr />
@@ -277,7 +342,6 @@ class Restaurant_page extends Component {
                 <div className="top_flex">
                   <h4 className="shop_title flex1">
                     評論
-                    <span className="comment_total">(2)</span>
                   </h4>
                   <button className="add_comment">
                     <i className="fas fa-plus-circle">新增評論</i>
@@ -292,15 +356,15 @@ class Restaurant_page extends Component {
                         </h5>
                       </div>
                       <div className="modal-body">
-                        <p>給予評分：</p>
-                        <div className="comment_rate_wrapper">
-                          <i className="far fa-star"></i>
-                          <i className="far fa-star"></i>
-                          <i className="far fa-star"></i>
-                          <i className="far fa-star"></i>
-                          <i className="far fa-star"></i>
+                        <div>
+                          <p>給予評分：
+                            <span></span>
+                          </p>
                         </div>
-                        <p></p>
+                        <div className="starMarking">
+                          <div className="functionName">{this.props.data}</div>
+                          <div className="starContainer">{starItems}</div>
+                        </div>
                         <div>
                           <p>撰寫評論：</p>
                           <textarea
@@ -320,7 +384,7 @@ class Restaurant_page extends Component {
                           關閉
                         </button>
                         <button type="button" className="btn_add">
-                          新增評論
+                          提交
                         </button>
                       </div>
                     </div>
@@ -339,33 +403,30 @@ class Restaurant_page extends Component {
                         </div>
                         <div className="flex1">
                           <div className="top_flex">
-                            <div className="flex1">王曉明</div>
+                            <div className="flex1">李曉明</div>
                             <div className="record_time">
-                              2022-02-02 17:00:45
+                              2022-03-07 09:15:45
                             </div>
                           </div>
                           <div className="top_flex">
                             <div className="shop_rate_wrapper flex1">
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img src={require("../img/star.png")} alt="star" />
+                              <img src={require("../img/star.png")} alt="star" />
                             </div>
                           </div>
                         </div>
                       </div>
                       <div className="main_comment">
-                        <p>好吃^_^</p>
+                        <p>好吃</p>
                       </div>
                     </div>
                     <div className="comment_right">
                       <ul className="comment_right_pic">
                         <li className="pic_item">
-                          <img
-                            src={require("../img/餐點1.jpg")}
-                            alt="餐點照片"
-                          />
+                          
                         </li>
                       </ul>
                     </div>
@@ -389,11 +450,11 @@ class Restaurant_page extends Component {
                           </div>
                           <div className="top_flex">
                             <div className="shop_rate_wrapper flex1">
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
                             </div>
                           </div>
                         </div>

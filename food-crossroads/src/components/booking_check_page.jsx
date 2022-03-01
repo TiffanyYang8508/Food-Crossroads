@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from "./header";
 import Footer from "./footer";
+import $ from "jquery";
 import "../css/booking_check_page.css";
 import "../css/progress.css";
 import "../css/bootstrap.min.css";
@@ -8,6 +9,16 @@ import "../css/bootstrap.min.css";
 
 class Booking_check_page extends Component {
     state = {}
+
+    // componentDidMount() {
+    //     $(".check_btn_back").on("click", function() {
+    //         $(window.location).prop("href", "/booking/reservation/page");
+    //     })
+    //     $(".check_btn_confirm").on("click", function() {
+    //         $(window.location).prop("href", "/booking/finish/page");
+    //     })
+    // }
+
     render() {
         return (
             <React.Fragment>
@@ -74,12 +85,11 @@ class Booking_check_page extends Component {
                                             </form>
                                         </div>
                                         <div className="btn_container_check">
-                                            !!!!!!!!!!!!!!!
-                                            <a href="/index_list/booking_reservation_page.html">
-                                                <input type="submit" className="check_btn_back" value="回上一步" />
+                                            <a href="/booking/reservation/page">
+                                                <input type="button" className="check_btn_back" value="回上一步" />
                                             </a>
-                                            <a href="/index_list/booking_finish_page.html">
-                                                <input type="submit" className="check_btn_confirm" value="下一步：完成訂位" />
+                                            <a href="/booking/finish/page">
+                                                <input type="button" className="check_btn_confirm" value="下一步：完成訂位" />
                                             </a>
                                         </div>
                                     </div>

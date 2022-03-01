@@ -1,9 +1,9 @@
 aside {
     background-color: #403C3C;
     width: 230px;
-    height: 85vh;
+    height: 90vh;
     position: fixed;
-    top: 12%;
+    top: 10%;
 }
 
 .panel-default{
@@ -40,10 +40,6 @@ aside {
     font-weight: 600;
 }
 
-.sreach_form {
-    padding: 0 10px 5px 10px;
-}
-
 .form_textbox {
     margin-bottom: -6px;
 }
@@ -54,7 +50,7 @@ aside {
 
 .container .order_table {
     position: absolute;
-    top: 100px;
+    top: 140px;
     left: 16%;
     width: 80%;
 }
@@ -88,7 +84,64 @@ aside {
     transform: translate(-50%,30%);
 }
 
+#restaurant_booking_history th {
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    letter-spacing: 5px;
+    width: 100px;
+}
 
+#restaurant_booking_history .search_bar h3{
+    position: relative;
+    left: 20px;
+    top: 10px;
+    font-weight: 600;
+    margin-right: 500px;
+}
+
+#restaurant_booking_history .search_bar_div{
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding: 5px;
+    width: 30%;
+    margin-right: 10px;
+}
+
+
+#restaurant_booking_history .search_bar input[type=text]{
+    border: none;  
+    width: 90%;
+}
+
+#restaurant_booking_history .search_bar input[type=text]:focus{
+    outline: none;
+}
+
+#restaurant_booking_history .search_bar button {
+    height: 40px;
+    background-color: #FCC106;
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+
+#restaurant_booking_history .search_bar button:hover {
+    background-color: #f0b802;
+}
+
+#restaurant_booking_history .search_bar {
+    position: relative;
+    left: 23px;
+    display: flex;
+}
+
+#restaurant_booking_history .search_bar_div{
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding: 5px;
+    width: 30%;
+    margin-right: 10px;
+}
 
 .aside_menu label,.mobile_aside_menu label{
     margin-right: 20px;
@@ -98,13 +151,6 @@ aside {
     margin-left: 150px;
     border-radius: 5px;
     margin-top: 30px;
-}
-
-th{
-    text-align: center;
-    position: relative;
-    left: 30px;
-    letter-spacing: 5px;
 }
 
 td{

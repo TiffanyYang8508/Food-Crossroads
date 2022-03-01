@@ -75,11 +75,11 @@ class Booking_finish_page extends Component {
                                         </form>
                                     </div>
                                     <div className="btn_container_finish">
-                                        <a href="/index_list/booking_manage.html">
-                                            <input type="submit" className="finish_btn_booking_manage" value="訂位管理" />
+                                        <a href="/bookingmanagement/:id">
+                                            <input type="button" className="finish_btn_booking_manage" value="訂位管理" />
                                         </a>
-                                        <a href="/index_list/restaurant_page_login_ok.html">
-                                            <input type="submit" className="finish_btn_to_restaurant_page" value="回到餐聽" />
+                                        <a href="/restaurant/page">
+                                            <input type="button" className="finish_btn_to_restaurant_page" value="回到餐聽" />
                                         </a>
                                     </div>
                                 </div>

@@ -26,6 +26,8 @@ import Restaurant_page from "./components/restaurant_page";
 import Booking_reservation_page from "./components/booking_reservation_page";
 import Booking_check_page from "./components/booking_check_page";
 import Booking_finish_page from "./components/booking_finish_page";
+import Restaurant_booking_today from "./components/restaurant_booking_today";
+import Restaurant_self_pick_up_history from "./components/restaurant_self_pick_up_history";
 
 class App extends Component {
   state = {};
@@ -61,10 +63,25 @@ class App extends Component {
           />
           <Route path="/register" component={Member_register} exact />
           <Route path="/register/success" component={Member_register_success} />
-          <Route path="/self/pick" component={Restaurant_self_pick_up} exact />
+
           <Route
-            path="/booking_history"
+            path="/restaurant/booking/history"
             component={Restaurant_booking_history}
+            exact
+          />
+          <Route
+            path="/restaurant/booking/today"
+            component={Restaurant_booking_today}
+            exact
+          />
+          <Route
+            path="/restaurant/self/pick"
+            component={Restaurant_self_pick_up}
+            exact
+          />
+          <Route
+            path="/restaurant/self/pick/history"
+            component={Restaurant_self_pick_up_history}
             exact
           />
           <Route path="/member/login" component={Member_login} exact />
@@ -73,6 +90,7 @@ class App extends Component {
             component={Member_login_success}
             exact
           />
+
           <Route path="/restaurant/login" component={Restaurant_login} exact />
           <Route path="/ordermanagement/:id" component={Ordermanagement} />
           <Route path="/bookingmanagement/:id" component={BookingManagement} />
