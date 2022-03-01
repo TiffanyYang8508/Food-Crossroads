@@ -1,11 +1,36 @@
 import React, { Component } from 'react';
+import Axios from "axios";
 import logo from "../img/logo.png";
+import $ from "jquery";
 import "../css/restaurant_booking_today.css"
 import "../fontawesome-free-5.15.4-web/css/all.css";
 import "../css/style.css";
 
 class Restaurant_booking_today extends Component {
-    state = {}
+    state = {
+        booking_detail: [
+            {
+                booking_date: "2022-09-22",
+                booking_time: "17:00",
+                booking_peoplenumber: "3",
+                user_name: "陳冠維",
+                user_tel: "0972607230"
+            }
+        ]
+    }
+
+    async componentDidMount() {
+        var url = `http://localhost:8000/restaurant/booking/today`;
+        var result = await Axios.get(url);
+        var newState = { ...this.state };
+        newState.booking_detail = result.data;
+        this.setState(newState);
+
+        $(".detail_btn").on("click", function () {
+            $(".modal-detail").css("display", "block");
+        });
+    }
+
     render() {
         return (
             <>
@@ -16,35 +41,35 @@ class Restaurant_booking_today extends Component {
                 </header>
 
                 <aside id="restaurant_today_booking_aside">
-                    <div class="panel-group" id="accordion">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
+                    <div className="panel-group" id="accordion">
+                        <div className="panel panel-default">
+                            <div className="panel-heading">
+                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
                                 </h4>
                             </div>
-                            <div id="collapseOne" class="panel-collapse collapse default">
-                                <div class="little_title">
+                            <div id="collapseOne" className="panel-collapse collapse default">
+                                <div className="little_title">
                                     <a data-parent="#accordion" href="restaurant_today_booking.html">今日訂位</a>
                                 </div>
                             </div>
-                            <div id="collapseOne" class="panel-collapse collapse">
-                                <div class="little_title">
+                            <div id="collapseOne" className="panel-collapse collapse">
+                                <div className="little_title">
                                     <a data-parent="#accordion" href="restaurant_booking_history.html">歷史訂位紀錄</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">訂餐管理</a>
+                        <div className="panel panel-default">
+                            <div className="panel-heading">
+                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">訂餐管理</a>
                                 </h4>
                             </div>
-                            <div id="collapseTwo" class="panel-collapse collapse">
-                                <div class="little_title">
+                            <div id="collapseTwo" className="panel-collapse collapse">
+                                <div className="little_title">
                                     <a data-parent="#accordion" href="restaurant_self_pick_up.html">今日自取訂餐</a>
                                 </div>
                             </div>
-                            <div id="collapseTwo" class="panel-collapse collapse">
-                                <div class="little_title">
+                            <div id="collapseTwo" className="panel-collapse collapse">
+                                <div className="little_title">
                                     <a data-parent="#accordion" href="restaurant_history_list.html">歷史訂餐紀錄</a>
                                 </div>
                             </div>
@@ -53,18 +78,18 @@ class Restaurant_booking_today extends Component {
                 </aside>
 
                 <section id="restaurant_today_booking">
-                    <div class="container">
-                        <div class="search_bar">
+                    <div className="container">
+                        <div className="search_bar">
                             <div>
                                 <h3>今日訂位</h3>
                             </div>
-                            <div class="search_bar_div">
-                                <i class="fas fa-search"></i>
+                            <div className="search_bar_div">
+                                <i className="fas fa-search"></i>
                                 <input type="text" placeholder="訂單編號" />
                             </div>
-                            <button onclick="search()">搜尋</button>
+                            <button >搜尋</button>
                         </div>
-                        <table class="table order_table">
+                        <table className="table order_table">
                             <thead>
                                 <tr>
                                     <th>已帶位</th>
@@ -79,171 +104,65 @@ class Restaurant_booking_today extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr id="test">
-                                    <td>
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" />
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td>00127</td>
-                                    <td>2022-02-24</td>
-                                    <td>20:00</td>
-                                    <td>2</td>
-                                    <td>張哲偉</td>
-                                    <td>0972607451</td>
-                                    <td>
-                                        <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                                            詳細內容
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button class="cancel_btn" data-toggle="modal" data-target="#detailModal2">
-                                            取消
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <tr id="search">
-                                    <td>
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" />
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td>00126</td>
-                                    <td>2022-02-24</td>
-                                    <td>17:00</td>
-                                    <td>4</td>
-                                    <td>張瑜庭</td>
-                                    <td>0902135699</td>
-                                    <td>
-                                        <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                                            詳細內容
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button class="cancel_btn" data-toggle="modal" data-target="#detailModal2">
-                                            取消
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" checked />
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td>00125</td>
-                                    <td>2022-02-23</td>
-                                    <td>18:30</td>
-                                    <td>3</td>
-                                    <td>李曉明</td>
-                                    <td>0918557110</td>
-                                    <td>
-                                        <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                                            詳細內容
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button class="cancel_btn" data-toggle="modal" data-target="#detailModal2">
-                                            取消
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" checked />
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td>00124</td>
-                                    <td>2022-02-23</td>
-                                    <td>17:15</td>
-                                    <td>3</td>
-                                    <td>陳誠慶</td>
-                                    <td>0972110202</td>
-                                    <td>
-                                        <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                                            詳細內容
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button class="cancel_btn" data-toggle="modal" data-target="#detailModal2">
-                                            取消
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <div class="modal fade" id="detailModal">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                    
-                                            <div class="modal-header">
-                                                <h3 class="modal-title">訂單明細</h3>
-                                                <button type="button" class="close" data-dismiss="modal"></button>
+                                {this.state.booking_detail.map((item, index) => (
+                                    <tr>
+                                        <td>
+                                            <div className="checkbox">
+                                                <label>
+                                                    <input type="checkbox" />
+                                                </label>
                                             </div>
+                                        </td>
+                                        <td>00127</td>
+                                        <td>2022/02/12</td>
+                                        <td>{item.booking_time}</td>
+                                        <td>{item.booking_peoplenumber}</td>
+                                        <td>{item.user_name}</td>
+                                        <td>{item.user_tel}</td>
+                                        <td>
+                                            <button className="detail_btn" data-toggle="modal" data-target="#detailModal" onClick={this.test}>
+                                                詳細內容
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button className="cancel_btn" data-toggle="modal" data-target="#detailModal2">
+                                                取消
+                                            </button>
+                                        </td>
 
-                                            <div class="detail_modal_body">
-                                                姓名：張哲偉 <br />
-                                                手機：0972607451<br />
-                                                電子郵件：jason8745@gmail.com <br />
-                                                訂位編號：00127 <br />
-                                                訂位人數：2人 <br />
-                                                訂位日期：2022/02/24 <br />
-                                                取位時間：20:00 <br />
-                                                備註：需要兒童座椅
-                                            </div>
+                                        <div className="modal fade" id="detailModal2">
+                                            <div className="modal-dialog modal-dialog-centered">
+                                                <div className="modal-content">
 
-                                            <div class="modal-footer">
-                                                <button type="button" class="detail_btn" data-dismiss="modal">
-                                                    返回
-                                                </button>
+                                                    <div className="modal-header">
+                                                        <h3 className="modal-title">確定取消訂單嗎?</h3>
+                                                        <button type="button" className="close" data-dismiss="modal"></button>
+                                                    </div>
+
+                                                    <div className="detail_modal_body">
+                                                        姓名：張哲偉 <br />
+                                                        手機：0972607451<br />
+                                                        電子郵件：jason8745@gmail.com <br />
+                                                        訂位編號：00127 <br />
+                                                        訂位人數：2人 <br />
+                                                        訂位日期：2022/02/24 <br />
+                                                        取位時間：20:00 <br />
+                                                        備註：需要兒童座椅
+                                                    </div>
+
+                                                    <div className="modal-footer">
+                                                        <button type="button" className="detail_btn" data-dismiss="modal">
+                                                            返回
+                                                        </button>
+                                                        <button type="button" className="cancel_btn" data-dismiss="modal">
+                                                            取消訂位
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <div class="modal fade" id="detailModal2">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                       
-                                            <div class="modal-header">
-                                                <h3 class="modal-title">確定取消訂單嗎?</h3>
-                                                <button type="button" class="close" data-dismiss="modal"></button>
-                                            </div>
-
-                                            <div class="detail_modal_body">
-                                                姓名：張哲偉 <br />
-                                                手機：0972607451<br />
-                                                電子郵件：jason8745@gmail.com <br />
-                                                訂位編號：00127 <br />
-                                                訂位人數：2人 <br />
-                                                訂位日期：2022/02/24 <br />
-                                                取位時間：20:00 <br />
-                                                備註：需要兒童座椅
-                                            </div>
-
-                                            <div class="modal-footer">
-                                                <button type="button" class="detail_btn" data-dismiss="modal">
-                                                    返回
-                                                </button>
-                                                <button type="button" class="cancel_btn" data-dismiss="modal" onclick="myFunction()">
-                                                    取消訂位
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                    </tr>
+                                ))}
                             </tbody>
                         </table>
                     </div>
