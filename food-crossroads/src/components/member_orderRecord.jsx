@@ -148,7 +148,7 @@ class BookingRecord extends Component {
                   <tbody>
                     {this.state.List.map((item, index) => (
                       <tr>
-                        <td className="mobile_td">2022/03/18 </td>
+                        <td className="mobile_td">2022/03/08 </td>
                         <td className="mobile_td">{item.restaurant_name}</td>
                         <td className="mobile_td">{item.food_name}</td>
                         <td className="mobile_td">{item.order_date}</td>
