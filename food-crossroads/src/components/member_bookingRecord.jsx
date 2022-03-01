@@ -40,6 +40,14 @@ class BookingRecord extends Component {
     $(".btn_close").on("click", function () {
       $(".modal-detail").css("display", "none");
     });
+
+    $(".comment_btn").on("click", function () {
+      $(".modal-comment").css("display", "block");
+    });
+
+    $(".btn_close").on("click", function () {
+      $(".modal-comment").css("display", "none");
+    });
   }
 
   render() {
@@ -112,7 +120,7 @@ class BookingRecord extends Component {
             <div className="row">
               <div className="col-md-12">
                 <table className="table">
-                  <thead>
+                  <thead className="table_title">
                     <tr>
                       <th>訂位人</th>
                       <th>訂位餐廳</th>
@@ -128,7 +136,7 @@ class BookingRecord extends Component {
                       <tr>
                         <td className="mobile_td">{item.user_name}</td>
                         <td className="mobile_td">{item.restaurant_name}</td>
-                        <td className="mobile_td">{item.booking_date}</td>
+                        <td className="mobile_td">2022/03/18</td>
                         <td className="mobile_td">{item.booking_time}</td>
                         <td className="mobile_td">
                           {item.booking_peoplenumber}
@@ -153,7 +161,6 @@ class BookingRecord extends Component {
                                   <br />
                                   電子郵件：{item.user_email} <br />
                                   <br />
-                                  訂位編號：00005 <br />
                                   訂位人數：{item.booking_peoplenumber} <br />
                                   訂位日期：{item.booking_date} <br />
                                   取位時間：{item.booking_time}
@@ -176,9 +183,109 @@ class BookingRecord extends Component {
                         </td>
                         <td>
                           <button className="comment_btn">評價</button>
+                          <div class="modal modal-comment" tabIndex="-1">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title">
+                                    您對這間餐廳的評價如何？
+                                  </h4>
+                                </div>
+                                <div className="comment_modal">
+                                  <p>給予評分：</p>
+                                  <div className="comment_rate_wrapper">
+                                    <i className="far fa-star"></i>
+                                    <i className="far fa-star"></i>
+                                    <i className="far fa-star"></i>
+                                    <i className="far fa-star"></i>
+                                    <i className="far fa-star"></i>
+                                  </div>
+                                  <p></p>
+                                  <div>
+                                    <p>撰寫評論：</p>
+                                    <textarea
+                                      name="comment"
+                                      id=""
+                                      cols="30"
+                                      rows="3"
+                                    ></textarea>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn_close">
+                                      返回
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </td>
                       </tr>
                     ))}
+                    <tr id="cancel">
+                      <td class="mobile_td">李曉明</td>
+                      <td class="mobile_td">一鷺串燒居酒屋</td>
+                      <td class="mobile_td">2022/02/24</td>
+                      <td class="mobile_td">18:00:00</td>
+                      <td class="mobile_td">2</td>
+                      <td class="btn_td">
+                        <button
+                          class="cancel_btn"
+                          data-toggle="modal"
+                          data-target="#cancel_order_Modal"
+                        >
+                          取消訂位
+                        </button>
+                        <button
+                          class="detail_btn"
+                          data-toggle="modal"
+                          data-target="#detailModal"
+                        >
+                          詳細內容
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          class="comment_btn"
+                          data-toggle="modal"
+                          data-target="#rankModal"
+                        >
+                          評價
+                        </button>
+                      </td>
+                    </tr>
+                    <tr id="cancel">
+                      <td class="mobile_td">李曉明</td>
+                      <td class="mobile_td">布列塔尼歐法鄉村雅廚</td>
+                      <td class="mobile_td">2022/02/02</td>
+                      <td class="mobile_td">20:00:00</td>
+                      <td class="mobile_td">4</td>
+                      <td class="btn_td">
+                        <button
+                          class="cancel_btn"
+                          data-toggle="modal"
+                          data-target="#cancel_order_Modal"
+                        >
+                          取消訂位
+                        </button>
+                        <button
+                          class="detail_btn"
+                          data-toggle="modal"
+                          data-target="#detailModal"
+                        >
+                          詳細內容
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          class="comment_btn"
+                          data-toggle="modal"
+                          data-target="#rankModal"
+                        >
+                          評價
+                        </button>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
