@@ -169,6 +169,10 @@ div.flex1 {
     border-radius: 50%;
 }
 
+.comment_item:nth-child(1) {
+    display: none;
+}
+
 .record_time {
     font-size: 1em;
 }
@@ -214,13 +218,9 @@ div.flex1 {
     color: rgba( 0, 0, 0, .25);
 }
 
-.shop_rate_wrapper i {
-    top: 0;
-    left: 0;
-    font-size: 16px;
-    /* display: block; */
-    /* position: absolute; */
-    overflow: visible;
+.shop_rate_wrapper img {
+    width: 20px;
+    height: 20px;
 }
 
 .fa-star {
@@ -268,7 +268,6 @@ div.flex1 {
     width: 45px;
     height: 45px;
 }
-
 
 .show_comment_modal {
     text-decoration: none;
@@ -480,8 +479,7 @@ div.flex1 {
 
 .starIcon > img {
     width: 40px;
-    height: 40px;
-    
+    height: 40px; 
 }
 
 .modal-footer button {

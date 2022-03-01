@@ -122,6 +122,11 @@ class Restaurant_page extends Component {
       $(".modal-comment").css("display", "none");
     });
 
+    $(".btn_add").on("click", function() {
+      $(".comment_item:nth-child(1)").css("display", "block");
+      $(".modal-comment").css("display", "none");
+    })
+
   }
 
   render() {
@@ -243,15 +248,15 @@ class Restaurant_page extends Component {
                 </div>
                 <div className="top_flex">
                   <div className="shop_rate_wrapper">
-                    <i className="far fa-star"></i>
-                    <i className="far fa-star"></i>
-                    <i className="far fa-star"></i>
-                    <i className="far fa-star"></i>
-                    <i className="far fa-star"></i>
+                    <img src={require("../img/star-fill.png")} alt="star-fill" />
+                    <img src={require("../img/star-fill.png")} alt="star-fill" />
+                    <img src={require("../img/star-fill.png")} alt="star-fill" />
+                    <img src={require("../img/star-fill.png")} alt="star-fill" />
+                    <img src={require("../img/star.png")} alt="star" />
                   </div>
                   <div>
-                    <i className="far fa-comment-alt"></i>
-                    <span id="shop_comment_no">2</span>
+                    <i className="far fa-comment-alt"></i>&nbsp;
+                    <span id="shop_comment_no"></span>
                   </div>
                 </div>
                 <hr />
@@ -337,7 +342,6 @@ class Restaurant_page extends Component {
                 <div className="top_flex">
                   <h4 className="shop_title flex1">
                     評論
-                    <span className="comment_total">(2)</span>
                   </h4>
                   <button className="add_comment">
                     <i className="fas fa-plus-circle">新增評論</i>
@@ -399,33 +403,30 @@ class Restaurant_page extends Component {
                         </div>
                         <div className="flex1">
                           <div className="top_flex">
-                            <div className="flex1">王曉明</div>
+                            <div className="flex1">李曉明</div>
                             <div className="record_time">
-                              2022-02-02 17:00:45
+                              2022-03-07 09:15:45
                             </div>
                           </div>
                           <div className="top_flex">
                             <div className="shop_rate_wrapper flex1">
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img src={require("../img/star.png")} alt="star" />
+                              <img src={require("../img/star.png")} alt="star" />
                             </div>
                           </div>
                         </div>
                       </div>
                       <div className="main_comment">
-                        <p>好吃^_^</p>
+                        <p>好吃</p>
                       </div>
                     </div>
                     <div className="comment_right">
                       <ul className="comment_right_pic">
                         <li className="pic_item">
-                          <img
-                            src={require("../img/餐點1.jpg")}
-                            alt="餐點照片"
-                          />
+                          
                         </li>
                       </ul>
                     </div>
@@ -449,11 +450,11 @@ class Restaurant_page extends Component {
                           </div>
                           <div className="top_flex">
                             <div className="shop_rate_wrapper flex1">
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
-                              <i className="far fa-star"></i>
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
+                              <img src={require("../img/star-fill.png")} alt="star-fill" />
                             </div>
                           </div>
                         </div>
