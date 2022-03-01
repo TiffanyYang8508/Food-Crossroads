@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import Axios from "axios";
 import logo from "../img/logo.png";
 import $ from "jquery";
-import "../css/restaurant_booking_today.css"
-import "../fontawesome-free-5.15.4-web/css/all.css";
-import "../css/style.css";
+import "../css/restaurant_booking_today.css";
 
 class Restaurant_booking_today extends Component {
     state = {
