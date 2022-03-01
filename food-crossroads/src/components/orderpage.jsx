@@ -22,11 +22,7 @@ class Orderpage extends Component {
 
 
     async componentDidMount() {
-        if(this.props.match.params.food_category === undefined){
-            var url=`http://localhost:8000/orderpage`;
-        }else{
-            var url = `http://localhost:8000/orderpage/${this.props.match.params.food_category}`;
-        }
+        var url = `http://localhost:8000/orderpage/${this.props.match.params.food_category}`;
         var result = await Axios.get(url);
         this.state.Order = result.data;
         this.setState({});
@@ -51,18 +47,21 @@ class Orderpage extends Component {
                 <Header />
                 <div className="scroll menu_group sticky-top">
                     <div className="container-fluid" id="menu_group">
-                        <a href='http://localhost:3000/orderpage/開胃菜' className="oval menu_group_list" onClick={this.btn_group1}>開胃菜</a>
-                        <a href='http://localhost:3000/orderpage/沙拉' className="oval menu_group_list" onClick={this.btn_group2}>沙拉</a>
-                        <a href='http://localhost:3000/orderpage/湯' type="button" className="oval menu_group_list" onClick={this.btn_group3}>湯</a>
-                        <a href='http://localhost:3000/orderpage/義式燉飯' type="button" className="oval menu_group_list" >義式燉飯</a>
-                        <a href='http://localhost:3000/orderpage/義大利麵' type="button" className="oval menu_group_list" >義大利麵</a>
-                        <a href='http://localhost:3000/orderpage/主廚排餐' type="button" className="oval menu_group_list" >主廚排餐</a>
-                        <a href='http://localhost:3000/orderpage/甜品' type="button" className="oval menu_group_list" >甜品</a>
-                        <a href='http://localhost:3000/orderpage/茶品' type="button" className="oval menu_group_list" >茶品</a>
-                        <a href='http://localhost:3000/orderpage/咖啡' type="button" className="oval menu_group_list" >咖啡</a>
-                        <a href='http://localhost:3000/orderpage/果汁' type="button" className="oval menu_group_list" >果汁</a>
-                        <a href='http://localhost:3000/orderpage/酒品' type="button" className="oval menu_group_list" >酒品</a>
-                        <a href='http://localhost:3000/orderpage/水' type="button" className="oval menu_group_list" >水</a>
+                        <a href="/orderpage/開胃菜">
+                             <button className="oval menu_group_list" onClick={this.btn_group1}>開胃菜</button>
+                        </a>
+                       
+                        <button className="oval menu_group_list" onClick={this.btn_group2}>沙拉</button>
+                        <button className="oval menu_group_list" onClick={this.btn_group3}>湯</button>
+                        <button className="oval menu_group_list" >義式燉飯</button>
+                        <button className="oval menu_group_list" >義大利麵</button>
+                        <button className="oval menu_group_list" >主廚排餐</button>
+                        <button className="oval menu_group_list" >甜品</button>
+                        <button className="oval menu_group_list" >茶品</button>
+                        <button className="oval menu_group_list" >咖啡</button>
+                        <button className="oval menu_group_list" >果汁</button>
+                        <button className="oval menu_group_list" >酒品</button>
+                        <button className="oval menu_group_list" >水</button>
                     </div>
                 </div>
 
@@ -76,7 +75,7 @@ class Orderpage extends Component {
 
 
                 <div id='order_page'>
-                    
+
                     <div id="group_1" className="d-flex flex-column">
 
                         <div className="food_title">
@@ -88,6 +87,7 @@ class Orderpage extends Component {
                             <div className="row" >
 
                                 {this.state.Order.map((item, index) =>
+                                
                                     <div key={index} className="food_list_detail food_list_border col-sm-8 col-lg-4">
 
                                         <div>
@@ -107,6 +107,7 @@ class Orderpage extends Component {
                                             <button className="btn_add_cart">加入購物車</button>
                                         </div>
                                     </div>
+
                                 )}
                             </div>
                         </div>

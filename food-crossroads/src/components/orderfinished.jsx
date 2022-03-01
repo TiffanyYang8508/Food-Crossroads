@@ -21,7 +21,7 @@ class Orderfinished extends Component {
                     <Header />
                 </header>
 
-                <div className="container">
+                <div id="orderfinished" className="container">
                     <div className="order_finish_div">
                         <div className="order_finish">
                             <p style={{fontSize: "28px"}}><i className="fas fa-check"></i> 完成訂單</p> 
