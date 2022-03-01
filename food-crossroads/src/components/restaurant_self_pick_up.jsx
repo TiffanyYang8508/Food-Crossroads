@@ -355,6 +355,7 @@ class Restaurant_self_pick_up extends Component {
                         </table>
                     </div>
                 </section>
+                
                 <footer>
                     <div className="footer_link">
                         <a href="#">關於我們</a>
