@@ -543,12 +543,7 @@ button.btn_add:hover {
     {
         font-size: 32px;
     }
-    .footer_page {
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-    }
+
 }
 
 /* 大型螢幕 */
@@ -583,12 +578,7 @@ button.btn_add:hover {
     {
         font-size: 28px;
     }
-    .footer_page {
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-    }
+
 }
 
 /* 平板 */
@@ -628,13 +618,7 @@ button.btn_add:hover {
     {
         font-size: 26px;
     }
-    .footer_page {
-        position: fixed;
-        width: 100%;
-        height: 56px;
-        bottom: 0;
-        left: 0;
-    }
+
 }
 
 /* 手機 */
