@@ -100,6 +100,7 @@ th {
   border-radius: 5px;
   padding: 20px 0;
   width: 40%;
+  height: 600px;
 }
 
 .form_text {
@@ -173,6 +174,24 @@ th {
 }
 
 .member_editinfo_btn:hover {
+  background-color: #f04535;
+}
+
+#edit_member .member_editinfo_btn {
+  border-radius: 5px;
+  margin-top: 30px;
+  padding-top: 10px;
+  margin-left: 40px;
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  background-color: #8b1309;
+  transition: 0.3s;
+}
+
+#edit_member .member_editinfo_btn:hover {
   background-color: #f04535;
 }
 

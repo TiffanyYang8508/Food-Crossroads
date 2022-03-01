@@ -15,6 +15,7 @@ class Member_login extends Component {
         switch (res.data.status) {
           case "1":
             alert("登入成功");
+            window.location = "/member/login/success";
             break;
           case "0":
             alert("密碼錯誤");
