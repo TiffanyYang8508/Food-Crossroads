@@ -2,7 +2,7 @@ body {
   font-size: 16px;
 }
 
-.order_finish {
+#orderfinished .order_finish {
   width: 300px;
   height: 160px;
   border: solid 1.5px #707070;
@@ -11,11 +11,15 @@ body {
   margin: 0 auto;
 }
 
-.order_finish p {
+#orderfinished .buy_back_div {
+  margin-left: 407px;
+}
+
+#orderfinished .order_finish p {
   padding-top:20%;
 }
 
-.buy_back_btn {
+#orderfinished  .buy_back_btn {
   width: 120px;
   height: 30px;
   background-color: #403c3c;
@@ -24,7 +28,7 @@ body {
   font-size: 16px;
 }
 
- #back_to_home {
+#back_to_home {
  margin-top: 10px;
  margin-left: 55px;
 }
@@ -33,7 +37,7 @@ body {
   margin-top: 10px ;
 } 
 
-.order_finish_div{
+#orderfinished .order_finish_div{
   width: 300px;
   height: 200px;
   margin: 0 auto;
