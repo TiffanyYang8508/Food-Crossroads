@@ -347,15 +347,6 @@ margin-left: 10vw;
   display: none;
 }
 
-/* .footer_page {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-} */
-
-
-
 @media screen and (max-width:768px) {
     #order_page #table_order{
     width: 100%;

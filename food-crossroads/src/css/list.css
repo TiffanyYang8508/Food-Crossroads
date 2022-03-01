@@ -118,8 +118,11 @@
     line-height: 16px;
     font-size: 16px;
     padding: 15px;
-    border-bottom: 1px solid #ddd;
-    border-top: 1px solid #ddd;
+    border: 1px solid #ddd;
+}
+
+#search_list .tab_content li{
+    display: inline-block;
 }
 
 #search_list .tab_content span {
@@ -199,19 +202,18 @@
 } */
 
 #search_list .chk_css {
-    padding: 20px 20px 0 20px;
-    border-bottom: 1px solid #888888;
+    padding: 20px 0px 0 0px;
 }
 
 #search_list .chk_item {
     display: inline-block;
-    font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 #search_list .chk_chk {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
+    margin: 0 3px;
 }
 
 #search_list .chk_close {
@@ -262,7 +264,7 @@
 
 /* 餐廳列表 start */
 
-.rest_div {
+#search_list .rest_div {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -279,7 +281,7 @@
     text-decoration: none;
 }
 
-.rest_list {
+#search_list .rest_list {
     width: 100%;
     padding: 10px;
     border: 1px solid #999999;
@@ -288,38 +290,41 @@
     display: flex;
     align-items: center;
     margin: 0 1%;
-    margin-bottom: 2%;
+    margin-bottom: 4%;
 }
 
-.rest_img {
+#search_list .rest_img {
     width: 40%;
     margin-right: 10px;
 }
 
-.rest_list img {
+#search_list .rest_list img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.rest_text{
+#search_list .rest_text{
     width: 70%;
 }
 
-.rest_text h4{
+#search_list .rest_text h4{
     font-weight: 600;
 }
 
-.rest_text h5{
+#search_list .rest_text h5{
     font-size: 16px;
 }
 
-.rest_inline_div{
+#search_list .rest_inline_div{
     display: flex;
     justify-content: space-between;
 }
 
+#search_list .rest_text .fa-star{
+    color: #FCC106;
+}
 
 /* RWD start */
 
@@ -338,8 +343,8 @@
     }
     #search_list .tab_div {
         position: absolute;
-        top: 7.4%;
-        left: 27.5%;
+        top: 4.4%;
+        left: 29.6%;
         width: 44%;
     }
     #search_list .other_label {
@@ -350,8 +355,8 @@
     }
     #search_list .chk_div {
         position: absolute;
-        top: 7.4%;
-        left: 35.8%;
+        top: 4.4%;
+        left: 44.2%;
         width: 44%;
     }
     #search_list .chk_css {
@@ -362,9 +367,6 @@
     }
     #search_list .chk_item {
         display: inline-block;
-        font-size: 2vw;
-        margin-left: 6px;
-        margin-bottom: 15px;
     }
     #search_list .search_btn {
         width: 100px;
@@ -386,7 +388,7 @@
     }
     #search_list .tab_div {
         position: absolute;
-        top: 4%;
+        top: 2.54%;
         left: 28.4%;
         width: 56%;
     }
@@ -398,7 +400,7 @@
     }
     #search_list .chk_div {
         position: absolute;
-        top: 4%;
+        top: 2.54%;
         left: 28.2%;
         width: 56%;
     }
@@ -408,13 +410,10 @@
     #search_list .search_btn {
         width: 100px;
     }
-    .rest_div {
+    #search_list .rest_div .rest_list_a{
         width: 100%;
     }
-    .rest_list {
-        width: 100%;
-    }
-    .rest_img {
+    #search_list .rest_img {
         width: 30%;
     }
 }
@@ -435,7 +434,7 @@
         background-color: #fff;
         width: 75%;
         height: 40px;
-        margin-top: 20px;
+        margin-top: -50px;
         border: 1px solid #999999;
         border-radius: 5px;
         cursor: pointer;
@@ -461,7 +460,6 @@
     }
     #search_list .turn_off {
         background-color: rgb(236, 236, 236);
-        font-size: 4vw;
     }
     #search_list .mobile_inline_div {
         padding: 20px 50px 50px 50px;
@@ -486,7 +484,6 @@
         display: none;
     }
     #search_list .mobile_tab_css label {
-        font-size: 2.6vw;
         width: 80%;
         border-bottom: 1.5px solid #d1d1d1;
         display: block;
@@ -496,10 +493,26 @@
     }
     #search_list .mobile_tab_content span {
         display: block;
-        width: 80%;
+        width: 10%;
         border-bottom: 1px solid rgb(224, 224, 224);
-        font-size: 2.3vw;
         margin-bottom: 10px;
+        cursor: pointer;
+        position: relative;
+    }
+    #search_list .mobile_tab_content span::before{
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 40%;
+        width: 10%;
+        height: 1px;        
+        transition: 0.3s;
+    }
+    #search_list .mobile_tab_content span:hover::before{
+        content: "";
+        left: -4px;
+        width: 100%;
+        background-color: #999999;
     }
     #search_list .other_label {
         width: 49%;
@@ -518,8 +531,12 @@
         margin: 10px;
     }
     #search_list .mobile_chk_item {
-        font-size: 2.5vw;
         margin-right: 50px;
+    }
+    #search_list .mobile_chk_chk {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
     }
     #search_list .search_btn {
         margin-top: 0px;

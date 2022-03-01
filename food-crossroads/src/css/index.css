@@ -333,6 +333,9 @@
     background-color: grey;     
 }
 
+.blank{
+    height: 80px;
+}
 
 /* 首頁 end */
 
@@ -485,7 +488,6 @@
         line-height: 40px;
     }
     #search_box .mobile_div {
-        font-size: 3vw;
         position: fixed;
         top: 0;
         left: 0;
@@ -496,7 +498,7 @@
     }
     #search_box .turn_off {
         background-color: rgb(236, 236, 236);
-        font-size: 4vw;
+        font-size: 32px;
     }
     #search_box .mobile_inline_div {
         padding: 20px 50px 50px 50px;
@@ -519,7 +521,6 @@
         display: none;
     }
     #search_box .mobile_tab_css label {
-        font-size: 2.6vw;
         width: 80%;
         border-bottom: 1.5px solid #d1d1d1;
         display: block;
@@ -529,10 +530,26 @@
     }
     #search_box .mobile_tab_content span {
         display: block;
-        width: 80%;
+        width: 10%;
         border-bottom: 1px solid rgb(224, 224, 224);
-        font-size: 2.3vw;
         margin-bottom: 10px;
+        cursor: pointer;
+        position: relative;
+    }
+    #search_box .mobile_tab_content span::before{
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 40%;
+        width: 10%;
+        height: 1px;        
+        transition: 0.3s;
+    }
+    #search_box .mobile_tab_content span:hover::before{
+        content: "";
+        left: -4px;
+        width: 100%;
+        background-color: #999999;
     }
     #search_box .other_label {
         width: 49%;
@@ -550,7 +567,6 @@
         margin: 10px;
     }
     #search_box .mobile_chk_item {
-        font-size: 2.5vw;
         margin-right: 50px;
     }
     #search_box .search_btn {
