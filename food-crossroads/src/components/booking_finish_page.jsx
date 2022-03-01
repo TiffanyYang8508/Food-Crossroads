@@ -78,7 +78,7 @@ class Booking_finish_page extends Component {
                                         <a href="/bookingmanagement/:id">
                                             <input type="button" className="finish_btn_booking_manage" value="訂位管理" />
                                         </a>
-                                        <a href="/restaurant/page">
+                                        <a href="/restaurant/page/member">
                                             <input type="button" className="finish_btn_to_restaurant_page" value="回到餐聽" />
                                         </a>
                                     </div>

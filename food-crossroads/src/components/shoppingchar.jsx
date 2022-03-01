@@ -10,17 +10,12 @@ class Shoppingchar extends Component {
         shoppingcharItem: { food_name: "", food_amount: "" }
     }
 
-    // loginClick = async () => {
-    //     console.log("OK");
-    //     await new Axios.get("http://localhost:8000/shoppingchar/:id", this.state.member)
-    //         .then((res) => {
-    //             if (res.data.status !== "1") {
-    //                 $("#reportMessage").text(res.data.message);
-    //             }
-    //         })
-    //         .catch((error) => { console.error(error) });
 
-    // }
+    async componentDidMount(){
+        var url = `http://localhost:8000/shoppingchar`;
+        // await 
+    }
+
 
 
     render() {

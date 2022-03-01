@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "./header";
+import logo from "../img/logo.png";
 import Footer from "./footer";
 import "../css/member.css";
 import Axios from "axios";
@@ -52,11 +52,41 @@ class EditMemberpwd extends Component {
       });
   };
 
+  BackButtonClick = async () => {
+    window.location = "/member/1";
+  };
+
   render() {
     return (
       <React.Fragment>
-        <header className="header_page">
-          <Header />
+        <header id="header_page">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <a className="navbar-brand" href="/">
+              <img src={logo} alt="LOGO" />
+            </a>
+            <div className="nav_icon">
+              <a className="nav_a" href="/restaurant/list">
+                <i className="fas fa-store"></i>餐廳列表
+              </a>
+              <a className="nav_a" href="/orderpage">
+                <i className="fas fa-shopping-cart"></i>購物車
+              </a>
+              <a className="nav_a" href="/member/1">
+                <i className="fas fa-user-circle"></i>李曉明
+              </a>
+            </div>
+            <div className="rwd_icon">
+              <a className="nav_a" href="/restaurant/list">
+                <i className="fas fa-store"></i>
+              </a>
+              <a className="nav_a" href="/orderpage">
+                <i className="fas fa-shopping-cart"></i>
+              </a>
+              <a className="nav_a" href="/member/login">
+                <i className="fas fa-user-circle"></i>
+              </a>
+            </div>
+          </nav>
         </header>
 
         <aside class="aside_menu">
@@ -170,7 +200,7 @@ class EditMemberpwd extends Component {
                   <div class="edit_btn_div">
                     <button
                       type="button"
-                      onclick="confirm()"
+                      onClick={this.BackButtonClick}
                       class="member_back_btn"
                     >
                       返回
