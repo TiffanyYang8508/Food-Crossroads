@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "../img/logo.png";
 import Footer from "./footer";
-import "../css/member.css";
+import "../css/member_editpwd.css";
 import Axios from "axios";
 
 class EditMemberpwd extends Component {
@@ -43,6 +43,10 @@ class EditMemberpwd extends Component {
             alert(res.data.err);
             break;
           case "2":
+            alert(res.data.err);
+            window.location = `/member/${this.props.match.params.id}`;
+            break;
+          case "3":
             alert(res.data.err);
             break;
         }
@@ -149,7 +153,7 @@ class EditMemberpwd extends Component {
           </label>
         </div>
 
-        <section id="edit_member">
+        <section id="edit_pwd">
           <div class="container-fluid member_div">
             <div class="row">
               <div class="col-md-12">

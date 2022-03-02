@@ -46,209 +46,22 @@
 
 /* 側邊欄 end */
 
-.member_info {
-  margin-top: 60px;
-}
-
-.member_contain {
-  padding-top: 20px;
-}
-
-.member_edit_btn {
-  margin-left: 200px;
-  border-radius: 5px;
-  margin-top: 30px;
-}
-
 th {
   font-weight: bolder;
   font-size: 22px;
   text-align: center;
 }
 
-.title_member {
-  font-size: 35px;
-  font-weight: bold;
-  text-align: center;
-  margin-left: 30px;
-}
-
-.title_member_edit {
-  font-size: 35px;
-  font-weight: bold;
-  text-align: center;
-  margin-left: 45px;
-}
-
-.edit_label {
-  margin-right: 20px;
-}
-
-#member_section,
-#edit_member {
-  display: flex;
-  justify-content: center;
-  margin-top: 2%;
-  width: 100%;
-}
-
-.member_div {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  align-items: center;
-  border-radius: 5px;
-  padding: 20px 0;
-  width: 40%;
-  height: 600px;
-}
-
-.form_text {
-  font-size: 16px;
-  letter-spacing: 10px;
-}
-.editmember_info {
-  margin-left: 40px;
-}
-.edit_info {
-  /* position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, 50%); */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
-}
-
-.edit_info input[type="text"],
-.edit_info input[type="email"],
-.edit_info input[type="password"] {
-  width: 300px;
-}
-
-#edit_member .form-control {
-  width: 300px;
-}
-
-#edit_member .edit_chk-paswrd {
-  width: 285px;
-}
-
-.member_form {
-  font-weight: bold;
-}
-
-.btn_div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-.btn_div a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.member_editpwd_btn {
-  border-radius: 5px;
-  margin-top: 30px;
-  padding-top: 6px;
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  font-size: 18px;
-  border: none;
-  background-color: #403c3c;
-  transition: 0.3s;
-}
-
-.member_editinfo_btn {
-  border-radius: 5px;
-  margin-top: 30px;
-  padding-top: 6px;
-  margin-left: 40px;
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  font-size: 18px;
-  border: none;
-  background-color: #403c3c;
-  transition: 0.3s;
-}
-
-.member_editinfo_btn:hover {
-  background-color: #f04535;
-}
-
-#edit_member .member_editinfo_btn {
-  border-radius: 5px;
-  margin-top: 30px;
-  padding-top: 0px;
-  margin-left: 40px;
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  font-size: 18px;
-  border: none;
-  background-color: #8b1309;
-  transition: 0.3s;
-}
-
-#edit_member .member_editinfo_btn:hover {
-  background-color: #f04535;
-}
-
-.member_editpwd_btn:hover {
-  background-color: #f04535;
-}
-
-#edit_member .member_confirm_btn {
-  border-radius: 5px;
-  margin-top: 30px;
-  margin-left: 50px;
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  font-size: 18px;
-  border: none;
-  background-color: #8b1309;
-  transition: 0.3s;
-}
-
-#edit_member .member_confirm_btn:hover {
-  background-color: red;
-}
-#edit_member .member_back_btn {
-  margin-left: 30px;
-  border-radius: 5px;
-  margin-top: 30px;
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  font-size: 18px;
-  border: none;
-  background-color: #403c3c;
-  transition: 0.3s;
-}
-
-#edit_member .member_back_btn:hover {
-  background-color: #8d8c8c;
-}
-
-.table_container {
-  width: 100%;
-}
-
 /* booking_manage start */
 
-#booking_manage {
+#order_manage {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
   height: 100%;
-  margin-left: 12%;
+  position: relative;
+  left: -130px;
   /* border: 1px solid black; */
 }
 
@@ -257,26 +70,26 @@ th {
   display: none;
 }
 
-#booking_manage .table th {
+#order_manage .table th {
   border-bottom: 1px solid #403c3c;
 }
 
-#booking_manage .table th {
+#order_manage .table th {
   width: 10%;
 }
 
-#booking_manage td {
+#order_manage td {
   text-align: center;
 }
 
-#booking_manage .detail_modal_body {
+#order_manage .detail_modal {
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: 0px;
+  margin-left: 80px;
   font-size: 20px;
+  font-weight: 600;
 }
-
-.detail_modal {
+#order_manage .groupdetail_modal {
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: 80px;
@@ -295,7 +108,7 @@ th {
   transition: 0.3s;
 }
 
-#booking_manage .table_title {
+#order_manage .table_title {
   position: relative;
   right: 0px;
 }
@@ -316,23 +129,25 @@ th {
 .detail_btn {
   background-color: #403c3c;
   color: #fff;
+  margin-left: -270px;
 }
 
 .detail_btn:hover {
   background-color: #524d4d;
 }
 
-.comment_btn {
-  margin-left: -360px;
+#order_manage .order_comment_btn {
+  margin-left: -208px;
+  margin-top: 11px;
   background-color: #8b1309;
   color: #fff;
 }
 
-.comment_btn:hover {
+#order_manage .comment_btn:hover {
   background-color: #a30f01;
 }
 
-.together_btn {
+#order_manage .together_btn {
   border: 1px solid red;
   margin-left: 17px;
   background-color: #fff;
@@ -341,8 +156,8 @@ th {
   padding: 5px 8px;
   transition: 0.3s;
 }
-.order_comment_btn1 {
-  margin-left: -320px;
+#order_manage .order_comment_btn1 {
+  margin-left: -640px;
   background-color: #8b1309;
   color: #fff;
 }
@@ -351,130 +166,6 @@ th {
   background-color: #a30f01;
 }
 
-/* .mobile_td{
-      display: none;
-  } */
-
-/* order_manage start */
-
-#order_manage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  margin-left: 18%;
-}
-
-#order_manage .modal-title {
-  font-size: 24px;
-}
-
-#order_manage .table th {
-  border-bottom: 1px solid #403c3c;
-}
-
-#order_manage .table th {
-  width: 10%;
-}
-
-#order_manage td {
-  text-align: center;
-}
-
-.order_comment_btn {
-  background-color: #8b1309;
-  margin-left: -270px;
-  color: #fff;
-}
-
-.order_comment_btn:hover {
-  background-color: #a30f01;
-}
-
-.rank_modal_body {
-  position: relative;
-  margin-top: 100px;
-  margin-bottom: 200px;
-  margin-left: 150px;
-}
-
-.rank_modal_title {
-  position: absolute;
-  font-size: 28px;
-  left: -50px;
-  top: -40px;
-}
-
-.rank_modal_comment {
-  position: absolute;
-  left: -35px;
-  top: 90px;
-  border-radius: 8px;
-  height: 100px;
-}
-
-.modal_ok_btn {
-  font-size: 18px;
-  background-color: #8b1309;
-  color: #fff;
-  border-radius: 5px;
-  border: none;
-  padding: 10px 20px;
-}
-
-.modal_ok_btn:hover {
-  background-color: #a30f01;
-}
-
-.btn_close {
-  font-size: 18px;
-  background-color: #403c3c;
-  color: #fff;
-  border-radius: 5px;
-  border: none;
-  padding: 10px 20px;
-}
-
-.btn_close:hover {
-  background-color: #524d4d;
-}
-
-.btn_commentclose {
-  font-size: 18px;
-  background-color: #403c3c;
-  color: #fff;
-  border-radius: 5px;
-  border: none;
-  padding: 10px 20px;
-}
-
-.btn_commentclose:hover {
-  background-color: #524d4d;
-}
-.rank_modal_star {
-  margin-top: 20px;
-  padding-top: 20px;
-}
-
-.star {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #ccc;
-  display: inline-block;
-  margin-right: 5px;
-  cursor: pointer;
-}
-
-.stars {
-  color: orange;
-  margin-left: 10px;
-}
-
-.test {
-  display: none;
-}
 /* RWD start */
 
 /* 超大型螢幕 */
@@ -511,7 +202,7 @@ th {
     left: 100%;
     transition: 0.6s;
   }
-  #booking_manage,
+  #order_manage,
   #order_manage {
     width: 100%;
     margin-left: 0%;
@@ -545,7 +236,7 @@ th {
 /* 平板 */
 
 @media screen and (max-width: 768px) {
-  #booking_manage,
+  #order_manage,
   #order_manage {
     display: none;
   }

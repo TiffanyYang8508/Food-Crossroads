@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../css/member.css";
+import "../css/member_editmember.css";
 import logo from "../img/logo.png";
 import Footer from "./footer";
 import Axios from "axios";
@@ -207,13 +207,15 @@ class EditMember extends Component {
                       type="button"
                       onClick={this.backbtnClick}
                       className="member_back_btn"
-                    >返回
+                    >
+                      返回
                     </button>
                     <button
                       type="button"
                       onClick={this.okbtnClick}
                       className="member_confirm_btn"
-                    >確定修改
+                    >
+                      確定修改
                     </button>
                   </div>
                 </form>
