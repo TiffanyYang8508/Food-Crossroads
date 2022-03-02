@@ -78,36 +78,37 @@ class BookingRecord extends Component {
           </nav>
         </header>
 
-        <aside class="aside_menu">
-          <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a href={`/member/${this.props.match.params.id}`}>會員資料</a>
-                </h4>
+          <aside id="member_aside">
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a href={`/member/${this.props.match.params.id}`}>會員資料</a>
+                  </h4>
+                </div>
+              </div>
+              <div class="panel panel-default ">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a href={`/bookingmanagement/${this.props.match.params.id}`}>
+                      訂位管理
+                    </a>
+                  </h4>
+                </div>
+              </div>
+              <div class="panel panel-default default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a href="#">訂餐管理</a>
+                  </h4>
+                </div>
               </div>
             </div>
-            <div class="panel panel-default ">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a href={`/bookingmanagement/${this.props.match.params.id}`}>
-                    訂位管理
-                  </a>
-                </h4>
-              </div>
-            </div>
-            <div class="panel panel-default default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a href="#">訂餐管理</a>
-                </h4>
-              </div>
-            </div>
-          </div>
-        </aside>
+          </aside>
+
 
         <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
-        <div class="mobile_aside_menu">
+        <div id="mobile_member_aside">
           <div class="panel-group" id="accordion">
             <div class="panel panel-default default">
               <div class="panel-heading">

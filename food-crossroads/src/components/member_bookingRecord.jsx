@@ -83,7 +83,7 @@ class BookingRecord extends Component {
           </nav>
         </header>
 
-        <aside className="aside_menu">
+        <aside id="member_aside">
           <div className="panel-group" id="accordion">
             <div className="panel panel-default">
               <div className="panel-heading">
@@ -112,26 +112,26 @@ class BookingRecord extends Component {
         </aside>
 
         <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
-        <div className="mobile_aside_menu">
+        <div id="mobile_member_aside">
           <div className="panel-group" id="accordion">
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <h4 className="panel-title">
+                  <a href="/member/:id">會員資料</a>
+                </h4>
+              </div>
+            </div>
             <div className="panel panel-default default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a href="#">會員資料</a>
+                  <a href="#">訂位管理</a>
                 </h4>
               </div>
             </div>
             <div className="panel panel-default">
               <div className="panel-heading">
                 <h4 className="panel-title">
-                  <a href="booking_manage.html">訂位管理</a>
-                </h4>
-              </div>
-            </div>
-            <div className="panel panel-default">
-              <div className="panel-heading">
-                <h4 className="panel-title">
-                  <a href="order_manage.html">訂餐管理</a>
+                  <a href="/ordermanagement/:id">訂餐管理</a>
                 </h4>
               </div>
             </div>

@@ -79,7 +79,7 @@ class EditMember extends Component {
           </nav>
         </header>
 
-        <aside className="aside_menu">
+        <aside id="member_aside">
           <div className="panel-group" id="accordion">
             <div className="panel panel-default">
               <div className="panel-heading">
@@ -110,7 +110,7 @@ class EditMember extends Component {
         </aside>
 
         <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
-        <div className="mobile_aside_menu">
+        <div id="mobile_member_aside">
           <div className="panel-group" id="accordion">
             <div className="panel panel-default">
               <div className="panel-heading">

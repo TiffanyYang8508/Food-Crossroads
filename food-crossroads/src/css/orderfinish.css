@@ -1,44 +1,35 @@
-body {
-  font-size: 16px;
+#orderfinished{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
 }
 
 #orderfinished .order_finish {
-  width: 300px;
-  height: 160px;
-  border: solid 1.5px #707070;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
   border-radius: 5px;
-  text-align: center;
-  margin: 0 auto;
+  width: 50%;
+  border: 1px solid #403C3C;
+  padding: 2% 1% 10% 1%;
 }
 
 #orderfinished .buy_back_div {
-  margin-left: 407px;
+  display: flex;
+  justify-content: center;
 }
 
 #orderfinished .order_finish p {
   padding-top:20%;
+  font-size: 28px;
 }
 
 #orderfinished  .buy_back_btn {
-  width: 120px;
-  height: 30px;
+  padding: 10px 15px;
   background-color: #403c3c;
   color: white;
   border-radius: 5px;
-  font-size: 16px;
-}
-
-#back_to_home {
- margin-top: 10px;
- margin-left: 55px;
-}
-
-#check_order{
-  margin-top: 10px ;
-} 
-
-#orderfinished .order_finish_div{
-  width: 300px;
-  height: 200px;
-  margin: 0 auto;
+  margin: 0 20px;
 }

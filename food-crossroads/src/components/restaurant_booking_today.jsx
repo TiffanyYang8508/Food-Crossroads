@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from "axios";
 import logo from "../img/logo.png";
+import Footer from "./footer";
 import $ from "jquery";
 import "../css/restaurant_booking_today.css"
 import Collapse from "react-bootstrap/Collapse";
@@ -39,24 +40,23 @@ class Restaurant_booking_today extends Component {
                         <a className="navbar-brand" href="/"><img src={logo} alt="LOGO" /></a>
                     </nav>
                 </header>
-
                 <aside id="restaurant_today_booking_aside">
-                    <div className="panel-group" id="accordion">
+                    <div>
                         <div className="panel panel-default">
                             <Collapse className="panel-heading" in={this.state.open}>
-                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
+                                <h4 className="panel-title"><a href="#collapseOne">訂位管理</a>
                                 </h4>
                             </Collapse>
-                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open} >
+                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}>
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="">今日訂位</a>
+                                    <a href="">今日訂位</a>
+                                </div>
+                            </Collapse >
+                            <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
+                                <div className="little_title">
+                                    <a href="/restaurant/booking/history">歷史訂位紀錄</a>
                                 </div>
                             </Collapse>
-                            <div id="collapseOne" className="panel-collapse collapse">
-                                <div className="little_title">
-                                    <a data-parent="#accordion" href="">歷史訂位紀錄</a>
-                                </div>
-                            </div>
                         </div>
                         <div className="panel panel-default">
                             <div className="panel-heading">
@@ -105,8 +105,9 @@ class Restaurant_booking_today extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                {this.state.booking_detail.map((item, index) => (
-                                    <tr>
+
+                                {/* {this.state.booking_detail.map((item, index) => (
+                                    <tr key={index}>
                                         <td>
                                             <div className="checkbox">
                                                 <label>
@@ -163,7 +164,7 @@ class Restaurant_booking_today extends Component {
                                             </div>
                                         </div>
                                     </tr>
-                                ))}
+                                ))} */}
                                 <tr>
                                     <td>
                                         <div className="checkbox">
@@ -172,39 +173,33 @@ class Restaurant_booking_today extends Component {
                                             </label>
                                         </div>
                                     </td>
-                                    <td>00127</td>
-                                    <td>2022/01/18</td>
+                                    <td>00125</td>
+                                    <td>2022/03/07</td>
                                     <td>16:30</td>
-                                    <td>5</td>
-                                    <td>陳冠維</td>
-                                    <td>0979201120</td>
+                                    <td>6</td>
+                                    <td>李曉明</td>
+                                    <td>0987654321</td>
                                     <td>
-                                        <button className="detail_btn" data-toggle="modal" data-target="#detailModal">
+                                        <button className="detail_btn" >
                                             詳細內容
                                         </button>
                                     </td>
                                     <td>
-                                        <button className="cancel_btn" data-toggle="modal" data-target="#detailModal2">
+                                        <button className="cancel_btn" >
                                             取消
                                         </button>
                                     </td>
                                 </tr>
 
+
                             </tbody>
                         </table>
+                    
                     </div>
                 </section>
 
-                <footer>
-                    <div className="footer_link">
-                        <a href="#">關於我們</a>
-                        <a href="#">商家入口</a>
-                        <a href="#">常見問題</a>
-                        <a href="#">聯絡我們</a>
-                    </div>
-                    <div className="footer_text">
-                        <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
-                    </div>
+                <footer className="footer_page">
+                    <Footer />
                 </footer>
             </>
         );
