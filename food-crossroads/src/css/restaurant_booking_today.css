@@ -14,10 +14,17 @@
 
 #restaurant_today_booking_aside .default{
     background-color: #8B1309;
+    width: 230px;
 }
 
 #restaurant_today_booking_aside .panel-title {
     padding-top: 8px;
+}
+
+.panel-heading a {
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
 }
 
 #restaurant_today_booking_aside .panel-heading .panel-title a {
@@ -36,7 +43,7 @@
 }
 
 #restaurant_today_booking_aside .little_title:hover {
-    background-color: #8B1309;
+    background-color:#403C3C;
 }
 
 #restaurant_today_booking_aside .panel .little_title a  {

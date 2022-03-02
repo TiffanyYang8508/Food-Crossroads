@@ -10,6 +10,7 @@
   height: 100%;
   position: fixed;
   float: left;
+  z-index: 4;
 }
 
 #member_aside .mobile_aside_menu {
