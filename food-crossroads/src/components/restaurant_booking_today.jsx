@@ -44,19 +44,22 @@ class Restaurant_booking_today extends Component {
                     <div className="panel-group" id="accordion">
                         <div className="panel panel-default">
                             <Collapse className="panel-heading" in={this.state.open}>
-                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
+                                <h4 className="panel-title"><a href="#collapseOne">訂位管理</a>
                                 </h4>
                             </Collapse>
-                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open} >
+                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}
+                                
+                                aria-controls="example-collapse-text"
+                                aria-expanded={this.state.open}>
                                 <div className="little_title">
                                     <a data-parent="#accordion" href="">今日訂位</a>
                                 </div>
-                            </Collapse>
-                            <div id="collapseOne" className="panel-collapse collapse">
+                            </Collapse >
+                            <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
                                 <div className="little_title">
                                     <a data-parent="#accordion" href="">歷史訂位紀錄</a>
                                 </div>
-                            </div>
+                            </Collapse>
                         </div>
                         <div className="panel panel-default">
                             <div className="panel-heading">
