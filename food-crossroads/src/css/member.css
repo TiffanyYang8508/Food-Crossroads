@@ -4,7 +4,7 @@
   z-index: -1;
 }
 
-.aside_menu {
+#member_aside .aside_menu {
   background-color: #403c3c;
   width: 230px;
   height: 100%;
@@ -13,26 +13,26 @@
   z-index: 4;
 }
 
-.mobile_aside_menu {
+#member_aside .mobile_aside_menu {
   display: none;
 }
 
-.default {
+#member_aside .default {
   background-color: #8b1309;
 }
 
-.panel-default {
+#member_aside .panel-default {
   /* border: 1px solid red; */
   border-bottom: 1px solid white;
   padding: 5px;
   width: 100%;
 }
 
-.panel-title {
+#member_aside .panel-title {
   padding-top: 8px;
 }
 
-.panel .panel-heading a {
+#member_aside .panel .panel-heading a {
   font-weight: 600;
   color: white;
   text-decoration: none;
@@ -40,7 +40,7 @@
   width: 100%;
 }
 
-.panel-default:hover {
+#member_aside .panel-default:hover {
   background-color: #8b1309;
 }
 

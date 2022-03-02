@@ -138,7 +138,9 @@
 /* 平板 */
 
 @media screen and (max-width:768px) {
-
+    .member_login_container{
+        margin: 10px auto;
+    }
 }
 
 
@@ -146,7 +148,7 @@
 
 @media screen and (max-width:576px) {
     .member_login_container{
-        border: none;
+        margin: 80px auto;
     }
 }
 

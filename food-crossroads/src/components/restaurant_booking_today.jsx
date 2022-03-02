@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from "axios";
 import logo from "../img/logo.png";
+import Footer from "./footer";
 import $ from "jquery";
 import "../css/restaurant_booking_today.css"
 import Collapse from "react-bootstrap/Collapse";
@@ -43,15 +44,15 @@ class Restaurant_booking_today extends Component {
                 <aside id="restaurant_today_booking_aside">
                     <div className="panel-group" id="accordion">
                         <div className="panel panel-default">
-                            <Collapse className="panel-heading" in={this.state.open}>
+                            <div className="panel-heading">
                                 <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
                                 </h4>
-                            </Collapse>
-                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open} >
+                            </div>
+                            <div id="collapseOne" className="panel-collapse collapse default">
                                 <div className="little_title">
                                     <a data-parent="#accordion" href="">今日訂位</a>
                                 </div>
-                            </Collapse>
+                            </div>
                             <div id="collapseOne" className="panel-collapse collapse">
                                 <div className="little_title">
                                     <a data-parent="#accordion" href="">歷史訂位紀錄</a>
@@ -106,7 +107,7 @@ class Restaurant_booking_today extends Component {
                             </thead>
                             <tbody>
                                 {this.state.booking_detail.map((item, index) => (
-                                    <tr>
+                                    <tr key={index}>
                                         <td>
                                             <div className="checkbox">
                                                 <label>
@@ -195,16 +196,8 @@ class Restaurant_booking_today extends Component {
                     </div>
                 </section>
 
-                <footer>
-                    <div className="footer_link">
-                        <a href="#">關於我們</a>
-                        <a href="#">商家入口</a>
-                        <a href="#">常見問題</a>
-                        <a href="#">聯絡我們</a>
-                    </div>
-                    <div className="footer_text">
-                        <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
-                    </div>
+                <footer className="footer_page">
+                    <Footer />
                 </footer>
             </>
         );

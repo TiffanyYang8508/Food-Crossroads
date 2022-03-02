@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import logo from "../img/logo.png";
+import Footer from "./footer";
 import "../css/restaurant_booking_history.css"
-import "../fontawesome-free-5.15.4-web/css/all.css";
-import "../css/style.css";
 class Restaurant_booking_history extends Component {
     state = {}
     render() {
@@ -162,7 +161,7 @@ class Restaurant_booking_history extends Component {
                                         </button>
                                     </td>
                                 </tr>
-                                
+
                                 <div className="modal fade" id="detailModal">
                                     <div className="modal-dialog modal-dialog-centered">
                                         <div className="modal-content">
@@ -196,17 +195,8 @@ class Restaurant_booking_history extends Component {
                     </div>
                 </section>
 
-
-                <footer>
-                    <div className="footer_link">
-                        <a href="#">關於我們</a>
-                        <a href="#">商家入口</a>
-                        <a href="#">常見問題</a>
-                        <a href="#">聯絡我們</a>
-                    </div>
-                    <div className="footer_text">
-                        <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
-                    </div>
+                <footer className="footer_page">
+                    <Footer />
                 </footer>
             </React.Fragment>
         );

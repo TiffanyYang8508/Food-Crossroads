@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import "../css/restaurant_self_pick_up_history.css";
 import logo from "../img/logo.png";
-import "../css/style.css";
+import Footer from "./footer";
 
 class Restaurant_self_pick_up_history extends Component {
     state = {}
     render() {
         return (
-            <>
+            <React.Fragment>
                 <header id="header_page">
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <a className="navbar-brand" href="/"><img src={logo} alt="LOGO" /></a>
@@ -165,18 +165,10 @@ class Restaurant_self_pick_up_history extends Component {
 
                 </section>
 
-                <footer>
-                    <div className="footer_link">
-                        <a href="#">關於我們</a>
-                        <a href="#">商家入口</a>
-                        <a href="#">常見問題</a>
-                        <a href="#">聯絡我們</a>
-                    </div>
-                    <div className="footer_text">
-                        <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
-                    </div>
+                <footer className="footer_page">
+                    <Footer />
                 </footer>
-            </>
+            </React.Fragment>
         );
     }
 }
