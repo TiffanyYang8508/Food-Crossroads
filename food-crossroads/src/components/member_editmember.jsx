@@ -184,7 +184,7 @@ class EditMember extends Component {
                       id="pwd"
                       value={this.state.Member.user_pwd}
                       name="pwd"
-                      required
+                      disabled
                     />
                     <div className="invalid-feedback">請輸入密碼</div>
                   </div>
@@ -207,15 +207,13 @@ class EditMember extends Component {
                       type="button"
                       onClick={this.backbtnClick}
                       className="member_back_btn"
-                    >
-                      返回
+                    >返回
                     </button>
                     <button
                       type="button"
                       onClick={this.okbtnClick}
                       className="member_confirm_btn"
-                    >
-                      確定修改
+                    >確定修改
                     </button>
                   </div>
                 </form>
