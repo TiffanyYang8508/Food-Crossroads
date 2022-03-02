@@ -1,0 +1,254 @@
+/* shopping char start */
+
+
+/* 購物車欄位 start */
+.breadcrumb .breadcrumb-item a,.active{
+  font-size: 18px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+#shoppingchar .table {
+  border: 1px solid #999999;
+  border-radius: 5px;
+}
+
+#shoppingchar table th {
+  text-align: center;
+}
+
+#shoppingchar .tr_title {
+  background-color: #403c3c;
+  color: #fff;
+   
+}
+#shoppingchar .tr_title h5{
+  text-align: left;
+}
+
+#shopping-row td {
+  height: 140px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#shoppingchar .qty-squre {
+  border: 1px solid #999999;
+  overflow: hidden;
+  width: 100px;
+}
+
+#shoppingchar .qty {
+  width: 39px;
+  height: 20px;
+  text-align: center;
+  border: none;
+}
+
+#shoppingchar .qty-btn {
+  width: 25px;
+  height: 25px;
+  border: none;
+}
+
+#shoppingchar .delete-shopping {
+  background-color: #8b1309;
+  color: #fff;
+}
+
+.shopping-checkbox {
+  height: 24px;
+  width: 24px;
+}
+
+#shoppingchar td span {
+  display: inline-block;
+  text-align: center;
+}
+
+#shoppingchar .wrapper img {
+  /* display: inline; */
+  margin-left: 0;
+  overflow: hidden;
+  width: 140px;
+}
+
+.all-squre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  opacity: 0.9;
+  box-shadow: 1px 5px 10px 1px #403c3c;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  position: sticky;
+  bottom: 42px;
+  left: 0;
+  margin: 5% 0;
+}
+
+
+/* 購物車欄位 end */
+
+
+/* 頁尾固定區塊(結帳) start */
+
+#shoppingchar .all-squre .shopping-checkbox {
+  width: 50px;
+  margin-left: 11px;
+}
+
+#shoppingchar .buy-btn {
+  width: 120px;
+  height: 40px;
+  background-color: #8b1309;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+#sum-row td {
+  height: 80px;
+  vertical-align: middle;
+}
+
+
+/* 頁尾固定區塊(結帳) end*/
+
+
+/* 手機板 start */
+
+#mobile_shopping {
+  display: none;
+}
+
+.mobile_shopping_div {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.mobile_shopping_div input[type=checkbox] {
+  margin: 0 2%;
+}
+
+.mobile_shopping_img {
+  width: 100px;
+  margin-right: 5%;
+}
+
+.mobile_shopping_text {
+  padding: 5% 2%;
+}
+
+#shoppingchar .mobile_span {
+  /* margin-top: -5px; */
+  display: block;
+}
+
+#shoppingchar .mobile_delete {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+
+#shoppingchar .mobile_delete button {
+  background-color: #8b1309;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  /* padding: 100% 10px; */
+}
+
+
+/* RWD */
+
+
+/* 超大型螢幕 */
+
+@media screen and (max-width:1200px) {
+  .all-squre .shopping-checkbox {
+      margin-left: 2px;
+  }
+}
+
+
+/* 大型螢幕 */
+
+@media screen and (max-width:992px) {
+  .all-squre .shopping-checkbox {
+      margin-left: -5px;
+  }
+}
+
+
+/* 平板 */
+
+@media screen and (max-width:768px) {
+  #shoppingchar table tr td:nth-child(2) {
+      width: 0;
+  }
+  #shopping-row img {
+      display: none;
+  }
+   #ordername,
+ #shopping-row .ordername {
+      width: 50px;
+      position: relative;
+      right: 20px;
+  }
+  .shopping-checkbox {
+      height: 20px;
+      width: 20px;
+  }
+  .all-squre .shopping-checkbox {
+      margin-left: -8px;
+  }
+  /* .all-squre tr td:nth-child(1){
+      width: 200px;
+      text-align: start;
+  } */
+  /* .all-squre tr td:nth-child(2){
+      width:50px;
+      text-align: end;
+  }
+  .all-squre tr td:nth-child(3){
+      width:20px;
+      text-align: end;
+  } */
+}
+
+
+/* 手機 */
+
+@media screen and (max-width:576px) {
+  #shopping {
+      display: none;
+  }
+  #mobile_shopping {
+      all: unset;
+  }
+  .all-squre .shopping-checkbox {
+      margin-left: -10px;
+  }
+
+}
+
+
+/* 小手機 */
+
+@media screen and (max-width:480px) {
+  .all-squre .shopping-checkbox {
+      margin-left: -12px;
+  }
+}
+
+
+/* shopping char end*/

@@ -1,0 +1,35 @@
+#orderfinished{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#orderfinished .order_finish {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  border-radius: 5px;
+  width: 50%;
+  border: 1px solid #403C3C;
+  padding: 2% 1% 10% 1%;
+}
+
+#orderfinished .buy_back_div {
+  display: flex;
+  justify-content: center;
+}
+
+#orderfinished .order_finish p {
+  padding-top:20%;
+  font-size: 28px;
+}
+
+#orderfinished  .buy_back_btn {
+  padding: 10px 15px;
+  background-color: #403c3c;
+  color: white;
+  border-radius: 5px;
+  margin: 0 20px;
+}

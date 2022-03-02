@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css" />
+    <!-- mainstyle -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- index -->
+    <link rel="stylesheet" href="css/member.css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <!-- 導覽列 start -->
+
+    <div class="header_page"></div>
+
+    <!-- 導覽列 over -->
+
+    <aside class="aside_menu">
+
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a
+                href="member.html"
+                >會員資料</a
+              >
+            </h4>
+          </div>
+
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a
+                href="booking_manage.html"
+                >訂位管理</a
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-default default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#"
+                >訂餐管理</a
+              >
+            </h4>
+          </div>
+        </div>
+      </div>
+
+
+    </aside>
+
+    <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
+    <div class="mobile_aside_menu">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title"><a href="member.html">會員資料</a></h4>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a href="booking_manage.html">訂位管理</a>
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-default default">
+          <div class="panel-heading">
+            <h4 class="panel-title"><a href="#">訂餐管理</a></h4>
+          </div>
+        </div>
+      </div>
+      <label for="aside_menu_chk">
+        <i class="fas fa-angle-right"></i>
+      </label>
+    </div>
+
+    <div id="order_manage">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>取餐日期</th>
+                                <th>訂餐餐廳</th>
+                                <th>訂餐餐點</th>
+                                <th>訂餐時間</th>
+                                <th>訂餐金額</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mobile_td">2022-02-24</td>
+                                <td class="mobile_td">aqua水相餐廳</td>
+                                <td class="mobile_td">西西里海鹽柴魚脆薯<br>蕃茄羅勒起司搭頂級陳年油醋</td>
+                                <td class="mobile_td">12:00</td>
+                                <td class="mobile_td">564</td>
+                                <td class="order_td">
+                                    <button class="detail_btn" data-toggle="modal" data-target="#detailModal">詳細訂單</button>
+                                </td>
+                                <td>
+                                  <button
+                                    class="comment_btn"
+                                    data-toggle="modal"
+                                    data-target="#rankModal"
+                                  >
+                                    評價
+                                  </button>
+                                </td>
+                                <td>
+                                  <button
+                                    class="together_btn"
+                                    data-toggle="modal"
+                                    data-target="#detailModal3"
+                                  >
+                                    揪團
+                                  </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mobile_td">2022-01-05</td>
+                                <td class="mobile_td">aqua水相餐廳</td>
+                                <td class="mobile_td">美國頂級PRIME菲力牛排</td>
+                                <td class="mobile_td">17:00</td>
+                                <td class="mobile_td">1598</td>
+                                <td class="order_td">
+                                    <button class="detail_btn">詳細訂單</button>
+                                </td>
+                                <td>
+                                    <button class="comment_btn">評價</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mobile_td">2022-01-03</td>
+                                <td class="mobile_td">aqua水相餐廳</td>
+                                <td class="mobile_td">伏特加清炒辣味鮮蝦</td>
+                                <td class="mobile_td">20:00</td>
+                                <td class="mobile_td">388</td>
+                                <td class="order_td">
+                                    <button class="detail_btn">詳細訂單</button>
+                                </td>
+                                <td>
+                                    <button class="comment_btn">評價</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mobile_td">2022-01-02</td>
+                                <td class="mobile_td">aqua水相餐廳</td>
+                                <td class="mobile_td">瀨戶柚香胡麻堅果澳洲紐約客牛排羽衣甘藍</td>
+                                <td class="mobile_td">18:00</td>
+                                <td class="mobile_td">498</td>
+                                <td class="order_td">
+                                    <button class="detail_btn">詳細訂單</button>
+                                </td>
+                                <td>
+                                    <button class="comment_btn">評價</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mobile_td">2022-01-01</td>
+                                <td class="mobile_td">aqua水相餐廳</td>
+                                <td class="mobile_td">馬賽無敵海鮮</td>
+                                <td class="mobile_td">19:00</td>
+                                <td class="mobile_td">598</td>
+                                <td class="order_td">
+                                    <button class="detail_btn">詳細訂單</button>
+                                </td>
+                                <td>
+                                    <button class="comment_btn">評價</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile_order_manage">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="table mobile_order_div">
+              <div class="mobile_order_inline_div">
+                <div class="mobile_text_div">
+                  <p>取餐日期:2022-01-08</p>
+                  <p>訂餐餐廳:餐廳名稱</p>
+                  <p>訂餐編號:00001</p>
+                  <p>訂餐時間:17:00</p>
+                  <p>訂餐金額:123</p>
+                  <div class="mobile_btn_div">
+                    <button
+                      class="detail_btn"
+                      data-toggle="modal"
+                      data-target="#detailModal"
+                    >
+                      詳細訂單
+                    </button>
+                    <button class="comment_btn">評價</button>
+                  </div>
+                </div>
+              </div>
+              <div class="mobile_order_inline_div">
+                <div class="mobile_text_div">
+                  <p>訂位日期:2022-01-05</p>
+                  <p>訂位餐廳:餐廳名稱</p>
+                  <p>訂位編號:00011</p>
+                  <p>訂位時間:17:00</p>
+                  <p>訂位人數:456</p>
+                </div>
+                <div class="mobile_btn_div">
+                  <button
+                    class="detail_btn"
+                    data-toggle="modal"
+                    data-target="#detailModal"
+                  >
+                    詳細訂單
+                  </button>
+                  <button class="comment_btn">評價</button>
+                </div>
+              </div>
+              <div class="mobile_order_inline_div">
+                <div class="mobile_text_div">
+                  <p>訂位日期:2022-01-03</p>
+                  <p>訂位餐廳:餐廳名稱</p>
+                  <p>訂位編號:00101</p>
+                  <p>訂位時間:17:00</p>
+                  <p>訂位人數:412</p>
+                </div>
+                <div class="mobile_btn_div">
+                  <button
+                    class="detail_btn"
+                    data-toggle="modal"
+                    data-target="#detailModal"
+                  >
+                    詳細訂單
+                  </button>
+                  <button class="comment_btn">評價</button>
+                </div>
+              </div>
+              <div class="mobile_order_inline_div">
+                <div class="mobile_text_div">
+                  <p>訂位日期:2022-01-02</p>
+                  <p>訂位餐廳:餐廳名稱</p>
+                  <p>訂位編號:01001</p>
+                  <p>訂位時間:17:00</p>
+                  <p>訂位人數:12345</p>
+                </div>
+                <div class="mobile_btn_div">
+                  <button
+                    class="detail_btn"
+                    data-toggle="modal"
+                    data-target="#detailModal"
+                  >
+                    詳細訂單
+                  </button>
+                  <button class="comment_btn">評價</button>
+                </div>
+              </div>
+              <div class="mobile_order_inline_div">
+                <div class="mobile_text_div">
+                  <p>訂位日期:2022-01-01</p>
+                  <p>訂位餐廳:餐廳名稱</p>
+                  <p>訂位編號:10001</p>
+                  <p>訂位時間:17:00</p>
+                  <p>訂位人數:911</p>
+                </div>
+                <div class="mobile_btn_div">
+                  <button
+                    class="detail_btn"
+                    data-toggle="modal"
+                    data-target="#detailModal"
+                  >
+                    詳細訂單
+                  </button>
+                  <button class="comment_btn">評價</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 對話盒 -->
+    <div class="modal fade" id="detailModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">詳細內容</h4>
+            <button type="button" class="close" data-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="detail_modal_body">
+            姓名：李曉明 <br />
+            手機：0987654321<br />
+            電子郵件：askf@gmail.com<br />
+            <br />
+            訂餐餐點：香西西里海鹽柴魚脆薯*1 <br/>蕃茄羅勒起司搭頂級陳年油醋*2 <br/>
+            訂餐餐廳：aqua水相餐廳 <br />
+            取餐時間：12:00 <br />
+            訂餐金額：564 <br />
+            備註：需要餐具
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-lg btn-secondary"
+              data-dismiss="modal"
+            >
+              返回
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- 評價對話盒 -->
+        <div class="modal fade" id="rankModal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <div class="modal-title">本次體驗如何?</div>
+                <button type="button" class="close" data-dismiss="modal"></button>
+              </div>
+    
+              <!-- Modal body -->
+    
+              <div class="rank_modal_body">
+                <div class="rank_modal_title">給予評價：</div>
+                <div class="mb-0">
+                  <div class="rank_modal_star content">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <span class="stars">評分</span>
+                  </div>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    class="rank_modal_comment"
+                    name="rank_comment"
+                    placeholder="撰寫評論"
+                  />
+                </div>
+              </div>
+    
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                type="button"
+                class="btn btn-success btn-lg"
+                data-dismiss="modal"
+              >
+                確定
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger btn-lg"
+                data-dismiss="modal"
+              >
+                返回
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 揪團訂餐對話盒 -->
+        <div class="modal fade" id="detailModal3">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h3 class="modal-title">揪團訂單</h3>
+                <button type="button" class="close" data-dismiss="modal"></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="detail_modal_body">
+                名稱：李曉明 <br />
+                西西里海鹽柴魚脆薯 *1 <br />
+                蕃茄羅勒起司搭頂級陳年油醋*2 <br />
+                <hr>
+                名稱：郭美美 <br />
+                西西里海鹽柴魚脆薯 *1 (加辣)<br />
+                南義炸起司條 *1 <br />
+                <hr>
+                名稱：陳家欣 <br />
+                田園香橙鮮蝦蘿蔓鮮蔬 *1 <br />
+                水相主廚私房湯品 *1 (不要加蔥)<br />
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">
+                  返回
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!-- 頁尾 start -->
+
+    <div class="footer_page"></div>
+
+    <!-- 頁尾 over -->
+
+    <script>
+      $(document).ready(function () {
+        $(".header_page").load("header.html");
+        $(".footer_page").load("footer.html");
+
+        window.onload = function () {
+          var oCont = document.getElementsByClassName("content")[0];
+          var aText = ["1分", "2分", "3分", "4分", "5分"];
+
+          Stars(oCont, aText);
+
+          function Stars(id, Txt) {
+            var index = "";
+            var aStar = id.getElementsByClassName("star");
+            var oStars = id.getElementsByClassName("stars")[0];
+
+            function gray() {
+              for (var v = 0; v < aStar.length; v++) {
+                aStar[v].style.backgroundColor = "#ccc";
+              }
+            }
+
+            for (let i = 0; i < aStar.length; i++) {
+              function starColor() {
+                if (i <= 4) {
+                  gray();
+                  for (let t = 0; t <= i; t++) {
+                    aStar[t].style.backgroundColor = "orange";
+                  }
+                }
+              }
+
+              //滑鼠移入變換顏色
+              aStar[i].onmouseover = function () {
+                oStars.innerHTML = Txt[i];
+                starColor();
+                this.onmouseout = function () {
+                  gray();
+                  oStars.innerHTML = "評分";
+                  if (index === "") {
+                    return;
+                  } else {
+                    for (var m = 0; m <= index; m++) {
+                      aStar[m].style.backgroundColor = "orange";
+                    }
+                    oStars.innerHTML = Txt[index];
+                  }
+                };
+              };
+
+              //滑鼠點擊固定顏色
+              aStar[i].onclick = function () {
+                this.onmouseout = null;
+                oStars.innerHTML = Txt[i];
+                if (i <= 4) {
+                  for (let t = 0; t <= i; t++) {
+                    aStar[t].style.backgroundColor = "orange";
+                    index = t;
+                  }
+                }
+              };
+            }
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

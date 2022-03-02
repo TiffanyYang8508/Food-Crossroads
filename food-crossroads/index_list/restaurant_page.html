@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食字路口 Food Crossroads</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <!-- mainstyle -->
+    <link rel="stylesheet" href="css/restaurant_page.css">
+    <!-- RWD -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 導覽列 start -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Logo" /></a>
+            <div class="nav_icon">
+                <a class="nav_a" href="list.html"><i class="fas fa-store"></i>餐廳列表</a>
+                <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i>購物車</a>
+                <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i>會員登入</a>
+            </div>
+            <div class="rwd_icon">
+                <a class="nav_a" href="list.html"><i class="fas fa-store"></i></a>
+                <a class="nav_a" href="shoppingchar.html"><i class="fas fa-shopping-cart"></i></a>
+                <a class="nav_a" href="member_login.html"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </nav>
+    </header>
+    <!-- 導覽列 end -->
+    <section id="restaurant_page">
+        <div class="container">
+            <div class="row">
+                <div class="btn_container">
+                    <button id="order" class="reservation_btn" data-bs-toggle="modal" onclick="reservation_btnClick()">我要訂位</button>
+                    <button id="take_away" class="order_btn" onclick="order_btnClick()">我要訂餐</button>
+                </div>
+                <!-- 非會員 對話框 start -->
+                <div id="to_register_member" class="modal">
+                    <div class="modal_content">
+                        <div class="container_alert">
+                            <div onclick="to_register_member()" class="button display_top_right">&times;</div>
+                            <br />
+                            <br />
+                            <h2>您目前狀態為 非會員！</h2>
+                            <p>請前往會員中心登入／註冊，謝謝！</p>
+                            <br />
+                            <button class="to_member_login" onclick="member_login()">登入</button>
+                            <button class="to_member_register" onclick="member_register()">註冊</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 非會員 對話框 over -->
+                <!-- 導覽列 start -->
+                <nav aria-label="breadcrumb">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                        <li class="breadcrumb-item"><a href="list.html">餐廳列表</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">aqua 水相餐廳</li>
+                    </ul>
+                </nav>
+                <!-- 導覽列 over -->
+
+
+                <!-- 輪播圖 start -->
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                        <li data-target="#carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/aqua/aqua_1.jpg" class="d-block w-60" alt="aqua_1" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/aqua/aqua_2.jpg" class="d-block w-60" alt="aqua_2" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/aqua/aqua_3.jpg" class="d-block w-60" alt="aqua_3" />
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                </div>
+                <!-- 輪播圖 over -->
+
+            </div>
+
+
+            <!-- 營業資訊 start -->
+            <div class="shop_container">
+
+                <div class="shop_wrapper" id="information">
+                    <h2 class="shop_title flex1">
+                        <button class="cuisine_name" onclick="cuisine_name_btnClick()">義式料理</button>
+                    </h2>
+                    <div class="top_flex">
+                        <h4 class="shop_title flex4">Aqua Tea 水相餐廳</h4>
+                        <button class="shop_menu" onclick="menu_btnClick()" id="menu_btn">菜單</button>
+                    </div>
+                    <!-- 菜單 對話框 start -->
+                    <div id="menu" class="modal_menu">
+                        <div class="modal_content_menu">
+                            <div class="container_menu" id="menu_content">
+                                <div onclick="menu_none()" class="button display_top_right">&times;</div>
+                                <br />
+                                <br />
+                                <img src="/index_list/img/aqua/menu1.jpg" alt="aqua菜單">
+                                <img src="/index_list/img/aqua/menu2.jpg" alt="aqua菜單">
+                                <img src="/index_list/img/aqua/menu3.jpg" alt="aqua菜單">
+                                <img src="/index_list/img/aqua/menu4.jpg" alt="aqua菜單">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 菜單 對話框 over -->
+                    <div class="top_flex">
+                        <div class="shop_rate_wrapper">
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div>
+                            <i class="far fa-comment-alt"></i>
+                            <span id="shop_comment_no">2</span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="top_flex">
+                        <div class="shop_item">營業時間</div>
+                        <div class="flex1 time">
+                            <span id="shop_time">周一～周五 11：00～22：00<br />周日 11：30 ～22：00</span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="top_flex">
+                        <div class="shop_item">地　　址</div>
+                        <div class="flex1 address">
+                            <i class="fas fa-map-marked-alt"></i> &nbsp;
+                            <span id="shop_address">台中市北屯區經貿三路二段100號</span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="top_flex">
+                        <div class="shop_item">電　　話</div>
+                        <div class="flex1 tel">
+                            <span id="shop_tel">04-2426-4288</span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="top_flex">
+                        <div class="shop_item">備　　註</div>
+                        <div class="flex1 remark">
+                            <span id="shop_remark">1. 用餐時間限制 90 分鐘<br />2. 室內禁止吸菸</span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="service_box">
+                        <div class="service_div" id="demo">
+                            <div>
+                                <span class="icon-credit-card" title="支援信用卡">
+                                    <i class="fas fa-credit-card"></i>支援信用卡
+                                </span>
+                            </div>
+                            <div>
+                                <span class="icon-wifi" title="提供 wifi">
+                                    <i class="fas fa-wifi"></i>提供 wifi
+                                </span>
+                            </div>
+                            <div>
+                                <span class="icon-baby" title="提供兒童座椅">
+                                    <i class="fas fa-baby"></i>提供兒童座椅
+                                </span>
+                            </div>
+                            <div>
+                                <span class="icon-service-fee" title="收取服務費">
+                                    <i class="fas fa-hand-holding-usd"></i>收取服務費
+                                </span>
+                            </div>
+                            <div>
+                                <span class="icon-papper-plane" title="提供外送">
+                                    <i class="fas fa-paper-plane"></i>提供外送
+                                </span>
+                            </div>
+                            <div>
+                                <span class="icon-shopping-bag" title="提供外帶">
+                                    <i class="fas fa-shopping-bag"></i>提供外帶
+                                </span>
+                            </div>
+                            <div>
+                                <span class="icon-time-limit" title="用餐時間">
+                                    <i class="fas fa-user-clock"></i>用餐時間
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+
+                </div>
+
+                <div class="shop_wrapper" id="comment">
+                    <div class="top_flex">
+                        <h4 class="shop_title flex1">評論
+                            <span class="comment_total">(2)</span>
+                        </h4>
+                        <a href="" title="新增評論" class="show_comment_modal">
+                            <i class="fas fa-plus-circle"></i>
+                            <span id="add_comment"></span>
+                        </a>
+                    </div>
+                    <div class="comment_box">
+                        <div class="comment_item">
+                            <div class="comment_left">
+                                <div class="mid_flex">
+                                    <div class="comment_img_wrapper">
+                                        <img src="../index_list/img/user.png" alt="member_img" class="comment_img" />
+                                    </div>
+                                    <div class="flex1">
+                                        <div class="top_flex">
+                                            <div class="flex1">王曉明</div>
+                                            <div class="record_time">2022-02-02 17:00:45</div>
+                                        </div>
+                                        <div class="top_flex">
+                                            <div class="shop_rate_wrapper flex1">
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_comment">
+                                    <p>好吃^_^</p>
+                                </div>
+                            </div>
+                            <div class="comment_right">
+                                <ul class="comment_right_pic">
+                                    <li class="pic_item">
+                                        <img src="../index_list/img/餐點1.jpg" alt="餐點照片" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comment_item">
+                            <div class="comment_left">
+                                <div class="mid_flex">
+                                    <div class="comment_img_wrapper">
+                                        <img src="../index_list/img/user.png" alt="member_img" class="comment_img" />
+                                    </div>
+                                    <div class="flex1">
+                                        <div class="top_flex">
+                                            <div class="flex1">李珍珍</div>
+                                            <div class="record_time">2021-08-09 15:30:05</div>
+                                        </div>
+                                        <div class="top_flex">
+                                            <div class="shop_rate_wrapper flex1">
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_comment">
+                                    <p>真的太好吃了，下次還會再來！</p>
+                                </div>
+                            </div>
+                            <div class="comment_right">
+                                <ul class="comment_right_pic">
+                                    <li class="pic_item">
+                                        <img src="../index_list/img/餐點2.jpg" alt="餐點照片" />
+                                        <img src="../index_list/img/餐點3.jpg" alt="餐點照片" />
+                                        <img src="../index_list/img/餐點4.jpg" alt="餐點照片" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space"></div>
+            </div>
+            <!-- 營業資訊 over -->
+        </div>
+    </section>
+
+
+
+    <!-- 置頂鈕 start -->
+    <button type="button" class="ontop_btn" onclick="topfunction()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- 置頂鈕 over -->
+
+
+
+    <!-- 頁尾 start -->
+    <div class="footer_page"></div>
+    <!-- 頁尾 over -->
+
+
+    <script type="text/javascript">
+        document.onclick = open;
+
+        function open(){
+            e = window.event
+            var target = e.target.id
+            if (target == "menu_btn" || target == "menu_content") {
+                menu_btnClick();
+            } else {
+                menu_none();
+            }
+        }
+
+        $(function () {
+            $(".footer_page").load("footer.html");
+        });
+
+        // 置頂按鈕:點選後回到頂端
+        function topfunction() {
+            $("html,body").animate({ scrollTop: 0 }, 300);
+        }
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                $(".ontop_btn").fadeIn(100);
+            } else {
+                $(".ontop_btn").stop().fadeOut(100);
+            }
+        });
+
+        function reservation_btnClick() {
+            document.getElementById('to_register_member').style.display='block';
+        }
+
+        function order_btnClick() {
+            document.getElementById('to_register_member').style.display='block';
+        }
+
+        function to_register_member() {
+            document.getElementById('to_register_member').style.display='none';
+        }
+
+        function member_register() {
+            location.href = "/index_list/member_register.html";
+        }
+
+        function member_login() {
+            location.href = "/index_list/member_login.html";
+        }
+
+        function cuisine_name_btnClick() {
+            location.href = "/index_list/list_demo_kind.html";
+        }
+
+        function menu_btnClick() {
+            document.getElementById('menu').style.display='block';
+        }
+
+        function menu_none() {
+            document.getElementById('menu').style.display='none';
+        }
+
+    </script>
+
+</body>
+
+</html>

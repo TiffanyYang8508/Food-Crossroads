@@ -1,0 +1,126 @@
+
+/* ----- ///// booking_check_page ///// ----- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- body start ---------- */
+
+
+#booking_check_page .breadcrumb .breadcrumb-item a,#booking_check_page .active{
+    font-size: 18px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+#booking_check_page .check_container {
+    width: 880px;
+    background-color: #b5b4b477;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 35px 0;
+    border-radius: 5px;
+    /* border: 2px solid red; */
+}
+
+#booking_check_page .check_form_title {
+    width: 100%;
+    font-size: 36px;
+    color: black;
+    text-align: center;
+    /* border: 4px solid yellowgreen; */
+}
+
+#booking_check_page .form_container_check_wrapper {
+    /* border: 2px solid darkblue; */
+    width: 300px;
+    height: 280px;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#booking_check_page .btn_container_check {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+    margin: 10px auto;
+    /* border: 2px solid black; */
+}
+
+#booking_check_page .check_btn_back,
+#booking_check_page .check_btn_confirm
+{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    background-color: #8b1309;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+#booking_check_page .check_btn_confirm:hover{
+    background-color: #a30f01;
+}
+
+#booking_check_page .check_btn_back{
+    background-color: #403C3C;
+}
+
+#booking_check_page .check_btn_back:hover{
+    background-color: #524d4d;
+}
+
+/* ---------- body over ---------- */
+
+/* RWD start */
+
+
+/* 超大型螢幕 */
+
+@media screen and (max-width:1200px) {
+
+}
+
+
+/* 大型螢幕 */
+
+@media screen and (max-width:992px) {
+    
+}
+
+
+/* 平板 */
+
+@media screen and (max-width:768px) {
+
+}
+
+
+/* 手機 */
+
+@media screen and (max-width:576px) {
+
+}
+
+
+/* 小手機 */
+
+@media screen and (max-width:480px) {
+
+}
+
+
+/* RWD end */

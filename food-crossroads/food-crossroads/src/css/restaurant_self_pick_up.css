@@ -1,0 +1,170 @@
+#restaurant_self_pick_up_aside {
+    background-color: #403C3C;
+    width: 230px;
+    height: 90vh;
+    position: fixed;
+    top: 10%;
+}
+
+#restaurant_self_pick_up_aside .default {
+    width: 230px;
+    background-color: #8B1309;
+}
+
+#restaurant_self_pick_up_aside .panel-default{
+    border-bottom: 1px solid white;
+    padding: 5px;
+    width: 100%;
+}
+
+#restaurant_self_pick_up_aside .panel-title {
+    padding-top: 8px;
+}
+
+#restaurant_self_pick_up_aside .panel-heading .panel-title a {
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    width: 100%;
+}
+
+#restaurant_self_pick_up_aside .little_title {
+    margin-left: -5px;
+    margin-right: -6px;
+    padding: 5px 0 5px 15px;
+}
+
+#restaurant_self_pick_up_aside .panel .little_title a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+#restaurant_self_pick_up .order_table {
+    position: absolute;
+    top: 140px;
+    left: 16%;
+    width: 80%;
+}
+
+#restaurant_self_pick_up th {
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    letter-spacing: 5px;
+    width: 100px;
+}
+
+#restaurant_self_pick_up .search_bar h3{
+    position: relative;
+    left: 20px;
+    top: 10px;
+    font-weight: 600;
+    margin-right: 500px;
+}
+
+#restaurant_self_pick_up .search_bar_div{
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding: 5px;
+    width: 30%;
+    margin-right: 10px;
+}
+
+
+#restaurant_self_pick_up .search_bar input[type=text]{
+    border: none;  
+    width: 90%;
+}
+
+#restaurant_self_pick_up .search_bar input[type=text]:focus{
+    outline: none;
+}
+
+#restaurant_self_pick_up .search_bar button {
+    height: 40px;
+    background-color: #FCC106;
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+
+#restaurant_self_pick_up .search_bar button:hover {
+    background-color: #f0b802;
+}
+
+#restaurant_self_pick_up .search_bar {
+    position: relative;
+    left: 23px;
+    display: flex;
+}
+
+#restaurant_self_pick_up .search_bar_div{
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding: 5px;
+    width: 30%;
+    margin-right: 10px;
+}
+
+.aside_menu label,.mobile_aside_menu label{
+    margin-right: 20px;
+}
+
+#restaurant_self_pick_up .member_confirm_btn{
+    margin-left: 150px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+#restaurant_self_pick_up td{
+    text-align: center;
+}
+
+#restaurant_self_pick_up .cancel_btn{
+    border-radius: 5px;
+}
+
+
+#restaurant_self_pick_up tbody .detail_btn,#restaurant_self_pick_up tbody .cancel_btn {
+    border-radius: 5px;
+    border: none;
+    padding: 5px 8px;
+    transition: 0.3s;
+}
+
+#restaurant_self_pick_up .detail_btn{
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+#restaurant_self_pick_up .comment_btn{
+    border-radius: 8px;
+}
+
+#restaurant_self_pick_up .cancel_modal_body{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.ratings {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    color: #ddd; /*背景星星顏色*/
+    overflow: hidden;
+    font-size: 40px; /*調整字體大小可放大縮小星星*/
+    text-shadow: 0px 1px 0 #999;
+    }
+    
+.full_star {
+    width: 100%; /*調整寬度可變更星等*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: orange; /*前景星星顏色*/
+}

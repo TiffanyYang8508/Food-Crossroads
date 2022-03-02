@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.div_content {
+  background-color: black;
+}
+
+.cancel_container {
+  width: 880px;
+  background-color: #b5b4b477;
+  display: flex;
+  justify-content: center;
+  margin: 120px auto;
+  padding: 20px 0;
+  border-radius: 5px;
+  /* border: 2px solid red; */
+}
+
+.cancel_form_show {
+  /* border: 6px dashed orchid; */
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px auto;
+}
+
+.form_container_cancel_wrapper {
+  /* border: 2px solid darkblue; */
+  width: 300px;
+  height: 280px;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_container_cancel {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px;
+  margin: 10px auto;
+  /* border: 2px solid black; */
+}
+
+.cancel_btn_booking_manage {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #313030;
+  margin: 0 10px;
+}
+
+.cancel_btn_ok {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #8b1309;
+  margin: 0 10px;
+}
+.cancel_btn_booking_manage:hover {
+  background-color: #424141;
+  font-size: 22px;
+}
+.cancel_btn_ok:hover {
+  background-color: #f04535;
+  font-size: 22px;
+}
+/* ---------- body over ---------- */
+
+/* ---------- footer_page start ---------- */
+
+.footer_page {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ---------- footer_page over ---------- */

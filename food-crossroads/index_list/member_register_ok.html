@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>member_register</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css" />
+    <!-- mainstyle -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- register-form -->
+    <link rel="stylesheet" href="css/member_register.css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <!-- 導覽列 start -->
+
+    <div class="header_page"></div>
+
+    <!-- 導覽列 over -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-6">
+          <div class="register_form">
+            <form action="">
+              <div class="register_title">
+                <span class="register_title_text"
+                  ><i class="fas fa-user-circle"></i>會員註冊</span
+                >
+              </div>
+              <div class="form-group row">
+                <label for="name" class="form_text">姓名</label>
+                <div class="input_box">
+                  <input type="text" id="name" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="email" class="form_text">信箱</label>
+                <div class="input_box">
+                  <input
+                    type="text"
+                    id="email"
+                    class="form-control"
+                    name="email"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="password" class="form_text">密碼</label>
+                <div class="input_box">
+                  <input
+                    type="password"
+                    id="password"
+                    class="form-control"
+                    name="password"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row password_confirm">
+                <label for="password_confirm" class="form_text">確認密碼</label>
+                <div class="input_box">
+                  <input
+                    type="password"
+                    id="password_confirm"
+                    class="form-control"
+                    name="password_confirm"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="phone_number" class="form_text">手機</label>
+                <div class="input_box">
+                  <input type="text" id="phone_number" class="form-control" />
+                </div>
+              </div>
+              <div class="btn_div">
+                <button class="register_btn" type="button" onclick="register()">
+                  註冊
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 頁尾 start -->
+
+    <div class="footer_page"></div>
+
+    <!-- 頁尾 over -->
+
+    <script>
+      $(document).ready(function () {
+        $(".header_page").load("header.html");
+        $(".footer_page").load("footer.html");
+      });
+
+      function register() {
+        window.location = "./member_register_success.html";
+      }
+    </script>
+  </body>
+</html>

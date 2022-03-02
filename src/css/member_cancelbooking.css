@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#membercancelbooking .div_content {
+  background-color: black;
+}
+
+.cancel_container {
+  width: 880px;
+  background-color: #b5b4b477;
+  display: flex;
+  justify-content: center;
+  margin: 120px auto;
+  padding: 20px 0;
+  border-radius: 5px;
+  /* border: 2px solid red; */
+}
+
+.cancel_form_show {
+  /* border: 6px dashed orchid; */
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 12px auto;
+}
+
+.form_container_cancel_wrapper {
+  /* border: 2px solid darkblue; */
+  width: 300px;
+  height: 280px;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#membercancelbooking div.btn_container_cancel {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px;
+  margin: 10px auto;
+  /* border: 2px solid black; */
+}
+
+#membercancelbooking .cancel_btn_manage {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #313030;
+  margin: 0 30px;
+}
+
+#membercancelbooking .cancel_btn_ok {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #8b1309;
+}
+#membercancelbooking .cancel_btn_manage:hover {
+  background-color: #424141;
+  font-size: 22px;
+}
+#membercancelbooking .cancel_btn_ok:hover {
+  background-color: #f04535;
+  font-size: 22px;
+}
+/* ---------- body over ---------- */
