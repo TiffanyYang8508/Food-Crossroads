@@ -24,13 +24,12 @@ class CancelBooking extends Component {
   }
 
   okbtnClick = async () => {
-    console.log("ok");
     var result = await Axios.delete(
       `http://localhost:8000/cancelbooking/${this.props.match.params.id}`,
       this.state.member
     );
+    window.location = "/bookingmanagement/1";
     console.log(result);
-    window.location = `/bookingmanagement/${this.props.match.params.id}`;
   };
 
   render() {
@@ -74,9 +73,7 @@ class CancelBooking extends Component {
                   </div>
                   <div className="form_container_cancel">
                     <label for="cancel_person_date">訂位日期：</label>
-                    <label for="cancel_person_date">
-                      {this.state.member.booking_date}
-                    </label>
+                    <label for="cancel_person_date">2022/03/07</label>
                   </div>
                   <div className="form_container_cancel">
                     <label for="cancel_person_time">訂位時間：</label>
@@ -98,21 +95,20 @@ class CancelBooking extends Component {
               </form>
             </div>
             <div className="btn_container_cancel">
-              <a href={`/bookingmanagement/${this.props.match.params.id}`}>
+              <a href={`/bookingmanagement/1`}>
                 <input
                   type="button"
                   className="cancel_btn_manage"
                   value="返回"
                 />
               </a>
-              <a href="">
-                <input
-                  type="button"
-                  className="cancel_btn_ok"
-                  value="確定"
-                  onClick={this.okbtnClick}
-                />
-              </a>
+
+              <input
+                type="button"
+                className="cancel_btn_ok"
+                value="確定"
+                onClick={this.okbtnClick}
+              />
             </div>
           </div>
         </div>

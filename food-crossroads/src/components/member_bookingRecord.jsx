@@ -3,7 +3,7 @@ import Axios from "axios";
 import logo from "../img/logo.png";
 import Footer from "./footer";
 import $ from "jquery";
-import "../css/member.css";
+import "../css/member_bookingRecord.css";
 
 class BookingRecord extends Component {
   state = {
@@ -164,7 +164,7 @@ class BookingRecord extends Component {
                       <tr key={index}>
                         <td className="mobile_td">{item.user_name}</td>
                         <td className="mobile_td">{item.restaurant_name}</td>
-                        <td className="mobile_td">2022/03/08</td>
+                        <td className="mobile_td">2022/03/07</td>
                         <td className="mobile_td">{item.booking_time}</td>
                         <td className="mobile_td">
                           {item.booking_peoplenumber}
@@ -174,8 +174,9 @@ class BookingRecord extends Component {
                             <button className="cancel_btn">取消訂位</button>
                           </a>
                           <button className="detail_btn" id="detail_btn">
-                            詳細內容
+                            詳細訂單
                           </button>
+<<<<<<< HEAD
                           <div className="modal modal-detail" tabIndex="-1">
                             <div className="modal-dialog">
                               <div className="modal-content">
@@ -208,6 +209,8 @@ class BookingRecord extends Component {
                               </div>
                             </div>
                           </div>
+=======
+>>>>>>> d3a88a10fcfeff51383246d10111c401840b32ab
                         </td>
                         <td>
                           <button className="comment_btn">評價</button>
@@ -250,6 +253,42 @@ class BookingRecord extends Component {
                         </td>
                       </tr>
                     ))}
+
+                    {this.state.List.map((item, idex) => (
+                      <div class="modal modal-detail" tabIndex="-1">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 class="modal-title">詳細內容</h4>
+                            </div>
+                            <div class="detail_modal">
+                              姓名：{item.user_name} <br />
+                              手機：{item.user_tel}
+                              <br />
+                              電子郵件：{item.user_email} <br />
+                              <br />
+                              訂位人數：6 <br />
+                              訂位日期：2022/03/07
+                              <br />
+                              取位時間：12:00
+                              <br />
+                              備註：{item.booking_service}
+                            </div>
+
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn_close"
+                                data-dismiss="modal"
+                              >
+                                返回
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+
                     <tr id="cancel">
                       <td className="mobile_td">李曉明</td>
                       <td className="mobile_td">一鷺串燒居酒屋</td>
@@ -269,7 +308,7 @@ class BookingRecord extends Component {
                           data-toggle="modal"
                           data-target="#detailModal"
                         >
-                          詳細內容
+                          詳細訂單
                         </button>
                       </td>
                       <td>
@@ -301,7 +340,7 @@ class BookingRecord extends Component {
                           data-toggle="modal"
                           data-target="#detailModal"
                         >
-                          詳細內容
+                          詳細訂單
                         </button>
                       </td>
                       <td>

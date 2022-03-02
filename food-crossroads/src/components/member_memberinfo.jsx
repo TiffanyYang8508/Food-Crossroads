@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "../img/logo.png";
 import Footer from "./footer";
-import "../css/member.css";
+import "../css/member_memberinfo.css";
 
 import Axios from "axios";
 
