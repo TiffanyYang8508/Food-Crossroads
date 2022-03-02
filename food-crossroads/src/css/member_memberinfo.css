@@ -4,39 +4,35 @@
   z-index: -1;
 }
 
-#member_aside {
+.aside_menu {
   background-color: #403c3c;
   width: 230px;
-  height: 90%;
+  height: 100%;
   position: fixed;
-  top: 9%;
   float: left;
-  z-index: 2;
+  z-index: 4;
 }
 
-#member_aside .mobile_aside_menu {
+.mobile_aside_menu {
   display: none;
 }
 
-#member_aside .default {
+.default {
   background-color: #8b1309;
 }
 
-#member_aside .panel-default {
+.panel-default {
+  /* border: 1px solid red; */
   border-bottom: 1px solid white;
   padding: 5px;
   width: 100%;
 }
 
-#member_aside .panel-title {
+.panel-title {
   padding-top: 8px;
 }
 
-#member_aside .panel-title:hover {
-  background-color: #8b1309;
-}
-
-#member_aside .panel .panel-heading a {
+.panel .panel-heading a {
   font-weight: 600;
   color: white;
   text-decoration: none;
@@ -44,7 +40,7 @@
   width: 100%;
 }
 
-#member_aside .panel-default:hover {
+.panel-default:hover {
   background-color: #8b1309;
 }
 
@@ -116,9 +112,9 @@ th {
 }
 .edit_info {
   /* position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, 50%); */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,7 +178,7 @@ th {
 }
 
 .member_editinfo_btn:hover {
-  background-color: #a30f01;
+  background-color: #f04535;
 }
 
 #edit_member .member_editinfo_btn {
@@ -200,11 +196,11 @@ th {
 }
 
 #edit_member .member_editinfo_btn:hover {
-  background-color: #a30f01;
+  background-color: #f04535;
 }
 
 .member_editpwd_btn:hover {
-  background-color: #a30f01;
+  background-color: #f04535;
 }
 
 #edit_member .member_confirm_btn {
@@ -221,7 +217,7 @@ th {
 }
 
 #edit_member .member_confirm_btn:hover {
-  background-color: #a30f01;
+  background-color: red;
 }
 #edit_member .member_back_btn {
   margin-left: 30px;
@@ -247,11 +243,13 @@ th {
 /* booking_manage start */
 
 #booking_manage {
-  position: fixed;
-  top: 10%;
-  left: 16%;
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
   height: 100%;
+  margin-left: 12%;
+  /* border: 1px solid black; */
 }
 
 #mobile_booking_manage,
@@ -261,13 +259,14 @@ th {
 
 #booking_manage .table th {
   border-bottom: 1px solid #403c3c;
+}
+
+#booking_manage .table th {
   width: 10%;
 }
 
 #booking_manage td {
-  vertical-align: middle;
   text-align: center;
-  border-top: 1px solid #403c3c;
 }
 
 #booking_manage .detail_modal_body {
@@ -285,12 +284,12 @@ th {
   font-weight: 600;
 }
 
-#booking_manage .cancel_btn,
-#booking_manage .detail_btn,
-#booking_manage .comment_btn,
-#booking_manage .order_comment_btn,
-#booking_manage .together_btn {
-  border-radius: 5px;
+.cancel_btn,
+.detail_btn,
+.comment_btn,
+.order_comment_btn,
+.order_comment_btn1 {
+  border-radius: 8px;
   border: none;
   padding: 5px 8px;
   transition: 0.3s;
@@ -301,43 +300,49 @@ th {
   right: 0px;
 }
 
-#booking_manage .btn_td {
-  width: 10%;
+.btn_td {
+  width: 20%;
 }
 
-#booking_manage .cancel_btn {
-  background-color: #cacaca;
-  margin-right: 2%;
+.cancel_btn {
+  background-color: #dadada;
+  margin-right: 5%;
 }
 
-#booking_manage .cancel_btn:hover {
-  background-color: #b8b8b8;
+.cancel_btn:hover {
+  background-color: #dfdede;
 }
 
-#booking_manage .detail_btn {
+.detail_btn {
   background-color: #403c3c;
   color: #fff;
 }
 
-#booking_manage .detail_btn:hover {
+.detail_btn:hover {
   background-color: #524d4d;
 }
 
-#booking_manage .comment_btn {
+.comment_btn {
+  margin-left: -360px;
   background-color: #8b1309;
   color: #fff;
 }
 
-#booking_manage .comment_btn:hover {
+.comment_btn:hover {
   background-color: #a30f01;
 }
 
+.together_btn {
+  border: 1px solid red;
+  margin-left: 17px;
+  background-color: #fff;
+  color: #8b1309;
+  border-radius: 8px;
+  padding: 5px 8px;
+  transition: 0.3s;
+}
 .order_comment_btn1 {
   margin-left: -320px;
-}
-#booking_manage .together_btn {
-  /* margin-left: -270px; */
-
   background-color: #8b1309;
   color: #fff;
 }
@@ -347,8 +352,8 @@ th {
 }
 
 /* .mobile_td{
-      display: none;
-  } */
+        display: none;
+    } */
 
 /* order_manage start */
 
@@ -475,16 +480,16 @@ th {
 /* 超大型螢幕 */
 
 @media screen and (max-width: 1200px) {
-  #member_aside {
+  .aside_menu {
     display: none;
   }
-  #aside_menu_chk:checked + #mobile_member_aside {
+  #aside_menu_chk:checked + .mobile_aside_menu {
     transform: translateX(0);
   }
-  #aside_menu_chk:checked + #mobile_member_aside .fa-angle-right {
+  #aside_menu_chk:checked + .mobile_aside_menu .fa-angle-right {
     transform: scaleX(-1);
   }
-  #mobile_member_aside {
+  .mobile_aside_menu {
     display: unset;
     background-color: #403c3c;
     width: 230px;
@@ -497,7 +502,7 @@ th {
     z-index: 2;
     transition: 0.6s;
   }
-  #mobile_member_aside label {
+  .mobile_aside_menu label {
     position: absolute;
     background-color: #ccc;
     border-radius: 0 5px 5px 0;
@@ -505,35 +510,6 @@ th {
     top: 50%;
     left: 100%;
     transition: 0.6s;
-  }
-  #mobile_member_aside .default {
-    background-color: #8b1309;
-  }
-  #mobile_member_aside .panel-default:hover {
-    background-color: #8b1309;
-  }
-  #mobile_member_aside .panel-default {
-    border-bottom: 1px solid white;
-    padding: 5px;
-    width: 100%;
-  }
-  #mobile_member_aside .panel-title {
-    padding-top: 8px;
-  }
-  #mobile_member_aside .panel .panel-heading a {
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-    width: 100%;
-  }
-  #booking_manage{
-    left: 0;
-    width: 75%;
-  }
-  #booking_manage .table th {
-    border-bottom: 1px solid #403c3c;
-    width: 8%;
   }
   #booking_manage,
   #order_manage {
@@ -545,23 +521,23 @@ th {
 /* 大型螢幕 */
 
 @media screen and (max-width: 992px) {
-  #booking_manage .mobile_td {
+  .mobile_td {
     height: 90px;
     line-height: 60px;
   }
-  #booking_manage .cancel_btn {
-    margin-right: 19%;
+  .cancel_btn {
+    margin-right: 16%;
   }
-  #booking_manage .detail_btn {
-    margin-right: 18%;
+  .detail_btn {
+    margin-right: 15%;
   }
-  #booking_manage .comment_btn {
+  .comment_btn {
     margin-top: 15px;
   }
-  #booking_manage .order_td {
+  .order_td {
     width: 15%;
   }
-  #booking_manage .order_td .detail_btn {
+  .order_td .detail_btn {
     margin-top: 15px;
   }
 }

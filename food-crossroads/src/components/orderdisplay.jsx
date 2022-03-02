@@ -9,7 +9,9 @@ class Orderdisplay extends Component {
     render() {
         return (
             <React.Fragment>
-                <Header />
+                <header className="header_page">
+                    <Header />
+                </header>
                 <div className="container">
                     <nav aria-label="breadcrumb">
                         <ul className="breadcrumb">
@@ -110,7 +112,9 @@ class Orderdisplay extends Component {
                         </div>
                     </div>
                 </div>
-                <Footer />
+                <footer className="footer_page">
+                    <Footer />
+                </footer>
             </React.Fragment>
         );
     }

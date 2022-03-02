@@ -10,7 +10,9 @@ class Shoppingok extends Component {
     render() {
         return (
             <React.Fragment>
-                <Header />
+                <header className="header_page">
+                    <Header />
+                </header>
                 <div id='shoppingchar'>
                     <div className="container">
                         <div className="row">
@@ -164,7 +166,9 @@ class Shoppingok extends Component {
                         </div>
                     </div>
                 </div>
-                <Footer />
+                <footer className="footer_page">
+                    <Footer />
+                </footer>
             </React.Fragment>
 
         );

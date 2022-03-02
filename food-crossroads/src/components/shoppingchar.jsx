@@ -17,7 +17,9 @@ class Shoppingchar extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
+        <header className="header_page">
+          <Header />
+        </header>
         <div id="shoppingchar">
           <div className="container">
             <div className="row">
@@ -190,7 +192,9 @@ class Shoppingchar extends Component {
           </div>
         </div>
 
-        <Footer />
+        <footer className="footer_page">
+          <Footer />
+        </footer>
       </React.Fragment>
     );
   }

@@ -19,7 +19,7 @@ class Booking_reservation_page extends Component {
     render() {
         return (
             <React.Fragment>
-                <header id="header_page">
+                <header className="header_page">
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <a className="navbar-brand" href="/">
                         <img src={logo} alt="LOGO" />

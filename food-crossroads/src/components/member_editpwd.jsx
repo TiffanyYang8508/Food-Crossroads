@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "../img/logo.png";
 import Footer from "./footer";
-import "../css/member.css";
+import "../css/member_editpwd.css";
 import Axios from "axios";
 
 class EditMemberpwd extends Component {
@@ -44,6 +44,10 @@ class EditMemberpwd extends Component {
             break;
           case "2":
             alert(res.data.err);
+            window.location = `/member/${this.props.match.params.id}`;
+            break;
+          case "3":
+            alert(res.data.err);
             break;
         }
       })
@@ -59,7 +63,7 @@ class EditMemberpwd extends Component {
   render() {
     return (
       <React.Fragment>
-        <header id="header_page">
+        <header className="header_page">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="/">
               <img src={logo} alt="LOGO" />
@@ -149,10 +153,10 @@ class EditMemberpwd extends Component {
           </label>
         </div>
 
-        <section id="edit_member">
-          <div className="container-fluid member_div">
-            <div className="row">
-              <div className="col-md-12">
+        <section id="edit_pwd">
+          <div class="container-fluid member_div">
+            <div class="row">
+              <div class="col-md-12">
                 <form>
                   <div>
                     <p className="title_member_edit">會員密碼修改</p>

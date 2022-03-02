@@ -42,7 +42,9 @@ class Orderpage extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
+        <header className="header_page">
+          <Header />
+        </header>
         <div className="scroll menu_group sticky-top">
           <div className="container-fluid" id="menu_group">
             <a href="/orderpage/開胃菜">
@@ -318,7 +320,9 @@ class Orderpage extends Component {
             </button>
           </div>
         </div>
-        <Footer />
+        <footer className="footer_page">
+          <Footer />
+        </footer>
       </React.Fragment>
     );
   }

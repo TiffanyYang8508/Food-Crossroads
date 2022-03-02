@@ -84,7 +84,9 @@ class Orderpage_group extends Component {
     render() {
         return (
             <React.Fragment>
-                <Header />
+                <header className="header_page">
+                    <Header />
+                </header>
                 <div className="scroll menu_group sticky-top">
                     <div className="container-fluid" id="menu_group">
                         <button type="button" className="oval menu_group_list" onClick={this.btn_group1}>開胃菜</button>
@@ -185,7 +187,9 @@ class Orderpage_group extends Component {
 
                     </div>
                 </div>
-                <Footer />
+                <footer className="footer_page">
+                    <Footer />
+                </footer>
 
             </React.Fragment>
         );

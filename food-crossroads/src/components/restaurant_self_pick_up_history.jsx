@@ -16,19 +16,19 @@ class Restaurant_booking_history extends Component {
     render() {
         return (
             <React.Fragment>
-
-                <header id="header_page">
+                <header className="header_page">
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <a className="navbar-brand" href="/"><img src={logo} alt="LOGO" /></a>
                     </nav>
                 </header>
 
 
-                <aside id="restaurant_booking_history_aside">
-                    <div className="panel-group" id="accordion">
-                        <div className="panel panel-default">
-                            <div className="panel-heading" >
-                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="/restaurant/booking/today">訂位管理</a>
+                <aside id="restaurant_self_pick_up_history_aside">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
                                 </h4>
                             </div>
                             <div id="collapseOne" className="panel-collapse collapse" >
@@ -61,9 +61,9 @@ class Restaurant_booking_history extends Component {
                     </div>
                 </aside>
 
-                <section id="restaurant_booking_history">
-                    <div className="container">
-                        <div className="search_bar">
+                <section id="restaurant_self_pick_up_history">
+                    <div class="container">
+                        <div class="search_bar">
                             <div>
                                 <h3>歷史訂餐</h3>
                             </div>

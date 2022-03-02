@@ -3,7 +3,7 @@ import Axios from "axios";
 import logo from "../img/logo.png";
 import Footer from "./footer";
 import $ from "jquery";
-import "../css/member.css";
+import "../css/member_orderRecord.css";
 
 class BookingRecord extends Component {
   state = {
@@ -36,12 +36,19 @@ class BookingRecord extends Component {
     $(".btn_close").on("click", function () {
       $(".modal-detail").css("display", "none");
     });
+    $(".together_btn").on("click", function () {
+      $(".modal-groupdetail").css("display", "block");
+    });
+
+    $(".btn_close").on("click", function () {
+      $(".modal-groupdetail").css("display", "none");
+    });
   }
 
   render() {
     return (
       <React.Fragment>
-        <header id="header_page">
+        <header className="header_page">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="/">
               <img src={logo} alt="LOGO" />
@@ -130,7 +137,7 @@ class BookingRecord extends Component {
           </label>
         </div>
 
-        <div id="booking_manage">
+        <div id="order_manage">
           <div className="container-fluid table_container">
             <div className="row">
               <div className="col-md-12">
@@ -157,23 +164,40 @@ class BookingRecord extends Component {
                         <td className="order_td">
                           <button className="detail_btn">詳細訂單</button>
                         </td>
-                        <div class="modal modal-detail" tabIndex="-1">
+
+                        <button className="order_comment_btn">評價</button>
+                        <button className="together_btn">揪</button>
+                        <div class="modal modal-groupdetail" tabIndex="0">
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-header">
-                                <h4 class="modal-title">詳細內容</h4>
+                                <h4 class="modal-title">詳細訂單</h4>
                               </div>
 
-                              <div class="detail_modal">
-                                姓名：{item.user_name} <br />
-                                手機：{item.user_tel}
+                              <div class="groupdetail_modal">
+                                姓名：李曉明
                                 <br />
-                                電子郵件：{item.user_email} <br />
+                                訂餐餐點：西西里海鹽柴魚脆薯 *1 <br />{" "}
+                                蕃茄羅勒起司搭頂級陳年油醋*2 <br />
+                                訂餐金額：564
                                 <br />
-                                訂餐餐點：{item.food_name} <br />
-                                訂餐餐廳：{item.restaurant_name} <br />
-                                取餐時間：{item.selfpick_date} <br />
-                                訂餐金額：{item.total_amount}
+                                訂餐備註：
+                                <br />
+                                <hr />
+                                姓名：郭美美
+                                <br />
+                                訂餐餐點：西西里海鹽柴魚脆薯 *1 <br />{" "}
+                                南義炸起司條 <br />
+                                訂餐金額：476 <br />
+                                訂餐備註：加辣
+                                <br />
+                                <hr />
+                                姓名：陳家欣
+                                <br />
+                                訂餐餐點：田園香橙鮮蝦蘿蔓鮮蔬*1 <br />{" "}
+                                水相主廚私房湯品*1 <br />
+                                訂餐金額：606 <br />
+                                訂餐備註：湯不要加蔥
                                 <br />
                               </div>
 
@@ -189,38 +213,86 @@ class BookingRecord extends Component {
                             </div>
                           </div>
                         </div>
-                        <td>
-                          <button className="order_comment_btn">評價</button>
-                        </td>
                       </tr>
                     ))}
-                    <tr id="cancel">
-                      <td class="mobile_td">2022/02/24</td>
-                      <td class="mobile_td">aqua水相餐廳</td>
-                      <td class="mobile_td">厚切美國頂級PRIME翼板牛排</td>
-                      <td class="mobile_td">18:00:00</td>
-                      <td class="mobile_td">1198</td>
-                      <td class="btn_td">
+                    <tr>
+                      <td className="mobile_td">2022/02/24 </td>
+                      <td className="mobile_td">布列塔尼歐法鄉村雅廚</td>
+                      <td className="mobile_td">波爾多紅酒蒜香爐燒菲力牛排</td>
+                      <td className="mobile_td">12:00:00</td>
+                      <td className="mobile_td">880</td>
+                      <td className="order_td">
+                        <button className="detail_btn">詳細訂單</button>
+                      </td>
+
+                      <td>
+                        <button className="order_comment_btn1">評價</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {this.state.List.map((item, idex) => (
+          <div class="modal modal-detail" tabIndex="0">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">詳細訂單</h4>
+                </div>
+
+                <div class="detail_modal">
+                  姓名：{item.user_name}
+                  <br />
+                  手機：{item.user_tel}
+                  <br />
+                  電子郵件：{item.user_email} <br />
+                  <br />
+                  訂餐餐點：{item.food_name} <br />
+                  訂餐餐廳：{item.restaurant_name} <br />
+                  取餐時間：{item.order_date} <br />
+                  訂餐金額：{item.total_amount}
+                  <br />
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn_close" data-dismiss="modal">
+                    返回
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        <div id="mobile_order_manage">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="table mobile_order_div">
+                  <div class="mobile_order_inline_div">
+                    <div class="mobile_text_div">
+                      <p>取餐日期:2022-01-08</p>
+                      <p>訂餐餐廳:餐廳名稱</p>
+                      <p>訂餐編號:00001</p>
+                      <p>訂餐時間:17:00</p>
+                      <p>訂餐金額:123</p>
+                      <div class="mobile_btn_div">
                         <button
                           class="detail_btn"
                           data-toggle="modal"
                           data-target="#detailModal"
                         >
-                          詳細內容
+                          詳細訂單
                         </button>
-                      </td>
-                      <td>
-                        <button
-                          class="order_comment_btn"
-                          data-toggle="modal"
-                          data-target="#rankModal"
-                        >
-                          評價
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                        <button class="comment_btn">評價</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
