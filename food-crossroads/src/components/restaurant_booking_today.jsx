@@ -42,22 +42,22 @@ class Restaurant_booking_today extends Component {
                 </header>
 
                 <aside id="restaurant_today_booking_aside">
-                    <div className="panel-group" id="accordion">
+                    <div>
                         <div className="panel panel-default">
-                            <div className="panel-heading">
-                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
+                            <Collapse className="panel-heading" in={this.state.open}>
+                                <h4 className="panel-title"><a href="#collapseOne">訂位管理</a>
                                 </h4>
-                            </div>
-                            <div id="collapseOne" className="panel-collapse collapse default">
+                            </Collapse>
+                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}>
                                 <div className="little_title">
                                     <a data-parent="#accordion" href="">今日訂位</a>
                                 </div>
-                            </div>
-                            <div id="collapseOne" className="panel-collapse collapse">
+                            </Collapse >
+                            <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
                                 <div className="little_title">
                                     <a data-parent="#accordion" href="">歷史訂位紀錄</a>
                                 </div>
-                            </div>
+                            </Collapse>
                         </div>
                         <div className="panel panel-default">
                             <div className="panel-heading">
@@ -106,8 +106,10 @@ class Restaurant_booking_today extends Component {
                                 </tr>
                             </thead>
                             <tbody>
+
                                 {this.state.booking_detail.map((item, index) => (
                                     <tr key={index}>
+
                                         <td>
                                             <div className="checkbox">
                                                 <label>
@@ -173,12 +175,12 @@ class Restaurant_booking_today extends Component {
                                             </label>
                                         </div>
                                     </td>
-                                    <td>00127</td>
-                                    <td>2022/01/18</td>
+                                    <td>00125</td>
+                                    <td>2022/03/07</td>
                                     <td>16:30</td>
-                                    <td>5</td>
-                                    <td>陳冠維</td>
-                                    <td>0979201120</td>
+                                    <td>6</td>
+                                    <td>李曉明</td>
+                                    <td>0987654321</td>
                                     <td>
                                         <button className="detail_btn" data-toggle="modal" data-target="#detailModal">
                                             詳細內容
@@ -190,6 +192,7 @@ class Restaurant_booking_today extends Component {
                                         </button>
                                     </td>
                                 </tr>
+                               
 
                             </tbody>
                         </table>
