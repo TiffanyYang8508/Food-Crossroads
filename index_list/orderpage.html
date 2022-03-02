@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我要訂餐</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <!-- mainstyle -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- order page -->
+    <link rel="stylesheet" href="css/orderpage.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/order.js"></script> -->
+</head>
+
+<body>
+    <!-- 導覽列 start -->
+    <div class="header_page"></div>
+
+    <!-- 導覽列 over -->
+
+    <div class="scroll menu_group sticky-top">
+        <div class="container-fluid" id="menu_group">
+            <button type="button" class="oval menu_group_list" onclick="javascript:btn_group1();">開胃菜</button>
+            <button type="button" class="oval menu_group_list" onclick="jabascript:btn_group2();">沙拉</button>
+            <button type="button" class="oval menu_group_list" onclick="javascript:btn_group3();">湯</button>
+            <button type="button" class="oval menu_group_list">義式燉飯</button>
+            <button type="button" class="oval menu_group_list">義大利麵</button>
+            <button type="button" class="oval menu_group_list">主廚排餐</button>
+            <button type="button" class="oval menu_group_list">甜品</button>
+            <button type="button" class="oval menu_group_list">茶品</button>
+            <button type="button" class="oval menu_group_list">咖啡</button>
+            <button type="button" class="oval menu_group_list">果汁</button>
+            <button type="button" class="oval menu_group_list">酒品</button>
+            <button type="button" class="oval menu_group_list">水</button>
+        </div>
+    </div>
+
+    <nav aria-label="breadcrumb" class="breaddiv">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html"><span>首頁</span></a></li>
+            <li class="breadcrumb-item"><a href="restaurant_page.html"><span>aqua水相餐廳</span></a></li>
+            <li class="breadcrumb-item active" aria-current="page"><span>我要訂餐</span></li>
+        </ul>
+    </nav>
+
+
+    <div id="group_1" class="d-flex flex-column">
+        <div class="food_title">
+            <h3>開胃菜</h3>
+        </div>
+        <div id="cate1">
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <div>
+                        <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                    </div>
+                    <div class="food_dollar_qty">
+                        <p class="food_name">西西里海鹽柴魚脆薯</p>
+                        <!-- 金額-->
+                        <div class="d-flex flex-row">
+                            <p><span class="dollar align-self-center">188</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" onclick="qty()" />
+                        </div>
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <div class="food_list_border food_list_border2">
+                <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                <div class="food_dollar_qty">
+                    <p class="food_name">日本海炸牡蠣</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p><span class="dollar align-self-center">288</span>元</p>
+                        <input type="button" value="-" class="btn_count count_decrease sub" />
+                        <input type="text" id="qty_number" value="1" />
+                        <input type="button" value="+" class="btn_count add" />
+                    </div>
+                </div>
+                <!-- 加入購物車 -->
+                <div>
+                    <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                </div>
+            </div>
+
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                    <div class="food_dollar_qty">
+                        <p class="food_name">南義炸起司條</p>
+                        <!-- 金額-->
+                        <div class="d-flex flex-row">
+                            <p><span class="dollar align-self-center">188</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" />
+                        </div>
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <div class="food_list_border food_list_border2">
+                <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                <div class="food_dollar_qty">
+                    <p class="food_name">墨西哥酸辣雞翅</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p><span class="dollar align-self-center">288</span>元</p>
+                        <input type="button" value="-" class="btn_count count_decrease sub" />
+                        <input type="text" id="qty_number" value="1" />
+                        <input type="button" value="+" class="btn_count add" />
+                    </div>
+                </div>
+                <!-- 加入購物車 -->
+                <div>
+                    <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                </div>
+            </div>
+
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                    <div class="food_dollar_qty">
+                        <p class="food_name">地中海白酒烘煮鮮蛤</p>
+                        <!-- 金額-->
+                        <div class="d-flex flex-row">
+                            <p><span class="dollar align-self-center">288</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" />
+                        </div>
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <div class="food_list_border food_list_border2">
+                <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                <div class="food_dollar_qty">
+                    <p class="food_name">鸚嘴豆番茄燉牛肚</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p><span class="dollar align-self-center">288</span>元</p>
+                        <input type="button" value="-" class="btn_count count_decrease sub" />
+                        <input type="text" id="qty_number" value="1" />
+                        <input type="button" value="+" class="btn_count add" />
+                    </div>
+                </div>
+                <!-- 加入購物車 -->
+                <div>
+                    <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                </div>
+            </div>
+
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                    <div class="food_dollar_qty">
+                        <p class="food_name">澳洲頂級橄欖油清炒野菇</p>
+                        <!-- 金額-->
+                        <div class="d-flex flex-row">
+                            <p><span class="dollar align-self-center">288</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" />
+                        </div>
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <div class="food_list_border food_list_border2">
+                <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                <div class="food_dollar_qty">
+                    <p class="food_name">義式清炒櫛瓜鮮蝦</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p><span class="dollar align-self-center">288</span>元</p>
+                        <input type="button" value="-" class="btn_count count_decrease sub" />
+                        <input type="text" id="qty_number" value="1" />
+                        <input type="button" value="+" class="btn_count add" />
+                    </div>
+                </div>
+                <!-- 加入購物車 -->
+                <div>
+                    <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="group_2" class="d-flex flex-column">
+        <div class="food_title">
+            <h3>沙拉</h3>
+        </div>
+        <div id="cate2">
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                    <div class="food_dollar_qty">
+                        <p class="food_name">番茄羅勒起司搭頂級陳年油醋</p>
+                        <!-- 金額-->
+                        <div class="d-flex flex-row">
+                            <p><span class="dollar align-self-center">188</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" onclick="qty()" />
+                        </div>
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food_list_border food_list_border2">
+                <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                <div class="food_dollar_qty">
+                    <p class="food_name">田園香橙鮮蝦蘿蔓鮮蔬</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p><span class="dollar align-self-center">188</span>元</p>
+                        <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                        <input type="text" id="qty_number" value="1" />
+                        <input type="button" value="+" class="btn_count add" onclick="qty()" />
+                    </div>
+                </div>
+                <!-- 加入購物車 -->
+                <div>
+                    <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                </div>
+            </div>
+
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                    <div class="food_dollar_qty">
+                        <p class="food_name">北歐蜂蜜柚香煙燻鮭魚羽衣甘藍</p>
+                        <!-- 金額-->
+                        <div class="d-flex flex-row">
+                            <p><span class="dollar align-self-center">188</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" onclick="qty()" />
+                        </div>
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food_list_border food_list_border2">
+                <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                <div class="food_dollar_qty">
+                    <p class="food_name">瀨戶柚香胡麻堅果牛排羽衣甘藍</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p><span class="dollar align-self-center">188</span>元</p>
+                        <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                        <input type="text" id="qty_number" value="1" />
+                        <input type="button" value="+" class="btn_count add" onclick="qty()" />
+                    </div>
+                </div>
+                <!-- 加入購物車 -->
+                <div>
+                    <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="group_3" class="d-flex flex-column">
+        <div class="food_title">
+            <h3>湯</h3>
+        </div>
+        <div id="cate3">
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <div>
+                        <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                    </div>
+                    <div class="food_dollar_qty">
+                        <p class="food_name">水相主廚私房湯品</p>
+                        <!-- 金額-->
+                        <div class="d-flex flex-row">
+                            <p><span class="dollar align-self-center">188</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" onclick="qty()" />
+                        </div>
+                    </div>
+
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <div class="food_list_border food_list_border2">
+                <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                <div class="food_dollar_qty">
+                    <p class="food_name">法式金黃南瓜堅果濃湯</p>
+                    <!-- 金額-->
+                    <div class="d-flex flex-row">
+                        <p><span class="dollar align-self-center">188</span>元</p>
+                        <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                        <input type="text" id="qty_number" value="1" />
+                        <input type="button" value="+" class="btn_count add" onclick="qty()" />
+                    </div>
+                </div>
+                <!-- 加入購物車 -->
+                <div>
+                    <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                </div>
+            </div>
+
+            <div class="food_list_border">
+                <div class="food_list_detail">
+                    <img src="./img/aqua/aqua_img.jpg" class="food_img" />
+                    <div class="food_dollar_qty">
+                        <p class="food_name">馬賽蝦汁海鮮清湯</p>
+                        <!-- 金額-->
+                        <div class="d-flex flex-row">
+                            <p><span class="dollar align-self-center">188</span>元</p>
+                            <input type="button" value="-" class="btn_count count_decrease sub" onclick="qty()" />
+                            <input type="text" id="qty_number" value="1" />
+                            <input type="button" value="+" class="btn_count add" onclick="qty()" />
+                        </div>
+                    </div>
+                    <!-- 加入購物車 -->
+                    <div>
+                        <button class="btn_add_cart" data-toggle="modal" data-target="#char_remark_modal">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加入購物車之餐點備註 -->
+    <div class="modal fade" id="char_remark_modal" tabindex="-1" role="dialog" aria-labelledby="char_remark_modal_title"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="char_remark_modal_title">餐點備註</h3><br>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" />
+                    <p>範例：加辣、不要辣、蔥多、油醋多....</p>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn_cancel" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn_yes" data-dismiss="modal">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 揪團結帳 -->
+    <div class="food_order_group d-flex flex-column">
+        <div class="d-flex justify-content-center">
+            <a href="#"><img src="./img/people_plus@3x.png" style="width: 25px; height: 20px; margin-right: 5px;" /></a>
+            <button class="group_button oval" data-toggle="modal" data-target="#order_group_modal">揪團</button>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button id="checkout" onclick="btncheckout()">去結帳</button>
+        </div>
+    </div>
+
+    <!--揪團開啟確認modal-->
+    <div class="modal fade" id="order_group_modal" tabindex="-1" role="dialog" aria-labelledby="order_group_modal_title"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="order_group_modal_title">是否開啟揪團功能？</h3><br>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <h5>開啟揪團功能<br>即可分享點餐連結給好友們一同訂餐！</h5>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn_cancel" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn_yes" data-toggle="modal" data-target="#group_on_modal">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--揪團連結分享modal-->
+    <div class="modal fade" id="group_on_modal" tabindex="-1" role="dialog" aria-labelledby="group_on_modal_title"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="group_on_modal_title">已開啟</h3><br />
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body d-flex flex-column">
+                    <h5>分享你的連結！！</h5>
+                    <div id="copy_link">
+                        <a href="orderpage_group_sorder_on.html"><input id="copyinput"
+                                value="http://localhost:3000/group_order_on/1" /></a>
+                    </div>
+                    <button type="button" class="btn btn-danger btn_copy" onclick='copyinput()'>複製連結</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                        onclick="btn_grouporder()">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 置頂鈕 start -->
+    <button type="button" id="btn_back_to_top" onclick="topfunction()" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- 置頂鈕 over -->
+
+    <!-- 頁尾 start -->
+
+    <div class="foot"></div>
+    <div class="footer_page"></div>
+
+    <!-- 頁尾 over -->
+
+    <script>
+        $(document).ready(function () {
+            $(".header_page").load("header.html");
+            $(".footer_page").load("footer.html");
+        });
+
+        // 數量加減
+        function qty() {
+            var aAdd = document.querySelectorAll(".add");
+            var sub = document.querySelectorAll(".sub");
+            for (var i = 0; i < aAdd.length; i++) {
+                aAdd[i].onclick = function () {
+                    var num = Number(this.previousElementSibling.value);
+                    num++;
+                    this.previousElementSibling.value = num;
+                    // var price = this.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.innerHTML;
+                    // this.nextElementSibling.firstElementChild.innerHTML = price * num;
+                }
+            }
+            for (var i = 0; i < sub.length; i++) {
+                sub[i].onclick = function () {
+                    var num = Number(this.nextElementSibling.value);
+                    if (num > 1) {
+                        num--;
+                    }
+                    this.nextElementSibling.value = num;
+                    // var price = this.previousElementSibling.firstElementChild.innerHTML;
+                    // this.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.innerHTML = price * num;
+                }
+            }
+
+        }
+
+
+        $(document).ready(function () {
+            $(".header_page").load("header.html");
+            $(".footer_page").load("footer.html");
+        });
+
+
+        // 置頂按鈕:點選後回到頂端
+        function topfunction() {
+            document.documentElement.scrollTop = 0;
+        }
+
+        // 跳頁面
+        function btncheckout() {
+            window.location.href = 'shoppingchar.html';
+        }
+
+        function btn_grouporder() {
+            window.location.href = 'orderpage_group_order_on.html';
+        }
+
+        function btn_group1() {
+            window.location.hash = "#group_1";
+        }
+
+        function btn_group2() {
+            window.location.hash = "#group_2";
+        }
+
+        function btn_group3() {
+            window.location.hash = "#group_3";
+        }
+
+        function btn_orderdisaplay() {
+            window.location.href = 'orderdisaplay.html';
+        }
+
+
+
+
+        // 複製揪團連結
+        function copyinput() {
+            document.getElementById('copyinput').select()
+            document.execCommand('copy')
+        }
+
+    </script>
+
+</body>
+
+</html>

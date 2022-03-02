@@ -4,6 +4,7 @@
   z-index: -1;
 }
 
+<<<<<<< HEAD:src/css/member_editmember.css
 #member_aside {
   background-color: #403c3c;
   width: 230px;
@@ -23,11 +24,33 @@
 }
 
 #member_aside .panel-default {
+=======
+.aside_menu {
+  background-color: #403c3c;
+  width: 230px;
+  height: 100%;
+  position: fixed;
+  float: left;
+  z-index: 4;
+}
+
+.mobile_aside_menu {
+  display: none;
+}
+
+.default {
+  background-color: #8b1309;
+}
+
+.panel-default {
+  /* border: 1px solid red; */
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
   border-bottom: 1px solid white;
   padding: 5px;
   width: 100%;
 }
 
+<<<<<<< HEAD:src/css/member_editmember.css
 #member_aside .panel-title {
   padding-top: 8px;
 }
@@ -37,6 +60,13 @@
 }
 
 #member_aside .panel .panel-heading a {
+=======
+.panel-title {
+  padding-top: 8px;
+}
+
+.panel .panel-heading a {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
   font-weight: 600;
   color: white;
   text-decoration: none;
@@ -44,7 +74,11 @@
   width: 100%;
 }
 
+<<<<<<< HEAD:src/css/member_editmember.css
 #member_aside .panel-default:hover {
+=======
+.panel-default:hover {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
   background-color: #8b1309;
 }
 
@@ -116,9 +150,15 @@ th {
 }
 .edit_info {
   /* position: absolute;
+<<<<<<< HEAD:src/css/member_editmember.css
       top: 50%;
       left: 50%;
       transform: translate(-50%, 50%); */
+=======
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%); */
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,7 +222,11 @@ th {
 }
 
 .member_editinfo_btn:hover {
+<<<<<<< HEAD:src/css/member_editmember.css
   background-color: #a30f01;
+=======
+  background-color: #f04535;
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
 }
 
 #edit_member .member_editinfo_btn {
@@ -200,11 +244,19 @@ th {
 }
 
 #edit_member .member_editinfo_btn:hover {
+<<<<<<< HEAD:src/css/member_editmember.css
   background-color: #a30f01;
 }
 
 .member_editpwd_btn:hover {
   background-color: #a30f01;
+=======
+  background-color: #f04535;
+}
+
+.member_editpwd_btn:hover {
+  background-color: #f04535;
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
 }
 
 #edit_member .member_confirm_btn {
@@ -221,7 +273,11 @@ th {
 }
 
 #edit_member .member_confirm_btn:hover {
+<<<<<<< HEAD:src/css/member_editmember.css
   background-color: #a30f01;
+=======
+  background-color: red;
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
 }
 #edit_member .member_back_btn {
   margin-left: 30px;
@@ -247,11 +303,21 @@ th {
 /* booking_manage start */
 
 #booking_manage {
+<<<<<<< HEAD:src/css/member_editmember.css
   position: fixed;
   top: 10%;
   left: 16%;
   width: 80%;
   height: 100%;
+=======
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin-left: 12%;
+  /* border: 1px solid black; */
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
 }
 
 #mobile_booking_manage,
@@ -261,13 +327,23 @@ th {
 
 #booking_manage .table th {
   border-bottom: 1px solid #403c3c;
+<<<<<<< HEAD:src/css/member_editmember.css
+=======
+}
+
+#booking_manage .table th {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
   width: 10%;
 }
 
 #booking_manage td {
+<<<<<<< HEAD:src/css/member_editmember.css
   vertical-align: middle;
   text-align: center;
   border-top: 1px solid #403c3c;
+=======
+  text-align: center;
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
 }
 
 #booking_manage .detail_modal_body {
@@ -285,12 +361,21 @@ th {
   font-weight: 600;
 }
 
+<<<<<<< HEAD:src/css/member_editmember.css
 #booking_manage .cancel_btn,
 #booking_manage .detail_btn,
 #booking_manage .comment_btn,
 #booking_manage .order_comment_btn,
 #booking_manage .together_btn {
   border-radius: 5px;
+=======
+.cancel_btn,
+.detail_btn,
+.comment_btn,
+.order_comment_btn,
+.order_comment_btn1 {
+  border-radius: 8px;
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
   border: none;
   padding: 5px 8px;
   transition: 0.3s;
@@ -301,6 +386,7 @@ th {
   right: 0px;
 }
 
+<<<<<<< HEAD:src/css/member_editmember.css
 #booking_manage .btn_td {
   width: 10%;
 }
@@ -315,19 +401,45 @@ th {
 }
 
 #booking_manage .detail_btn {
+=======
+.btn_td {
+  width: 20%;
+}
+
+.cancel_btn {
+  background-color: #dadada;
+  margin-right: 5%;
+}
+
+.cancel_btn:hover {
+  background-color: #dfdede;
+}
+
+.detail_btn {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
   background-color: #403c3c;
   color: #fff;
 }
 
+<<<<<<< HEAD:src/css/member_editmember.css
 #booking_manage .detail_btn:hover {
   background-color: #524d4d;
 }
 
 #booking_manage .comment_btn {
+=======
+.detail_btn:hover {
+  background-color: #524d4d;
+}
+
+.comment_btn {
+  margin-left: -360px;
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
   background-color: #8b1309;
   color: #fff;
 }
 
+<<<<<<< HEAD:src/css/member_editmember.css
 #booking_manage .comment_btn:hover {
   background-color: #a30f01;
 }
@@ -338,6 +450,23 @@ th {
 #booking_manage .together_btn {
   /* margin-left: -270px; */
 
+=======
+.comment_btn:hover {
+  background-color: #a30f01;
+}
+
+.together_btn {
+  border: 1px solid red;
+  margin-left: 17px;
+  background-color: #fff;
+  color: #8b1309;
+  border-radius: 8px;
+  padding: 5px 8px;
+  transition: 0.3s;
+}
+.order_comment_btn1 {
+  margin-left: -320px;
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
   background-color: #8b1309;
   color: #fff;
 }
@@ -347,8 +476,13 @@ th {
 }
 
 /* .mobile_td{
+<<<<<<< HEAD:src/css/member_editmember.css
       display: none;
   } */
+=======
+        display: none;
+    } */
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
 
 /* order_manage start */
 
@@ -475,6 +609,7 @@ th {
 /* 超大型螢幕 */
 
 @media screen and (max-width: 1200px) {
+<<<<<<< HEAD:src/css/member_editmember.css
   #member_aside {
     display: none;
   }
@@ -485,6 +620,18 @@ th {
     transform: scaleX(-1);
   }
   #mobile_member_aside {
+=======
+  .aside_menu {
+    display: none;
+  }
+  #aside_menu_chk:checked + .mobile_aside_menu {
+    transform: translateX(0);
+  }
+  #aside_menu_chk:checked + .mobile_aside_menu .fa-angle-right {
+    transform: scaleX(-1);
+  }
+  .mobile_aside_menu {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
     display: unset;
     background-color: #403c3c;
     width: 230px;
@@ -497,7 +644,11 @@ th {
     z-index: 2;
     transition: 0.6s;
   }
+<<<<<<< HEAD:src/css/member_editmember.css
   #mobile_member_aside label {
+=======
+  .mobile_aside_menu label {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
     position: absolute;
     background-color: #ccc;
     border-radius: 0 5px 5px 0;
@@ -506,6 +657,7 @@ th {
     left: 100%;
     transition: 0.6s;
   }
+<<<<<<< HEAD:src/css/member_editmember.css
   #mobile_member_aside .default {
     background-color: #8b1309;
   }
@@ -535,6 +687,8 @@ th {
     border-bottom: 1px solid #403c3c;
     width: 8%;
   }
+=======
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
   #booking_manage,
   #order_manage {
     width: 100%;
@@ -545,6 +699,7 @@ th {
 /* 大型螢幕 */
 
 @media screen and (max-width: 992px) {
+<<<<<<< HEAD:src/css/member_editmember.css
   #booking_manage .mobile_td {
     height: 90px;
     line-height: 60px;
@@ -562,6 +717,25 @@ th {
     width: 15%;
   }
   #booking_manage .order_td .detail_btn {
+=======
+  .mobile_td {
+    height: 90px;
+    line-height: 60px;
+  }
+  .cancel_btn {
+    margin-right: 16%;
+  }
+  .detail_btn {
+    margin-right: 15%;
+  }
+  .comment_btn {
+    margin-top: 15px;
+  }
+  .order_td {
+    width: 15%;
+  }
+  .order_td .detail_btn {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editmember.css
     margin-top: 15px;
   }
 }

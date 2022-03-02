@@ -11,7 +11,11 @@
 .member_login_container {
     width: 440px;
     height: 58vh;
+<<<<<<< HEAD:src/css/member_login.css
     margin: 100px auto;
+=======
+    margin: 80px auto;
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:index_list/css/member_login.css
     padding: 10px 10px;
     display: flex;
     flex-direction: column;
@@ -114,6 +118,21 @@
     font-weight: bold;
     font-size: 18px;
     /* status */
+<<<<<<< HEAD:src/css/member_login.css
+=======
+}
+
+
+/* ---------- body over ---------- */
+
+
+
+/* ---------- footer_page start ---------- */
+
+.footer_page {
+    margin-top: 40px;
+    width: 100%;
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:index_list/css/member_login.css
 }
 
 /* ---------- body over ---------- */

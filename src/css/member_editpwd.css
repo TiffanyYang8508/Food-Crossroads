@@ -4,7 +4,11 @@
   z-index: -1;
 }
 
+<<<<<<< HEAD:src/css/member_editpwd.css
 #member_aside {
+=======
+.aside_menu {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editpwd.css
   background-color: #403c3c;
   width: 230px;
   height: 100%;
@@ -13,6 +17,7 @@
   z-index: 4;
 }
 
+<<<<<<< HEAD:src/css/member_editpwd.css
 #mobile_member_aside {
   display: none;
 }
@@ -22,17 +27,36 @@
 }
 
 #member_aside .panel-default {
+=======
+.mobile_aside_menu {
+  display: none;
+}
+
+.default {
+  background-color: #8b1309;
+}
+
+.panel-default {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editpwd.css
   /* border: 1px solid red; */
   border-bottom: 1px solid white;
   padding: 5px;
   width: 100%;
 }
 
+<<<<<<< HEAD:src/css/member_editpwd.css
 #member_aside .panel-title {
   padding-top: 8px;
 }
 
 #member_aside .panel .panel-heading a {
+=======
+.panel-title {
+  padding-top: 8px;
+}
+
+.panel .panel-heading a {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editpwd.css
   font-weight: 600;
   color: white;
   text-decoration: none;
@@ -40,12 +64,25 @@
   width: 100%;
 }
 
+<<<<<<< HEAD:src/css/member_editpwd.css
 #member_aside .panel-default:hover {
+=======
+.panel-default:hover {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editpwd.css
   background-color: #8b1309;
 }
 
 /* 側邊欄 end */
 
+<<<<<<< HEAD:src/css/member_editpwd.css
+=======
+th {
+  font-weight: bolder;
+  font-size: 22px;
+  text-align: center;
+}
+
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editpwd.css
 #edit_pwd .member_editinfo_btn {
   border-radius: 5px;
   margin-top: 30px;
@@ -61,11 +98,19 @@
 }
 
 #edit_pwd .member_editinfo_btn:hover {
+<<<<<<< HEAD:src/css/member_editpwd.css
   background-color: #a30f01;
 }
 
 #edit_pwd .member_editpwd_btn:hover {
   background-color: #a30f01;
+=======
+  background-color: #f04535;
+}
+
+#edit_pwd .member_editpwd_btn:hover {
+  background-color: #f04535;
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editpwd.css
 }
 
 #edit_pwd .member_confirm_btn {
@@ -82,7 +127,11 @@
 }
 
 #edit_pwd .member_confirm_btn:hover {
+<<<<<<< HEAD:src/css/member_editpwd.css
   background-color: #a30f01;
+=======
+  background-color: red;
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_editpwd.css
 }
 #edit_pwd .member_back_btn {
   margin-left: 30px;

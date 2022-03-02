@@ -11,7 +11,11 @@
 .member_login_container {
     width: 440px;
     height: 58vh;
+<<<<<<< HEAD:food-crossroads/index_list/css/member_login.css
     margin: 80px auto;
+=======
+    margin: 100px auto;
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_login.css
     padding: 10px 10px;
     display: flex;
     flex-direction: column;
@@ -114,6 +118,7 @@
     font-weight: bold;
     font-size: 18px;
     /* status */
+<<<<<<< HEAD:food-crossroads/index_list/css/member_login.css
 }
 
 
@@ -126,9 +131,12 @@
 .footer_page {
     margin-top: 40px;
     width: 100%;
+=======
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_login.css
 }
 
-/* ---------- footer_page over ---------- */
+/* ---------- body over ---------- */
+
 
 /* RWD start */
 
@@ -149,7 +157,9 @@
 /* 平板 */
 
 @media screen and (max-width:768px) {
-
+    .member_login_container{
+        margin: 10px auto;
+    }
 }
 
 
@@ -157,7 +167,7 @@
 
 @media screen and (max-width:576px) {
     .member_login_container{
-        border: none;
+        margin: 80px auto;
     }
 }
 

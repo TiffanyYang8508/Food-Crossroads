@@ -4,6 +4,7 @@
   z-index: -1;
 }
 
+<<<<<<< HEAD:src/css/member_orderRecord.css
 #member_aside {
   background-color: #403c3c;
   width: 230px;
@@ -23,11 +24,33 @@
 }
 
 #member_aside .panel-default {
+=======
+.aside_menu {
+  background-color: #403c3c;
+  width: 230px;
+  height: 100%;
+  position: fixed;
+  float: left;
+  z-index: 4;
+}
+
+.mobile_aside_menu {
+  display: none;
+}
+
+.default {
+  background-color: #8b1309;
+}
+
+.panel-default {
+  /* border: 1px solid red; */
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_orderRecord.css
   border-bottom: 1px solid white;
   padding: 5px;
   width: 100%;
 }
 
+<<<<<<< HEAD:src/css/member_orderRecord.css
 #member_aside .panel-title {
   padding-top: 8px;
 }
@@ -37,6 +60,13 @@
 }
 
 #member_aside .panel .panel-heading a {
+=======
+.panel-title {
+  padding-top: 8px;
+}
+
+.panel .panel-heading a {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_orderRecord.css
   font-weight: 600;
   color: white;
   text-decoration: none;
@@ -44,12 +74,17 @@
   width: 100%;
 }
 
+<<<<<<< HEAD:src/css/member_orderRecord.css
 #member_aside .panel-default:hover {
+=======
+.panel-default:hover {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_orderRecord.css
   background-color: #8b1309;
 }
 
 /* 側邊欄 end */
 
+<<<<<<< HEAD:src/css/member_orderRecord.css
 .member_info {
   margin-top: 60px;
 }
@@ -64,12 +99,15 @@
   margin-top: 30px;
 }
 
+=======
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_orderRecord.css
 th {
   font-weight: bolder;
   font-size: 22px;
   text-align: center;
 }
 
+<<<<<<< HEAD:src/css/member_orderRecord.css
 .title_member {
   font-size: 35px;
   font-weight: bold;
@@ -352,10 +390,15 @@ th {
 
 /* order_manage start */
 
+=======
+/* booking_manage start */
+
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_orderRecord.css
 #order_manage {
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD:src/css/member_orderRecord.css
   width: 100%;
   height: 100%;
   margin-left: 18%;
@@ -363,6 +406,18 @@ th {
 
 #order_manage .modal-title {
   font-size: 24px;
+=======
+  width: 90%;
+  height: 100%;
+  position: relative;
+  left: -130px;
+  /* border: 1px solid black; */
+}
+
+#mobile_booking_manage,
+#mobile_order_manage {
+  display: none;
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_orderRecord.css
 }
 
 #order_manage .table th {
@@ -377,6 +432,7 @@ th {
   text-align: center;
 }
 
+<<<<<<< HEAD:src/css/member_orderRecord.css
 .order_comment_btn {
   background-color: #8b1309;
   margin-left: -270px;
@@ -470,11 +526,98 @@ th {
 .test {
   display: none;
 }
+=======
+#order_manage .detail_modal {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 80px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#order_manage .groupdetail_modal {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 80px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cancel_btn,
+.detail_btn,
+.comment_btn,
+.order_comment_btn,
+.order_comment_btn1 {
+  border-radius: 8px;
+  border: none;
+  padding: 5px 8px;
+  transition: 0.3s;
+}
+
+#order_manage .table_title {
+  position: relative;
+  right: 0px;
+}
+
+.btn_td {
+  width: 20%;
+}
+
+.cancel_btn {
+  background-color: #dadada;
+  margin-right: 5%;
+}
+
+.cancel_btn:hover {
+  background-color: #dfdede;
+}
+
+.detail_btn {
+  background-color: #403c3c;
+  color: #fff;
+  margin-left: -270px;
+}
+
+.detail_btn:hover {
+  background-color: #524d4d;
+}
+
+#order_manage .order_comment_btn {
+  margin-left: -208px;
+  margin-top: 11px;
+  background-color: #8b1309;
+  color: #fff;
+}
+
+#order_manage .comment_btn:hover {
+  background-color: #a30f01;
+}
+
+#order_manage .together_btn {
+  border: 1px solid red;
+  margin-left: 17px;
+  background-color: #fff;
+  color: #8b1309;
+  border-radius: 8px;
+  padding: 5px 8px;
+  transition: 0.3s;
+}
+#order_manage .order_comment_btn1 {
+  margin-left: -640px;
+  background-color: #8b1309;
+  color: #fff;
+}
+
+.order_comment_btn1:hover {
+  background-color: #a30f01;
+}
+
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_orderRecord.css
 /* RWD start */
 
 /* 超大型螢幕 */
 
 @media screen and (max-width: 1200px) {
+<<<<<<< HEAD:src/css/member_orderRecord.css
   #member_aside {
     display: none;
   }
@@ -485,6 +628,18 @@ th {
     transform: scaleX(-1);
   }
   #mobile_member_aside {
+=======
+  .aside_menu {
+    display: none;
+  }
+  #aside_menu_chk:checked + .mobile_aside_menu {
+    transform: translateX(0);
+  }
+  #aside_menu_chk:checked + .mobile_aside_menu .fa-angle-right {
+    transform: scaleX(-1);
+  }
+  .mobile_aside_menu {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_orderRecord.css
     display: unset;
     background-color: #403c3c;
     width: 230px;
@@ -497,7 +652,11 @@ th {
     z-index: 2;
     transition: 0.6s;
   }
+<<<<<<< HEAD:src/css/member_orderRecord.css
   #mobile_member_aside label {
+=======
+  .mobile_aside_menu label {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_orderRecord.css
     position: absolute;
     background-color: #ccc;
     border-radius: 0 5px 5px 0;
@@ -506,6 +665,7 @@ th {
     left: 100%;
     transition: 0.6s;
   }
+<<<<<<< HEAD:src/css/member_orderRecord.css
   #mobile_member_aside .default {
     background-color: #8b1309;
   }
@@ -536,6 +696,9 @@ th {
     width: 8%;
   }
   #booking_manage,
+=======
+  #order_manage,
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_orderRecord.css
   #order_manage {
     width: 100%;
     margin-left: 0%;
@@ -545,6 +708,7 @@ th {
 /* 大型螢幕 */
 
 @media screen and (max-width: 992px) {
+<<<<<<< HEAD:src/css/member_orderRecord.css
   #booking_manage .mobile_td {
     height: 90px;
     line-height: 60px;
@@ -562,6 +726,25 @@ th {
     width: 15%;
   }
   #booking_manage .order_td .detail_btn {
+=======
+  .mobile_td {
+    height: 90px;
+    line-height: 60px;
+  }
+  .cancel_btn {
+    margin-right: 16%;
+  }
+  .detail_btn {
+    margin-right: 15%;
+  }
+  .comment_btn {
+    margin-top: 15px;
+  }
+  .order_td {
+    width: 15%;
+  }
+  .order_td .detail_btn {
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_orderRecord.css
     margin-top: 15px;
   }
 }
@@ -569,7 +752,11 @@ th {
 /* 平板 */
 
 @media screen and (max-width: 768px) {
+<<<<<<< HEAD:src/css/member_orderRecord.css
   #booking_manage,
+=======
+  #order_manage,
+>>>>>>> c6632a9def81be3593d9fefe92086ed3e269b122:food-crossroads/src/css/member_orderRecord.css
   #order_manage {
     display: none;
   }
