@@ -1,34 +1,193 @@
+#shopping .table {
+  border: 1px solid #999999;
+  border-radius: 5px;
+}
+
+#shoppingchar table th {
+  text-align: center;
+}
+
+#shopping-row td {
+  height: 140px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#shoppingchar td span {
+  display: inline-block;
+  text-align: center;
+}
+
+#shoppingchar .wrapper img {
+  position: relative;
+  display: inline;
+  margin-left: 0;
+  overflow: hidden;
+  width: 140px;
+}
+
+#shoppingchar .all-squre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  opacity: 0.9;
+  box-shadow: 1px 5px 10px 1px #403c3c;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  position: sticky;
+  bottom: 42px;
+  left: 0;
+  margin: 5% 0;
+}
+
 #ordername {
   text-align: start;
 }
 
-#all-squre tr td > b {
-  position: relative;
-  right: 50px;
-}
 #buy-ok-btn {
-  width: 120px;
-  height: 30px;
+  width: 20%;
+  height: 40px;
   background-color: #8b1309;
   color: white;
   border-radius: 5px;
-  position: relative;
-  margin-right: 40%;
+  transition: 0.3s;
 }
+
+#buy-ok-btn:hover {
+  background-color: #a30f01;
+}
+
 #buy-back-btn {
-  width: 120px;
-  height: 30px;
+  width: 20%;
+  height: 40px;
   background-color: #403c3c;
   color: white;
   border-radius: 5px;
-  position: relative;
-  margin-right: 40%;
 }
-@media screen and (max-width: 768px) {
-  #shopping-row img {
-    display: none;
+
+#buy-back-btn:hover {
+  background-color: #4b4747;
+}
+
+
+/* 手機板 start */
+
+#mobile_shopping {
+  display: none;
+}
+
+#mobile_shopping .mobile_shopping_div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+#mobile_shopping .mobile_shopping_inline_div {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+#mobile_shopping .mobile_shopping_img {
+  width: 100px;
+  margin-right: 5%;
+}
+
+#mobile_shopping .mobile_shopping_text {
+  width: 100%;
+  padding: 5% 2%;
+}
+
+#mobile_shopping .mobile_span {
+  display: block;
+}
+
+#mobile_shopping .mobile_div span:nth-child(1) {
+  float: left;
+}
+
+#mobile_shopping .mobile_div span:nth-child(2) {
+  float: right;
+}
+
+/* RWD */
+
+
+/* 超大型螢幕 */
+
+@media screen and (max-width:1200px) {
+  .all-squre .shopping-checkbox {
+      margin-left: 2px;
   }
 }
 
-@media screen and (max-width: 576px) {
+
+/* 大型螢幕 */
+
+@media screen and (max-width:992px) {
+  .all-squre .shopping-checkbox {
+      margin-left: -5px;
+  }
 }
+
+
+/* 平板 */
+
+@media screen and (max-width:768px) {
+  #shopping-row img {
+      display: none;
+  }
+  table tr td:nth-child(2) {
+      width: 0;
+  }
+  #shopping-row img {
+      display: initial;
+  }
+  #ordername,
+  #shopping-row .ordername {
+      width: 50px;
+      position: relative;
+      right: 20px;
+  }
+
+}
+
+
+/* 手機 */
+
+@media screen and (max-width:576px) {
+  #shopping {
+      display: none;
+  }
+  #mobile_shopping {
+      all: unset;
+  }
+  .all-squre {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+      margin: 5% 0;
+  }
+  #buy-ok-btn {
+      order: 2;
+      width: 25%;
+      height: 100%;
+  }
+  #buy-back-btn {
+      order: 1;
+      width: 25%;
+      height: 100%;
+  }
+}
+
+
+/* 小手機 */
+
+@media screen and (max-width:480px) {}
+
+
+/* RWD end*/

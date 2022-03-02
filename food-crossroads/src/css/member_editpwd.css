@@ -4,7 +4,7 @@
   z-index: -1;
 }
 
-.aside_menu {
+#member_aside {
   background-color: #403c3c;
   width: 230px;
   height: 100%;
@@ -13,26 +13,26 @@
   z-index: 4;
 }
 
-.mobile_aside_menu {
+#mobile_member_aside {
   display: none;
 }
 
-.default {
+#member_aside .default {
   background-color: #8b1309;
 }
 
-.panel-default {
+#member_aside .panel-default {
   /* border: 1px solid red; */
   border-bottom: 1px solid white;
   padding: 5px;
   width: 100%;
 }
 
-.panel-title {
+#member_aside .panel-title {
   padding-top: 8px;
 }
 
-.panel .panel-heading a {
+#member_aside .panel .panel-heading a {
   font-weight: 600;
   color: white;
   text-decoration: none;
@@ -40,17 +40,11 @@
   width: 100%;
 }
 
-.panel-default:hover {
+#member_aside .panel-default:hover {
   background-color: #8b1309;
 }
 
 /* 側邊欄 end */
-
-th {
-  font-weight: bolder;
-  font-size: 22px;
-  text-align: center;
-}
 
 #edit_pwd .member_editinfo_btn {
   border-radius: 5px;
@@ -67,11 +61,11 @@ th {
 }
 
 #edit_pwd .member_editinfo_btn:hover {
-  background-color: #f04535;
+  background-color: #a30f01;
 }
 
 #edit_pwd .member_editpwd_btn:hover {
-  background-color: #f04535;
+  background-color: #a30f01;
 }
 
 #edit_pwd .member_confirm_btn {
@@ -88,7 +82,7 @@ th {
 }
 
 #edit_pwd .member_confirm_btn:hover {
-  background-color: red;
+  background-color: #a30f01;
 }
 #edit_pwd .member_back_btn {
   margin-left: 30px;
