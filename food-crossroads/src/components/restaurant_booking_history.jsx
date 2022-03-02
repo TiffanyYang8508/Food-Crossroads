@@ -38,17 +38,17 @@ class Restaurant_booking_history extends Component {
                         </div>
                         <div className="panel panel-default">
                             <div className="panel-heading">
-                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">訂餐管理</a>
+                                <h4 className="panel-title"><a href="/restaurant/self/pick">訂餐管理</a>
                                 </h4>
                             </div>
                             <div id="collapseTwo" className="panel-collapse collapse">
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="restaurant_self_pick_up.html">今日自取訂餐</a>
+                                    <a href="">今日自取訂餐</a>
                                 </div>
                             </div>
                             <div id="collapseTwo" className="panel-collapse collapse">
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="restaurant_history_list.html">歷史訂餐紀錄</a>
+                                    <a href="">歷史訂餐紀錄</a>
                                 </div>
                             </div>
                         </div>
