@@ -1,4 +1,4 @@
-aside {
+#restaurant_self_pick_up {
     background-color: #403C3C;
     width: 230px;
     height: 90vh;
@@ -6,22 +6,22 @@ aside {
     top: 10%;
 }
 
-.default {
+#restaurant_self_pick_up .default {
     width: 230px;
     background-color: #8B1309;
 }
 
-.panel-default{
+#restaurant_self_pick_up .panel-default{
     border-bottom: 1px solid white;
     padding: 5px;
     width: 100%;
 }
 
-.panel-title {
+#restaurant_self_pick_up .panel-title {
     padding-top: 8px;
 }
 
-.panel-heading .panel-title a {
+#restaurant_self_pick_up .panel-heading .panel-title a {
     font-weight: 600;
     color: white;
     text-decoration: none;
@@ -29,60 +29,23 @@ aside {
     width: 100%;
 }
 
-.little_title {
+#restaurant_self_pick_up .little_title {
     margin-left: -5px;
     margin-right: -6px;
     padding: 5px 0 5px 15px;
 }
 
-.panel .little_title a {
+#restaurant_self_pick_up .panel .little_title a {
     text-decoration: none;
     color: white;
     font-weight: 600;
 }
 
-.form_textbox {
-    margin-bottom: -6px;
-}
-
-.container{
-    height: 83vh;
-}
-
-.container .order_table {
+#restaurant_self_pick_up .order_table {
     position: absolute;
     top: 140px;
     left: 16%;
     width: 80%;
-}
-
-.member_info{
-    
-    margin-top: 60px;
-}
-
-.member_contain{
-    padding-top: 20px;
-}
-
-.member_edit_btn{
-    margin-left: 200px;
-    border-radius: 5px;
-    margin-top: 30px;
-    font-family: Noto Sans TC;
-}
-
-.title_member_edit{
-    font-size: 35px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.edit_info{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,30%);
 }
 
 #restaurant_self_pick_up th {
@@ -184,42 +147,8 @@ aside {
     margin-bottom: 50px;
     text-align: center;
     font-size: 28px;
-    font-family: Noto Sans TC;
 }
 
-.modal-title{
-    font-family: Noto Sans TC;
-    font-size: 24px;
-    
-    
-}
-.detail_modal_body{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 150px;
-    font-size: 18px;
-    font-family: Noto Sans TC;
-}
-
-.rank_modal_body{
-    position: relative;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-left: 150px;
-    font-family: Noto Sans TC;
-}
-
-.modal-footer{
-    font-family: Noto Sans TC;
-}
-
-.rank_modal_title{
-    position: absolute;
-    font-size: 28px;
-    left: -50px;
-    top: -40px;
-
-}
 .ratings {
     position: relative;
     vertical-align: middle;
@@ -229,6 +158,7 @@ aside {
     font-size: 40px; /*調整字體大小可放大縮小星星*/
     text-shadow: 0px 1px 0 #999;
     }
+    
 .full_star {
     width: 100%; /*調整寬度可變更星等*/
     position: absolute;

@@ -1,4 +1,4 @@
-aside {
+#restaurant_booking_history_aside {
     background-color: #403C3C;
     width: 230px;
     height: 90vh;
@@ -6,22 +6,22 @@ aside {
     top: 10%;
 }
 
-.default {
+#restaurant_booking_history_aside .default {
     width: 230px;
     background-color: #8B1309;
 }
 
-.panel-default{
+#restaurant_booking_history_aside .panel-default{
     border-bottom: 1px solid white;
     padding: 5px;
     width: 100%;
 }
 
-.panel-title {
+#restaurant_booking_history_aside .panel-title {
     padding-top: 8px;
 }
 
-.panel-heading .panel-title a {
+#restaurant_booking_history_aside .panel-heading .panel-title a {
     font-weight: 600;
     color: white;
     text-decoration: none;
@@ -29,20 +29,16 @@ aside {
     width: 100%;
 }
 
-.little_title {
+#restaurant_booking_history_aside .little_title {
     margin-left: -5px;
     margin-right: -6px;
     padding: 5px 0 5px 15px;
 }
 
-.panel .little_title a {
+#restaurant_booking_history_aside .panel .little_title a {
     text-decoration: none;
     color: white;
     font-weight: 600;
-}
-
-.form_textbox {
-    margin-bottom: -6px;
 }
 
 #restaurant_booking_history .order_table {
@@ -50,34 +46,6 @@ aside {
     top: 140px;
     left: 16%;
     width: 80%;
-}
-
-.member_info{
-    
-    margin-top: 60px;
-}
-
-.member_contain{
-    padding-top: 20px;
-}
-
-.member_edit_btn{
-    margin-left: 200px;
-    border-radius: 5px;
-    margin-top: 30px;
-}
-
-.title_member_edit{
-    font-size: 35px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.edit_info{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,30%);
 }
 
 #restaurant_booking_history th {
@@ -137,10 +105,6 @@ aside {
     padding: 5px;
     width: 30%;
     margin-right: 10px;
-}
-
-.aside_menu label,.mobile_aside_menu label{
-    margin-right: 20px;
 }
 
 #restaurant_booking_history.member_confirm_btn{

@@ -21,7 +21,7 @@
     padding-top: 8px;
 }
 
-.panel-heading a {
+#restaurant_today_booking_aside .panel-heading a {
     text-decoration: none;
     font-weight: 600;
     color: white;
@@ -36,7 +36,6 @@
 }
 
 #restaurant_today_booking_aside .little_title {
-    /* border: 1px solid red; */
     margin-left: -5px;
     margin-right: -6px;
     padding: 5px 0 5px 15px;
@@ -51,11 +50,6 @@
     color: white;
     font-weight: 600;
 }
-
-
-/* .container{
-    height: 83vh;    
-} */
 
 #restaurant_today_booking .search_bar {
     display: flex;
@@ -231,10 +225,6 @@
         font-size: 13px;
         font-weight: 600;
     }
-
-    /* .container{
-        height: 80vh;    
-    } */
 
     #restaurant_today_booking_aside .container .order_table {
        margin-top: -15px;

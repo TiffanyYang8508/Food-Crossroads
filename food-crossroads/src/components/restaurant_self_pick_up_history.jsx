@@ -8,13 +8,13 @@ class Restaurant_self_pick_up_history extends Component {
     render() {
         return (
             <React.Fragment>
-                <header id="header_page">
+                <header className="header_page">
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <a className="navbar-brand" href="/"><img src={logo} alt="LOGO" /></a>
                     </nav>
                 </header>
 
-                <aside id="restaurant_history_list_aside">
+                <aside id="restaurant_self_pick_up_history_aside">
                     <div class="panel-group" id="accordion">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -51,7 +51,7 @@ class Restaurant_self_pick_up_history extends Component {
                     </div>
                 </aside>
 
-                <section id="restaurant_history_list">
+                <section id="restaurant_self_pick_up_history">
                     <div class="container">
                         <div class="search_bar">
                             <div>
