@@ -152,10 +152,6 @@
     transition: 0.3s;
 }
 
-#restaurant_today_booking tbody .detail_btn,#restaurant_today_booking .modal-footer .detail_btn{
-    border: 2px solid #403C3C;
-}
-
 #restaurant_today_booking .detail_btn:hover {
     background-color: #524d4d;    
     color: #fff;

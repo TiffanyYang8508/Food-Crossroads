@@ -173,9 +173,9 @@ class Restaurant_booking_today extends Component {
                                             </label>
                                         </div>
                                     </td>
-                                    <td>00125</td>
+                                    <td>00001</td>
                                     <td>2022/03/07</td>
-                                    <td>16:30</td>
+                                    <td>12:00</td>
                                     <td>6</td>
                                     <td>李曉明</td>
                                     <td>0987654321</td>
