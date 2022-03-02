@@ -61,7 +61,7 @@ class Restaurant_booking_history extends Component {
                     </div>
                 </aside>
 
-                <section id="restaurant_booking_history">
+                <section id="restaurant_self_pick_up">
                     <div className="container">
                         <div className="search_bar">
                             <div>

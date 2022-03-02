@@ -85,7 +85,7 @@ aside {
     transform: translate(-50%,30%);
 }
 
-#restaurant_booking_history th {
+#restaurant_self_pick_up th {
     font-size: 16px;
     text-align: center;
     position: relative;
@@ -93,7 +93,7 @@ aside {
     width: 100px;
 }
 
-#restaurant_booking_history .search_bar h3{
+#restaurant_self_pick_up .search_bar h3{
     position: relative;
     left: 20px;
     top: 10px;
@@ -101,7 +101,7 @@ aside {
     margin-right: 500px;
 }
 
-#restaurant_booking_history .search_bar_div{
+#restaurant_self_pick_up .search_bar_div{
     border: 1px solid #999999;
     border-radius: 5px;
     padding: 5px;
@@ -110,33 +110,33 @@ aside {
 }
 
 
-#restaurant_booking_history .search_bar input[type=text]{
+#restaurant_self_pick_up .search_bar input[type=text]{
     border: none;  
     width: 90%;
 }
 
-#restaurant_booking_history .search_bar input[type=text]:focus{
+#restaurant_self_pick_up .search_bar input[type=text]:focus{
     outline: none;
 }
 
-#restaurant_booking_history .search_bar button {
+#restaurant_self_pick_up .search_bar button {
     height: 40px;
     background-color: #FCC106;
     border-radius: 5px;
     padding: 2px 10px;
 }
 
-#restaurant_booking_history .search_bar button:hover {
+#restaurant_self_pick_up .search_bar button:hover {
     background-color: #f0b802;
 }
 
-#restaurant_booking_history .search_bar {
+#restaurant_self_pick_up .search_bar {
     position: relative;
     left: 23px;
     display: flex;
 }
 
-#restaurant_booking_history .search_bar_div{
+#restaurant_self_pick_up .search_bar_div{
     border: 1px solid #999999;
     border-radius: 5px;
     padding: 5px;
@@ -148,30 +148,38 @@ aside {
     margin-right: 20px;
 }
 
-.member_confirm_btn{
+#restaurant_self_pick_up .member_confirm_btn{
     margin-left: 150px;
     border-radius: 5px;
     margin-top: 30px;
 }
 
-td{
+#restaurant_self_pick_up td{
     text-align: center;
 }
 
-.cancel_btn{
-    border-radius: 8px;
+#restaurant_self_pick_up .cancel_btn{
+    border-radius: 5px;
 }
 
-.detail_btn{
+
+#restaurant_self_pick_up tbody .detail_btn,#restaurant_self_pick_up tbody .cancel_btn {
+    border-radius: 5px;
+    border: none;
+    padding: 5px 8px;
+    transition: 0.3s;
+}
+
+#restaurant_self_pick_up .detail_btn{
     border: 1px solid gray;
     border-radius: 8px;
 }
 
-.comment_btn{
+#restaurant_self_pick_up .comment_btn{
     border-radius: 8px;
 }
 
-.cancel_modal_body{
+#restaurant_self_pick_up .cancel_modal_body{
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
