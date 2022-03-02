@@ -4,13 +4,12 @@
   z-index: -1;
 }
 
-#member_aside .aside_menu {
+#member_aside {
   background-color: #403c3c;
   width: 230px;
   height: 100%;
   position: fixed;
   float: left;
-  z-index: 4;
 }
 
 #member_aside .mobile_aside_menu {
@@ -30,6 +29,10 @@
 
 #member_aside .panel-title {
   padding-top: 8px;
+}
+
+#member_aside .panel-title:hover {
+  background-color: #8b1309;
 }
 
 #member_aside .panel .panel-heading a {
@@ -243,13 +246,11 @@ th {
 /* booking_manage start */
 
 #booking_manage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
+  position: fixed;
+  top: 10%;
+  left: 16%;
+  width: 80%;
   height: 100%;
-  margin-left: 12%;
-  /* border: 1px solid black; */
 }
 
 #mobile_booking_manage,
@@ -259,14 +260,12 @@ th {
 
 #booking_manage .table th {
   border-bottom: 1px solid #403c3c;
-}
-
-#booking_manage .table th {
   width: 10%;
 }
 
 #booking_manage td {
   text-align: center;
+  border-top: 1px solid #403c3c;
 }
 
 #booking_manage .detail_modal_body {
@@ -284,12 +283,12 @@ th {
   font-weight: 600;
 }
 
-.cancel_btn,
-.detail_btn,
-.comment_btn,
-.order_comment_btn,
-.together_btn {
-  border-radius: 8px;
+#booking_manage .cancel_btn,
+#booking_manage .detail_btn,
+#booking_manage .comment_btn,
+#booking_manage .order_comment_btn,
+#booking_manage .together_btn {
+  border-radius: 5px;
   border: none;
   padding: 5px 8px;
   transition: 0.3s;
@@ -300,40 +299,39 @@ th {
   right: 0px;
 }
 
-.btn_td {
-  width: 20%;
+#booking_manage .btn_td {
+  width: 10%;
 }
 
-.cancel_btn {
-  background-color: #dadada;
-  margin-right: 5%;
+#booking_manage .cancel_btn {
+  background-color: #cacaca;
+  margin-right: 2%;
 }
 
-.cancel_btn:hover {
-  background-color: #dfdede;
+#booking_manage .cancel_btn:hover {
+  background-color: #b8b8b8;
 }
 
-.detail_btn {
+#booking_manage .detail_btn {
   background-color: #403c3c;
   color: #fff;
 }
 
-.detail_btn:hover {
+#booking_manage .detail_btn:hover {
   background-color: #524d4d;
 }
 
-.comment_btn {
-  margin-left: -360px;
+#booking_manage .comment_btn {
   background-color: #8b1309;
   color: #fff;
 }
 
-.comment_btn:hover {
+#booking_manage .comment_btn:hover {
   background-color: #a30f01;
 }
 
-.together_btn {
-  margin-left: -270px;
+#booking_manage .together_btn {
+  /* margin-left: -270px; */
   background-color: #8b1309;
   color: #fff;
 }
@@ -468,16 +466,16 @@ th {
 /* 超大型螢幕 */
 
 @media screen and (max-width: 1200px) {
-  .aside_menu {
+  #member_aside {
     display: none;
   }
-  #aside_menu_chk:checked + .mobile_aside_menu {
+  #aside_menu_chk:checked + #mobile_member_aside {
     transform: translateX(0);
   }
-  #aside_menu_chk:checked + .mobile_aside_menu .fa-angle-right {
+  #aside_menu_chk:checked + #mobile_member_aside .fa-angle-right {
     transform: scaleX(-1);
   }
-  .mobile_aside_menu {
+  #mobile_member_aside {
     display: unset;
     background-color: #403c3c;
     width: 230px;
@@ -490,7 +488,7 @@ th {
     z-index: 2;
     transition: 0.6s;
   }
-  .mobile_aside_menu label {
+  #mobile_member_aside label {
     position: absolute;
     background-color: #ccc;
     border-radius: 0 5px 5px 0;
@@ -498,6 +496,12 @@ th {
     top: 50%;
     left: 100%;
     transition: 0.6s;
+  }
+  #mobile_member_aside .default{
+    background-color: #8b1309;
+  }
+  #mobile_member_aside .panel-default:hover {
+    background-color: #8b1309;
   }
   #booking_manage,
   #order_manage {

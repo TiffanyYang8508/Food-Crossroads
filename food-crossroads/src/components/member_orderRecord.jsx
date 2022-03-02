@@ -71,8 +71,7 @@ class BookingRecord extends Component {
           </nav>
         </header>
 
-        <aside id="member_aside">
-          <aside class="aside_menu">
+          <aside id="member_aside">
             <div class="panel-group" id="accordion">
               <div class="panel panel-default">
                 <div class="panel-heading">
@@ -99,11 +98,10 @@ class BookingRecord extends Component {
               </div>
             </div>
           </aside>
-        </aside>
 
 
         <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
-        <div class="mobile_aside_menu">
+        <div id="mobile_member_aside">
           <div class="panel-group" id="accordion">
             <div class="panel panel-default default">
               <div class="panel-heading">
