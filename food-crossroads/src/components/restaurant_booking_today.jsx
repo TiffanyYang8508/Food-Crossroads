@@ -40,7 +40,6 @@ class Restaurant_booking_today extends Component {
                         <a className="navbar-brand" href="/"><img src={logo} alt="LOGO" /></a>
                     </nav>
                 </header>
-
                 <aside id="restaurant_today_booking_aside">
                     <div>
                         <div className="panel panel-default">
@@ -181,20 +180,21 @@ class Restaurant_booking_today extends Component {
                                     <td>李曉明</td>
                                     <td>0987654321</td>
                                     <td>
-                                        <button className="detail_btn" data-toggle="modal" data-target="#detailModal">
+                                        <button className="detail_btn" >
                                             詳細內容
                                         </button>
                                     </td>
                                     <td>
-                                        <button className="cancel_btn" data-toggle="modal" data-target="#detailModal2">
+                                        <button className="cancel_btn" >
                                             取消
                                         </button>
                                     </td>
                                 </tr>
-                               
+
 
                             </tbody>
                         </table>
+                    
                     </div>
                 </section>
 

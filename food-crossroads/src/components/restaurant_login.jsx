@@ -24,13 +24,14 @@ class Restaurant_login extends Component {
     }
 
     loginClick = async () => {
-        await new Axios.post("http://localhost:8000/restaurant/login", this.state.restaurant)
-            .then((res) => {
-                if (res.data.status === "1") {
-                    $("#reportMessage").text(res.data.message);
-                }
-            })
-            .catch((error) => { console.error(error) });
+        // await new Axios.post("http://localhost:8000/restaurant/login", this.state.restaurant)
+        //     .then((res) => {
+        //         if (res.data.status === "1") {
+        //             $("#reportMessage").text(res.data.message);
+        //         }
+        //     })
+        //     .catch((error) => { console.error(error) });
+        window.location = "/restaurant/booking/today";
     }
 
     render() {
