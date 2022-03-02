@@ -50,12 +50,12 @@ class Restaurant_booking_today extends Component {
                             </Collapse>
                             <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}>
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="">今日訂位</a>
+                                    <a href="">今日訂位</a>
                                 </div>
                             </Collapse >
                             <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="">歷史訂位紀錄</a>
+                                    <a href="/restaurant/booking/history">歷史訂位紀錄</a>
                                 </div>
                             </Collapse>
                         </div>
