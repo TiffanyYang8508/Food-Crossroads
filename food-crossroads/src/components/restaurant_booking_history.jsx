@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import logo from "../img/logo.png";
 import Footer from "./footer";
 import "../css/restaurant_booking_history.css"
+import Collapse from "react-bootstrap/Collapse";
 class Restaurant_booking_history extends Component {
-    state = {}
+    state = {
+        open: true
+    }
     render() {
         return (
             <React.Fragment>
@@ -18,20 +21,20 @@ class Restaurant_booking_history extends Component {
                 <aside id="restaurant_booking_history_aside">
                     <div className="panel-group" id="accordion">
                         <div className="panel panel-default">
-                            <div className="panel-heading">
+                            <Collapse className="panel-heading" in={this.state.open}>
                                 <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
                                 </h4>
-                            </div>
-                            <div id="collapseOne" className="panel-collapse collapse">
+                            </Collapse>
+                            <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="restaurant_today_booking.html">今日訂位</a>
+                                    <a href="/restaurant/booking/today">今日訂位</a>
                                 </div>
-                            </div>
-                            <div id="collapseOne" className="panel-collapse collapse default">
+                            </Collapse>
+                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}>
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="restaurant_booking_history.html">歷史訂位紀錄</a>
+                                    <a href="/restaurant/booking/history">歷史訂位紀錄</a>
                                 </div>
-                            </div>
+                            </Collapse>
                         </div>
                         <div className="panel panel-default">
                             <div className="panel-heading">
