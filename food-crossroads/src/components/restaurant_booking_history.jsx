@@ -89,7 +89,7 @@ class Restaurant_booking_history extends Component {
                                             </label>
                                         </div>
                                     </td>
-                                    <td>00123</td>
+                                    <td>99999</td>
                                     <td>2022-02-22</td>
                                     <td>19:30</td>
                                     <td>5</td>
@@ -110,7 +110,7 @@ class Restaurant_booking_history extends Component {
                                             </label>
                                         </div>
                                     </td>
-                                    <td>00122</td>
+                                    <td>99998</td>
                                     <td>2022-02-22</td>
                                     <td>17:00</td>
                                     <td>1</td>
@@ -131,7 +131,7 @@ class Restaurant_booking_history extends Component {
                                             </label>
                                         </div>
                                     </td>
-                                    <td>00121</td>
+                                    <td>99997</td>
                                     <td>2022-02-21</td>
                                     <td>18:30</td>
                                     <td>3</td>
@@ -152,7 +152,7 @@ class Restaurant_booking_history extends Component {
                                             </label>
                                         </div>
                                     </td>
-                                    <td>00120</td>
+                                    <td>99996</td>
                                     <td>2022-02-21</td>
                                     <td>17:15</td>
                                     <td>3</td>
