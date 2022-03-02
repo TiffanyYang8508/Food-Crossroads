@@ -107,7 +107,7 @@ class Restaurant_booking_today extends Component {
                             </thead>
                             <tbody>
 
-                                {this.state.booking_detail.map((item, index) => (
+                                {/* {this.state.booking_detail.map((item, index) => (
                                     <tr key={index}>
                                         <td>
                                             <div className="checkbox">
@@ -165,7 +165,7 @@ class Restaurant_booking_today extends Component {
                                             </div>
                                         </div>
                                     </tr>
-                                ))}
+                                ))} */}
                                 <tr>
                                     <td>
                                         <div className="checkbox">
