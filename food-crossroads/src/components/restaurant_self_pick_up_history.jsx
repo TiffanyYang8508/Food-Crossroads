@@ -202,7 +202,7 @@ class Restaurant_booking_history extends Component {
                                     <div className="mobile_pick_up_history_inline_div">
                                         <div className="mobile_pick_up_history_div">
                                             <div className="mobile_text_div">
-                                                <p>狀態:李曉明</p>
+                                                <p>狀態:已完成</p>
                                                 <p>訂餐編號:99999</p>
                                                 <p>訂餐日期:2022-03-06</p>
                                             </div>
@@ -224,13 +224,13 @@ class Restaurant_booking_history extends Component {
                                     <div className="mobile_pick_up_history_inline_div">
                                         <div className="mobile_pick_up_history_div">
                                             <div className="mobile_text_div">
-                                                <p>狀態:李曉明</p>
+                                                <p>狀態:已完成</p>
                                                 <p>訂餐編號:99999</p>
                                                 <p>訂餐日期:2022-03-06</p>
                                             </div>
                                             <div className="mobile_div_text">
                                                 <p>訂餐時間:17:30</p>
-                                                <p>訂餐人:張曉明</p>
+                                                <p>訂餐人:劉慧婷</p>
                                                 <p>手機:0954428321</p>
                                             </div>
                                         </div>
@@ -246,13 +246,13 @@ class Restaurant_booking_history extends Component {
                                     <div className="mobile_pick_up_history_inline_div">
                                         <div className="mobile_pick_up_history_div">
                                             <div className="mobile_text_div">
-                                                <p>狀態:李曉明</p>
+                                                <p>狀態:已完成</p>
                                                 <p>訂餐編號:99999</p>
                                                 <p>訂餐日期:2022-03-06</p>
                                             </div>
                                             <div className="mobile_div_text">
                                                 <p>訂餐時間:17:30</p>
-                                                <p>訂餐人:張曉明</p>
+                                                <p>訂餐人:陳澤慶</p>
                                                 <p>手機:0954428321</p>
                                             </div>
                                         </div>

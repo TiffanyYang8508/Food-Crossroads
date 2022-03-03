@@ -100,7 +100,6 @@
 #restaurant_self_pick_up td{
     width: 80px;
     text-align: center;
-    border-top: 1px solid #403C3C;
     vertical-align: middle;
 }
 
@@ -148,6 +147,24 @@
     font-size: 28px;
 }
 
+#group_detail  .modal-content {
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    margin-top: -60px;
+}
+
+#group_detail  .modal-header {
+    padding: 10px;
+}
+
+#group_detail  .modal-content .groupdetail_modal {
+    padding-left: 80px;
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    height: 350px;
+}
 /* RWD */
 
 

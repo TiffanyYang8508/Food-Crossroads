@@ -10,12 +10,20 @@ class Restaurant_booking_history extends Component {
     }
 
     async componentDidMount() {
-        $(".detail_btn").on("click", function () {
+        $("#ungroup").on("click", function () {
             $(".modal-groupdetail").css("display", "block");
         });
 
         $(".btn_close").on("click", function () {
             $(".modal-groupdetail").css("display", "none");
+        });
+
+        $("#group").on("click", function () {
+            $("#group_detail").css("display", "block");
+        });
+
+        $(".btn_close").on("click", function () {
+            $(".modal-groupdetail2").css("display", "none");
         });
     }
 
@@ -148,7 +156,26 @@ class Restaurant_booking_history extends Component {
                                     <td>李曉明</td>
                                     <td>0987654321</td>
                                     <td>
-                                        <button className="detail_btn" onClick={this.showDetail}>
+                                        <button className="detail_btn" id='ungroup'>
+                                            詳細內容
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div className="checkbox">
+                                            <label>
+                                                <input type="checkbox" />
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>00002</td>
+                                    <td>2022-03-07</td>
+                                    <td>18:00</td>
+                                    <td>李曉明</td>
+                                    <td>0987654321</td>
+                                    <td>
+                                        <button className="detail_btn" id='group'>
                                             詳細內容
                                         </button>
                                     </td>
@@ -178,7 +205,7 @@ class Restaurant_booking_history extends Component {
                                         </div>
                                         {/* <div className="mobile_btn_div"> */}
                                         <button
-                                            className="detail_btn"
+                                            className="detail_btn2"
                                             data-toggle="modal"
                                             data-target="#detailModal">
                                             詳細內容
@@ -208,6 +235,40 @@ class Restaurant_booking_history extends Component {
                                 訂餐時間：3/7（一） 下午6：00 <br />
                                 備註：需要餐具
 
+                            </div>
+
+                            <div class="modal-footer">
+                                <button
+                                    type="button"
+                                    class="btn_close"
+                                    data-dismiss="modal"
+                                >
+                                    返回
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal modal-groupdetail2" tabIndex="0" id="group_detail">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">詳細訂單</h4>
+                            </div>
+                            <div class="groupdetail_modal">
+                                訂單編號： 00002 <br />
+                                名稱：李曉明 <br />
+                                西西里海鹽柴魚脆薯 *1   188 <br />
+                                蕃茄羅勒起司搭頂級陳年油醋*2   188 <br />
+                                <br />
+                                名稱：郭美美 <br />
+                                西西里海鹽柴魚脆薯*1  加辣  188 <br />
+                                南義炸起司條*1  288 <br />
+                                <br />
+                                名稱：陳家欣 <br />
+                                田園香橙鮮蝦蘿蔓鮮蔬*1  318 <br />
+                                水相主廚私房湯品*1  不要加蔥  288 <br />
                             </div>
 
                             <div class="modal-footer">
