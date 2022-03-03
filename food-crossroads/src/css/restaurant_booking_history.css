@@ -122,13 +122,8 @@
 }
 
 #restaurant_booking_history .detail_btn{
+    border: 1px solid gray;
     border-radius: 5px;
-    padding: 5px;
-}
-
-#restaurant_booking_history .detail_btn:hover{
-    background-color: #524d4d;    
-    color: #fff;
 }
 
 #restaurant_booking_history .comment_btn{

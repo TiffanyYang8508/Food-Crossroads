@@ -10,19 +10,7 @@ class Restaurant_booking_history extends Component {
     }
 
     showDetail = () => {
-        $(".detail").css("display", "block");
-    }
-
-    showDetail2 = () => {
-        $(".detail2").css("display", "block");
-    }
-
-    back = () => {
-        $(".detail").css("display", "none");
-    }
-
-    back2 = () => {
-        $(".detail2").css("display", "none");
+        alert("OK");
     }
 
     render() {
@@ -40,7 +28,8 @@ class Restaurant_booking_history extends Component {
                     <div className="panel-group" id="accordion">
                         <div className="panel panel-default">
                             <div className="panel-heading" >
-                                <h4 className="panel-title"><a href="/restaurant/booking/today">訂位管理</a>
+                                <h4 className="panel-title">
+                                    <a href="/restaurant/booking/today">訂位管理</a>
                                 </h4>
                             </div>
                             <div id="collapseOne" className="panel-collapse collapse" >
@@ -55,10 +44,11 @@ class Restaurant_booking_history extends Component {
                             </div>
                         </div>
                         <div className="panel panel-default">
-                            <Collapse className="panel-heading" in={this.state.open}>
-                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂餐管理</a>
+                            <div className="panel-heading" in={this.state.open}>
+                                <h4 className="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂餐管理</a>
                                 </h4>
-                            </Collapse>
+                            </div>
                             <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open} >
                                 <div className="little_title">
                                     <a href="/restaurant/self/pick">今日訂餐</a>
@@ -90,6 +80,7 @@ class Restaurant_booking_history extends Component {
                                 <tr>
                                     <th>狀態</th>
                                     <th>訂餐編號</th>
+                                    <th>訂餐日期</th>
                                     <th>訂餐時間</th>
                                     <th>訂餐人</th>
                                     <th>手機</th>
@@ -97,7 +88,7 @@ class Restaurant_booking_history extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr id="test">
                                     <td>
                                         <div className="checkbox">
                                             <label>
@@ -106,6 +97,7 @@ class Restaurant_booking_history extends Component {
                                         </div>
                                     </td>
                                     <td>00001</td>
+                                    <td>2022-03-07</td>
                                     <td>18:00</td>
                                     <td>李曉明</td>
                                     <td>0987654321</td>
@@ -115,48 +107,6 @@ class Restaurant_booking_history extends Component {
                                         </button>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        <div className="checkbox">
-                                            <label>
-                                                <input type="checkbox" />
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td>00002</td>
-                                    <td>18:00</td>
-                                    <td>李曉明</td>
-                                    <td>0987654321</td>
-                                    <td>
-                                        <button className="detail_btn" onClick={this.showDetail2}>
-                                            詳細內容
-                                        </button>
-                                    </td>
-                                </tr>
-                                <div className='detail'>
-                                    <h3>詳細內容</h3>
-                                    <span>
-                                        西西里海鹽柴魚脆薯 *1 <br />
-                                        蕃茄羅勒起司搭頂級陳年油醋*2 <br />
-                                        總金額：564元 <br />
-                                        訂餐時間：3/7（一） 下午6：00 <br />
-                                        備註：需要餐具
-                                    </span>
-                                    <button className="back_btn" onClick={this.back}>返回</button>
-                                </div>
-                                <div className='detail2'>
-                                    <h3>詳細內容</h3>
-                                    <span>
-                                        西西里海鹽柴魚脆薯 *2<br />
-                                        蕃茄羅勒起司搭頂級陳年油醋 *2<br />
-                                        南義炸起司條 *1 <br />
-                                        田園香橙鮮蝦蘿蔓鮮蔬 *1 <br />
-                                        水相主廚私房湯品 *1  不要加蔥<br />
-                                        總金額 1646 <br />
-                                        訂餐時間：3/7（一） 下午6：00
-                                    </span>
-                                    <button className="back_btn" onClick={this.back2}>返回</button>
-                                </div>
                             </tbody>
                         </table>
                     </div>
