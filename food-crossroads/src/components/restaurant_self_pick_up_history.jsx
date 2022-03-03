@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import $ from "jquery";
 import logo from "../img/logo.png";
 import Footer from "./footer";
-import "../css/restaurant_self_pick_up.css"
+import "../css/restaurant_self_pick_up_history.css"
 import Collapse from "react-bootstrap/Collapse";
 class Restaurant_booking_history extends Component {
     state = {
@@ -43,10 +43,10 @@ class Restaurant_booking_history extends Component {
                             </div>
                         </div>
                         <div className="panel panel-default">
-                            <Collapse className="panel-heading" in={this.state.open}>
+                            <div className="panel-heading" in={this.state.open}>
                                 <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂餐管理</a>
                                 </h4>
-                            </Collapse>
+                            </div>
                             <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
                                 <div className="little_title">
                                     <a href="/restaurant/self/pick">今日訂餐</a>
@@ -61,12 +61,51 @@ class Restaurant_booking_history extends Component {
                     </div>
                 </aside>
 
+                <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
+                <div id="restaurant_self_pick_up_history_mobile_aside">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" className="panel-collapse collapse" >
+                                <div className="little_title">
+                                    <a href="/restaurant/booking/today">今日訂位</a>
+                                </div>
+                            </div>
+                            <div id="collapseOne" className="panel-collapse collapse default">
+                                <div className="little_title">
+                                    <a href="/restaurant/booking/history">歷史訂位紀錄</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="panel panel-default">
+                            <div className="panel-heading" in={this.state.open}>
+                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂餐管理</a>
+                                </h4>
+                            </div>
+                            <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
+                                <div className="little_title">
+                                    <a href="/restaurant/self/pick">今日訂餐</a>
+                                </div>
+                            </Collapse>
+                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}>
+                                <div className="little_title">
+                                    <a href="/restaurant/self/pick/history">歷史訂餐紀錄</a>
+                                </div>
+                            </Collapse>
+                        </div>
+                    </div>
+                    <label htmlFor="aside_menu_chk" className="aside_menu_chk">
+                        <i className="fas fa-angle-right"></i>
+                    </label>
+                </div>
+
                 <section id="restaurant_self_pick_up_history">
                     <div class="container">
                         <div class="search_bar">
-                            <div>
-                                <h3>歷史訂餐</h3>
-                            </div>
                             <div className="search_bar_div">
                                 <i className="fas fa-search"></i>
                                 <input type="text" placeholder="訂單編號" />
@@ -88,11 +127,7 @@ class Restaurant_booking_history extends Component {
                             <tbody>
                                 <tr>
                                     <td>
-                                        <div className="checkbox">
-                                            <label>
-                                                <input type="checkbox" checked disabled="disabled"/>
-                                            </label>
-                                        </div>
+                                        <input type="checkbox" checked disabled="disabled" />
                                     </td>
                                     <td>99999</td>
                                     <td>2022-03-06</td>
@@ -108,11 +143,8 @@ class Restaurant_booking_history extends Component {
 
                                 <tr>
                                     <td>
-                                        <div className="checkbox">
-                                            <label>
-                                                <input type="checkbox" checked disabled="disabled"/>
-                                            </label>
-                                        </div>
+                                        <input type="checkbox" checked disabled="disabled" />
+
                                     </td>
                                     <td>99998</td>
                                     <td>2022-03-06</td>
@@ -128,11 +160,7 @@ class Restaurant_booking_history extends Component {
 
                                 <tr>
                                     <td>
-                                        <div className="checkbox">
-                                            <label>
-                                                <input type="checkbox" checked disabled="disabled"/>
-                                            </label>
-                                        </div>
+                                        <input type="checkbox" checked disabled="disabled" />
                                     </td>
                                     <td>99997</td>
                                     <td>2022-03-05</td>
@@ -148,11 +176,7 @@ class Restaurant_booking_history extends Component {
 
                                 <tr>
                                     <td>
-                                        <div className="checkbox">
-                                            <label>
-                                                <input type="checkbox" checked disabled="disabled"/>
-                                            </label>
-                                        </div>
+                                        <input type="checkbox" checked disabled="disabled" />
                                     </td>
                                     <td>99996</td>
                                     <td>2022-03-04</td>
@@ -169,6 +193,85 @@ class Restaurant_booking_history extends Component {
                         </table>
                     </div>
                 </section>
+
+                <div id="restaurant_self_pick_up_history_mobile">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="table mobile_pick_up_history">
+                                    <div class="mobile_pick_up_history_inline_div">
+                                        <div class="mobile_pick_up_history_div">
+                                            <div class="mobile_text_div">
+                                                <p>狀態:李曉明</p>
+                                                <p>訂餐編號:99999</p>
+                                                <p>訂餐日期:2022-03-06</p>
+                                            </div>
+                                            <div class="mobile_div_text">
+                                                <p>訂餐時間:17:30</p>
+                                                <p>訂餐人:張曉明</p>
+                                                <p>手機:0954428321</p>
+                                            </div>
+                                        </div>
+                                        {/* <div class="mobile_btn_div"> */}
+                                        <button
+                                            class="detail_btn"
+                                            data-toggle="modal"
+                                            data-target="#detailModal">
+                                            詳細內容
+                                        </button>
+                                        {/* </div> */}
+                                    </div>
+                                    <div class="mobile_pick_up_history_inline_div">
+                                        <div class="mobile_pick_up_history_div">
+                                            <div class="mobile_text_div">
+                                                <p>狀態:李曉明</p>
+                                                <p>訂餐編號:99999</p>
+                                                <p>訂餐日期:2022-03-06</p>
+                                            </div>
+                                            <div class="mobile_div_text">
+                                                <p>訂餐時間:17:30</p>
+                                                <p>訂餐人:張曉明</p>
+                                                <p>手機:0954428321</p>
+                                            </div>
+                                        </div>
+                                        {/* <div class="mobile_btn_div"> */}
+                                        <button
+                                            class="detail_btn"
+                                            data-toggle="modal"
+                                            data-target="#detailModal">
+                                            詳細內容
+                                        </button>
+                                        {/* </div> */}
+                                    </div>
+                                    <div class="mobile_pick_up_history_inline_div">
+                                        <div class="mobile_pick_up_history_div">
+                                            <div class="mobile_text_div">
+                                                <p>狀態:李曉明</p>
+                                                <p>訂餐編號:99999</p>
+                                                <p>訂餐日期:2022-03-06</p>
+                                            </div>
+                                            <div class="mobile_div_text">
+                                                <p>訂餐時間:17:30</p>
+                                                <p>訂餐人:張曉明</p>
+                                                <p>手機:0954428321</p>
+                                            </div>
+                                        </div>
+                                        {/* <div class="mobile_btn_div"> */}
+                                        <button
+                                            class="detail_btn"
+                                            data-toggle="modal"
+                                            data-target="#detailModal">
+                                            詳細內容
+                                        </button>
+                                        {/* </div> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="blank"></div>
 
                 <footer className="footer_page">
                     <Footer />

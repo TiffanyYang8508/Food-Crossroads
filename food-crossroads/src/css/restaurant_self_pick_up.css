@@ -58,23 +58,6 @@
     border-top: 1px solid #403C3C;
 }
 
-#restaurant_self_pick_up .search_bar h3{
-    position: relative;
-    left: 160px;
-    top: 10px;
-    font-weight: 600;
-    margin-right: 500px;
-}
-
-#restaurant_self_pick_up .search_bar_div{
-    border: 1px solid #999999;
-    border-radius: 5px;
-    padding: 5px;
-    width: 30%;
-    margin-right: 10px;
-}
-
-
 #restaurant_self_pick_up .search_bar input[type=text]{
     border: none;  
     width: 90%;
