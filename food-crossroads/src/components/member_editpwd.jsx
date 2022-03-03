@@ -148,22 +148,22 @@ class EditMemberpwd extends Component {
               </div>
             </div>
           </div>
-          <label for="aside_menu_chk">
+          <label htmlFor="aside_menu_chk">
             <i className="fas fa-angle-right"></i>
           </label>
         </div>
 
         <section id="edit_pwd">
-          <div class="container-fluid member_div">
-            <div class="row">
-              <div class="col-md-12">
+          <div className="container-fluid member_div">
+            <div className="row">
+              <div className="col-md-12">
                 <form>
                   <div>
                     <p className="title_member_edit">會員密碼修改</p>
                   </div>
 
                   <div className="form-group form-inline">
-                    <label for="pwd" className="edit_label">
+                    <label htmlFor="pwd" className="edit_label">
                       輸入原密碼:
                     </label>
                     <input
@@ -178,7 +178,7 @@ class EditMemberpwd extends Component {
                     <div className="invalid-feedback">輸入新密碼</div>
                   </div>
                   <div className="form-group form-inline">
-                    <label for="confirmpwd" className="edit_label">
+                    <label htmlFor="confirmpwd" className="edit_label">
                       輸入新密碼
                     </label>
                     <input
@@ -192,7 +192,7 @@ class EditMemberpwd extends Component {
                     />
                   </div>
                   <div className="form-group form-inline">
-                    <label for="confirmpwd" className="edit_label">
+                    <label htmlFor="confirmpwd" className="edit_label">
                       確認新密碼
                     </label>
                     <input

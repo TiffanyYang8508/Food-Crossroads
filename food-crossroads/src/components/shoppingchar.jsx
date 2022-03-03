@@ -152,7 +152,7 @@ class Shoppingchar extends Component {
                   <table className="table shopping-table">
                     <thead>
                       <tr>
-                        <th colspan="3">商品</th>
+                        <th colSpan="3">商品</th>
                         <th>單價</th>
                         <th>數量</th>
                         <th>總計</th>
@@ -162,38 +162,38 @@ class Shoppingchar extends Component {
 
                     <tbody>
                       <tr className="tr_title">
-                        <td colspan="7">
+                        <td colSpan="7">
                           <h5></h5>
                         </td>
                       </tr>
                       {/* <!-- 購物車品項 --> */}
 
-                      <tr class="shopping-row" id="shopping-row">
+                      <tr className="shopping-row" id="shopping-row">
                         <td>
-                          <input class="shopping-checkbox checkmark" id="shopping-checkbox" type="checkbox"
+                          <input className="shopping-checkbox checkmark" id="shopping-checkbox" type="checkbox"
                             name="shopping-checkbox" />
                         </td>
-                        <td class="wrapper">
-                          <img src={Order_picture} class="img-fluid img-thumbnail" alt="" />
+                        <td className="wrapper">
+                          <img src={Order_picture} className="img-fluid img-thumbnail" alt="" />
                         </td>
                         <td>
-                          <span id="ordername" class="ordername">西西里海鹽柴魚脆薯</span>
+                          <span id="ordername" className="ordername">西西里海鹽柴魚脆薯</span>
                         </td>
-                        <td class="p-price">
-                          <span class="price">$188</span>
+                        <td className="p-price">
+                          <span className="price">$188</span>
                         </td>
-                        <td class="p-num">
+                        <td className="p-num">
 
-                          <span class="qty-squre ">
-                            <input id="qtyminus" type="button" value="-" class="qty-btn decrement" />
-                            <input type="text" value='1' class="qty itxt" name="quantity" />
-                            <input id="qtyplus" type="button" value="+" class="qty-btn increment" />
+                          <span className="qty-squre ">
+                            <input id="qtyminus" type="button" value="-" className="qty-btn decrement" />
+                            <input type="text" value='1' className="qty itxt" name="quantity" />
+                            <input id="qtyplus" type="button" value="+" className="qty-btn increment" />
                           </span>
                         </td>
-                        <td class=" p-sum">
+                        <td className=" p-sum">
                           <span id="sum">$188</span>
                         </td>
-                        <td class="delete-shopping">
+                        <td className="delete-shopping">
                           <span>刪除</span>
                         </td>
                       </tr>
@@ -239,7 +239,7 @@ class Shoppingchar extends Component {
                     <span className="media-body">全選</span>
                   </label>
                   <p>
-                    <b class='price-sum'>總金額:$188<br /><span class="amount-sum">(1個商品)</span></b>
+                    <b className='price-sum'>總金額:$188<br /><span className="amount-sum">(1個商品)</span></b>
                   </p>
                   <Link to="./shoppingok">
                     <button className="buy-btn">

@@ -24,11 +24,11 @@ class Restaurant_booking_history extends Component {
 
 
                 <aside id="restaurant_self_pick_up_history_aside">
-                    <div class="panel-group" id="accordion">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="/restaurant/booking/today">訂位管理</a>
+                    <div className="panel-group" id="accordion">
+                        <div className="panel panel-default">
+                            <div className="panel-heading">
+                                <h4 className="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
                                 </h4>
                             </div>
                             <div id="collapseOne" className="panel-collapse collapse" >
@@ -63,10 +63,10 @@ class Restaurant_booking_history extends Component {
 
                 <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
                 <div id="restaurant_self_pick_up_history_mobile_aside">
-                    <div class="panel-group" id="accordion">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
+                    <div className="panel-group" id="accordion">
+                        <div className="panel panel-default">
+                            <div className="panel-heading">
+                                <h4 className="panel-title">
                                     <a data-toggle="collapse" data-parent="#accordion" href="/restaurant/self/pick/history">訂位管理</a>
                                 </h4>
                             </div>
@@ -104,13 +104,13 @@ class Restaurant_booking_history extends Component {
                 </div>
 
                 <section id="restaurant_self_pick_up_history">
-                    <div class="container">
-                        <div class="search_bar">
+                    <div className="container">
+                        <div className="search_bar">
                             <div className="search_bar_div">
                                 <i className="fas fa-search"></i>
                                 <input type="text" placeholder="訂單編號" />
                             </div>
-                            <button onclick="search()">搜尋</button>
+                            <button>搜尋</button>
                         </div>
                         <table className="table order_table">
                             <thead>
@@ -195,70 +195,70 @@ class Restaurant_booking_history extends Component {
                 </section>
 
                 <div id="restaurant_self_pick_up_history_mobile">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="table mobile_pick_up_history">
-                                    <div class="mobile_pick_up_history_inline_div">
-                                        <div class="mobile_pick_up_history_div">
-                                            <div class="mobile_text_div">
-                                                <p>狀態:已完成</p>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-12">
+                                <div className="table mobile_pick_up_history">
+                                    <div className="mobile_pick_up_history_inline_div">
+                                        <div className="mobile_pick_up_history_div">
+                                            <div className="mobile_text_div">
+                                                <p>狀態:李曉明</p>
                                                 <p>訂餐編號:99999</p>
                                                 <p>訂餐日期:2022-03-06</p>
                                             </div>
-                                            <div class="mobile_div_text">
+                                            <div className="mobile_div_text">
                                                 <p>訂餐時間:17:30</p>
                                                 <p>訂餐人:張曉明</p>
                                                 <p>手機:0954428321</p>
                                             </div>
                                         </div>
-                                        {/* <div class="mobile_btn_div"> */}
+                                        {/* <div className="mobile_btn_div"> */}
                                         <button
-                                            class="detail_btn"
+                                            className="detail_btn"
                                             data-toggle="modal"
                                             data-target="#detailModal">
                                             詳細內容
                                         </button>
                                         {/* </div> */}
                                     </div>
-                                    <div class="mobile_pick_up_history_inline_div">
-                                        <div class="mobile_pick_up_history_div">
-                                            <div class="mobile_text_div">
-                                                <p>狀態:已完成</p>
-                                                <p>訂餐編號:99998</p>
+                                    <div className="mobile_pick_up_history_inline_div">
+                                        <div className="mobile_pick_up_history_div">
+                                            <div className="mobile_text_div">
+                                                <p>狀態:李曉明</p>
+                                                <p>訂餐編號:99999</p>
                                                 <p>訂餐日期:2022-03-06</p>
                                             </div>
-                                            <div class="mobile_div_text">
-                                                <p>訂餐時間:18:15</p>
-                                                <p>訂餐人:劉慧婷</p>
-                                                <p>手機:0988524252</p>
+                                            <div className="mobile_div_text">
+                                                <p>訂餐時間:17:30</p>
+                                                <p>訂餐人:張曉明</p>
+                                                <p>手機:0954428321</p>
                                             </div>
                                         </div>
-                                        {/* <div class="mobile_btn_div"> */}
+                                        {/* <div className="mobile_btn_div"> */}
                                         <button
-                                            class="detail_btn"
+                                            className="detail_btn"
                                             data-toggle="modal"
                                             data-target="#detailModal">
                                             詳細內容
                                         </button>
                                         {/* </div> */}
                                     </div>
-                                    <div class="mobile_pick_up_history_inline_div">
-                                        <div class="mobile_pick_up_history_div">
-                                            <div class="mobile_text_div">
-                                                <p>狀態:已完成</p>
-                                                <p>訂餐編號:99997</p>
-                                                <p>訂餐日期:2022-03-05</p>
+                                    <div className="mobile_pick_up_history_inline_div">
+                                        <div className="mobile_pick_up_history_div">
+                                            <div className="mobile_text_div">
+                                                <p>狀態:李曉明</p>
+                                                <p>訂餐編號:99999</p>
+                                                <p>訂餐日期:2022-03-06</p>
                                             </div>
-                                            <div class="mobile_div_text">
-                                                <p>訂餐時間:20:00</p>
-                                                <p>訂餐人:陳澤慶</p>
-                                                <p>手機:0978779021</p>
+                                            <div className="mobile_div_text">
+                                                <p>訂餐時間:17:30</p>
+                                                <p>訂餐人:張曉明</p>
+                                                <p>手機:0954428321</p>
                                             </div>
                                         </div>
-                                        {/* <div class="mobile_btn_div"> */}
+                                        {/* <div className="mobile_btn_div"> */}
                                         <button
-                                            class="detail_btn"
+                                            className="detail_btn"
                                             data-toggle="modal"
                                             data-target="#detailModal">
                                             詳細內容
