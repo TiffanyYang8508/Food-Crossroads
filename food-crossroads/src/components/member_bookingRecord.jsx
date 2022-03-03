@@ -176,41 +176,6 @@ class BookingRecord extends Component {
                           <button className="detail_btn" id="detail_btn">
                             詳細訂單
                           </button>
-<<<<<<< HEAD
-                          <div className="modal modal-detail" tabIndex="-1">
-                            <div className="modal-dialog">
-                              <div className="modal-content">
-                                <div className="modal-header">
-                                  <h4 className="modal-title">詳細內容</h4>
-                                </div>
-
-                                <div className="detail_modal_body">
-                                  姓名：{item.user_name} <br />
-                                  手機：{item.user_tel}
-                                  <br />
-                                  電子郵件：{item.user_email} <br />
-                                  <br />
-                                  訂位人數：{item.booking_peoplenumber} <br />
-                                  訂位日期：{item.booking_date} <br />
-                                  取位時間：{item.booking_time}
-                                  <br />
-                                  備註：{item.booking_service}
-                                </div>
-
-                                <div className="modal-footer">
-                                  <button
-                                    type="button"
-                                    className="btn_close"
-                                    data-dismiss="modal"
-                                  >
-                                    返回
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-=======
->>>>>>> d3a88a10fcfeff51383246d10111c401840b32ab
                         </td>
                         <td>
                           <button className="comment_btn">評價</button>
