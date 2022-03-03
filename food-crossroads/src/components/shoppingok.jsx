@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import Header from './header';
 import Footer from './footer';
 import "../css/shoppingchar.css";
 import "../css/shoppingok.css";
+import Order_picture from "../img/aqua/aqua_img.jpg";
 
 
 class Shoppingok extends Component {
@@ -43,19 +45,19 @@ class Shoppingok extends Component {
                                         </thead>
 
                                         <tbody>
-                                            <tr className="shopping-row" id="shopping-row">
+
+                                            <tr class="shopping-row" id="shopping-row">
                                                 <td className="wrapper" id="td-1" style={{ 'width': '200px' }}>
-                                                    <img src="img/image_shoppingchar/imge01.jpeg" className="img-fluid img-thumbnail"
-                                                        alt="" />
+                                                    <img src={Order_picture} class="img-fluid img-thumbnail" alt="" />
                                                 </td>
                                                 <td>
-                                                    <span id="ordername" className="ordername">
-                                                        餐點名
+                                                    <span id="ordername" class="ordername">
+                                                        西西里海鹽柴魚脆薯
                                                     </span>
                                                 </td>
                                                 <td>
                                                     <span>
-                                                        $123
+                                                        $188
                                                     </span>
                                                 </td>
                                                 <td>
@@ -65,10 +67,37 @@ class Shoppingok extends Component {
                                                 </td>
                                                 <td>
                                                     <span>
-                                                        $1234
+                                                        $188
                                                     </span>
                                                 </td>
                                             </tr>
+
+                                            <tr class="shopping-row" id="shopping-row">
+                                                <td className="wrapper" id="td-1" style={{ 'width': '200px' }}>
+                                                    <img src={Order_picture} class="img-fluid img-thumbnail" alt="" />
+                                                </td>
+                                                <td>
+                                                    <span id="ordername" class="ordername">
+                                                        番茄羅勒起司搭頂級陳年油醋
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span>
+                                                        $188
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span>
+                                                        2
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span>
+                                                        $376
+                                                    </span>
+                                                </td>
+                                            </tr>
+
 
 
                                             <tr className="shopping-row" style={{ 'height': '140px' }}>
@@ -154,18 +183,18 @@ class Shoppingok extends Component {
                                 </div>
 
                                 <div className="all-squre" id="all-squre">
-                                    <button id="buy-back-btn">回上一步</button>
+                                    <Link to="./shoppingchar" id="buy-back-btn"> <button >回上一步</button></Link>
                                     <p>
-                                        <b>總金額(3個商品)$1234</b>
+                                        <b>總額(3個商品):$564</b>
                                     </p>
-                                    <button id="buy-ok-btn">下訂單</button>
+                                    <Link to="./orderfinished"><button id="buy-ok-btn">下訂單</button></Link>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <Footer />
-            </React.Fragment>
+            </React.Fragment >
 
         );
     }

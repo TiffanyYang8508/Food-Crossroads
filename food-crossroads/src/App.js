@@ -26,16 +26,15 @@ import Restaurant_page_member from "./components/restaurant_page_loginok";
 import Booking_reservation_page from "./components/booking_reservation_page";
 import Booking_check_page from "./components/booking_check_page";
 import Booking_finish_page from "./components/booking_finish_page";
-<<<<<<< HEAD
+
 import Orderpage from "./components/orderpage";
 import Orderpage_group from "./components/orderpage_group";
 
-=======
 import Restaurant_booking_today from "./components/restaurant_booking_today";
 import Restaurant_self_pick_up_history from "./components/restaurant_self_pick_up_history";
 import Orderfinished from "./components/orderfinished";
 import Group_orderfinished from "./components/group_orderfinished";
->>>>>>> 962b757c5f53f3a925e75ff538ad488ef7d1adc1
+
 
 class App extends Component {
   state = {};
@@ -108,13 +107,8 @@ class App extends Component {
           <Route path="/shoppingchar" component={Shoppingchar} exact />
           <Route path="/shoppingok" component={Shoppingok} exact />
           <Route path="/orderdisplay" component={Orderdisplay} exact />
-<<<<<<< HEAD
-          <Route path="/orderpage" component={Orderpage} exact />
           <Route path="/orderpagegroup" component={Orderpage_group} exact />
-=======
           <Route path="/orderpage/:food_category?" component={Orderpage} exact />
->>>>>>> 962b757c5f53f3a925e75ff538ad488ef7d1adc1
-
           <Route path="/editmemberpwd/:id" component={EditMemberpwd} />
           <Route path="/cancelbooking/:id" component={CancelBooking} />
           <Route path="/restaurant/page" component={Restaurant_page} exact />

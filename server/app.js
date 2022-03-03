@@ -289,7 +289,7 @@ app.get("/search/:area/:service", function (req, res) {
 
 app.get("/orderpage", function (req, res) {
   conn.query(
-    "SELECT * FROM menu AS m INNER JOIN food_category AS fc ON m.food_category_id = fc.id",
+    "SELECT food_name,food_amount,food_category FROM menu JOIN food_category ON menu.food_category_id= food_category.id",
     [],
     function (err, rows) {
       res.send(JSON.stringify(rows));
@@ -297,15 +297,15 @@ app.get("/orderpage", function (req, res) {
   );
 });
 
-app.get("/orderpage/:food_category", function (req, res) {
-  conn.query(
-    "SELECT * FROM menu AS m INNER JOIN food_category AS fc ON m.food_category_id = fc.id WHERE food_category = ?",
-    [req.params.food_category],
-    function (err, rows) {
-      res.send(JSON.stringify(rows));
-    }
-  );
-});
+// app.get("/orderpage/:food_category", function (req, res) {
+//   conn.query(
+//     "SELECT * FROM menu AS m INNER JOIN food_category AS fc ON m.food_category_id = fc.id WHERE food_category = ?",
+//     [req.params.food_category],
+//     function (err, rows) {
+//       res.send(JSON.stringify(rows));
+//     }
+//   );
+// });
 
 app.post("/restaurant/login", (req, res) => {
   const query =
@@ -336,3 +336,5 @@ app.get("/restaurant/booking/today", (req, res) => {
     }
   );
 })
+
+

@@ -134,7 +134,7 @@ class Restaurant_self_pick_up_history extends Component {
                                 <div class="modal fade" id="detailModal">
                                     <div class="modal-dialog modal-dialog-centered">
                                         <div class="modal-content">
-                                     
+
                                             <div class="modal-header">
                                                 <h3 class="modal-title">訂單明細</h3>
                                                 <button type="button" class="close" data-dismiss="modal"></button>
