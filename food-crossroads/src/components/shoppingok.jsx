@@ -31,7 +31,7 @@ class Shoppingok extends Component {
                                     <table className="table shopping-table">
                                         <thead>
                                             <tr>
-                                                <th colspan="2">
+                                                <th colSpan="2">
                                                     商品
                                                 </th>
                                                 <th>
@@ -48,12 +48,12 @@ class Shoppingok extends Component {
 
                                         <tbody>
 
-                                            <tr class="shopping-row" id="shopping-row">
+                                            <tr className="shopping-row" id="shopping-row">
                                                 <td className="wrapper" id="td-1" style={{ 'width': '200px' }}>
-                                                    <img src={Order_picture} class="img-fluid img-thumbnail" alt="" />
+                                                    <img src={Order_picture} className="img-fluid img-thumbnail" alt="" />
                                                 </td>
                                                 <td>
-                                                    <span id="ordername" class="ordername">
+                                                    <span id="ordername" className="ordername">
                                                         西西里海鹽柴魚脆薯
                                                     </span>
                                                 </td>
@@ -74,12 +74,12 @@ class Shoppingok extends Component {
                                                 </td>
                                             </tr>
 
-                                            <tr class="shopping-row" id="shopping-row">
+                                            <tr className="shopping-row" id="shopping-row">
                                                 <td className="wrapper" id="td-1" style={{ 'width': '200px' }}>
-                                                    <img src={Order_picture} class="img-fluid img-thumbnail" alt="" />
+                                                    <img src={Order_picture} className="img-fluid img-thumbnail" alt="" />
                                                 </td>
                                                 <td>
-                                                    <span id="ordername" class="ordername">
+                                                    <span id="ordername" className="ordername">
                                                         番茄羅勒起司搭頂級陳年油醋
                                                     </span>
                                                 </td>
@@ -103,12 +103,12 @@ class Shoppingok extends Component {
 
 
                                             <tr className="shopping-row" style={{ 'height': '140px' }}>
-                                                <td colspan="3" style={{ 'text-align': 'center', 'vertical-align': 'middle' }}>
+                                                <td colSpan="3" style={{ 'textAlign': 'center', 'verticalAlign': 'middle' }}>
                                                     <label htmlFor="get_time">取餐時間:
                                                         <input type="datetime-local" id="get_time" />
                                                     </label>
                                                 </td>
-                                                <td colspan="2" style={{ 'text-align': 'center', 'vertical-align': 'middle' }}>
+                                                <td colSpan="2" style={{ 'textAlign': 'center', 'verticalAlign': 'middle' }}>
                                                     <label htmlFor="order-text">備註:
                                                         <input type="text" id="order-text" />
                                                     </label>

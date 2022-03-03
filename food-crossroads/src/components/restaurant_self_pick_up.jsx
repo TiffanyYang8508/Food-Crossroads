@@ -113,7 +113,7 @@ class Restaurant_booking_history extends Component {
                                 <i className="fas fa-search"></i>
                                 <input type="text" placeholder="訂單編號" />
                             </div>
-                            <button onclick="search()">搜尋</button>
+                            <button>搜尋</button>
                         </div>
                         <table className="table order_table">
                             <thead>
@@ -153,26 +153,26 @@ class Restaurant_booking_history extends Component {
                 </section>
 
                 <div id="restaurant_self_pick_up_mobile">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="table mobile_pick_up">
-                                    <div class="mobile_pick_up_inline_div">
-                                        <div class="mobile_pick_up_div">
-                                            <div class="mobile_text_div">
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-12">
+                                <div className="table mobile_pick_up">
+                                    <div className="mobile_pick_up_inline_div">
+                                        <div className="mobile_pick_up_div">
+                                            <div className="mobile_text_div">
                                                 <p>狀態:</p>
                                                 <p>訂餐編號:00001</p>
                                                 <p>訂餐日期:2022-03-07</p>
                                             </div>
-                                            <div class="mobile_div_text">
+                                            <div className="mobile_div_text">
                                                 <p>訂餐時間:18:00</p>
                                                 <p>訂餐人:李曉明</p>
                                                 <p>手機:0987654321</p>
                                             </div>
                                         </div>
-                                        {/* <div class="mobile_btn_div"> */}
+                                        {/* <div className="mobile_btn_div"> */}
                                         <button
-                                            class="detail_btn"
+                                            className="detail_btn"
                                             data-toggle="modal"
                                             data-target="#detailModal">
                                             詳細內容

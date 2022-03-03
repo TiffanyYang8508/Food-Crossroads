@@ -22,7 +22,7 @@ class Orderdisplay extends Component {
                         <a href="#"><img src="./img/people_plus@3x.png" className="rwd_icon_plus" /></a>
                     </nav>
 
-                    <div className="table-responsive-md row" style={{ 'font-size': '16px', 'text-align': 'center' }}>
+                    <div className="table-responsive-md row" style={{ 'fontSize': '16px', 'textAlign': 'center' }}>
                         <table className="table col-md-9" id="table_order">
                             <thead>
                                 <tr>
@@ -63,8 +63,8 @@ class Orderdisplay extends Component {
                                     <td>50</td>
                                 </tr>
 
-                                <tr style={{ 'font-size': '18px' }}>
-                                    <td scope="row" colspan="4" style={{ 'text-align': 'right' }}><b>總金額</b></td>
+                                <tr style={{ 'fontSize': '18px' }}>
+                                    <td scope="row" colSpan="4" style={{ 'textAlign': 'right' }}><b>總金額</b></td>
                                     <td>
                                         NT$ 250
                                     </td>
@@ -76,7 +76,7 @@ class Orderdisplay extends Component {
                         <div className="share_member col-md-3 rwd_share_member" id="ordermember_Sidebar">
 
                             <table className="table share_member_table rwd_share_member_table"
-                                style={{ 'font-size': '18px', 'width': '50px', 'line-height': '1em', 'border': '1px solid #403c3c', 'border-radius': '10%' }}>
+                                style={{ 'fontSize': '18px', 'width': '50px', 'lineHeight': '1em', 'border': '1px solid #403c3c', 'borderRadius': '10%' }}>
                                 <tbody>
                                     <tr className="close_btn">
                                         <td style={{ 'color': '#585555c5' }}>
@@ -87,8 +87,8 @@ class Orderdisplay extends Component {
                                         <td>
                                             <div className="" id="order_share">
                                                 <a href="#"><img src="../img/people_plus@3x.png"
-                                                    style={{ 'width': '25px', 'height': '20px', 'margin-right': '5px' }} /></a>
-                                                <button type="button" className="btn_view" style={{ 'font-size': '18px' }}
+                                                    style={{ 'width': '25px', 'height': '20px', 'marginRight': '5px' }} /></a>
+                                                <button type="button" className="btn_view" style={{ 'fontSize': '18px' }}
                                                     title="copied">揪團分享連結</button>
                                             </div>
                                         </td>

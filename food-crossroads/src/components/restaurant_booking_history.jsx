@@ -103,7 +103,7 @@ class Restaurant_booking_history extends Component {
                                 <i className="fas fa-search"></i>
                                 <input type="text" placeholder="訂單編號" />
                             </div>
-                            <button onclick="search()">搜尋</button>
+                            <button>搜尋</button>
                         </div>
                         <table className="table order_table">
                             <thead>
@@ -218,103 +218,102 @@ class Restaurant_booking_history extends Component {
                                         </div>
                                     </div>
                                 </div>
-
                             </tbody>
                         </table>
                     </div>
                 </section>
 
                 <div id="restaurant_booking_history_mobile">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="table mobile_booking_history">
-                                    <div class="mobile_booking_history_inline_div">
-                                        <div class="mobile_booking_history_div">
-                                            <div class="mobile_text_div">
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-12">
+                                <div className="table mobile_booking_history">
+                                    <div className="mobile_booking_history_inline_div">
+                                        <div className="mobile_booking_history_div">
+                                            <div className="mobile_text_div">
                                                 <p>狀態:</p>
                                                 <p>訂位編號:99999</p>
                                                 <p>訂位日期:2022-02-22</p>
                                                 <p>訂位時間:19:30</p>
                                             </div>
-                                            <div class="mobile_div_text">
+                                            <div className="mobile_div_text">
                                                 <p>訂位人數:5</p>
                                                 <p>訂位人:江程哲</p>
                                                 <p>手機:0988512203</p>
                                             </div>
                                         </div>
-                                        {/* <div class="mobile_btn_div"> */}
+                                        {/* <div className="mobile_btn_div"> */}
                                         <button
-                                            class="detail_btn"
+                                            className="detail_btn"
                                             data-toggle="modal"
                                             data-target="#detailModal">
                                             詳細內容
                                         </button>
                                         {/* </div> */}
                                     </div>
-                                    <div class="mobile_booking_history_inline_div">
-                                        <div class="mobile_booking_history_div">
-                                            <div class="mobile_text_div">
+                                    <div className="mobile_booking_history_inline_div">
+                                        <div className="mobile_booking_history_div">
+                                            <div className="mobile_text_div">
                                                 <p>狀態:</p>
                                                 <p>訂位編號:99999</p>
                                                 <p>訂位日期:2022-02-22</p>
                                                 <p>訂位時間:17:00</p>
                                             </div>
-                                            <div class="mobile_div_text">
+                                            <div className="mobile_div_text">
                                                 <p>訂位人數:1</p>
                                                 <p>訂位人:張瑜庭</p>
                                                 <p>手機:0902135699</p>
                                             </div>
                                         </div>
-                                        {/* <div class="mobile_btn_div"> */}
+                                        {/* <div className="mobile_btn_div"> */}
                                         <button
-                                            class="detail_btn"
+                                            className="detail_btn"
                                             data-toggle="modal"
                                             data-target="#detailModal">
                                             詳細內容
                                         </button>
                                         {/* </div> */}
                                     </div>
-                                    <div class="mobile_booking_history_inline_div">
-                                        <div class="mobile_booking_history_div">
-                                            <div class="mobile_text_div">
+                                    <div className="mobile_booking_history_inline_div">
+                                        <div className="mobile_booking_history_div">
+                                            <div className="mobile_text_div">
                                                 <p>狀態:</p>
                                                 <p>訂位編號:99997</p>
                                                 <p>訂位日期:2022-02-21</p>
                                                 <p>訂位時間:18:30</p>
                                             </div>
-                                            <div class="mobile_div_text">
+                                            <div className="mobile_div_text">
                                                 <p>訂位人數:3</p>
                                                 <p>訂位人:李曉明</p>
                                                 <p>手機:0918557110</p>
                                             </div>
                                         </div>
-                                        {/* <div class="mobile_btn_div"> */}
+                                        {/* <div className="mobile_btn_div"> */}
                                         <button
-                                            class="detail_btn"
+                                            className="detail_btn"
                                             data-toggle="modal"
                                             data-target="#detailModal">
                                             詳細內容
                                         </button>
                                         {/* </div> */}
                                     </div>
-                                    <div class="mobile_booking_history_inline_div">
-                                        <div class="mobile_booking_history_div">
-                                            <div class="mobile_text_div">
+                                    <div className="mobile_booking_history_inline_div">
+                                        <div className="mobile_booking_history_div">
+                                            <div className="mobile_text_div">
                                                 <p>狀態:</p>
                                                 <p>訂位編號:99999</p>
                                                 <p>訂位日期:2022-02-21</p>
                                                 <p>訂位時間:17:15</p>
                                             </div>
-                                            <div class="mobile_div_text">
+                                            <div className="mobile_div_text">
                                                 <p>訂位人數:3</p>
                                                 <p>訂位人:陳誠慶</p>
                                                 <p>手機:0972110202</p>
                                             </div>
                                         </div>
-                                        {/* <div class="mobile_btn_div"> */}
+                                        {/* <div className="mobile_btn_div"> */}
                                         <button
-                                            class="detail_btn"
+                                            className="detail_btn"
                                             data-toggle="modal"
                                             data-target="#detailModal">
                                             詳細內容

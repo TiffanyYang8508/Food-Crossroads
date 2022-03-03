@@ -249,26 +249,26 @@ class Restaurant_booking_today extends Component {
                 </section>
 
                 <div id="restaurant_today_booking_mobile">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="table mobile_today_booking">
-                                    <div class="mobile_today_booking_inline_div">
-                                        <div class="mobile_today_booking_div">
-                                            <div class="mobile_text_div">
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-12">
+                                <div className="table mobile_today_booking">
+                                    <div className="mobile_today_booking_inline_div">
+                                        <div className="mobile_today_booking_div">
+                                            <div className="mobile_text_div">
                                                 <p>已帶位:</p>
                                                 <p>訂位編號:00001</p>
                                                 <p>訂位日期:2022-03-07</p>
                                             </div>
-                                            <div class="mobile_div_text">
+                                            <div className="mobile_div_text">
                                                 <p>訂位時間:12:00</p>
                                                 <p>訂位人:李曉明</p>
                                                 <p>手機:0987654321</p>
                                             </div>
                                         </div>
-                                        {/* <div class="mobile_btn_div"> */}
+                                        {/* <div className="mobile_btn_div"> */}
                                         <button
-                                            class="detail_btn"
+                                            className="detail_btn"
                                             data-toggle="modal"
                                             data-target="#detailModal">
                                             詳細內容
@@ -282,13 +282,13 @@ class Restaurant_booking_today extends Component {
                 </div>
 
 
-                <div class="modal modal-groupdetail" tabIndex="0" id="detail">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">詳細訂單</h4>
+                <div className="modal modal-groupdetail" tabIndex="0" id="detail">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h4 className="modal-title">詳細訂單</h4>
                             </div>
-                            <div class="groupdetail_modal">
+                            <div className="groupdetail_modal">
                                 姓名： 李曉明 <br />
                                 手機： 0987654321 <br />
                                 信箱： 1234@gmail.com <br />
@@ -299,10 +299,10 @@ class Restaurant_booking_today extends Component {
                                 備註：無
                             </div>
 
-                            <div class="modal-footer">
+                            <div className="modal-footer">
                                 <button
                                     type="button"
-                                    class="btn_close"
+                                    className="btn_close"
                                     data-dismiss="modal"
                                 >
                                     返回
@@ -312,13 +312,13 @@ class Restaurant_booking_today extends Component {
                     </div>
                 </div>
 
-                <div class="modal modal-groupdetail2" tabIndex="0" id="search">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">訂單編號 00001</h4>
+                <div className="modal modal-groupdetail2" tabIndex="0" id="search">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h4 className="modal-title">訂單編號 00001</h4>
                             </div>
-                            <div class="groupdetail_modal">
+                            <div className="groupdetail_modal">
                                 訂位日期： 2022/03/07 <br />
                                 訂位時間： 12：00 <br />
                                 訂位人： 李曉明 <br />
@@ -328,10 +328,10 @@ class Restaurant_booking_today extends Component {
                                 備註：無
                             </div>
 
-                            <div class="modal-footer">
+                            <div className="modal-footer">
                                 <button
                                     type="button"
-                                    class="btn_close"
+                                    className="btn_close"
                                     data-dismiss="modal"
                                 >
                                     返回
@@ -341,13 +341,13 @@ class Restaurant_booking_today extends Component {
                     </div>
                 </div>
 
-                <div class="modal modal-groupdetail3" tabIndex="0" id="cancel">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">詳細內容</h4>
+                <div className="modal modal-groupdetail3" tabIndex="0" id="cancel">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h4 className="modal-title">詳細內容</h4>
                             </div>
-                            <div class="groupdetail_modal">
+                            <div className="groupdetail_modal">
                                 訂單編號： 00001 <br />
                                 訂位日期： 2022/03/07 <br />
                                 訂位時間： 12：00 <br />
@@ -356,17 +356,17 @@ class Restaurant_booking_today extends Component {
                                 手機： 0987654321 <br />
                             </div>
 
-                            <div class="modal-footer">
+                            <div className="modal-footer">
                                 <button
                                     type="button"
-                                    class="c_btn"
+                                    className="c_btn"
                                     data-dismiss="modal"
                                 >
                                     取消
                                 </button>
                                 <button
                                     type="button"
-                                    class="btn_close"
+                                    className="btn_close"
                                     data-dismiss="modal"
                                 >
                                     返回

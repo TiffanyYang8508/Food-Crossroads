@@ -150,7 +150,7 @@ class Orderpage_group extends Component {
                         {/* 揪團結帳 */}
                         <div className="food_order_group d-flex flex-column">
                             <div className="d-flex justify-content-center">
-                                <a href="#"><img src="./img/people_plus@3x.png" style={{ 'width': '25px', 'height': '20px', 'margin-right': ' 5px' }} /></a>
+                                <a href="#"><img src="./img/people_plus@3x.png" style={{ 'width': '25px', 'height': '20px', 'marginRight': ' 5px' }} /></a>
                                 <button className="group_button oval" data-toggle="modal" data-target="#order_group_modal">揪團</button>
 
                             </div>
@@ -160,7 +160,7 @@ class Orderpage_group extends Component {
                         </div>
 
 
-                        <div className="modal fade" id="order_group_modal" tabindex="-1" role="dialog" aria-labelledby="order_group_modal_title"
+                        <div className="modal fade" id="order_group_modal" tabIndex="-1" role="dialog" aria-labelledby="order_group_modal_title"
                             aria-hidden="true">
                             <div className="modal-dialog modal-dialog-centered" role="document">
                                 <div className="modal-content">
@@ -181,7 +181,7 @@ class Orderpage_group extends Component {
                         </div>
 
                         {/* 置頂鈕 */}
-                        <button type="button" id="btn_back_to_top" onclick="topfunction()" title="Go to top">
+                        <button type="button" id="btn_back_to_top" onClick="topfunction()" title="Go to top">
                             <i className="fas fa-arrow-up"></i>
                         </button>
 

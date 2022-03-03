@@ -21,15 +21,15 @@ class Group_orderfinished extends Component {
                     <Header />
                 </header>
 
-                <div id="orderfinished" class="container">
-                    <div class="order_finish_div">
-                        <div class="order_finish">
-                            <p><i class="fas fa-check"></i> 完成訂單</p>
+                <div id="orderfinished" className="container">
+                    <div className="order_finish_div">
+                        <div className="order_finish">
+                            <p><i className="fas fa-check"></i> 完成訂單</p>
                         </div>
                     </div>
-                    <div class="buy_back_div">
-                        <button class="buy_back_btn" id="check_order" onClick={this.check_order}>查看已點清單</button>
-                        <button class="buy_back_btn" id="back_to_home" onClick={this.back_restaurant}>回到餐廳</button>
+                    <div className="buy_back_div">
+                        <button className="buy_back_btn" id="check_order" onClick={this.check_order}>查看已點清單</button>
+                        <button className="buy_back_btn" id="back_to_home" onClick={this.back_restaurant}>回到餐廳</button>
                     </div>
                 </div>
 

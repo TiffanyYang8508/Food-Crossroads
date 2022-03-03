@@ -219,14 +219,14 @@ class BookingRecord extends Component {
                       </tr>
                     ))}
 
-                    {this.state.List.map((item, idex) => (
-                      <div class="modal modal-detail" tabIndex="-1">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h4 class="modal-title">詳細內容</h4>
+                    {this.state.List.map((item, index) => (
+                      <div className="modal modal-detail" tabIndex="-1" key={index}>
+                        <div className="modal-dialog">
+                          <div className="modal-content">
+                            <div className="modal-header">
+                              <h4 className="modal-title">詳細內容</h4>
                             </div>
-                            <div class="detail_modal">
+                            <div className="detail_modal">
                               姓名：{item.user_name} <br />
                               手機：{item.user_tel}
                               <br />
@@ -240,10 +240,10 @@ class BookingRecord extends Component {
                               備註：{item.booking_service}
                             </div>
 
-                            <div class="modal-footer">
+                            <div className="modal-footer">
                               <button
                                 type="button"
-                                class="btn_close"
+                                className="btn_close"
                                 data-dismiss="modal"
                               >
                                 返回
@@ -326,95 +326,95 @@ class BookingRecord extends Component {
         </div>
 
         <div id="mobile_booking_manage">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="table mobile_order_div">
-              <div class="mobile_order_inline_div">
-                <div class="mobile_text_div">
-                  <p>訂位人:李曉明</p>
-                  <p>訂位日期:2022-01-08</p>
-                  <p>訂位餐廳:aqua水相餐廳</p>
-                  <p>訂位時間:17:00</p>
-                  <p>訂位人數:3</p>
-                  <div class="mobile_btn_div">
-                    <button
-                      class="cancel_btn"
-                      data-toggle="modal"
-                      data-target="#cancel_order_Modal"
-                    >
-                      取消訂位
-                    </button>
-                    <button
-                      class="detail_btn"
-                      data-toggle="modal"
-                      data-target="#detailModal"
-                    >
-                      詳細內容
-                    </button>
-                    <button class="comment_btn">評價</button>
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-12">
+                <div className="table mobile_order_div">
+                  <div className="mobile_order_inline_div">
+                    <div className="mobile_text_div">
+                      <p>訂位人:李曉明</p>
+                      <p>訂位日期:2022-01-08</p>
+                      <p>訂位餐廳:aqua水相餐廳</p>
+                      <p>訂位時間:17:00</p>
+                      <p>訂位人數:3</p>
+                      <div className="mobile_btn_div">
+                        <button
+                          className="cancel_btn"
+                          data-toggle="modal"
+                          data-target="#cancel_order_Modal"
+                        >
+                          取消訂位
+                        </button>
+                        <button
+                          className="detail_btn"
+                          data-toggle="modal"
+                          data-target="#detailModal"
+                        >
+                          詳細內容
+                        </button>
+                        <button className="comment_btn">評價</button>
+                      </div>
+                    </div>
                   </div>
+                  <div className="mobile_order_inline_div">
+                    <div className="mobile_text_div">
+                      <p>訂位人:李曉明</p>
+                      <p>訂位日期:2022-01-08</p>
+                      <p>訂位餐廳:aqua水相餐廳</p>
+                      <p>訂位時間:17:00</p>
+                      <p>訂位人數:2</p>
+                    </div>
+                    <div className="mobile_btn_div">
+                      <button
+                        className="cancel_btn"
+                        data-toggle="modal"
+                        data-target="#cancel_order_Modal"
+                      >
+                        取消訂位
+                      </button>
+                      <button
+                        className="detail_btn"
+                        data-toggle="modal"
+                        data-target="#detailModal"
+                      >
+                        詳細內容
+                      </button>
+                      <button className="comment_btn">評價</button>
+                    </div>
+                  </div>
+                  <div className="mobile_order_inline_div">
+                    <div className="mobile_text_div">
+                      <p>訂位人:李曉明</p>
+                      <p>訂位日期:2022-01-08</p>
+                      <p>訂位餐廳:aqua水相餐廳</p>
+                      <p>訂位時間:17:00</p>
+                      <p>訂位人數:4</p>
+                    </div>
+                    <div className="mobile_btn_div">
+                      <button
+                        className="cancel_btn"
+                        data-toggle="modal"
+                        data-target="#cancel_order_Modal"
+                      >
+                        取消訂位
+                      </button>
+                      <button
+                        className="detail_btn"
+                        data-toggle="modal"
+                        data-target="#detailModal"
+                      >
+                        詳細內容
+                      </button>
+                      <button className="comment_btn">評價</button>
+                    </div>
+                  </div>
+
+
                 </div>
-              </div>
-              <div class="mobile_order_inline_div">
-                <div class="mobile_text_div">
-                  <p>訂位人:李曉明</p>
-                  <p>訂位日期:2022-01-08</p>
-                  <p>訂位餐廳:aqua水相餐廳</p>
-                  <p>訂位時間:17:00</p>
-                  <p>訂位人數:2</p>
-                </div>
-                <div class="mobile_btn_div">
-                  <button
-                    class="cancel_btn"
-                    data-toggle="modal"
-                    data-target="#cancel_order_Modal"
-                  >
-                    取消訂位
-                  </button>
-                  <button
-                    class="detail_btn"
-                    data-toggle="modal"
-                    data-target="#detailModal"
-                  >
-                    詳細內容
-                  </button>
-                  <button class="comment_btn">評價</button>
-                </div>
-              </div>
-              <div class="mobile_order_inline_div">
-                <div class="mobile_text_div">
-                  <p>訂位人:李曉明</p>
-                  <p>訂位日期:2022-01-08</p>
-                  <p>訂位餐廳:aqua水相餐廳</p>
-                  <p>訂位時間:17:00</p>
-                  <p>訂位人數:4</p>
-                </div>
-                <div class="mobile_btn_div">
-                  <button
-                    class="cancel_btn"
-                    data-toggle="modal"
-                    data-target="#cancel_order_Modal"
-                  >
-                    取消訂位
-                  </button>
-                  <button
-                    class="detail_btn"
-                    data-toggle="modal"
-                    data-target="#detailModal"
-                  >
-                    詳細內容
-                  </button>
-                  <button class="comment_btn">評價</button>
-                </div>
-              </div>
-             
-              
               </div>
             </div>
           </div>
         </div>
-      </div>  
 
 
 
