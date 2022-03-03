@@ -1,9 +1,11 @@
 #restaurant_booking_history_aside {
     background-color: #403C3C;
     width: 230px;
-    height: 90vh;
+    height: 100vh;
+    position: absolute;
+    float: left;
+    left: 0;
     position: fixed;
-    top: 9%;
 }
 
 #restaurant_booking_history_aside .default {
@@ -61,6 +63,7 @@
 #restaurant_booking_history td{
     text-align: center;
     vertical-align: middle;
+    border-top: 1px solid #403C3C;
 }
 
 #restaurant_booking_history .search_bar {

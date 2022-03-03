@@ -1,9 +1,11 @@
 #restaurant_today_booking_aside {
     background-color: #403C3C;
     width: 230px;
-    height: 90vh;
+    height: 100vh;
+    position: absolute;
+    float: left;
+    left: 0;
     position: fixed;
-    top: 9%;
 }
 
 #restaurant_today_booking_aside .panel-default{
@@ -187,35 +189,39 @@
    right: 40px;
 }
 
-
-
 #detail .modal-content {
+    font-size: 20px;
+    font-weight: 600;
     width: 100%;
     margin-top: -60px;
 }
 
 #detail .modal-header {
-    padding: 0;
+    padding: 10px;
 }
 
 #detail .modal-content .groupdetail_modal {
-    padding-left: 10px;
+    padding-left: 80px;
+    padding-top: 40px;
     margin-top: 10px;
     margin-bottom: 50px;
     height: 350px;
 }
 
 #search .modal-content {
+    font-size: 20px;
+    font-weight: 600;
     width: 100%;
     margin-top: -60px;
 }
 
 #search .modal-header {
-    padding: 0;
+    padding: 10px;
 }
 
 #search .modal-content .groupdetail_modal {
-    padding-left: 10px;
+    padding-left: 80px;
+    padding-top: 40px;
     margin-top: 10px;
     margin-bottom: 50px;
     height: 350px;
@@ -244,16 +250,19 @@
 }
 
 #cancel .modal-content {
+    font-size: 20px;
+    font-weight: 600;
     width: 100%;
     margin-top: -60px;
 }
 
 #cancel .modal-header {
-    padding: 0;
+    padding: 10px;
 }
 
 #cancel .modal-content .groupdetail_modal {
-    padding-left: 10px;
+    padding-left: 80px;
+    padding-top: 40px;
     margin-top: 10px;
     margin-bottom: 50px;
     height: 350px;

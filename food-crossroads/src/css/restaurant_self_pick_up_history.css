@@ -1,9 +1,11 @@
 #restaurant_self_pick_up_history_aside {
     background-color: #403C3C;
     width: 230px;
-    height: 90vh;
+    height: 100vh;
+    position: absolute;
+    float: left;
+    left: 0;
     position: fixed;
-    top: 10%;
 }
 
 #restaurant_self_pick_up_history_aside .panel-default{

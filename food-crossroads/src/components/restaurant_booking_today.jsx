@@ -144,7 +144,7 @@ class Restaurant_booking_today extends Component {
                         <div className="search_bar">
                             <div className="search_bar_div">
                                 <i className="fas fa-search"></i>
-                                <input type="text" placeholder="訂單編號" />
+                                <input type="text" placeholder="訂位編號" />
                             </div>
                             <button className="search_btn">搜尋</button>
                         </div>
@@ -222,7 +222,7 @@ class Restaurant_booking_today extends Component {
                                         </div>
                                     </tr>
                                 ))} */}
-                                <tr id="test">
+                                <tr id="test"> 
                                     <td>
                                         <input type="checkbox" />
                                     </td>
@@ -243,6 +243,7 @@ class Restaurant_booking_today extends Component {
                                         </button>
                                     </td>
                                 </tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -291,7 +292,9 @@ class Restaurant_booking_today extends Component {
                             <div className="groupdetail_modal">
                                 姓名： 李曉明 <br />
                                 手機： 0987654321 <br />
-                                信箱： 1234@gmail.com <br />
+                                電子郵件： 1234@gmail.com <br />
+                                <br />
+                                訂位編號： 00001 <br />
                                 訂位人數： 6人 <br />
                                 訂位日期： 2022/03/07 <br />
                                 訂位時間： 12：00 <br />
@@ -316,9 +319,10 @@ class Restaurant_booking_today extends Component {
                     <div className="modal-dialog">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h4 className="modal-title">訂單編號 00001</h4>
+                                <h4 className="modal-title">詳細內容</h4>
                             </div>
                             <div className="groupdetail_modal">
+                                訂位編號： 00001 <br />
                                 訂位日期： 2022/03/07 <br />
                                 訂位時間： 12：00 <br />
                                 訂位人： 李曉明 <br />

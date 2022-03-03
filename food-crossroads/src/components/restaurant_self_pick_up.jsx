@@ -9,8 +9,14 @@ class Restaurant_booking_history extends Component {
         open: true
     }
 
-    showDetail = () => {
-        alert("OK");
+    async componentDidMount() {
+        $(".detail_btn").on("click", function () {
+            $(".modal-groupdetail").css("display", "block");
+        });
+
+        $(".btn_close").on("click", function () {
+            $(".modal-groupdetail").css("display", "none");
+        });
     }
 
     render() {
@@ -128,7 +134,7 @@ class Restaurant_booking_history extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr id="test">
+                                <tr>
                                     <td>
                                         <div className="checkbox">
                                             <label>
@@ -180,6 +186,38 @@ class Restaurant_booking_history extends Component {
                                         {/* </div> */}
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal modal-groupdetail" tabIndex="0" id="detail">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">詳細訂單</h4>
+                            </div>
+                            <div class="groupdetail_modal">
+                                姓名： 李曉明 <br />
+                                手機： 0987654321 <br />
+                                訂餐編號：00001 <br />
+                                餐點： <br />
+                                西西里海鹽柴魚脆薯 *1 <br />
+                                蕃茄羅勒起司搭頂級陳年油醋*2 <br />
+                                總金額：564元 <br />
+                                訂餐時間：3/7（一） 下午6：00 <br />
+                                備註：需要餐具
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button
+                                    type="button"
+                                    class="btn_close"
+                                    data-dismiss="modal"
+                                >
+                                    返回
+                                </button>
                             </div>
                         </div>
                     </div>
