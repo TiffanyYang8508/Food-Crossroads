@@ -143,7 +143,7 @@ class BookingRecord extends Component {
           </label>
         </div>
 
-        <div id="booking_manage">
+        <div id="booking_record">
           <div className="container-fluid table_container">
             <div className="row">
               <div className="col-md-12">
@@ -325,7 +325,7 @@ class BookingRecord extends Component {
           </div>
         </div>
 
-        <div id="mobile_booking_manage">
+        <div id="mobile_booking_record">
           <div className="container-fluid">
             <div className="row">
               <div className="col-12">

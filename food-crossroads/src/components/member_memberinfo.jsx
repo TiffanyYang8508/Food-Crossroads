@@ -58,9 +58,9 @@ class Member extends Component {
           </nav>
         </header>
 
-        <aside className="aside_menu">
+        <aside id="member_aside">
           <div className="panel-group" id="accordion">
-            <div className="panel panel-default">
+            <div className="panel panel-default default">
               <div className="panel-heading">
                 <h4 className="panel-title">
                   <a href="#">會員資料</a>
@@ -91,7 +91,7 @@ class Member extends Component {
         <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
         <div id="mobile_member_aside">
           <div className="panel-group" id="accordion">
-            <div className="panel panel-default">
+            <div className="panel panel-default default">
               <div className="panel-heading">
                 <h4 className="panel-title">
                   <a href="member.html">會員資料</a>
@@ -118,7 +118,7 @@ class Member extends Component {
           </label>
         </div>
 
-        <section id="member_section">
+        <section id="member_info">
           <div className="container-fluid member_div">
             <div className="row">
               <div className="col-md-12">

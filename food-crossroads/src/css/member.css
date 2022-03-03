@@ -7,14 +7,14 @@
 #member_aside {
   background-color: #403c3c;
   width: 230px;
-  height: 90%;
-  position: fixed;
-  top: 9%;
+  height: 100%;
+  position: absolute;
   float: left;
-  z-index: 2;
+  left: 0;
+  position: fixed;
 }
 
-#member_aside .mobile_aside_menu {
+#mobile_member_aside {
   display: none;
 }
 
