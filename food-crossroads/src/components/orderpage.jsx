@@ -123,6 +123,9 @@ class Orderpage extends Component {
             $(".group_link_modal").css("display","block")
         })
 
+        $(".btn_grouporder").on("click",function(){
+            $(".group_link_modal").css("display","none")
+        })
 
 
         function setCart() {
@@ -673,8 +676,8 @@ class Orderpage extends Component {
                                             <button type="button" className="btn btn-danger btn_copy" onClick='copyinput()'>複製連結</button>
                                         </div>
                                         <div className="modal-footer">
-                                            <button type="button" className="btn btn-secondary" data-dismiss="modal"
-                                                onclick="btn_grouporder()">關閉</button>
+                                            <button type="button" className="btn btn-secondary btn_grouporder" data-dismiss="modal"
+                                                >關閉</button>
                                         </div>
                                     </div>
                                 </div>

@@ -154,91 +154,7 @@ th {
   color: #fff;
 }
 
-.member_editpwd_btn {
-  border-radius: 5px;
-  margin-top: 30px;
-  padding-top: 6px;
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  font-size: 18px;
-  border: none;
-  background-color: #403c3c;
-  transition: 0.3s;
-}
 
-.member_editinfo_btn {
-  border-radius: 5px;
-  margin-top: 30px;
-  padding-top: 6px;
-  margin-left: 40px;
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  font-size: 18px;
-  border: none;
-  background-color: #403c3c;
-  transition: 0.3s;
-}
-
-.member_editinfo_btn:hover {
-  background-color: #a30f01;
-}
-
-#edit_member .member_editinfo_btn {
-  border-radius: 5px;
-  margin-top: 30px;
-  padding-top: 0px;
-  margin-left: 40px;
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  font-size: 18px;
-  border: none;
-  background-color: #8b1309;
-  transition: 0.3s;
-}
-
-#edit_member .member_editinfo_btn:hover {
-  background-color: #a30f01;
-}
-
-.member_editpwd_btn:hover {
-  background-color: #a30f01;
-}
-
-#edit_member .member_confirm_btn {
-  border-radius: 5px;
-  margin-top: 30px;
-  margin-left: 50px;
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  font-size: 18px;
-  border: none;
-  background-color: #8b1309;
-  transition: 0.3s;
-}
-
-#edit_member .member_confirm_btn:hover {
-  background-color: #a30f01;
-}
-#edit_member .member_back_btn {
-  margin-left: 30px;
-  border-radius: 5px;
-  margin-top: 30px;
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  font-size: 18px;
-  border: none;
-  background-color: #403c3c;
-  transition: 0.3s;
-}
-
-#edit_member .member_back_btn:hover {
-  background-color: #8d8c8c;
-}
 
 .table_container {
   width: 100%;
@@ -246,36 +162,13 @@ th {
 
 /* booking_manage start */
 
-#booking_manage {
-  position: fixed;
-  top: 10%;
-  left: 16%;
-  width: 80%;
-  height: 100%;
-}
 
 #mobile_booking_manage,
 #mobile_order_manage {
   display: none;
 }
 
-#booking_manage .table th {
-  border-bottom: 1px solid #403c3c;
-  width: 10%;
-}
 
-#booking_manage td {
-  vertical-align: middle;
-  text-align: center;
-  border-top: 1px solid #403c3c;
-}
-
-#booking_manage .detail_modal_body {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 0px;
-  font-size: 20px;
-}
 
 .detail_modal {
   margin-top: 50px;
@@ -283,67 +176,6 @@ th {
   margin-left: 80px;
   font-size: 20px;
   font-weight: 600;
-}
-
-#booking_manage .cancel_btn,
-#booking_manage .detail_btn,
-#booking_manage .comment_btn,
-#booking_manage .order_comment_btn,
-#booking_manage .together_btn {
-  border-radius: 5px;
-  border: none;
-  padding: 5px 8px;
-  transition: 0.3s;
-}
-
-#booking_manage .table_title {
-  position: relative;
-  right: 0px;
-}
-
-#booking_manage .btn_td {
-  width: 10%;
-}
-
-#booking_manage .cancel_btn {
-  background-color: #cacaca;
-  margin-right: 2%;
-}
-
-#booking_manage .cancel_btn:hover {
-  background-color: #b8b8b8;
-}
-
-#booking_manage .detail_btn {
-  background-color: #403c3c;
-  color: #fff;
-}
-
-#booking_manage .detail_btn:hover {
-  background-color: #524d4d;
-}
-
-#booking_manage .comment_btn {
-  background-color: #8b1309;
-  color: #fff;
-}
-
-#booking_manage .comment_btn:hover {
-  background-color: #a30f01;
-}
-
-.order_comment_btn1 {
-  margin-left: -320px;
-}
-#booking_manage .together_btn {
-  /* margin-left: -270px; */
-
-  background-color: #8b1309;
-  color: #fff;
-}
-
-.order_comment_btn1:hover {
-  background-color: #a30f01;
 }
 
 /* .mobile_td{
@@ -356,9 +188,10 @@ th {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 90%;
   height: 100%;
-  margin-left: 18%;
+  margin-left: 12%;
+ 
 }
 
 #order_manage .modal-title {
@@ -435,40 +268,41 @@ th {
   background-color: #524d4d;
 }
 
-.btn_commentclose {
-  font-size: 18px;
+
+#order_manage .detail_btn{
+margin-left: -200px;
+background-color: #fff;
+border: 2px solid #403c3c;
+border-radius: 5px;
+padding: 5px 8px;
+transition: 0.3s;
+}
+
+#order_manage .detail_btn:hover{
   background-color: #403c3c;
   color: #fff;
-  border-radius: 5px;
+}
+#order_manage .together_btn{
+  border-radius: 8px;
   border: none;
-  padding: 10px 20px;
+  padding: 5px 8px;
+  transition: 0.3s;
+  background-color: #8b1309;;
+  color: #fff;
+  margin-top: 12px;
+  margin-left: -150px;
 }
 
-.btn_commentclose:hover {
-  background-color: #524d4d;
-}
-.rank_modal_star {
-  margin-top: 20px;
-  padding-top: 20px;
-}
-
-.star {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #ccc;
-  display: inline-block;
-  margin-right: 5px;
-  cursor: pointer;
+#order_manage .groupdetail_modal{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 80px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.stars {
-  color: orange;
-  margin-left: 10px;
-}
-
-.test {
-  display: none;
+#order_manage .together_btn:hover{
+  background-color: #a30f01;
 }
 /* RWD start */
 
@@ -527,15 +361,15 @@ th {
     transition: 0.3s;
     width: 100%;
   }
-  #booking_manage{
+  #order_manage{
     left: 0;
     width: 75%;
   }
-  #booking_manage .table th {
+  #order_manage .table th {
     border-bottom: 1px solid #403c3c;
     width: 8%;
   }
-  #booking_manage,
+  #order_manage,
   #order_manage {
     width: 100%;
     margin-left: 0%;
@@ -545,23 +379,24 @@ th {
 /* 大型螢幕 */
 
 @media screen and (max-width: 992px) {
-  #booking_manage .mobile_td {
+  #order_manage .mobile_td {
     height: 90px;
     line-height: 60px;
   }
-  #booking_manage .cancel_btn {
+  #order_manage .cancel_btn {
     margin-right: 19%;
   }
-  #booking_manage .detail_btn {
-    margin-right: 18%;
+  #order_manage .detail_btn {
+    margin-right: -60%;
   }
-  #booking_manage .comment_btn {
-    margin-top: 15px;
+  #order_manage .together_btn {
+    margin-top: 29px;
+    margin-left: -80px;
   }
-  #booking_manage .order_td {
+  #order_manage .order_td {
     width: 15%;
   }
-  #booking_manage .order_td .detail_btn {
+  #order_manage .order_td .detail_btn {
     margin-top: 15px;
   }
 }
@@ -569,7 +404,7 @@ th {
 /* 平板 */
 
 @media screen and (max-width: 768px) {
-  #booking_manage,
+  #order_manage,
   #order_manage {
     display: none;
   }
@@ -595,14 +430,9 @@ th {
     width: 40%;
     height: 100%;
   }
-  #mobile_booking_manage .cancel_btn,
-  .detail_btn,
-  .comment_btn {
-    margin: 5px;
-    height: 33%;
-  }
+
   #mobile_order_manage .detail_btn,
-  .comment_btn {
+  .together_btn{
     margin: 5px;
     height: 30%;
   }

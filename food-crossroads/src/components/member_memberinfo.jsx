@@ -60,7 +60,7 @@ class Member extends Component {
 
         <aside className="aside_menu">
           <div className="panel-group" id="accordion">
-            <div className="panel panel-default">
+            <div className="panel panel-default default">
               <div className="panel-heading">
                 <h4 className="panel-title">
                   <a href="#">會員資料</a>
@@ -113,7 +113,7 @@ class Member extends Component {
               </div>
             </div>
           </div>
-          <label htmlFor="aside_menu_chk" className="aside_menu_chk">
+          <label for="aside_menu_chk" className="aside_menu_chk">
             <i className="fas fa-angle-right"></i>
           </label>
         </div>
