@@ -110,6 +110,7 @@
 
 #restaurant_today_booking td{
     text-align: center;
+    vertical-align: middle;
 }
 
 #restaurant_today_booking tbody input[type=checkbox]{

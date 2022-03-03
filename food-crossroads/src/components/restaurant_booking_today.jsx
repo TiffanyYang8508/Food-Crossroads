@@ -85,7 +85,7 @@ class Restaurant_booking_today extends Component {
                         </div>
                         <div className="panel panel-default">
                             <div className="panel-heading">
-                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="">訂餐管理</a>
+                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="/restaurant/self/pick">訂餐管理</a>
                                 </h4>
                             </div>
                             <div id="collapseTwo" className="panel-collapse collapse">
