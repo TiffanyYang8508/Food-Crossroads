@@ -43,13 +43,13 @@ class Restaurant_booking_today extends Component {
                 <aside id="restaurant_today_booking_aside">
                     <div>
                         <div className="panel panel-default">
-                            <Collapse className="panel-heading" in={this.state.open}>
-                                <h4 className="panel-title"><a href="#collapseOne">訂位管理</a>
+                            <div className="panel-heading" in={this.state.open}>
+                                <h4 className="panel-title"><a href="/restaurant/booking/today">訂位管理</a>
                                 </h4>
-                            </Collapse>
+                            </div>
                             <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}>
                                 <div className="little_title">
-                                    <a href="">今日訂位</a>
+                                    <a href="/restaurant/booking/today">今日訂位</a>
                                 </div>
                             </Collapse >
                             <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
@@ -60,17 +60,17 @@ class Restaurant_booking_today extends Component {
                         </div>
                         <div className="panel panel-default">
                             <div className="panel-heading">
-                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">訂餐管理</a>
+                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="">訂餐管理</a>
                                 </h4>
                             </div>
                             <div id="collapseTwo" className="panel-collapse collapse">
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="restaurant_self_pick_up.html">今日自取訂餐</a>
+                                    <a data-parent="#accordion" href="">今日自取訂餐</a>
                                 </div>
                             </div>
                             <div id="collapseTwo" className="panel-collapse collapse">
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="restaurant_history_list.html">歷史訂餐紀錄</a>
+                                    <a data-parent="#accordion" href="">歷史訂餐紀錄</a>
                                 </div>
                             </div>
                         </div>
@@ -81,9 +81,6 @@ class Restaurant_booking_today extends Component {
                 <section id="restaurant_today_booking">
                     <div className="container">
                         <div className="search_bar">
-                            <div>
-                                <h3>今日訂位</h3>
-                            </div>
                             <div className="search_bar_div">
                                 <i className="fas fa-search"></i>
                                 <input type="text" placeholder="訂單編號" />
@@ -167,13 +164,9 @@ class Restaurant_booking_today extends Component {
                                 ))} */}
                                 <tr>
                                     <td>
-                                        <div className="checkbox">
-                                            <label>
-                                                <input type="checkbox" />
-                                            </label>
-                                        </div>
+                                        <input type="checkbox" />
                                     </td>
-                                    <td>00125</td>
+                                    <td>00001</td>
                                     <td>2022/03/07</td>
                                     <td>16:30</td>
                                     <td>6</td>

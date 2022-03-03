@@ -21,10 +21,10 @@ class Restaurant_booking_history extends Component {
                 <aside id="restaurant_booking_history_aside">
                     <div className="panel-group" id="accordion">
                         <div className="panel panel-default">
-                            <Collapse className="panel-heading" in={this.state.open}>
+                            <div className="panel-heading" in={this.state.open}>
                                 <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
                                 </h4>
-                            </Collapse>
+                            </div>
                             <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
                                 <div className="little_title">
                                     <a href="/restaurant/booking/today">今日訂位</a>
@@ -58,9 +58,6 @@ class Restaurant_booking_history extends Component {
                 <section id="restaurant_booking_history">
                     <div className="container">
                         <div className="search_bar">
-                            <div>
-                                <h3>歷史訂位紀錄</h3>
-                            </div>
                             <div className="search_bar_div">
                                 <i className="fas fa-search"></i>
                                 <input type="text" placeholder="訂單編號" />
@@ -81,13 +78,9 @@ class Restaurant_booking_history extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr id="test">
+                                <tr>
                                     <td>
-                                        <div className="checkbox">
-                                            <label>
-                                                <input type="checkbox" checked disabled="disabled" />
-                                            </label>
-                                        </div>
+                                        <input type="checkbox" checked disabled="disabled" />
                                     </td>
                                     <td>99999</td>
                                     <td>2022-02-22</td>
@@ -125,11 +118,7 @@ class Restaurant_booking_history extends Component {
 
                                 <tr>
                                     <td>
-                                        <div className="checkbox">
-                                            <label>
-                                                <input type="checkbox" checked disabled="disabled" />
-                                            </label>
-                                        </div>
+                                        <input type="checkbox" checked disabled="disabled" />
                                     </td>
                                     <td>99997</td>
                                     <td>2022-02-21</td>
@@ -146,11 +135,7 @@ class Restaurant_booking_history extends Component {
 
                                 <tr>
                                     <td>
-                                        <div className="checkbox">
-                                            <label>
-                                                <input type="checkbox" checked disabled="disabled" />
-                                            </label>
-                                        </div>
+                                        <input type="checkbox" checked disabled="disabled" />
                                     </td>
                                     <td>99996</td>
                                     <td>2022-02-21</td>
