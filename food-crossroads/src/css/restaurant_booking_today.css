@@ -191,7 +191,7 @@
 
 #detail .modal-content {
     width: 100%;
-    margin-top: -120px;
+    margin-top: -60px;
 }
 
 #detail .modal-header {
@@ -202,11 +202,12 @@
     padding-left: 10px;
     margin-top: 10px;
     margin-bottom: 50px;
+    height: 350px;
 }
 
 #search .modal-content {
     width: 100%;
-    margin-top: -120px;
+    margin-top: -60px;
 }
 
 #search .modal-header {
@@ -217,6 +218,7 @@
     padding-left: 10px;
     margin-top: 10px;
     margin-bottom: 50px;
+    height: 350px;
 }
 
 #detail .modal-footer .btn_close{
@@ -243,7 +245,7 @@
 
 #cancel .modal-content {
     width: 100%;
-    margin-top: -120px;
+    margin-top: -60px;
 }
 
 #cancel .modal-header {
@@ -254,6 +256,7 @@
     padding-left: 10px;
     margin-top: 10px;
     margin-bottom: 50px;
+    height: 350px;
 }
 
 #cancel .c_btn {
