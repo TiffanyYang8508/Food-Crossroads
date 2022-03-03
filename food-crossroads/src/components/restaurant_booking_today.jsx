@@ -21,14 +21,39 @@ class Restaurant_booking_today extends Component {
     }
 
     async componentDidMount() {
-        var url = `http://localhost:8000/restaurant/booking/today`;
-        var result = await Axios.get(url);
-        var newState = { ...this.state };
-        newState.booking_detail = result.data;
-        this.setState(newState);
+        // var url = `http://localhost:8000/restaurant/booking/today`;
+        // var result = await Axios.get(url);
+        // var newState = { ...this.state };
+        // newState.booking_detail = result.data;
+        // this.setState(newState);
 
         $(".detail_btn").on("click", function () {
-            $(".modal-detail").css("display", "block");
+            $(".modal-groupdetail").css("display", "block");
+        });
+
+        $(".btn_close").on("click", function () {
+            $(".modal-groupdetail").css("display", "none");
+        });
+
+        $(".search_btn").on("click", function () {
+            $(".modal-groupdetail2").css("display", "block");
+        });
+
+        $(".btn_close").on("click", function () {
+            $(".modal-groupdetail2").css("display", "none");
+        });
+
+        $(".cancel_btn").on("click", function () {
+            $(".modal-groupdetail3").css("display", "block");
+        });
+
+        $(".btn_close").on("click", function () {
+            $(".modal-groupdetail3").css("display", "none");
+        });
+
+        $(".c_btn").on("click", function () {
+            $("#test").css("display", "none");
+            $(".modal-groupdetail3").css("display", "none");
         });
     }
 
@@ -85,7 +110,7 @@ class Restaurant_booking_today extends Component {
                                 <i className="fas fa-search"></i>
                                 <input type="text" placeholder="訂單編號" />
                             </div>
-                            <button >搜尋</button>
+                            <button className="search_btn">搜尋</button>
                         </div>
                         <table className="table order_table">
                             <thead>
@@ -102,7 +127,6 @@ class Restaurant_booking_today extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-
                                 {/* {this.state.booking_detail.map((item, index) => (
                                     <tr key={index}>
                                         <td>
@@ -162,13 +186,13 @@ class Restaurant_booking_today extends Component {
                                         </div>
                                     </tr>
                                 ))} */}
-                                <tr>
+                                <tr id="test">
                                     <td>
                                         <input type="checkbox" />
                                     </td>
                                     <td>00001</td>
                                     <td>2022/03/07</td>
-                                    <td>16:30</td>
+                                    <td>12：00</td>
                                     <td>6</td>
                                     <td>李曉明</td>
                                     <td>0987654321</td>
@@ -187,9 +211,103 @@ class Restaurant_booking_today extends Component {
 
                             </tbody>
                         </table>
-                    
+
                     </div>
                 </section>
+
+                <div class="modal modal-groupdetail" tabIndex="0" id="detail">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">詳細訂單</h4>
+                            </div>
+                            <div class="groupdetail_modal">
+                                姓名： 李曉明 <br />
+                                手機： 0987654321 <br />
+                                信箱： 1234@gmail.com <br />
+                                訂位人數： 6人 <br />
+                                訂位日期： 2022/03/07 <br />
+                                訂位時間： 12：00 <br />
+                                需求：停車、嬰兒座椅 <br />
+                                備註：無
+                            </div>
+
+                            <div class="modal-footer">
+                                <button
+                                    type="button"
+                                    class="btn_close"
+                                    data-dismiss="modal"
+                                >
+                                    返回
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal modal-groupdetail2" tabIndex="0" id="search">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">訂單編號 00001</h4>
+                            </div>
+                            <div class="groupdetail_modal">
+                                訂位日期： 2022/03/07 <br />
+                                訂位時間： 12：00 <br />
+                                訂位人： 李曉明 <br />
+                                訂位人數： 6人 <br />
+                                手機： 0987654321 <br />
+                                需求：停車、嬰兒座椅 <br />
+                                備註：無
+                            </div>
+
+                            <div class="modal-footer">
+                                <button
+                                    type="button"
+                                    class="btn_close"
+                                    data-dismiss="modal"
+                                >
+                                    返回
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal modal-groupdetail3" tabIndex="0" id="cancel">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">詳細內容</h4>
+                            </div>
+                            <div class="groupdetail_modal">
+                                訂單編號： 00001 <br />
+                                訂位日期： 2022/03/07 <br />
+                                訂位時間： 12：00 <br />
+                                訂位人： 李曉明 <br />
+                                訂位人數： 6人 <br />
+                                手機： 0987654321 <br />
+                            </div>
+
+                            <div class="modal-footer">
+                                <button
+                                    type="button"
+                                    class="c_btn"
+                                    data-dismiss="modal"
+                                >
+                                    取消
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn_close"
+                                    data-dismiss="modal"
+                                >
+                                    返回
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <footer className="footer_page">
                     <Footer />
