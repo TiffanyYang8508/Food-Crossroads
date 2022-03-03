@@ -48,7 +48,7 @@ class BookingRecord extends Component {
   render() {
     return (
       <React.Fragment>
-        <header className="header_page">
+        <header id="header_page">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="/">
               <img src={logo} alt="LOGO" />
@@ -78,62 +78,61 @@ class BookingRecord extends Component {
           </nav>
         </header>
 
-          <aside id="member_aside">
-            <div className="panel-group" id="accordion">
-              <div className="panel panel-default">
-                <div className="panel-heading">
-                  <h4 className="panel-title">
-                    <a href={`/member/${this.props.match.params.id}`}>會員資料</a>
-                  </h4>
-                </div>
-              </div>
-              <div className="panel panel-default ">
-                <div className="panel-heading">
-                  <h4 className="panel-title">
-                    <a href={`/bookingmanagement/${this.props.match.params.id}`}>
-                      訂位管理
-                    </a>
-                  </h4>
-                </div>
-              </div>
-              <div className="panel panel-default default">
-                <div className="panel-heading">
-                  <h4 className="panel-title">
-                    <a href="#">訂餐管理</a>
-                  </h4>
-                </div>
+        <aside id="member_aside">
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a href={`/member/${this.props.match.params.id}`}>會員資料</a>
+                </h4>
               </div>
             </div>
-          </aside>
-
+            <div class="panel panel-default ">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a href={`/bookingmanagement/${this.props.match.params.id}`}>
+                    訂位管理
+                  </a>
+                </h4>
+              </div>
+            </div>
+            <div class="panel panel-default default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a href="#">訂餐管理</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </aside>
 
         <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
         <div id="mobile_member_aside">
-          <div className="panel-group" id="accordion">
-            <div className="panel panel-default default">
-              <div className="panel-heading">
-                <h4 className="panel-title">
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
                   <a href="#">會員資料</a>
                 </h4>
               </div>
             </div>
-            <div className="panel panel-default">
-              <div className="panel-heading">
-                <h4 className="panel-title">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
                   <a href="booking_manage.html">訂位管理</a>
                 </h4>
               </div>
             </div>
-            <div className="panel panel-default">
-              <div className="panel-heading">
-                <h4 className="panel-title">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
                   <a href="order_manage.html">訂餐管理</a>
                 </h4>
               </div>
             </div>
           </div>
-          <label htmlFor="aside_menu_chk">
-            <i className="fas fa-angle-right"></i>
+          <label for="aside_menu_chk">
+            <i class="fas fa-angle-right"></i>
           </label>
         </div>
 
@@ -146,35 +145,39 @@ class BookingRecord extends Component {
                     <tr>
                       <th>取餐日期</th>
                       <th>訂餐餐廳</th>
-                      <th>訂餐菜名</th>
+                      <th>訂餐名稱</th>
                       <th>訂餐時間</th>
-                      <th>訂餐金額</th>
+                      <th>總金額</th>
                       <th></th>
                       <th></th>
                     </tr>
                   </thead>
                   <tbody>
                     {this.state.List.map((item, index) => (
-                      <tr key={index}>
-                        <td className="mobile_td">2022/03/08 </td>
+                      <tr>
+                        <td className="mobile_td">2022/03/07 </td>
                         <td className="mobile_td">{item.restaurant_name}</td>
-                        <td className="mobile_td">{item.food_name}</td>
+                        <td className="mobile_td">
+                          {item.food_name}
+                          <br />
+                          蕃茄羅勒起司搭頂級陳年油醋
+                        </td>
                         <td className="mobile_td">{item.order_date}</td>
-                        <td className="mobile_td">{item.total_amount}</td>
+                        <td className="mobile_td">564</td>
                         <td className="order_td">
                           <button className="detail_btn">詳細訂單</button>
                         </td>
 
-                        <button className="order_comment_btn">評價</button>
-                        <button className="together_btn">揪</button>
-                        <div className="modal modal-groupdetail" tabIndex="0">
-                          <div className="modal-dialog">
-                            <div className="modal-content">
-                              <div className="modal-header">
-                                <h4 className="modal-title">詳細訂單</h4>
+                     
+                        <button className="together_btn">揪團明細</button>
+                        <div class="modal modal-groupdetail" tabIndex="0">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h4 class="modal-title">揪團明細</h4>
                               </div>
 
-                              <div className="groupdetail_modal">
+                              <div class="groupdetail_modal">
                                 姓名：李曉明
                                 <br />
                                 訂餐餐點：西西里海鹽柴魚脆薯 *1 <br />{" "}
@@ -198,13 +201,15 @@ class BookingRecord extends Component {
                                 水相主廚私房湯品*1 <br />
                                 訂餐金額：606 <br />
                                 訂餐備註：湯不要加蔥
-                                <br />
+                                <br /><hr />
+                                總金額：1646
+
                               </div>
 
-                              <div className="modal-footer">
+                              <div class="modal-footer">
                                 <button
                                   type="button"
-                                  className="btn_close"
+                                  class="btn_close"
                                   data-dismiss="modal"
                                 >
                                   返回
@@ -215,6 +220,18 @@ class BookingRecord extends Component {
                         </div>
                       </tr>
                     ))}
+                     <tr>
+                      <td className="mobile_td">2022/03/07 </td>
+                      <td className="mobile_td">aqua水相餐廳</td>
+                      <td className="mobile_td">西西里海鹽柴魚脆薯 <br />蕃茄羅勒起司搭頂級陳年油醋</td>
+                      <td className="mobile_td">18:00:00</td>
+                      <td className="mobile_td">564</td>
+                      <td className="order_td">
+                        <button className="detail_btn">詳細訂單</button>
+                      </td>
+
+              
+                    </tr>
                     <tr>
                       <td className="mobile_td">2022/02/24 </td>
                       <td className="mobile_td">布列塔尼歐法鄉村雅廚</td>
@@ -225,9 +242,7 @@ class BookingRecord extends Component {
                         <button className="detail_btn">詳細訂單</button>
                       </td>
 
-                      <td>
-                        <button className="order_comment_btn1">評價</button>
-                      </td>
+              
                     </tr>
                   </tbody>
                 </table>
@@ -236,30 +251,32 @@ class BookingRecord extends Component {
           </div>
         </div>
 
-        {this.state.List.map((item, index) => (
-          <div className="modal modal-detail" tabIndex="0" key={index}>
-            <div className="modal-dialog">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h4 className="modal-title">詳細訂單</h4>
+        {this.state.List.map((item, idex) => (
+          <div class="modal modal-detail" tabIndex="0">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">詳細訂單</h4>
                 </div>
 
-                <div className="detail_modal">
+                <div class="detail_modal">
                   姓名：{item.user_name}
                   <br />
                   手機：{item.user_tel}
                   <br />
                   電子郵件：{item.user_email} <br />
                   <br />
-                  訂餐餐點：{item.food_name} <br />
+                  訂餐編號：00002 <br />
+                  訂餐餐點：{item.food_name}*1 <br />
+                  蕃茄羅勒起司搭頂級陳年油醋*2 <br />
                   訂餐餐廳：{item.restaurant_name} <br />
                   取餐時間：{item.order_date} <br />
-                  訂餐金額：{item.total_amount}
+                  訂餐金額：564
                   <br />
                 </div>
 
-                <div className="modal-footer">
-                  <button type="button" className="btn_close" data-dismiss="modal">
+                <div class="modal-footer">
+                  <button type="button" class="btn_close" data-dismiss="modal">
                     返回
                   </button>
                 </div>
@@ -268,27 +285,28 @@ class BookingRecord extends Component {
           </div>
         ))}
 
-        <div id="mobile_order_manage">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-12">
-                <div className="table mobile_order_div">
-                  <div className="mobile_order_inline_div">
-                    <div className="mobile_text_div">
-                      <p>取餐日期:2022-01-08</p>
-                      <p>訂餐餐廳:餐廳名稱</p>
-                      <p>訂餐編號:00001</p>
-                      <p>訂餐時間:17:00</p>
-                      <p>訂餐金額:123</p>
-                      <div className="mobile_btn_div">
+          {this.state.List.map((item,idex) =>(
+            <div id="mobile_order_manage">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="table mobile_order_div">
+                  <div class="mobile_order_inline_div">
+                    <div class="mobile_text_div">
+                      <p>取餐日期:2022-03-07</p>
+                      <p>訂餐餐廳:{item.restaurant_name}</p>
+                      <p>訂餐編號:00002</p>
+                      <p>訂餐時間:{item.order_date}</p>
+                      <p>訂餐金額:564</p>
+                      <div class="mobile_btn_div">
                         <button
-                          className="detail_btn"
+                          class="detail_btn"
                           data-toggle="modal"
                           data-target="#detailModal"
                         >
                           詳細訂單
                         </button>
-                        <button className="comment_btn">評價</button>
+                        <button class="comment_btn">評價</button>
                       </div>
                     </div>
                   </div>
@@ -297,6 +315,8 @@ class BookingRecord extends Component {
             </div>
           </div>
         </div>
+          ))}
+        
 
         <footer className="footer_page">
           <Footer />

@@ -19,11 +19,11 @@ class Member_login_success extends Component {
           <Header />
         </header>
         <section id="success_section">
-          <div className="container-fluid success_div">
-            <div className="row">
-              <div className="col-12">
-                <div className="member_success">
-                  <div className="member_success_div">
+          <div class="container-fluid success_div">
+            <div class="row">
+              <div class="col-12">
+                <div class="member_success">
+                  <div class="member_success_div">
                     <h2>登入成功</h2>
                     <p>自動跳轉回原頁面...</p>
                   </div>
