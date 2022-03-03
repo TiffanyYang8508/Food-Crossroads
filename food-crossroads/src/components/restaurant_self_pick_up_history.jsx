@@ -44,7 +44,7 @@ class Restaurant_booking_history extends Component {
                         </div>
                         <div className="panel panel-default">
                             <div className="panel-heading" in={this.state.open}>
-                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂餐管理</a>
+                                <h4 className="panel-title"><a href="/restaurant/self/pick">訂餐管理</a>
                                 </h4>
                             </div>
                             <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
@@ -67,7 +67,7 @@ class Restaurant_booking_history extends Component {
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="/restaurant/self/pick/history">訂位管理</a>
                                 </h4>
                             </div>
                             <div id="collapseOne" className="panel-collapse collapse" >
