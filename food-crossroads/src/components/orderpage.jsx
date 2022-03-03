@@ -111,6 +111,21 @@ class Orderpage extends Component {
         }
         setCart();
 
+        $(".group_button").on("click",function(){
+            $(".order_group_modal").css("display","block")
+          })
+      
+          $(".btn_cancel").on("click",function(){
+            $(".order_group_modal").css("display","none")
+          })
+
+        $(".btn_yes").on("click",function(){
+            $(".group_link_modal").css("display","block")
+        })
+
+        $(".btn_grouporder").on("click",function(){
+            $(".group_link_modal").css("display","none")
+        })
 
 
         function setCart() {
@@ -604,9 +619,8 @@ class Orderpage extends Component {
 
 
                         {/* <!--揪團開啟確認modal--> */}
-                        <div className="modal fade" id="order_group_modal" tabIndex="-1" role="dialog" aria-labelledby="order_group_modal_title"
-                            aria-hidden="true">
-                            <div className="modal-dialog modal-dialog-centered" role="document">
+                        <div className="modal order_group_modal"  tabIndex="-1" >
+                            <div className="modal-dialog ">
                                 <div className="modal-content">
                                     <div className="modal-header">
                                         <h3 className="modal-title" id="order_group_modal_title">是否開啟揪團功能？</h3><br />
@@ -618,7 +632,7 @@ class Orderpage extends Component {
                                     </div>
                                     <div className="modal-footer d-flex justify-content-center">
                                         <button type="button" className="btn_cancel" data-dismiss="modal">取消</button>
-                                        <button type="button" className="btn_yes" data-toggle="modal" data-target="#group_on_modal">確定</button>
+                                        <button type="button" className="btn_yes" >確定</button>
                                     </div>
                                 </div>
                             </div>
@@ -645,9 +659,8 @@ class Orderpage extends Component {
                             </div>
 
                             {/* <!--揪團連結分享modal--> */}
-                            <div className="modal fade" id="group_on_modal" tabIndex="-1" role="dialog" aria-labelledby="group_on_modal_title"
-                                aria-hidden="true">
-                                <div className="modal-dialog modal-dialog-centered" role="document">
+                            <div className="modal group_link_modal" tabIndex="-1">
+                                <div className="modal-dialog">
                                     <div className="modal-content">
                                         <div className="modal-header">
                                             <h3 className="modal-title" id="group_on_modal_title">已開啟</h3><br />
@@ -663,8 +676,8 @@ class Orderpage extends Component {
                                             <button type="button" className="btn btn-danger btn_copy" onClick='copyinput()'>複製連結</button>
                                         </div>
                                         <div className="modal-footer">
-                                            <button type="button" className="btn btn-secondary" data-dismiss="modal"
-                                                onclick="btn_grouporder()">關閉</button>
+                                            <button type="button" className="btn btn-secondary btn_grouporder" data-dismiss="modal"
+                                                >關閉</button>
                                         </div>
                                     </div>
                                 </div>
