@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Footer from './footer';
 import logo from "../img/logo.png";
 import "../css/booking_finish_page.css";
-import "../css/bootstrap.min.css";
 
 class Booking_finish_page extends Component {
     state = {}
@@ -72,7 +71,7 @@ class Booking_finish_page extends Component {
                                                     <label htmlFor="finish_person_cellphone">0987654321</label>
                                                 </div>
                                                 <div className="form_container_finish">
-                                                    <label htmlFor="finish_person_email">姓　　名：</label>
+                                                    <label htmlFor="finish_person_email">信　　箱：</label>
                                                     <label htmlFor="finish_person_email">1234@gmail.com</label>
                                                 </div>
                                             </div>

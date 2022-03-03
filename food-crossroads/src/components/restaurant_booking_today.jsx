@@ -66,42 +66,78 @@ class Restaurant_booking_today extends Component {
                     </nav>
                 </header>
                 <aside id="restaurant_today_booking_aside">
-                    <div>
-                        <div className="panel panel-default">
-                            <div className="panel-heading" in={this.state.open}>
-                                <h4 className="panel-title"><a href="/restaurant/booking/today">訂位管理</a>
-                                </h4>
-                            </div>
-                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}>
-                                <div className="little_title">
-                                    <a href="/restaurant/booking/today">今日訂位</a>
-                                </div>
-                            </Collapse >
-                            <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
-                                <div className="little_title">
-                                    <a href="/restaurant/booking/history">歷史訂位紀錄</a>
-                                </div>
-                            </Collapse>
+                    <div className="panel panel-default">
+                        <div className="panel-heading" in={this.state.open}>
+                            <h4 className="panel-title"><a href="/restaurant/booking/today">訂位管理</a>
+                            </h4>
                         </div>
-                        <div className="panel panel-default">
-                            <div className="panel-heading">
-                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="/restaurant/self/pick">訂餐管理</a>
-                                </h4>
+                        <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}>
+                            <div className="little_title">
+                                <a href="/restaurant/booking/today">今日訂位</a>
                             </div>
-                            <div id="collapseTwo" className="panel-collapse collapse">
-                                <div className="little_title">
-                                    <a data-parent="#accordion" href="">今日自取訂餐</a>
-                                </div>
+                        </Collapse >
+                        <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
+                            <div className="little_title">
+                                <a href="/restaurant/booking/history">歷史訂位紀錄</a>
                             </div>
-                            <div id="collapseTwo" className="panel-collapse collapse">
-                                <div className="little_title">
-                                    <a data-parent="#accordion" href="">歷史訂餐紀錄</a>
-                                </div>
+                        </Collapse>
+                    </div>
+                    <div className="panel panel-default">
+                        <div className="panel-heading">
+                            <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="/restaurant/self/pick">訂餐管理</a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" className="panel-collapse collapse">
+                            <div className="little_title">
+                                <a data-parent="#accordion" href="">今日自取訂餐</a>
+                            </div>
+                        </div>
+                        <div id="collapseTwo" className="panel-collapse collapse">
+                            <div className="little_title">
+                                <a data-parent="#accordion" href="">歷史訂餐紀錄</a>
                             </div>
                         </div>
                     </div>
-
                 </aside>
+
+                <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
+                <div id="restaurant_today_booking_mobile_aside">
+                    <div className="panel panel-default">
+                        <div className="panel-heading" in={this.state.open}>
+                            <h4 className="panel-title"><a href="/restaurant/booking/today">訂位管理</a>
+                            </h4>
+                        </div>
+                        <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}>
+                            <div className="little_title">
+                                <a href="/restaurant/booking/today">今日訂位</a>
+                            </div>
+                        </Collapse >
+                        <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
+                            <div className="little_title">
+                                <a href="/restaurant/booking/history">歷史訂位紀錄</a>
+                            </div>
+                        </Collapse>
+                    </div>
+                    <div className="panel panel-default">
+                        <div className="panel-heading">
+                            <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="/restaurant/self/pick">訂餐管理</a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" className="panel-collapse collapse">
+                            <div className="little_title">
+                                <a data-parent="#accordion" href="">今日自取訂餐</a>
+                            </div>
+                        </div>
+                        <div id="collapseTwo" className="panel-collapse collapse">
+                            <div className="little_title">
+                                <a data-parent="#accordion" href="">歷史訂餐紀錄</a>
+                            </div>
+                        </div>
+                    </div>
+                    <label htmlFor="aside_menu_chk" className="aside_menu_chk">
+                        <i className="fas fa-angle-right"></i>
+                    </label>
+                </div>
 
                 <section id="restaurant_today_booking">
                     <div className="container">
@@ -191,7 +227,7 @@ class Restaurant_booking_today extends Component {
                                         <input type="checkbox" />
                                     </td>
                                     <td>00001</td>
-                                    <td>2022/03/07</td>
+                                    <td>2022-03-07</td>
                                     <td>12：00</td>
                                     <td>6</td>
                                     <td>李曉明</td>
@@ -207,13 +243,44 @@ class Restaurant_booking_today extends Component {
                                         </button>
                                     </td>
                                 </tr>
-
-
                             </tbody>
                         </table>
-
                     </div>
                 </section>
+
+                <div id="restaurant_today_booking_mobile">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="table mobile_today_booking">
+                                    <div class="mobile_today_booking_inline_div">
+                                        <div class="mobile_today_booking_div">
+                                            <div class="mobile_text_div">
+                                                <p>已帶位:</p>
+                                                <p>訂位編號:00001</p>
+                                                <p>訂位日期:2022-03-07</p>
+                                            </div>
+                                            <div class="mobile_div_text">
+                                                <p>訂位時間:12:00</p>
+                                                <p>訂位人:李曉明</p>
+                                                <p>手機:0987654321</p>
+                                            </div>
+                                        </div>
+                                        {/* <div class="mobile_btn_div"> */}
+                                        <button
+                                            class="detail_btn"
+                                            data-toggle="modal"
+                                            data-target="#detailModal">
+                                            詳細內容
+                                        </button>
+                                        {/* </div> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
                 <div class="modal modal-groupdetail" tabIndex="0" id="detail">
                     <div class="modal-dialog">
@@ -308,6 +375,8 @@ class Restaurant_booking_today extends Component {
                         </div>
                     </div>
                 </div>
+
+                <div className="blank"></div>
 
                 <footer className="footer_page">
                     <Footer />

@@ -55,6 +55,47 @@ class Restaurant_booking_history extends Component {
                     </div>
                 </aside>
 
+                <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
+                <div id="restaurant_booking_history_mobile_aside">
+                    <div className="panel-group" id="accordion">
+                        <div className="panel panel-default">
+                            <div className="panel-heading" in={this.state.open}>
+                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
+                                </h4>
+                            </div>
+                            <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
+                                <div className="little_title">
+                                    <a href="/restaurant/booking/today">今日訂位</a>
+                                </div>
+                            </Collapse>
+                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}>
+                                <div className="little_title">
+                                    <a href="/restaurant/booking/history">歷史訂位紀錄</a>
+                                </div>
+                            </Collapse>
+                        </div>
+                        <div className="panel panel-default">
+                            <div className="panel-heading">
+                                <h4 className="panel-title"><a href="/restaurant/self/pick">訂餐管理</a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" className="panel-collapse collapse">
+                                <div className="little_title">
+                                    <a href="">今日自取訂餐</a>
+                                </div>
+                            </div>
+                            <div id="collapseTwo" className="panel-collapse collapse">
+                                <div className="little_title">
+                                    <a href="">歷史訂餐紀錄</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <label htmlFor="aside_menu_chk" className="aside_menu_chk">
+                        <i className="fas fa-angle-right"></i>
+                    </label>
+                </div>
+
                 <section id="restaurant_booking_history">
                     <div className="container">
                         <div className="search_bar">
@@ -182,6 +223,111 @@ class Restaurant_booking_history extends Component {
                         </table>
                     </div>
                 </section>
+
+                <div id="restaurant_booking_history_mobile">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="table mobile_booking_history">
+                                    <div class="mobile_booking_history_inline_div">
+                                        <div class="mobile_booking_history_div">
+                                            <div class="mobile_text_div">
+                                                <p>狀態:</p>
+                                                <p>訂位編號:99999</p>
+                                                <p>訂位日期:2022-02-22</p>
+                                                <p>訂位時間:19:30</p>
+                                            </div>
+                                            <div class="mobile_div_text">
+                                                <p>訂位人數:5</p>
+                                                <p>訂位人:江程哲</p>
+                                                <p>手機:0988512203</p>
+                                            </div>
+                                        </div>
+                                        {/* <div class="mobile_btn_div"> */}
+                                        <button
+                                            class="detail_btn"
+                                            data-toggle="modal"
+                                            data-target="#detailModal">
+                                            詳細內容
+                                        </button>
+                                        {/* </div> */}
+                                    </div>
+                                    <div class="mobile_booking_history_inline_div">
+                                        <div class="mobile_booking_history_div">
+                                            <div class="mobile_text_div">
+                                                <p>狀態:</p>
+                                                <p>訂位編號:99999</p>
+                                                <p>訂位日期:2022-02-22</p>
+                                                <p>訂位時間:17:00</p>
+                                            </div>
+                                            <div class="mobile_div_text">
+                                                <p>訂位人數:1</p>
+                                                <p>訂位人:張瑜庭</p>
+                                                <p>手機:0902135699</p>
+                                            </div>
+                                        </div>
+                                        {/* <div class="mobile_btn_div"> */}
+                                        <button
+                                            class="detail_btn"
+                                            data-toggle="modal"
+                                            data-target="#detailModal">
+                                            詳細內容
+                                        </button>
+                                        {/* </div> */}
+                                    </div>
+                                    <div class="mobile_booking_history_inline_div">
+                                        <div class="mobile_booking_history_div">
+                                            <div class="mobile_text_div">
+                                                <p>狀態:</p>
+                                                <p>訂位編號:99997</p>
+                                                <p>訂位日期:2022-02-21</p>
+                                                <p>訂位時間:18:30</p>
+                                            </div>
+                                            <div class="mobile_div_text">
+                                                <p>訂位人數:3</p>
+                                                <p>訂位人:李曉明</p>
+                                                <p>手機:0918557110</p>
+                                            </div>
+                                        </div>
+                                        {/* <div class="mobile_btn_div"> */}
+                                        <button
+                                            class="detail_btn"
+                                            data-toggle="modal"
+                                            data-target="#detailModal">
+                                            詳細內容
+                                        </button>
+                                        {/* </div> */}
+                                    </div>
+                                    <div class="mobile_booking_history_inline_div">
+                                        <div class="mobile_booking_history_div">
+                                            <div class="mobile_text_div">
+                                                <p>狀態:</p>
+                                                <p>訂位編號:99999</p>
+                                                <p>訂位日期:2022-02-21</p>
+                                                <p>訂位時間:17:15</p>
+                                            </div>
+                                            <div class="mobile_div_text">
+                                                <p>訂位人數:3</p>
+                                                <p>訂位人:陳誠慶</p>
+                                                <p>手機:0972110202</p>
+                                            </div>
+                                        </div>
+                                        {/* <div class="mobile_btn_div"> */}
+                                        <button
+                                            class="detail_btn"
+                                            data-toggle="modal"
+                                            data-target="#detailModal">
+                                            詳細內容
+                                        </button>
+                                        {/* </div> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="blank"></div>
 
                 <footer className="footer_page">
                     <Footer />
