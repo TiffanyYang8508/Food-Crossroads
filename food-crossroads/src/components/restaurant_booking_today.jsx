@@ -222,7 +222,7 @@ class Restaurant_booking_today extends Component {
                                         </div>
                                     </tr>
                                 ))} */}
-                                <tr id="test">
+                                <tr id="test"> 
                                     <td>
                                         <input type="checkbox" />
                                     </td>
@@ -243,6 +243,7 @@ class Restaurant_booking_today extends Component {
                                         </button>
                                     </td>
                                 </tr>
+
                             </tbody>
                         </table>
                     </div>

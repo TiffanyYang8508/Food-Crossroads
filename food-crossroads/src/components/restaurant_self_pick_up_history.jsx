@@ -28,7 +28,7 @@ class Restaurant_booking_history extends Component {
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="/restaurant/booking/today">訂位管理</a>
                                 </h4>
                             </div>
                             <div id="collapseOne" className="panel-collapse collapse" >
@@ -202,7 +202,7 @@ class Restaurant_booking_history extends Component {
                                     <div class="mobile_pick_up_history_inline_div">
                                         <div class="mobile_pick_up_history_div">
                                             <div class="mobile_text_div">
-                                                <p>狀態:李曉明</p>
+                                                <p>狀態:已完成</p>
                                                 <p>訂餐編號:99999</p>
                                                 <p>訂餐日期:2022-03-06</p>
                                             </div>
@@ -224,14 +224,14 @@ class Restaurant_booking_history extends Component {
                                     <div class="mobile_pick_up_history_inline_div">
                                         <div class="mobile_pick_up_history_div">
                                             <div class="mobile_text_div">
-                                                <p>狀態:李曉明</p>
-                                                <p>訂餐編號:99999</p>
+                                                <p>狀態:已完成</p>
+                                                <p>訂餐編號:99998</p>
                                                 <p>訂餐日期:2022-03-06</p>
                                             </div>
                                             <div class="mobile_div_text">
-                                                <p>訂餐時間:17:30</p>
-                                                <p>訂餐人:張曉明</p>
-                                                <p>手機:0954428321</p>
+                                                <p>訂餐時間:18:15</p>
+                                                <p>訂餐人:劉慧婷</p>
+                                                <p>手機:0988524252</p>
                                             </div>
                                         </div>
                                         {/* <div class="mobile_btn_div"> */}
@@ -246,14 +246,14 @@ class Restaurant_booking_history extends Component {
                                     <div class="mobile_pick_up_history_inline_div">
                                         <div class="mobile_pick_up_history_div">
                                             <div class="mobile_text_div">
-                                                <p>狀態:李曉明</p>
-                                                <p>訂餐編號:99999</p>
-                                                <p>訂餐日期:2022-03-06</p>
+                                                <p>狀態:已完成</p>
+                                                <p>訂餐編號:99997</p>
+                                                <p>訂餐日期:2022-03-05</p>
                                             </div>
                                             <div class="mobile_div_text">
-                                                <p>訂餐時間:17:30</p>
-                                                <p>訂餐人:張曉明</p>
-                                                <p>手機:0954428321</p>
+                                                <p>訂餐時間:20:00</p>
+                                                <p>訂餐人:陳澤慶</p>
+                                                <p>手機:0978779021</p>
                                             </div>
                                         </div>
                                         {/* <div class="mobile_btn_div"> */}
