@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from "axios";
 import logo from "../img/logo.png";
+import Footer from "./footer";
 import $ from "jquery";
 import "../css/restaurant_booking_today.css"
 import Collapse from "react-bootstrap/Collapse";
@@ -20,57 +21,81 @@ class Restaurant_booking_today extends Component {
     }
 
     async componentDidMount() {
-        var url = `http://localhost:8000/restaurant/booking/today`;
-        var result = await Axios.get(url);
-        var newState = { ...this.state };
-        newState.booking_detail = result.data;
-        this.setState(newState);
+        // var url = `http://localhost:8000/restaurant/booking/today`;
+        // var result = await Axios.get(url);
+        // var newState = { ...this.state };
+        // newState.booking_detail = result.data;
+        // this.setState(newState);
 
         $(".detail_btn").on("click", function () {
-            $(".modal-detail").css("display", "block");
+            $(".modal-groupdetail").css("display", "block");
+        });
+
+        $(".btn_close").on("click", function () {
+            $(".modal-groupdetail").css("display", "none");
+        });
+
+        $(".search_btn").on("click", function () {
+            $(".modal-groupdetail2").css("display", "block");
+        });
+
+        $(".btn_close").on("click", function () {
+            $(".modal-groupdetail2").css("display", "none");
+        });
+
+        $(".cancel_btn").on("click", function () {
+            $(".modal-groupdetail3").css("display", "block");
+        });
+
+        $(".btn_close").on("click", function () {
+            $(".modal-groupdetail3").css("display", "none");
+        });
+
+        $(".c_btn").on("click", function () {
+            $("#test").css("display", "none");
+            $(".modal-groupdetail3").css("display", "none");
         });
     }
 
     render() {
         return (
             <>
-                <header id="header_page">
+                <header className="header_page">
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <a className="navbar-brand" href="/"><img src={logo} alt="LOGO" /></a>
                     </nav>
                 </header>
-
                 <aside id="restaurant_today_booking_aside">
-                    <div className="panel-group" id="accordion">
+                    <div>
                         <div className="panel panel-default">
-                            <Collapse className="panel-heading" in={this.state.open}>
-                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
+                            <div className="panel-heading" in={this.state.open}>
+                                <h4 className="panel-title"><a href="/restaurant/booking/today">訂位管理</a>
                                 </h4>
-                            </Collapse>
-                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open} >
-                                <div className="little_title">
-                                    <a data-parent="#accordion" href="">今日訂位</a>
-                                </div>
-                            </Collapse>
-                            <div id="collapseOne" className="panel-collapse collapse">
-                                <div className="little_title">
-                                    <a data-parent="#accordion" href="">歷史訂位紀錄</a>
-                                </div>
                             </div>
+                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}>
+                                <div className="little_title">
+                                    <a href="/restaurant/booking/today">今日訂位</a>
+                                </div>
+                            </Collapse >
+                            <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
+                                <div className="little_title">
+                                    <a href="/restaurant/booking/history">歷史訂位紀錄</a>
+                                </div>
+                            </Collapse>
                         </div>
                         <div className="panel panel-default">
                             <div className="panel-heading">
-                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">訂餐管理</a>
+                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="/restaurant/self/pick">訂餐管理</a>
                                 </h4>
                             </div>
                             <div id="collapseTwo" className="panel-collapse collapse">
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="restaurant_self_pick_up.html">今日自取訂餐</a>
+                                    <a data-parent="#accordion" href="">今日自取訂餐</a>
                                 </div>
                             </div>
                             <div id="collapseTwo" className="panel-collapse collapse">
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="restaurant_history_list.html">歷史訂餐紀錄</a>
+                                    <a data-parent="#accordion" href="">歷史訂餐紀錄</a>
                                 </div>
                             </div>
                         </div>
@@ -81,14 +106,11 @@ class Restaurant_booking_today extends Component {
                 <section id="restaurant_today_booking">
                     <div className="container">
                         <div className="search_bar">
-                            <div>
-                                <h3>今日訂位</h3>
-                            </div>
                             <div className="search_bar_div">
                                 <i className="fas fa-search"></i>
                                 <input type="text" placeholder="訂單編號" />
                             </div>
-                            <button >搜尋</button>
+                            <button className="search_btn">搜尋</button>
                         </div>
                         <table className="table order_table">
                             <thead>
@@ -105,8 +127,8 @@ class Restaurant_booking_today extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                {this.state.booking_detail.map((item, index) => (
-                                    <tr>
+                                {/* {this.state.booking_detail.map((item, index) => (
+                                    <tr key={index}>
                                         <td>
                                             <div className="checkbox">
                                                 <label>
@@ -163,48 +185,132 @@ class Restaurant_booking_today extends Component {
                                             </div>
                                         </div>
                                     </tr>
-                                ))}
-                                <tr>
+                                ))} */}
+                                <tr id="test">
                                     <td>
-                                        <div className="checkbox">
-                                            <label>
-                                                <input type="checkbox" />
-                                            </label>
-                                        </div>
+                                        <input type="checkbox" />
                                     </td>
-                                    <td>00127</td>
-                                    <td>2022/01/18</td>
-                                    <td>16:30</td>
-                                    <td>5</td>
-                                    <td>陳冠維</td>
-                                    <td>0979201120</td>
+                                    <td>00001</td>
+                                    <td>2022/03/07</td>
+                                    <td>12：00</td>
+                                    <td>6</td>
+                                    <td>李曉明</td>
+                                    <td>0987654321</td>
                                     <td>
-                                        <button className="detail_btn" data-toggle="modal" data-target="#detailModal">
+                                        <button className="detail_btn" >
                                             詳細內容
                                         </button>
                                     </td>
                                     <td>
-                                        <button className="cancel_btn" data-toggle="modal" data-target="#detailModal2">
+                                        <button className="cancel_btn" >
                                             取消
                                         </button>
                                     </td>
                                 </tr>
 
+
                             </tbody>
                         </table>
+
                     </div>
                 </section>
 
-                <footer>
-                    <div className="footer_link">
-                        <a href="#">關於我們</a>
-                        <a href="#">商家入口</a>
-                        <a href="#">常見問題</a>
-                        <a href="#">聯絡我們</a>
+                <div class="modal modal-groupdetail" tabIndex="0" id="detail">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">詳細訂單</h4>
+                            </div>
+                            <div class="groupdetail_modal">
+                                姓名： 李曉明 <br />
+                                手機： 0987654321 <br />
+                                信箱： 1234@gmail.com <br />
+                                訂位人數： 6人 <br />
+                                訂位日期： 2022/03/07 <br />
+                                訂位時間： 12：00 <br />
+                                需求：停車、嬰兒座椅 <br />
+                                備註：無
+                            </div>
+
+                            <div class="modal-footer">
+                                <button
+                                    type="button"
+                                    class="btn_close"
+                                    data-dismiss="modal"
+                                >
+                                    返回
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div className="footer_text">
-                        <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
+                </div>
+
+                <div class="modal modal-groupdetail2" tabIndex="0" id="search">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">訂單編號 00001</h4>
+                            </div>
+                            <div class="groupdetail_modal">
+                                訂位日期： 2022/03/07 <br />
+                                訂位時間： 12：00 <br />
+                                訂位人： 李曉明 <br />
+                                訂位人數： 6人 <br />
+                                手機： 0987654321 <br />
+                                需求：停車、嬰兒座椅 <br />
+                                備註：無
+                            </div>
+
+                            <div class="modal-footer">
+                                <button
+                                    type="button"
+                                    class="btn_close"
+                                    data-dismiss="modal"
+                                >
+                                    返回
+                                </button>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+                <div class="modal modal-groupdetail3" tabIndex="0" id="cancel">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">詳細內容</h4>
+                            </div>
+                            <div class="groupdetail_modal">
+                                訂單編號： 00001 <br />
+                                訂位日期： 2022/03/07 <br />
+                                訂位時間： 12：00 <br />
+                                訂位人： 李曉明 <br />
+                                訂位人數： 6人 <br />
+                                手機： 0987654321 <br />
+                            </div>
+
+                            <div class="modal-footer">
+                                <button
+                                    type="button"
+                                    class="c_btn"
+                                    data-dismiss="modal"
+                                >
+                                    取消
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn_close"
+                                    data-dismiss="modal"
+                                >
+                                    返回
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer className="footer_page">
+                    <Footer />
                 </footer>
             </>
         );

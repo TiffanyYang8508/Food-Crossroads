@@ -65,20 +65,9 @@ app.put("/member/list/:id", async (req, res) => {
 });
 
 app.post("/register", async (req, res) => {
-  //判斷格式是否有誤
-  // let { error } = registerValidation(req.body);
-  // if (error) {
-  //   if (error.details[0].context.key === "email") {
-  //     return res.send(error);
-  //   } else if (error.details[0].context.key === "password") {
-  //     return res.send(error);
-  //   }
-  // }
-
   try {
     let result = {};
 
-    // 尋找是否有重複的email
     conn.query(
       "SELECT user_email FROM member WHERE user_email = ?",
       req.body.user_email,
@@ -101,24 +90,21 @@ app.post("/register", async (req, res) => {
           result["status"] = "2";
           result["err"] = "請輸入完整資訊";
           res.json(result);
+          return result;
         } else {
-          // //如果信箱格是不正確
-          // if (error.details[0].context.key === "email") {
-          //   result["status"] = "0";
-          //   result["err"] = "請輸入正確格式信箱";
-          //   res.json(result);
-          // } else {
-          // 如果有重複的email
+          // 尋找是否有重複的email
           if (rows.length >= 1) {
             result["status"] = "3";
             result["err"] = "已有重複的Email";
             res.json(result);
+            return result;
           } else {
             //如果密碼與確認密碼不相同
             if (req.body.user_pwd !== req.body.user_pwd_confirm) {
               result["status"] = "4";
               result["err"] = "密碼不相同";
               res.json(result);
+              return result;
             } else {
               // 將資料寫入資料庫
               const hashedPassword = await bcrypt.hash(req.body.user_pwd, 10);
@@ -135,7 +121,6 @@ app.post("/register", async (req, res) => {
               result["err"] = "註冊成功";
               res.json(result);
               // res.send('register success');
-              res.redirect("./login");
             }
           }
         }
@@ -152,24 +137,37 @@ app.put("/editpwd", async (req, res) => {
     const sql = "SELECT user_pwd FROM member where user_pwd=?";
     const params = req.body.user_pwd;
     conn.query(sql, params, async (err, rows) => {
-      if (rows.length != 1) {
-        result["status"] = "0";
-        result["err"] = "與原有密碼不相同";
+      if (
+        req.body.user_pwd === "" ||
+        req.body.user_npwd === "" ||
+        req.body.user_npwd_confirm === ""
+      ) {
+        result["status"] = "3";
+        result["err"] = "請輸入完整資訊";
         res.json(result);
       } else {
-        if (req.body.user_npwd !== req.body.user_npwd_confirm) {
-          result["status"] = "1";
-          result["err"] = "密碼不相同";
+        if (rows.length != 1) {
+          result["status"] = "0";
+          result["err"] = "與原有密碼不相同";
           res.json(result);
         } else {
-          const hashedPassword = await bcrypt.hash(req.body.user_pwd, 10);
-          conn.query("UPDATE member SET user_pwd = ? WHERE user_email = ?", [
-            hashedPassword,
-            req.body.user_email,
-          ]);
-          result["status"] = "2";
-          result["err"] = "更換成功";
-          res.json(result);
+          if (req.body.user_npwd !== req.body.user_npwd_confirm) {
+            result["status"] = "1";
+            result["err"] = "密碼不相同";
+            res.json(result);
+          } else {
+            const hashedPassword = await bcrypt.hash(req.body.user_pwd, 10);
+            conn.query(
+              "UPDATE member SET user_pwd = ? WHERE user_email = ?",
+              [hashedPassword, req.body.user_email],
+              function (err, rows) {
+                res.send(JSON.stringify(rows));
+              }
+            );
+            result["status"] = "2";
+            result["err"] = "更換成功";
+            res.json(result);
+          }
         }
       }
     });
@@ -216,7 +214,7 @@ app.get("/detail/record/:id", function (req, res) {
 app.delete("/cancelbooking/:id", function (req, res) {
   var sql = `DELETE FROM booking_record WHERE booking_id =?`;
   conn.query(sql, [req.params.id], function (err, rows) {
-    res.send(JSON.stringify(rows));
+    res.send("#" + req.params.id + " deleted");
   });
 });
 
@@ -326,7 +324,6 @@ app.post("/restaurant/login", (req, res) => {
   });
 });
 
-
 app.get("/restaurant/booking/today", (req, res) => {
   conn.query(
     `SELECT member.id, booking_date, booking_time, booking_peoplenumber, user_id, user_name, user_tel, booking.id FROM booking JOIN member ON booking.user_id = member.id WHERE member.id=1 ORDER BY booking.id DESC`,
@@ -335,6 +332,4 @@ app.get("/restaurant/booking/today", (req, res) => {
       res.send(JSON.stringify(rows));
     }
   );
-})
-
-
+});

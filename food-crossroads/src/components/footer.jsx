@@ -8,7 +8,7 @@ class Footer extends Component {
                 <footer>
                     <div className="footer_link">
                         <a href="#">關於我們</a>
-                        <a href="#">商家入口</a>
+                        <a href="/restaurant/login">商家入口</a>
                         <a href="#">常見問題</a>
                         <a href="#">聯絡我們</a>
                     </div>

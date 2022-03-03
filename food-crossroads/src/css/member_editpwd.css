@@ -1,0 +1,106 @@
+/* 側邊攔 start */
+#aside_menu_chk {
+  opacity: 0;
+  z-index: -1;
+}
+
+#member_aside {
+  background-color: #403c3c;
+  width: 230px;
+  height: 100%;
+  position: fixed;
+  float: left;
+  z-index: 4;
+}
+
+#mobile_member_aside {
+  display: none;
+}
+
+#member_aside .default {
+  background-color: #8b1309;
+}
+
+#member_aside .panel-default {
+  /* border: 1px solid red; */
+  border-bottom: 1px solid white;
+  padding: 5px;
+  width: 100%;
+}
+
+#member_aside .panel-title {
+  padding-top: 8px;
+}
+
+#member_aside .panel .panel-heading a {
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  width: 100%;
+}
+
+#member_aside .panel-default:hover {
+  background-color: #8b1309;
+}
+
+/* 側邊欄 end */
+
+#edit_pwd .member_editinfo_btn {
+  border-radius: 5px;
+  margin-top: 30px;
+  padding-top: 0px;
+  margin-left: 40px;
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  background-color: #8b1309;
+  transition: 0.3s;
+}
+
+#edit_pwd .member_editinfo_btn:hover {
+  background-color: #a30f01;
+}
+
+#edit_pwd .member_editpwd_btn:hover {
+  background-color: #a30f01;
+}
+
+#edit_pwd .member_confirm_btn {
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-left: 50px;
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  background-color: #8b1309;
+  transition: 0.3s;
+}
+
+#edit_pwd .member_confirm_btn:hover {
+  background-color: #a30f01;
+}
+#edit_pwd .member_back_btn {
+  margin-left: 30px;
+  border-radius: 5px;
+  margin-top: 30px;
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  background-color: #403c3c;
+  transition: 0.3s;
+}
+
+#edit_pwd .member_back_btn:hover {
+  background-color: #8d8c8c;
+}
+
+.table_container {
+  width: 100%;
+}

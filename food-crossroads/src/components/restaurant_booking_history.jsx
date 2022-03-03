@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import logo from "../img/logo.png";
+import Footer from "./footer";
 import "../css/restaurant_booking_history.css"
-import "../fontawesome-free-5.15.4-web/css/all.css";
-import "../css/style.css";
+import Collapse from "react-bootstrap/Collapse";
 class Restaurant_booking_history extends Component {
-    state = {}
+    state = {
+        open: true
+    }
     render() {
         return (
             <React.Fragment>
 
-                <header id="header_page">
+                <header className="header_page">
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <a className="navbar-brand" href="/"><img src={logo} alt="LOGO" /></a>
                     </nav>
@@ -19,34 +21,34 @@ class Restaurant_booking_history extends Component {
                 <aside id="restaurant_booking_history_aside">
                     <div className="panel-group" id="accordion">
                         <div className="panel panel-default">
-                            <div className="panel-heading">
+                            <div className="panel-heading" in={this.state.open}>
                                 <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
                                 </h4>
                             </div>
-                            <div id="collapseOne" className="panel-collapse collapse">
+                            <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="restaurant_today_booking.html">今日訂位</a>
+                                    <a href="/restaurant/booking/today">今日訂位</a>
                                 </div>
-                            </div>
-                            <div id="collapseOne" className="panel-collapse collapse default">
+                            </Collapse>
+                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}>
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="restaurant_booking_history.html">歷史訂位紀錄</a>
+                                    <a href="/restaurant/booking/history">歷史訂位紀錄</a>
                                 </div>
-                            </div>
+                            </Collapse>
                         </div>
                         <div className="panel panel-default">
                             <div className="panel-heading">
-                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">訂餐管理</a>
+                                <h4 className="panel-title"><a href="/restaurant/self/pick">訂餐管理</a>
                                 </h4>
                             </div>
                             <div id="collapseTwo" className="panel-collapse collapse">
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="restaurant_self_pick_up.html">今日自取訂餐</a>
+                                    <a href="">今日自取訂餐</a>
                                 </div>
                             </div>
                             <div id="collapseTwo" className="panel-collapse collapse">
                                 <div className="little_title">
-                                    <a data-parent="#accordion" href="restaurant_history_list.html">歷史訂餐紀錄</a>
+                                    <a href="">歷史訂餐紀錄</a>
                                 </div>
                             </div>
                         </div>
@@ -56,9 +58,6 @@ class Restaurant_booking_history extends Component {
                 <section id="restaurant_booking_history">
                     <div className="container">
                         <div className="search_bar">
-                            <div>
-                                <h3>歷史訂位紀錄</h3>
-                            </div>
                             <div className="search_bar_div">
                                 <i className="fas fa-search"></i>
                                 <input type="text" placeholder="訂單編號" />
@@ -79,15 +78,11 @@ class Restaurant_booking_history extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr id="test">
+                                <tr>
                                     <td>
-                                        <div className="checkbox">
-                                            <label>
-                                                <input type="checkbox" checked disabled="disabled" />
-                                            </label>
-                                        </div>
+                                        <input type="checkbox" checked disabled="disabled" />
                                     </td>
-                                    <td>00123</td>
+                                    <td>99999</td>
                                     <td>2022-02-22</td>
                                     <td>19:30</td>
                                     <td>5</td>
@@ -108,7 +103,7 @@ class Restaurant_booking_history extends Component {
                                             </label>
                                         </div>
                                     </td>
-                                    <td>00122</td>
+                                    <td>99998</td>
                                     <td>2022-02-22</td>
                                     <td>17:00</td>
                                     <td>1</td>
@@ -123,13 +118,9 @@ class Restaurant_booking_history extends Component {
 
                                 <tr>
                                     <td>
-                                        <div className="checkbox">
-                                            <label>
-                                                <input type="checkbox" checked disabled="disabled" />
-                                            </label>
-                                        </div>
+                                        <input type="checkbox" checked disabled="disabled" />
                                     </td>
-                                    <td>00121</td>
+                                    <td>99997</td>
                                     <td>2022-02-21</td>
                                     <td>18:30</td>
                                     <td>3</td>
@@ -144,13 +135,9 @@ class Restaurant_booking_history extends Component {
 
                                 <tr>
                                     <td>
-                                        <div className="checkbox">
-                                            <label>
-                                                <input type="checkbox" checked disabled="disabled" />
-                                            </label>
-                                        </div>
+                                        <input type="checkbox" checked disabled="disabled" />
                                     </td>
-                                    <td>00120</td>
+                                    <td>99996</td>
                                     <td>2022-02-21</td>
                                     <td>17:15</td>
                                     <td>3</td>
@@ -162,7 +149,7 @@ class Restaurant_booking_history extends Component {
                                         </button>
                                     </td>
                                 </tr>
-                                
+
                                 <div className="modal fade" id="detailModal">
                                     <div className="modal-dialog modal-dialog-centered">
                                         <div className="modal-content">
@@ -196,17 +183,8 @@ class Restaurant_booking_history extends Component {
                     </div>
                 </section>
 
-
-                <footer>
-                    <div className="footer_link">
-                        <a href="#">關於我們</a>
-                        <a href="#">商家入口</a>
-                        <a href="#">常見問題</a>
-                        <a href="#">聯絡我們</a>
-                    </div>
-                    <div className="footer_text">
-                        <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
-                    </div>
+                <footer className="footer_page">
+                    <Footer />
                 </footer>
             </React.Fragment>
         );

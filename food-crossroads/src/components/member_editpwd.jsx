@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "../img/logo.png";
 import Footer from "./footer";
-import "../css/member.css";
+import "../css/member_editpwd.css";
 import Axios from "axios";
 
 class EditMemberpwd extends Component {
@@ -44,6 +44,10 @@ class EditMemberpwd extends Component {
             break;
           case "2":
             alert(res.data.err);
+            window.location = `/member/${this.props.match.params.id}`;
+            break;
+          case "3":
+            alert(res.data.err);
             break;
         }
       })
@@ -59,7 +63,7 @@ class EditMemberpwd extends Component {
   render() {
     return (
       <React.Fragment>
-        <header id="header_page">
+        <header className="header_page">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="/">
               <img src={logo} alt="LOGO" />
@@ -89,26 +93,30 @@ class EditMemberpwd extends Component {
           </nav>
         </header>
 
-        <aside class="aside_menu">
-          <div class="panel-group" id="accordion">
-            <div class="panel panel-default default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
+        <aside id="member_aside">
+          <div className="panel-group" id="accordion">
+            <div className="panel panel-default default">
+              <div className="panel-heading">
+                <h4 className="panel-title">
                   <a href="#">會員資料</a>
                 </h4>
               </div>
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a href={`/bookingmanagement/`}>訂位管理</a>
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <h4 className="panel-title">
+                  <a href={`/bookingmanagement/${this.props.match.params.id}`}>
+                    訂位管理
+                  </a>
                 </h4>
               </div>
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a href={`/ordermanagement/`}>訂餐管理</a>
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <h4 className="panel-title">
+                  <a href={`/ordermanagement/${this.props.match.params.id}`}>
+                    訂餐管理
+                  </a>
                 </h4>
               </div>
             </div>
@@ -116,66 +124,66 @@ class EditMemberpwd extends Component {
         </aside>
 
         <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
-        <div class="mobile_aside_menu">
-          <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
+        <div id="mobile_member_aside">
+          <div className="panel-group" id="accordion">
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <h4 className="panel-title">
                   <a href="member.html">會員資料</a>
                 </h4>
               </div>
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <h4 className="panel-title">
                   <a href="booking_manage.html">訂位管理</a>
                 </h4>
               </div>
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <h4 className="panel-title">
                   <a href="order_manage.html">訂餐管理</a>
                 </h4>
               </div>
             </div>
           </div>
           <label for="aside_menu_chk">
-            <i class="fas fa-angle-right"></i>
+            <i className="fas fa-angle-right"></i>
           </label>
         </div>
 
-        <section id="edit_member">
+        <section id="edit_pwd">
           <div class="container-fluid member_div">
             <div class="row">
               <div class="col-md-12">
                 <form>
                   <div>
-                    <p class="title_member_edit">會員密碼修改</p>
+                    <p className="title_member_edit">會員密碼修改</p>
                   </div>
 
-                  <div class="form-group form-inline">
-                    <label for="pwd" class="edit_label">
+                  <div className="form-group form-inline">
+                    <label for="pwd" className="edit_label">
                       輸入原密碼:
                     </label>
                     <input
                       type="password"
-                      class="form-control"
+                      className="form-control"
                       id="pwd"
                       value={this.state.member.user_pwd}
                       onChange={this.pwdChange}
                       name="pwd"
                       required
                     />
-                    <div class="invalid-feedback">輸入新密碼</div>
+                    <div className="invalid-feedback">輸入新密碼</div>
                   </div>
-                  <div class="form-group form-inline">
-                    <label for="confirmpwd" class="edit_label">
+                  <div className="form-group form-inline">
+                    <label for="confirmpwd" className="edit_label">
                       輸入新密碼
                     </label>
                     <input
                       type="password"
-                      class="form-control"
+                      className="form-control"
                       id="confirmpwd"
                       value={this.state.member.user_npwd}
                       onChange={this.npwdChange}
@@ -183,13 +191,13 @@ class EditMemberpwd extends Component {
                       required
                     />
                   </div>
-                  <div class="form-group form-inline">
-                    <label for="confirmpwd" class="edit_label">
+                  <div className="form-group form-inline">
+                    <label for="confirmpwd" className="edit_label">
                       確認新密碼
                     </label>
                     <input
                       type="password"
-                      class="form-control"
+                      className="form-control"
                       id="confirmpwd"
                       value={this.state.member.user_npwd_confirm}
                       onChange={this.npwdChange_confirm}
@@ -197,18 +205,18 @@ class EditMemberpwd extends Component {
                       required
                     />
                   </div>
-                  <div class="edit_btn_div">
+                  <div className="edit_btn_div">
                     <button
                       type="button"
                       onClick={this.BackButtonClick}
-                      class="member_back_btn"
+                      className="member_back_btn"
                     >
                       返回
                     </button>
                     <button
                       type="button"
                       onClick={this.okButtonClick}
-                      class="member_editinfo_btn"
+                      className="member_editinfo_btn"
                     >
                       確定修改
                     </button>

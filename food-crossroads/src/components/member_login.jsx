@@ -12,18 +12,7 @@ class Member_login extends Component {
     console.log("OK");
     await new Axios.post("http://localhost:8000/login", this.state.member)
       .then((res) => {
-        switch (res.data.status) {
-          case "1":
-            alert("登入成功");
-            window.location = "/member/login/success";
-            break;
-          case "0":
-            alert("密碼錯誤");
-            break;
-          case "2":
-            alert("輸入錯誤信箱及密碼");
-            break;
-        }
+        window.location = "/member/login/success";
       })
       .catch((error) => {
         console.error(error);

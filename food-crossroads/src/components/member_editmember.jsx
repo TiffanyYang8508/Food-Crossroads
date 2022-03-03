@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../css/member.css";
+import "../css/member_editmember.css";
 import logo from "../img/logo.png";
 import Footer from "./footer";
 import Axios from "axios";
@@ -79,7 +79,7 @@ class EditMember extends Component {
           </nav>
         </header>
 
-        <aside className="aside_menu">
+        <aside id="member_aside">
           <div className="panel-group" id="accordion">
             <div className="panel panel-default">
               <div className="panel-heading">
@@ -110,7 +110,7 @@ class EditMember extends Component {
         </aside>
 
         <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
-        <div className="mobile_aside_menu">
+        <div id="mobile_member_aside">
           <div className="panel-group" id="accordion">
             <div className="panel panel-default">
               <div className="panel-heading">
@@ -184,7 +184,7 @@ class EditMember extends Component {
                       id="pwd"
                       value={this.state.Member.user_pwd}
                       name="pwd"
-                      required
+                      disabled
                     />
                     <div className="invalid-feedback">請輸入密碼</div>
                   </div>

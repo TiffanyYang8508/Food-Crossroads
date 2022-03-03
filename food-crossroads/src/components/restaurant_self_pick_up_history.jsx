@@ -1,184 +1,284 @@
 import React, { Component } from 'react';
-import "../css/restaurant_self_pick_up_history.css";
+import $ from "jquery";
 import logo from "../img/logo.png";
-import "../css/style.css";
+import Footer from "./footer";
+import "../css/restaurant_self_pick_up_history.css"
+import Collapse from "react-bootstrap/Collapse";
+class Restaurant_booking_history extends Component {
+    state = {
+        open: true
+    }
 
-class Restaurant_self_pick_up_history extends Component {
-    state = {}
+    showDetail = () => {
+        alert("OK");
+    }
+
     render() {
         return (
-            <>
-                <header id="header_page">
+            <React.Fragment>
+                <header className="header_page">
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <a className="navbar-brand" href="/"><img src={logo} alt="LOGO" /></a>
                     </nav>
                 </header>
 
-                <aside id="restaurant_history_list_aside">
+
+                <aside id="restaurant_self_pick_up_history_aside">
                     <div class="panel-group" id="accordion">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
                                 </h4>
                             </div>
-                            <div id="collapseOne" class="panel-collapse collapse">
-                                <div class="little_title">
-                                    <a data-parent="#accordion" href="restaurant_today_booking.html">今日訂位</a>
+                            <div id="collapseOne" className="panel-collapse collapse" >
+                                <div className="little_title">
+                                    <a href="/restaurant/booking/today">今日訂位</a>
                                 </div>
                             </div>
-                            <div id="collapseOne" class="panel-collapse collapse">
-                                <div class="little_title">
-                                    <a data-parent="#accordion" href="restaurant_booking_history.html">歷史訂位紀錄</a>
+                            <div id="collapseOne" className="panel-collapse collapse default">
+                                <div className="little_title">
+                                    <a href="/restaurant/booking/history">歷史訂位紀錄</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">訂餐管理</a>
+                        <div className="panel panel-default">
+                            <div className="panel-heading" in={this.state.open}>
+                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂餐管理</a>
                                 </h4>
                             </div>
-                            <div id="collapseTwo" class="panel-collapse collapse">
-                                <div class="little_title">
-                                    <a data-parent="#accordion" href="restaurant_self_pick_up.html">今日自取訂餐</a>
+                            <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
+                                <div className="little_title">
+                                    <a href="/restaurant/self/pick">今日訂餐</a>
                                 </div>
-                            </div>
-                            <div id="collapseTwo" class="panel-collapse collapse default">
-                                <div class="little_title">
-                                    <a data-parent="#accordion" href="restaurant_history_list.html">歷史訂餐紀錄</a>
+                            </Collapse>
+                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}>
+                                <div className="little_title">
+                                    <a href="/restaurant/self/pick/history">歷史訂餐紀錄</a>
                                 </div>
-                            </div>
+                            </Collapse>
                         </div>
                     </div>
                 </aside>
 
-                <section id="restaurant_history_list">
+                <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
+                <div id="restaurant_self_pick_up_history_mobile_aside">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂位管理</a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" className="panel-collapse collapse" >
+                                <div className="little_title">
+                                    <a href="/restaurant/booking/today">今日訂位</a>
+                                </div>
+                            </div>
+                            <div id="collapseOne" className="panel-collapse collapse default">
+                                <div className="little_title">
+                                    <a href="/restaurant/booking/history">歷史訂位紀錄</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="panel panel-default">
+                            <div className="panel-heading" in={this.state.open}>
+                                <h4 className="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">訂餐管理</a>
+                                </h4>
+                            </div>
+                            <Collapse id="collapseOne" className="panel-collapse collapse" in={this.state.open} >
+                                <div className="little_title">
+                                    <a href="/restaurant/self/pick">今日訂餐</a>
+                                </div>
+                            </Collapse>
+                            <Collapse id="collapseOne" className="panel-collapse collapse default" in={this.state.open}>
+                                <div className="little_title">
+                                    <a href="/restaurant/self/pick/history">歷史訂餐紀錄</a>
+                                </div>
+                            </Collapse>
+                        </div>
+                    </div>
+                    <label htmlFor="aside_menu_chk" className="aside_menu_chk">
+                        <i className="fas fa-angle-right"></i>
+                    </label>
+                </div>
+
+                <section id="restaurant_self_pick_up_history">
                     <div class="container">
                         <div class="search_bar">
-                            <div>
-                                <h3>歷史訂餐紀錄</h3>
-                            </div>
-                            <div class="search_bar_div">
-                                <i class="fas fa-search"></i>
+                            <div className="search_bar_div">
+                                <i className="fas fa-search"></i>
                                 <input type="text" placeholder="訂單編號" />
                             </div>
                             <button onclick="search()">搜尋</button>
                         </div>
-                        <table class="table order_table">
+                        <table className="table order_table">
                             <thead>
                                 <tr>
-                                    <th>取餐編號</th>
-                                    <th>取餐日期</th>
-                                    <th>取餐時間</th>
-                                    <th>訂餐姓名</th>
-                                    <th>訂餐金額</th>
+                                    <th>狀態</th>
+                                    <th>訂餐編號</th>
+                                    <th>訂餐日期</th>
+                                    <th>訂餐時間</th>
+                                    <th>訂餐人</th>
                                     <th>手機</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>00123</td>
-                                    <td>2022-02-22</td>
+                                    <td>
+                                        <input type="checkbox" checked disabled="disabled" />
+                                    </td>
+                                    <td>99999</td>
+                                    <td>2022-03-06</td>
+                                    <td>17:30</td>
+                                    <td>張曉明</td>
+                                    <td>0954428321</td>
+                                    <td>
+                                        <button className="detail_btn" onClick={this.showDetail}>
+                                            詳細內容
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" checked disabled="disabled" />
+
+                                    </td>
+                                    <td>99998</td>
+                                    <td>2022-03-06</td>
+                                    <td>18:15</td>
+                                    <td>劉慧婷</td>
+                                    <td>0988524252</td>
+                                    <td>
+                                        <button className="detail_btn" onClick={this.showDetail}>
+                                            詳細內容
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" checked disabled="disabled" />
+                                    </td>
+                                    <td>99997</td>
+                                    <td>2022-03-05</td>
+                                    <td>20:00</td>
+                                    <td>陳澤慶</td>
+                                    <td>0978779021</td>
+                                    <td>
+                                        <button className="detail_btn" onClick={this.showDetail}>
+                                            詳細內容
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" checked disabled="disabled" />
+                                    </td>
+                                    <td>99996</td>
+                                    <td>2022-03-04</td>
                                     <td>19:30</td>
-                                    <td>陳映瑜</td>
-                                    <td>350</td>
-                                    <td>0988512203</td>
-                                    <td>
-                                        <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                                            詳細內容
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>00122</td>
-                                    <td>2022-02-22</td>
-                                    <td>17:00</td>
-                                    <td>王力宏</td>
-                                    <td>490</td>
-                                    <td>0902135699</td>
-                                    <td>
-                                        <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                                            詳細內容
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>00121</td>
-                                    <td>2022-02-21</td>
-                                    <td>18:30</td>
-                                    <td>劉雨晴</td>
-                                    <td>980</td>
-                                    <td>0918557110</td>
-                                    <td>
-                                        <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
-                                            詳細內容
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>00120</td>
-                                    <td>2022-02-21</td>
-                                    <td>17:15</td>
                                     <td>張宇</td>
-                                    <td>500</td>
-                                    <td>0972110202</td>
+                                    <td>0933622025</td>
                                     <td>
-                                        <button class="detail_btn" data-toggle="modal" data-target="#detailModal">
+                                        <button className="detail_btn" onClick={this.showDetail}>
                                             詳細內容
                                         </button>
                                     </td>
                                 </tr>
-
-                                <div class="modal fade" id="detailModal">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-
-                                            <div class="modal-header">
-                                                <h3 class="modal-title">訂單明細</h3>
-                                                <button type="button" class="close" data-dismiss="modal"></button>
-                                            </div>
-
-                                            <div class="detail_modal_body">
-                                                姓名：陳映瑜 <br />
-                                                手機：0972607451<br />
-                                                電子郵件：jason8745@gmail.com <br />
-                                                取餐編號：00123 <br />
-                                                取餐日期：2022/02/22 <br />
-                                                取位時間：19:30 <br />
-                                                備註：需要兒童座椅
-                                            </div>
-
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">
-                                                    返回
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </tbody>
                         </table>
                     </div>
-
                 </section>
 
-                <footer>
-                    <div className="footer_link">
-                        <a href="#">關於我們</a>
-                        <a href="#">商家入口</a>
-                        <a href="#">常見問題</a>
-                        <a href="#">聯絡我們</a>
+                <div id="restaurant_self_pick_up_history_mobile">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="table mobile_pick_up_history">
+                                    <div class="mobile_pick_up_history_inline_div">
+                                        <div class="mobile_pick_up_history_div">
+                                            <div class="mobile_text_div">
+                                                <p>狀態:李曉明</p>
+                                                <p>訂餐編號:99999</p>
+                                                <p>訂餐日期:2022-03-06</p>
+                                            </div>
+                                            <div class="mobile_div_text">
+                                                <p>訂餐時間:17:30</p>
+                                                <p>訂餐人:張曉明</p>
+                                                <p>手機:0954428321</p>
+                                            </div>
+                                        </div>
+                                        {/* <div class="mobile_btn_div"> */}
+                                        <button
+                                            class="detail_btn"
+                                            data-toggle="modal"
+                                            data-target="#detailModal">
+                                            詳細內容
+                                        </button>
+                                        {/* </div> */}
+                                    </div>
+                                    <div class="mobile_pick_up_history_inline_div">
+                                        <div class="mobile_pick_up_history_div">
+                                            <div class="mobile_text_div">
+                                                <p>狀態:李曉明</p>
+                                                <p>訂餐編號:99999</p>
+                                                <p>訂餐日期:2022-03-06</p>
+                                            </div>
+                                            <div class="mobile_div_text">
+                                                <p>訂餐時間:17:30</p>
+                                                <p>訂餐人:張曉明</p>
+                                                <p>手機:0954428321</p>
+                                            </div>
+                                        </div>
+                                        {/* <div class="mobile_btn_div"> */}
+                                        <button
+                                            class="detail_btn"
+                                            data-toggle="modal"
+                                            data-target="#detailModal">
+                                            詳細內容
+                                        </button>
+                                        {/* </div> */}
+                                    </div>
+                                    <div class="mobile_pick_up_history_inline_div">
+                                        <div class="mobile_pick_up_history_div">
+                                            <div class="mobile_text_div">
+                                                <p>狀態:李曉明</p>
+                                                <p>訂餐編號:99999</p>
+                                                <p>訂餐日期:2022-03-06</p>
+                                            </div>
+                                            <div class="mobile_div_text">
+                                                <p>訂餐時間:17:30</p>
+                                                <p>訂餐人:張曉明</p>
+                                                <p>手機:0954428321</p>
+                                            </div>
+                                        </div>
+                                        {/* <div class="mobile_btn_div"> */}
+                                        <button
+                                            class="detail_btn"
+                                            data-toggle="modal"
+                                            data-target="#detailModal">
+                                            詳細內容
+                                        </button>
+                                        {/* </div> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="footer_text">
-                        <p>Copyright &copy; 2022 FoodCrossesRoads.All Rights Reserved.</p>
-                    </div>
+                </div>
+
+                <div className="blank"></div>
+
+                <footer className="footer_page">
+                    <Footer />
                 </footer>
-            </>
+            </React.Fragment>
         );
     }
 }
 
-export default Restaurant_self_pick_up_history;
+export default Restaurant_booking_history;
