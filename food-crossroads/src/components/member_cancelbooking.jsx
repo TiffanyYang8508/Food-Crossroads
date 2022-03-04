@@ -46,50 +46,50 @@ class CancelBooking extends Component {
               <form action="#">
                 <div className="form_container_cancel_wrapper_left">
                   <div className="form_container_cancel">
-                    <label for="cancel_person_name">姓　　名：</label>
-                    <label for="cancel_person_name">
+                    <label htmlFor="cancel_person_name">姓　　名：</label>
+                    <label htmlFor="cancel_person_name">
                       {this.state.member.user_name}
                     </label>
                   </div>
                   <div className="form_container_cancel">
-                    <label for="cancel_person_cellphone">手　　機：</label>
-                    <label for="cancel_person_cellphone">
+                    <label htmlFor="cancel_person_cellphone">手　　機：</label>
+                    <label htmlFor="cancel_person_cellphone">
                       {this.state.member.user_tel}
                     </label>
                   </div>
                   <div className="form_container_cancel">
-                    <label for="cancel_person_email">信　　箱：</label>
-                    <label for="cancel_person_email">
+                    <label htmlFor="cancel_person_email">信　　箱：</label>
+                    <label htmlFor="cancel_person_email">
                       {this.state.member.user_email}
                     </label>
                   </div>
                 </div>
                 <div className="form_container_cancel_wrapper_right">
                   <div className="form_container_cancel">
-                    <label for="cancel_person_person_number">訂位人數：</label>
-                    <label for="cancel_person_person_number">
+                    <label htmlFor="cancel_person_person_number">訂位人數：</label>
+                    <label htmlFor="cancel_person_person_number">
                       {this.state.member.booking_peoplenumber}
                     </label>
                   </div>
                   <div className="form_container_cancel">
-                    <label for="cancel_person_date">訂位日期：</label>
-                    <label for="cancel_person_date">2022/03/07</label>
+                    <label htmlFor="cancel_person_date">訂位日期：</label>
+                    <label htmlFor="cancel_person_date">2022/03/07</label>
                   </div>
                   <div className="form_container_cancel">
-                    <label for="cancel_person_time">訂位時間：</label>
-                    <label for="cancel_person_time">
+                    <label htmlFor="cancel_person_time">訂位時間：</label>
+                    <label htmlFor="cancel_person_time">
                       {this.state.member.booking_time}
                     </label>
                   </div>
                   <div className="form_container_cancel">
-                    <label for="cancel_person_demands">需　　求：</label>
-                    <label for="cancel_person_demands">
+                    <label htmlFor="cancel_person_demands">需　　求：</label>
+                    <label htmlFor="cancel_person_demands">
                       {this.state.member.booking_service}
                     </label>
                   </div>
                   <div className="form_container_cancel">
-                    <label for="cancel_person_remark">備　　註：</label>
-                    <label for="cancel_person_remark">無</label>
+                    <label htmlFor="cancel_person_remark">備　　註：</label>
+                    <label htmlFor="cancel_person_remark">無</label>
                   </div>
                 </div>
               </form>

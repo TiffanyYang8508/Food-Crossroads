@@ -159,7 +159,7 @@ class BookingRecord extends Component {
                   </thead>
                   <tbody>
                     {this.state.List.map((item, index) => (
-                      <tr>
+                      <tr key={index}>
                         <td className="mobile_td">{item.user_name}</td>
                         <td className="mobile_td">{item.restaurant_name}</td>
                         <td className="mobile_td">2022/03/07</td>
@@ -171,17 +171,17 @@ class BookingRecord extends Component {
                           <a href={`/cancelbooking/${item.booking_id}`}>
                             <button className="cancel_btn">取消訂位</button>
                           </a>
+                        </td>
+                        <td>
                           <button className="detail_btn" id="detail_btn">
                             詳細訂單
                           </button>
                         </td>
-                        <td>
-                        </td>
                       </tr>
                     ))}
 
-                    {this.state.List.map((item, idex) => (
-                      <div class="modal modal-detail" tabIndex="-1">
+                    {this.state.List.map((item, index) => (
+                      <div key={index} class="modal modal-detail" tabIndex="-1">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
@@ -231,6 +231,8 @@ class BookingRecord extends Component {
                         >
                           取消訂位
                         </button>
+                      </td>
+                      <td class="btn_td">
                         <button
                           class="detail_btn"
                           data-toggle="modal"
@@ -238,9 +240,6 @@ class BookingRecord extends Component {
                         >
                           詳細訂單
                         </button>
-                      </td>
-                      <td>
-                     
                       </td>
                     </tr>
                     <tr id="cancel">
@@ -258,6 +257,8 @@ class BookingRecord extends Component {
                         >
                           取消訂位
                         </button>
+                      </td>
+                      <td class="btn_td">
                         <button
                           class="detail_btn"
                           data-toggle="modal"
@@ -265,9 +266,6 @@ class BookingRecord extends Component {
                         >
                           詳細訂單
                         </button>
-                      </td>
-                      <td>
-                    
                       </td>
                     </tr>
                   </tbody>

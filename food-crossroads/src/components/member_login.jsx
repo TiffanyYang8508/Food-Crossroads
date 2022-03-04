@@ -42,73 +42,76 @@ class Member_login extends Component {
           <Header />
         </header>
 
-        <div className="container">
-          <div className="row">
-            <div className="member_login_container">
-              <div className="member_login_title">
-                <i className="fas fa-user-circle"></i>會員登入
-              </div>
-              <div className="member_form">
-                <form action="#">
-                  <div className="form-group row">
-                    <label htmlFor="email" className="form_account"></label>
-                    <input
-                      type="text"
-                      id="email"
-                      className="form_account"
-                      placeholder="請輸入您的信箱"
-                      value={this.state.member.user_email}
-                      onChange={this.inputEmail}
-                    />
-                  </div>
-                  <div className="form-group row">
-                    <label htmlFor="password" className="form_secret"></label>
-                    <input
-                      type="password"
-                      id="password"
-                      className="form_secret"
-                      placeholder="請輸入您的密碼"
-                      value={this.state.member.user_pwd}
-                      onChange={this.inputPwd}
-                    />
-                  </div>
-                  <div className="form-group row">
-                    <input
-                      type="button"
-                      className="btn_member_login"
-                      value="登入"
-                      onClick={this.loginClick}
-                    />
-                  </div>
-                  <div className="form-group row">
-                    <div className="span_container forgot">
-                      <div>
-                        <a href="#forgot_password">忘記密碼?</a>
-                      </div>
-                      <div>
-                        <input
-                          type="checkbox"
-                          name="automatically_login"
-                          id="automatically_login"
-                        />
-                        <span>記住密碼</span>
+        <section id="member_login">
+          <div className="container">
+            <div className="row">
+              <div className="member_login_container">
+                <div className="member_login_title">
+                  <i className="fas fa-user-circle"></i>會員登入
+                </div>
+                <div className="member_form">
+                  <form action="#">
+                    <div className="form-group row">
+                      <label htmlFor="email" className="form_account"></label>
+                      <input
+                        type="text"
+                        id="email"
+                        className="form_account"
+                        placeholder="請輸入您的信箱"
+                        value={this.state.member.user_email}
+                        onChange={this.inputEmail}
+                      />
+                    </div>
+                    <div className="form-group row">
+                      <label htmlFor="password" className="form_secret"></label>
+                      <input
+                        type="password"
+                        id="password"
+                        className="form_secret"
+                        placeholder="請輸入您的密碼"
+                        value={this.state.member.user_pwd}
+                        onChange={this.inputPwd}
+                      />
+                    </div>
+                    <div className="form-group row">
+                      <input
+                        type="button"
+                        className="btn_member_login"
+                        value="登入"
+                        onClick={this.loginClick}
+                      />
+                    </div>
+                    <div className="form-group row">
+                      <div className="span_container forgot">
+                        <div>
+                          <a href="#forgot_password">忘記密碼?</a>
+                        </div>
+                        <div>
+                          <input
+                            type="checkbox"
+                            name="automatically_login"
+                            id="automatically_login"
+                          />
+                          <span>記住密碼</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="form-group row">
-                    <input
-                      type="button"
-                      className="btn_register"
-                      value="立即註冊"
-                      onClick={this.registerNow}
-                    />
-                  </div>
-                </form>
+                    <div className="form-group row">
+                      <input
+                        type="button"
+                        className="btn_register"
+                        value="立即註冊"
+                        onClick={this.registerNow}
+                      />
+                    </div>
+                  </form>
+                </div>
               </div>
+              <div className="reportSpan" id="reportMessage"></div>
             </div>
-            <div className="reportSpan" id="reportMessage"></div>
           </div>
-        </div>
+        </section>
+
 
         <footer className="footer_page">
           <Footer />

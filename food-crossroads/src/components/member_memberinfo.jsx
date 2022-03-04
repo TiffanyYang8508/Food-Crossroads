@@ -113,7 +113,7 @@ class Member extends Component {
               </div>
             </div>
           </div>
-          <label for="aside_menu_chk" className="aside_menu_chk">
+          <label htmlFor="aside_menu_chk" className="aside_menu_chk">
             <i className="fas fa-angle-right"></i>
           </label>
         </div>
@@ -126,10 +126,10 @@ class Member extends Component {
                   <div>
                     <p className="title_member">會員資料</p>
                   </div>
-                  <div className="editmember_info">
+                  <div>
                     <div className="form-group form-inline">
                       <label htmlFor="email" className="form_text">
-                        信　箱:
+                        信　　箱:
                       </label>
                       <input
                         type="email"
@@ -142,7 +142,7 @@ class Member extends Component {
                     </div>
                     <div className="form-group form-inline">
                       <label htmlFor="pwd" className="form_text">
-                        密　碼:
+                        密　　碼:
                       </label>
                       <input
                         type="password"
@@ -155,7 +155,7 @@ class Member extends Component {
                     </div>
                     <div className="form-group form-inline">
                       <label htmlFor="name" className="form_text">
-                        姓　名:
+                        姓　　名:
                       </label>
                       <input
                         type="text"
@@ -168,7 +168,7 @@ class Member extends Component {
                     </div>
                     <div className="form-group form-inline">
                       <label htmlFor="tel" className="form_text">
-                        手　機:
+                        手　　機:
                       </label>
                       <input
                         type="text"
@@ -182,11 +182,11 @@ class Member extends Component {
                   </div>
 
                   <div className="btn_div">
-                    <a href={`/editmemberpwd/1`} className="member_editpwd_btn">
-                      修改密碼
+                    <a href={`/editmemberpwd/1`}>
+                      <button className="member_editpwd_btn">修改密碼</button>
                     </a>
-                    <a href={`/editmember/1`} className="member_editinfo_btn">
-                      修改資料
+                    <a href={`/editmember/1`}>
+                      <button className="member_editinfo_btn">修改資料</button>
                     </a>
                   </div>
                 </form>
@@ -194,6 +194,8 @@ class Member extends Component {
             </div>
           </div>
         </section>
+
+        <div className="blank"></div>
 
         <footer className="footer_page">
           <Footer />

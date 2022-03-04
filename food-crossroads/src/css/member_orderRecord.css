@@ -51,22 +51,31 @@
 /* 側邊欄 end */
 
 
+/* order_manage start */
+#order_record_mobile {
+  display: none;
+}
+
+#order_record {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  margin-left: 20%;
+}
+
 #order_record th {
   font-weight: bolder;
   font-size: 22px;
   text-align: center;
+  border-bottom: 1px solid #403c3c;
+  width: 80px;
 }
 
-#order_record .table_container {
-  width: 100%;
-}
-
-#order_record .detail_modal {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 80px;
-  font-size: 20px;
-  font-weight: 600;
+#order_record td {
+  text-align: center;
+  width: 80px;
+  vertical-align: middle;
 }
 
 #order_record .cancel_btn,
@@ -82,7 +91,6 @@
 
 #order_record .table_title {
   position: relative;
-  right: 0px;
 }
 
 #order_record .detail_btn {
@@ -103,54 +111,25 @@
   background-color: #a30f01;
 }
 
-.order_comment_btn1 {
-  margin-left: -320px;
-}
 #order_record .together_btn {
   background-color: #8b1309;
   color: #fff;
 }
 
-.order_comment_btn1:hover {
+#order_record .together_btn:hover{
   background-color: #a30f01;
-}
-
-/* order_manage start */
-
-#order_record {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-  height: 100%;
-  margin-left: 12%;
- 
 }
 
 #order_record .modal-title {
   font-size: 24px;
 }
 
-#order_record .table th {
-  border-bottom: 1px solid #403c3c;
-}
-
-#order_record .table th {
-  width: 10%;
-}
-
-#order_record td {
-  text-align: center;
-}
-
-#order_record .order_comment_btn {
-  background-color: #8b1309;
-  margin-left: -270px;
-  color: #fff;
-}
-
-#order_record .order_comment_btn:hover {
-  background-color: #a30f01;
+#order_record .detail_modal {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 80px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 #order_record .btn_close {
@@ -223,41 +202,109 @@
     transition: 0.3s;
     width: 100%;
   }
+  #order_record {
+    width: 90%;
+    margin-left: 5%;
+  }
+  #order_record th{
+    font-size: 14px;
+  }
+  #order_record td{
+    font-size: 10px;
+  }
+  #order_record .cancel_modal_body{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 28px;
+  }
+  #order_record .modal-title{
+    font-size: 24px; 
+  }
+  #order_record .detail_modal_body{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+    font-size: 18px;
+  }
+  #order_record .rank_modal_body{
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 150px;
+  }
+  #order_record .rank_modal_title{
+    position: absolute;
+    font-size: 28px;
+    left: -50px;
+    top: -40px;
+  }
 }
 
 /* 大型螢幕 */
 
 @media screen and (max-width: 992px) {
-  #order_record .mobile_td {
-    height: 90px;
-    line-height: 60px;
-  }
-  #order_record .cancel_btn {
-    margin-right: 19%;
-  }
-  #order_record .detail_btn {
-    margin-right: 18%;
-  }
-  #order_record .comment_btn {
-    margin-top: 15px;
-  }
-  #order_record .order_td {
-    width: 15%;
-  }
-  #order_record .order_td .detail_btn {
-    margin-top: 15px;
+  #order_record tbody .detail_btn,#order_record .modal-footer .detail_btn{
+    font-size: 10px;
   }
 }
 
 /* 平板 */
 
 @media screen and (max-width: 768px) {
+  #order_record{
+    display: none;
+  }
+  #order_record_mobile{
+    all: unset;
+    font-size: 14px;
+  }
+  #order_record_mobile .mobile_order_record_inline_div{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 0px 0px 0px;
+    position: relative;
+    margin: 20px 10px;
+  }
+  #order_record_mobile .mobile_text_div{
+    width: 50%;
+    float: left;
+    padding: 5px 20px;
+  }
+  #order_record_mobile .mobile_div_text{
+    width: 50%;
+    float: right;
+    padding: 5px 20px;
+  }
+  #order_record_mobile .mobile_btn_div{
+    width: 80%;
+    height: 100%;
+    float: right;
+  }
+  #order_record_mobile .detail_btn{
+    border: 2px solid #403c3c;
+    background-color: #fff;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    width: 100%;
+    height: 20%;
+  }
+  #order_record_mobile .comment_btn{
+    background-color: #8b1309;
+    border: 2px;
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    padding: 5px 0;
+  }
 }
 
 /* 手機 */
 
 @media screen and (max-width: 576px) {
-
+  #order_record_mobile{
+    font-size: 13px;
+  }
 }
 
 /* 小手機 */

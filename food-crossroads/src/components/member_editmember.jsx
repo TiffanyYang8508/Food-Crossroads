@@ -148,7 +148,7 @@ class EditMember extends Component {
                     <p className="title_member_edit">會員資料修改</p>
                   </div>
                   <div className="form-group form-inline">
-                    <label for="name" className="edit_label">
+                    <label htmlFor="name" className="edit_label">
                       姓　　名:
                     </label>
                     <input
@@ -162,7 +162,7 @@ class EditMember extends Component {
                     />
                   </div>
                   <div className="form-group form-inline">
-                    <label for="email" className="edit_label">
+                    <label htmlFor="email" className="edit_label">
                       信　　箱:
                     </label>
                     <input
@@ -175,7 +175,7 @@ class EditMember extends Component {
                     />
                   </div>
                   <div className="form-group form-inline">
-                    <label for="pwd" className="edit_label">
+                    <label htmlFor="pwd" className="edit_label">
                       密　　碼:
                     </label>
                     <input
@@ -189,7 +189,7 @@ class EditMember extends Component {
                     <div className="invalid-feedback">請輸入密碼</div>
                   </div>
                   <div className="form-group form-inline">
-                    <label for="tel" className="edit_label">
+                    <label htmlFor="tel" className="edit_label">
                       電　　話:
                     </label>
                     <input
@@ -223,6 +223,8 @@ class EditMember extends Component {
             </div>
           </div>
         </section>
+
+        <div className="blank"></div>
 
         <footer className="footer_page">
           <Footer />
