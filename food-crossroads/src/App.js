@@ -18,8 +18,15 @@ import EditMember from "./components/member_editmember";
 import EditMemberpwd from "./components/member_editpwd";
 import CancelBooking from "./components/member_cancelbooking";
 import Restaurant_login from "./components/restaurant_login";
+
 import Shoppingchar from "./components/shoppingchar";
+import Shoppingchar_group from "./components/shoppingchar_group";
+import Shoppingchar_group_final from "./components/shoppingchar_group_final";
+
 import Shoppingok from "./components/shoppingok";
+import Shoppingok_group from "./components/shoppingok_group";
+import Shoppingok_group_final from "./components/shoppingok_group_final";
+
 import Orderdisplay from "./components/orderdisplay";
 import Restaurant_page from "./components/restaurant_page";
 import Restaurant_page_member from "./components/restaurant_page_loginok";
@@ -27,10 +34,12 @@ import Booking_reservation_page from "./components/booking_reservation_page";
 import Booking_check_page from "./components/booking_check_page";
 import Booking_finish_page from "./components/booking_finish_page";
 import Orderpage from "./components/orderpage";
-import Orderpage_group from "./components/orderpage_group";
+import Orderpage_group_order_on from "./components/orderpage copy";
+// import Orderpage_group from "./components/orderpage_group";
 import Restaurant_booking_today from "./components/restaurant_booking_today";
 import Restaurant_self_pick_up_history from "./components/restaurant_self_pick_up_history";
 import Orderfinished from "./components/orderfinished";
+import Orderfinished_member from "./components/orderfinished_member";
 import Group_orderfinished from "./components/group_orderfinished";
 
 class App extends Component {
@@ -115,14 +124,19 @@ class App extends Component {
           <Route path="/editmember/:id" component={EditMember} />
           {/* 購物車結帳 */}
           <Route path="/shoppingchar" component={Shoppingchar} exact />
+          <Route path="/shoppingchar_group" component={Shoppingchar_group} exact />
+          <Route path="/shoppingchar_group_final" component={Shoppingchar_group_final} exact />
           {/* 購物車下訂單 */}
           <Route path="/shoppingok" component={Shoppingok} exact />
+          <Route path="/shoppingok_group" component={Shoppingok_group} exact />
+          <Route path="/shoppingok_group_final" component={Shoppingok_group_final} exact />
           {/* 揪團訂餐 */}
           <Route path="/orderdisplay" component={Orderdisplay} exact />
           {/* 商品 */}
           <Route path="/orderpage" component={Orderpage} exact />
+          <Route path="/orderpage_group_order_on" component={Orderpage_group_order_on} exact />
           {/* 揪團商品 */}
-          <Route path="/orderpagegroup" component={Orderpage_group} exact />
+          {/* <Route path="/orderpagegroup" component={Orderpage_group} exact /> */}
           <Route
             path="/orderpage/:food_category?"
             component={Orderpage}
@@ -130,6 +144,7 @@ class App extends Component {
           />
           {/* 完成訂單 */}
           <Route path="/orderfinished" component={Orderfinished} exact />
+          <Route path="/orderfinished_member" component={Orderfinished_member} exact />
           {/* 揪團完成訂單 */}
           <Route
             path="/group/orderfinished"

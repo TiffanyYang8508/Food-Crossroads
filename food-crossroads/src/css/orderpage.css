@@ -70,11 +70,16 @@ margin-left: 10vw;
 #order_page div.food_list_border{
     width: 35%;
 	float: left;
-    margin: 0 0.5vw 1vw 10vw;
+    margin: 0 0.5vw 1vw 0;
     border: 1px #343A3F solid;
     border-radius: 10px;
 }
-/* 右側商品框*/
+#order_page .cate1{
+    padding-left: 10vw;
+}
+
+
+
 #order_page .food_dollar_qty{
     padding-top: 2rem;
 }
@@ -139,11 +144,6 @@ margin-left: 10vw;
     text-align:center
 }
 
-/* #order_page .food_list_detail{
-    align-items: flex-start
-} */
-
-
 
 /* 揪團與結帳 */
 #order_page .food_order_group{
@@ -171,6 +171,20 @@ margin-left: 10vw;
     background-color: #FCC106;
     color: black;
 
+}
+
+#order_page_on .group_button_on{
+    background-color: #403C3C;
+    color: white;
+    height: 40px;
+    width: 500px;
+    font-size: 14pt;
+    border: 0;
+}
+
+#order_page_on .group_button_on:hover{
+    background-color: #FCC106;
+    color: black;
 }
 
 
@@ -346,6 +360,7 @@ margin-left: 10vw;
 .close_btn{
   display: none;
 }
+
 
 @media screen and (max-width:768px) {
     #order_page #table_order{

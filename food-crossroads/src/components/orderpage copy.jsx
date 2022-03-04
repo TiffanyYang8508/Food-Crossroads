@@ -10,7 +10,7 @@ import Order_picture from "../img/aqua/aqua_img.jpg";
 
 
 
-class Orderpage extends Component {
+class Orderpage_group_order_on extends Component {
 
 
     state = {
@@ -111,7 +111,6 @@ class Orderpage extends Component {
         }
         setCart();
 
-        //揪團訂餐
         $(".group_button").on("click", function () {
             $(".order_group_modal").css("display", "block")
         })
@@ -612,13 +611,12 @@ class Orderpage extends Component {
 
                         {/* 揪團結帳 */}
                         <div className="food_order_group d-flex flex-column">
-                            <div className="d-flex justify-content-center">
+                            <div className="d-flex justify-content-center" id='order_page_on'>
                                 <a href="#"><img src={require("../img/people_plus@3x.png")} style={{ 'width': '25px', 'height': '20px', 'marginRight': ' 5px' }} /></a>
-                                <button className="group_button oval" >揪團</button>
-
+                                <button className="group_button_on oval" data-toggle="modal" data-target="#order_group_modal">揪團連結分享</button>
                             </div>
                             <div className="d-flex justify-content-center">
-                                <Link to="/shoppingchar"><button id="checkout">去結帳</button></Link>
+                                <Link to="/shoppingchar_group"><button id="checkout">送出訂單</button></Link>
                             </div>
                             {/* 我要清空用(localStorage會留紀錄)
                             <button id='clear'>清空購物車</button> */}
@@ -627,53 +625,37 @@ class Orderpage extends Component {
 
 
 
-                        {/* <!--揪團開啟確認modal--> */}
-                        <div className="modal order_group_modal" tabIndex="-1">
+
+                        {/* <!--揪團連結分享modal--> */}
+                        <div className="modal group_link_modal" tabIndex="-1">
                             <div className="modal-dialog">
                                 <div className="modal-content">
                                     <div className="modal-header">
-                                        <h3 className="modal-title" id="order_group_modal_title">是否開啟揪團功能？</h3><br />
+                                        <h3 className="modal-title" id="group_on_modal_title">已開啟</h3><br />
                                         <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span
                                             aria-hidden="true">&times;</span></button>
                                     </div>
-                                    <div className="modal-body">
-                                        <h5>開啟揪團功能<br />即可分享點餐連結給好友們一同訂餐！</h5>
+                                    <div className="modal-body d-flex flex-column">
+                                        <h5>分享你的連結！！</h5>
+                                        <div id="copy_link">
+                                            <a href="orderpage_group_sorder_on.html"><input id="copyinput"
+                                                value="http://localhost:3000/group_order_on/1" /></a>
+                                        </div>
+                                        <button type="button" className="btn btn-danger btn_copy" onClick='copyinput()'>複製連結</button>
                                     </div>
-                                    <div className="modal-footer d-flex justify-content-center">
-                                        <button type="button" className="btn_cancel" data-dismiss="modal">取消</button>
-                                        <button type="button" className="btn_yes" >確定</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div className="modal fade" id="order_group_modal" tabIndex="-1" role="dialog" aria-labelledby="order_group_modal_title"
-                            aria-hidden="true">
-                            <div className="modal-dialog modal-dialog-centered" role="document">
-                                <div className="modal-content">
-                                    <div className="modal-header">
-                                        <h3 className="modal-title" id="order_group_modal_title">是否開啟揪團功能？</h3><br />
-                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span
-                                            aria-hidden="true">&times;</span></button>
-                                    </div>
-                                    <div className="modal-body">
-                                        <h5>開啟揪團功能<br />即可分享點餐連結給好友們一同訂餐！</h5>
-                                    </div>
-                                    <div className="modal-footer d-flex justify-content-center">
-                                        <button type="button" className="btn_cancel" data-dismiss="modal">取消</button>
-                                        <button type="button" className="btn_yes" data-toggle="modal" data-target="#group_on_modal">確定</button>
+                                    <div className="modal-footer">
+                                        <button type="button" className="btn btn-secondary btn_grouporder" data-dismiss="modal"
+                                        >關閉</button>
                                     </div>
                                 </div>
                             </div>
+
+                            {/* 置頂鈕 */}
+                            <button type="button" id="btn_back_to_top" onclick="topfunction()" title="Go to top">
+                                <i className="fas fa-arrow-up"></i>
+                            </button>
+
                         </div>
-
-                        {/* 置頂鈕 */}
-                        <button type="button" id="btn_back_to_top" onclick="topfunction()" title="Go to top">
-                            <i className="fas fa-arrow-up"></i>
-                        </button>
-
-
                     </div>
                 </div>
 
@@ -686,4 +668,4 @@ class Orderpage extends Component {
     }
 }
 
-export default Orderpage;
+export default Orderpage_group_order_on;

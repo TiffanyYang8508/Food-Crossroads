@@ -20,28 +20,31 @@ tbody td:nth-child(5) {
   width: 0.5em;
 }
 
-.order_member_table {
+#orderdisplay .order_member_table {
   background-color: 1px solid black;
 }
 
-.btn_view {
+#orderdisplay .btn_view {
   color: white;
   background-color: #403c3c;
   border-radius: 50px;
   height: 2em;
   width: 8em;
+  position: relative;
+  top: 1px;
+  left: 6px;
 }
 
-.share_member_table tbody tr:nth-child(1),
-.share_member_table tbody tr:nth-child(2) {
+#orderdisplay .share_member_table tbody tr:nth-child(1),
+#orderdisplay .share_member_table tbody tr:nth-child(2) {
   text-align: left;
 }
 
-.dropbtn p {
+#orderdisplay .dropbtn p {
   position: relative;
 }
 
-.dropbtn p::before {
+#orderdisplay .dropbtn p::before {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -50,28 +53,28 @@ tbody td:nth-child(5) {
   transition: 0.3s all;
 }
 
-.dropbtn p:hover::before {
+#orderdisplay .dropbtn p:hover::before {
   content: "";
   background-color: lightslategrey;
 }
 
-.share_member{
+#orderdisplay .share_member{
   display: flex;
  justify-content: end;
 }
 
 
-#order_share {
+#orderdisplay #order_share {
   position: relative;
-  bottom:10%;
+  bottom:3%;
   display:flex;
 }
 
-.share_member_table {
+#orderdisplay .share_member_table {
   position:relative;
 }
 
-.show_member {
+#orderdisplay .show_member {
   border: white solid 1px;
   background-color: rgb(243, 238, 238);
   position: absolute;
@@ -81,31 +84,37 @@ tbody td:nth-child(5) {
   z-index: 1;
 }
 
-#dropbtn div{
+#orderdisplay #dropbtn div{
   position: relative;
   display: block;
 }
 
-.show_member_detail {
+#orderdisplay .show_member_detail {
   padding-left: 0px;
 }
 
 
-.show_member_detail > li {
+#orderdisplay .show_member_detail > li {
   border-bottom: #585555c5 0.5px solid;
   font-size: 16px;
   line-height: 1.5em;
   align-items:baseline;
 }
 
-#checkout {
-  width: 8em;
-  height: 2em;
-  text-align: center;
+#orderdisplay #checkout {
+  width: 120px;
   font-weight: 600;
+  height: 40px;
+  background-color: #8b1309;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  position: relative;
+  top: -100%;
+  left: -8%;
 }
 
-.rwd_icon_plus{
+#orderdisplay .rwd_icon_plus{
   border-radius:50%;
   border: solid 1.5px #585555c5;
   height: 40px;
@@ -116,7 +125,7 @@ tbody td:nth-child(5) {
   background-color: white;
   display: none;
 }
-.close_btn{
+#orderdisplay .close_btn{
   display: none;
 }
 

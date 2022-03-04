@@ -19,11 +19,11 @@
 
 #shoppingchar .tr_title {
   background-color: #403c3c;
-  color: #fff;
-   
+  color: #fff;   
 }
 #shoppingchar .tr_title h5{
   text-align: left;
+  padding-left: 3.5%;
 }
 
 #shopping-row td {
@@ -51,10 +51,35 @@
   border: none;
 }
 
-#shoppingchar .delete-shopping {
-  background-color: #8b1309;
-  color: #fff;
+#shoppingchar .delete-shopping div {
+  width:50px;
+  height: 50px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #feeeed;
 }
+#shoppingchar .delete-shopping div span{
+  color: #8b1309;
+  background-color: #fff;
+  margin: 13px auto;
+}
+
+
+#shoppingchar .delete-shopping div span  :hover{
+  width:50px;
+  height: 50px;
+  /* margin: auto; */
+  background-color: #8b1309;
+  color: #ffff;
+  margin: 13px auto;
+  position: relative;
+  bottom:26px;
+  padding-top:17px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #feeeed;
+}
+
 
 .shopping-checkbox {
   height: 24px;
@@ -89,7 +114,36 @@
   margin: 5% 0;
 }
 
+#delete_comfirm>div{
+display: flex;
+width: 50%;
+margin: auto;
+position: relative;
+}
 
+#delete_comfirm>div .delete_comfirm_back_btn{
+  width: 120px;
+  height: 40px;
+  background-color:#403c3c;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  /* margin: auto; */
+  position: absolute;
+  left: 100px;
+
+  }
+#delete_comfirm>div .delete_comfirm_check_btn{
+  width: 120px;
+  height: 40px;
+  background-color: #8b1309;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  position: relative;
+  margin-left: 60px;
+
+  }
 /* 購物車欄位 end */
 
 
@@ -150,7 +204,12 @@
   display: block;
 }
 
-#shoppingchar .mobile_delete {
+.modal-body{
+  display: flex;
+  justify-content: space-around;
+}
+
+.mobile_delete {
   width: 15%;
   height: 100%;
   display: flex;
@@ -159,13 +218,15 @@
   right: 0;
 }
 
-#shoppingchar .mobile_delete button {
+.mobile_delete button {
   background-color: #8b1309;
   color: #fff;
   width: 100%;
   height: 100%;
   /* padding: 100% 10px; */
 }
+
+
 
 
 /* RWD */

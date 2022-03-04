@@ -7,10 +7,10 @@ import "../css/shoppingok.css";
 import Order_picture from "../img/aqua/aqua_img.jpg";
 
 
-class Shoppingok extends Component {
+class Shoppingok_group_final extends Component {
     state = {}
     buyback = () => {
-        window.location = "/shoppingchar";
+        window.location = "/shoppingchar_group_final";
     }
     buyok = () => {
         window.location = "/orderfinished";
@@ -102,6 +102,81 @@ class Shoppingok extends Component {
                                                 <td>
                                                     <span>
                                                         $376
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr className="shopping-row" id="shopping-row">
+                                                <td className="wrapper" id="td-1" style={{ 'width': '200px' }}>
+                                                    <img src={Order_picture} className="img-fluid img-thumbnail" alt="" />
+                                                </td>
+                                                <td>
+                                                    <span id="ordername" className="ordername">
+                                                        南義炸起司條
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span>
+                                                        $288
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span>
+                                                        1
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span>
+                                                        $288
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr className="shopping-row" id="shopping-row">
+                                                <td className="wrapper" id="td-1" style={{ 'width': '200px' }}>
+                                                    <img src={Order_picture} className="img-fluid img-thumbnail" alt="" />
+                                                </td>
+                                                <td>
+                                                    <span id="ordername" className="ordername">
+                                                        水相主廚私房湯品
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span>
+                                                        $288
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span>
+                                                        1
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span>
+                                                        $288
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr className="shopping-row" id="shopping-row">
+                                                <td className="wrapper" id="td-1" style={{ 'width': '200px' }}>
+                                                    <img src={Order_picture} className="img-fluid img-thumbnail" alt="" />
+                                                </td>
+                                                <td>
+                                                    <span id="ordername" className="ordername">
+                                                        田園香澄鮮蝦蘿蔓鮮蔬
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span>
+                                                        $318
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span>
+                                                        1
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span>
+                                                        $318
                                                     </span>
                                                 </td>
                                             </tr>
@@ -210,4 +285,4 @@ class Shoppingok extends Component {
     }
 }
 
-export default Shoppingok;
+export default Shoppingok_group_final;

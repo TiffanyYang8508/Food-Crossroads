@@ -3,15 +3,15 @@ import Headeredit from "./header copy";
 import Footer from "./footer";
 import "../css/orderfinish.css"
 
-class Orderfinished extends Component {
+class Orderfinished_member extends Component {
     state = {}
 
     check_order = () => {
-        window.location = "/ordermanagement/1";
+        window.location = "/orderdisplay";
     }
 
     back_restaurant = () => {
-        window.location = "/restaurant/page/member";
+        window.location = "/restaurant/page";
     }
 
     render() {
@@ -28,7 +28,7 @@ class Orderfinished extends Component {
                         </div>
                     </div>
                     <div className="buy_back_div">
-                        <button className="buy_back_btn" id="check_order" onClick={this.check_order}>查看訂單</button>
+                        <button className="buy_back_btn" id="check_order" onClick={this.check_order}>查看所有團員已點清單</button>
                         <button className="buy_back_btn" id="back_to_home" onClick={this.back_restaurant}>回到餐廳</button>
                     </div>
                 </div>
@@ -41,4 +41,4 @@ class Orderfinished extends Component {
     }
 }
 
-export default Orderfinished;
+export default Orderfinished_member;
