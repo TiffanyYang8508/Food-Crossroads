@@ -421,7 +421,7 @@ class Restaurant_list extends Component {
                                                         <span>{value.restaurant_category}</span>
                                                         <h4>{value.restaurant_name}</h4>
                                                         <h5>{value.restaurant_address}</h5>
-                                                        <span><i class="fas fa-star"></i> {value.restaurant_score}</span>
+                                                        <span><i className="fas fa-star"></i> {value.restaurant_score}</span>
                                                     </div>
                                                 </div>
                                             </a>

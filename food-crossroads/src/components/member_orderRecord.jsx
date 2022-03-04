@@ -79,26 +79,26 @@ class BookingRecord extends Component {
         </header>
 
         <aside id="member_aside">
-          <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
+          <div className="panel-group" id="accordion">
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <h4 className="panel-title">
                   <a href={`/member/${this.props.match.params.id}`}>會員資料</a>
                 </h4>
               </div>
             </div>
-            <div class="panel panel-default ">
-              <div class="panel-heading">
-                <h4 class="panel-title">
+            <div className="panel panel-default ">
+              <div className="panel-heading">
+                <h4 className="panel-title">
                   <a href={`/bookingmanagement/${this.props.match.params.id}`}>
                     訂位管理
                   </a>
                 </h4>
               </div>
             </div>
-            <div class="panel panel-default default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
+            <div className="panel panel-default default">
+              <div className="panel-heading">
+                <h4 className="panel-title">
                   <a href="#">訂餐管理</a>
                 </h4>
               </div>
@@ -108,31 +108,31 @@ class BookingRecord extends Component {
 
         <input type="checkbox" name="aside_menu_chk" id="aside_menu_chk" />
         <div id="mobile_member_aside">
-          <div class="panel-group" id="accordion">
-            <div class="panel panel-default default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
+          <div className="panel-group" id="accordion">
+            <div className="panel panel-default default">
+              <div className="panel-heading">
+                <h4 className="panel-title">
                   <a href="#">會員資料</a>
                 </h4>
               </div>
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <h4 className="panel-title">
                   <a href="booking_manage.html">訂位管理</a>
                 </h4>
               </div>
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <h4 className="panel-title">
                   <a href="order_manage.html">訂餐管理</a>
                 </h4>
               </div>
             </div>
           </div>
-          <label for="aside_menu_chk">
-            <i class="fas fa-angle-right"></i>
+          <label htmlFor="aside_menu_chk">
+            <i className="fas fa-angle-right"></i>
           </label>
         </div>
 
@@ -154,7 +154,7 @@ class BookingRecord extends Component {
                   </thead>
                   <tbody>
                     {this.state.List.map((item, index) => (
-                      <tr>
+                      <tr key={index}>
                         <td className="mobile_td">2022/03/07 </td>
                         <td className="mobile_td">{item.restaurant_name}</td>
                         <td className="mobile_td">
@@ -170,14 +170,14 @@ class BookingRecord extends Component {
                         <td>
                           <button className="together_btn">揪團明細</button>
                         </td>
-                        <div class="modal modal-groupdetail" tabIndex="0">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h4 class="modal-title">揪團明細</h4>
+                        <div className="modal modal-groupdetail" tabIndex="0">
+                          <div className="modal-dialog">
+                            <div className="modal-content">
+                              <div className="modal-header">
+                                <h4 className="modal-title">揪團明細</h4>
                               </div>
 
-                              <div class="groupdetail_modal">
+                              <div className="groupdetail_modal">
                                 姓名：李曉明
                                 <br />
                                 訂餐餐點：西西里海鹽柴魚脆薯 *1 <br />{" "}
@@ -206,10 +206,10 @@ class BookingRecord extends Component {
 
                               </div>
 
-                              <div class="modal-footer">
+                              <div className="modal-footer">
                                 <button
                                   type="button"
-                                  class="btn_close"
+                                  className="btn_close"
                                   data-dismiss="modal"
                                 >
                                   返回
@@ -247,15 +247,15 @@ class BookingRecord extends Component {
           </div>
         </div>
 
-        {this.state.List.map((item, idex) => (
-          <div class="modal modal-detail" tabIndex="0">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="modal-title">詳細訂單</h4>
+        {this.state.List.map((item, index) => (
+          <div key={index} className="modal modal-detail" tabIndex="0">
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h4 className="modal-title">詳細訂單</h4>
                 </div>
 
-                <div class="detail_modal">
+                <div className="detail_modal">
                   姓名：{item.user_name}
                   <br />
                   手機：{item.user_tel}
@@ -271,8 +271,8 @@ class BookingRecord extends Component {
                   <br />
                 </div>
 
-                <div class="modal-footer">
-                  <button type="button" class="btn_close" data-dismiss="modal">
+                <div className="modal-footer">
+                  <button type="button" className="btn_close" data-dismiss="modal">
                     返回
                   </button>
                 </div>
@@ -283,22 +283,22 @@ class BookingRecord extends Component {
 
         {this.state.List.map((item, index) => (
           <div key={index} id="order_record_mobile">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-12">
-                  <div class="table mobile_order_record">
-                    <div class="mobile_order_record_inline_div">
-                      <div class="mobile_text_div">
+            <div className="container-fluid">
+              <div className="row">
+                <div className="col-12">
+                  <div className="table mobile_order_record">
+                    <div className="mobile_order_record_inline_div">
+                      <div className="mobile_text_div">
                         <p>取餐日期:2022-03-07</p>
                         <p>訂餐餐廳:{item.restaurant_name}</p>
                         <p>訂餐編號:00002</p>
                       </div>
-                      <div class="mobile_div_text">
+                      <div className="mobile_div_text">
                         <p>訂餐時間:{item.order_date}</p>
                         <p>訂餐金額:564</p>
-                        <div class="mobile_btn_div">
+                        <div className="mobile_btn_div">
                           <button
-                            class="detail_btn"
+                            className="detail_btn"
                             data-toggle="modal"
                             data-target="#detailModal"
                           >
@@ -306,7 +306,7 @@ class BookingRecord extends Component {
                           </button>
                         </div>
                       </div>
-                      <button class="comment_btn">評價</button>
+                      <button className="comment_btn">評價</button>
                     </div>
                   </div>
                 </div>

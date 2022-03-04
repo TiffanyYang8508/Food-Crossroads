@@ -113,7 +113,7 @@ class Member extends Component {
               </div>
             </div>
           </div>
-          <label for="aside_menu_chk" className="aside_menu_chk">
+          <label htmlFor="aside_menu_chk" className="aside_menu_chk">
             <i className="fas fa-angle-right"></i>
           </label>
         </div>

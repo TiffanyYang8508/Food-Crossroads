@@ -159,7 +159,7 @@ class BookingRecord extends Component {
                   </thead>
                   <tbody>
                     {this.state.List.map((item, index) => (
-                      <tr>
+                      <tr key={index}>
                         <td className="mobile_td">{item.user_name}</td>
                         <td className="mobile_td">{item.restaurant_name}</td>
                         <td className="mobile_td">2022/03/07</td>
@@ -180,8 +180,8 @@ class BookingRecord extends Component {
                       </tr>
                     ))}
 
-                    {this.state.List.map((item, idex) => (
-                      <div class="modal modal-detail" tabIndex="-1">
+                    {this.state.List.map((item, index) => (
+                      <div key={index} class="modal modal-detail" tabIndex="-1">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">

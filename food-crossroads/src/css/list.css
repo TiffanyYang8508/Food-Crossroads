@@ -343,7 +343,7 @@
     }
     #search_list .tab_div {
         position: absolute;
-        top: 4.4%;
+        top: 4.2%;
         left: 29.6%;
         width: 44%;
     }
@@ -355,7 +355,7 @@
     }
     #search_list .chk_div {
         position: absolute;
-        top: 4.4%;
+        top: 4.2%;
         left: 44.2%;
         width: 44%;
     }
@@ -388,7 +388,7 @@
     }
     #search_list .tab_div {
         position: absolute;
-        top: 2.54%;
+        top: 2.4%;
         left: 28.4%;
         width: 56%;
     }
@@ -400,7 +400,7 @@
     }
     #search_list .chk_div {
         position: absolute;
-        top: 2.54%;
+        top: 2.4%;
         left: 28.2%;
         width: 56%;
     }
@@ -429,6 +429,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        margin-top: 80px;
     }
     #search_list .search_mobile_inline_div {
         background-color: #fff;
@@ -460,6 +461,7 @@
     }
     #search_list .turn_off {
         background-color: rgb(236, 236, 236);
+        font-size: 28px;
     }
     #search_list .mobile_inline_div {
         padding: 20px 50px 50px 50px;
