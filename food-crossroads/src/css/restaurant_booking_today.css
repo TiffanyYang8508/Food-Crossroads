@@ -256,7 +256,7 @@
 }
 
 #cancel .modal-header {
-    padding: 10px;
+    padding: 8px;
 }
 
 #cancel .modal-content .groupdetail_modal {
@@ -265,6 +265,10 @@
     margin-top: 10px;
     margin-bottom: 50px;
     height: 350px;
+}
+
+#cancel .modal-content .modal-title {
+    font-size: 30px;
 }
 
 #cancel .c_btn {

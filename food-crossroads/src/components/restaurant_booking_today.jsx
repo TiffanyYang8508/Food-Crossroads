@@ -222,7 +222,7 @@ class Restaurant_booking_today extends Component {
                                         </div>
                                     </tr>
                                 ))} */}
-                                <tr id="test"> 
+                                <tr id="test">
                                     <td>
                                         <input type="checkbox" />
                                     </td>
@@ -349,7 +349,7 @@ class Restaurant_booking_today extends Component {
                     <div className="modal-dialog">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h4 className="modal-title">詳細內容</h4>
+                                <h4 className="modal-title">是否確定取消？</h4>
                             </div>
                             <div className="groupdetail_modal">
                                 訂單編號： 00001 <br />
@@ -363,17 +363,17 @@ class Restaurant_booking_today extends Component {
                             <div className="modal-footer">
                                 <button
                                     type="button"
-                                    className="c_btn"
-                                    data-dismiss="modal"
-                                >
-                                    取消
-                                </button>
-                                <button
-                                    type="button"
                                     className="btn_close"
                                     data-dismiss="modal"
                                 >
                                     返回
+                                </button>
+                                <button
+                                    type="button"
+                                    className="c_btn"
+                                    data-dismiss="modal"
+                                >
+                                    確定
                                 </button>
                             </div>
                         </div>

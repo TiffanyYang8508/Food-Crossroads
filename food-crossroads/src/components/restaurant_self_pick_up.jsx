@@ -139,6 +139,7 @@ class Restaurant_booking_history extends Component {
                                     <th>訂餐人</th>
                                     <th>手機</th>
                                     <th></th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -160,6 +161,11 @@ class Restaurant_booking_history extends Component {
                                             詳細內容
                                         </button>
                                     </td>
+                                    <td>
+                                        <button className="cancel_btn" id='the'>
+                                            取消
+                                        </button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -177,6 +183,11 @@ class Restaurant_booking_history extends Component {
                                     <td>
                                         <button className="detail_btn" id='group'>
                                             詳細內容
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button className="cancel_btn" id='the' >
+                                            取消
                                         </button>
                                     </td>
                                 </tr>
@@ -257,18 +268,17 @@ class Restaurant_booking_history extends Component {
                                 <h4 class="modal-title">詳細訂單</h4>
                             </div>
                             <div class="groupdetail_modal">
-                                訂單編號： 00002 <br />
-                                名稱：李曉明 <br />
-                                西西里海鹽柴魚脆薯 *1   188 <br />
-                                蕃茄羅勒起司搭頂級陳年油醋*2   188 <br />
-                                <br />
-                                名稱：郭美美 <br />
-                                西西里海鹽柴魚脆薯*1  加辣  188 <br />
-                                南義炸起司條*1  288 <br />
-                                <br />
-                                名稱：陳家欣 <br />
-                                田園香橙鮮蝦蘿蔓鮮蔬*1  318 <br />
-                                水相主廚私房湯品*1  不要加蔥  288 <br />
+                                姓名： 李曉明 <br />
+                                手機： 0987654321 <br />
+                                訂餐編號：00001 <br />
+                                餐點： <br />
+                                西西里海鹽柴魚脆薯 *2 共376 <br />
+                                蕃茄羅勒起司搭頂級陳年油醋 *2 共376 <br />
+                                南義炸起司條 *1 共288 <br />
+                                田園香橙鮮蝦蘿蔓鮮蔬 *1 共318 <br />
+                                水相主廚私房湯品 *1 不要加蔥 共288 <br />
+                                總金額 1646 <br />
+                                訂餐時間：3/7（一） 下午6：00 <br />
                             </div>
 
                             <div class="modal-footer">
