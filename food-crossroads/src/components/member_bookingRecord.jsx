@@ -277,7 +277,6 @@ class BookingRecord extends Component {
           </div>
         </div>
 
-<<<<<<< HEAD
         <div id="mobile_booking_record">
           <div className="container-fluid">
             <div className="row">
@@ -369,10 +368,6 @@ class BookingRecord extends Component {
           </div>
         </div>
 
-
-
-=======
->>>>>>> ccded335dc6a2e67a27c1b721b838e83fe4ac08b
         <footer className="footer_page">
           <Footer />
         </footer>
