@@ -51,101 +51,64 @@
 /* 側邊欄 end */
 
 #edit_member {
-  margin-top: 60px;
-    display: flex;
+  display: flex;
   justify-content: center;
   margin-top: 2%;
   width: 100%;
 }
 
-#edit_member .title_member {
-  font-size: 35px;
-  font-weight: bold;
-  text-align: center;
-  margin-left: 30px;
-}
-
 #edit_member .member_div {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
   align-items: center;
+  border: 1px solid #403c3c;
   border-radius: 5px;
-  padding: 20px 0;
+  padding: 20px 50px;
   width: 40%;
-  height: 600px;
 }
 
-#edit_member .form_text {
-  font-size: 16px;
-  letter-spacing: 10px;
-}
-
-#edit_member .editedit_member {
-  margin-left: 40px;
+#edit_member .title_member_edit {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
 }
 
 #edit_member .form-control {
   width: 300px;
 }
 
-#edit_member .btn_div {
+#edit_member .edit_btn_div {
   width: 100%;
   display: flex;
   justify-content: center;
-  text-align: center;
-}
-#edit_member .btn_div a {
-  text-decoration: none;
-  color: #fff;
+  margin: 10% 0;
 }
 
-#edit_member .member_editpwd_btn {
-  border-radius: 5px;
-  margin-top: 30px;
-  padding-top: 6px;
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  font-size: 18px;
-  border: none;
+#edit_member .member_back_btn{
   background-color: #403c3c;
-  transition: 0.3s;
-}
-
-#edit_member .member_editpwd_btn {
-  border-radius: 5px;
-  margin-top: 30px;
-  padding-top: 6px;
-  margin-left: 40px;
-  width: 150px;
+  width: 40%;
   height: 40px;
+  border-radius: 5px;
   color: #fff;
-  font-size: 18px;
-  border: none;
-  background-color: #403c3c;
   transition: 0.3s;
+  margin-right: 20px;
 }
 
-#edit_member .member_editpwd_btn:hover {
+#edit_member .member_back_btn:hover{
   background-color: #524d4d;
 }
 
-#edit_member .member_editinfo_btn {
-  border-radius: 5px;
-  margin-top: 30px;
-  padding-top: 0px;
-  margin-left: 40px;
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  font-size: 18px;
-  border: none;
+#edit_member .member_confirm_btn{
   background-color: #8b1309;
+  width: 40%;
+  height: 40px;
+  border-radius: 5px;
+  color: #fff;
   transition: 0.3s;
+  margin-left: 20px;
 }
 
-#edit_member .member_editinfo_btn:hover {
+#edit_member .member_confirm_btn:hover{
   background-color: #a30f01;
 }
 
@@ -206,30 +169,62 @@
     transition: 0.3s;
     width: 100%;
   }
+  #edit_member .member_div {
+    width: 50%;
+    margin-top: 4%;
+  }
+  
+  #edit_member .form-control {
+    width: 70%;
+  }
 }
 
 /* 大型螢幕 */
 
 @media screen and (max-width: 992px) {
-
+  #edit_member .member_div {
+    padding: 20px 60px;
+    width: 60%;
+  }
 }
 
 /* 平板 */
 
 @media screen and (max-width: 768px) {
+  #edit_member .member_div {
+    padding: 20px 20px;
+    width: 80%;
+  }
   
+  #edit_member .form-control {
+    width: 100%;
+  }
 }
 
 /* 手機 */
 
 @media screen and (max-width: 576px) {
-
+  #edit_member .member_div {
+    padding: 20px 5px;
+  }
+  
+  #edit_member .form-control {
+    width: 100%;
+  }
+  #edit_member .member_back_btn{
+    margin-right: 5px;
+  }
 }
 
 /* 小手機 */
 
 @media screen and (max-width: 480px) {
-  
+  #edit_member .title_member_edit{
+    font-size: 24px;
+  }
+  #edit_member .edit_label{
+    font-size: 14px;
+  }
 }
 
 /* RWD end */

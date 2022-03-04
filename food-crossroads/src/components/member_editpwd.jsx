@@ -175,11 +175,11 @@ class EditMemberpwd extends Component {
                       name="pwd"
                       required
                     />
-                    <div className="invalid-feedback">輸入新密碼</div>
+                    <div className="invalid-feedback">輸入新密碼:</div>
                   </div>
                   <div className="form-group form-inline">
                     <label for="confirmpwd" className="edit_label">
-                      輸入新密碼
+                      輸入新密碼:
                     </label>
                     <input
                       type="password"
@@ -193,7 +193,7 @@ class EditMemberpwd extends Component {
                   </div>
                   <div className="form-group form-inline">
                     <label for="confirmpwd" className="edit_label">
-                      確認新密碼
+                      確認新密碼:
                     </label>
                     <input
                       type="password"

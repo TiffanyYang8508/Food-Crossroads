@@ -51,38 +51,26 @@
 /* 側邊欄 end */
 
 #member_info {
-  margin-top: 60px;
-    display: flex;
+  display: flex;
   justify-content: center;
   margin-top: 2%;
   width: 100%;
+}
+
+#member_info .member_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #403c3c;
+  border-radius: 5px;
+  padding: 20px 50px;
+  width: 40%;
 }
 
 #member_info .title_member {
   font-size: 35px;
   font-weight: bold;
   text-align: center;
-  margin-left: 30px;
-}
-
-#member_info .member_div {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  align-items: center;
-  border-radius: 5px;
-  padding: 20px 0;
-  width: 40%;
-  height: 600px;
-}
-
-#member_info .form_text {
-  font-size: 16px;
-  letter-spacing: 10px;
-}
-
-#member_info .editmember_info {
-  margin-left: 40px;
 }
 
 #member_info .form-control {
@@ -93,36 +81,18 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  text-align: center;
+  margin: 10% 0;
 }
-#member_info .btn_div a {
-  text-decoration: none;
-  color: #fff;
+
+#member_info .btn_div a{
+  width: 100%;
 }
 
 #member_info .member_editpwd_btn {
   border-radius: 5px;
-  margin-top: 30px;
-  padding-top: 6px;
-  width: 150px;
   height: 40px;
+  width: 90%;
   color: #fff;
-  font-size: 18px;
-  border: none;
-  background-color: #403c3c;
-  transition: 0.3s;
-}
-
-#member_info .member_editpwd_btn {
-  border-radius: 5px;
-  margin-top: 30px;
-  padding-top: 6px;
-  margin-left: 40px;
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  font-size: 18px;
-  border: none;
   background-color: #403c3c;
   transition: 0.3s;
 }
@@ -133,14 +103,10 @@
 
 #member_info .member_editinfo_btn {
   border-radius: 5px;
-  margin-top: 30px;
-  padding-top: 0px;
-  margin-left: 40px;
-  width: 150px;
+  margin-left: 20px;
+  width: 90%;
   height: 40px;
   color: #fff;
-  font-size: 18px;
-  border: none;
   background-color: #8b1309;
   transition: 0.3s;
 }
@@ -206,30 +172,62 @@
     transition: 0.3s;
     width: 100%;
   }
+  #member_info .member_div {
+    width: 50%;
+    margin-top: 4%;
+  }
+  
+  #member_info .form-control {
+    width: 70%;
+  }
 }
 
 /* 大型螢幕 */
 
 @media screen and (max-width: 992px) {
-
+  #member_info .member_div {
+    padding: 20px 60px;
+    width: 60%;
+  }
 }
 
 /* 平板 */
 
 @media screen and (max-width: 768px) {
+  #member_info .member_div {
+    padding: 20px 20px;
+    width: 80%;
+  }
   
+  #member_info .form-control {
+    width: 100%;
+  }
 }
 
 /* 手機 */
 
 @media screen and (max-width: 576px) {
-
+  #member_info .member_div {
+    padding: 20px 5px;
+  }
+  
+  #member_info .form-control {
+    width: 100%;
+  }
+  #member_info .member_back_btn{
+    margin-right: 5px;
+  }
 }
 
 /* 小手機 */
 
 @media screen and (max-width: 480px) {
-  
+  #member_info .title_member_edit{
+    font-size: 24px;
+  }
+  #member_info .edit_label{
+    font-size: 14px;
+  }
 }
 
 /* RWD end */

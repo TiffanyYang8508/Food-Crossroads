@@ -4,31 +4,24 @@
   box-sizing: border-box;
 }
 
-#membercancelbooking .div_content {
-  background-color: black;
-}
-
-.cancel_container {
-  width: 880px;
+#membercancelbooking{
+  width: 80%;
   background-color: #b5b4b477;
   display: flex;
   justify-content: center;
-  margin: 120px auto;
+  margin: 90px auto;
   padding: 20px 0;
   border-radius: 5px;
-  /* border: 2px solid red; */
 }
 
-.cancel_form_show {
-  /* border: 6px dashed orchid; */
+#membercancelbooking .cancel_form_show {
   text-align: center;
   font-size: 32px;
   font-weight: bold;
   margin: 12px auto;
 }
 
-.form_container_cancel_wrapper {
-  /* border: 2px solid darkblue; */
+#membercancelbooking .form_container_cancel_wrapper {
   width: 300px;
   height: 280px;
   font-size: 18px;
@@ -40,40 +33,88 @@
   align-items: center;
 }
 
-#membercancelbooking div.btn_container_cancel {
+#membercancelbooking div .btn_container_cancel {
   display: flex;
   flex-direction: row;
-  padding: 10px 10px;
+  padding: 10px 0;
   margin: 10px auto;
-  /* border: 2px solid black; */
+}
+
+#membercancelbooking .btn_container_cancel a{
+  width: 100%;
 }
 
 #membercancelbooking .cancel_btn_manage {
-  width: 200px;
+  width: 80%;
   height: 40px;
   border-radius: 5px;
   font-size: 20px;
   font-weight: 600;
   color: #fff;
-  background-color: #313030;
+  background-color: #403c3c;
   margin: 0 30px;
+  transition: 0.3s;
 }
 
 #membercancelbooking .cancel_btn_ok {
-  width: 200px;
+  width: 80%;
   height: 40px;
   border-radius: 5px;
   font-size: 20px;
   font-weight: 600;
   color: #fff;
   background-color: #8b1309;
+  transition: 0.3s;
 }
+
 #membercancelbooking .cancel_btn_manage:hover {
-  background-color: #424141;
-  font-size: 22px;
+  background-color: #524d4d;
 }
+
 #membercancelbooking .cancel_btn_ok:hover {
-  background-color: #f04535;
-  font-size: 22px;
+  background-color: #a30f01;
 }
 /* ---------- body over ---------- */
+
+
+/* RWD start */
+
+/* 超大型螢幕 */
+
+@media screen and (max-width: 1200px) {
+  
+}
+
+/* 大型螢幕 */
+
+@media screen and (max-width: 992px) {
+  
+}
+
+/* 平板 */
+
+@media screen and (max-width: 768px) {
+  
+}
+
+/* 手機 */
+
+@media screen and (max-width: 576px) {
+  #membercancelbooking{
+    width: 100%;
+    background-color: #b5b4b477;
+    display: flex;
+    justify-content: center;
+    margin: 90px auto;
+    padding: 20px 0;
+    border-radius: 5px;
+  }
+}
+
+/* 小手機 */
+
+@media screen and (max-width: 480px) {
+
+}
+
+/* RWD end */

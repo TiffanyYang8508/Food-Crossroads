@@ -224,6 +224,8 @@ class EditMember extends Component {
           </div>
         </section>
 
+        <div className="blank"></div>
+
         <footer className="footer_page">
           <Footer />
         </footer>

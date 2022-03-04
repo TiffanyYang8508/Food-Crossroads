@@ -171,11 +171,11 @@ class BookingRecord extends Component {
                           <a href={`/cancelbooking/${item.booking_id}`}>
                             <button className="cancel_btn">取消訂位</button>
                           </a>
+                        </td>
+                        <td>
                           <button className="detail_btn" id="detail_btn">
                             詳細訂單
                           </button>
-                        </td>
-                        <td>
                         </td>
                       </tr>
                     ))}
@@ -231,6 +231,8 @@ class BookingRecord extends Component {
                         >
                           取消訂位
                         </button>
+                      </td>
+                      <td class="btn_td">
                         <button
                           class="detail_btn"
                           data-toggle="modal"
@@ -238,9 +240,6 @@ class BookingRecord extends Component {
                         >
                           詳細訂單
                         </button>
-                      </td>
-                      <td>
-                     
                       </td>
                     </tr>
                     <tr id="cancel">
@@ -258,6 +257,8 @@ class BookingRecord extends Component {
                         >
                           取消訂位
                         </button>
+                      </td>
+                      <td class="btn_td">
                         <button
                           class="detail_btn"
                           data-toggle="modal"
@@ -265,9 +266,6 @@ class BookingRecord extends Component {
                         >
                           詳細訂單
                         </button>
-                      </td>
-                      <td>
-                    
                       </td>
                     </tr>
                   </tbody>

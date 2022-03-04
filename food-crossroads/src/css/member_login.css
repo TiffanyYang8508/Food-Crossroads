@@ -8,7 +8,7 @@
 }
 
 /* ---------- body start ---------- */
-.member_login_container {
+#member_login .member_login_container {
     width: 440px;
     height: 58vh;
     margin: 100px auto;
@@ -22,7 +22,7 @@
     font-weight: bold;
 }
 
-.member_login_title {
+#member_login .member_login_title {
     /* border: 2px solid lightpink; */
     font-size: 28px;
     width: 100%;
@@ -30,12 +30,12 @@
     margin: 10px 0;
 }
 
-.form-group {
+#member_login .form-group {
     margin: 10px 0;
     padding: 10px 0;
 }
 
-.form-group > input {
+#member_login .form-group > input {
     /* border: 4px dotted blue; */
     width: 300px;
     height: 40px;
@@ -43,7 +43,7 @@
     text-align: center;
 }
 
-.btn_member_login {
+#member_login .btn_member_login {
     background-color: #8b1309;
     color: #fff;
     font-size: 18px;
@@ -53,11 +53,11 @@
     transition: 0.3s;
 }
 
-.btn_member_login:hover {
+#member_login .btn_member_login:hover {
     background-color: #a30f01;
 }
 
-.btn_register {
+#member_login .btn_register {
     background-color: #313030;
     color: #fff;
     font-size: 18px;
@@ -67,11 +67,11 @@
     transition: 0.3s;
 }
 
-.btn_register:hover {
+#member_login .btn_register:hover {
     background-color: #524d4d;
 }
 
-.form-group .span_container {
+#member_login .form-group .span_container {
     /* border: 1px solid black; */
     width: 100%;
     font-size: 20px;
@@ -80,19 +80,19 @@
     justify-content: space-around;
 }
 
-.forgot a{
+#member_login .forgot a{
     text-decoration: none;
     font-size: 16px;
     position: relative;
     right: 28px;
 }
 
-.forgot input {
+#member_login .forgot input {
     position: relative;
     left: 28px;
 }
 
-.forgot span {
+#member_login .forgot span {
     font-size: 16px;
     position: relative;
     bottom: 4px;
@@ -104,7 +104,7 @@
     height: 20px;
 }
 
-.reportSpan {
+#member_login .reportSpan {
     /* background-color: palegoldenrod; */
     position: absolute;
     top: 320px;
@@ -138,7 +138,7 @@
 /* 平板 */
 
 @media screen and (max-width:768px) {
-    .member_login_container{
+    #member_login .member_login_container{
         margin: 10px auto;
     }
 }
@@ -147,7 +147,7 @@
 /* 手機 */
 
 @media screen and (max-width:576px) {
-    .member_login_container{
+    #member_login .member_login_container{
         margin: 80px auto;
     }
 }

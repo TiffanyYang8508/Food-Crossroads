@@ -167,9 +167,9 @@ class BookingRecord extends Component {
                         <td className="order_td">
                           <button className="detail_btn">詳細訂單</button>
                         </td>
-
-                     
-                        <button className="together_btn">揪團明細</button>
+                        <td>
+                          <button className="together_btn">揪團明細</button>
+                        </td>
                         <div class="modal modal-groupdetail" tabIndex="0">
                           <div class="modal-dialog">
                             <div class="modal-content">
@@ -220,7 +220,7 @@ class BookingRecord extends Component {
                         </div>
                       </tr>
                     ))}
-                     <tr>
+                    <tr>
                       <td className="mobile_td">2022/03/07 </td>
                       <td className="mobile_td">aqua水相餐廳</td>
                       <td className="mobile_td">西西里海鹽柴魚脆薯 <br />蕃茄羅勒起司搭頂級陳年油醋</td>
@@ -229,8 +229,6 @@ class BookingRecord extends Component {
                       <td className="order_td">
                         <button className="detail_btn">詳細訂單</button>
                       </td>
-
-              
                     </tr>
                     <tr>
                       <td className="mobile_td">2022/02/24 </td>
@@ -241,8 +239,6 @@ class BookingRecord extends Component {
                       <td className="order_td">
                         <button className="detail_btn">詳細訂單</button>
                       </td>
-
-              
                     </tr>
                   </tbody>
                 </table>
@@ -285,38 +281,40 @@ class BookingRecord extends Component {
           </div>
         ))}
 
-          {this.state.List.map((item,idex) =>(
-            <div id="mobile_order_manage">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12">
-                <div class="table mobile_order_div">
-                  <div class="mobile_order_inline_div">
-                    <div class="mobile_text_div">
-                      <p>取餐日期:2022-03-07</p>
-                      <p>訂餐餐廳:{item.restaurant_name}</p>
-                      <p>訂餐編號:00002</p>
-                      <p>訂餐時間:{item.order_date}</p>
-                      <p>訂餐金額:564</p>
-                      <div class="mobile_btn_div">
-                        <button
-                          class="detail_btn"
-                          data-toggle="modal"
-                          data-target="#detailModal"
-                        >
-                          詳細訂單
-                        </button>
-                        <button class="comment_btn">評價</button>
+        {this.state.List.map((item, index) => (
+          <div key={index} id="order_record_mobile">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  <div class="table mobile_order_record">
+                    <div class="mobile_order_record_inline_div">
+                      <div class="mobile_text_div">
+                        <p>取餐日期:2022-03-07</p>
+                        <p>訂餐餐廳:{item.restaurant_name}</p>
+                        <p>訂餐編號:00002</p>
                       </div>
+                      <div class="mobile_div_text">
+                        <p>訂餐時間:{item.order_date}</p>
+                        <p>訂餐金額:564</p>
+                        <div class="mobile_btn_div">
+                          <button
+                            class="detail_btn"
+                            data-toggle="modal"
+                            data-target="#detailModal"
+                          >
+                            詳細訂單
+                          </button>
+                        </div>
+                      </div>
+                      <button class="comment_btn">評價</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-          ))}
-        
+        ))}
+
 
         <footer className="footer_page">
           <Footer />

@@ -63,51 +63,32 @@
   color: #fff;
 }
 
-#booking_record .table_container {
-  width: 100%;
-}
-
 /* booking_manage start */
-
-#booking_record {
-  position: fixed;
-  top: 10%;
-  left: 16%;
-  width: 80%;
-  height: 100%;
-  margin-left: 12%;
-}
 
 #mobile_booking_record{
   display: none;
 }
 
-#booking_record .table th {
-  border-bottom: 1px solid #403c3c;
+#booking_record {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  margin-left: 20%;
 }
 
-#booking_manage .table th {
-  width: 10%;
+#booking_record .table th {
+  font-weight: bolder;
+  font-size: 22px;
+  text-align: center;
+  border-bottom: 1px solid #403c3c;
+  width: 80px;
 }
 
 #booking_record td {
-  vertical-align: middle;
   text-align: center;
-}
-
-#booking_record .detail_modal_body {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 0px;
-  font-size: 20px;
-}
-
-#booking_record .detail_modal {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 80px;
-  font-size: 20px;
-  font-weight: 600;
+  width: 80px;
+  vertical-align: middle;
 }
 
 #booking_record .cancel_btn,
@@ -123,16 +104,14 @@
 
 #booking_record .table_title {
   position: relative;
-  right: 0px;
 }
 
 #booking_record .btn_td {
-  width: 10%;
+  /* width: 10%; */
 }
 
 #booking_record .cancel_btn {
   background-color: #cacaca;
-  margin-right: 2%;
 }
 
 #booking_record .cancel_btn:hover {
@@ -162,6 +141,23 @@
   color: #fff;
 }
 
+#booking_record .detail_modal_body {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+  font-size: 20px;
+}
+
+#booking_record .detail_modal {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 80px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+
 #booking_record .btn_close {
   font-size: 18px;
   background-color: #403c3c;
@@ -178,7 +174,7 @@
 /* 超大型螢幕 */
 
 @media screen and (max-width: 1200px) {
-  .aside_menu {
+  #member_aside {
     display: none;
   }
   #aside_menu_chk:checked + .mobile_aside_menu {
@@ -231,40 +227,49 @@
     width: 100%;
   }
   #booking_record{
-    left: 0;
-    width: 100%;
+    margin-left: 5%;
+    width: 90%;
   }
-  #booking_record .table th {
-    border-bottom: 1px solid #403c3c;
-    width: 8%;
+  #booking_record th{
+    font-size: 14px;
   }
-  #booking_record{
-    width: 100%;
-    margin-left: 0%;
+  #booking_record td{
+    font-size: 10px;
+  }
+  #booking_record .cancel_modal_body{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 28px;
+  }
+  #booking_record .modal-title{
+    font-size: 24px; 
+  }
+  #booking_record .detail_modal_body{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+    font-size: 18px;
+  }
+  #booking_record .rank_modal_body{
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 150px;
+  }
+  #booking_record .rank_modal_title{
+    position: absolute;
+    font-size: 28px;
+    left: -50px;
+    top: -40px;
   }
 }
 
 /* 大型螢幕 */
 
 @media screen and (max-width: 992px) {
-  #booking_record .mobile_td {
-    height: 90px;
-    line-height: 60px;
-  }
-  #booking_record .cancel_btn {
-    margin-right: 19%;
-  }
-  #booking_record .detail_btn {
-    margin-right: 18%;
-  }
-  #booking_record .comment_btn {
-    margin-top: 15px;
-  }
-  #booking_record .order_td {
-    width: 15%;
-  }
-  #booking_record .order_td .detail_btn {
-    margin-top: 15px;
+  #booking_record tbody .detail_btn,#booking_record .modal-footer .detail_btn{
+    font-size: 10px;
   }
 }
 
@@ -300,65 +305,46 @@
   #mobile_booking_record .comment_btn {
     margin: 5px;
     height: 33%;
+    border-radius: 5px;
+    transition: 0.3s;
   }
-  #mobile_order_manage .detail_btn,
-  #mobile_booking_record .comment_btn {
-    margin: 5px;
-    height: 30%;
+  #mobile_booking_record .cancel_btn{
+    background-color: #403c3c;
+    color: #fff;
   }
-  #mobile_order_manage .mobile_btn_div {
-    margin-top: 5%;
+  #mobile_booking_record .cancel_btn:hover{
+    background-color: #524d4d;
+    color: #fff;
   }
-  #mobile_booking_record .mobile_order_inline_div:last-child {
-    margin-bottom: 100px;
+  #mobile_booking_record .detail_btn{
+    border: 2px solid #403c3c;
+    background-color: #fff;
+  }
+  #mobile_booking_record .detail_btn:hover{
+    background-color: #403c3c;
+    color: #fff;
+  }
+  #mobile_booking_record .comment_btn{
+    background-color: #8b1309;
+    color: #fff;
+  }
+  #mobile_booking_record .comment_btn:hover{
+    background-color: #a30f01;
   }
 }
 
 /* 手機 */
 
 @media screen and (max-width: 576px) {
-  #booking_record .table th,
-  #booking_record td {
-    width: 15%;
+  #mobile_booking_record{
+    font-size: 13px;
   }
 }
 
 /* 小手機 */
 
 @media screen and (max-width: 480px) {
-  .default_container {
-    height: auto;
-  }
-  #booking_record .table th,
-  #booking_record td {
-    width: 3%;
-  }
-  #booking_record .btn_td {
-    width: 5%;
-  }
-  #mobile_booking_record .mobile_td {
-    height: 35px;
-    line-height: 35px;
-  }
-  #mobile_booking_record .mobile_order_inline_div {
-    margin-bottom: 20px;
-    height: 20%;
-    width: 100%;
-    position: static;
-  }
-  #mobile_booking_record .mobile_btn_div {
-    position: static;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: 20%;
-  }
-  #mobile_booking_record .cancel_btn,
-  #mobile_booking_record .detail_btn,
-  #mobile_booking_record .comment_btn {
-    width: 33%;
-  }
+  
 }
 
 /* RWD end */
