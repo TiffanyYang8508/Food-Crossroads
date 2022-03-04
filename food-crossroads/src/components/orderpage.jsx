@@ -624,8 +624,8 @@ class Orderpage extends Component {
                                 <div className="modal-content">
                                     <div className="modal-header">
                                         <h3 className="modal-title" id="order_group_modal_title">是否開啟揪團功能？</h3><br />
-                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span
-                                            aria-hidden="true">&times;</span></button>
+                                        {/* <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button> */}
                                     </div>
                                     <div className="modal-body">
                                         <h5>開啟揪團功能<br />即可分享點餐連結給好友們一同訂餐！</h5>
@@ -644,8 +644,8 @@ class Orderpage extends Component {
                                     <div className="modal-content">
                                         <div className="modal-header">
                                             <h3 className="modal-title" id="order_group_modal_title">是否開啟揪團功能？</h3><br />
-                                            <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span
-                                                aria-hidden="true">&times;</span></button>
+                                            {/* <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span
+                                                aria-hidden="true">&times;</span></button> */}
                                         </div>
                                         <div className="modal-body">
                                             <h5>開啟揪團功能<br />即可分享點餐連結給好友們一同訂餐！</h5>
@@ -664,8 +664,8 @@ class Orderpage extends Component {
                                     <div className="modal-content">
                                         <div className="modal-header">
                                             <h3 className="modal-title" id="group_on_modal_title">已開啟</h3><br />
-                                            <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span
-                                                aria-hidden="true">&times;</span></button>
+                                            {/* <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span
+                                                aria-hidden="true">&times;</span></button> */}
                                         </div>
                                         <div className="modal-body d-flex flex-column">
                                             <h5>分享你的連結！！</h5>

@@ -347,6 +347,14 @@ margin-left: 10vw;
   display: none;
 }
 
+/* #order_page .order_group_modal{
+    background-color: black;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+
+} */
+
 @media screen and (max-width:768px) {
     #order_page #table_order{
     width: 100%;
