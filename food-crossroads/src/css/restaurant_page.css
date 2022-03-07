@@ -417,7 +417,7 @@ div.flex1 {
     font-size: 24px;
 }
 
-.modal_menu {
+#restaurant_page .modal_menu {
     z-index: 3;
     display: none;
     padding-top: 40px;
@@ -431,7 +431,7 @@ div.flex1 {
     background-color: rgba(0,0,0,0.4);
 }
 
-.modal_content_menu {
+#restaurant_page .modal_content_menu {
     border-radius: 5px;
     margin: auto;
     /* background-color: #fff; */
@@ -442,11 +442,11 @@ div.flex1 {
     height: 600px;
 }
 
-.modal_content_menu .container_menu img {
+#restaurant_page .modal_content_menu .container_menu img {
     width: 100%;
 }
 
-.modal-comment {
+#restaurant_page .modal-comment {
     z-index: 3;
     display: none;
     padding-top: 100px;
@@ -461,11 +461,11 @@ div.flex1 {
     background-color: rgba(0,0,0,0.4);
 }
 
-.modal-title {
+#restaurant_page .modal-title {
     margin: 10px auto;
 }
 
-.modal-body {
+#restaurant_page .modal-body {
     left: 60px;
 }
 
