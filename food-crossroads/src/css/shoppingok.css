@@ -160,9 +160,9 @@
 /* 手機 */
 
 @media screen and (max-width:576px) {
-  #shopping {
+  /* #shopping {
       display: none;
-  }
+  } */
   #mobile_shopping {
       all: unset;
   }

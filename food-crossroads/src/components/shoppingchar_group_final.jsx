@@ -207,18 +207,18 @@ class Shoppingchar_group_final extends Component {
                           <span id="ordername" className="ordername">西西里海鹽柴魚脆薯</span>
                         </td>
                         <td className="p-price">
-                          <span className="price">$376</span>
+                          <span className="price">$188</span>
                         </td>
                         <td className="p-num">
 
                           <span className="qty-squre ">
                             <input id="qtyminus" type="button" value="-" className="qty-btn decrement" />
-                            <input type="text" value='2' className="qty itxt" name="quantity" />
+                            <input type="text" value='6' className="qty itxt" name="quantity" />
                             <input id="qtyplus" type="button" value="+" className="qty-btn increment" />
                           </span>
                         </td>
                         <td className=" p-sum">
-                          <span id="sum">$188</span>
+                          <span id="sum">$1128</span>
                         </td>
                         <td class="delete-shopping">
                           <div>
@@ -268,10 +268,10 @@ class Shoppingchar_group_final extends Component {
                           <img src={Order_picture} class="img-fluid img-thumbnail" alt="" />
                         </td>
                         <td>
-                          <span id="ordername" class="ordername">田園香澄鮮蝦蘿蔓鮮蔬</span>
+                          <span id="ordername" class="ordername">巴黎小甜心</span>
                         </td>
                         <td class="p-price">
-                          <span class="price">$318</span>
+                          <span class="price">$128</span>
                         </td>
                         <td class="p-num">
 
@@ -282,69 +282,7 @@ class Shoppingchar_group_final extends Component {
                           </span>
                         </td>
                         <td class=" p-sum">
-                          <span id="sum">$318</span>
-                        </td>
-                        <td class="delete-shopping" id="i-want-delete">
-                          <div>
-                            <span><i className="fas fa-trash"></i></span>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="shopping-row" id="shopping-row">
-                        <td>
-                          <input class="shopping-checkbox checkmark single_checkbox" id="shopping-checkbox" type="checkbox"
-                            name="shopping-checkbox" />
-                        </td>
-                        <td class="wrapper">
-                          <img src={Order_picture} class="img-fluid img-thumbnail" alt="" />
-                        </td>
-                        <td>
-                          <span id="ordername" class="ordername">南義炸起司條</span>
-                        </td>
-                        <td class="p-price">
-                          <span class="price">$288</span>
-                        </td>
-                        <td class="p-num">
-
-                          <span class="qty-squre ">
-                            <input id="qtyminus" type="button" value="-" class="qty-btn decrement" />
-                            <input type="text" value='1' class="qty itxt" name="quantity" />
-                            <input id="qtyplus" type="button" value="+" class="qty-btn increment" />
-                          </span>
-                        </td>
-                        <td class=" p-sum">
-                          <span id="sum">$288</span>
-                        </td>
-                        <td class="delete-shopping" id="i-want-delete">
-                          <div>
-                            <span><i className="fas fa-trash"></i></span>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="shopping-row" id="shopping-row">
-                        <td>
-                          <input class="shopping-checkbox checkmark single_checkbox" id="shopping-checkbox" type="checkbox"
-                            name="shopping-checkbox" />
-                        </td>
-                        <td class="wrapper">
-                          <img src={Order_picture} class="img-fluid img-thumbnail" alt="" />
-                        </td>
-                        <td>
-                          <span id="ordername" class="ordername">水相主廚私房湯品</span>
-                        </td>
-                        <td class="p-price">
-                          <span class="price">$288</span>
-                        </td>
-                        <td class="p-num">
-
-                          <span class="qty-squre ">
-                            <input id="qtyminus" type="button" value="-" class="qty-btn decrement" />
-                            <input type="text" value='1' class="qty itxt" name="quantity" />
-                            <input id="qtyplus" type="button" value="+" class="qty-btn increment" />
-                          </span>
-                        </td>
-                        <td class=" p-sum">
-                          <span id="sum">$288</span>
+                          <span id="sum">$128</span>
                         </td>
                         <td class="delete-shopping" id="i-want-delete">
                           <div>
@@ -356,7 +294,7 @@ class Shoppingchar_group_final extends Component {
                   </table>
                 </div>
 
-                <div id="mobile_shopping">
+                {/* <div id="mobile_shopping">
                   <div className="container-fluid">
                     <div className="row">
                       <div className="col-12">
@@ -386,7 +324,7 @@ class Shoppingchar_group_final extends Component {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="all-squre" id="all-squre">
                   <label className="media">
@@ -395,8 +333,8 @@ class Shoppingchar_group_final extends Component {
                     <span className="media-body">全選</span>
                   </label>
                   <p>
-                    <b class='price-sum'>總金額:$1,646</b><br />
-                    <b><span class="amount-sum">(7個商品)</span></b>
+                    <b class='price-sum'>總金額:$1632</b><br />
+                    <b><span class="amount-sum">(9個商品)</span></b>
                   </p>
                   <Link to="./shoppingok_group_final">
                     <button className="buy-btn">
@@ -407,62 +345,9 @@ class Shoppingchar_group_final extends Component {
               </div>
             </div>
           </div>
-
-
-
         </div >
 
-        <div id="mobile_shopping">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-12">
-                <div className="mobile_shopping_div">
-                  <input
-                    className="shopping-checkbox checkmark"
-                    id="shopping-checkbox"
-                    type="checkbox"
-                    name="shopping-checkbox"
-                  />
-                  <div className="mobile_shopping_img">
-                    <img
-                      src="img/image_shoppingchar/imge01.jpeg"
-                      className="img-fluid img-thumbnail"
-                      alt=""
-                    />
-                  </div>
-                  <div className="mobile_shopping_text">
-                    <span className="mobile_span">餐點名</span>
-                    <span className="mobile_span">$123</span>
-                    <span className="qty-squre">
-                      <input
-                        id="qtyminus"
-                        type="button"
-                        value="-"
-                        className="qty-btn"
-                      />
-                      <input
-                        type="text"
-                        value="1"
-                        className="qty"
-                        name="quantity"
-                      />
-                      <input
-                        id="qtyplus"
-                        type="button"
-                        value="+"
-                        className="qty-btn"
-                      />
-                    </span>
-                    <span className="mobile_span">總額:$1234</span>
-                  </div>
-                  <div className="mobile_delete">
-                    <button>刪除</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
 
         {/* 確定刪除modal */}
         <div class="modal delete_comfirm " id="delete_comfirm">

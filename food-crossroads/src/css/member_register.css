@@ -1,13 +1,19 @@
-#MemberRegister .container {
-  margin-top: 10px;
-  padding: 50px;
+#MemberRegister .register_div{
+  display: flex;
+  justify-content: center;
+}
+
+#MemberRegister .form_div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #MemberRegister .register_title {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
-  margin-right: 30px;
+  margin: 30px 0;
 }
 
 #MemberRegister .register_title_text {
@@ -16,14 +22,10 @@
 }
 
 #MemberRegister .register_form {
-  width: 700px;
-  border: 1px solid black;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  margin-left: 160px;
+  width: 80%;
+  border: 1px solid #403c3c;
+  border-radius: 5px;
   margin-top: 70px;
-  padding-top: 10px;
   padding-bottom: 15px;
 }
 
@@ -35,25 +37,17 @@
 #MemberRegister .form_text {
   font-size: 20px;
   font-weight: 600;
-  letter-spacing: 15px;
-}
-
-#MemberRegister .password_confirm {
-  position: relative;
-  right: 69px;
 }
 
 #MemberRegister .btn_div {
   display: flex;
   justify-content: center;
-  margin-right: 80px;
 }
 
 #MemberRegister .register_btn {
   color: white;
   background-color: #8b1309;
   font-size: 24px;
-
   border: none;
   border-radius: 5px;
   padding-bottom: 40px;
@@ -64,62 +58,16 @@
 }
 
 #MemberRegister .register_btn:hover {
-  background-color: #f14030;
+  background-color: #a30f01;
 }
 
-#MemberRegister .reportSpan {
-  width: 140px;
-  text-align: center;
-  margin-top: 140px;
-  margin-right: 63px;
-}
 
 /* RWD */
 
 /* 超大型螢幕 */
 
 @media screen and (max-width: 1200px) {
-  #MemberRegister .container {
-    /* border: 1px solid black; */
-    margin-top: -30px;
-  }
-
-  #MemberRegister .register_title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-
-  #MemberRegister .member_icon {
-    width: 30px;
-  }
-
-  #MemberRegister .register_title_text {
-    font-size: 25px;
-    font-weight: 600;
-  }
-
-  #MemberRegister .input_box {
-    width: 200px;
-    margin-left: 10px;
-  }
-
-  #MemberRegister .form_text {
-    font-size: 16px;
-    letter-spacing: 10px;
-  }
-
-  #MemberRegister .password_confirm {
-    position: relative;
-    right: 53px;
-  }
-
-  #MemberRegister .register_btn {
-    padding: 5px;
-    width: 100%;
-    margin-top: 0px;
-  }
+  
 }
 
 /* 大型螢幕 */
@@ -130,92 +78,32 @@
 /* 平板 */
 
 @media screen and (max-width: 768px) {
-  #MemberRegister .container {
-    /* border: 1px solid black; */
-    margin-top: 80px;
+  #MemberRegister .register_div{
+    width: 200%;
   }
-
-  #MemberRegister .register_title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-
-  #MemberRegister .member_icon {
-    width: 35px;
-  }
-
-  #MemberRegister .register_title_text {
-    font-size: 30px;
-    font-weight: 600;
-  }
-
-  #MemberRegister .input_box {
-    width: 250px;
-    margin-left: 10px;
-  }
-
-  #MemberRegister .form_text {
-    font-size: 20px;
-    letter-spacing: 10px;
-  }
-
-  #MemberRegister .password_confirm {
-    position: relative;
-    right: 60px;
-  }
-
-  #MemberRegister .register_btn {
-    padding: 5px;
+  
+  #MemberRegister .form_div{
     width: 100%;
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #MemberRegister .register_form {
+    width: 100%;
+    border: 1px solid #403c3c;
+    border-radius: 5px;
+    margin-top: 70px;
+    padding-bottom: 15px;
   }
 }
 
 /* 手機 */
 
 @media screen and (max-width: 576px) {
-  #MemberRegister .container {
-    /* border: 1px solid black; */
-    margin-top: -25px;
-  }
-
-  #MemberRegister .register_title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  #MemberRegister .member_icon {
-    width: 25px;
-  }
-
-  #MemberRegister .register_title_text {
-    font-size: 22px;
-    font-weight: 600;
-  }
-
-  #MemberRegister .input_box {
-    width: 180px;
-    margin-left: 10px;
-  }
-
-  #MemberRegister .form_text {
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 5px;
-  }
-
-  #MemberRegister .password_confirm {
-    position: relative;
-    right: 40px;
-  }
-
-  #MemberRegister .register_btn {
-    padding: 5px;
+  #MemberRegister .register_div{
     width: 100%;
-    margin-top: 25px;
+  }
+  #MemberRegister .input_box {
+    width: 100%;
   }
 }

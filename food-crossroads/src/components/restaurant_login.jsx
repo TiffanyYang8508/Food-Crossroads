@@ -76,9 +76,7 @@ class Restaurant_login extends Component {
                                                 </div>
                                             </div>
                                         </form>
-
                                     </div>
-                                    <div className="reportSpan" id='reportMessage'> </div>
                                 </div>
                             </div>
                         </div>

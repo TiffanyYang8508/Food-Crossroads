@@ -70,12 +70,12 @@ class Shoppingok_group_final extends Component {
                                                 </td>
                                                 <td>
                                                     <span>
-                                                        1
+                                                        6
                                                     </span>
                                                 </td>
                                                 <td>
                                                     <span>
-                                                        $188
+                                                        $1,128
                                                     </span>
                                                 </td>
                                             </tr>
@@ -111,37 +111,12 @@ class Shoppingok_group_final extends Component {
                                                 </td>
                                                 <td>
                                                     <span id="ordername" className="ordername">
-                                                        南義炸起司條
+                                                        巴黎小甜心
                                                     </span>
                                                 </td>
                                                 <td>
                                                     <span>
-                                                        $288
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <span>
-                                                        1
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <span>
-                                                        $288
-                                                    </span>
-                                                </td>
-                                            </tr>
-                                            <tr className="shopping-row" id="shopping-row">
-                                                <td className="wrapper" id="td-1" style={{ 'width': '200px' }}>
-                                                    <img src={Order_picture} className="img-fluid img-thumbnail" alt="" />
-                                                </td>
-                                                <td>
-                                                    <span id="ordername" className="ordername">
-                                                        水相主廚私房湯品
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <span>
-                                                        $288
+                                                        $128
                                                     </span>
                                                 </td>
                                                 <td>
@@ -151,37 +126,10 @@ class Shoppingok_group_final extends Component {
                                                 </td>
                                                 <td>
                                                     <span>
-                                                        $288
+                                                        $128
                                                     </span>
                                                 </td>
                                             </tr>
-                                            <tr className="shopping-row" id="shopping-row">
-                                                <td className="wrapper" id="td-1" style={{ 'width': '200px' }}>
-                                                    <img src={Order_picture} className="img-fluid img-thumbnail" alt="" />
-                                                </td>
-                                                <td>
-                                                    <span id="ordername" className="ordername">
-                                                        田園香澄鮮蝦蘿蔓鮮蔬
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <span>
-                                                        $318
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <span>
-                                                        1
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <span>
-                                                        $318
-                                                    </span>
-                                                </td>
-                                            </tr>
-
-
 
                                             <tr className="shopping-row" style={{ 'height': '140px' }}>
                                                 <td colSpan="3" style={{ 'textAlign': 'center', 'verticalAlign': 'middle' }}>
@@ -199,7 +147,7 @@ class Shoppingok_group_final extends Component {
                                     </table>
                                 </div>
 
-                                <div id="mobile_shopping">
+                                {/* <div id="mobile_shopping">
                                     <div className="container-fluid">
                                         <div className="row">
                                             <div className="col-12">
@@ -263,12 +211,12 @@ class Shoppingok_group_final extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
 
                                 <div className="all-squre" id="all-squre">
                                     <button id="buy-back-btn" onClick={this.buyback} >回上一步</button>
                                     <p>
-                                        <b>總額(7個商品):$1,646</b>
+                                        <b>總額(9個商品):$1,632</b>
                                     </p>
                                     <button id="buy-ok-btn" onClick={this.buyok}>下訂單</button>
                                 </div>

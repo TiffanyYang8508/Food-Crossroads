@@ -148,116 +148,120 @@ class Member_register extends Component {
         <div id="MemberRegister" className="container">
           <div className="row">
             <div className="col-md-12 col-sm-6">
-              <div className="register_form">
-                <form action="">
-                  <div className="register_title">
-                    <span className="register_title_text">
-                      <i className="fas fa-user-circle"></i>會員註冊
-                    </span>
-                  </div>
-                  <div className="form-group row">
-                    <label htmlFor="name" className="form_text">
-                      姓名
-                    </label>
-                    <div className="input_box">
-                      <input
-                        type="text"
-                        id="name"
-                        className="form-control"
-                        name="name"
-                        value={this.state.member.user_name}
-                        onChange={this.nameChange}
-                        onBlur={this.handleInputVerityUsername.bind(this)}
-                      />
+              <div className="register_div">
+                <div className="register_form">
+                  <form action="" className="form_div">
+                    <div className="register_title">
+                      <span className="register_title_text">
+                        <i className="fas fa-user-circle"></i>會員註冊
+                      </span>
                     </div>
-                    {this.state.messageUsername} <br />
-                  </div>
-                  <div className="form-group row">
-                    <label htmlFor="email" className="form_text">
-                      信箱
-                    </label>
-                    <div className="input_box">
-                      <input
-                        type="text"
-                        id="email"
-                        className="form-control"
-                        name="email"
-                        value={this.state.member.user_email}
-                        onChange={this.emailChange}
-                        onBlur={this.handleInputVerityEmail.bind(this)}
-                      />
+                    <div className="form-group row">
+                      <label htmlFor="name" className="form_text">
+                        姓　　名
+                      </label>
+                      <div className="input_box">
+                        <input
+                          type="text"
+                          id="name"
+                          className="form-control"
+                          name="name"
+                          value={this.state.member.user_name}
+                          onChange={this.nameChange}
+                          onBlur={this.handleInputVerityUsername.bind(this)}
+                        />
+                      </div>
+                      {this.state.messageUsername} <br />
                     </div>
-                    {this.state.messageEmail} <br />
-                  </div>
+                    <div className="form-group row">
+                      <label htmlFor="email" className="form_text">
+                        信　　箱
+                      </label>
+                      <div className="input_box">
+                        <input
+                          type="text"
+                          id="email"
+                          className="form-control"
+                          name="email"
+                          value={this.state.member.user_email}
+                          onChange={this.emailChange}
+                          onBlur={this.handleInputVerityEmail.bind(this)}
+                        />
+                      </div>
+                      {this.state.messageEmail} <br />
+                    </div>
 
-                  <div className="form-group row">
-                    <label htmlFor="password" className="form_text">
-                      密碼
-                    </label>
-                    <div className="input_box">
-                      <input
-                        type="password"
-                        id="password"
-                        className="form-control"
-                        name="password"
-                        value={this.state.member.user_pwd}
-                        onChange={this.pwdChange}
-                        onBlur={this.handleInputVerityPassword.bind(this)}
-                      />
+                    <div className="form-group row">
+                      <label htmlFor="password" className="form_text">
+                        密　　碼
+                      </label>
+                      <div className="input_box">
+                        <input
+                          type="password"
+                          id="password"
+                          className="form-control"
+                          name="password"
+                          value={this.state.member.user_pwd}
+                          onChange={this.pwdChange}
+                          onBlur={this.handleInputVerityPassword.bind(this)}
+                        />
+                      </div>
+                      {this.state.messagePwd} <br />
                     </div>
-                    {this.state.messagePwd} <br />
-                  </div>
 
-                  <div className="form-group row password_confirm">
-                    <label htmlFor="password_confirm" className="form_text">
-                      確認密碼
-                    </label>
-                    <div className="input_box">
-                      <input
-                        type="password"
-                        id="password_confirm"
-                        className="form-control"
-                        name="password_confirm"
-                        value={this.state.member.user_pwd_confirm}
-                        onChange={this.pwdConfrimChange}
-                        onBlur={this.handleInputVerityConfirmPwd.bind(this)}
-                      />
+                    <div className="form-group row password_confirm">
+                      <label htmlFor="password_confirm" className="form_text">
+                        確認密碼
+                      </label>
+                      <div className="input_box">
+                        <input
+                          type="password"
+                          id="password_confirm"
+                          className="form-control"
+                          name="password_confirm"
+                          value={this.state.member.user_pwd_confirm}
+                          onChange={this.pwdConfrimChange}
+                          onBlur={this.handleInputVerityConfirmPwd.bind(this)}
+                        />
+                      </div>
+                      {this.state.messageConfirm}
                     </div>
-                    {this.state.messageConfirm}
-                  </div>
 
-                  <div className="form-group row">
-                    <label htmlFor="tel" className="form_text">
-                      手機
-                    </label>
-                    <div className="input_box">
-                      <input
-                        type="text"
-                        id="tel"
-                        className="form-control"
-                        name="tel"
-                        value={this.state.member.user_tel}
-                        onChange={this.telChange}
-                        onBlur={this.handleInputVerityTel.bind(this)}
-                      />
+                    <div className="form-group row">
+                      <label htmlFor="tel" className="form_text">
+                        手　　機
+                      </label>
+                      <div className="input_box">
+                        <input
+                          type="text"
+                          id="tel"
+                          className="form-control"
+                          name="tel"
+                          value={this.state.member.user_tel}
+                          onChange={this.telChange}
+                          onBlur={this.handleInputVerityTel.bind(this)}
+                        />
+                      </div>
+                      {this.state.messageTel}
                     </div>
-                    {this.state.messageTel}
-                  </div>
-                  <div className="btn_div">
-                    <button
-                      type="button"
-                      onClick={this.okButtonClick}
-                      className="register_btn"
-                    >
-                      註冊
-                    </button>
-                  </div>
-                </form>
-                <div className="reportSpan" id="reportMessage"></div>
+                    <div className="btn_div">
+                      <button
+                        type="button"
+                        onClick={this.okButtonClick}
+                        className="register_btn"
+                      >
+                        註冊
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
+
             </div>
           </div>
         </div>
+
+        <div className="blank"></div>
 
         <footer className="footer_page">
           <Footer />
