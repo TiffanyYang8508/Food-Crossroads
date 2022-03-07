@@ -66,7 +66,7 @@ class Shoppingchar extends Component {
     // console.log(getDataAry);
     // console.log(typeof getDataAry)
 
-    //刪除功能
+    //刪除功能  //刪除確認
     $(".delete-shopping").on("click", function () {
       $(".delete_comfirm").show();
     });
@@ -81,7 +81,7 @@ class Shoppingchar extends Component {
       $(".delete_comfirm").hide();
     })
 
-    //刪除確認
+
 
 
 

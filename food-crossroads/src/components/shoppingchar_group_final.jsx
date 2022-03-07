@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Header from "./header";
+import Headeredit from "./header copy";
 import Footer from "./footer";
 import "../css/shoppingchar.css";
 import Order_picture from "../img/aqua/aqua_img.jpg";
@@ -161,7 +161,7 @@ class Shoppingchar_group_final extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
+        <Headeredit />
         <div id='shoppingchar'>
           <div className="container">
             <div className="row">

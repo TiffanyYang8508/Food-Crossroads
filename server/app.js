@@ -295,6 +295,16 @@ app.get("/orderpage", function (req, res) {
   );
 });
 
+app.get("/orderpage/group_order/1", function (req, res) {
+  conn.query(
+    "SELECT food_name,food_amount,food_category FROM menu JOIN food_category ON menu.food_category_id= food_category.id",
+    [],
+    function (err, rows) {
+      res.send(JSON.stringify(rows));
+    }
+  );
+});
+
 // app.get("/orderpage/:food_category", function (req, res) {
 //   conn.query(
 //     "SELECT * FROM menu AS m INNER JOIN food_category AS fc ON m.food_category_id = fc.id WHERE food_category = ?",

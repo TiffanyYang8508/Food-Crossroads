@@ -70,7 +70,7 @@ margin-left: 10vw;
 #order_page div.food_list_border{
     width: 35%;
 	float: left;
-    margin: 0 0.5vw 1vw 0;
+    margin: 0 2vw 1vw 0;
     border: 1px #343A3F solid;
     border-radius: 10px;
 }
@@ -84,22 +84,27 @@ margin-left: 10vw;
     padding-top: 2rem;
 }
 #order_page .food_name{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 1.8vw;
     height: 2em;
 }
 #order_page .food_detail{
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     list-style-type: none; 
     margin-left: 20%;
 }
 #order_page .dollar{
-    margin-right: 5%;
-    font-size: 12pt;
+    width: 40px;
+    margin-right:6px;
+    font-size: 14pt;
 }
 #order_page #qty_number{
     height: 35px;
     margin: 0 5px;
+}
+
+#order_page .char_qty{
+ margin-left: 70px;
 }
 
 
@@ -114,7 +119,9 @@ margin-left: 10vw;
 #order_page .btn_add_cart{
     font-size: 14pt;
     border-radius: 0 0 9px 9px;
-    width: 100%;
+    width: 107%;
+    position: relative;
+    right: 15px;
     height: 35px;
     background-color: #403C3C;
     color: white;
@@ -157,6 +164,7 @@ margin-left: 10vw;
     left: 85%;
     transition: 0.3s;
 }
+
 
 #order_page .group_button{
     background-color: #403C3C;
@@ -211,22 +219,99 @@ margin-left: 10vw;
 
 
 /* modal */
-#order_page .btn_cancel{
+#order_page .grop_order_share{
+    margin-left: -12%;
+}
+#open_grouporder{
+    position: relative;
+    right: 89px;
+}
+
+#order_page .group_on_modal_title{
+    display: flex;
+    text-align: left;
+    position: relative;
+    right: 100px;
+}
+
+#order_page .group_order_content{
+    width: 30%;
+    margin: auto;
+    font-size: 16px;
+}
+
+#order_page #order_note input{
+position: relative;
+right:30%;
+}
+
+
+#order_page .group_on_order_content{
+    width: 30%;
+    margin: auto;
+    font-size: 14px;
+}
+
+#order_page .group_order_title{
+    position: relative;
+    right: 115px;
+}
+
+/* modal按鈕 */
+#order_page .btn_cancel_group{
     background-color: rgb(203, 200, 200);
     color: #fff;
     font-size: 16px;
     border-radius: 10px;
     width: 80px;
     height: 40px;
+    position: relative;
+    right: 170px;
 }
 
-#order_page .btn_cancel:hover, .btn_yes:hover{
+#order_page .btn_cancel_group:hover{
     background-color: #FCC106;
     color: #403C3C;
 }
 
+#order_page .btn_cancel{
+    background-color: white;
+    border: #403C3C 2px solid;
+    color: black;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 80px;
+    height: 40px;
+    position: relative;
+    right: 130px;
+}
+#order_page .btn_cancel:hover{
+    background-color: #403C3C;
+    color:white;
+}
 #order_page .btn_yes{
-    background-color: #8B1309;
+    background-color: #9f1205;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 80px;
+    height: 40px;
+    position: relative;
+    right: 130px;
+}
+
+#order_page .btn_yes_order_note{
+    background-color: #9f1205;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 80px;
+    height: 40px;
+    position: relative;
+    right: 130px;
+}
+#order_page .btn_yes:hover{
+    background-color: #bb1d0f;
     color: #fff;
     font-size: 16px;
     border-radius: 10px;
@@ -238,6 +323,7 @@ margin-left: 10vw;
 #order_page #copyinput{
     width: 100%;
     margin-bottom: 10px;
+    margin-left:-13%;
 }
 
 #order_page .btn_copy{
@@ -246,6 +332,8 @@ margin-left: 10vw;
     color: #fff;
     width: 100%;
     height: 40px;
+    margin-top: 10px;
+    margin-left:-13%;
 }
 
 /* 置頂紐 */
@@ -257,7 +345,7 @@ margin-left: 10vw;
     color: #fff;     
     font-size: 1.75rem;     
     background-color: #403C3C;     
-    /* box-shadow: inset -3px -3px 5px 0 black;      */
+    /* box-shadow: inset -3px -3px 5px 0 black;  */
     position: fixed;     
     bottom: 60px;     
     left: 40%;     
@@ -270,6 +358,11 @@ margin-left: 10vw;
 #order_page #btn_back_to_top:hover {     
     background-color: grey;     
     /* box-shadow: inset -3px -3px 5px 0 rgb(66, 66, 66);  */
+}
+
+#group_order_ex{
+    position: relative;
+    left: 66px;
 }
 
 /*已開啟揪團 start*/
@@ -369,6 +462,8 @@ margin-left: 10vw;
 
 } */
 
+
+
 @media screen and (max-width:768px) {
     #order_page #table_order{
     width: 100%;
@@ -400,6 +495,60 @@ margin-left: 10vw;
   }
   /*已開啟揪團 end*/
 
+  /* 購物車 alert */
+.char_alert_1{
+    animation-name: char;
+    animation-duration: 2s;
+    padding: 20px;
+        background-color: #585555e0;
+        color: white;
+        font-size: 20px;
+        z-index: 1;
+        left: 74%;
+}
+  @keyframes char {
+      0%{position:fixed;
+        bottom: -9%;
+        }
+        100%{ position:fixed;
+            bottom: 8%;
+         }
+  }
+  #char_alert_2 {
+    position:fixed;
+    bottom: 8%;
+    left: 74%;
+    padding: 20px;
+    background-color: #585555e0;
+    color: white;
+    font-size: 20px;
+    z-index: 1;
+  }
+  #char_alert_3 {
+    position:fixed;
+    bottom: 0;
+    left: 74%;
+    padding: 20px;
+    background-color: #585555e0;
+    color: white;
+    font-size: 20px;
+    z-index: 1;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
 
 
 /* 平板 */

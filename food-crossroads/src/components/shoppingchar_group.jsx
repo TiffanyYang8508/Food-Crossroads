@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Header from "./header";
+import Headeredit from "./header copy";
 import Footer from "./footer";
 import "../css/shoppingchar.css";
 import Order_picture from "../img/aqua/aqua_img.jpg";
@@ -161,7 +161,7 @@ class Shoppingchar_group extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
+        <Headeredit />
         <div id='shoppingchar'>
           <div className="container">
             <div className="row">
@@ -193,7 +193,7 @@ class Shoppingchar_group extends Component {
                           <h5>aqua水相餐廳</h5>
                         </td>
                       </tr>
-                      {/* <!-- 購物車品項 --> */}
+
 
                       <tr className="shopping-row" id="shopping-row">
                         <td>
@@ -236,21 +236,21 @@ class Shoppingchar_group extends Component {
                           <img src={Order_picture} class="img-fluid img-thumbnail" alt="" />
                         </td>
                         <td>
-                          <span id="ordername" class="ordername">南義炸起司條</span>
+                          <span id="ordername" class="ordername">番茄羅勒起司搭頂級陳年油醋</span>
                         </td>
                         <td class="p-price">
-                          <span class="price">$288</span>
+                          <span class="price">$188</span>
                         </td>
                         <td class="p-num">
 
                           <span class="qty-squre ">
                             <input id="qtyminus" type="button" value="-" class="qty-btn decrement" />
-                            <input type="text" value='1' class="qty itxt" name="quantity" />
+                            <input type="text" value='2' class="qty itxt" name="quantity" />
                             <input id="qtyplus" type="button" value="+" class="qty-btn increment" />
                           </span>
                         </td>
                         <td class=" p-sum">
-                          <span id="sum">$288</span>
+                          <span id="sum">$376</span>
                         </td>
                         <td class="delete-shopping">
                           <div>
@@ -258,6 +258,7 @@ class Shoppingchar_group extends Component {
                           </div>
                         </td>
                       </tr>
+
                     </tbody>
                   </table>
                 </div>
@@ -301,8 +302,8 @@ class Shoppingchar_group extends Component {
                     <span className="media-body">全選</span>
                   </label>
                   <p>
-                    <b class='price-sum'>總金額:$476</b><br />
-                    <b><span class="amount-sum">(2個商品)</span></b>
+                    <b class='price-sum'>總金額:$564</b><br />
+                    <b><span class="amount-sum">(3個商品)</span></b>
                   </p>
                   <Link to="./Orderfinished_member">
                     <button className="buy-btn">

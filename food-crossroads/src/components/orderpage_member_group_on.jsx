@@ -105,11 +105,11 @@ class Orderpage_group_order_on extends Component {
         });
         this.setState({});
 
-        var cart = [];
-        if (localStorage.getItem("cart")) {
-            cart = JSON.parse(sessionStorage.getItem("cart"));
-        }
-        setCart();
+        // var cart = [];
+        // if (localStorage.getItem("cart")) {
+        //     cart = JSON.parse(sessionStorage.getItem("cart"));
+        // }
+        // setCart();
 
         $(".group_button").on("click", function () {
             $(".order_group_modal").css("display", "block")
@@ -128,41 +128,77 @@ class Orderpage_group_order_on extends Component {
         })
 
 
-        function setCart() {
-            var cartList = "", s_price = 0, total = 0;
-            for (let $i = 0; $i < cart.length; $i++) {
-                s_price = cart[$i]["price"] * cart[$i]["amount"];
-                total += s_price;
-                cartList += `<li> ${cart[$i]["name"]} , 單價: ${cart[$i]["price"]}, 數量: ${cart[$i]["amount"]
-                    }, 總價: ${s_price}</li>`;
-            }
-            $("#cart")
-                .empty()
-                .append(cartList);
-            // $("#total").text(total);
-        }
+        // function setCart() {
+        //     var cartList = "", s_price = 0, total = 0;
+        //     for (let $i = 0; $i < cart.length; $i++) {
+        //         s_price = cart[$i]["price"] * cart[$i]["amount"];
+        //         total += s_price;
+        //         cartList += `<li> ${cart[$i]["name"]} , 單價: ${cart[$i]["price"]}, 數量: ${cart[$i]["amount"]
+        //             }, 總價: ${s_price}</li>`;
+        //     }
+        //     $("#cart")
+        //         .empty()
+        //         .append(cartList);
+        //     // $("#total").text(total);
+        // }
 
-        $("#clear").click(function () {
-            cart = [];
-            localStorage.removeItem("cart");
-            setCart();
-        });
+        // $("#clear").click(function () {
+        //     cart = [];
+        //     localStorage.removeItem("cart");
+        //     setCart();
+        // });
 
         // 加入購物車按鈕
-        $(".add_cart").click(function () {
-            let product = $(this).closest(".food_list_detail");
-            let newItem = {
-                name: product.find(".food_name").text(),
-                price: product.find(".dollar").text(),
-                amount: product.find("#qty_number").val(),
-            };
-            console.log(newItem);
-            cart.push(newItem);
-            localStorage.setItem("cart", JSON.stringify(cart));
-            setCart();
+        // $(".add_cart").click(function () {
+        //     let product = $(this).closest(".food_list_detail");
+        //     let newItem = {
+        //         name: product.find(".food_name").text(),
+        //         price: product.find(".dollar").text(),
+        //         amount: product.find("#qty_number").val(),
+        //     };
+        //     console.log(newItem);
+        //     cart.push(newItem);
+        //     localStorage.setItem("cart", JSON.stringify(cart));
+        //     // setCart();
+        // });
+
+        // console.log(cart);
+
+        //揪團訂餐
+        $(".group_button_on").on("click", function () {
+            $("#group_order").show();
         });
 
-        console.log(cart);
+        $('.btn_cancel_group').on('click', function () {
+            $("#group_order").hide();
+        })
+
+        //購物車餐點備註
+        $('add_cart').click(function () {
+            $('#order_note').show();
+            // console.log('ok');
+        })
+
+        $('.char_alert_1').hide();
+        $('.btn_add_cart').on('click', function () {
+            // console.log('ok');
+            $('#order_note').show();
+        })
+
+        $('.btn_cancel').on('click', function () {
+            $('#order_note').hide();
+        })
+
+        $('.btn_yes_order_note').on('click', function () {
+            $('#order_note').hide();
+            $('.char_alert_1').css('display', 'block');
+        })
+
+
+
+
+
+
     }
 
     // 置頂按鈕:點選後回到頂端
@@ -281,7 +317,7 @@ class Orderpage_group_order_on extends Component {
 
 
                 <div id='order_page'>
-                    <div className="blank" id="group_1"></div>
+                    <div id="group_1"></div>
                     <div className="d-flex flex-column">
                         {/* 類別標題 */}
                         <div className="food_title">
@@ -298,7 +334,7 @@ class Orderpage_group_order_on extends Component {
                                             <p className="food_name">{item.food_name}</p>
                                             <div className="d-flex flex-row">
                                                 <p><span className="dollar align-self-center">{item.food_amount}</span>元</p>
-                                                <input type="button" value="-" className="btn_count count_decrease sub" onClick={this.qty} />
+                                                <input type="button" value="-" className="btn_count count_decrease sub char_qty" onClick={this.qty} />
                                                 <input type="text" id="qty_number" value="1" />
                                                 <input type="button" value="+" className="btn_count add" onClick={this.qty} />
                                             </div>
@@ -328,7 +364,7 @@ class Orderpage_group_order_on extends Component {
                                             <p className="food_name">{item.food_name}</p>
                                             <div className="d-flex flex-row">
                                                 <p><span className="dollar align-self-center">{item.food_amount}</span>元</p>
-                                                <input type="button" value="-" className="btn_count count_decrease sub" onClick={this.qty} />
+                                                <input type="button" value="-" className="btn_count count_decrease sub char_qty" onClick={this.qty} />
                                                 <input type="text" id="qty_number" value="1" />
                                                 <input type="button" value="+" className="btn_count add" onClick={this.qty} />
                                             </div>
@@ -358,7 +394,7 @@ class Orderpage_group_order_on extends Component {
                                             <p className="food_name">{item.food_name}</p>
                                             <div className="d-flex flex-row">
                                                 <p><span className="dollar align-self-center">{item.food_amount}</span>元</p>
-                                                <input type="button" value="-" className="btn_count count_decrease sub" onClick={this.qty} />
+                                                <input type="button" value="-" className="btn_count count_decrease sub char_qty" onClick={this.qty} />
                                                 <input type="text" id="qty_number" value="1" />
                                                 <input type="button" value="+" className="btn_count add" onClick={this.qty} />
                                             </div>
@@ -388,7 +424,7 @@ class Orderpage_group_order_on extends Component {
                                             <p className="food_name">{item.food_name}</p>
                                             <div className="d-flex flex-row">
                                                 <p><span className="dollar align-self-center">{item.food_amount}</span>元</p>
-                                                <input type="button" value="-" className="btn_count count_decrease sub" onClick={this.qty} />
+                                                <input type="button" value="-" className="btn_count count_decrease sub char_qty" onClick={this.qty} />
                                                 <input type="text" id="qty_number" value="1" />
                                                 <input type="button" value="+" className="btn_count add" onClick={this.qty} />
                                             </div>
@@ -418,7 +454,7 @@ class Orderpage_group_order_on extends Component {
                                             <p className="food_name">{item.food_name}</p>
                                             <div className="d-flex flex-row">
                                                 <p><span className="dollar align-self-center">{item.food_amount}</span>元</p>
-                                                <input type="button" value="-" className="btn_count count_decrease sub" onClick={this.qty} />
+                                                <input type="button" value="-" className="btn_count count_decrease sub char_qty" onClick={this.qty} />
                                                 <input type="text" id="qty_number" value="1" />
                                                 <input type="button" value="+" className="btn_count add" onClick={this.qty} />
                                             </div>
@@ -448,7 +484,7 @@ class Orderpage_group_order_on extends Component {
                                             <p className="food_name">{item.food_name}</p>
                                             <div className="d-flex flex-row">
                                                 <p><span className="dollar align-self-center">{item.food_amount}</span>元</p>
-                                                <input type="button" value="-" className="btn_count count_decrease sub" onClick={this.qty} />
+                                                <input type="button" value="-" className="btn_count count_decrease sub char_qty" onClick={this.qty} />
                                                 <input type="text" id="qty_number" value="1" />
                                                 <input type="button" value="+" className="btn_count add" onClick={this.qty} />
                                             </div>
@@ -478,7 +514,7 @@ class Orderpage_group_order_on extends Component {
                                             <p className="food_name">{item.food_name}</p>
                                             <div className="d-flex flex-row">
                                                 <p><span className="dollar align-self-center">{item.food_amount}</span>元</p>
-                                                <input type="button" value="-" className="btn_count count_decrease sub" onClick={this.qty} />
+                                                <input type="button" value="-" className="btn_count count_decrease sub char_qty" onClick={this.qty} />
                                                 <input type="text" id="qty_number" value="1" />
                                                 <input type="button" value="+" className="btn_count add" onClick={this.qty} />
                                             </div>
@@ -508,7 +544,7 @@ class Orderpage_group_order_on extends Component {
                                             <p className="food_name">{item.food_name}</p>
                                             <div className="d-flex flex-row">
                                                 <p><span className="dollar align-self-center">{item.food_amount}</span>元</p>
-                                                <input type="button" value="-" className="btn_count count_decrease sub" onClick={this.qty} />
+                                                <input type="button" value="-" className="btn_count count_decrease sub char_qty" onClick={this.qty} />
                                                 <input type="text" id="qty_number" value="1" />
                                                 <input type="button" value="+" className="btn_count add" onClick={this.qty} />
                                             </div>
@@ -538,7 +574,7 @@ class Orderpage_group_order_on extends Component {
                                             <p className="food_name">{item.food_name}</p>
                                             <div className="d-flex flex-row">
                                                 <p><span className="dollar align-self-center">{item.food_amount}</span>元</p>
-                                                <input type="button" value="-" className="btn_count count_decrease sub" onClick={this.qty} />
+                                                <input type="button" value="-" className="btn_count count_decrease sub char_qty" onClick={this.qty} />
                                                 <input type="text" id="qty_number" value="1" />
                                                 <input type="button" value="+" className="btn_count add" onClick={this.qty} />
                                             </div>
@@ -568,7 +604,7 @@ class Orderpage_group_order_on extends Component {
                                             <p className="food_name">{item.food_name}</p>
                                             <div className="d-flex flex-row">
                                                 <p><span className="dollar align-self-center">{item.food_amount}</span>元</p>
-                                                <input type="button" value="-" className="btn_count count_decrease sub" onClick={this.qty} />
+                                                <input type="button" value="-" className="btn_count count_decrease sub char_qty" onClick={this.qty} />
                                                 <input type="text" id="qty_number" value="1" />
                                                 <input type="button" value="+" className="btn_count add" onClick={this.qty} />
                                             </div>
@@ -587,34 +623,15 @@ class Orderpage_group_order_on extends Component {
 
 
 
-                        {/* {加入購物車之餐點備註} */}
-                        <div className="modal fade" id="char_remark_modal" tabIndex="-1" role="dialog" aria-labelledby="char_remark_modal_title"
-                            aria-hidden="true">
-                            <div className="modal-dialog modal-dialog-centered" role="document">
-                                <div className="modal-content">
-                                    <div className="modal-header">
-                                        <h3 className="modal-title" id="char_remark_modal_title">餐點備註</h3><br />
-                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span
-                                            aria-hidden="true">&times;</span></button>
-                                    </div>
-                                    <div className="modal-body">
-                                        <input type="text" />
-                                        <p>範例：加辣、不要辣、蔥多、油醋多....</p>
-                                    </div>
-                                    <div className="modal-footer d-flex justify-content-center">
-                                        <button type="button" className="btn_cancel" data-dismiss="modal">取消</button>
-                                        <button type="button" className="btn_yes" data-dismiss="modal">確定</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         {/* 揪團結帳 */}
                         <div className="food_order_group d-flex flex-column">
+                            <h4><b>團長:李曉明</b></h4>
+                            <hr />
                             <div className="d-flex justify-content-center" id='order_page_on'>
                                 <a href="#"><img src={require("../img/people_plus@3x.png")} style={{ 'width': '25px', 'height': '20px', 'marginRight': ' 5px' }} /></a>
                                 <button className="group_button_on oval" data-toggle="modal" data-target="#order_group_modal">揪團連結分享</button>
                             </div>
+                            <hr />
                             <div className="d-flex justify-content-center">
                                 <Link to="/shoppingchar_group"><button id="checkout">送出訂單</button></Link>
                             </div>
@@ -623,38 +640,45 @@ class Orderpage_group_order_on extends Component {
                         </div>
 
 
+                        {/* 加入購物車訊息 */}
+                        {/* <div className="char_alert_1">
+                            <span className="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <strong><i className='fas fa-shopping-cart'></i>  您的餐點已新增至購物車</strong>
+                        </div> */}
 
+                        {/* {加入購物車之餐點備註} */}
+                        <div className="modal" id="order_note">
+                            <div className="modal-content group_order_content">
+                                <div className="modal-header">
+                                    <h4 className="modal-title group_order_title ">餐點備註</h4>
+                                </div>
+                                <div className="modal-body">
+                                    <input type="text" />
+                                </div >
+                                <p id='group_order_ex'>範例：加辣、不要辣、蔥多、油醋多....</p>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn_cancel">取消</button>
+                                    <button type="button" className="btn_yes_order_note">確定</button>
+                                </div>
+                            </div>
+                        </div>
 
 
                         {/* <!--揪團連結分享modal--> */}
-                        <div className="modal group_link_modal" tabIndex="-1">
-                            <div className="modal-dialog">
-                                <div className="modal-content">
-                                    <div className="modal-header">
-                                        <h3 className="modal-title" id="group_on_modal_title">已開啟</h3><br />
-                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span
-                                            aria-hidden="true">&times;</span></button>
+                        <div className="modal " id="group_order">
+                            <div className="modal-content group_order_content">
+                                <div className="modal-body d-flex flex-column">
+                                    <h5 className='grop_order_share'>分享你的連結！！</h5><br />
+                                    <div id="copy_link">
+                                        <a href="orderpage_group_sorder_on.html"><input id="copyinput"
+                                            value="http://localhost:3000/orderpage/group_order/1" /></a><br />
                                     </div>
-                                    <div className="modal-body d-flex flex-column">
-                                        <h5>分享你的連結！！</h5>
-                                        <div id="copy_link">
-                                            <a href="orderpage_group_sorder_on.html"><input id="copyinput"
-                                                value="http://localhost:3000/group_order_on/1" /></a>
-                                        </div>
-                                        <button type="button" className="btn btn-danger btn_copy" onClick='copyinput()'>複製連結</button>
-                                    </div>
-                                    <div className="modal-footer">
-                                        <button type="button" className="btn btn-secondary btn_grouporder" data-dismiss="modal"
-                                        >關閉</button>
-                                    </div>
+                                    <button type="button" className="btn btn-danger btn_copy" onClick={this.copyinput}>複製連結</button>
+                                </div >
+                                <div className="modal-footer">
+                                    <button type="button" className="btn_cancel_group">關閉</button>
                                 </div>
                             </div>
-
-                            {/* 置頂鈕 */}
-                            <button type="button" id="btn_back_to_top" onclick="topfunction()" title="Go to top">
-                                <i className="fas fa-arrow-up"></i>
-                            </button>
-
                         </div>
                     </div>
                 </div>

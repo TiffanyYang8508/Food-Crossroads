@@ -128,9 +128,8 @@ position: relative;
   border: none;
   color: white;
   border-radius: 5px;
-  /* margin: auto; */
-  position: absolute;
-  left: 100px;
+  position: relative;
+  left: 25px;
 
   }
 #delete_comfirm>div .delete_comfirm_check_btn{
@@ -140,8 +139,8 @@ position: relative;
   border: none;
   color: white;
   border-radius: 5px;
-  position: relative;
-  margin-left: 60px;
+position: relative;
+  left: -140px;
 
   }
 /* 購物車欄位 end */

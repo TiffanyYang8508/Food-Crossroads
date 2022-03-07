@@ -193,7 +193,7 @@ class Shoppingok extends Component {
                                 <div className="all-squre" id="all-squre">
                                     <button id="buy-back-btn" onClick={this.buyback} >回上一步</button>
                                     <p>
-                                        <b>總額(7個商品):$1,646</b>
+                                        <b>總額(3個商品):$564</b>
                                     </p>
                                     <button id="buy-ok-btn" onClick={this.buyok}>下訂單</button>
                                 </div>

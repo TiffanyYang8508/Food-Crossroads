@@ -34,8 +34,7 @@ import Booking_reservation_page from "./components/booking_reservation_page";
 import Booking_check_page from "./components/booking_check_page";
 import Booking_finish_page from "./components/booking_finish_page";
 import Orderpage from "./components/orderpage";
-import Orderpage_group_order_on from "./components/orderpage copy";
-// import Orderpage_group from "./components/orderpage_group";
+import Orderpage_group_order_on from "./components/orderpage_member_group_on";
 import Restaurant_booking_today from "./components/restaurant_booking_today";
 import Restaurant_self_pick_up_history from "./components/restaurant_self_pick_up_history";
 import Orderfinished from "./components/orderfinished";
@@ -134,7 +133,7 @@ class App extends Component {
           <Route path="/orderdisplay" component={Orderdisplay} exact />
           {/* 商品 */}
           <Route path="/orderpage" component={Orderpage} exact />
-          <Route path="/orderpage_group_order_on" component={Orderpage_group_order_on} exact />
+          <Route path="/orderpage/group_order/1" component={Orderpage_group_order_on} exact />
           {/* 揪團商品 */}
           {/* <Route path="/orderpagegroup" component={Orderpage_group} exact /> */}
           <Route
