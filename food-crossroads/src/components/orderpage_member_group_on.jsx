@@ -625,7 +625,7 @@ class Orderpage_group_order_on extends Component {
 
                         {/* 揪團結帳 */}
                         <div className="food_order_group d-flex flex-column">
-                            <h4><b>團長:李曉明</b></h4>
+                            <h4><b>團長:張哲瑋</b></h4>
                             <hr />
                             <div className="d-flex justify-content-center" id='order_page_on'>
                                 <a href="#"><img src={require("../img/people_plus@3x.png")} style={{ 'width': '25px', 'height': '20px', 'marginRight': ' 5px' }} /></a>

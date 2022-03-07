@@ -137,7 +137,7 @@ class Restaurant_page_member extends Component {
                 <i className="fas fa-shopping-cart"></i>購物車
               </a>
               <a className="nav_a" href="/member/1">
-                <i className="fas fa-user-circle"></i>李曉明
+                <i className="fas fa-user-circle"></i>張哲瑋
               </a>
             </div>
             <div className="rwd_icon">
@@ -427,7 +427,7 @@ class Restaurant_page_member extends Component {
                         </div>
                         <div className="flex1">
                           <div className="top_flex">
-                            <div className="flex1">李曉明</div>
+                            <div className="flex1">張哲瑋</div>
                             <div className="record_time">
                               2022-03-07 09:15:45
                             </div>

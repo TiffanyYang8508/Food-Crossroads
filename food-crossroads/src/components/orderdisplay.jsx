@@ -28,7 +28,7 @@ class Orderdisplay extends Component {
                         </nav>
                         <div className="table-responsive-md row" style={{ 'font-size': '18px', 'text-align': 'center' }}>
 
-                            <table className="table col-md-9" id="table_order">
+                            <table className="table col-md-10" id="table_order">
                                 <thead>
                                     <tr>
                                         <th>名稱</th>
@@ -40,32 +40,53 @@ class Orderdisplay extends Component {
                                 </thead>
                                 <tbody>
                                     <tr style={{ 'border-top': '1px solid black' }}>
-                                        <td scope="row">李曉明</td>
+                                        <td scope="row">張哲瑋</td>
                                         <td className="foodname">西西里海鹽柴魚脆薯<br />蕃茄羅勒起司搭頂級陳年油醋</td>
-                                        <td><br /></td>
+                                        <td></td>
                                         <td>1<br />2</td>
                                         <td>188<br />376</td>
                                     </tr>
                                     <tr style={{ 'border-top': '1px solid black' }}>
-                                        <td scope="row">郭美美</td>
-                                        <td className="foodname">西西里海鹽柴魚脆薯<br />南義炸起司條</td>
-                                        <td>加辣<br /></td>
-                                        <td>1<br />1</td>
-                                        <td>188<br />288</td>
+                                        <td scope="row">楊璦寧</td>
+                                        <td className="foodname">西西里海鹽柴魚脆薯</td>
+                                        <td>加辣</td>
+                                        <td>1</td>
+                                        <td>188</td>
                                     </tr>
                                     <tr>
-                                        <td scope="row">陳家欣</td>
-                                        <td className="foodname">田園香橙鮮蝦鮮蔬<br />水相主廚私房湯品</td>
-                                        <td><br />不要加蔥</td>
+                                        <td scope="row">陳宣穎</td>
+                                        <td className="foodname">西西里海鹽柴魚脆薯<br />巴黎小甜心</td>
+                                        <td></td>
                                         <td>1<br />1</td>
-                                        <td>318<br />288</td>
+                                        <td>188<br />128</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">陳筱薇</td>
+                                        <td className="foodname">西西里海鹽柴魚脆薯</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>188</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">陳冠維</td>
+                                        <td className="foodname">西西里海鹽柴魚脆薯</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>188</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">何彥儒</td>
+                                        <td className="foodname">西西里海鹽柴魚脆薯</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>188</td>
                                     </tr>
 
-                                    <tr style={{ "font-size": "18px" }}>
+                                    <tr style={{ "fontSize": "18px" }}>
 
-                                        <td scope="row" colspan="3" style={{ "text-align": "right" }}><b>總金額</b></td>
+                                        <td scope="row" colspan="3" style={{ "textAlign": "right" }}><b>總金額</b></td>
                                         <td>
-                                            NT$ 1,646
+                                            NT$ 1,632
                                         </td>
                                     </tr>
                                 </tbody>
@@ -73,7 +94,7 @@ class Orderdisplay extends Component {
                             <br /><br />
 
                             <div className="d-flex flex-column ordershare">
-                                <p className="leader"><b>團長：<span>李曉明</span></b></p>
+                                <p className="leader"><b>團長：<span>張哲瑋</span></b></p>
                                 <br />
                                 <div className="" id="order_share">
                                     <a href="#"><img src="./img/people_plus@3x.png"

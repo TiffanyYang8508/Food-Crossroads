@@ -8,10 +8,10 @@ class EditMember extends Component {
   state = {
     Member: [
       {
-        user_email: "email@gmail.com",
+        user_email: "jerryMFEE21@gmail.com",
         user_pwd: "",
-        user_name: "李曉明",
-        user_tel: "0900123456",
+        user_name: "張哲瑋",
+        user_tel: "0987654321",
       },
     ],
   };
@@ -62,7 +62,7 @@ class EditMember extends Component {
                 <i className="fas fa-shopping-cart"></i>購物車
               </a>
               <a className="nav_a" href="/member/1">
-                <i className="fas fa-user-circle"></i>李曉明
+                <i className="fas fa-user-circle"></i>張哲瑋
               </a>
             </div>
             <div className="rwd_icon">
