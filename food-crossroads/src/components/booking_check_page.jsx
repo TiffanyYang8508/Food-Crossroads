@@ -25,7 +25,7 @@ class Booking_check_page extends Component {
                             <i className="fas fa-shopping-cart"></i>購物車
                         </a>
                         <a className="nav_a" href="/member/1">
-                            <i className="fas fa-user-circle"></i>李曉明
+                            <i className="fas fa-user-circle"></i>張哲瑋
                         </a>
                         </div>
                         <div className="rwd_icon">
@@ -67,15 +67,15 @@ class Booking_check_page extends Component {
                                             <form action="#">
                                                 <div className="form_container_check">
                                                     <label htmlFor="check_person_name">姓　　名：</label>
-                                                    <label htmlFor="check_person_name">李曉明</label>
+                                                    <label htmlFor="check_person_name">張哲瑋</label>
                                                 </div>
                                                 <div className="form_container_check">
                                                     <label htmlFor="check_person_cellphone">手　　機：</label>
                                                     <label htmlFor="check_person_cellphone">0987654321</label>
                                                 </div>
                                                 <div className="form_container_check">
-                                                    <label htmlFor="check_person_email">姓　　名：</label>
-                                                    <label htmlFor="check_person_email">1234@gmail.com</label>
+                                                    <label htmlFor="check_person_email">信　　箱：</label>
+                                                    <label htmlFor="check_person_email">jerryMFEE21@gmail.com</label>
                                                 </div>
                                                 <div className="form_container_check">
                                                     <label htmlFor="check_person_person_number">訂位人數：</label>

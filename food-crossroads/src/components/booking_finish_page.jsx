@@ -21,7 +21,7 @@ class Booking_finish_page extends Component {
                             <i className="fas fa-shopping-cart"></i>購物車
                         </a>
                         <a className="nav_a" href="/member/1">
-                            <i className="fas fa-user-circle"></i>李曉明
+                            <i className="fas fa-user-circle"></i>張哲瑋
                         </a>
                         </div>
                         <div className="rwd_icon">
@@ -64,7 +64,7 @@ class Booking_finish_page extends Component {
                                             <div className="form_container_finish_wrapper_left">
                                                 <div className="form_container_finish">
                                                     <label htmlFor="finish_person_name">姓　　名：</label>
-                                                    <label htmlFor="finish_person_name">李曉明</label>
+                                                    <label htmlFor="finish_person_name">張哲瑋</label>
                                                 </div>
                                                 <div className="form_container_finish">
                                                     <label htmlFor="finish_person_cellphone">手　　機：</label>
@@ -72,7 +72,7 @@ class Booking_finish_page extends Component {
                                                 </div>
                                                 <div className="form_container_finish">
                                                     <label htmlFor="finish_person_email">信　　箱：</label>
-                                                    <label htmlFor="finish_person_email">1234@gmail.com</label>
+                                                    <label htmlFor="finish_person_email">jerryMFEE21@gmail.com</label>
                                                 </div>
                                             </div>
                                             <div className="form_container_finish_wrapper_right">

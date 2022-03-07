@@ -12,13 +12,13 @@ class BookingRecord extends Component {
       {
         booking_date: "2022-01-08",
         restaurant_name: "水相餐廳",
-        user_name: "李曉明",
+        user_name: "張哲瑋",
         booking_time: "2022-01-08",
         booking_peoplenumber: 3,
         booking_id: 1,
         id: 1,
         booking_service: "需要嬰兒座椅",
-        user_email: "asdf@gmail.com",
+        user_email: "jerryMFEE21@gmail.com",
       },
     ],
   };
@@ -66,7 +66,7 @@ class BookingRecord extends Component {
                 <i className="fas fa-shopping-cart"></i>購物車
               </a>
               <a className="nav_a" href="/member/1">
-                <i className="fas fa-user-circle"></i>李曉明
+                <i className="fas fa-user-circle"></i>張哲瑋
               </a>
             </div>
             <div className="rwd_icon">
@@ -217,7 +217,7 @@ class BookingRecord extends Component {
                     ))}
 
                     <tr id="cancel">
-                      <td class="mobile_td">李曉明</td>
+                      <td class="mobile_td">張哲瑋</td>
                       <td class="mobile_td">一鷺串燒居酒屋</td>
                       <td class="mobile_td">2022/02/24</td>
                       <td class="mobile_td">18:00:00</td>
@@ -243,7 +243,7 @@ class BookingRecord extends Component {
                       </td>
                     </tr>
                     <tr id="cancel">
-                      <td class="mobile_td">李曉明</td>
+                      <td class="mobile_td">張哲瑋</td>
                       <td class="mobile_td">布列塔尼歐法鄉村雅廚</td>
                       <td class="mobile_td">2022/02/02</td>
                       <td class="mobile_td">20:00:00</td>
@@ -282,7 +282,7 @@ class BookingRecord extends Component {
                 <div className="table mobile_order_div">
                   <div className="mobile_order_inline_div">
                     <div className="mobile_text_div">
-                      <p>訂位人:李曉明</p>
+                      <p>訂位人:張哲瑋</p>
                       <p>訂位日期:2022-01-08</p>
                       <p>訂位餐廳:aqua水相餐廳</p>
                       <p>訂位時間:17:00</p>
@@ -308,7 +308,7 @@ class BookingRecord extends Component {
                   </div>
                   <div className="mobile_order_inline_div">
                     <div className="mobile_text_div">
-                      <p>訂位人:李曉明</p>
+                      <p>訂位人:張哲瑋</p>
                       <p>訂位日期:2022-01-08</p>
                       <p>訂位餐廳:aqua水相餐廳</p>
                       <p>訂位時間:17:00</p>
@@ -334,7 +334,7 @@ class BookingRecord extends Component {
                   </div>
                   <div className="mobile_order_inline_div">
                     <div className="mobile_text_div">
-                      <p>訂位人:李曉明</p>
+                      <p>訂位人:張哲瑋</p>
                       <p>訂位日期:2022-01-08</p>
                       <p>訂位餐廳:aqua水相餐廳</p>
                       <p>訂位時間:17:00</p>
