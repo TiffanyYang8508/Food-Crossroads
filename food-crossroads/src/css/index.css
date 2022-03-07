@@ -600,6 +600,12 @@
     #search_box .search_btn {
         width: 100%;
     }
+    #search_box .mobile_tab_content span {
+        width: 13%;
+    }
+    #search_box .mobile_tab_content span:hover::before{
+        left: -2px;
+    }
     .index_img img {
         height: 200px;
     }
@@ -619,6 +625,12 @@
 /* 小手機 */
 
 @media screen and (max-width:480px) {
+    #search_box .mobile_tab_content span {
+        width: 18%;
+    }
+    #search_box .mobile_tab_content span:hover::before{
+        left: -5px;
+    }
     .kind_div h3 {
         font-size: 24px;
     }
