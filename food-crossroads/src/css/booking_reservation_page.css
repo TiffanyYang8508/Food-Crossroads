@@ -91,8 +91,8 @@
 
 #booking_reservation_page .form_container_person > form > div {
     /* border: 2px solid black; */
-    width: 80%;
-    margin: 20px 0 10px 90px;
+    width: 100%;
+    padding-left: 30px;
     font-size: 1.25rem;
     font-weight: 500;
     justify-content: space-between;

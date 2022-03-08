@@ -403,17 +403,20 @@ class Shoppingchar extends Component {
         </div>
 
         {/* 確定刪除modal */}
-        <div class="modal delete_comfirm " id="delete_comfirm">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">確定刪除此餐點嗎?</h4>
+        <div id="shoppingchar_modal">
+          <div class="modal delete_comfirm " id="delete_comfirm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">確定刪除此餐點嗎?</h4>
+              </div>
+              <div class="modal-body ">
+                <button type="button" class="delete_comfirm_back_btn">取消</button>
+                <button type="button" class="delete_comfirm_check_btn">確定</button>
+              </div >
             </div>
-            <div class="modal-body ">
-              <button type="button" class="delete_comfirm_back_btn">取消</button>
-              <button type="button" class="delete_comfirm_check_btn">確定</button>
-            </div >
           </div>
         </div>
+        
 
         {/* <div className="all-squre" id="all-squre">
           <label className="media">

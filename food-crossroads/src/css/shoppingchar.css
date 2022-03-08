@@ -204,7 +204,7 @@ position: relative;
   display: block;
 }
 
-.modal-body{
+#shoppingchar_modal .modal-body{
   display: flex;
   justify-content: space-around;
 }
