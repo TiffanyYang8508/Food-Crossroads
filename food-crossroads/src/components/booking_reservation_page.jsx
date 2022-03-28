@@ -5,11 +5,24 @@ import $ from "jquery";
 import "../css/booking_reservation_page.css";
 import "../css/bootstrap.min.css";
 import "../css/progress.css";
+import Axios from "axios";
 
 class Booking_reservation_page extends Component {
-    state = {}
+    state = {
+        memberinfo: {
+            
+        }
+    }
 
-    componentDidMount() {
+    async componentDidMount() {
+
+        var r = await new Axios.get("http://localhost:8000/memberinfo"); 
+        // console.log(r);
+        var newState = {...this.state};
+        newState.memberinfo = r.data[0];
+        // console.log(newState.memberinfo);
+        this.setState(newState);
+
         $(".reservation_input_next").on("click", function() {
             $(window.location).prop("href", "/booking/check/page");
         })
@@ -32,7 +45,7 @@ class Booking_reservation_page extends Component {
                             <i className="fas fa-shopping-cart"></i>購物車
                         </a>
                         <a className="nav_a" href="/member/1">
-                            <i className="fas fa-user-circle"></i>張哲瑋
+                            <i className="fas fa-user-circle"></i>{this.state.memberinfo.user_name}
                         </a>
                         </div>
                         <div className="rwd_icon">
@@ -123,13 +136,13 @@ class Booking_reservation_page extends Component {
                                     <div className="form_container_person col-md-6">
                                         <form action="#">
                                             <div className="form-group row">
-                                                <label htmlFor="reservation_person_name"><span>姓　　名：</span><span>張哲瑋</span></label>
+                                                <label htmlFor="reservation_person_name"><span>姓　　名：</span><span>{this.state.memberinfo.user_name}</span></label>
                                             </div>
                                             <div className="form-group row">
-                                                <label htmlFor="reservation_person_cellphone"><span>手機號碼：</span><span>0987654321</span></label>
+                                                <label htmlFor="reservation_person_cellphone"><span>手機號碼：</span><span>{this.state.memberinfo.user_tel}</span></label>
                                             </div>
                                             <div className="form-group row">
-                                                <label htmlFor="reservation_person_email"><span>信　　箱：</span><span>jerryMFEE21@gmail.com</span></label>
+                                                <label htmlFor="reservation_person_email"><span>信　　箱：</span><span>{this.state.memberinfo.user_email}</span></label>
                                             </div>
                                             <input type="button" className="reservation_input_next" value="下一步：訂位確認" />
                                         </form>

@@ -2,9 +2,20 @@ import React, { Component } from 'react';
 import Footer from './footer';
 import logo from "../img/logo.png";
 import "../css/booking_finish_page.css";
+import Axios from "axios";
 
 class Booking_finish_page extends Component {
-    state = {}
+    state = {
+        memberinfo: {}
+    }
+
+    async componentDidMount() {
+        var r = await new Axios.get("http://localhost:8000/memberinfo");
+        var newState = {...this.state};
+        newState.memberinfo = r.data[0];
+        this.setState(newState);        
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -21,7 +32,7 @@ class Booking_finish_page extends Component {
                             <i className="fas fa-shopping-cart"></i>購物車
                         </a>
                         <a className="nav_a" href="/member/1">
-                            <i className="fas fa-user-circle"></i>張哲瑋
+                            <i className="fas fa-user-circle"></i>{this.state.memberinfo.user_name}
                         </a>
                         </div>
                         <div className="rwd_icon">
@@ -64,15 +75,15 @@ class Booking_finish_page extends Component {
                                             <div className="form_container_finish_wrapper_left">
                                                 <div className="form_container_finish">
                                                     <label htmlFor="finish_person_name">姓　　名：</label>
-                                                    <label htmlFor="finish_person_name">張哲瑋</label>
+                                                    <label htmlFor="finish_person_name">{this.state.memberinfo.user_name}</label>
                                                 </div>
                                                 <div className="form_container_finish">
                                                     <label htmlFor="finish_person_cellphone">手　　機：</label>
-                                                    <label htmlFor="finish_person_cellphone">0987654321</label>
+                                                    <label htmlFor="finish_person_cellphone">{this.state.memberinfo.user_tel}</label>
                                                 </div>
                                                 <div className="form_container_finish">
                                                     <label htmlFor="finish_person_email">信　　箱：</label>
-                                                    <label htmlFor="finish_person_email">jerryMFEE21@gmail.com</label>
+                                                    <label htmlFor="finish_person_email">{this.state.memberinfo.user_email}</label>
                                                 </div>
                                             </div>
                                             <div className="form_container_finish_wrapper_right">

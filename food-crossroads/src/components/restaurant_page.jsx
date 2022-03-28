@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import Header from "./header";
 import Footer from "./footer";
 import $ from "jquery";
+import logo from "../img/logo.png";
 import "../css/restaurant_page.css";
 import Carousel from "react-bootstrap/Carousel";
 import StarIconNo from "../img/star.png";
 import StarIconFill from "../img/star-fill.png";
+import Axios from "axios";
 
 class Restaurant_page extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class Restaurant_page extends Component {
     this.state = {
       clickIndex: 0,
       hoverIndex: 0,
+      memberinfo:{},
     };
     this.getStar = this.getStar.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -55,6 +57,7 @@ class Restaurant_page extends Component {
     arr.map((ele, index) => {
       starContainer.push(
         <span
+          key={index}
           className="starIcon"
           onClick={this.handleClick.bind(this, ele)}
           onMouseEnter={this.handleOnMouseEnter.bind(this, ele)}
@@ -67,7 +70,13 @@ class Restaurant_page extends Component {
     return starContainer;
   }
   
-  componentDidMount() {
+  async componentDidMount() {
+    var r = await new Axios.get("http://localhost:8000/memberinfo");
+    var newState = {...this.state.memberinfo};
+    newState.memberinfo = r.data[0];
+    this.setState(newState);
+
+
     // 置頂按鈕:點選後回到頂端
 
     $(".on_top_btn").on("click", function () {
@@ -133,9 +142,35 @@ class Restaurant_page extends Component {
     let starItems = this.getStar();
     return (
       <React.Fragment>
-        <div className="header_page">
-          <Header />
-        </div>
+        <header className="header_page">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <a className="navbar-brand" href="/">
+            <img src={logo} alt="LOGO" />
+            </a>
+            <div className="nav_icon">
+            <a className="nav_a" href="/restaurant/list">
+              <i className="fas fa-store"></i>餐廳列表
+            </a>
+            <a className="nav_a" href="/orderpage">
+              <i className="fas fa-shopping-cart"></i>購物車
+            </a>
+            <a className="nav_a" href="/member/1">
+              <i className="fas fa-user-circle"></i>{this.state.memberinfo.user_name}
+            </a>
+            </div>
+            <div className="rwd_icon">
+            <a className="nav_a" href="/restaurant/list">
+              <i className="fas fa-store"></i>
+            </a>
+            <a className="nav_a" href="/orderpage">
+              <i className="fas fa-shopping-cart"></i>
+            </a>
+            <a className="nav_a" href="/member/:id">
+              <i className="fas fa-user-circle"></i>
+            </a>
+            </div>
+          </nav>
+        </header>
         <section id="restaurant_page">
           <div className="container">
             <div className="row">

@@ -9,7 +9,7 @@ class Member_login_success extends Component {
 
   componentDidMount() {
     setTimeout(() => {
-      window.location = "/restaurant/page/member";
+      window.location = "/restaurant/page";
     }, 1500);
   }
   render() {

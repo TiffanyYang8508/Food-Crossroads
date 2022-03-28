@@ -4,10 +4,23 @@ import Footer from "./footer";
 import "../css/booking_check_page.css";
 import "../css/progress.css";
 import "../css/bootstrap.min.css";
+import Axios from "axios";
 
 
 class Booking_check_page extends Component {
-    state = {}
+    state = {
+        memberinfo: {}
+    }
+
+    async componentDidMount() {
+        var r = await new Axios.get("http://localhost:8000/memberinfo");
+        // console.log(r);
+        var newState = {...this.state};
+        newState.memberinfo = r.data[0];
+        // console.log(newState.memberinfo);
+        this.setState(newState);
+
+    }
 
     render() {
         return (
@@ -25,7 +38,7 @@ class Booking_check_page extends Component {
                             <i className="fas fa-shopping-cart"></i>購物車
                         </a>
                         <a className="nav_a" href="/member/1">
-                            <i className="fas fa-user-circle"></i>張哲瑋
+                            <i className="fas fa-user-circle"></i>{this.state.memberinfo.user_name}
                         </a>
                         </div>
                         <div className="rwd_icon">
@@ -67,15 +80,15 @@ class Booking_check_page extends Component {
                                             <form action="#">
                                                 <div className="form_container_check">
                                                     <label htmlFor="check_person_name">姓　　名：</label>
-                                                    <label htmlFor="check_person_name">張哲瑋</label>
+                                                    <label htmlFor="check_person_name">{this.state.memberinfo.user_name}</label>
                                                 </div>
                                                 <div className="form_container_check">
                                                     <label htmlFor="check_person_cellphone">手　　機：</label>
-                                                    <label htmlFor="check_person_cellphone">0987654321</label>
+                                                    <label htmlFor="check_person_cellphone">{this.state.memberinfo.user_tel}</label>
                                                 </div>
                                                 <div className="form_container_check">
                                                     <label htmlFor="check_person_email">信　　箱：</label>
-                                                    <label htmlFor="check_person_email">jerryMFEE21@gmail.com</label>
+                                                    <label htmlFor="check_person_email">{this.state.memberinfo.user_email}</label>
                                                 </div>
                                                 <div className="form_container_check">
                                                     <label htmlFor="check_person_person_number">訂位人數：</label>

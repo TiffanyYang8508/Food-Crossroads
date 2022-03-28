@@ -343,3 +343,13 @@ app.get("/restaurant/booking/today", (req, res) => {
     }
   );
 });
+
+app.get("/memberinfo", (req, res) => {
+  conn.query(
+    `SELECT user_name, user_tel, user_email FROM member`,
+    [],
+    function (err, rows) {
+      res.send(JSON.stringify(rows));
+    }
+  )
+})
